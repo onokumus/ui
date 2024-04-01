@@ -1,0 +1,13 @@
+:root {
+  color-scheme: light dark;
+
+  /* defaults */
+  --primary: var(--red-5);
+  --primary-dark: color-mix(var(--primary) 90%, black, 10%);
+  --primary-light: color-mix(var(--primary) 90%, white, 10%);
+  --primary-contrast: black;
+
+
+}
+
+

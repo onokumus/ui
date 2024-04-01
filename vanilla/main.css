@@ -1,0 +1,15 @@
+@layer normalize, colors, animations, aspects, borders, durations, easings, fonts, gradients, media, shadows, sizes, zindex, theme;
+@import "open-props/normalize" layer(normalize);
+@import "open-props/colors" layer(colors);
+@import "open-props/animations" layer(animations);
+@import "open-props/aspects" layer(aspects);
+@import "open-props/borders" layer(borders);
+@import "open-props/durations" layer(durations);
+@import "open-props/easings" layer(easings);
+@import "open-props/fonts" layer(fonts);
+@import "open-props/gradients" layer(gradients);
+@import "open-props/media" layer(media);
+@import "open-props/shadows" layer(shadows);
+@import "open-props/sizes" layer(sizes);
+@import "open-props/zindex" layer(zindex);
+@import "theme.css" layer(theme);
