@@ -1,15 +1,53 @@
-@layer normalize, colors, animations, aspects, borders, durations, easings, fonts, gradients, media, shadows, sizes, zindex, theme;
-@import "open-props/normalize" layer(normalize);
-@import "open-props/colors" layer(colors);
-@import "open-props/animations" layer(animations);
-@import "open-props/aspects" layer(aspects);
-@import "open-props/borders" layer(borders);
-@import "open-props/durations" layer(durations);
-@import "open-props/easings" layer(easings);
-@import "open-props/fonts" layer(fonts);
-@import "open-props/gradients" layer(gradients);
-@import "open-props/media" layer(media);
-@import "open-props/shadows" layer(shadows);
-@import "open-props/sizes" layer(sizes);
-@import "open-props/zindex" layer(zindex);
+@layer props, theme, normalize;
+
+@import "open-props/colors" layer(props);
+@import "open-props/animations" layer(props);
+@import "open-props/aspects" layer(props);
+@import "open-props/borders" layer(props);
+@import "open-props/durations" layer(props);
+@import "open-props/easings" layer(props);
+@import "open-props/fonts" layer(props);
+@import "open-props/gradients" layer(props);
+@import "open-props/media" layer(props);
+@import "open-props/shadows" layer(props);
+@import "open-props/sizes" layer(props);
+@import "open-props/zindex" layer(props);
+
 @import "theme.css" layer(theme);
+
+@import "normalize.css" layer(normalize);
+/* border radius
+  - surfaces
+  - input
+  - button
+  -
+
+*/
+
+/* button
+  - filled
+  - tonal
+  - outlined
+  - text
+ */
+
+/* inputs
+  - text
+  - number
+  - checkbox
+  - radio
+  - range
+  - switch
+  - color
+  - date
+  - datetime-local
+  - image
+  - reset
+  - search
+  - submit
+  - time
+  - url
+  - week
+*/
+
+/* select */
