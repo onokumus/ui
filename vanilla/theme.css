@@ -13,22 +13,22 @@
   --error: var(--red-7);
   --error-light: var(--red-5);
   --error-dark: var(--red-9);
-  --error-text: var(--text-1);
+  --error-text: light-dark(var(--gray-0), var(--stone-11));
 
   --warning: var(--orange-7);
   --warning-light: var(--orange-5);
   --warning-dark: var(--orange-9);
-  --warning-text: var(--text-1);
+  --warning-text: light-dark(var(--gray-0), var(--stone-11));
 
   --info: var(--blue-7);
   --info-light: var(--blue-5);
   --info-dark: var(--blue-9);
-  --info-text: var(--text-1);
+  --info-text: light-dark(var(--gray-0), var(--stone-11));
 
   --success: var(--green-7);
   --success-light: var(--green-5);
   --success-dark: var(--green-9);
-  --success-text: var(--text-1);
+  --success-text: light-dark(var(--gray-0), var(--stone-11));
 
   --link: var(--primary);
   --link-visited: var(--primary-light);
@@ -45,6 +45,10 @@
   --font-size-h4: var(--font-size-4);
   --font-size-h5: var(--font-size-3);
   --font-size-p: var(--font-size-1);
+
+  /* radius */
+  --global-radius: var(--radius-2);
+  --input-radius: var(--radius-2);
 }
 
 /* light theme */

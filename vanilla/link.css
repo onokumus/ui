@@ -1,0 +1,20 @@
+:where(a) {
+  margin-block: calc(var(--size-1) * -1);
+  margin-inline: calc(var(--size-1) * -1);
+  padding-block: var(--size-1);
+  padding-inline: var(--size-1);
+
+  &:where([href]) {
+    color: var(--link, var(--primary));
+    text-decoration-color: var(--link, var(--indigo-2));
+
+    &:where(:visited) {
+      color: var(--link-visited, var(--primary-light));
+      text-decoration-color: var(--link-visited, var(--purple-2));
+    }
+  }
+
+  &:where(:not(:hover)) {
+    text-decoration: inherit;
+  }
+}

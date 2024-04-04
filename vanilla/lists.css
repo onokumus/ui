@@ -1,0 +1,6 @@
+:where(ol, ul) {
+  padding-inline-start: var(--size-8);
+}
+:where(li) {
+  padding-inline-start: var(--size-2);
+}

@@ -1,0 +1,15 @@
+:where(blockquote, :not(blockquote) > cite) {
+  border-inline-start-width: var(--border-size-3);
+}
+
+:where(blockquote) {
+  display: grid;
+  gap: var(--size-3);
+  max-inline-size: var(--size-content-2);
+  padding-block: var(--size-3);
+  padding-inline: var(--size-4);
+}
+
+:where(:not(blockquote) > cite) {
+  padding-inline-start: var(--size-2);
+}

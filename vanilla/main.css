@@ -1,4 +1,4 @@
-@layer props, theme, normalize;
+@layer props, components, theme, normalize;
 
 @import "open-props/colors" layer(props);
 @import "open-props/animations" layer(props);
@@ -13,6 +13,8 @@
 @import "open-props/sizes" layer(props);
 @import "open-props/zindex" layer(props);
 
+@import "button.css" layer(components);
+
 @import "theme.css" layer(theme);
 
 @import "normalize.css" layer(normalize);
@@ -23,6 +25,12 @@
   -
 
 */
+
+/* table */
+
+/* details */
+
+/* dialog */
 
 /* button
   - filled

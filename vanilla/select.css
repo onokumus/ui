@@ -1,0 +1,4 @@
+:where(select) {
+  padding-block: 0.75ch;
+  padding-inline: var(--size-relative-4) 0;
+}
