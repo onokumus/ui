@@ -45,7 +45,9 @@
 }
 
 :focus-visible {
-  outline-color: var(--primary, var(--link));
+  outline: 2px solid
+    color-mix(in oklch, var(--input-border-color) 60%, transparent);
+  outline-offset: 2px;
 }
 
 @media (--motionOK) {
@@ -58,7 +60,7 @@
 }
 
 :where(:not(:active):focus-visible) {
-  outline-offset: 5px;
+  outline-offset: var(--outline-offset, 0px);
 }
 
 :where(h3, h4, h5, h6, dt) {
@@ -120,11 +122,6 @@
 :where(img, svg, video) {
   block-size: auto;
   max-inline-size: 100%;
-}
-
-::placeholder {
-  color: light-dark(var(--gray-7), var(--gray-6));
-  opacity: 0.75;
 }
 
 :where(svg:not([width])) {

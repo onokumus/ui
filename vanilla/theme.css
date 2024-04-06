@@ -46,9 +46,11 @@
   --font-size-h5: var(--font-size-3);
   --font-size-p: var(--font-size-1);
 
-  /* radius */
-  --global-radius: var(--radius-2);
-  --input-radius: var(--radius-2);
+  /* borders */
+  --global-radius: 0;
+  --input-border-color: currentColor;
+  --input-border-radius: 0;
+  --input-border-width: 1px;
 }
 
 /* light theme */

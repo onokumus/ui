@@ -1,3 +1,8 @@
+::placeholder {
+  color: light-dark(var(--gray-7), var(--gray-6));
+  opacity: 0.75;
+}
+
 :where(input[type="checkbox"], input[type="radio"]) {
   block-size: var(--size-3);
   inline-size: var(--size-3);
@@ -8,8 +13,10 @@
     select,
     input:not([type="button"], [type="submit"], [type="reset"])
   ) {
-  background-color: light-dark(var(--surface-2), var(--gray-10));
-  border-radius: var(--input-radius, var(--radius-2));
+  background-color: transparent;
+  border: var(--input-border-width, 1px) solid
+    var(--input-border-color, var(--text-1));
+  border-radius: var(--input-border-radius, var(--radius-2));
 }
 
 :where(textarea) {

@@ -1,4 +1,4 @@
-@layer props, components, theme, normalize;
+@layer props, normalize, components, theme;
 
 @import "open-props/colors" layer(props);
 @import "open-props/animations" layer(props);
@@ -13,11 +13,13 @@
 @import "open-props/sizes" layer(props);
 @import "open-props/zindex" layer(props);
 
-@import "button.css" layer(components);
+@import "normalize.css" layer(normalize);
+
+/* @import "button.css" layer(components); */
+@import "input.css" layer(components);
 
 @import "theme.css" layer(theme);
 
-@import "normalize.css" layer(normalize);
 /* border radius
   - surfaces
   - input
@@ -40,22 +42,28 @@
  */
 
 /* inputs
+  - variants
+    - outlined (default)
+    - filled
+
   - text
   - number
+  - password
+  - url
+  - search
+  - date
+  - datetime-local
+  - time
+  - week
+
   - checkbox
   - radio
   - range
   - switch
   - color
-  - date
-  - datetime-local
   - image
   - reset
-  - search
   - submit
-  - time
-  - url
-  - week
 */
 
 /* select */
