@@ -44,10 +44,18 @@
   border-width: 0;
 }
 
+:where(input, button, textarea),
+:where(input[type="file"])::-webkit-file-upload-button {
+  color: inherit;
+  font-size: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+}
+
 :focus-visible {
-  outline: 2px solid
-    color-mix(in oklch, var(--input-border-color) 60%, transparent);
+  outline: 2px solid currentColor;
   outline-offset: 2px;
+  border-radius: var(--global-radius, 0px);
 }
 
 @media (--motionOK) {
@@ -55,7 +63,7 @@
     transition: outline-offset 145ms var(--ease-2);
   }
   :where(:not(:active):focus-visible) {
-    transition-duration: 0.25s;
+    transition-duration: 0.15s;
   }
 }
 
@@ -200,4 +208,8 @@
   display: flex;
   gap: var(--size-3);
   padding-inline-start: 0;
+}
+
+:target {
+  scroll-margin-block-start: 2rem;
 }

@@ -1,3 +1,9 @@
+:root {
+  --input-border-color: color-mix(in oklch, currentColor 80%, transparent);
+  --input-border-radius: 0px;
+  --input-border-width: 1px;
+}
+
 ::placeholder {
   color: light-dark(var(--gray-7), var(--gray-6));
   opacity: 0.75;
@@ -30,12 +36,9 @@
 
 :where(input, textarea) {
   min-width: 0;
-}
 
-:where(input, button, textarea, select),
-:where(input[type="file"])::-webkit-file-upload-button {
-  color: inherit;
-  font-size: inherit;
-  font: inherit;
-  letter-spacing: inherit;
+  &:focus {
+    outline-offset: 0;
+    outline-width: 1px;
+  }
 }

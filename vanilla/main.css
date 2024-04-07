@@ -8,7 +8,6 @@
 @import "open-props/easings" layer(props);
 @import "open-props/fonts" layer(props);
 @import "open-props/gradients" layer(props);
-@import "open-props/media" layer(props);
 @import "open-props/shadows" layer(props);
 @import "open-props/sizes" layer(props);
 @import "open-props/zindex" layer(props);
@@ -17,11 +16,16 @@
 
 /* @import "button.css" layer(components); */
 @import "input.css" layer(components);
+@import "select.css" layer(components);
 
 @import "theme.css" layer(theme);
 
+/* can't place @custom-media in a @layer
+https://github.com/csstools/postcss-plugins/issues/481#issuecomment-1210951029
+*/
+@import "open-props/media";
+
 /* border radius
-  - surfaces
   - input
   - button
   -

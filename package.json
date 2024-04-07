@@ -9,6 +9,9 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "lightningcss": "^1.24.1",
+    "postcss": "^8.4.38",
+    "postcss-custom-media": "^10.0.4",
     "prettier": "^3.2.5",
     "typescript": "^5.2.2",
     "vite": "^5.2.0"
