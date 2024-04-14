@@ -14,7 +14,7 @@
 
 @import "normalize.css" layer(normalize);
 
-/* @import "button.css" layer(components); */
+@import "button.css" layer(components);
 @import "input.css" layer(components);
 @import "select.css" layer(components);
 

@@ -10,10 +10,10 @@
   --_size: initial /* your size */;
 
   --_bg-light: white;
-  --_bg-dark: var(--surface-3);
+  --_bg-dark: var(--_accent);
   --_bg: var(--_bg-light);
 
-  --_border: var(--surface-3);
+  --_border: var(--_accent);
 
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
@@ -80,7 +80,7 @@
 
   @media (--OSdark) {
     --_text: var(--red-2);
-    --_border: var(--surface-3);
+    --_border: var(--_accent);
   }
 }
 
@@ -117,5 +117,23 @@
   :where([type="reset"]),
   :where([disabled]) {
     --_bg: var(--surface-1);
+  }
+}
+
+:where(.button) {
+  &.filled {
+  }
+  &.tonal {
+  }
+  &.outlined {
+  }
+  &.text {
+    background-color: transparent;
+    border: transparent;
+    color: currentColor;
+
+    &.primary {
+      color: var(--primary);
+    }
   }
 }
