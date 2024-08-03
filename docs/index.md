@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Open Props UI"
   text: ""
-  tagline: "CSS only. Mash Tailwind, MUI, Open Props and shadcn together and this is what you get."
+  tagline: "Component library built with Open Props."
   actions:
     - theme: brand
       text: Why?
