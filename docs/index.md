@@ -4,8 +4,8 @@ layout: home
 
 hero:
   name: "Open Props UI"
-  text: "A scalable CSS happy path"
-  tagline: '"I want to use vanilla CSS, but I need some structure!"'
+  text: "CSS"
+  tagline: "Mash Tailwind, MUI, Open Props and shadcn together and this is what you get."
   actions:
     - theme: brand
       text: Why?
