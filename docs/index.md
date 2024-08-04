@@ -4,6 +4,7 @@ layout: home
 
 hero:
   name: "Open Props UI"
+
   text: ""
   tagline: "Component library built with Open Props."
   actions:
