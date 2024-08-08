@@ -15,4 +15,4 @@ Open Props UI is a component library, and each component is dependent on the CSS
 > [!IMPORTANT]
 > All Open Props props are **not** imported - just the ones needed to get you started. <br> It's up to you to define which you want to keep and which ones you need to add.
 
-[Read more about customization and theming](/overview/theme)
+[Read more about customization and theming](/guide/theme)
