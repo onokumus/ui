@@ -1,5 +1,10 @@
 # Why Open Props UI?
 
+Think of it as Open Props, shadcn and Material UI mixed together. If that doesn't mean anything you;
+
+- CSS component library leveraging [Open Props](https://open-props.style/).
+- "No installs" - just copy the code you need and edit it to suit your project.
+
 Setting up a good CSS structure for your project might not be the thing you are looking forwards to the most. Arguably that's why we have Tailwind, UnoCSS, Material UI etc. These libraries do a good job of nudging you towards a **happy path**, and that is the goal here as well.
 
 Open Props UI gets you going faster. From there you can take it anywhere you want!
