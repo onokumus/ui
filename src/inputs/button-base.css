@@ -5,25 +5,21 @@
   ),
 :where(input[type="file"])::-webkit-file-upload-button,
 :where(input[type="file"])::file-selector-button {
-  --_accent: initial /* your color */;
-  --_text: initial /* your text color */;
-  --_size: initial /* your size */;
-
-  --_bg-light: white;
-  --_bg-dark: var(--_accent);
-  --_bg: var(--_bg-light);
-
-  --_border: var(--_accent);
+  --_bg-color: initial;
+  --_border-color: initial;
+  --_border-radius: initial;
+  --_font-size: initial;
+  --_text-color: initial;
 
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   align-items: center;
-  background: var(--_bg);
-  border-radius: var(--radius-2);
-  border: var(--border-size-2) solid var(--_border);
-  color: var(--_text);
+  background: var(--_bg-color);
+  border-radius: var(--_border-radius);
+  border: var(--border-size-2) solid var(--_border-color);
+  color: var(--_text-color);
   display: inline-flex;
-  font-size: var(--_size);
+  font-size: var(--_font-size);
   font-weight: var(--font-weight-7);
   gap: var(--size-2);
   justify-content: center;
@@ -41,8 +37,8 @@
   ) {
   /* disabled */
   &[disabled] {
-    --_bg: none;
-    --_text: var(--gray-6);
+    --_bg-color: none;
+    --_text-color: var(--gray-6);
     cursor: not-allowed;
     box-shadow: var(--shadow-1);
   }
@@ -66,12 +62,12 @@
 
 /* adaptive indigo text */
 :where([type="submit"], form button:not([type], [disabled])) {
-  --_text: var(--_accent, var(--link));
+  --_text-color: var(--_accent-color, var(--link));
 }
 
 /* red reset */
 :where([type="reset"]) {
-  --_text: var(--red-6);
+  --_text-color: var(--red-6);
   --_border: var(--red-3);
 
   &:focus-visible {
@@ -79,8 +75,8 @@
   }
 
   @media (--OSdark) {
-    --_text: var(--red-2);
-    --_border: var(--_accent);
+    --_text-color: var(--red-2);
+    --_border: var(--_accent-color);
   }
 }
 
@@ -116,27 +112,6 @@
   :where(form button:not([type="button"])),
   :where([type="reset"]),
   :where([disabled]) {
-    --_bg: var(--surface-1);
-  }
-}
-
-:where(button) {
-  &.text {
-    background-color: transparent;
-    border: transparent;
-    color: currentColor;
-
-    &.primary {
-      color: var(--primary);
-    }
-  }
-  &.outlined {
-    border: 1px solid tomato;
-  }
-  &.tonal {
-    background-color: tomato;
-  }
-  &.filled {
-    background-color: red;
+    --_bg-color: var(--surface-1);
   }
 }

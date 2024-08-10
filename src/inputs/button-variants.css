@@ -1,0 +1,31 @@
+:where(button) {
+  --_bg-color: transparent;
+  --_border-color: transparent;
+  --_text-color: initial;
+
+  &.text {
+    --_bg-color: transparent;
+    --_border-color: transparent;
+    --_text-color: initial;
+
+    &.primary {
+      color: var(--primary);
+    }
+  }
+  &.outlined {
+    --_bg-color: transparent;
+    --_border-color: red;
+    --_text-color: white;
+  }
+  &.tonal {
+    --_bg-color: tomato;
+    --_border-color: tomato;
+    --_text-color: white;
+  }
+  &.filled {
+    --_bg-color: red;
+    --_text-color: white;
+  }
+  &.elevated {
+  }
+}

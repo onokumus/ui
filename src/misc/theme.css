@@ -10,10 +10,10 @@
   --text-1: light-dark(var(--stone-11), var(--gray-0));
   --text-2: light-dark(var(--stone-8), var(--gray-4));
 
-  --error: var(--red-7);
-  --error-light: var(--red-5);
-  --error-dark: var(--red-9);
-  --error-text: light-dark(var(--gray-0), var(--stone-11));
+  --danger: var(--red-7);
+  --danger-light: var(--red-5);
+  --danger-dark: var(--red-9);
+  --danger-text: light-dark(var(--gray-0), var(--stone-11));
 
   --warning: var(--orange-7);
   --warning-light: var(--orange-5);
@@ -44,10 +44,13 @@
   --font-size-h3: var(--font-size-5);
   --font-size-h4: var(--font-size-4);
   --font-size-h5: var(--font-size-3);
+  --font-size-h6: var(--font-size-1);
   --font-size-p: var(--font-size-1);
 
   /* borders */
-  --global-radius: 0px;
+  --button-border-radius: 0px;
+  --input-border-radius: 0px;
+  --surface-border-radius: 0px;
 }
 
 /* light theme */

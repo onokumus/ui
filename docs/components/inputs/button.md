@@ -1,12 +1,13 @@
 <style scoped>
-@import "../../../src/inputs/button.css";
+  @import "../../../src/inputs/button-base.css";
+  @import "../../../src/inputs/button-variants.css";
 </style>
 
 # Button
 
-## Basic
+## Variants
 
-The button comes in five different variants; text (default), outlined, tonal, filled, elevated
+The button comes in five different variants; text (default), outlined, tonal, filled, elevated.
 
 <div class="example row">
   <button>Text</button>
@@ -93,5 +94,19 @@ The button comes in five different variants; text (default), outlined, tonal, fi
 <button class="elevated" disabled>Disabled</button>
 <a class="elevated" href="#">Link</a>
 ```
+
+## Color
+
+## Sizes
+
+## Buttons with icon and label
+
+## Icon button
+
+### Color
+
+### Sizes
+
+## File upload
 
 ## Installation
