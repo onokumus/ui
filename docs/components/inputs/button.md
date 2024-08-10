@@ -1,3 +1,7 @@
+<style scoped>
+@import "./src/inputs/button.css";
+</style>
+
 # Button
 
 ## Basic
