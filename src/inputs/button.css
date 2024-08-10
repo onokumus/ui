@@ -120,13 +120,7 @@
   }
 }
 
-:where(.button) {
-  &.filled {
-  }
-  &.tonal {
-  }
-  &.outlined {
-  }
+:where(button) {
   &.text {
     background-color: transparent;
     border: transparent;
@@ -135,5 +129,14 @@
     &.primary {
       color: var(--primary);
     }
+  }
+  &.outlined {
+    border: 1px solid tomato;
+  }
+  &.tonal {
+    background-color: tomato;
+  }
+  &.filled {
+    background-color: red;
   }
 }

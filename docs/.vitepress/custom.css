@@ -1,8 +1,14 @@
+@layer design, components;
+@import "https://unpkg.com/open-props@beta.5" layer(design.system);
+
 :root {
   --vp-c-brand-1: steelblue;
   --vp-c-brand-2: cornflowerblue;
   --vp-c-brand-3: steelblue;
   --vp-c-brand-soft: cornflowerblue;
+
+  --vp-font-family-base: var(--font-sans);
+  --vp-font-family-mono: var(--font-mono);
 }
 
 /* Code block is set to always be dark */
