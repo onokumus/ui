@@ -4,8 +4,18 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "Open Props UI",
   description: "A scalable CSS happy path",
+  markdown: {
+    theme: "dark-plus",
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+    editLink: {
+      pattern: "https://github.com/felix-bohlin/ui/tree/main/docs/:path",
+    },
+    outline: "deep",
+    search: {
+      provider: "local",
+    },
     nav: [
       { text: "Guide", link: "/guide/why-open-props-ui" },
       { text: "Components", link: "/components" },
