@@ -1,5 +1,5 @@
 <style scoped>
-@import "./src/inputs/button.css";
+@import "../../../src/inputs/button.css";
 </style>
 
 # Button
