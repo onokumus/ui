@@ -42,6 +42,17 @@ export default defineConfig({
           text: "Components",
           items: [
             {
+              text: "Inputs",
+              collapsed: false,
+              items: [
+                { text: "Button", link: "/components/inputs/button" },
+                { text: "Checkbox", link: "/components/inputs/checkbox" },
+                { text: "Input", link: "/components/inputs/input" },
+                { text: "Radio", link: "/components/inputs/radio" },
+                { text: "Select", link: "/components/inputs/select" },
+              ],
+            },
+            {
               text: "Data display",
               collapsed: false,
               items: [
@@ -66,17 +77,7 @@ export default defineConfig({
                 { text: "Progress", link: "/components/feedback/progress" },
               ],
             },
-            {
-              text: "Inputs",
-              collapsed: false,
-              items: [
-                { text: "Button", link: "/components/inputs/button" },
-                { text: "Checkbox", link: "/components/inputs/checkbox" },
-                { text: "Input", link: "/components/inputs/input" },
-                { text: "Radio", link: "/components/inputs/radio" },
-                { text: "Select", link: "/components/inputs/select" },
-              ],
-            },
+
             {
               text: "Surfaces",
               collapsed: false,
