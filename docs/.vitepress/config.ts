@@ -15,6 +15,9 @@ export default defineConfig({
     outline: "deep",
     search: {
       provider: "local",
+      options: {
+        detailedView: true,
+      },
     },
     nav: [
       { text: "Guide", link: "/guide/why-open-props-ui" },
