@@ -9,11 +9,11 @@ hero:
   tagline: "Component library built with Open Props."
   actions:
     - theme: brand
-      text: What is OP UI?
-      link: /guide/why-open-props-ui
-    - theme: alt
-      text: Quickstart
+      text: Quickstart?
       link: /guide/getting-started
+    - theme: alt
+      text: Components
+      link: /components
     - theme: alt
       text: Github
       link: https://github.com/felix-bohlin/ui
