@@ -9,7 +9,7 @@ hero:
   tagline: "Component library built with Open Props."
   actions:
     - theme: brand
-      text: Quickstart?
+      text: Quickstart
       link: /guide/getting-started
     - theme: alt
       text: Components
