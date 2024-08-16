@@ -27,6 +27,8 @@ The button comes in five different variants; text (default), outlined, tonal, fi
 
 ### Text
 
+Text buttons are typically used for less-pronounced actions, including those located: in dialogs, in cards. In cards, text buttons help maintain an emphasis on card content.
+
 <div class="example row">
   <button>Text</button>
   <button disabled>Disabled</button>
