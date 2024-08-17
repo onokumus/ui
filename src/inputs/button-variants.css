@@ -25,22 +25,23 @@
   }
   &.outlined {
     --_bg-color: transparent;
-    --_border-color: red;
-    --_text-color: white;
+    --_border-color: var(--color-8, initial);
+    --_text-color: var(--color-8, initial);
   }
   &.tonal {
-    --_bg-color: tomato;
-    --_border-color: tomato;
-    --_text-color: white;
+    --_bg-color: var(--color-6);
+    --_border-color: var(--color-6);
+    --_text-color: var(--text-2);
   }
   &.filled {
-    --_bg-color: red;
-    --_text-color: white;
+    --_bg-color: var(--color-8, initial);
+    --_text-color: var(--text-1);
   }
   &.elevated {
-    --_text-color: initial;
+    --_bg-color: oklch(1 0 0 / 0.05);
+    --_text-color: var(--color-8);
 
-    background-color: oklch(1 0 0 / 0.05);
+    background-color: var(--_bg-color);
     box-shadow: var(--shadow-4);
   }
 }
