@@ -1,16 +1,27 @@
-:where(button) {
+:where(button, .button) {
   --_bg-color: transparent;
   --_border-color: transparent;
   --_text-color: initial;
+
+  &.small {
+    padding-block: 0.5ex;
+    padding-inline: 1ex;
+  }
+
+  &.medium {
+    padding-block: 1ex;
+    padding-inline: 2ex;
+  }
+
+  &.large {
+    padding-block: 1.5ex;
+    padding-inline: 2.5ex;
+  }
 
   &.text {
     --_bg-color: transparent;
     --_border-color: transparent;
     --_text-color: initial;
-
-    &.primary {
-      color: var(--primary);
-    }
   }
   &.outlined {
     --_bg-color: transparent;
@@ -27,5 +38,9 @@
     --_text-color: white;
   }
   &.elevated {
+    --_text-color: initial;
+
+    background-color: oklch(1 0 0 / 0.05);
+    box-shadow: var(--shadow-4);
   }
 }

@@ -7,7 +7,7 @@
 :where(input[type="file"])::file-selector-button {
   --_bg-color: initial;
   --_border-color: initial;
-  --_border-radius: initial;
+  --_border-radius: var(--button-border-radius, initial);
   --_font-size: initial;
   --_text-color: initial;
 
@@ -23,9 +23,10 @@
   font-weight: var(--font-weight-7);
   gap: var(--size-2);
   justify-content: center;
-  padding-block: 0.75ch;
-  padding-inline: var(--size-relative-6);
+  padding-block: 1ex;
+  padding-inline: 2ex;
   text-align: center;
+  text-decoration: none;
   transition: border-color 0.5s var(--ease-3);
   user-select: none;
 }
@@ -59,34 +60,6 @@
     }
   }
 }
-
-/* adaptive indigo text */
-:where([type="submit"], form button:not([type], [disabled])) {
-  --_text-color: var(--_accent-color, var(--link));
-}
-
-/* red reset */
-:where([type="reset"]) {
-  --_text-color: var(--red-6);
-  --_border: var(--red-3);
-
-  &:focus-visible {
-    outline-color: var(--red-6);
-  }
-
-  @media (--OSdark) {
-    --_text-color: var(--red-2);
-    --_border: var(--_accent-color);
-  }
-}
-
-/* submit, form > button, reset matching hover border color */
-/* :where([type="submit"], [type="reset"], form button:not([type])):is(
-    :hover,
-    :focus-visible
-  ):not([disabled]) {
-  --_border: currentColor;
-} */
 
 /* file input */
 :where(input[type="file"]) {
