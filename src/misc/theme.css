@@ -1,5 +1,7 @@
+@import "../../node_modules/open-props/gray-oklch.min.css";
+
 /* default theme */
-:root {
+:where(:root) {
   color-scheme: light dark;
 
   --palette-hue: 146;
@@ -11,36 +13,38 @@
   --primary-dark: color-mix(in oklch, var(--primary) 80%, black);
   --primary-light: color-mix(in oklch, var(--primary) 80%, white);
 
-  --text-1: light-dark(var(--color-12), var(--color-1));
-  --text-2: light-dark(var(--color-1), var(--color-12));
+  --text-1: light-dark(var(--gray-12), var(--gray-0));
+  --text-2: light-dark(var(--gray-0), var(--gray-12));
+  /* --text-1: var(--color-12);
+  --text-2: var(--color-1); */
 
   --danger: var(--red-7);
   --danger-light: var(--red-5);
   --danger-dark: var(--red-9);
-  --danger-text: light-dark(var(--color-0), var(--color-11));
+  --danger-text: light-dark(var(--color-1), var(--color-11));
 
   --warning: var(--orange-7);
   --warning-light: var(--orange-5);
   --warning-dark: var(--orange-9);
-  --warning-text: light-dark(var(--color-0), var(--color-11));
+  --warning-text: light-dark(var(--color-1), var(--color-11));
 
   --info: var(--blue-7);
   --info-light: var(--blue-5);
   --info-dark: var(--blue-9);
-  --info-text: light-dark(var(--color-0), var(--color-11));
+  --info-text: light-dark(var(--color-1), var(--color-11));
 
   --success: var(--green-7);
   --success-light: var(--green-5);
   --success-dark: var(--green-9);
-  --success-text: light-dark(var(--color-0), var(--color-11));
+  --success-text: light-dark(var(--color-1), var(--color-11));
 
   --link: var(--primary);
   --link-visited: var(--primary-light);
 
-  --surface-1: light-dark(var(--color-0), var(--color-9));
-  --surface-2: light-dark(var(--color-2), var(--color-8));
-  --surface-3: light-dark(var(--color-3), var(--color-7));
-  --surface-4: light-dark(var(--color-4), var(--color-6));
+  --surface-1: light-dark(var(--gray-1), var(--gray-12));
+  --surface-2: light-dark(var(--gray-2), var(--gray-8));
+  --surface-3: light-dark(var(--gray-3), var(--gray-7));
+  --surface-4: light-dark(var(--gray-4), var(--gray-6));
 
   /* typography */
   --font-size-h1: var(--font-size-8);
@@ -57,24 +61,31 @@
   --surface-border-radius: 0px;
 }
 
+html {
+  color-scheme: light;
+  &.dark {
+    color-scheme: dark;
+  }
+}
+
 /* light theme */
-[color-scheme="light"] {
+/* :where([color-scheme="light"]) {
   --text-1: var(--color-11);
   --text-2: var(--color-8);
 
-  --surface-1: var(--color-0);
+  --surface-1: var(--color-1);
   --surface-2: var(--color-2);
   --surface-3: var(--color-3);
   --surface-4: var(--color-4);
 
   --surface-shadow-light: var(--color-8);
   --shadow-strength-light: 2%;
-}
+} */
 
 /* dark theme */
-[color-scheme="dark"] {
-  --text-1: var(--color-0);
-  --text-2: var(--color-4);
+/* :where([color-scheme="dark"], .dark) {
+  --text-1: var(--color-1);
+  --text-2: var(--color-12);
 
   --surface-1: var(--color-9);
   --surface-2: var(--color-8);
@@ -83,7 +94,7 @@
 
   --surface-shadow-dark: var(--color-12);
   --shadow-strength-dark: 80%;
-}
+} */
 
 /* choco theme */
 [color-scheme="lime"] {

@@ -3,6 +3,22 @@
   --_border-color: transparent;
   --_text-color: initial;
 
+  &:where(:not(:active):hover) {
+    --_bg-color: var(--surface-1);
+  }
+
+  &:where(:active) {
+    --_bg-color: light-dark(
+      color-mix(in oklch, var(--primary) 20%, transparent),
+      color-mix(in oklch, var(--primary) 55%, transparent)
+    );
+  }
+
+  &:where([disabled]) {
+    --_bg-color: transparent;
+    cursor: not-allowed;
+  }
+
   &.small {
     padding-block: 0.5ex;
     padding-inline: 1ex;
@@ -25,23 +41,68 @@
   }
   &.outlined {
     --_bg-color: transparent;
-    --_border-color: var(--color-8, initial);
-    --_text-color: var(--color-8, initial);
+    --_border-color: var(--text-1);
+    --_text-color: var(--color-8);
+
+    &:where(:not(:active):hover) {
+      --_bg-color: var(--primary);
+      --_border-color: var(--primary);
+      --_text-color: var(--color-1);
+    }
+
+    &:where(:active) {
+      --_bg-color: var(--primary-dark);
+      --_border-color: var(--primary-dark);
+      --_text-color: var(--color-1);
+    }
   }
   &.tonal {
-    --_bg-color: var(--color-6);
-    --_border-color: var(--color-6);
-    --_text-color: var(--text-2);
+    --_bg-color: var(--color-7);
+    --_border-color: var(--color-7);
+    --_text-color: var(--color-1);
+
+    &:where(:not(:active):hover) {
+      --_bg-color: var(--color-9);
+      --_border-color: var(--color-9);
+      --_text-color: var(--color-1);
+    }
+
+    &:where(:active) {
+      --_bg-color: var(--color-10);
+      --_border-color: var(--color-10);
+      --_text-color: var(--color-1);
+    }
   }
   &.filled {
-    --_bg-color: var(--color-8, initial);
-    --_text-color: var(--text-1);
+    --_bg-color: var(--color-12);
+    --_text-color: var(--color-1);
+
+    &:where(:not(:active):hover) {
+      --_bg-color: var(--color-13);
+      --_border-color: var(--color-13);
+      --_text-color: var(--color-1);
+    }
+
+    &:where(:active) {
+      --_bg-color: var(--color-14);
+      --_border-color: var(--color-14);
+      --_text-color: var(--color-1);
+    }
   }
   &.elevated {
     --_bg-color: oklch(1 0 0 / 0.05);
     --_text-color: var(--color-8);
 
     background-color: var(--_bg-color);
-    box-shadow: var(--shadow-4);
+    box-shadow: var(--shadow-2);
+
+    &:where(:not(:active):hover) {
+      box-shadow: var(--shadow-4);
+    }
+
+    &:where(:active) {
+      --_bg-color: var(--surface-1);
+      box-shadow: var(--shadow-4);
+    }
   }
 }

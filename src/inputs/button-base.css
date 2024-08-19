@@ -16,7 +16,7 @@
   align-items: center;
   background: var(--_bg-color);
   border-radius: var(--_border-radius);
-  border: var(--border-size-2) solid var(--_border-color);
+  border: var(--border-size-1) solid var(--_border-color);
   color: var(--_text-color);
   display: inline-flex;
   font-size: var(--_font-size);
@@ -27,7 +27,11 @@
   padding-inline: 2ex;
   text-align: center;
   text-decoration: none;
-  transition: border-color 0.5s var(--ease-3);
+  transition:
+    background-color 0.2s var(--ease-out-3),
+    box-shadow 0.2s var(--ease-out-3),
+    border-color 0.2s var(--ease-out-3),
+    color 0.2s var(--ease-out-3);
   user-select: none;
 }
 
@@ -36,20 +40,6 @@
     button,
     input:is([type="button"], [type="submit"], [type="reset"])
   ) {
-  /* disabled */
-  &[disabled] {
-    --_bg-color: none;
-    --_text-color: var(--gray-6);
-    cursor: not-allowed;
-    box-shadow: var(--shadow-1);
-  }
-
-  /* pressing */
-  &:where(:not(:active):hover) {
-    --_highlight-size: var(--size-2);
-    transition-duration: 0.25s;
-  }
-
   /* icons */
   &:has(svg) {
     background: tomato;
@@ -77,14 +67,4 @@
 :where(input[type="file"])::file-selector-button {
   cursor: pointer;
   margin-inline-end: var(--size-relative-6);
-}
-
-/* special dark theme styles */
-@media (--OSdark) {
-  :where([type="submit"]),
-  :where(form button:not([type="button"])),
-  :where([type="reset"]),
-  :where([disabled]) {
-    --_bg-color: var(--surface-1);
-  }
 }
