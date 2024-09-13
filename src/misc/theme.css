@@ -1,4 +1,19 @@
 @import "../../node_modules/open-props/gray-oklch.min.css";
+@import "../../node_modules/open-props/red.min.css";
+@import "../../node_modules/open-props/orange.min.css";
+@import "../../node_modules/open-props/blue.min.css";
+@import "../../node_modules/open-props/green.min.css";
+
+html {
+  color-scheme: var(--color-scheme);
+}
+
+.light {
+  --color-scheme: light;
+}
+.dark {
+  --color-scheme: dark;
+}
 
 /* default theme */
 :where(:root) {
@@ -15,8 +30,6 @@
 
   --text-1: light-dark(var(--gray-12), var(--gray-0));
   --text-2: light-dark(var(--gray-0), var(--gray-12));
-  /* --text-1: var(--color-12);
-  --text-2: var(--color-1); */
 
   --danger: var(--red-7);
   --danger-light: var(--red-5);
@@ -57,61 +70,9 @@
 
   /* borders */
   --button-border-radius: 0px;
-  --input-border-radius: 0px;
   --surface-border-radius: 0px;
-}
-
-html {
-  color-scheme: light;
-  &.dark {
-    color-scheme: dark;
-  }
-}
-
-/* light theme */
-/* :where([color-scheme="light"]) {
-  --text-1: var(--color-11);
-  --text-2: var(--color-8);
-
-  --surface-1: var(--color-1);
-  --surface-2: var(--color-2);
-  --surface-3: var(--color-3);
-  --surface-4: var(--color-4);
-
-  --surface-shadow-light: var(--color-8);
-  --shadow-strength-light: 2%;
-} */
-
-/* dark theme */
-/* :where([color-scheme="dark"], .dark) {
-  --text-1: var(--color-1);
-  --text-2: var(--color-12);
-
-  --surface-1: var(--color-9);
-  --surface-2: var(--color-8);
-  --surface-3: var(--color-7);
-  --surface-4: var(--color-6);
-
-  --surface-shadow-dark: var(--color-12);
-  --shadow-strength-dark: 80%;
-} */
-
-/* choco theme */
-[color-scheme="lime"] {
-  color-scheme: light;
-
-  --primary: var(--lime-5);
-  --primary-light: color-mix(in oklch, var(--lime-5) 80%, white);
-  --primary-dark: color-mix(in oklch, var(--lime-5) 80%, black);
-
-  --text-1: var(--lime-1);
-  --text-2: var(--lime-2);
-
-  --surface-1: var(--lime-12);
-  --surface-2: var(--lime-11);
-  --surface-3: var(--lime-10);
-  --surface-4: var(--lime-9);
-
-  --surface-shadow: 25deg 65% 11%;
-  --shadow-strength: 50%;
+  --input-border-radius: 0px;
+  --input-border-width: 1px;
+  --input-border-color: color-mix(in oklch, currentColor 80%, transparent);
+  --divider-color: gray;
 }
