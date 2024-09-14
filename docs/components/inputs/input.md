@@ -1,5 +1,6 @@
 <style scoped>
-  @import "../../../src/inputs/input.css";
+  @import "../../../src/inputs/input-base.css";
+  @import "../../../src/inputs/input-variants.css";
 </style>
 
 # Input

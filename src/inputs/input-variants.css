@@ -1,0 +1,62 @@
+:where(
+    .input,
+    input:not(
+        button,
+        [disabled],
+        [readonly],
+        [type="file"],
+        [type="button"],
+        [type="submit"],
+        [type="reset"],
+        [type="checkbox"],
+        [type="radio"]
+      ),
+    textarea,
+    select
+  ) {
+  font-size: var(--font-size-p, 1rem);
+  line-height: var(--font-lineheight-3);
+  padding: var(--size-2);
+
+  /* Variants */
+  &.underlined {
+    border: 0;
+    border-block-end: 2px solid var(--input-border-color);
+  }
+
+  &.filled {
+    background-color: var(--surface-2);
+    border-color: transparent;
+  }
+
+  /* Sizes */
+  /* TODO: font size should be 16px to avoid mobile zoom in */
+  &.small {
+    font-size: var(--font-size-0, var(--font-size-1));
+    padding: var(--size-1) var(--size-2);
+  }
+  /* TODO: font size should be 16px to avoid mobile zoom in */
+  &.large {
+    font-size: var(--font-size-2, var(--font-size-3));
+    padding: var(--size-3) var(--size-4);
+  }
+
+  /* States */
+  &:where(input[readonly] .readonly, input[disabled], .disabled) {
+    cursor: not-allowed;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &:where([disabled], .disabled) {
+    background-color: var(--surface-2);
+    color: var(--text-2);
+    opacity: 0.7;
+  }
+
+  &:invalid {
+    border-color: var(--danger);
+  }
+}

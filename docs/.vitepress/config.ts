@@ -54,6 +54,7 @@ export default defineConfig({
                 { text: "Input", link: "/components/inputs/input" },
                 { text: "Radio", link: "/components/inputs/radio" },
                 { text: "Select", link: "/components/inputs/select" },
+                { text: "Textarea", link: "/components/inputs/textarea" },
               ],
             },
             {
