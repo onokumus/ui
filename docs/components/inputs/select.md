@@ -6,38 +6,81 @@
 
 # Select
 
+## Variants
+
 <div class="example-wrapper">
   <div class="example row">
-    <select class="select" id="select1">
-        <option>Option One</option>
+    <select class="select">
+        <option>Default</option>
         <option>Option Two</option>
         <option>Option Three</option>
     </select>
-    <select class="select underlined" id="select2">
-        <option>Option One</option>
+    <select class="select underlined">
+        <option>Underlined</option>
         <option>Option Two</option>
         <option>Option Three</option>
     </select>
-    <select class="select filled" id="select3">
-        <option>Option One</option>
+    <select class="select filled">
+        <option>Filled</option>
         <option>Option Two</option>
         <option>Option Three</option>
     </select>
   </div>
 
 ```html
-<select class="select" id="select1">
-  <option>Option One</option>
+<select class="select">
+  <option>Default</option>
   <option>Option Two</option>
   <option>Option Three</option>
 </select>
-<select class="select underlined" id="select2">
-  <option>Option One</option>
+<select class="select underlined">
+  <option>Underlined</option>
   <option>Option Two</option>
   <option>Option Three</option>
 </select>
-<select class="select filled" id="select3">
-  <option>Option One</option>
+<select class="select filled">
+  <option>Filled</option>
+  <option>Option Two</option>
+  <option>Option Three</option>
+</select>
+```
+
+</div>
+
+## Sizes
+
+<div class="example-wrapper">
+  <div class="example row">
+    <select class="select small">
+        <option>Small</option>
+        <option>Option Two</option>
+        <option>Option Three</option>
+    </select>
+    <select class="select">
+        <option>Medium</option>
+        <option>Option Two</option>
+        <option>Option Three</option>
+    </select>
+    <select class="select large">
+        <option>Large</option>
+        <option>Option Two</option>
+        <option>Option Three</option>
+    </select>
+  </div>
+
+```html
+<select class="select small">
+  <option>Small</option>
+  <option>Option Two</option>
+  <option>Option Three</option>
+</select>
+<select class="select">
+  <option>Medium</option>
+  <option>Option Two</option>
+  <option>Option Three</option>
+</select>
+<select class="select large">
+  <option>Large</option>
   <option>Option Two</option>
   <option>Option Three</option>
 </select>
