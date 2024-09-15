@@ -1,18 +1,14 @@
 :where(select) {
-  background-color: light-dark(transparent, var(--surface-1));
-  padding-block: 0.75ch;
-  padding-inline: var(--size-relative-4) 0;
-
   /* appearance: none;
 	background-image: var(--icon-arrow-down);
 	background-position: calc(100% - 1ch) center;
 	background-size: 3ex; */
-  padding-block: 0.75ch;
+  /* padding-block: 0.75ch;
   padding-inline: 1.75ch 3ch;
-  line-height: 1.5;
+  line-height: 1.5; */
 
-  &:where(optgroup, option) {
-    background: var(--surface-4);
+  & :where(optgroup, option) {
+    background: var(--surface-1);
   }
 
   &:where(:focus-visible) {

@@ -9,49 +9,37 @@
 <div class="example-wrapper">
   <div class="example row">
     <select class="select" id="select1">
-      <optgroup label="Option Group">
         <option>Option One</option>
         <option>Option Two</option>
         <option>Option Three</option>
-      </optgroup>
     </select>
     <select class="select underlined" id="select2">
-      <optgroup label="Option Group">
         <option>Option One</option>
         <option>Option Two</option>
         <option>Option Three</option>
-      </optgroup>
     </select>
     <select class="select filled" id="select3">
-      <optgroup label="Option Group">
         <option>Option One</option>
         <option>Option Two</option>
         <option>Option Three</option>
-      </optgroup>
     </select>
   </div>
 
 ```html
 <select class="select" id="select1">
-  <optgroup label="Option Group">
-    <option>Option One</option>
-    <option>Option Two</option>
-    <option>Option Three</option>
-  </optgroup>
+  <option>Option One</option>
+  <option>Option Two</option>
+  <option>Option Three</option>
 </select>
 <select class="select underlined" id="select2">
-  <optgroup label="Option Group">
-    <option>Option One</option>
-    <option>Option Two</option>
-    <option>Option Three</option>
-  </optgroup>
+  <option>Option One</option>
+  <option>Option Two</option>
+  <option>Option Three</option>
 </select>
 <select class="select filled" id="select3">
-  <optgroup label="Option Group">
-    <option>Option One</option>
-    <option>Option Two</option>
-    <option>Option Three</option>
-  </optgroup>
+  <option>Option One</option>
+  <option>Option Two</option>
+  <option>Option Three</option>
 </select>
 ```
 
