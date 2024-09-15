@@ -42,7 +42,14 @@
   }
 
   /* States */
-  &:where(input[readonly] .readonly, input[disabled], .disabled) {
+  &:where(
+      input[readonly],
+      select[readonly],
+      .readonly,
+      input[disabled],
+      select[disabled],
+      .disabled
+    ) {
     cursor: not-allowed;
 
     &:focus {
@@ -50,7 +57,7 @@
     }
   }
 
-  &:where([disabled], .disabled) {
+  &:where(input[disabled], select[disabled], .disabled) {
     background-color: var(--surface-2);
     color: var(--text-2);
     opacity: 0.7;

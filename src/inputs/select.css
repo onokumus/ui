@@ -1,11 +1,27 @@
 :where(select) {
   background-color: light-dark(transparent, var(--surface-1));
-  border: var(--input-border-width) solid var(--input-border-color);
   padding-block: 0.75ch;
   padding-inline: var(--size-relative-4) 0;
 
-  &:focus-visible {
+  /* appearance: none;
+	background-image: var(--icon-arrow-down);
+	background-position: calc(100% - 1ch) center;
+	background-size: 3ex; */
+  padding-block: 0.75ch;
+  padding-inline: 1.75ch 3ch;
+  line-height: 1.5;
+
+  &:where(optgroup, option) {
+    background: var(--surface-4);
+  }
+
+  &:where(:focus-visible) {
     outline-offset: 0;
     outline-width: 1px;
+  }
+  &:where(:hover, :focus) {
+    /* add button hover */
+    /* background-color: var(--surface-1);
+		background-image: var(--icon-arrow-up); */
   }
 }

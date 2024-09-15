@@ -13,13 +13,14 @@
     <input class="input underlined" type="text" placeholder="Underlined input">
     <input class="input filled" type="text" placeholder="Filled input">
   </div>
-</div>
 
 ```html
 <input class="input" type="text" placeholder="Default input" />
 <input class="input underlined" type="text" placeholder="Underlined input" />
 <input class="input filled" type="text" placeholder="Filled input" />
 ```
+
+</div>
 
 ## Sizes
 
@@ -36,7 +37,6 @@
     <input class="input filled large" type="text" placeholder="Large input">
 
   </div>
-</div>
 
 ```html
 <input class="input small" type="text" placeholder="Small input" />
@@ -52,6 +52,8 @@
 <input class="input filled large" type="text" placeholder="Large input" />
 ```
 
+</div>
+
 ## Colors
 
 <div class="example-wrapper">
@@ -61,7 +63,6 @@
     <input class="input danger" type="text" value="Danger input">
     <input class="input info" type="text" value="Info input">
   </div>
-</div>
 
 ```html
 <input class="input success" type="text" value="Success input" />
@@ -69,3 +70,5 @@
 <input class="input danger" type="text" value="Danger input" />
 <input class="input info" type="text" value="Info input" />
 ```
+
+</div>
