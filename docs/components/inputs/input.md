@@ -54,21 +54,34 @@
 
 </div>
 
-## Colors
+## Types
 
-<div class="example-wrapper">
-  <div class="example row">
-    <input class="input success" type="text" value="Success input">
-    <input class="input warning" type="text" value="Warning input">
-    <input class="input danger" type="text" value="Danger input">
-    <input class="input info" type="text" value="Info input">
-  </div>
+### Email
 
-```html
-<input class="input success" type="text" value="Success input" />
-<input class="input warning" type="text" value="Warning input" />
-<input class="input danger" type="text" value="Danger input" />
-<input class="input info" type="text" value="Info input" />
-```
+### Number
 
-</div>
+### Password
+
+### Phone
+
+### Color
+
+### File
+
+### Progress
+
+### Range
+
+### Search
+
+### URL
+
+### Date
+
+#### Datetime
+
+#### Datetime-local
+
+#### Month
+
+#### Week
