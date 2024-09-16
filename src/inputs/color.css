@@ -7,6 +7,7 @@
   border-width: var(--size-1);
   cursor: pointer;
   overflow: hidden;
+  transition: outline 0.15s var(--ease-2);
 
   &::-webkit-color-swatch {
     border: none;
