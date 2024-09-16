@@ -1,5 +1,4 @@
 :where(
-    .input,
     input:not(
         button,
         [disabled],

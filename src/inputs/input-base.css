@@ -6,7 +6,7 @@
 }
 
 :where(
-    input:is(
+    input:where(
         [type="text"],
         [type="password"],
         [type="url"],
@@ -21,17 +21,17 @@
 }
 
 :where(
-    .input,
     input:not(
         button,
         [disabled],
         [readonly],
-        [type="file"],
         [type="button"],
-        [type="submit"],
-        [type="reset"],
         [type="checkbox"],
-        [type="radio"]
+        [type="color"],
+        [type="file"],
+        [type="radio"],
+        [type="reset"],
+        [type="submit"]
       ),
     textarea,
     select

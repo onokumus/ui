@@ -45,16 +45,22 @@ export default defineConfig({
         {
           text: "Components",
           items: [
+            { text: "Button", link: "/components/button" },
             {
               text: "Inputs",
               collapsed: false,
               items: [
-                { text: "Button", link: "/components/inputs/button" },
                 { text: "Checkbox", link: "/components/inputs/checkbox" },
-                { text: "Input", link: "/components/inputs/input" },
+                { text: "Color", link: "/components/inputs/color" },
+                { text: "Date", link: "/components/inputs/date" },
+                { text: "File", link: "/components/inputs/file" },
+                { text: "Progress", link: "/components/inputs/progress" },
                 { text: "Radio", link: "/components/inputs/radio" },
+                { text: "Range", link: "/components/inputs/range" },
+                { text: "Search", link: "/components/inputs/search" },
                 { text: "Select", link: "/components/inputs/select" },
                 { text: "Textarea", link: "/components/inputs/textarea" },
+                { text: "Text input", link: "/components/inputs/index" },
               ],
             },
             {

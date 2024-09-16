@@ -1,0 +1,23 @@
+:where(input[type="color"]) {
+  appearance: none;
+  background: none;
+  border-color: var(--input-border-color);
+  border-radius: var(--input-border-radius);
+  border-style: solid;
+  border-width: var(--size-1);
+  cursor: pointer;
+  overflow: hidden;
+
+  &::-webkit-color-swatch {
+    border: none;
+  }
+
+  &::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+
+  &:where(:hover, :focus-within) {
+    outline: min(calc(var(--input-border-width) * 2), 3px) solid
+      var(--input-border-color);
+  }
+}
