@@ -3,19 +3,21 @@
   --_border-color: transparent;
   --_text-color: initial;
 
-  &:where(:not(:active):hover) {
-    --_bg-color: var(--surface-1);
+  &:where(:not(.disabled, [disabled])) {
+    &:where(:not(:active):hover) {
+      --_bg-color: var(--surface-1);
+    }
+
+    &:where(:active) {
+      --_bg-color: light-dark(
+        color-mix(in oklch, var(--primary) 20%, transparent),
+        color-mix(in oklch, var(--primary) 55%, transparent)
+      );
+    }
   }
 
-  &:where(:active) {
-    --_bg-color: light-dark(
-      color-mix(in oklch, var(--primary) 20%, transparent),
-      color-mix(in oklch, var(--primary) 55%, transparent)
-    );
-  }
-
-  &:where([disabled]) {
-    --_bg-color: transparent;
+  &:where(.disabled, [disabled]) {
+    --_text-color: color-mix(in oklch, var(--text-1) 40%, transparent);
     cursor: not-allowed;
   }
   /* Sizes */
@@ -39,77 +41,99 @@
     --_border-color: transparent;
     --_text-color: initial;
   }
+
   /* Variants */
   &.outlined {
     --_bg-color: transparent;
     --_border-color: var(--text-1);
     --_text-color: var(--color-8);
 
-    &:where(:not(:active):hover) {
-      --_bg-color: var(--color-9);
-      --_border-color: var(--color-9);
-      --_text-color: var(--color-16);
+    &:where(:not(.disabled, [disabled])) {
+      &:where(:not(:active):hover) {
+        --_bg-color: var(--color-9);
+        --_border-color: var(--color-9);
+        --_text-color: var(--color-16);
+      }
+
+      &:where(:active) {
+        --_bg-color: var(--color-10);
+        --_border-color: var(--color-10);
+        --_text-color: var(--color-16);
+      }
     }
 
-    &:where(:active) {
-      --_bg-color: var(--color-10);
-      --_border-color: var(--color-10);
-      --_text-color: var(--color-16);
+    &:where(.disabled, [disabled]) {
+      --_bg-color: transparent;
+      --_border-color: color-mix(in oklch, var(--text-1) 12%, transparent);
+      --_text-color: color-mix(in oklch, var(--text-1) 40%, transparent);
     }
   }
   &.tonal {
     --_bg-color: var(--color-5);
-    --_border-color: var(--color-5);
     --_text-color: var(--color-16);
 
-    &:where(:not(:active):hover) {
-      --_bg-color: var(--color-7);
-      --_border-color: var(--color-7);
-      --_text-color: var(--color-16);
+    &:where(:not(.disabled, [disabled])) {
+      &:where(:not(:active):hover) {
+        --_bg-color: var(--color-7);
+        --_border-color: var(--color-7);
+        --_text-color: var(--color-16);
+      }
+
+      &:where(:active) {
+        --_bg-color: var(--color-9);
+        --_border-color: var(--color-9);
+        --_text-color: var(--color-16);
+      }
     }
 
-    &:where(:active) {
-      --_bg-color: var(--color-9);
-      --_border-color: var(--color-9);
-      --_text-color: var(--color-16);
+    &:where(.disabled, [disabled]) {
+      --_bg-color: color-mix(in oklch, var(--text-1) 12%, transparent);
+      --_text-color: color-mix(in oklch, var(--text-1) 70%, transparent);
     }
   }
   &.filled {
     --_bg-color: var(--color-8);
     --_text-color: var(--color-16);
 
-    &:where(:not(:active):hover) {
-      --_bg-color: var(--color-9);
-      --_border-color: var(--color-9);
-      --_text-color: var(--color-16);
+    &:where(:not(.disabled, [disabled])) {
+      &:where(:not(:active):hover) {
+        --_bg-color: var(--color-9);
+        --_border-color: var(--color-9);
+        --_text-color: var(--color-16);
+      }
+
+      &:where(:active) {
+        --_bg-color: var(--color-10);
+        --_border-color: var(--color-10);
+        --_text-color: var(--color-16);
+      }
     }
 
-    &:where(:active) {
-      --_bg-color: var(--color-10);
-      --_border-color: var(--color-10);
-      --_text-color: var(--color-16);
+    &:where(.disabled, [disabled]) {
+      --_bg-color: color-mix(in oklch, var(--text-1) 12%, transparent);
+      --_text-color: color-mix(in oklch, var(--text-1) 70%, transparent);
     }
   }
   &.elevated {
     --_bg-color: oklch(1 0 0 / 0.05);
     --_text-color: var(--color-8);
 
-    background-color: var(--_bg-color);
     box-shadow: var(--shadow-2);
 
-    &:where(:not(:active):hover) {
-      box-shadow: var(--shadow-4);
+    &:where(:not(.disabled, [disabled])) {
+      &:where(:not(:active):hover) {
+        box-shadow: var(--shadow-4);
+      }
+
+      &:where(:active) {
+        --_bg-color: var(--surface-1);
+        box-shadow: var(--shadow-4);
+      }
     }
 
-    &:where(:active) {
-      --_bg-color: var(--surface-1);
-      box-shadow: var(--shadow-4);
+    &:where(.disabled, [disabled]) {
+      --_bg-color: color-mix(in oklch, var(--text-1) 12%, transparent);
+      --_text-color: color-mix(in oklch, var(--text-1) 70%, transparent);
     }
-  }
-
-  &:where(.disabled, [disabled]) {
-    color: color-mix(in oklch, var(--text-1) 70%, transparent);
-    background-color: color-mix(in oklch, var(--text-1) 12%, transparent);
-    border-color: color-mix(in oklch, var(--text-1) 12%, transparent);
   }
 }
