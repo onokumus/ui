@@ -1,53 +1,56 @@
 :where(h1, h2, h3, h4, h5, h6) {
-  line-height: var(--font-lineheight-1);
-  font-weight: var(--font-weight-9);
+  line-height: 1;
+  font-weight: var(--font-weight-7);
   text-wrap: balance;
 }
 
-:where(h1) {
-  font-size: var(--font-size-h1, var(--font-size-8));
+:where(h1, .h1) {
+  font-size: var(--font-size-h1, var(--font-size-7));
   max-inline-size: var(--size-header-1);
 }
 
-:where(h2) {
-  font-size: var(--font-size-h2, var(--font-size-6));
+:where(h2, .h2) {
+  font-size: var(--font-size-h2, var(--font-size-5));
   max-inline-size: var(--size-header-2);
 }
 
-:where(h3) {
-  font-size: var(--font-size-h3, var(--font-size-5));
+:where(h3, .h3) {
+  font-size: var(--font-size-h3, var(--font-size-4));
 }
-:where(h4) {
-  font-size: var(--font-size-h4, var(--font-size-4));
+:where(h4, .h4) {
+  font-size: var(--font-size-h4, var(--font-size-3));
 }
-:where(h5) {
-  font-size: var(--font-size-h5, var(--font-size-3));
+:where(h5, .h5) {
+  font-size: var(--font-size-h5, var(--font-size-2));
+}
+:where(h6, .h6) {
+  font-size: var(--font-size-h6, var(--font-size-1));
 }
 
-:where(p) {
+:where(p, .p) {
   max-inline-size: var(--size-content-3);
   text-wrap: pretty;
 }
 
-:where(sup) {
+:where(sup, .sup) {
   font-size: 0.5em;
 }
 
-:where(del) {
-  background: var(--error, var(--red-9));
-  color: var(--error-text, var(--red-2));
+:where(del, .del) {
+  background: var(--danger, var(--red-9));
+  color: var(--danger-text, var(--red-2));
 }
 
-:where(ins) {
+:where(ins, .ins) {
   background: var(--success, var(--green-9));
   color: var(--success-text, var(--green-1));
 }
 
-:where(abbr) {
-  text-decoration-color: var(--blue-5);
+:where(abbr, .abbr) {
+  text-decoration-color: var(--info);
 }
 
-:where(small) {
+:where(small, .small) {
   font-size: max(0.5em, var(--font-size-0));
   max-inline-size: var(--size-content-1);
 }

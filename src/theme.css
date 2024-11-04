@@ -3,6 +3,7 @@
 @import "../node_modules/open-props/orange.min.css";
 @import "../node_modules/open-props/blue.min.css";
 @import "../node_modules/open-props/green.min.css";
+
 @import "./utils/index.css";
 
 html {
@@ -59,24 +60,24 @@ html {
   --link: var(--primary);
   --link-visited: var(--primary-light);
 
-  --surface-1: light-dark(var(--gray-1), var(--gray-12));
-  --surface-2: light-dark(var(--gray-2), var(--gray-8));
-  --surface-3: light-dark(var(--gray-3), var(--gray-7));
-  --surface-4: light-dark(var(--gray-4), var(--gray-6));
+  --surface-1: light-dark(var(--gray-0), var(--gray-12));
+  --surface-2: light-dark(var(--gray-1), var(--gray-11));
+  --surface-3: light-dark(var(--gray-2), var(--gray-10));
+  --surface-4: light-dark(var(--gray-3), var(--gray-9));
 
   /* Typography */
-  --font-size-h1: var(--font-size-8);
-  --font-size-h2: var(--font-size-6);
-  --font-size-h3: var(--font-size-5);
-  --font-size-h4: var(--font-size-4);
-  --font-size-h5: var(--font-size-3);
+  --font-size-h1: var(--font-size-7);
+  --font-size-h2: var(--font-size-5);
+  --font-size-h3: var(--font-size-4);
+  --font-size-h4: var(--font-size-3);
+  --font-size-h5: var(--font-size-2);
   --font-size-h6: var(--font-size-1);
   --font-size-p: var(--font-size-1);
 
   /* Borders */
-  --button-border-radius: 0px;
+  --button-border-radius: 100vmax;
   --surface-border-radius: 0px;
-  --input-border-radius: 0px;
+  --input-border-radius: 4px;
   --input-border-width: 1px;
   --input-border-color: color-mix(in oklch, currentColor 80%, transparent);
   --divider-color: gray;

@@ -1,2 +1,53 @@
 .card {
+  --_bg-color: inherit;
+  --_border-color: transparent;
+  --_shadow: var(--shadow-2);
+
+  /* For some reason light-dark doesn't work on box-shadows */
+  @media (prefers-color-scheme: dark) {
+    --_shadow: var(--shadow-3);
+  }
+
+  background-color: var(--_bg-color);
+  border-color: var(--_border-color);
+  border-radius: var(--input-border-radius);
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: var(--_shadow);
+  overflow: hidden;
+
+  /* Variants */
+  &.tonal {
+    --_bg-color: var(--surface-2);
+    --_shadow: none;
+  }
+
+  &.outlined {
+    --_border-color: color-mix(
+      in oklch,
+      var(--input-border-color) 12%,
+      transparent
+    );
+    --_shadow: none;
+  }
+
+  /* Building blocks */
+  :where(.header, .content, .actions) {
+    margin-block: var(--size-3);
+    padding-inline: var(--size-3);
+  }
+
+  .header {
+  }
+
+  .content {
+  }
+
+  .actions {
+    display: flex;
+    gap: var(--size-1);
+    justify-content: end;
+    margin-block-end: var(--size-1);
+    padding-inline-end: var(--size-1);
+  }
 }

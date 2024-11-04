@@ -5,14 +5,11 @@
 
   &:where(:not(.disabled, [disabled])) {
     &:where(:not(:active):hover) {
-      --_bg-color: var(--surface-1);
+      --_bg-color: color-mix(in oklch, var(--surface-2) 90%, white);
     }
 
     &:where(:active) {
-      --_bg-color: light-dark(
-        color-mix(in oklch, var(--primary) 20%, transparent),
-        color-mix(in oklch, var(--primary) 55%, transparent)
-      );
+      --_bg-color: color-mix(in oklch, var(--surface-2) 95%, white);
     }
   }
 
@@ -46,19 +43,19 @@
   &.outlined {
     --_bg-color: transparent;
     --_border-color: var(--text-1);
-    --_text-color: var(--color-8);
+    --_text-color: var(--color-5);
 
     &:where(:not(.disabled, [disabled])) {
       &:where(:not(:active):hover) {
         --_bg-color: var(--color-9);
         --_border-color: var(--color-9);
-        --_text-color: var(--color-16);
+        --_text-color: var(--color-1);
       }
 
       &:where(:active) {
         --_bg-color: var(--color-10);
         --_border-color: var(--color-10);
-        --_text-color: var(--color-16);
+        --_text-color: var(--color-1);
       }
     }
 
@@ -76,13 +73,11 @@
       &:where(:not(:active):hover) {
         --_bg-color: var(--color-7);
         --_border-color: var(--color-7);
-        --_text-color: var(--color-16);
       }
 
       &:where(:active) {
         --_bg-color: var(--color-9);
         --_border-color: var(--color-9);
-        --_text-color: var(--color-16);
       }
     }
 
@@ -93,19 +88,17 @@
   }
   &.filled {
     --_bg-color: var(--color-8);
-    --_text-color: var(--color-16);
+    --_text-color: var(--color-1);
 
     &:where(:not(.disabled, [disabled])) {
       &:where(:not(:active):hover) {
         --_bg-color: var(--color-9);
         --_border-color: var(--color-9);
-        --_text-color: var(--color-16);
       }
 
       &:where(:active) {
         --_bg-color: var(--color-10);
         --_border-color: var(--color-10);
-        --_text-color: var(--color-16);
       }
     }
 

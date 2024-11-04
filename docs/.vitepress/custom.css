@@ -64,12 +64,17 @@
   & + [class^="language"] {
     margin-block-start: 0 !important;
   }
-}
 
-.row {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+  &.row {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  &.stack {
+    display: grid;
+    gap: 1rem;
+  }
 }
