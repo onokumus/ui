@@ -1,0 +1,38 @@
+/*
+Inspired by ModernCSS.dev
+https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/#creating-variant-styles-with-has
+
+The `.sr-only` class refers to the "screen reader only" util which
+removes the visible text but still allows screen readers to
+access it.
+*/
+:where(button, .button) {
+  /* Base */
+  &:where(:has(.icon, svg)) {
+    gap: 0.5em;
+
+    & svg {
+      fill: currentColor;
+    }
+  }
+
+  /* Icon-only */
+  &:where(:has(.sr-only)) {
+    border-radius: var(--button-border-radius);
+    padding: 1ex;
+
+    &.small {
+      padding: 0.5ex;
+      & * {
+        scale: 0.9;
+      }
+    }
+
+    &.large {
+      padding: 1.5ex;
+      & * {
+        scale: 1.1;
+      }
+    }
+  }
+}

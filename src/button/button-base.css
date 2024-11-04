@@ -35,22 +35,6 @@
   user-select: none;
 }
 
-:where(
-    .button,
-    button,
-    input:is([type="button"], [type="submit"], [type="reset"])
-  ) {
-  /* icons */
-  &:has(svg) {
-    background: tomato;
-
-    & > * {
-      stroke: var(--_icon-color);
-      stroke-width: var(--border-size-2);
-    }
-  }
-}
-
 /* file input */
 :where(input[type="file"]) {
   align-self: flex-start;
