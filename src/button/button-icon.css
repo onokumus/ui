@@ -8,8 +8,8 @@ access it.
 */
 :where(button, .button) {
   /* Base */
-  &:where(:has(.icon, svg)) {
-    gap: 0.5em;
+  &:where(:has(svg), &.icon-only) {
+    gap: 1ex;
 
     & svg {
       fill: currentColor;
@@ -17,7 +17,7 @@ access it.
   }
 
   /* Icon-only */
-  &:where(:has(.sr-only)) {
+  &:where(:has(.sr-only), &.icon-only) {
     border-radius: var(--button-border-radius);
     padding: 1ex;
 

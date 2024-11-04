@@ -1,5 +1,15 @@
 @layer vitepress.components.doc {
   /**
+ * Typography
+ * -------------------------------------------------------------------------- */
+
+  .vp-doc {
+    :where(h1, h2, h3, h4, h5, h6, p, li, blockquote, summary, span) {
+      text-wrap: balance;
+    }
+  }
+
+  /**
  * Headings
  * -------------------------------------------------------------------------- */
 
@@ -337,6 +347,10 @@
   background-color: var(--vp-code-block-bg);
   overflow-x: auto;
   transition: background-color 0.5s;
+
+  & * {
+    text-wrap: initial;
+  }
 }
 
 @media (min-width: 640px) {
