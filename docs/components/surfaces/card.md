@@ -40,7 +40,7 @@
 </div>
 ```
 
-</div>s
+</div>
 
 ## Building blocks
 

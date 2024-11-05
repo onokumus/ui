@@ -1,4 +1,4 @@
-@import "../node_modules/open-props/gray-oklch.min.css";
+@import "../node_modules/open-props/gray.min.css";
 @import "../node_modules/open-props/red.min.css";
 @import "../node_modules/open-props/orange.min.css";
 @import "../node_modules/open-props/blue.min.css";
@@ -79,6 +79,9 @@ html {
   --surface-border-radius: 0px;
   --input-border-radius: 4px;
   --input-border-width: 1px;
-  --input-border-color: color-mix(in oklch, currentColor 80%, transparent);
+  --input-border-color: light-dark(
+    color-mix(in oklch, currentColor 40%, white),
+    color-mix(in oklch, currentColor 40%, black)
+  );
   --divider-color: gray;
 }
