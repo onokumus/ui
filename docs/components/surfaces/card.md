@@ -4,8 +4,10 @@
   @import "../../../src/surfaces/card.css";
 
 	.anatomy {
+    outline: 2px solid tomato;
+    outline-offset: 3px;
 		:is(.header, .content, .actions) {
-			outline: 2px solid red;
+			outline: 2px solid tomato;
 			outline-offset: -2px;
 		}
 	}
@@ -42,13 +44,14 @@
 
 </div>
 
-## Building blocks
+## Anatomy
 
 Open Props UI include these complementary utility components to handle various use cases:
 
-- `.header`: an optional wrapper for the card header
-- `.content`: an optional wrapper for the card content
-- `.actions`: an optional wrapper for that groups a set of buttons
+1. Container
+2. `.header` (optional): a wrapper for the card header
+3. `.content` (optional): a wrapper for the card content
+4. `.actions` (optional): a wrapper for that groups a set of buttons
 
 <div class="example-wrapper">
    <div class="example stack">
