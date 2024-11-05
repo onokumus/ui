@@ -4,10 +4,10 @@
   @import "../../../src/surfaces/card.css";
 
 	.anatomy {
-    outline: 2px solid tomato;
+    outline: var(--_anatomy-border);
     outline-offset: 3px;
 		:is(.header, .content, .actions) {
-			outline: 2px solid tomato;
+			outline: var(--_anatomy-border);
 			outline-offset: -2px;
 		}
 	}

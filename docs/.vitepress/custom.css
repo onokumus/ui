@@ -78,3 +78,7 @@
     gap: 1rem;
   }
 }
+
+.anatomy {
+  --_anatomy-border: 2px dotted tomato;
+}
