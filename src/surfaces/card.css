@@ -1,6 +1,7 @@
 .card {
   --_bg-color: inherit;
   --_border-color: transparent;
+  --_border-width: 0;
   --_shadow: var(--shadow-2);
 
   /* For some reason light-dark doesn't work on box-shadows */
@@ -10,20 +11,22 @@
 
   background-color: var(--_bg-color);
   border-color: var(--_border-color);
-  border-radius: var(--input-border-radius);
+  border-radius: var(--global-border-radius);
   border-style: solid;
-  border-width: 1px;
+  border-width: var(--_border-width);
   box-shadow: var(--_shadow);
   overflow: hidden;
 
   /* Variants */
   &.tonal {
     --_bg-color: var(--surface-3);
+    --_border-width: 1px;
     --_shadow: none;
   }
 
   &.outlined {
     --_border-color: var(--input-border-color);
+    --_border-width: 1px;
     --_shadow: none;
   }
 

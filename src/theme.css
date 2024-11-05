@@ -75,13 +75,18 @@ html {
   --font-size-p: var(--font-size-1);
 
   /* Borders */
-  --button-border-radius: 100vmax;
-  --surface-border-radius: 0px;
-  --input-border-radius: 4px;
-  --input-border-width: 1px;
-  --input-border-color: light-dark(
-    color-mix(in oklch, currentColor 40%, white),
+  --global-border-color: light-dark(
+    color-mix(in oklch, currentColor 20%, white),
     color-mix(in oklch, currentColor 40%, black)
   );
-  --divider-color: gray;
+  --global-border-radius: var(--size-1);
+  --button-border-radius: 100vmax;
+  --surface-border-radius: 0px;
+
+  --input-border-radius: var(--size-1);
+  --input-border-width: 1px;
+  --input-border-color: light-dark(
+    color-mix(in oklch, currentColor 20%, white),
+    color-mix(in oklch, currentColor 40%, black)
+  );
 }

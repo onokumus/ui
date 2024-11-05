@@ -55,7 +55,7 @@
 :focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 2px;
-  border-radius: var(--global-radius, 0px);
+  border-radius: var(--global-border-radius, 0px);
 }
 
 @media (--motionOK) {
@@ -153,20 +153,20 @@
 
 :where(:not(pre) > code) {
   background: var(--surface-2);
-  border-radius: var(--global-radius, var(--radius-2));
+  border-radius: var(--global-border-radius, var(--radius-2));
   padding: var(--size-1) var(--size-2);
   writing-mode: lr;
 }
 
 :where(kbd, var) {
   border-color: var(--surface-4);
-  border-radius: var(--global-radius, var(--radius-2));
+  border-radius: var(--global-border-radius, var(--radius-2));
   border-width: var(--border-size-1);
   padding: var(--size-1) var(--size-2);
 }
 
 :where(mark) {
-  border-radius: var(--global-radius, var(--radius-2));
+  border-radius: var(--global-border-radius, var(--radius-2));
   padding-inline: var(--size-1);
 }
 
@@ -200,7 +200,7 @@
 }
 
 :where(fieldset) {
-  border-radius: var(--global-radius, var(--radius-2));
+  border-radius: var(--global-border-radius, var(--radius-2));
   border: var(--border-size-1) solid var(--surface-4);
 }
 

@@ -1,0 +1,74 @@
+:where(details) {
+  border-radius: var(--global-border-radius);
+  padding-block: var(--size-2);
+  margin-inline: var(--size-1);
+
+  :where(summary) {
+    background-color: inherit;
+    cursor: pointer;
+    margin: calc(var(--size-2) * -1) calc(var(--size-3) * -1);
+    padding: var(--size-3) var(--size-3);
+    user-select: none;
+  }
+
+  :where(&[open] > summary) {
+    margin-bottom: var(--size-2);
+  }
+
+  /* Variants */
+  &.elevated {
+    background-color: var(--surface-2);
+    box-shadow: var(--shadow-2);
+    margin-inline: 0;
+    padding-inline: var(--size-3);
+  }
+  &.outlined {
+    background-color: var(--surface-2);
+    border: 1px solid var(--global-border-color);
+    box-shadow: none;
+    margin-inline: 0;
+    padding-inline: var(--size-3);
+  }
+}
+
+/* Accordion group */
+:where(.accordion-group) {
+  :where(details) {
+    border: 0;
+    box-shadow: none;
+
+    /* Variants */
+    &.elevated {
+      box-shadow: var(--shadow-2);
+    }
+
+    &.outlined {
+      border: 1px solid var(--global-border-color);
+    }
+
+    & + & {
+      summary {
+        border-radius: 0;
+        border-block-start: 1px solid var(--global-border-color);
+      }
+    }
+
+    &:first-of-type {
+      border-start-start-radius: var(--global-border-radius);
+      border-start-end-radius: var(--global-border-radius);
+      summary {
+        border-start-start-radius: var(--global-border-radius);
+        border-start-end-radius: var(--global-border-radius);
+      }
+    }
+
+    &:last-of-type {
+      border-end-start-radius: var(--global-border-radius);
+      border-end-end-radius: var(--global-border-radius);
+      summary {
+        border-end-start-radius: var(--global-border-radius);
+        border-end-end-radius: var(--global-border-radius);
+      }
+    }
+  }
+}
