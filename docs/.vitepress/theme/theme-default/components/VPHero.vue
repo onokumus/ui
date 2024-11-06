@@ -1,26 +1,26 @@
 <script setup lang="ts">
-import { type Ref, inject } from 'vue'
-import type { DefaultTheme } from 'vitepress/theme'
-import VPButton from './VPButton.vue'
-import VPImage from './VPImage.vue'
+import { type Ref, inject } from "vue";
+import type { DefaultTheme } from "vitepress/theme";
+import VPButton from "./VPButton.vue";
+import VPImage from "./VPImage.vue";
 
 export interface HeroAction {
-  theme?: 'brand' | 'alt'
-  text: string
-  link: string
-  target?: string
-  rel?: string
+  theme?: "brand" | "alt";
+  text: string;
+  link: string;
+  target?: string;
+  rel?: string;
 }
 
 defineProps<{
-  name?: string
-  text?: string
-  tagline?: string
-  image?: DefaultTheme.ThemeableImage
-  actions?: HeroAction[]
-}>()
+  name?: string;
+  text?: string;
+  tagline?: string;
+  image?: DefaultTheme.ThemeableImage;
+  actions?: HeroAction[];
+}>();
 
-const heroImageSlotExists = inject('hero-image-slot-exists') as Ref<boolean>
+const heroImageSlotExists = inject("hero-image-slot-exists") as Ref<boolean>;
 </script>
 
 <template>
@@ -67,19 +67,28 @@ const heroImageSlotExists = inject('hero-image-slot-exists') as Ref<boolean>
 
 <style scoped>
 .VPHero {
-  margin-top: calc((var(--vp-nav-height) + var(--vp-layout-top-height, 0px)) * -1);
-  padding: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 48px) 24px 48px;
+  margin-top: calc(
+    (var(--vp-nav-height) + var(--vp-layout-top-height, 0px)) * -1
+  );
+  padding: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 48px)
+    24px 48px;
 }
 
 @media (min-width: 640px) {
   .VPHero {
-    padding: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 80px) 48px 64px;
+    padding: calc(
+        var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 80px
+      )
+      48px 64px;
   }
 }
 
 @media (min-width: 960px) {
   .VPHero {
-    padding: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 80px) 64px 64px;
+    padding: calc(
+        var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 80px
+      )
+      64px 64px;
   }
 }
 
@@ -135,13 +144,13 @@ const heroImageSlotExists = inject('hero-image-slot-exists') as Ref<boolean>
   white-space: pre-wrap;
 }
 
+.name {
+  color: var(--vp-home-hero-name-color);
+}
+
 .VPHero.has-image .name,
 .VPHero.has-image .text {
   margin: 0 auto;
-}
-
-.name {
-  color: var(--vp-home-hero-name-color);
 }
 
 .clip {
@@ -152,8 +161,7 @@ const heroImageSlotExists = inject('hero-image-slot-exists') as Ref<boolean>
 }
 
 @media (min-width: 640px) {
-  .name,
-  .text {
+  .name {
     max-width: 576px;
     line-height: 56px;
     font-size: 48px;
@@ -161,8 +169,7 @@ const heroImageSlotExists = inject('hero-image-slot-exists') as Ref<boolean>
 }
 
 @media (min-width: 960px) {
-  .name,
-  .text {
+  .name {
     line-height: 64px;
     font-size: 56px;
   }
@@ -173,14 +180,20 @@ const heroImageSlotExists = inject('hero-image-slot-exists') as Ref<boolean>
   }
 }
 
-.tagline {
-  padding-top: 8px;
+.tagline,
+.text {
   max-width: 392px;
   line-height: 28px;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 500;
   white-space: pre-wrap;
   color: var(--vp-c-text-2);
+}
+
+.text {
+  font-size: 18px;
+  margin-block-start: 1rem;
+  color: var(--vp-home-hero-text-color);
 }
 
 .VPHero.has-image .tagline {
@@ -188,18 +201,19 @@ const heroImageSlotExists = inject('hero-image-slot-exists') as Ref<boolean>
 }
 
 @media (min-width: 640px) {
-  .tagline {
-    padding-top: 12px;
+  .tagline,
+  .text {
     max-width: 576px;
     line-height: 32px;
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
 @media (min-width: 960px) {
-  .tagline {
+  .tagline,
+  .text {
     line-height: 36px;
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .VPHero.has-image .tagline {

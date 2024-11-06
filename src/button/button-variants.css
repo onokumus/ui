@@ -6,11 +6,11 @@
   /* TODO */
   &:where(:not(.disabled, [disabled])) {
     &:where(:not(:active):hover) {
-      --_bg-color: color-mix(in oklch, var(--surface-filled) 80%, white);
+      --_bg-color: color-mix(in oklch, var(--surface-filled) 60%, white);
     }
 
-    &:where(:active) {
-      --_bg-color: color-mix(in oklch, var(--surface-filled) 85%, white);
+    &:where(:hover:active) {
+      --_bg-color: color-mix(in oklch, var(--surface-filled) 90%, white);
     }
   }
 
@@ -22,6 +22,7 @@
     );
     cursor: not-allowed;
   }
+
   /* Sizes */
   &.small {
     padding-block: 0.5ex;
