@@ -15,7 +15,11 @@
   }
 
   &:where(.disabled, [disabled]) {
-    --_text-color: color-mix(in oklch, var(--text-1) 40%, transparent);
+    --_text-color: color-mix(
+      in oklch,
+      var(--text-1) 50%,
+      var(--surface-default)
+    );
     cursor: not-allowed;
   }
   /* Sizes */
@@ -42,7 +46,7 @@
 
   /* Variants */
   &.outlined {
-    --_bg-color: transparent;
+    --_bg-color: var(--surface-default);
     --_border-color: var(--text-1);
     --_text-color: var(--color-5);
 
@@ -61,9 +65,17 @@
     }
 
     &:where(.disabled, [disabled]) {
-      --_bg-color: transparent;
-      --_border-color: color-mix(in oklch, var(--text-1) 12%, transparent);
-      --_text-color: color-mix(in oklch, var(--text-1) 40%, transparent);
+      --_bg-color: var(--surface-default);
+      --_border-color: color-mix(
+        in oklch,
+        var(--text-1) 20%,
+        var(--surface-default)
+      );
+      --_text-color: color-mix(
+        in oklch,
+        var(--text-1) 40%,
+        var(--surface-default)
+      );
     }
   }
   &.tonal {
@@ -83,8 +95,16 @@
     }
 
     &:where(.disabled, [disabled]) {
-      --_bg-color: color-mix(in oklch, var(--text-1) 12%, transparent);
-      --_text-color: color-mix(in oklch, var(--text-1) 70%, transparent);
+      --_bg-color: color-mix(
+        in oklch,
+        var(--text-1) 8%,
+        var(--surface-default)
+      );
+      --_text-color: color-mix(
+        in oklch,
+        var(--text-1) 70%,
+        var(--surface-default)
+      );
     }
   }
   &.filled {
@@ -104,12 +124,20 @@
     }
 
     &:where(.disabled, [disabled]) {
-      --_bg-color: color-mix(in oklch, var(--text-1) 12%, transparent);
-      --_text-color: color-mix(in oklch, var(--text-1) 70%, transparent);
+      --_bg-color: color-mix(
+        in oklch,
+        var(--text-1) 20%,
+        var(--surface-default)
+      );
+      --_text-color: color-mix(
+        in oklch,
+        var(--text-1) 70%,
+        var(--surface-default)
+      );
     }
   }
   &.elevated {
-    --_bg-color: oklch(1 0 0 / 0.05);
+    --_bg-color: var(--surface-default);
     --_text-color: var(--color-8);
 
     box-shadow: var(--shadow-2);
@@ -126,8 +154,16 @@
     }
 
     &:where(.disabled, [disabled]) {
-      --_bg-color: color-mix(in oklch, var(--text-1) 12%, transparent);
-      --_text-color: color-mix(in oklch, var(--text-1) 70%, transparent);
+      --_bg-color: color-mix(
+        in oklch,
+        var(--text-1) 8%,
+        var(--surface-default)
+      );
+      --_text-color: color-mix(
+        in oklch,
+        var(--text-1) 70%,
+        var(--surface-default)
+      );
     }
   }
 }
