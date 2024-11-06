@@ -4,19 +4,24 @@
 
 .anatomy {
 	outline: var(--_anatomy-border-gray);
-	outline-offset: 3px;
-	:is(summary, .content) {
+	outline-offset: 8px;
+
+	summary{
 		outline: var(--_anatomy-border-red);
-		outline-offset: -2px;
+		outline-offset: -4px;
+	}
+
+	.content {
+		outline: var(--_anatomy-border-red);
+		outline-offset: 0;
 	}
 }
 
 .custom-arrow {
 	summary {
-		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 32 32'%3E%3Cpath fill='currentColor' d='M5.366 11.116a1.25 1.25 0 0 1 1.768 0L16 19.982l8.866-8.866a1.25 1.25 0 0 1 1.768 1.768l-9.75 9.75a1.25 1.25 0 0 1-1.768 0l-9.75-9.75a1.25 1.25 0 0 1 0-1.768'/%3E%3C/svg%3E");
-    background-position: right var(--size-3) top 50%;
-    background-repeat: no-repeat;
-    background-size: var(--size-5);
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
     list-style: none;
 
     &::marker,
@@ -25,8 +30,8 @@
     }
 	}
 
-	&[open] > summary {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 32 32'%3E%3Cpath fill='currentColor' d='M5.293 20.707a1 1 0 0 0 1.414 0L16 11.414l9.293 9.293a1 1 0 0 0 1.414-1.414l-10-10a1 1 0 0 0-1.414 0l-10 10a1 1 0 0 0 0 1.414'/%3E%3C/svg%3E");
+	&[open] > summary svg {
+		rotate: 180deg;
   }
 }
 </style>
@@ -147,14 +152,15 @@ Leverages the HTML `details` and `summary` elements.
 
 ## Accordion group
 
-Apply the `.accordion-group` class to a wrapper around the `details` elements.
+Apply the `.card` class to a wrapper around the `details` elements.
 
-To select a [variant](#variants), apply the variant class on the `.accordion-group` element.
+To set a [variant](#variants) style to your accordions, apply the variant class on the `.card` element.
 
 <div class="example-wrapper">
    <div class="example stack">
 
-<div class="accordion-group tonal">
+<div class="card outlined">
+	<div class="content">
  <details>
 	<summary id="summary1" aria-controls="content1">
 		Accordion title
@@ -183,9 +189,10 @@ To select a [variant](#variants), apply the variant class on the `.accordion-gro
 </details>
 </div>
 </div>
+</div>
 
 ```html
-<div class="accordion-group tonal">
+<div class="card outlined">
   <details>
     <!--  -->
   </details>
@@ -206,14 +213,15 @@ If you want only one accordion to be open at a time you will need to use Javascr
 
 ## Custom arrow
 
-If the native `details` arrow is not your thing, you can easily modify the `accordion.css` file to add your own preferred icon.
+If the native `details` arrow doesn't suit your needs you can easily modify the `accordion.css` file to add your own preferred icon.
 
 <div class="example-wrapper">
    <div class="example stack">
 
  <details class="outlined custom-arrow">
 	<summary id="summary1" aria-controls="content1">
-		Accordion title
+		Custom arrow
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M4.293 8.293a1 1 0 0 1 1.414 0L12 14.586l6.293-6.293a1 1 0 1 1 1.414 1.414l-7 7a1 1 0 0 1-1.414 0l-7-7a1 1 0 0 1 0-1.414"/></svg>
 	</summary>
 	<div id="content1" class="content" role="region" aria-labelledby="summary1">
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales, nulla sit amet porttitor rhoncus, lacus ex vestibulum libero, ac mollis neque ante id justo. Nam tempor euismod nisi ac ornare. Pellentesque id sapien lacinia, venenatis est aliquam, dignissim elit. Suspendisse potenti. Cras ut ante in libero tempus sodales sed quis dolor.</p>
@@ -222,13 +230,38 @@ If the native `details` arrow is not your thing, you can easily modify the `acco
 
 </div>
 
-```css
+::: code-group
+
+```html {4-15} [accordion.html]
+<details class="outlined">
+  <summary id="summary1" aria-controls="content1">
+    Custom arrow
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="currentColor"
+        d="M4.293 8.293a1 1 0 0 1 1.414 0L12 14.586l6.293-6.293a1 1 0 1 1 1.414 1.414l-7 7a1 1 0 0 1-1.414 0l-7-7a1 1 0 0 1 0-1.414"
+      />
+    </svg>
+  </summary>
+  <div id="content1" class="content" role="region" aria-labelledby="summary1">
+    <!--  -->
+  </div>
+</details>
+```
+
+```css [accordion.css]
 details {
+  /* ... */
+
   summary {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 32 32'%3E%3Cpath fill='currentColor' d='M5.366 11.116a1.25 1.25 0 0 1 1.768 0L16 19.982l8.866-8.866a1.25 1.25 0 0 1 1.768 1.768l-9.75 9.75a1.25 1.25 0 0 1-1.768 0l-9.75-9.75a1.25 1.25 0 0 1 0-1.768'/%3E%3C/svg%3E");
-    background-position: right var(--size-3) top 50%;
-    background-repeat: no-repeat;
-    background-size: var(--size-5);
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
     list-style: none;
 
     &::marker,
@@ -239,13 +272,15 @@ details {
     /* ... */
   }
 
-  &[open] > summary {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 32 32'%3E%3Cpath fill='currentColor' d='M5.293 20.707a1 1 0 0 0 1.414 0L16 11.414l9.293 9.293a1 1 0 0 0 1.414-1.414l-10-10a1 1 0 0 0-1.414 0l-10 10a1 1 0 0 0 0 1.414'/%3E%3C/svg%3E");
+  &[open] > summary svg {
+    rotate: 180deg;
   }
 
   /* ... */
 }
 ```
+
+:::
 
 </div>
 

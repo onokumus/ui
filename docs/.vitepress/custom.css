@@ -17,7 +17,6 @@
 
   --vp-code-lang-color: rgba(235, 235, 245, 0.38);
 
-  --vp-code-line-highlight-color: #000000;
   --vp-code-line-number-color: rgba(235, 235, 245, 0.38);
 
   --vp-code-copy-code-border-color: rgba(82, 82, 89, 0.32);
@@ -32,16 +31,30 @@
 }
 
 /* Custom utils */
+html.dark {
+  .example-wrapper {
+    box-shadow: var(--shadow-2);
+  }
+}
+
 .example-wrapper {
   border-color: var(--border-color);
-  border-radius: 4px;
+  border-radius: var(--size-2);
   border-style: solid;
   border-width: 1px;
+  border-bottom-width: 0;
+  box-shadow: var(--shadow-1);
   margin-block: 1em;
+  overflow: hidden;
 
   .example {
     margin-block: 1rem;
     padding-block: 0;
+  }
+
+  .vp-code-group .tabs {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 
   [class^="language"] {

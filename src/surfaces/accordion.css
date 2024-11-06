@@ -1,40 +1,44 @@
 :where(details) {
+  --_bg-color: transparent;
+  --_box-shadow: var(--shadow-2);
+  --_margin-inline: var(--size-1);
+
+  background-color: var(--_bg-color);
   border-radius: var(--border-radius);
+  margin-inline: var(--_margin-inline);
   padding-block: var(--size-2);
-  margin-inline: var(--size-1);
 
   summary {
     background-color: inherit;
     cursor: pointer;
-    margin: calc(var(--size-2) * -1) calc(var(--size-3) * -1);
-    padding: var(--size-3) var(--size-3);
+    margin: calc(var(--size-2) * -1) calc(var(--size-1) * -1);
+    padding: var(--size-3) 0;
     user-select: none;
 
     /*
     Custom arrow example
-    Icon found at: https://icones.js.org/collection/fluent?s=chevron
     */
     /*
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 32 32'%3E%3Cpath fill='currentColor' d='M5.366 11.116a1.25 1.25 0 0 1 1.768 0L16 19.982l8.866-8.866a1.25 1.25 0 0 1 1.768 1.768l-9.75 9.75a1.25 1.25 0 0 1-1.768 0l-9.75-9.75a1.25 1.25 0 0 1 0-1.768'/%3E%3C/svg%3E");
-    background-position: right var(--size-3) top 50%;
-    background-repeat: no-repeat;
-    background-size: var(--size-5);
-    list-style: none;
+    summary {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
 
-    &::marker,
-    &::-webkit-details-marker {
-      display: none;
+      &::marker,
+      &::-webkit-details-marker {
+        display: none;
+      }
     }
-
     */
   }
 
   /* Custom arrow example, continued */
   /*
-  &[open] > summary {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 32 32'%3E%3Cpath fill='currentColor' d='M5.293 20.707a1 1 0 0 0 1.414 0L16 11.414l9.293 9.293a1 1 0 0 0 1.414-1.414l-10-10a1 1 0 0 0-1.414 0l-10 10a1 1 0 0 0 0 1.414'/%3E%3C/svg%3E");
+  &[open] > summary svg {
+		rotate: 180deg;
   }
-*/
+  */
 
   &[open] > summary {
     margin-bottom: var(--size-2);
@@ -42,50 +46,49 @@
 
   /* Variants */
   &.elevated {
-    background-color: var(--surface-elevated);
+    --_bg-color: var(--surface-default);
+    --_margin-inline: 0;
+
     box-shadow: var(--shadow-2);
-    margin-inline: 0;
     padding-inline: var(--size-3);
   }
   &.outlined {
-    background-color: var(--surface-default);
+    --_bg-color: var(--surface-default);
+    --_margin-inline: 0;
+
     border: 1px solid var(--border-color);
     box-shadow: none;
-    margin-inline: 0;
     padding-inline: var(--size-3);
   }
   &.tonal {
-    background-color: var(--surface-tonal);
+    --_bg-color: var(--surface-tonal);
+    --_margin-inline: 0;
+
     border: 0;
     box-shadow: none;
-    margin-inline: 0;
     padding-inline: var(--size-3);
   }
 }
 
 /* Accordion group */
-:where(.accordion-group) {
-  --_border-color: var(--border-color);
+:where(.card:has(details)) {
+  --_gutter-color: var(--border-color);
 
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  padding-inline: var(--size-2);
+  & > .content {
+    margin-block: 0;
+  }
 
   /* Variants */
-  &.elevated {
-    box-shadow: var(--shadow-2);
+  &.text {
+    .content {
+      padding-inline: 0;
+    }
   }
-
-  &.outlined {
-    border: 1px solid var(--border-color);
-  }
-
   &.tonal {
-    --_border-color: light-dark(
+    --_gutter-color: light-dark(
       color-mix(in oklch, var(--surface-tonal) 90%, black),
       color-mix(in oklch, var(--surface-tonal) 90%, white)
     );
-    background-color: var(--surface-tonal);
   }
 
   details {
@@ -95,7 +98,7 @@
     & + & {
       summary {
         border-radius: 0;
-        border-block-start: 1px solid var(--_border-color);
+        border-block-start: 1px solid var(--_gutter-color);
       }
     }
 

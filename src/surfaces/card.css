@@ -1,13 +1,8 @@
-.card {
+:where(.card) {
   --_bg-color: var(--surface-default);
-  --_border-color: transparent;
-  --_border-width: 0;
-  --_shadow: var(--shadow-2);
-
-  /* For some reason light-dark doesn't work on box-shadows */
-  @media (prefers-color-scheme: dark) {
-    --_shadow: var(--shadow-3);
-  }
+  --_border-color: var(--border-color);
+  --_border-width: 1px;
+  --_shadow: none;
 
   background-color: var(--_bg-color);
   border-color: var(--_border-color);
@@ -18,10 +13,29 @@
   overflow: hidden;
 
   /* Variants */
+  &.text {
+    --_bg-color: var(--surface-default);
+    --_border-color: transparent;
+    --_border-width: 0;
+    --_shadow: none;
+    padding-inline: 0;
+  }
+
   &.tonal {
     --_bg-color: var(--surface-tonal);
     --_border-width: 1px;
     --_shadow: none;
+  }
+
+  &.elevated {
+    --_border-color: transparent;
+    --_border-width: 0;
+    --_shadow: var(--shadow-2);
+
+    /* For some reason light-dark doesn't work on box-shadows */
+    @media (prefers-color-scheme: dark) {
+      --_shadow: var(--shadow-3);
+    }
   }
 
   &.outlined {

@@ -20,29 +20,41 @@
 <div class="example-wrapper">
    <div class="example stack">
 
-<div class="card"><div class="content">Elevated</div></div>
+<div class="card"><div class="content">Outlined</div></div>
 
 <div class="card tonal"><div class="content">Tonal</div></div>
 
-<div class="card outlined"><div class="content">Outlined</div></div>
+<div class="card elevated"><div class="content">Elevated</div></div>
+
+<div class="card text"><div class="content">Text</div></div>
 
   </div>
 
 ```html
 <div class="card">
-  <div class="content">Elevated</div>
+  <div class="content">Outlined</div>
 </div>
 
 <div class="card tonal">
   <div class="content">Tonal</div>
 </div>
 
-<div class="card outlined">
-  <div class="content">Outlined</div>
+<div class="card elevated">
+  <div class="content">Elevated</div>
+</div>
+
+<div class="card text">
+  <div class="content">Text</div>
 </div>
 ```
 
 </div>
+
+::: info Why does a text variant exist?
+It really doesn't make sense to use the text variant unless you really need to.
+
+The [accordion group](/components/surfaces/accordion#accordion-group) is a great example where Open Props UI leverages the text variant of the `.card` component.
+:::
 
 ## Anatomy
 
@@ -56,7 +68,7 @@ Open Props UI include these complementary utility components to handle various u
 <div class="example-wrapper">
    <div class="example stack">
 
-<div class="card anatomy">
+<div class="card elevated anatomy">
 		<div class="header">
 			<h2 class="h4">Headline</h2>
 			<p>Subhead</p>
@@ -96,4 +108,4 @@ These are the classes and attributes a card can be styled with. As usual, feel f
 | Type                  | Modifiers                                     | Default     | Description                          |
 | --------------------- | --------------------------------------------- | ----------- | ------------------------------------ |
 | [Children](#anatomy)  | `& > .header`, `& > .content`, `& > .actions` | -           | Optional wrappers for child content. |
-| [Variants](#variants) | `.elevated`, `.tonal`,s `.outlined`,          | `.elevated` | The variant to use.                  |
+| [Variants](#variants) | `.outlined`, `.tonal`,s `.elevated`, `.text`  | `.outlined` | The variant to use.                  |

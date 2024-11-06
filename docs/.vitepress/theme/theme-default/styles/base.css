@@ -27,23 +27,47 @@
 
   html.dark {
     color-scheme: dark;
+
+    body {
+      &::before {
+        opacity: 0.075;
+      }
+    }
   }
 
   body {
-    margin: 0;
-    width: 100%;
-    min-width: 320px;
-    min-height: 100vh;
-    line-height: 24px;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--vp-c-bg);
+    color: var(--vp-c-text-1);
     font-family: var(--vp-font-family-base);
     font-size: 16px;
-    font-weight: 400;
-    color: var(--vp-c-text-1);
-    background-color: var(--vp-c-bg);
     font-synthesis: style;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0;
+    min-height: 100vh;
+    min-width: 320px;
+    position: relative;
     text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+    &::before {
+      content: ""; /* dev purposes */
+      opacity: 0.2;
+      background-image: radial-gradient(
+        var(--text-1) 1.4500000000000002px,
+        transparent 1.4500000000000002px
+      );
+      background-size: 20px 20px;
+      position: fixed;
+      inset: 0;
+    }
+
+    &:has(.is-home) {
+      &:before {
+        content: "";
+      }
+    }
   }
 
   main {
