@@ -4,10 +4,10 @@
   @import "../../../src/surfaces/card.css";
 
 	.anatomy {
-    outline: var(--_anatomy-border);
+    outline: var(--_anatomy-border-gray);
     outline-offset: 3px;
 		:is(.header, .content, .actions) {
-			outline: var(--_anatomy-border);
+			outline: var(--_anatomy-border-red);
 			outline-offset: -2px;
 		}
 	}
@@ -93,7 +93,7 @@ Open Props UI include these complementary utility components to handle various u
 
 These are the classes and attributes a card can be styled with. As usual, feel free to add your own!
 
-| Type                                | Modifiers                               | Default     | Description                          |
-| ----------------------------------- | --------------------------------------- | ----------- | ------------------------------------ |
-| [Building blocks](#building-blocks) | `& .header`, `& .content`, `& .actions` | -           | Optional wrappers for child content. |
-| [Variants](#variants)               | `.elevated`, `.tonal`,s `.outlined`,    | `.elevated` | The variant to use.                  |
+| Type                  | Modifiers                                     | Default     | Description                          |
+| --------------------- | --------------------------------------------- | ----------- | ------------------------------------ |
+| [Children](#anatomy)  | `& > .header`, `& > .content`, `& > .actions` | -           | Optional wrappers for child content. |
+| [Variants](#variants) | `.elevated`, `.tonal`,s `.outlined`,          | `.elevated` | The variant to use.                  |

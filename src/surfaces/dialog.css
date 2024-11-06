@@ -1,5 +1,5 @@
 :where(dialog) {
-  background-color: light-dark(var(--surface-1), var(--surface-2));
+  background-color: light-dark(var(--surface-default), var(--surface-filled));
   border-radius: var(--radius-3);
   box-shadow: var(--shadow-6);
   color: inherit;

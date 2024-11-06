@@ -1,8 +1,8 @@
 :where(input[type="color"]) {
   appearance: none;
   background: none;
-  border-color: var(--input-border-color);
-  border-radius: var(--input-border-radius);
+  border-color: var(--border-color);
+  border-radius: var(--border-radius);
   border-style: solid;
   border-width: var(--size-1);
   cursor: pointer;
@@ -18,7 +18,6 @@
   }
 
   &:where(:hover, :focus-within) {
-    outline: min(calc(var(--input-border-width) * 2), 3px) solid
-      var(--input-border-color);
+    outline: min(calc(var(--border-width) * 2), 3px) solid var(--border-color);
   }
 }

@@ -5,11 +5,6 @@
 @import "../../src/theme.css";
 
 :root {
-  --vp-c-brand-1: steelblue;
-  --vp-c-brand-2: cornflowerblue;
-  --vp-c-brand-3: steelblue;
-  --vp-c-brand-soft: cornflowerblue;
-
   --vp-font-family-base: var(--font-sans);
   --vp-font-family-mono: var(--font-mono);
 }
@@ -38,7 +33,7 @@
 
 /* Custom utils */
 .example-wrapper {
-  border-color: var(--vp-c-divider);
+  border-color: var(--border-color);
   border-radius: 4px;
   border-style: solid;
   border-width: 1px;
@@ -50,7 +45,7 @@
   }
 
   [class^="language"] {
-    border-block-start: 1px solid var(--vp-c-divider);
+    border-block-start: 1px solid var(--border-color);
     border-top-left-radius: 0 !important;
     border-top-right-radius: 0 !important;
     margin-block: 0 !important;
@@ -80,5 +75,6 @@
 }
 
 .anatomy {
-  --_anatomy-border: 2px dotted tomato;
+  --_anatomy-border-red: 2px dotted tomato;
+  --_anatomy-border-gray: 2px dotted gray;
 }

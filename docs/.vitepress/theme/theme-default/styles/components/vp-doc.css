@@ -4,12 +4,6 @@
   .vp-doc {
     @scope (&) to (.example-wrapper) {
       /**
-   * Typography
-   * -------------------------------------------------------------------------- */
-      :where(h1, h2, h3, h4, h5, h6, p, li, blockquote, summary, span) {
-        text-wrap: balance;
-      }
-      /**
    * Headings
    * -------------------------------------------------------------------------- */
 
@@ -307,6 +301,7 @@
   transition:
     color 0.25s,
     background-color 0.5s;
+  white-space: nowrap;
 }
 
 .vp-doc a > code {

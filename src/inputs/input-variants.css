@@ -20,11 +20,11 @@
   /* Variants */
   &.underlined {
     border: 0;
-    border-block-end: 2px solid var(--input-border-color);
+    border-block-end: 2px solid var(--border-color);
   }
 
   &.filled {
-    background-color: var(--input-border-color);
+    background-color: var(--border-color);
     border-color: transparent;
   }
 
@@ -57,7 +57,7 @@
   }
 
   &:where(input[disabled], select[disabled], .disabled) {
-    background-color: var(--surface-2);
+    background-color: var(--surface-filled);
     color: var(--text-1-contrast);
     opacity: 0.7;
   }

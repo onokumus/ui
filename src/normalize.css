@@ -16,7 +16,7 @@
 
   -webkit-text-size-adjust: none; /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
   accent-color: var(--primary, var(--link));
-  background-color: var(--surface-1);
+  background-color: var(--surface-default);
   block-size: 100%;
   caret-color: var(--primary, var(--link));
   color: var(--text-1);
@@ -55,7 +55,7 @@
 :focus-visible {
   outline: 2px solid currentColor;
   outline-offset: 2px;
-  border-radius: var(--global-border-radius, 0px);
+  border-radius: var(--border-radius, 0px);
 }
 
 @media (--motionOK) {
@@ -152,21 +152,21 @@
 }
 
 :where(:not(pre) > code) {
-  background: var(--surface-2);
-  border-radius: var(--global-border-radius, var(--radius-2));
+  background: var(--surface-filled);
+  border-radius: var(--border-radius, var(--radius-2));
   padding: var(--size-1) var(--size-2);
   writing-mode: lr;
 }
 
 :where(kbd, var) {
-  border-color: var(--surface-4);
-  border-radius: var(--global-border-radius, var(--radius-2));
+  border-color: var(--border-color);
+  border-radius: var(--border-radius, var(--radius-2));
   border-width: var(--border-size-1);
   padding: var(--size-1) var(--size-2);
 }
 
 :where(mark) {
-  border-radius: var(--global-border-radius, var(--radius-2));
+  border-radius: var(--border-radius, var(--radius-2));
   padding-inline: var(--size-1);
 }
 
@@ -183,7 +183,7 @@
 }
 
 :where(hr) {
-  background-color: var(--surface-3);
+  background-color: var(--surface-tonal);
   height: var(--border-size-2);
   margin-block: var(--size-fluid-5);
 }
@@ -200,7 +200,7 @@
 }
 
 :where(fieldset) {
-  border-radius: var(--global-border-radius, var(--radius-2));
+  border-radius: var(--border-radius, var(--radius-2));
   border: var(--border-size-1) solid var(--surface-4);
 }
 

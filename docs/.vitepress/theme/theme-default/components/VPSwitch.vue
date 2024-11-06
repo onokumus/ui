@@ -16,7 +16,7 @@
   width: 40px;
   height: 22px;
   flex-shrink: 0;
-  border: 1px solid var(--vp-input-border-color);
+  border: 1px solid var(--vp-border-color);
   background-color: var(--vp-input-switch-bg-color);
   transition: border-color 0.25s !important;
 }
@@ -47,7 +47,7 @@
   overflow: hidden;
 }
 
-.icon :deep([class^='vpi-']) {
+.icon :deep([class^="vpi-"]) {
   position: absolute;
   top: 3px;
   left: 3px;
@@ -56,7 +56,7 @@
   color: var(--vp-c-text-2);
 }
 
-.dark .icon :deep([class^='vpi-']) {
+.dark .icon :deep([class^="vpi-"]) {
   color: var(--vp-c-text-1);
   transition: opacity 0.25s !important;
 }

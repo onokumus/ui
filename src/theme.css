@@ -1,4 +1,4 @@
-@import "../node_modules/open-props/gray.min.css";
+@import "../node_modules/open-props/gray-oklch.min.css";
 @import "../node_modules/open-props/red.min.css";
 @import "../node_modules/open-props/orange.min.css";
 @import "../node_modules/open-props/blue.min.css";
@@ -60,13 +60,13 @@ html {
   --link: var(--primary);
   --link-visited: var(--primary-light);
 
-  --surface-1: light-dark(var(--gray-0), var(--gray-12));
-  --surface-2: light-dark(var(--gray-1), var(--gray-11));
-  --surface-3: light-dark(var(--gray-2), var(--gray-10));
-  --surface-4: light-dark(var(--gray-3), var(--gray-9));
+  /* Surface */
+  --surface-default: light-dark(white, var(--gray-13));
+  --surface-filled: light-dark(var(--gray-1), var(--gray-14));
+  --surface-tonal: light-dark(var(--gray-2), var(--gray-12));
 
   /* Typography */
-  --font-size-h1: var(--font-size-7);
+  --font-size-h1: var(--font-size-6);
   --font-size-h2: var(--font-size-5);
   --font-size-h3: var(--font-size-4);
   --font-size-h4: var(--font-size-3);
@@ -75,18 +75,8 @@ html {
   --font-size-p: var(--font-size-1);
 
   /* Borders */
-  --global-border-color: light-dark(
-    color-mix(in oklch, currentColor 20%, white),
-    color-mix(in oklch, currentColor 40%, black)
-  );
-  --global-border-radius: var(--size-1);
+  --border-color: light-dark(var(--gray-2), var(--gray-12));
+  --border-radius: var(--size-1);
+  --border-width: 1px;
   --button-border-radius: 100vmax;
-  --surface-border-radius: 0px;
-
-  --input-border-radius: var(--size-1);
-  --input-border-width: 1px;
-  --input-border-color: light-dark(
-    color-mix(in oklch, currentColor 20%, white),
-    color-mix(in oklch, currentColor 40%, black)
-  );
 }

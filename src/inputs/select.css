@@ -8,7 +8,7 @@
   line-height: 1.5; */
 
   & :where(optgroup, option) {
-    background: var(--surface-1);
+    background: var(--surface-default);
   }
 
   &:where(:focus-visible) {
@@ -17,7 +17,7 @@
   }
   &:where(:hover, :focus) {
     /* add button hover */
-    /* background-color: var(--surface-1);
+    /* background-color: var(--surface-default);
 		background-image: var(--icon-arrow-up); */
   }
 }

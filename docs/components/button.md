@@ -4,10 +4,10 @@
   @import "../../src/button/button-icon.css";
 
   .anatomy {
-    outline: var(--_anatomy-border);
+    outline: var(--_anatomy-border-gray);
     outline-offset: 2px;
     & > * {
-      outline: var(--_anatomy-border);
+      outline: var(--_anatomy-border-red);
     }
   }
 </style>

@@ -1,7 +1,7 @@
 :where(table) {
-  background: var(--surface-2);
+  background: var(--surface-filled);
   border-radius: var(--radius-3);
-  border: 1px solid var(--surface-2);
+  border: 1px solid var(--surface-filled);
   width: fit-content;
 
   --nice-inner-radius: calc(var(--radius-3) - 2px);
@@ -33,7 +33,7 @@
 
 :where(th) {
   color: var(--text-1);
-  background-color: var(--surface-2);
+  background-color: var(--surface-filled);
 }
 
 :where(table :is(a, button, [contenteditable]):is(:focus-visible)) {
@@ -41,7 +41,7 @@
 }
 
 :where(td) {
-  background: var(--surface-1);
+  background: var(--surface-default);
   max-inline-size: var(--size-content-2);
   text-wrap: pretty;
 }

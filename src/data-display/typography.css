@@ -1,7 +1,7 @@
-:where(h1, h2, h3, h4, h5, h6) {
+:where(h1, h2, h3, h4, h6, h6) {
   line-height: 1;
   font-weight: var(--font-weight-7);
-  text-wrap: balance;
+  text-wrap: pretty;
 }
 
 :where(h1, .h1) {
@@ -27,8 +27,9 @@
   font-size: var(--font-size-h6, var(--font-size-1));
 }
 
+/* TODO: should max-inline-size be there? */
 :where(p, .p) {
-  max-inline-size: var(--size-content-3);
+  /* max-inline-size: var(--size-content-3); */
   text-wrap: pretty;
 }
 
