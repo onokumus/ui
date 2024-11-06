@@ -5,8 +5,8 @@ layout: home
 hero:
   name: "Open Props UI"
 
-  text: ""
-  tagline: "Component library built with Open Props."
+  text: "Components you can copy and paste into your project."
+  tagline: "Made with Open Props."
   actions:
     - theme: brand
       text: Quickstart
