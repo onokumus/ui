@@ -152,9 +152,9 @@ Leverages the HTML `details` and `summary` elements.
 
 ## Accordion group
 
-Apply the `.card` class to a wrapper around the `details` elements.
+Apply the `.card` class to a parent element.
 
-To set a [variant](#variants) style to your accordions, apply the variant class on the `.card` element.
+You are still able to set [variant](#variants) styles, but instead of doing it on the individual elements - apply the variant class on the `.card` element instead.
 
 <div class="example-wrapper">
    <div class="example stack">
@@ -327,7 +327,7 @@ The [WAI-ARIA guidelines](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) f
 
 These are the classes and attributes a card can be styled with. As usual, feel free to add your own!
 
-| Type                  | Modifiers                                     | Default | Description                          |
-| --------------------- | --------------------------------------------- | ------- | ------------------------------------ |
-| [Anatomy](#anatomy)   | `& > summary`, `& > .content`                 | -       | Optional wrappers for child content. |
-| [Variants](#variants) | `.text`, `.elevated`, `.tonal`,s `.outlined`, | `.text` | The variant to use.                  |
+| Type                  | Modifiers                                    | Default | Description                          |
+| --------------------- | -------------------------------------------- | ------- | ------------------------------------ |
+| [Anatomy](#anatomy)   | `& > summary`, `& > .content`                | -       | Optional wrappers for child content. |
+| [Variants](#variants) | `.text`, `.elevated`, `.tonal`, `.outlined`, | `.text` | The variant to use.                  |
