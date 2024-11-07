@@ -50,6 +50,10 @@ export default defineConfig({
               text: "Inputs",
               collapsed: false,
               items: [
+                {
+                  text: "Autocomplete",
+                  link: "/components/inputs/autocomplete",
+                },
                 { text: "Checkbox", link: "/components/inputs/checkbox" },
                 { text: "Color", link: "/components/inputs/color" },
                 { text: "Date", link: "/components/inputs/date" },
