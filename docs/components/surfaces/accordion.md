@@ -207,6 +207,46 @@ You are still able to set [variant](#variants) styles, but instead of doing it o
 If you want only one accordion to be open at a time you will need to use Javascript.
 :::
 
+## Actions
+
+<div class="example-wrapper">
+   <div class="example">
+
+ <details open class="outlined">
+	<summary id="summary1" aria-controls="content1">
+		Accordion with actions
+	</summary>
+	<div id="content1" class="content" role="region" aria-labelledby="summary1">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales, nulla sit amet porttitor rhoncus, lacus ex vestibulum libero, ac mollis neque ante id justo. Nam tempor euismod nisi ac ornare.</p>
+	</div>
+  <div class="actions">
+    <button class="button">Cancel</button>
+    <button class="button">Agree</button>
+  </div>
+</details>
+</div>
+
+```html {12-15}
+<details open class="outlined">
+  <summary id="summary1" aria-controls="content1">
+    Accordion with actions
+  </summary>
+  <div id="content1" class="content" role="region" aria-labelledby="summary1">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales,
+      nulla sit amet porttitor rhoncus, lacus ex vestibulum libero, ac mollis
+      neque ante id justo. Nam tempor euismod nisi ac ornare.
+    </p>
+  </div>
+  <div class="actions">
+    <button class="button">Cancel</button>
+    <button class="button">Agree</button>
+  </div>
+</details>
+```
+
+</div>
+
 ## Custom arrow
 
 If the native `details` arrow doesn't suit your needs you can easily modify the `accordion.css` file to add your own preferred icon.
@@ -277,46 +317,6 @@ details {
 ```
 
 :::
-
-</div>
-
-## Actions
-
-<div class="example-wrapper">
-   <div class="example">
-
- <details open class="outlined">
-	<summary id="summary1" aria-controls="content1">
-		Accordion with actions
-	</summary>
-	<div id="content1" class="content" role="region" aria-labelledby="summary1">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales, nulla sit amet porttitor rhoncus, lacus ex vestibulum libero, ac mollis neque ante id justo. Nam tempor euismod nisi ac ornare.</p>
-	</div>
-  <div class="actions">
-    <button class="button">Cancel</button>
-    <button class="button">Agree</button>
-  </div>
-</details>
-</div>
-
-```html {12-15}
-<details open class="outlined">
-  <summary id="summary1" aria-controls="content1">
-    Accordion with actions
-  </summary>
-  <div id="content1" class="content" role="region" aria-labelledby="summary1">
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales,
-      nulla sit amet porttitor rhoncus, lacus ex vestibulum libero, ac mollis
-      neque ante id justo. Nam tempor euismod nisi ac ornare.
-    </p>
-  </div>
-  <div class="actions">
-    <button class="button">Cancel</button>
-    <button class="button">Agree</button>
-  </div>
-</details>
-```
 
 </div>
 
