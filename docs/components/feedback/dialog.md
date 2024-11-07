@@ -50,7 +50,7 @@ In order to toggle a `<dialog>` you will need to use Javascript.
 		</div>
 		<div class="actions">
 			<button @click="closeModal">Cancel</button>
-			<button @click="closeModal" class="filled">Save</button>
+			<button @click="closeModal">Save</button>
 		</div>
 </div>
 </dialog>
@@ -70,7 +70,7 @@ In order to toggle a `<dialog>` you will need to use Javascript.
     </div>
     <div class="actions">
       <button>Cancel</button>
-      <button class="filled">Save</button>
+      <button>Save</button>
     </div>
   </div>
 </dialog>

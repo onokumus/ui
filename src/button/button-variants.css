@@ -145,7 +145,7 @@
     }
   }
   &.elevated {
-    --_bg-color: var(--surface-elevated);
+    --_bg-color: light-dark(var(--gray-1), var(--gray-12));
     --_text-color: var(--color-8);
 
     box-shadow: var(--shadow-1);

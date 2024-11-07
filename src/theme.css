@@ -64,8 +64,7 @@ html {
   --link-visited: var(--primary-light);
 
   /* Surface */
-  --surface-default: light-dark(white, var(--gray-13));
-  --surface-elevated: light-dark(var(--gray-1), var(--gray-12));
+  --surface-default: light-dark(var(--gray-0), var(--gray-13));
   --surface-filled: light-dark(var(--gray-1), var(--gray-14));
   --surface-tonal: light-dark(var(--gray-2), var(--gray-12));
 

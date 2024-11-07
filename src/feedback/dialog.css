@@ -11,4 +11,9 @@
       backdrop-filter: none;
     }
   }
+
+  .actions {
+    justify-content: end;
+    padding-inline: var(--size-3) var(--size-1);
+  }
 }

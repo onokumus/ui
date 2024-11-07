@@ -28,6 +28,7 @@
   }
 
   &.elevated {
+    --_bg-color: light-dark(var(--gray-0), var(--gray-12));
     --_border-color: transparent;
     --_border-width: 0;
     --_shadow: var(--shadow-2);
@@ -52,8 +53,7 @@
   .actions {
     display: flex;
     gap: var(--size-1);
-    justify-content: end;
     margin-block-end: var(--size-1);
-    padding-inline-end: var(--size-1);
+    padding-inline-start: var(--size-1);
   }
 }

@@ -77,8 +77,8 @@ Open Props UI include these complementary utility components to handle various u
 		</div>
 		<div class="content">Explain more about the topic shown in the headline and subhead through supporting text.</div>
 		<div class="actions">
-			<button class="button">Cancel</button>
-			<button class="button filled">Save</button>
+			<button class="button">Share</button>
+			<button class="button">Learn more</button>
 		</div>
 	</div>
 
@@ -95,8 +95,8 @@ Open Props UI include these complementary utility components to handle various u
     supporting text.
   </div>
   <div class="actions">
-    <button class="button">Cancel</button>
-    <button class="button filled">Save</button>
+    <button class="button">Share</button>
+    <button class="button">Learn more</button>
   </div>
 </div>
 ```

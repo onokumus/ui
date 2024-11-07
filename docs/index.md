@@ -6,7 +6,7 @@ hero:
   name: "Open Props UI"
 
   text: "Components you can copy and paste into your project."
-  tagline: "Google's Material Design system. Made with Open Props."
+  tagline: "Made with Open Props."
   actions:
     - theme: brand
       text: Quickstart
