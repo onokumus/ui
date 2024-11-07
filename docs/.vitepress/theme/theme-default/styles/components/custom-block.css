@@ -6,25 +6,12 @@
     line-height: 24px;
     font-size: var(--vp-custom-block-font-size);
     color: var(--vp-c-text-2);
-    background-color: var(--surface-default);
-    position: relative;
-    overflow: hidden;
-
-    &:before {
-      content: "";
-      inset: 0;
-      position: absolute;
-      pointer-events: none;
-    }
   }
 
   .custom-block.info {
     border-color: var(--vp-custom-block-info-border);
     color: var(--vp-custom-block-info-text);
-
-    &:before {
-      background-color: var(--vp-custom-block-info-bg);
-    }
+    background-color: var(--vp-custom-block-info-bg);
   }
 
   .custom-block.info a,
@@ -44,10 +31,7 @@
   .custom-block.note {
     border-color: var(--vp-custom-block-note-border);
     color: var(--vp-custom-block-note-text);
-
-    &:before {
-      background-color: var(--vp-custom-block-note-bg);
-    }
+    background-color: var(--vp-custom-block-note-bg);
   }
 
   .custom-block.note a,
@@ -67,10 +51,7 @@
   .custom-block.tip {
     border-color: var(--vp-custom-block-tip-border);
     color: var(--vp-custom-block-tip-text);
-
-    &:before {
-      background-color: var(--vp-custom-block-tip-bg);
-    }
+    background-color: var(--vp-custom-block-tip-bg);
   }
 
   .custom-block.tip a,
@@ -90,10 +71,7 @@
   .custom-block.important {
     border-color: var(--vp-custom-block-important-border);
     color: var(--vp-custom-block-important-text);
-
-    &:before {
-      background-color: var(--vp-custom-block-important-bg);
-    }
+    background-color: var(--vp-custom-block-important-bg);
   }
 
   .custom-block.important a,
@@ -113,10 +91,7 @@
   .custom-block.warning {
     border-color: var(--vp-custom-block-warning-border);
     color: var(--vp-custom-block-warning-text);
-
-    &:before {
-      background-color: var(--vp-custom-block-warning-bg);
-    }
+    background-color: var(--vp-custom-block-warning-bg);
   }
 
   .custom-block.warning a,
@@ -136,10 +111,7 @@
   .custom-block.danger {
     border-color: var(--vp-custom-block-danger-border);
     color: var(--vp-custom-block-danger-text);
-
-    &:before {
-      background-color: var(--vp-custom-block-danger-bg);
-    }
+    background-color: var(--vp-custom-block-danger-bg);
   }
 
   .custom-block.danger a,
@@ -159,10 +131,7 @@
   .custom-block.caution {
     border-color: var(--vp-custom-block-caution-border);
     color: var(--vp-custom-block-caution-text);
-
-    &:before {
-      background-color: var(--vp-custom-block-caution-bg);
-    }
+    background-color: var(--vp-custom-block-caution-bg);
   }
 
   .custom-block.caution a,
@@ -182,11 +151,7 @@
   .custom-block.details {
     border-color: var(--vp-custom-block-details-border);
     color: var(--vp-custom-block-details-text);
-
-    &:before {
-      background-color: var(--vp-custom-block-details-bg);
-      z-index: -1;
-    }
+    background-color: var(--vp-custom-block-details-bg);
   }
 
   .custom-block.details a {

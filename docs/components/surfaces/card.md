@@ -15,6 +15,8 @@
 
 # Card
 
+The card is extremely versetile and can be used on its own, or as a building block for [accordions](/components/surfaces/accordion), [dialogs](/components/feedback/dialog) and more.
+
 ## Variants
 
 <div class="example-wrapper">
