@@ -1,18 +1,17 @@
 :where(details) {
   --_bg-color: transparent;
-  --_box-shadow: var(--shadow-2);
+  --_shadow: none;
   --_margin-inline: var(--size-1);
 
   background-color: var(--_bg-color);
+  box-shadow: var(--_shadow);
   border-radius: var(--border-radius);
   margin-inline: var(--_margin-inline);
-  padding-block: var(--size-2);
 
   summary {
     background-color: inherit;
     cursor: pointer;
-    margin: calc(var(--size-2) * -1) calc(var(--size-1) * -1);
-    padding: var(--size-3) 0;
+    padding-block: var(--size-3);
     user-select: none;
 
     /*
@@ -40,32 +39,45 @@
   }
   */
 
+  .content {
+    margin-block: var(--size-2) var(--size-3);
+  }
+
+  .actions {
+    display: flex;
+    gap: var(--size-1);
+    justify-content: end;
+    margin-block: var(--size-3) var(--size-1);
+    padding-inline: var(--size-3) var(--size-1);
+  }
+
   &[open] > summary {
-    margin-bottom: var(--size-2);
+    margin-block-end: var(--size-2);
   }
 
   /* Variants */
+  &.text {
+    --_bg-color: transparent;
+    --_shadow: none;
+    --_margin-inline: var(--size-1);
+  }
   &.elevated {
     --_bg-color: var(--surface-default);
     --_margin-inline: 0;
-
-    box-shadow: var(--shadow-2);
-    padding-inline: var(--size-3);
+    --_shadow: var(--shadow-2);
   }
   &.outlined {
     --_bg-color: var(--surface-default);
     --_margin-inline: 0;
 
     border: 1px solid var(--border-color);
-    box-shadow: none;
-    padding-inline: var(--size-3);
   }
   &.tonal {
     --_bg-color: var(--surface-tonal);
     --_margin-inline: 0;
+  }
 
-    border: 0;
-    box-shadow: none;
+  &:where(.elevated, .outlined, .tonal) > * {
     padding-inline: var(--size-3);
   }
 }
@@ -76,6 +88,7 @@
 
   & > .content {
     margin-block: 0;
+    padding-inline: 0;
   }
 
   /* Variants */
@@ -92,8 +105,13 @@
   }
 
   details {
+    --_margin-inline: 0;
     border: 0;
     box-shadow: none;
+
+    & > * {
+      padding-inline: var(--size-3);
+    }
 
     & + & {
       summary {

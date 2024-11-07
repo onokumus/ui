@@ -63,7 +63,7 @@ Open Props UI include these complementary utility components to handle various u
 1. Container
 2. `.header` (optional): a wrapper for the card header
 3. `.content` (optional): a wrapper for the card content
-4. `.actions` (optional): a wrapper for that groups a set of buttons
+4. `.actions` (optional): a wrapper that groups a set of buttons
 
 <div class="example-wrapper">
    <div class="example stack">

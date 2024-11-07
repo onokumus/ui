@@ -44,16 +44,9 @@
     --_shadow: none;
   }
 
-  /* Building blocks */
   :where(.header, .content, .actions) {
     margin-block: var(--size-3);
     padding-inline: var(--size-3);
-  }
-
-  .header {
-  }
-
-  .content {
   }
 
   .actions {

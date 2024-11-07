@@ -1,4 +1,6 @@
 <style scoped>
+@import "../../../src/button/button-base.css";
+@import "../../../src/button/button-variants.css";
 @import "../../../src/surfaces/accordion.css";
 @import "../../../src/surfaces/card.css";
 
@@ -6,14 +8,8 @@
 	outline: var(--_anatomy-border-gray);
 	outline-offset: 8px;
 
-	summary{
+	.actions, .content, summary {
 		outline: var(--_anatomy-border-red);
-		outline-offset: -4px;
-	}
-
-	.content {
-		outline: var(--_anatomy-border-red);
-		outline-offset: 0;
 	}
 }
 
@@ -191,7 +187,7 @@ You are still able to set [variant](#variants) styles, but instead of doing it o
 </div>
 </div>
 
-```html
+```html {1,11}
 <div class="card outlined">
   <details>
     <!--  -->
@@ -232,7 +228,7 @@ If the native `details` arrow doesn't suit your needs you can easily modify the 
 
 ::: code-group
 
-```html {4-15} [accordion.html]
+```html {4-14} [accordion.html]
 <details class="outlined">
   <summary id="summary1" aria-controls="content1">
     Custom arrow
@@ -284,6 +280,46 @@ details {
 
 </div>
 
+## Actions
+
+<div class="example-wrapper">
+   <div class="example">
+
+ <details open class="outlined">
+	<summary id="summary1" aria-controls="content1">
+		Accordion with actions
+	</summary>
+	<div id="content1" class="content" role="region" aria-labelledby="summary1">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales, nulla sit amet porttitor rhoncus, lacus ex vestibulum libero, ac mollis neque ante id justo. Nam tempor euismod nisi ac ornare.</p>
+	</div>
+  <div class="actions">
+    <button class="button">Cancel</button>
+    <button class="button">Agree</button>
+  </div>
+</details>
+</div>
+
+```html {12-15}
+<details open class="outlined">
+  <summary id="summary1" aria-controls="content1">
+    Accordion with actions
+  </summary>
+  <div id="content1" class="content" role="region" aria-labelledby="summary1">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales,
+      nulla sit amet porttitor rhoncus, lacus ex vestibulum libero, ac mollis
+      neque ante id justo. Nam tempor euismod nisi ac ornare.
+    </p>
+  </div>
+  <div class="actions">
+    <button class="button">Cancel</button>
+    <button class="button">Agree</button>
+  </div>
+</details>
+```
+
+</div>
+
 ## Accessibility
 
 The [WAI-ARIA guidelines](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) for accordions recommend:
@@ -296,6 +332,11 @@ The [WAI-ARIA guidelines](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) f
 
 ## Anatomy
 
+1. `<details>`: a wrapper for the accordion
+2. `<summary>`: a wrapper for the accordion header
+3. `& > .content` (optional): a wrapper for the accordion content
+4. `& > .actions` (optional): a wrapper that groups a set of buttons
+
 <div class="example-wrapper">
    <div class="example stack">
 
@@ -306,6 +347,10 @@ The [WAI-ARIA guidelines](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) f
 	<div id="anatomy-content-1" class="content" role="region" aria-labelledby="anatomy-summary-1">
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales, nulla sit amet porttitor rhoncus, lacus ex vestibulum libero, ac mollis neque ante id justo. Nam tempor euismod nisi ac ornare. Pellentesque id sapien lacinia, venenatis est aliquam, dignissim elit. Suspendisse potenti. Cras ut ante in libero tempus sodales sed quis dolor.</p>
 	</div>
+  <div class="actions">
+    <button class="button">Cancel</button>
+    <button class="button">Agree</button>
+  </div>
 </details>
 
   </div>
@@ -318,6 +363,9 @@ The [WAI-ARIA guidelines](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) f
   <div id="content-1" class="content" role="region" aria-labelledby="summary-1">
     <!--  -->
   </div>
+  <div class="actions">
+    <!--  -->
+  </div>
 </details>
 ```
 
@@ -327,7 +375,7 @@ The [WAI-ARIA guidelines](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) f
 
 These are the classes and attributes a card can be styled with. As usual, feel free to add your own!
 
-| Type                  | Modifiers                                    | Default | Description                          |
-| --------------------- | -------------------------------------------- | ------- | ------------------------------------ |
-| [Anatomy](#anatomy)   | `& > summary`, `& > .content`                | -       | Optional wrappers for child content. |
-| [Variants](#variants) | `.text`, `.elevated`, `.tonal`, `.outlined`, | `.text` | The variant to use.                  |
+| Type                  | Modifiers                                     | Default | Description                          |
+| --------------------- | --------------------------------------------- | ------- | ------------------------------------ |
+| [Anatomy](#anatomy)   | `& > summary`, `& > .content`, `& > .actions` | -       | Optional wrappers for child content. |
+| [Variants](#variants) | `.text`, `.elevated`, `.tonal`, `.outlined`,  | `.text` | The variant to use.                  |
