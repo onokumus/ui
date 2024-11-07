@@ -21,6 +21,7 @@
   }
 
   &:where(.disabled, [disabled]) {
+    opacity: 0.64;
     --_text-color: color-mix(
       in oklch,
       var(--text-1) 50%,
@@ -144,19 +145,34 @@
     }
   }
   &.elevated {
-    --_bg-color: var(--surface-default);
+    --_bg-color: var(--surface-elevated);
     --_text-color: var(--color-8);
 
-    box-shadow: var(--shadow-2);
+    box-shadow: var(--shadow-1);
 
     &:where(:not(.disabled, [disabled])) {
       &:where(:not(:active):hover) {
-        box-shadow: var(--shadow-4);
+        box-shadow: var(--shadow-2);
       }
 
       &:where(:active) {
-        --_bg-color: var(--surface-default);
-        box-shadow: var(--shadow-4);
+        --_bg-color: var(--surface-elevated);
+        box-shadow: var(--shadow-3);
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      box-shadow: var(--shadow-2);
+
+      &:where(:not(.disabled, [disabled])) {
+        &:where(:not(:active):hover) {
+          box-shadow: var(--shadow-3);
+        }
+
+        &:where(:active) {
+          --_bg-color: var(--surface-elevated);
+          box-shadow: var(--shadow-4);
+        }
       }
     }
 
@@ -164,12 +180,12 @@
       --_bg-color: color-mix(
         in oklch,
         var(--text-1) 8%,
-        var(--surface-default)
+        var(--surface-elevated)
       );
       --_text-color: color-mix(
         in oklch,
         var(--text-1) 70%,
-        var(--surface-default)
+        var(--surface-elevated)
       );
     }
   }
