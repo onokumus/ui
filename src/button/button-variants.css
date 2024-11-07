@@ -1,16 +1,22 @@
 :where(button, .button) {
   --_bg-color: transparent;
   --_border-color: transparent;
-  --_text-color: initial;
+  --_text-color: var(--primary);
 
   /* TODO */
   &:where(:not(.disabled, [disabled])) {
     &:where(:not(:active):hover) {
-      --_bg-color: color-mix(in oklch, var(--surface-filled) 60%, white);
+      --_bg-color: light-dark(
+        color-mix(in oklch, var(--surface-filled) 95%, black),
+        color-mix(in oklch, var(--surface-filled) 80%, white)
+      );
     }
 
     &:where(:hover:active) {
-      --_bg-color: color-mix(in oklch, var(--surface-filled) 90%, white);
+      --_bg-color: light-dark(
+        color-mix(in oklch, var(--surface-filled) 90%, black),
+        color-mix(in oklch, var(--surface-filled) 85%, white)
+      );
     }
   }
 
