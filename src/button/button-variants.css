@@ -54,7 +54,7 @@
   /* Variants */
   &.outlined {
     --_bg-color: var(--surface-default);
-    --_border-color: var(--text-1);
+    --_border-color: var(--color-5);
     --_text-color: var(--color-5);
 
     &:where(:not(.disabled, [disabled])) {
