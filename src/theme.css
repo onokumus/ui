@@ -25,6 +25,9 @@ html {
   Palette picker
   https://opv2-beta.netlify.app/color/
   */
+  --gray-hue: 255;
+  --gray-chroma: 0.01;
+
   --palette-hue: 246;
   --palette-hue-rotate-by: 5;
   --palette-chroma: 0.89;
