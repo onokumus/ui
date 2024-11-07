@@ -55,8 +55,8 @@
   /* Variants */
   &.outlined {
     --_bg-color: var(--surface-default);
-    --_border-color: var(--color-5);
-    --_text-color: var(--color-5);
+    --_border-color: var(--color-8);
+    --_text-color: var(--color-8);
 
     &:where(:not(.disabled, [disabled])) {
       &:where(:not(:active):hover) {
