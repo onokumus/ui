@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import type { DefaultTheme } from 'vitepress/theme'
-import VPImage from './VPImage.vue'
-import VPLink from './VPLink.vue'
+import type { DefaultTheme } from "vitepress/theme";
+import VPImage from "./VPImage.vue";
+import VPLink from "./VPLink.vue";
 
 defineProps<{
-  icon?: DefaultTheme.FeatureIcon
-  title: string
-  details?: string
-  link?: string
-  linkText?: string
-  rel?: string
-  target?: string
-}>()
+  icon?: DefaultTheme.FeatureIcon;
+  title: string;
+  details?: string;
+  link?: string;
+  linkText?: string;
+  rel?: string;
+  target?: string;
+}>();
 </script>
 
 <template>
@@ -59,7 +59,9 @@ defineProps<{
   border-radius: 12px;
   height: 100%;
   background-color: var(--vp-c-bg-soft);
-  transition: border-color 0.25s, background-color 0.25s;
+  transition:
+    border-color 0.25s,
+    background-color 0.25s;
 }
 
 .VPFeature.link:hover {
@@ -94,6 +96,7 @@ defineProps<{
   line-height: 24px;
   font-size: 16px;
   font-weight: 600;
+  margin: 0;
 }
 
 .details {
