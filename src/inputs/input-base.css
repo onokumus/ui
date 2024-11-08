@@ -48,7 +48,7 @@
   &:where(:hover, :focus-within) {
     box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary) 25%, transparent);
     outline: min(calc(var(--border-width) * 2), 3px) solid var(--_border-color);
-    @media (prefers-color-scheme: dark) {
+    @container style(--color-scheme: dark) {
       /* background-color: var(--well-2); */
     }
   }
@@ -61,7 +61,7 @@
   &:where(:not(:focus-within):not(:placeholder-shown):invalid) {
     text-decoration: underline wavy var(--red-6, #fa5252);
 
-    @media (prefers-color-scheme: dark) {
+    @container style(--color-scheme: dark) {
       text-decoration: underline wavy var(--red-4, #ff8787);
     }
   }

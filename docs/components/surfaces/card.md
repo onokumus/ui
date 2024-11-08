@@ -22,18 +22,23 @@ The card is extremely versetile and can be used on its own, or as a building blo
 <div class="example-wrapper">
    <div class="example stack">
 
-<div class="card"><div class="content">Outlined</div></div>
+<div class="card"><div class="content">Text</div></div>
+
+<div class="card outlined"><div class="content">Outlined</div></div>
 
 <div class="card tonal"><div class="content">Tonal</div></div>
 
 <div class="card elevated"><div class="content">Elevated</div></div>
 
-<div class="card text"><div class="content">Text</div></div>
-
   </div>
 
 ```html
-<div class="card">
+<!-- .text class optional -->
+<div class="card text">
+  <div class="content">Text</div>
+</div>
+
+<div class="card outlined">
   <div class="content">Outlined</div>
 </div>
 
@@ -43,10 +48,6 @@ The card is extremely versetile and can be used on its own, or as a building blo
 
 <div class="card elevated">
   <div class="content">Elevated</div>
-</div>
-
-<div class="card text">
-  <div class="content">Text</div>
 </div>
 ```
 
@@ -85,7 +86,7 @@ Open Props UI include these complementary utility components to handle various u
   </div>
 
 ```html
-<div class="card">
+<div class="card outlined">
   <div class="header">
     <h2 class="h4">Headline</h2>
     <p>Subhead</p>
@@ -107,7 +108,7 @@ Open Props UI include these complementary utility components to handle various u
 
 These are the classes and attributes a card can be styled with. As usual, feel free to add your own!
 
-| Type                  | Modifiers                                     | Default     | Description                          |
-| --------------------- | --------------------------------------------- | ----------- | ------------------------------------ |
-| [Children](#anatomy)  | `& > .header`, `& > .content`, `& > .actions` | -           | Optional wrappers for child content. |
-| [Variants](#variants) | `.outlined`, `.tonal`,s `.elevated`, `.text`  | `.outlined` | The variant to use.                  |
+| Type                  | Modifiers                                     | Default | Description                          |
+| --------------------- | --------------------------------------------- | ------- | ------------------------------------ |
+| [Children](#anatomy)  | `& > .header`, `& > .content`, `& > .actions` | -       | Optional wrappers for child content. |
+| [Variants](#variants) | `.text`, `.outlined`, `.tonal`, `.elevated`   | `.text` | The variant to use.                  |

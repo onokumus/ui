@@ -56,24 +56,20 @@
   }
 
   /* Variants */
+  &.card,
   &.text {
     --_bg-color: transparent;
-    --_shadow: none;
     --_margin-inline: var(--size-1);
   }
   &.elevated {
-    --_bg-color: var(--surface-default);
     --_margin-inline: 0;
-    --_shadow: var(--shadow-2);
   }
   &.outlined {
-    --_bg-color: var(--surface-default);
     --_margin-inline: 0;
 
     border: 1px solid var(--border-color);
   }
   &.tonal {
-    --_bg-color: var(--surface-tonal);
     --_margin-inline: 0;
   }
 
@@ -92,9 +88,14 @@
   }
 
   /* Variants */
+  &.card,
   &.text {
-    .content {
-      padding-inline: 0;
+    --_bg-color: transparent;
+
+    &:not(.tonal, .outlined, .elevated) {
+      summary {
+        padding-inline: 0;
+      }
     }
   }
   &.tonal {

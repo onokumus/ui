@@ -1,75 +1,22 @@
-@layer props, normalize, utils, components, theme;
+@layer props, normalize, utils, theme, components;
 
-@import "open-props/colors" layer(props);
-@import "open-props/animations" layer(props);
-@import "open-props/aspects" layer(props);
-@import "open-props/borders" layer(props);
-@import "open-props/durations" layer(props);
-@import "open-props/easings" layer(props);
-@import "open-props/fonts" layer(props);
-@import "open-props/gradients" layer(props);
-@import "open-props/shadows" layer(props);
-@import "open-props/sizes" layer(props);
-@import "open-props/zindex" layer(props);
+@import "https://unpkg.com/open-props@2.0.0-beta.5/css/index.css"
+  layer(props.main);
+@import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/red.hex.css"
+  layer(props.colors.red);
+@import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/green.hex.css"
+  layer(props.colors.green);
+@import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/blue.hex.css"
+  layer(props.colors.blue);
+@import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/orange.hex.css"
+  layer(props.colors.orange);
+@import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/hues.oklch.css"
+  layer(props.colors.hues);
+@import "../node_modules/open-props/gray-oklch.min.css" layer(props.colors.gray);
 
-@import "utils/index.css" layer(utils);
+@import "./normalize.css" layer(normalize);
+@import "./utils/index.css" layer(utils);
 
-@import "normalize.css" layer(normalize);
+@import "./data-display/typography.css" layer(theme.typography);
 
-/* @import "button.css" layer(components);
-@import "input.css" layer(components);
-@import "select.css" layer(components); */
-
-@import "theme.css" layer(theme);
-
-/* can't place @custom-media in a @layer
-https://github.com/csstools/postcss-plugins/issues/481#issuecomment-1210951029
-*/
-@import "open-props/media";
-
-/* border radius
-  - input
-  - button
-  -
-
-*/
-
-/* table */
-
-/* details */
-
-/* dialog */
-
-/* button
-  - filled
-  - tonal
-  - outlined
-  - text
- */
-
-/* inputs
-  - variants
-    - outlined (default)
-    - filled
-
-  - text
-  - number
-  - password
-  - url
-  - search
-  - date
-  - datetime-local
-  - time
-  - week
-
-  - checkbox
-  - radio
-  - range
-  - switch
-  - color
-  - image
-  - reset
-  - submit
-*/
-
-/* select */
+@import "./theme.css" layer(theme);

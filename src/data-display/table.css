@@ -63,7 +63,7 @@
 :where(tbody tr:nth-child(even):hover td) {
   background-color: var(--gray-10);
 
-  @media (prefers-color-scheme: light) {
+  @container style(--color-scheme: light) {
     background-color: white;
   }
 }

@@ -6,17 +6,11 @@
   /* TODO */
   &:where(:not(.disabled, [disabled])) {
     &:where(:not(:active):hover) {
-      --_bg-color: light-dark(
-        color-mix(in oklch, var(--surface-filled) 95%, black),
-        color-mix(in oklch, var(--surface-filled) 80%, white)
-      );
+      --_bg-color: light-dark(var(--gray-1), var(--gray-12));
     }
 
     &:where(:hover:active) {
-      --_bg-color: light-dark(
-        color-mix(in oklch, var(--surface-filled) 90%, black),
-        color-mix(in oklch, var(--surface-filled) 85%, white)
-      );
+      --_bg-color: light-dark(var(--gray-2), var(--gray-11));
     }
   }
 
@@ -60,14 +54,14 @@
 
     &:where(:not(.disabled, [disabled])) {
       &:where(:not(:active):hover) {
-        --_bg-color: var(--color-9);
-        --_border-color: var(--color-9);
+        --_bg-color: var(--color-10);
+        --_border-color: var(--color-10);
         --_text-color: var(--color-1);
       }
 
       &:where(:active) {
-        --_bg-color: var(--color-10);
-        --_border-color: var(--color-10);
+        --_bg-color: var(--color-9);
+        --_border-color: var(--color-9);
         --_text-color: var(--color-1);
       }
     }
@@ -92,13 +86,13 @@
 
     &:where(:not(.disabled, [disabled])) {
       &:where(:not(:active):hover) {
-        --_bg-color: var(--color-7);
-        --_border-color: var(--color-7);
+        --_bg-color: var(--color-9);
+        --_border-color: var(--color-9);
       }
 
       &:where(:active) {
-        --_bg-color: var(--color-9);
-        --_border-color: var(--color-9);
+        --_bg-color: var(--color-7);
+        --_border-color: var(--color-7);
       }
     }
 
@@ -121,13 +115,13 @@
 
     &:where(:not(.disabled, [disabled])) {
       &:where(:not(:active):hover) {
-        --_bg-color: var(--color-9);
-        --_border-color: var(--color-9);
+        --_bg-color: var(--color-10);
+        --_border-color: var(--color-10);
       }
 
       &:where(:active) {
-        --_bg-color: var(--color-10);
-        --_border-color: var(--color-10);
+        --_bg-color: var(--color-9);
+        --_border-color: var(--color-9);
       }
     }
 
@@ -148,30 +142,28 @@
     --_bg-color: light-dark(var(--gray-1), var(--gray-12));
     --_text-color: var(--color-8);
 
-    box-shadow: var(--shadow-1);
+    box-shadow: var(--shadow-3);
 
     &:where(:not(.disabled, [disabled])) {
       &:where(:not(:active):hover) {
-        box-shadow: var(--shadow-2);
+        box-shadow: var(--shadow-4);
       }
 
       &:where(:active) {
-        --_bg-color: var(--surface-elevated);
-        box-shadow: var(--shadow-3);
+        box-shadow: var(--shadow-6);
       }
     }
 
-    @media (prefers-color-scheme: dark) {
-      box-shadow: var(--shadow-2);
+    @container style(--color-scheme: dark) {
+      box-shadow: var(--shadow-4);
 
       &:where(:not(.disabled, [disabled])) {
         &:where(:not(:active):hover) {
-          box-shadow: var(--shadow-3);
+          box-shadow: var(--shadow-5);
         }
 
         &:where(:active) {
-          --_bg-color: var(--surface-elevated);
-          box-shadow: var(--shadow-4);
+          box-shadow: var(--shadow-6);
         }
       }
     }

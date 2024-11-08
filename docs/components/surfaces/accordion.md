@@ -41,7 +41,7 @@ Leverages the HTML `details` and `summary` elements.
 <div class="example-wrapper">
    <div class="example stack">
 
- <details>
+ <details class="card">
 	<summary id="summary-id" aria-controls="content-id">
 		Accordion
 	</summary>
@@ -52,7 +52,7 @@ Leverages the HTML `details` and `summary` elements.
   </div>
 
 ```html
-<details>
+<details class="card">
   <summary id="summary-id" aria-controls="content-id">Accordion title</summary>
   <div
     id="content-id"
@@ -78,7 +78,7 @@ Leverages the HTML `details` and `summary` elements.
 <div class="example-wrapper">
    <div class="example stack">
 
- <details>
+ <details class="card">
 	<summary id="summary1" aria-controls="content1">
 		Text
 	</summary>
@@ -87,7 +87,7 @@ Leverages the HTML `details` and `summary` elements.
 	</div>
 </details>
 
-<details class="elevated">
+<details class="card elevated">
 	<summary id="summary2" aria-controls="content2">
 		Elevated
 	</summary>
@@ -96,7 +96,7 @@ Leverages the HTML `details` and `summary` elements.
 	</div>
 </details>
 
-<details class="outlined">
+<details class="card outlined">
 	<summary id="summary3" aria-controls="content3">
 		Outlined
 	</summary>
@@ -105,7 +105,7 @@ Leverages the HTML `details` and `summary` elements.
 	</div>
 </details>
 
-<details class="tonal">
+<details class="card tonal">
 	<summary id="summary3" aria-controls="content3">
 		Tonal
 	</summary>
@@ -118,28 +118,28 @@ Leverages the HTML `details` and `summary` elements.
 
 ```html
 <!-- Text (default) -->
-<details>
+<details class="card">
   <!--  -->
 </details>
 
 <!-- or -->
 
-<details class="text">
+<details class="card text">
   <!--  -->
 </details>
 
 <!-- Elevated -->
-<details class="elevated">
+<details class="card elevated">
   <!--  -->
 </details>
 
 <!-- Outlined -->
-<details class="outlined">
+<details class="card outlined">
   <!--  -->
 </details>
 
 <!-- Tonal -->
-<details class="tonal">
+<details class="card tonal">
   <!--  -->
 </details>
 ```
@@ -148,7 +148,7 @@ Leverages the HTML `details` and `summary` elements.
 
 ## Accordion group
 
-Apply the `.card` class to a parent element.
+Apply the `.card` class **only** to the parent element.
 
 You are still able to set [variant](#variants) styles, but instead of doing it on the individual elements - apply the variant class on the `.card` element instead.
 

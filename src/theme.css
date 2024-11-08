@@ -1,18 +1,3 @@
-@layer props, normalize, utils, theme, components;
-@import "../node_modules/open-props/gray-oklch.min.css" layer(props.gray);
-@import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/red.hex.css"
-  layer(props.red);
-@import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/orange.hex.css"
-  layer(props.orange);
-@import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/blue.hex.css"
-  layer(props.blue);
-@import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/green.hex.css"
-  layer(props.green);
-@import "https://unpkg.com/open-props@beta.5" layer(props.base);
-/* @import "./normalize.css" layer(normalize); */
-@import "./utils/index.css" layer(utils);
-@import "./data-display/typography.css" layer(theme.typography);
-
 html {
   color-scheme: var(--color-scheme);
 }
@@ -35,15 +20,13 @@ html {
   --gray-hue: 255;
   --gray-chroma: 0.01;
 
-  --palette-hue: 246;
+  --palette-hue: var(--oklch-teal);
   --palette-hue-rotate-by: 5;
   --palette-chroma: 0.89;
 
-  /* TODO: why doesn't this work? */
   @container style(--color-scheme: dark) {
-    --palette-hue: 216;
+    --palette-hue: var(--oklch-red);
   }
-
   /* Colors */
   --primary: var(--color-8);
   --primary-dark: color-mix(in oklch, var(--primary) 80%, black);
@@ -78,7 +61,7 @@ html {
   /* Surface */
   --surface-default: light-dark(var(--gray-0), var(--gray-13));
   --surface-filled: light-dark(var(--gray-1), var(--gray-14));
-  --surface-tonal: light-dark(var(--gray-2), var(--gray-12));
+  --surface-tonal: light-dark(var(--gray-1), var(--gray-12));
 
   /* Typography */
   --font-size-h1: var(--font-size-6);

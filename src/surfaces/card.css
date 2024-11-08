@@ -1,8 +1,9 @@
 :where(.card) {
   --_bg-color: var(--surface-default);
-  --_border-color: var(--border-color);
-  --_border-width: 1px;
+  --_border-color: transparent;
+  --_border-width: 0;
   --_shadow: none;
+  padding-inline: 0;
 
   background-color: var(--_bg-color);
   border-color: var(--_border-color);
@@ -24,26 +25,26 @@
   &.tonal {
     --_bg-color: var(--surface-tonal);
     --_border-width: 1px;
-    --_shadow: none;
   }
 
   &.elevated {
     --_bg-color: light-dark(var(--gray-0), var(--gray-12));
     --_border-color: transparent;
     --_border-width: 0;
-    --_shadow: var(--shadow-2);
+    --_shadow: var(--shadow-3);
 
-    @media (prefers-color-scheme: dark) {
-      --_shadow: var(--shadow-3);
+    @container style(--color-scheme: dark) {
+      --_shadow: var(--shadow-4);
     }
   }
 
   &.outlined {
+    --_bg-color: var(--surface-default);
     --_border-color: var(--border-color);
     --_border-width: 1px;
-    --_shadow: none;
   }
 
+  /* Children */
   :where(.header, .content, .actions) {
     margin-block: var(--size-3);
     padding-inline: var(--size-3);
