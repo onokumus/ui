@@ -77,4 +77,8 @@ html {
   --border-radius: var(--size-1);
   --border-width: 1px;
   --button-border-radius: 100vmax;
+
+  /* Butttons */
+  /* Ripple (comment out to remove ripple effect on button press) */
+  /* --ripple: none; */
 }

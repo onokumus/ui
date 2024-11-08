@@ -1,5 +1,5 @@
 :where(.card) {
-  --_bg-color: var(--surface-default);
+  --_bg-color: transparent;
   --_border-color: transparent;
   --_border-width: 0;
   --_shadow: none;
@@ -15,7 +15,7 @@
 
   /* Variants */
   &.text {
-    --_bg-color: var(--surface-default);
+    --_bg-color: transparent;
     --_border-color: transparent;
     --_border-width: 0;
     --_shadow: none;

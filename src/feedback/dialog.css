@@ -1,10 +1,10 @@
 /* TODO:
   - fix long content scrolling
+  - html overflow on [open]
 */
 :where(dialog) {
-  background-color: transparent;
-  border: 0;
   margin-block-start: 15%; /* vertical aligment */
+  padding-block: 0;
 
   &::backdrop {
     background-color: rgba(0, 0, 0, 0.5);
@@ -21,6 +21,7 @@
   }
 }
 
+/* Why doesn't this work? */
 :where(html:has(dialog[open])) {
   overflow: hidden;
 }

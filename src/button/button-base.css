@@ -14,7 +14,7 @@
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   align-items: center;
-  background: var(--_bg-color);
+  background: var(--_bg-color) var(--ripple, none);
   border-radius: var(--_border-radius);
   border: var(--border-size-1) solid var(--_border-color);
   color: var(--_text-color);

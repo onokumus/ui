@@ -6,11 +6,17 @@
   /* TODO */
   &:where(:not(.disabled, [disabled])) {
     &:where(:not(:active):hover) {
-      --_bg-color: light-dark(var(--gray-1), var(--gray-12));
+      --_bg-color: light-dark(
+        color-mix(in oklch, white 90%, black),
+        color-mix(in oklch, white 40%, black)
+      );
     }
 
     &:where(:hover:active) {
-      --_bg-color: light-dark(var(--gray-2), var(--gray-11));
+      --_bg-color: light-dark(
+        color-mix(in oklch, white 95%, black),
+        color-mix(in oklch, white 45%, black)
+      );
     }
   }
 
@@ -179,6 +185,22 @@
         var(--text-1) 70%,
         var(--surface-elevated)
       );
+    }
+  }
+
+  /* Ripple */
+  background-position: center;
+  transition: background 0.8s;
+
+  &:where(:not(.disabled, [disabled])) {
+    &:where(:not(:active):hover) {
+      --ripple: radial-gradient(circle, transparent 1%, var(--_bg-color) 1%)
+        center/15000%;
+    }
+
+    &:where(:hover:active) {
+      background-size: 100%;
+      transition: background 0s;
     }
   }
 }

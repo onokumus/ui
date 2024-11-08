@@ -38,8 +38,7 @@ In order to toggle a `<dialog>` you will need to use Javascript.
 
 <button @click="openModal" class="tonal">Open dialog</button>
 
-<dialog ref="dialog" role="dialog" aria-labelledby="dialog-heading" aria-modal="true">
-	<div class="card">
+<dialog ref="dialog" role="dialog" aria-labelledby="dialog-heading" aria-modal="true" class="card elevated">
 		<div class="header">
 			<h2 id="dialog-heading" class="h4">Are you sure?</h2>
 		</div>
@@ -51,7 +50,6 @@ In order to toggle a `<dialog>` you will need to use Javascript.
 			<button @click="closeModal">Cancel</button>
 			<button @click="closeModal">Save</button>
 		</div>
-</div>
 </dialog>
   </div>
 

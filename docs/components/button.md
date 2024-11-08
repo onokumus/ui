@@ -243,6 +243,47 @@ If you can't provide a label or want to control the button from its root you can
 </button>
 ```
 
+## Ripple effect
+
+The ripple effect on button press is enabled by default. Here's how you remove it.
+
+Either go to your theme file and add:
+
+::: code-group
+
+```css [theme.css]
+--ripple: none;
+```
+
+:::
+
+...or go to your `button-variants.css` file and remove all the ripple related styles:
+
+::: code-group
+
+```css [button-variants.css]
+:where(button, .button) {
+  /* ... */
+
+  /* Ripple */
+  background-position: center; // [!code --]
+  transition: background 0.8s; // [!code --]
+
+  &:where(:not(.disabled, [disabled])) {
+    &:where(:not(:active):hover) {
+      --ripple: radial-gradient(circle, transparent 1%, var(--_bg-color) 1%) center/15000%; // [!code --]
+    }
+
+    &:where(:hover:active) {
+      background-size: 100%; // [!code --]
+      transition: background 0s; // [!code --]
+    }
+  }
+}
+```
+
+:::
+
 ## File upload
 
 ## Sizes
