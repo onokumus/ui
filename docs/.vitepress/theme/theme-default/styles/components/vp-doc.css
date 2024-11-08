@@ -1,5 +1,3 @@
-@import "../../../../../../src/data-display/typography.css";
-
 @layer vitepress.components.doc {
   .vp-doc {
     @scope (&) to (.example-wrapper) {
@@ -14,33 +12,8 @@
       h5,
       h6 {
         position: relative;
-        font-weight: 600;
         outline: none;
       }
-      /*
-      h1 {
-        letter-spacing: -0.02em;
-        line-height: 40px;
-      }
-
-      h2 {
-        margin: 48px 0 16px;
-        padding-top: 24px;
-        letter-spacing: -0.02em;
-        line-height: 32px;
-      }
-
-      h3 {
-        margin: 32px 0 0;
-        letter-spacing: -0.01em;
-        line-height: 28px;
-      }
-
-      h4 {
-        margin: 24px 0 0;
-        letter-spacing: -0.01em;
-        line-height: 24px;
-      } */
 
       .header-anchor {
         position: absolute;
