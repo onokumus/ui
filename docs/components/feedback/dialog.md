@@ -7,7 +7,6 @@
 	.anatomy :where(button, dialog){
     outline: var(--_anatomy-border-red);
     outline-offset: 3px;
-
 	}
 </style>
 

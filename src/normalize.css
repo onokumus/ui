@@ -33,9 +33,10 @@
   min-block-size: 100%;
 }
 
-:where(:not(dialog)) {
+/* TODO */
+/* :where(:not(dialog)) {
   margin: 0;
-}
+} */
 
 :where(:not(fieldset, progress, meter)) {
   background-origin: border-box;
@@ -71,13 +72,13 @@
   outline-offset: var(--outline-offset, 0px);
 }
 
-:where(h3, h4, h5, h6, dt) {
+/* :where(h3, h4, h5, h6, dt) {
   max-inline-size: var(--size-header-3);
 }
 
 :where(p, ul, ol, dl, h6) {
   font-size: var(--font-size-p, var(--font-size-2));
-}
+} */
 
 :where(a, u, ins, abbr) {
   text-underline-offset: 1px;
@@ -168,10 +169,6 @@
 :where(mark) {
   border-radius: var(--border-radius, var(--radius-2));
   padding-inline: var(--size-1);
-}
-
-:where(li, dd, figcaption) {
-  max-inline-size: var(--size-content-2);
 }
 
 :where(dt, summary) {

@@ -1,11 +1,17 @@
-@import "../node_modules/open-props/gray-oklch.min.css";
-@import "../node_modules/open-props/sizes.min.css";
-@import "../node_modules/open-props/red.min.css";
-@import "../node_modules/open-props/orange.min.css";
-@import "../node_modules/open-props/blue.min.css";
-@import "../node_modules/open-props/green.min.css";
-
-@import "./utils/index.css";
+@layer props, normalize, utils, theme, components;
+@import "../node_modules/open-props/gray-oklch.min.css" layer(props.gray);
+@import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/red.hex.css"
+  layer(props.red);
+@import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/orange.hex.css"
+  layer(props.orange);
+@import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/blue.hex.css"
+  layer(props.blue);
+@import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/green.hex.css"
+  layer(props.green);
+@import "https://unpkg.com/open-props@beta.5" layer(props.base);
+/* @import "./normalize.css" layer(normalize); */
+@import "./utils/index.css" layer(utils);
+@import "./data-display/typography.css" layer(theme.typography);
 
 html {
   color-scheme: var(--color-scheme);
@@ -19,7 +25,7 @@ html {
 }
 
 /* Theme */
-:where(:root) {
+:where(html) {
   color-scheme: light dark;
 
   /*
@@ -32,6 +38,11 @@ html {
   --palette-hue: 246;
   --palette-hue-rotate-by: 5;
   --palette-chroma: 0.89;
+
+  /* TODO: why doesn't this work? */
+  @container style(--color-scheme: dark) {
+    --palette-hue: 216;
+  }
 
   /* Colors */
   --primary: var(--color-8);
