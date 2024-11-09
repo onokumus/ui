@@ -1,3 +1,8 @@
+/*
+TODO
+- Implement animations and other variants: https://developer.chrome.com/blog/styling-details?hl=en
+*/
+
 :where(details) {
   --_bg-color: transparent;
   --_shadow: none;
@@ -13,31 +18,34 @@
     cursor: pointer;
     padding-block: var(--size-3);
     user-select: none;
-
-    /*
-    Custom arrow example
-    */
-    /*
-    summary {
-      align-items: center;
-      display: flex;
-      justify-content: space-between;
-      list-style: none;
-
-      &::marker,
-      &::-webkit-details-marker {
-        display: none;
-      }
-    }
-    */
   }
 
-  /* Custom arrow example, continued */
   /*
-  &[open] > summary svg {
-		rotate: 180deg;
-  }
+  Custom arrow
   */
+  /* summary {
+    align-items: center;
+    background-color: inherit;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding-block: var(--size-3);
+    user-select: none;
+
+    &::marker,
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    svg {
+      transition: rotate 0.3s var(--ease-1);
+    }
+  }
+
+  &[open] > summary svg {
+    rotate: 180deg;
+  } */
 
   .content {
     margin-block: var(--size-2) var(--size-3);

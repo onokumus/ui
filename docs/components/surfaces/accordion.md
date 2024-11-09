@@ -14,20 +14,24 @@
 }
 
 .custom-arrow {
-	summary {
-		align-items: center;
-		display: flex;
-		justify-content: space-between;
+	 summary {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
     list-style: none;
 
     &::marker,
     &::-webkit-details-marker {
       display: none;
     }
-	}
 
-	&[open] > summary svg {
-		rotate: 180deg;
+    svg {
+      transition: rotate 0.3s var(--ease-1);
+    }
+  }
+
+  &[open] > summary svg {
+    rotate: 180deg;
   }
 }
 </style>
@@ -292,8 +296,6 @@ If the native `details` arrow doesn't suit your needs you can easily modify the 
 
 ```css [accordion.css]
 details {
-  /* ... */
-
   summary {
     align-items: center;
     display: flex;
@@ -305,7 +307,9 @@ details {
       display: none;
     }
 
-    /* ... */
+    svg {
+      transition: rotate 0.3s var(--ease-1);
+    }
   }
 
   &[open] > summary svg {
