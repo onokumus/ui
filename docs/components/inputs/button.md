@@ -1,7 +1,7 @@
 <style scoped>
-  @import "../../src/button/button-base.css";
-  @import "../../src/button/button-variants.css";
-  @import "../../src/button/button-icon.css";
+  @import "../../../src/inputs/button/button-base.css";
+  @import "../../../src/inputs/button/button-variants.css";
+  @import "../../../src/inputs/button/button-icon.css";
 
   .anatomy {
     outline: var(--_anatomy-border-gray);

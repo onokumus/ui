@@ -32,8 +32,8 @@ const { currentLang } = useLangs();
 </template>
 
 <style scoped>
-@import "../../../../src/button/button-base.css";
-@import "../../../../src/button/button-variants.css";
+@import "../../../../src/inputs/button/button-base.css";
+@import "../../../../src/inputs/button/button-variants.css";
 
 .NotFound {
   padding: 64px 24px 96px;

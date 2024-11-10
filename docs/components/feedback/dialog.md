@@ -1,6 +1,6 @@
 <style scoped>
-	@import "../../../src/button/button-base.css";
-  @import "../../../src/button/button-variants.css";
+	@import "../../../src/inputs/button/button-base.css";
+  @import "../../../src/inputs/button/button-variants.css";
 	@import "../../../src/surfaces/card.css";
   @import "../../../src/feedback/dialog.css";
 

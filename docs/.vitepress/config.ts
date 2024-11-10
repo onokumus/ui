@@ -54,7 +54,6 @@ export default defineConfig({
         {
           text: "Components",
           items: [
-            { text: "Button", link: "/components/button" },
             {
               text: "Inputs",
               collapsed: false,
@@ -62,6 +61,11 @@ export default defineConfig({
                 {
                   text: "Autocomplete",
                   link: "/components/inputs/autocomplete",
+                },
+                { text: "Button", link: "/components/inputs/button" },
+                {
+                  text: "Button group",
+                  link: "/components/inputs/button-group",
                 },
                 { text: "Checkbox", link: "/components/inputs/checkbox" },
                 { text: "Color", link: "/components/inputs/color" },

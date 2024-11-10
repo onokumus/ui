@@ -76,7 +76,8 @@
     display: flex;
     gap: var(--size-1);
     justify-content: end;
-    margin-block: var(--size-3) var(--size-1);
+    margin-block-start: var(--size-3);
+    padding-block-end: var(--size-1);
     padding-inline: var(--size-3) var(--size-1);
   }
 
