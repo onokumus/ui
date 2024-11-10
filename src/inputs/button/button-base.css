@@ -33,17 +33,6 @@
     border-color 0.2s var(--ease-out-3),
     color 0.2s var(--ease-out-3);
   user-select: none;
-
-  /* Ripple effect */
-  background-position: center;
-  transition: background 0.8s;
-
-  &:where(:not(.disabled, [disabled])) {
-    &:where(:hover:active) {
-      background-size: 100%;
-      transition: background 0s;
-    }
-  }
 }
 
 /* file input */

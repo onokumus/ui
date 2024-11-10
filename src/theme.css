@@ -83,8 +83,7 @@ html {
   --input-border-radius: var(--size-1);
 
   /* Butttons */
-  --button-border-radius: var(--radius-2);
-  /* Button ripple effect */
-  --ripple: radial-gradient(circle, transparent 1%, var(--_bg-color) 1%)
-    center/15000%;
+  --button-border-radius: 100vmax;
+  /* Ripple (comment out to remove ripple effect on button press) */
+  /* --ripple: none; */
 }
