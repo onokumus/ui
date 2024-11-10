@@ -56,7 +56,7 @@ defineProps<{
 .VPFeature {
   display: block;
   border: 1px solid var(--vp-c-bg-soft);
-  border-radius: 12px;
+  border-radius: var(--surface-border-radius);
   height: 100%;
   background-color: var(--vp-c-bg-soft);
   transition:
@@ -84,7 +84,7 @@ defineProps<{
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-  border-radius: 6px;
+  border-radius: var(--surface-border-radius);
   background-color: var(--vp-c-default-soft);
   width: 48px;
   height: 48px;

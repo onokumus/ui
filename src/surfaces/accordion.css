@@ -2,11 +2,37 @@
   --_bg-color: transparent;
   --_shadow: none;
   --_margin-inline: var(--size-1);
+  --_accordion-transition-time: 0.2s;
 
   background-color: var(--_bg-color);
   box-shadow: var(--_shadow);
-  border-radius: var(--border-radius);
+  border-radius: var(--surface-border-radius);
   margin-inline: var(--_margin-inline);
+  transition: all var(--_accordion-transition-time) ease-out;
+
+  /*
+  Accordion animation
+  https://nerdy.dev/open-and-close-transitions-for-the-details-element
+  */
+  @media (prefers-reduced-motion: no-preference) {
+    interpolate-size: allow-keywords;
+  }
+
+  &::details-content {
+    block-size: 0;
+    opacity: 0;
+    overflow-y: clip;
+    transition:
+      content-visibility var(--_accordion-transition-time) allow-discrete,
+      opacity var(--_accordion-transition-time),
+      block-size var(--_accordion-transition-time);
+  }
+
+  &[open]::details-content {
+    opacity: 1;
+    block-size: auto;
+  }
+  /* *** */
 
   summary {
     background-color: inherit;
@@ -34,7 +60,7 @@
     }
 
     svg {
-      transition: rotate 0.3s var(--ease-1);
+      transition: rotate 0.2s ease-out;
     }
   }
 
@@ -43,7 +69,7 @@
   } */
 
   .content {
-    margin-block: var(--size-2) var(--size-3);
+    padding-block: var(--size-2) var(--size-3);
   }
 
   .actions {
@@ -54,10 +80,6 @@
     padding-inline: var(--size-3) var(--size-1);
   }
 
-  &[open] > summary {
-    margin-block-end: var(--size-2);
-  }
-
   /* Variants */
   &.card,
   &.text {
@@ -65,9 +87,11 @@
     --_margin-inline: var(--size-1);
   }
   &.elevated {
+    --_bg-color: var(--surface-elevated);
     --_margin-inline: 0;
   }
   &.outlined {
+    --_bg-color: var(--surface-default);
     --_margin-inline: 0;
 
     border: 1px solid var(--border-color);
@@ -125,20 +149,20 @@
     }
 
     &:first-of-type {
-      border-start-start-radius: var(--border-radius);
-      border-start-end-radius: var(--border-radius);
+      border-start-start-radius: var(--surface-border-radius);
+      border-start-end-radius: var(--surface-border-radius);
       summary {
-        border-start-start-radius: var(--border-radius);
-        border-start-end-radius: var(--border-radius);
+        border-start-start-radius: var(--surface-border-radius);
+        border-start-end-radius: var(--surface-border-radius);
       }
     }
 
     &:last-of-type {
-      border-end-start-radius: var(--border-radius);
-      border-end-end-radius: var(--border-radius);
+      border-end-start-radius: var(--surface-border-radius);
+      border-end-end-radius: var(--surface-border-radius);
       summary {
-        border-end-start-radius: var(--border-radius);
-        border-end-end-radius: var(--border-radius);
+        border-end-start-radius: var(--surface-border-radius);
+        border-end-end-radius: var(--surface-border-radius);
       }
     }
   }

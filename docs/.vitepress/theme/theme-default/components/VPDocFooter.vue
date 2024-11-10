@@ -1,27 +1,27 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { useData } from '../composables/data'
-import { useEditLink } from '../composables/edit-link'
-import { usePrevNext } from '../composables/prev-next'
-import VPLink from './VPLink.vue'
-import VPDocFooterLastUpdated from './VPDocFooterLastUpdated.vue'
+import { computed } from "vue";
+import { useData } from "../composables/data";
+import { useEditLink } from "../composables/edit-link";
+import { usePrevNext } from "../composables/prev-next";
+import VPLink from "./VPLink.vue";
+import VPDocFooterLastUpdated from "./VPDocFooterLastUpdated.vue";
 
-const { theme, page, frontmatter } = useData()
+const { theme, page, frontmatter } = useData();
 
-const editLink = useEditLink()
-const control = usePrevNext()
+const editLink = useEditLink();
+const control = usePrevNext();
 
 const hasEditLink = computed(
   () => theme.value.editLink && frontmatter.value.editLink !== false
-)
-const hasLastUpdated = computed(() => page.value.lastUpdated)
+);
+const hasLastUpdated = computed(() => page.value.lastUpdated);
 const showFooter = computed(
   () =>
     hasEditLink.value ||
     hasLastUpdated.value ||
     control.value.prev ||
     control.value.next
-)
+);
 </script>
 
 <template>
@@ -132,7 +132,7 @@ const showFooter = computed(
 .pager-link {
   display: block;
   border: 1px solid var(--vp-c-divider);
-  border-radius: 8px;
+  border-radius: var(--surface-border-radius);
   padding: 11px 16px 13px;
   width: 100%;
   height: 100%;

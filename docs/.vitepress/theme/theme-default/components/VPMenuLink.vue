@@ -39,7 +39,7 @@ const { page } = useData();
 
 .link {
   display: block;
-  border-radius: 6px;
+  border-radius: var(--surface-border-radius);
   padding: 0 12px;
   line-height: 32px;
   font-size: 14px;

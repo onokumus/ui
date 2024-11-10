@@ -39,7 +39,7 @@
   --_border-color: var(--border-color);
 
   background-color: transparent;
-  border-radius: var(--border-radius, 0px);
+  border-radius: var(--input-border-radius, 0px);
   border: var(--border-width, 1px) solid var(--_border-color);
   color: var(--text-1);
   font-family: var(--font-sans);

@@ -26,7 +26,7 @@
     }
 
     svg {
-      transition: rotate 0.3s var(--ease-1);
+      transition: rotate 0.2s var(--ease-1);
     }
   }
 
@@ -38,7 +38,8 @@
 
 # Accordion
 
-Leverages the HTML `details` and `summary` elements.
+- Leverages the HTML `details` and `summary` elements.
+- Example with [custom arrow](#custom-arrow)
 
 ## Basics
 
@@ -152,11 +153,63 @@ Leverages the HTML `details` and `summary` elements.
 
 ## Accordion group
 
-Apply the `.card` class **only** to the parent element.
+- Apply the `.card` class to a parent element.
+- You are still able to set [variant](#variants) styles, but instead of doing it on the individual elements - apply the variant class on the `.card` element instead.
 
-To have the newly opened `<details>` close the prior, apply a shared `[name]` attribute to all `<details>` elements.
+<div class="example-wrapper">
+   <div class="example stack">
 
-You are still able to set [variant](#variants) styles, but instead of doing it on the individual elements - apply the variant class on the `.card` element instead.
+<div class="card outlined">
+	<div class="content">
+ <details>
+	<summary id="summary1" aria-controls="content1">
+		Accordion title
+	</summary>
+	<div id="content1" class="content" role="region" aria-labelledby="summary1">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales, nulla sit amet porttitor rhoncus, lacus ex vestibulum libero, ac mollis neque ante id justo. Nam tempor euismod nisi ac ornare. Pellentesque id sapien lacinia, venenatis est aliquam, dignissim elit. Suspendisse potenti. Cras ut ante in libero tempus sodales sed quis dolor.</p>
+	</div>
+</details>
+
+<details>
+	<summary id="summary2" aria-controls="content2">
+		Accordion title
+	</summary>
+	<div id="content2" class="content" role="region" aria-labelledby="summary2">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales, nulla sit amet porttitor rhoncus, lacus ex vestibulum libero, ac mollis neque ante id justo. Nam tempor euismod nisi ac ornare. Pellentesque id sapien lacinia, venenatis est aliquam, dignissim elit. Suspendisse potenti. Cras ut ante in libero tempus sodales sed quis dolor.</p>
+	</div>
+</details>
+
+<details>
+	<summary id="summary3" aria-controls="content3">
+		Accordion title
+	</summary>
+	<div id="content3" class="content" role="region" aria-labelledby="summary3">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales, nulla sit amet porttitor rhoncus, lacus ex vestibulum libero, ac mollis neque ante id justo. Nam tempor euismod nisi ac ornare. Pellentesque id sapien lacinia, venenatis est aliquam, dignissim elit. Suspendisse potenti. Cras ut ante in libero tempus sodales sed quis dolor.</p>
+	</div>
+</details>
+</div>
+</div>
+</div>
+
+```html {1,11}
+<div class="card outlined">
+  <details>
+    <!--  -->
+  </details>
+  <details>
+    <!--  -->
+  </details>
+  <details>
+    <!--  -->
+  </details>
+</div>
+```
+
+</div>
+
+### Only show one accordion at a time
+
+To have the newly opened accordion close the prior, apply a shared `[name]` attribute to all `<details>` elements.
 
 <div class="example-wrapper">
    <div class="example stack">
@@ -193,7 +246,7 @@ You are still able to set [variant](#variants) styles, but instead of doing it o
 </div>
 </div>
 
-```html {1,11}
+```html {2,5,8}
 <div class="card outlined">
   <details name="example-group">
     <!--  -->
@@ -214,7 +267,7 @@ You are still able to set [variant](#variants) styles, but instead of doing it o
 <div class="example-wrapper">
    <div class="example">
 
- <details open class="outlined">
+ <details open class="elevated">
 	<summary id="summary1" aria-controls="content1">
 		Accordion with actions
 	</summary>

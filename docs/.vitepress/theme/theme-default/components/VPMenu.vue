@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import VPMenuLink from './VPMenuLink.vue'
-import VPMenuGroup from './VPMenuGroup.vue'
+import VPMenuLink from "./VPMenuLink.vue";
+import VPMenuGroup from "./VPMenuGroup.vue";
 
 defineProps<{
-  items?: any[]
-}>()
+  items?: any[];
+}>();
 </script>
 
 <template>
@@ -27,7 +27,7 @@ defineProps<{
 
 <style scoped>
 .VPMenu {
-  border-radius: 12px;
+  border-radius: var(--surface-border-radius);
   padding: 12px;
   min-width: 128px;
   border: 1px solid var(--vp-c-divider);

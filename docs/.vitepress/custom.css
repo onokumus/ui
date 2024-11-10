@@ -7,7 +7,7 @@ html.dark {
 
 .example-wrapper {
   border-color: var(--border-color);
-  border-radius: var(--size-2);
+  border-radius: var(--surface-border-radius);
   border-style: solid;
   border-width: 1px;
   border-bottom-width: 0;

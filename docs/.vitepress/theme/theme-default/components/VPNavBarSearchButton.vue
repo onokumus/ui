@@ -1,23 +1,29 @@
 <script lang="ts" setup>
-import type { ButtonTranslations } from '../../../../types/local-search'
-import { createSearchTranslate } from '../support/translation'
+import type { ButtonTranslations } from "../../../../types/local-search";
+import { createSearchTranslate } from "../support/translation";
 
 // Button-Translations
 const defaultTranslations: { button: ButtonTranslations } = {
   button: {
-    buttonText: 'Search',
-    buttonAriaLabel: 'Search'
-  }
-}
+    buttonText: "Search",
+    buttonAriaLabel: "Search",
+  },
+};
 
-const translate = createSearchTranslate(defaultTranslations)
+const translate = createSearchTranslate(defaultTranslations);
 </script>
 
 <template>
-  <button type="button" class="DocSearch DocSearch-Button" :aria-label="translate('button.buttonAriaLabel')">
+  <button
+    type="button"
+    class="DocSearch DocSearch-Button"
+    :aria-label="translate('button.buttonAriaLabel')"
+  >
     <span class="DocSearch-Button-Container">
       <span class="vp-icon DocSearch-Search-Icon"></span>
-      <span class="DocSearch-Button-Placeholder">{{ translate('button.buttonText') }}</span>
+      <span class="DocSearch-Button-Placeholder">{{
+        translate("button.buttonText")
+      }}</span>
     </span>
     <span class="DocSearch-Button-Keys">
       <kbd class="DocSearch-Button-Key"></kbd>
@@ -27,7 +33,7 @@ const translate = createSearchTranslate(defaultTranslations)
 </template>
 
 <style>
-[class*='DocSearch'] {
+[class*="DocSearch"] {
   --docsearch-primary-color: var(--vp-c-brand-1);
   --docsearch-highlight-color: var(--docsearch-primary-color);
   --docsearch-text-color: var(--vp-c-text-1);
@@ -41,7 +47,7 @@ const translate = createSearchTranslate(defaultTranslations)
   --docsearch-footer-background: var(--vp-c-bg);
 }
 
-.dark [class*='DocSearch'] {
+.dark [class*="DocSearch"] {
   --docsearch-modal-shadow: none;
   --docsearch-footer-shadow: none;
   --docsearch-logo-color: var(--vp-c-text-2);
@@ -84,7 +90,7 @@ const translate = createSearchTranslate(defaultTranslations)
   .DocSearch-Button {
     justify-content: flex-start;
     border: 1px solid transparent;
-    border-radius: 8px;
+    border-radius: var(--surface-border-radius);
     padding: 0 10px 0 12px;
     width: 100%;
     height: 40px;
@@ -165,7 +171,8 @@ const translate = createSearchTranslate(defaultTranslations)
   border: 1px solid var(--vp-c-divider);
   /*rtl:begin:ignore*/
   border-right: none;
-  border-radius: 4px 0 0 4px;
+  border-radius: var(--surface-border-radius);
+  border-radius: 0;
   padding-left: 6px;
   /*rtl:end:ignore*/
   min-width: 0;
@@ -175,14 +182,17 @@ const translate = createSearchTranslate(defaultTranslations)
   font-family: var(--vp-font-family-base);
   font-size: 12px;
   font-weight: 500;
-  transition: color 0.5s, border-color 0.5s;
+  transition:
+    color 0.5s,
+    border-color 0.5s;
 }
 
 .DocSearch-Button .DocSearch-Button-Key + .DocSearch-Button-Key {
   /*rtl:begin:ignore*/
   border-right: 1px solid var(--vp-c-divider);
   border-left: none;
-  border-radius: 0 4px 4px 0;
+  border-radius: var(--surface-border-radius);
+  border-radius: 0;
   padding-left: 2px;
   padding-right: 6px;
   /*rtl:end:ignore*/
@@ -193,14 +203,14 @@ const translate = createSearchTranslate(defaultTranslations)
 }
 
 .DocSearch-Button .DocSearch-Button-Key:first-child:after {
-  content: 'Ctrl';
+  content: "Ctrl";
   font-size: 12px;
   letter-spacing: normal;
   color: var(--docsearch-muted-color);
 }
 
 .mac .DocSearch-Button .DocSearch-Button-Key:first-child:after {
-  content: '\2318';
+  content: "\2318";
 }
 
 .DocSearch-Button .DocSearch-Button-Key:first-child > * {

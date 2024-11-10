@@ -7,7 +7,7 @@
 
   background-color: var(--_bg-color);
   border-color: var(--_border-color);
-  border-radius: var(--border-radius);
+  border-radius: var(--surface-border-radius);
   border-style: solid;
   border-width: var(--_border-width);
   box-shadow: var(--_shadow);
@@ -28,7 +28,7 @@
   }
 
   &.elevated {
-    --_bg-color: light-dark(var(--gray-0), var(--gray-12));
+    --_bg-color: var(--surface-elevated);
     --_border-color: transparent;
     --_border-width: 0;
     --_shadow: var(--shadow-3);

@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { withBase } from 'vitepress'
-import { useData } from './composables/data'
-import { useLangs } from './composables/langs'
+import { withBase } from "vitepress";
+import { useData } from "./composables/data";
+import { useLangs } from "./composables/langs";
 
-const { theme } = useData()
-const { currentLang } = useLangs()
+const { theme } = useData();
+const { currentLang } = useLangs();
 </script>
 
 <template>
   <div class="NotFound">
-    <p class="code">{{ theme.notFound?.code ?? '404' }}</p>
-    <h1 class="title">{{ theme.notFound?.title ?? 'PAGE NOT FOUND' }}</h1>
+    <p class="code">{{ theme.notFound?.code ?? "404" }}</p>
+    <h1 class="title">{{ theme.notFound?.title ?? "PAGE NOT FOUND" }}</h1>
     <div class="divider" />
     <blockquote class="quote">
       {{
@@ -21,17 +21,20 @@ const { currentLang } = useLangs()
 
     <div class="action">
       <a
-        class="link"
+        class="button small outlined"
         :href="withBase(currentLang.link)"
         :aria-label="theme.notFound?.linkLabel ?? 'go to home'"
       >
-        {{ theme.notFound?.linkText ?? 'Take me home' }}
+        {{ theme.notFound?.linkText ?? "Take me home" }}
       </a>
     </div>
   </div>
 </template>
 
 <style scoped>
+@import "../../../../src/button/button-base.css";
+@import "../../../../src/button/button-variants.css";
+
 .NotFound {
   padding: 64px 24px 96px;
   text-align: center;
@@ -74,23 +77,5 @@ const { currentLang } = useLangs()
 
 .action {
   padding-top: 20px;
-}
-
-.link {
-  display: inline-block;
-  border: 1px solid var(--vp-c-brand-1);
-  border-radius: 16px;
-  padding: 3px 16px;
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--vp-c-brand-1);
-  transition:
-    border-color 0.25s,
-    color 0.25s;
-}
-
-.link:hover {
-  border-color: var(--vp-c-brand-2);
-  color: var(--vp-c-brand-2);
 }
 </style>

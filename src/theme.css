@@ -13,6 +13,7 @@ html {
 :where(html) {
   color-scheme: light dark;
 
+  /* Colors */
   /*
   Palette picker
   https://opv2-beta.netlify.app/color/
@@ -27,7 +28,6 @@ html {
   @container style(--color-scheme: dark) {
     --palette-hue: var(--oklch-red);
   }
-  /* Colors */
   --primary: var(--color-8);
   --primary-dark: color-mix(in oklch, var(--primary) 80%, black);
   --primary-light: color-mix(in oklch, var(--primary) 80%, white);
@@ -62,6 +62,8 @@ html {
   --surface-default: light-dark(var(--gray-0), var(--gray-13));
   --surface-filled: light-dark(var(--gray-1), var(--gray-14));
   --surface-tonal: light-dark(var(--gray-1), var(--gray-12));
+  --surface-elevated: light-dark(var(--gray-0), var(--gray-12));
+  --surface-border-radius: var(--size-1);
 
   /* Typography */
   --font-size-h1: var(--font-size-6);
@@ -76,9 +78,12 @@ html {
   --border-color: light-dark(var(--gray-2), var(--gray-12));
   --border-radius: var(--size-1);
   --border-width: 1px;
-  --button-border-radius: 100vmax;
+
+  /* Input */
+  --input-border-radius: var(--size-1);
 
   /* Butttons */
+  --button-border-radius: 100vmax;
   /* Ripple (comment out to remove ripple effect on button press) */
   /* --ripple: none; */
 }

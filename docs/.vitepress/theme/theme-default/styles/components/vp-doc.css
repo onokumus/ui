@@ -307,7 +307,7 @@
 @media (min-width: 640px) {
   .vp-doc div[class*="language-"],
   .vp-block {
-    border-radius: var(--size-2);
+    border-radius: var(--surface-border-radius);
     margin: 16px 0;
   }
 }
@@ -326,6 +326,7 @@
 
 .vp-doc [class*="language-"] pre,
 .vp-doc [class*="language-"] code {
+  cursor: default;
   /*rtl:ignore*/
   direction: ltr;
   /*rtl:ignore*/

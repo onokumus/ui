@@ -31,12 +31,21 @@ export default defineConfig({
           text: "Guide",
           items: [
             {
+              text: "Getting started",
+              link: "/guide/getting-started",
+            },
+            {
               text: "Why Open Props UI?",
               link: "/guide/why-open-props-ui",
             },
+          ],
+        },
+        {
+          text: "About",
+          items: [
             {
-              text: "Getting started",
-              link: "/guide/getting-started",
+              text: "Acknowledgments",
+              link: "/guide/acknowledgments",
             },
           ],
         },
