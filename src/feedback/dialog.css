@@ -1,7 +1,3 @@
-/* TODO:
-  - fix long content scrolling
-  - html overflow on [open]
-*/
 :where(dialog) {
   margin-block-start: 15%; /* vertical aligment */
   padding-block: 0;

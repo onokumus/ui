@@ -1,8 +1,3 @@
-/*
-TODO
-- Implement animations and other variants: https://developer.chrome.com/blog/styling-details?hl=en
-*/
-
 :where(details) {
   --_bg-color: transparent;
   --_shadow: none;
