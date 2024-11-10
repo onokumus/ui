@@ -154,6 +154,8 @@ Leverages the HTML `details` and `summary` elements.
 
 Apply the `.card` class **only** to the parent element.
 
+To have the newly opened `<details>` close the prior, apply a shared `[name]` attribute to all `<details>` elements.
+
 You are still able to set [variant](#variants) styles, but instead of doing it on the individual elements - apply the variant class on the `.card` element instead.
 
 <div class="example-wrapper">
@@ -161,7 +163,7 @@ You are still able to set [variant](#variants) styles, but instead of doing it o
 
 <div class="card outlined">
 	<div class="content">
- <details>
+ <details name="example-group">
 	<summary id="summary1" aria-controls="content1">
 		Accordion title
 	</summary>
@@ -170,7 +172,7 @@ You are still able to set [variant](#variants) styles, but instead of doing it o
 	</div>
 </details>
 
-<details>
+<details name="example-group">
 	<summary id="summary2" aria-controls="content2">
 		Accordion title
 	</summary>
@@ -179,7 +181,7 @@ You are still able to set [variant](#variants) styles, but instead of doing it o
 	</div>
 </details>
 
-<details>
+<details name="example-group">
 	<summary id="summary3" aria-controls="content3">
 		Accordion title
 	</summary>
@@ -193,13 +195,13 @@ You are still able to set [variant](#variants) styles, but instead of doing it o
 
 ```html {1,11}
 <div class="card outlined">
-  <details>
+  <details name="example-group">
     <!--  -->
   </details>
-  <details>
+  <details name="example-group">
     <!--  -->
   </details>
-  <details>
+  <details name="example-group">
     <!--  -->
   </details>
 </div>
