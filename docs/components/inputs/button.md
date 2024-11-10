@@ -395,19 +395,9 @@ Add disabled styling with the `disabled` attribute or the `.disabled` class.
 
 ## Ripple effect
 
-The ripple effect on button press is enabled by default. Here's how you remove it.
+The ripple effect on button press is enabled by default. Here's how you disable it.
 
-Either go to your theme file and add:
-
-::: code-group
-
-```css [theme.css]
---ripple: none;
-```
-
-:::
-
-...or go to your `button-variants.css` file and remove all the ripple related styles:
+Go to your `button-variants.css` file and remove all the ripple related styles:
 
 ::: code-group
 
@@ -415,7 +405,7 @@ Either go to your theme file and add:
 :where(button, .button) {
   /* ... */
 
-  /* Ripple */
+  /* Ripple effect */
   background-position: center; // [!code --]
   transition: background 0.8s; // [!code --]
 

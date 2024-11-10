@@ -84,6 +84,4 @@ html {
 
   /* Butttons */
   --button-border-radius: 100vmax;
-  /* Ripple (comment out to remove ripple effect on button press) */
-  /* --ripple: none; */
 }

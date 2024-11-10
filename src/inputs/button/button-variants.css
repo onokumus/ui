@@ -188,7 +188,7 @@
     }
   }
 
-  /* Ripple */
+  /* Ripple effect */
   background-position: center;
   transition: background 0.8s;
 
@@ -199,7 +199,7 @@
     }
 
     &:where(:hover:active) {
-      background-size: 100%;
+      background-size: var(--ripple-size);
       transition: background 0s;
     }
   }
