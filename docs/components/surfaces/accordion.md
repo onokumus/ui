@@ -207,10 +207,6 @@ You are still able to set [variant](#variants) styles, but instead of doing it o
 
 </div>
 
-::: info
-If you want only one accordion to be open at a time you will need to use Javascript.
-:::
-
 ## Actions
 
 <div class="example-wrapper">
