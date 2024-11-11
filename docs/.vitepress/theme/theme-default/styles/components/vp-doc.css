@@ -32,7 +32,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        margin-left: -0.87em;
+        margin-left: -0.87em !important;
         font-weight: 500;
         user-select: none;
         opacity: 0;
