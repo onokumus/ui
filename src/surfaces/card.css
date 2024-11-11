@@ -45,7 +45,7 @@
   }
 
   /* Children */
-  :where(.header, .content) {
+  :where(hgroup, .content) {
     margin-block: var(--size-3);
     padding-inline: var(--size-3);
   }

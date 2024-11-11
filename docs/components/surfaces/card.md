@@ -6,7 +6,7 @@
 	.anatomy {
     outline: var(--_anatomy-border-gray);
     outline-offset: 3px;
-		:is(.header, .content, .actions) {
+		:is(hgroup, .content, .actions) {
 			outline: var(--_anatomy-border-red);
 			outline-offset: -2px;
 		}
@@ -64,7 +64,7 @@ The [accordion group](/components/surfaces/accordion#accordion-group) is a great
 Open Props UI include these complementary utility components to handle various use cases:
 
 1. Container
-2. `.header` (optional): a wrapper for the card header
+2. `<hgroup>` (optional): a wrapper for the card header
 3. `.content` (optional): a wrapper for the card content
 4. `.actions` (optional): a wrapper that groups a set of buttons
 
@@ -72,10 +72,10 @@ Open Props UI include these complementary utility components to handle various u
    <div class="example stack">
 
 <div class="card elevated anatomy">
-		<div class="header">
+		<hgroup>
 			<h2 class="h4">Headline</h2>
 			<p>Subhead</p>
-		</div>
+		</hgroup>
 		<div class="content">Explain more about the topic shown in the headline and subhead through supporting text.</div>
 		<div class="actions">
 			<button class="button">Share</button>
@@ -87,10 +87,10 @@ Open Props UI include these complementary utility components to handle various u
 
 ```html
 <div class="card outlined">
-  <div class="header">
+  <hgroup>
     <h2 class="h4">Headline</h2>
     <p>Subhead</p>
-  </div>
+  </hgroup>
   <div class="content">
     Explain more about the topic shown in the headline and subhead through
     supporting text.
@@ -108,7 +108,7 @@ Open Props UI include these complementary utility components to handle various u
 
 These are the classes and attributes a card can be styled with. As usual, feel free to add your own!
 
-| Type                  | Modifiers                                     | Default | Description                          |
-| --------------------- | --------------------------------------------- | ------- | ------------------------------------ |
-| [Children](#anatomy)  | `& > .header`, `& > .content`, `& > .actions` | -       | Optional wrappers for child content. |
-| [Variants](#variants) | `.text`, `.outlined`, `.tonal`, `.elevated`   | `.text` | The variant to use.                  |
+| Type                  | Modifiers                                      | Default | Description                          |
+| --------------------- | ---------------------------------------------- | ------- | ------------------------------------ |
+| [Children](#anatomy)  | `& > <hgroup>`, `& > .content`, `& > .actions` | -       | Optional wrappers for child content. |
+| [Variants](#variants) | `.text`, `.outlined`, `.tonal`, `.elevated`    | `.text` | The variant to use.                  |

@@ -5,6 +5,19 @@
    * Headings
    * -------------------------------------------------------------------------- */
 
+      h1 {
+        margin-block: 0 0.8888889em !important;
+      }
+      h2 {
+        margin-block: 2em 1em !important;
+      }
+      h3 {
+        margin-block: 1.6em 0.6em !important;
+      }
+      h4 {
+        margin-block: 1.5em 0.5em !important;
+      }
+
       h1,
       h2,
       h3,

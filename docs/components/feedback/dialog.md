@@ -5,7 +5,7 @@
   @import "../../../src/feedback/dialog.css";
 
 	.anatomy :where(button, dialog){
-    outline: var(--_anatomy-border-red);
+    outline: var(--_anatomy-border-gray);
     outline-offset: 3px;
 	}
 </style>
@@ -39,9 +39,9 @@ In order to toggle a `<dialog>` you will need to use Javascript.
 <button @click="openModal" class="tonal">Open dialog</button>
 
 <dialog ref="dialog" role="dialog" aria-labelledby="dialog-heading" aria-modal="true" class="card elevated">
-		<div class="header">
+		<hgroup>
 			<h2 id="dialog-heading" class="h4">Are you sure?</h2>
-		</div>
+		</hgroup>
 		<div class="content">
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales,
       nulla sit amet porttitor rhoncus.
@@ -58,9 +58,9 @@ In order to toggle a `<dialog>` you will need to use Javascript.
 ```html [dialog.html]
 <dialog>
   <div class="card">
-    <div class="header">
+    <hgroup>
       <h2 class="h4">Are you sure?</h2>
-    </div>
+    </hgroup>
     <div class="content">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales,
       nulla sit amet porttitor rhoncus.
@@ -127,9 +127,9 @@ Source: [w3.org](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/
   aria-modal="true"
 >
   <div class="card">
-    <div class="header">
+    <hgroup>
       <h2 id="dialog-heading" class="h4">Dialog heading</h2>
-    </div>
+    </hgroup>
     <div id="dialog-content" class="content"><!--  --></div>
     <div class="actions">
       <!--  -->
@@ -148,7 +148,7 @@ Source: [w3.org](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/
 
 <button class="tonal">Open dialog</button>
 
-<dialog open style="margin-block-start: 0;">Dialog</dialog>
+<dialog open style="margin: 1rem 0 0 0; position:relative;">Dialog</dialog>
   </div>
 
 ```html
