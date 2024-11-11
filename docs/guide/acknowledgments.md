@@ -14,4 +14,3 @@ Sources of inspiration/theft:
 - [UnoCSS](https://unocss.dev/)
 - [Pico CSS](https://picocss.com/)
 - [Open Components 2](https://github.com/Groene-Otter/oc2/)
-  2
