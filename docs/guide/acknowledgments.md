@@ -11,6 +11,6 @@ Sources of inspiration/theft:
 - [Material UI](https://mui.com/material-ui)
 - [Google's Material Design guidelines](https://m3.material.io/)
 - [shadcn/ui](https://ui.shadcn.com/)
-- [UnoCSS](https://unocss.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
 - [Pico CSS](https://picocss.com/)
 - [Open Components 2](https://github.com/Groene-Otter/oc2/)
