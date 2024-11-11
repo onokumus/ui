@@ -11,7 +11,7 @@ html.dark {
   }
 }
 
-:where(.vp-doc h2) {
+:where(.vp-doc h2, h3) {
   &:has(~ .example-wrapper) {
     margin-block: 2em 1em;
   }
