@@ -5,22 +5,16 @@ html.dark {
   }
 }
 
-:where(.vp-doc h1, h2, h3, h4, h5, h6, p) {
-  &:has(~ .example-wrapper) {
-    margin-block-end: 1em;
-  }
+:where(.vp-doc > div > :where(h1, h2, h3, h4, h5, h6, p)) {
+  margin-block-end: 1em;
 }
 
-:where(.vp-doc h2, h3) {
-  &:has(~ .example-wrapper) {
-    margin-block: 2em 1em;
-  }
+:where(.vp-doc > div > :where(h2, h3)) {
+  margin-block: 2em 1em;
 }
 
-:where(.vp-doc h4, h5, h6, p) {
-  &:has(~ .example-wrapper) {
-    margin-block: 1.25em;
-  }
+:where(.vp-doc > div > :where(h4, h5, h6, p)) {
+  margin-block: 1.25em;
 }
 
 .anatomy {
