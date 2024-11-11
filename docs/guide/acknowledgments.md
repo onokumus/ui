@@ -1,3 +1,5 @@
+<div class="rich-text">
+
 # Acknowledgments
 
 Thank you to:
@@ -14,3 +16,5 @@ Sources of inspiration/theft:
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Pico CSS](https://picocss.com/)
 - [Open Components 2](https://github.com/Groene-Otter/oc2/)
+
+</div>
