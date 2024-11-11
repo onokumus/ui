@@ -182,12 +182,6 @@
   margin-block-start: var(--size-5);
 }
 
-:where(hr) {
-  background-color: var(--surface-tonal);
-  height: var(--border-size-2);
-  margin-block: var(--size-fluid-5);
-}
-
 :where(figure) {
   display: grid;
   gap: var(--size-2);

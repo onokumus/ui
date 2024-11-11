@@ -1,0 +1,5 @@
+:where(hr) {
+  background-color: var(--border-color);
+  height: var(--border-size-1);
+  margin-block: var(--size-fluid-3);
+}

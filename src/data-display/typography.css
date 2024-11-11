@@ -250,8 +250,6 @@
 
   /* Horizontal rules */
   hr {
-    margin-block: 3em;
-
     & + * {
       margin-block-start: 0;
     }

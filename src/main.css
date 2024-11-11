@@ -27,6 +27,7 @@
 /* Components */
 
 /*** Data display */
+@import "./data-display/divider.css" layer(theme.data-display.divider);
 @import "./data-display/typography.css" layer(theme.data-display.typography);
 
 /*** Feedback */
