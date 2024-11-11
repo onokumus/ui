@@ -1,8 +1,3 @@
-<style>
- @import "../../../src/inputs/input-base.css";
-  @import "../../../src/inputs/checkbox.css";
-</style>
-
 # Radio
 
 ## Basic radio buttons

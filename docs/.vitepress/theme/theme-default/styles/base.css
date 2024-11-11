@@ -23,7 +23,6 @@
     -webkit-text-size-adjust: 100%;
     font-size: 16px;
     line-height: 1.4;
-    scroll-behavior: smooth;
   }
 
   html.dark {

@@ -329,10 +329,10 @@
   :root {
     --vp-code-line-height: 1.7;
     --vp-code-font-size: 0.875rem;
-    --vp-code-color: var(--vp-c-brand-1);
-    --vp-code-link-color: var(--vp-c-brand-1);
-    --vp-code-link-hover-color: var(--vp-c-brand-2);
-    --vp-code-bg: var(--vp-c-default-soft);
+    --vp-code-color: var(--primary);
+    --vp-code-link-color: var(--primary);
+    --vp-code-link-hover-color: var(--primary-light);
+    --vp-code-bg: var(--surface-tonal);
 
     --vp-code-block-color: rgba(255, 255, 245, 0.86);
     --vp-code-block-bg: var(--gray-15);

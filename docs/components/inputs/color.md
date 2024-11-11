@@ -1,8 +1,3 @@
-<style scoped>
-  @import "../../../src/inputs/input-base.css";
-  @import "../../../src/inputs/color.css";
-</style>
-
 # Color
 
 <div class="example-wrapper">

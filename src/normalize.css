@@ -33,6 +33,7 @@
   min-block-size: 100%;
 }
 
+/* TODO */
 :where(:not(dialog, popover)) {
   margin: 0;
 }
@@ -159,18 +160,21 @@
 }
 
 :where(kbd, var) {
-  border-color: var(--border-color);
+  background-color: var(--text-1);
+  border-color: var(--text-1);
   border-radius: var(--border-radius, var(--radius-2));
   border-width: var(--border-size-1);
-  padding: var(--size-1) var(--size-2);
+  color: var(--text-1-contrast);
+  padding: calc(var(--size-1) / 2) var(--size-1);
 }
 
 :where(mark) {
-  border-radius: var(--border-radius, var(--radius-2));
-  padding-inline: var(--size-1);
+  border-radius: var(--border-radius, 0);
+  padding: calc(var(--size-1) / 2) var(--size-1);
+  vertical-align: baseline;
 }
 
-:where(dt, summary) {
+:where(dt) {
   font-weight: var(--font-weight-7);
 }
 

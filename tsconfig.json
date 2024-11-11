@@ -19,5 +19,8 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"]
+  "vueCompilerOptions": {
+    "vitePressExtensions": [".md"]
+  },
+  "include": ["src", "docs/**/*.ts", "docs/**/*.vue", "docs/**/*.md"]
 }

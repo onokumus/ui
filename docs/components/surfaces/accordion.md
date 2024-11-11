@@ -1,9 +1,8 @@
-<style scoped>
-@import "../../../src/inputs/button/button-base.css";
-@import "../../../src/inputs/button/button-variants.css";
-@import "../../../src/surfaces/accordion.css";
-@import "../../../src/surfaces/card.css";
+<script setup>
+	import Example from "../../.vitepress/theme/app/components/Example.vue"
+	</script>
 
+<style>
 .anatomy {
 	outline: var(--_anatomy-border-gray);
 	outline-offset: 8px;
@@ -43,9 +42,8 @@
 
 ## Basics
 
-<div class="example-wrapper">
-   <div class="example stack">
-
+<Example direction="stack">
+<template #example>
  <details class="card">
 	<summary id="summary-id" aria-controls="content-id">
 		Accordion
@@ -54,7 +52,9 @@
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales, nulla sit amet porttitor rhoncus, lacus ex vestibulum libero, ac mollis neque ante id justo. Nam tempor euismod nisi ac ornare. Pellentesque id sapien lacinia, venenatis est aliquam, dignissim elit. Suspendisse potenti. Cras ut ante in libero tempus sodales sed quis dolor.</p>
 	</div>
 </details>
-  </div>
+</template>
+
+<template #code>
 
 ```html
 <details class="card">
@@ -76,14 +76,14 @@
 </details>
 ```
 
-</div>
+</template>
+</Example>
 
 ## Variants
 
-<div class="example-wrapper">
-   <div class="example stack">
-
- <details class="card">
+<Example direction="stack">
+	<template #example>
+	<details class="card">
 	<summary id="summary1" aria-controls="content1">
 		Text
 	</summary>
@@ -118,8 +118,9 @@
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales, nulla sit amet porttitor rhoncus, lacus ex vestibulum libero, ac mollis neque ante id justo. Nam tempor euismod nisi ac ornare. Pellentesque id sapien lacinia, venenatis est aliquam, dignissim elit. Suspendisse potenti. Cras ut ante in libero tempus sodales sed quis dolor.</p>
 	</div>
 </details>
+	</template>
 
-  </div>
+<template #code>
 
 ```html
 <!-- Text (default) -->
@@ -149,17 +150,17 @@
 </details>
 ```
 
-</div>
+</template>
+</Example>
 
 ## Accordion group
 
 - Apply the `.card` class to a parent element.
 - You are still able to set [variant](#variants) styles, but instead of doing it on the individual elements - apply the variant class on the `.card` element instead.
 
-<div class="example-wrapper">
-   <div class="example stack">
-
-<div class="card outlined">
+<Example direction="stack">
+	<template #example>
+	<div class="card outlined">
 	<div class="content">
  <details>
 	<summary id="summary1" aria-controls="content1">
@@ -189,7 +190,9 @@
 </details>
 </div>
 </div>
-</div>
+</template>
+
+<template #code>
 
 ```html {1,11}
 <div class="card outlined">
@@ -205,16 +208,16 @@
 </div>
 ```
 
-</div>
+</template>
+</Example>
 
 ### Only show one accordion at a time
 
 To have the newly opened accordion close the prior, apply a shared `[name]` attribute to all `<details>` elements.
 
-<div class="example-wrapper">
-   <div class="example stack">
-
-<div class="card outlined">
+<Example direction="stack">
+	<template #example>
+	<div class="card outlined">
 	<div class="content">
  <details name="example-group">
 	<summary id="summary1" aria-controls="content1">
@@ -244,7 +247,9 @@ To have the newly opened accordion close the prior, apply a shared `[name]` attr
 </details>
 </div>
 </div>
-</div>
+</template>
+
+<template #code>
 
 ```html {2,5,8}
 <div class="card outlined">
@@ -260,13 +265,13 @@ To have the newly opened accordion close the prior, apply a shared `[name]` attr
 </div>
 ```
 
-</div>
+</template>
+</Example>
 
 ## Actions
 
-<div class="example-wrapper">
-   <div class="example">
-
+<Example>
+<template #example>
  <details open class="elevated">
 	<summary id="summary1" aria-controls="content1">
 		Accordion with actions
@@ -279,7 +284,9 @@ To have the newly opened accordion close the prior, apply a shared `[name]` attr
     <button class="button">Agree</button>
   </div>
 </details>
-</div>
+</template>
+
+<template #code>
 
 ```html {12-15}
 <details open class="outlined">
@@ -300,16 +307,16 @@ To have the newly opened accordion close the prior, apply a shared `[name]` attr
 </details>
 ```
 
-</div>
+</template>
+</Example>
 
 ## Custom arrow
 
 If the native `details` arrow doesn't suit your needs you can easily modify the `accordion.css` file to add your own preferred icon.
 
-<div class="example-wrapper">
-   <div class="example stack">
-
- <details class="outlined custom-arrow">
+<Example direction="stack">
+<template #example>
+<details class="outlined custom-arrow">
 	<summary id="summary1" aria-controls="content1">
 		Custom arrow
 		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M4.293 8.293a1 1 0 0 1 1.414 0L12 14.586l6.293-6.293a1 1 0 1 1 1.414 1.414l-7 7a1 1 0 0 1-1.414 0l-7-7a1 1 0 0 1 0-1.414"/></svg>
@@ -318,8 +325,9 @@ If the native `details` arrow doesn't suit your needs you can easily modify the 
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales, nulla sit amet porttitor rhoncus, lacus ex vestibulum libero, ac mollis neque ante id justo. Nam tempor euismod nisi ac ornare. Pellentesque id sapien lacinia, venenatis est aliquam, dignissim elit. Suspendisse potenti. Cras ut ante in libero tempus sodales sed quis dolor.</p>
 	</div>
 </details>
+</template>
 
-</div>
+<template #code>
 
 ::: code-group
 
@@ -372,8 +380,8 @@ details {
 ```
 
 :::
-
-</div>
+</template>
+</Example>
 
 ## Accessibility
 
@@ -392,9 +400,8 @@ The [WAI-ARIA guidelines](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) f
 3. `& > .content` (optional): a wrapper for the accordion content
 4. `& > .actions` (optional): a wrapper that groups a set of buttons
 
-<div class="example-wrapper">
-   <div class="example stack">
-
+<Example direction="stack">
+<template #example>
  <details open class="anatomy">
 	<summary id="anatomy-summary-1" aria-controls="anatomy-content-1">
 		Accordion title
@@ -407,8 +414,9 @@ The [WAI-ARIA guidelines](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) f
     <button class="button">Agree</button>
   </div>
 </details>
+</template>
 
-  </div>
+<template #code>
 
 ```html
 <details>
@@ -424,7 +432,8 @@ The [WAI-ARIA guidelines](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) f
 </details>
 ```
 
-</div>
+</template>
+</Example>
 
 ## API
 

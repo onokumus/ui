@@ -37,6 +37,7 @@
   summary {
     background-color: inherit;
     cursor: pointer;
+    font-weight: var(--font-weight-7);
     padding-block: var(--size-3);
     user-select: none;
   }

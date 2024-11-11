@@ -1,8 +1,6 @@
-<style scoped>
-@import "../../../src/inputs/input-base.css";
-@import "../../../src/inputs/input-variants.css";
-@import "../../../src/inputs/autocomplete.css";
-</style>
+<script setup>
+import Example from "../../.vitepress/theme/app/components/Example.vue"
+</script>
 
 # Autocomplete
 
@@ -15,9 +13,8 @@ Make sure you couple the `<input>` and `<datalist>`:
 - `<input list="DATALISTID">`
 - `<datalist id="DATALISTID">`
 
-<div class="example-wrapper">
-   <div class="example">
-
+<Example>
+<template #example>
 <input type="text" list="artists" />
 <datalist id="artists">
   <option>Ray Manzarek</option>
@@ -25,11 +22,12 @@ Make sure you couple the `<input>` and `<datalist>`:
   <option>Marika Hackman</option>
 </datalist>
 
-  </div>
+</template>
+
+<template #code>
 
 ```html
-<input class="input outlined" type="text" list="artists" />
-
+<input type="text" list="artists" />
 <datalist id="artists">
   <option>Ray Manzarek</option>
   <option>Jonny Greenwood</option>
@@ -37,4 +35,5 @@ Make sure you couple the `<input>` and `<datalist>`:
 </datalist>
 ```
 
-</div>
+</template>
+</Example>

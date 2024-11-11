@@ -1,16 +1,6 @@
-<style scoped>
-	@import "../../../src/inputs/button/button-base.css";
-  @import "../../../src/inputs/button/button-variants.css";
-	@import "../../../src/surfaces/card.css";
-  @import "../../../src/feedback/dialog.css";
-
-	.anatomy :where(button, dialog){
-    outline: var(--_anatomy-border-gray);
-    outline-offset: 3px;
-	}
-</style>
-
 <script setup>
+  import Example from "../../.vitepress/theme/app/components/Example.vue"
+
 	import {ref} from "vue"
 	const dialog = ref()
 
@@ -33,9 +23,8 @@ In order to toggle a `<dialog>` you will need to use Javascript.
 
 ## Basics
 
-<div class="example-wrapper">
-   <div class="example">
-
+<Example>
+<template #example>
 <button @click="openModal" class="tonal">Open dialog</button>
 
 <dialog ref="dialog" role="dialog" aria-labelledby="dialog-heading" aria-modal="true" class="card elevated">
@@ -51,7 +40,9 @@ In order to toggle a `<dialog>` you will need to use Javascript.
 			<button @click="closeModal">Save</button>
 		</div>
 </dialog>
-  </div>
+</template>
+
+<template #code>
 
 ::: code-group
 
@@ -91,7 +82,8 @@ closeButton.addEventListener("click", () => {
 
 :::
 
-</div>
+</template>
+</Example>
 
 ## Accessibility
 
@@ -109,11 +101,11 @@ closeButton.addEventListener("click", () => {
 
 ### Keyboard support
 
-| Key                               | Function                                                                                                                                                                                                    |
-| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <kbd>Tab</kbd>                    | <ul><li>Moves focus to next focusable element inside the dialog.</li><li>When focus is on the last focusable element in the dialog, moves focus to the first focusable element in the dialog.</li></ul>     |
-| <kbd>Shift</kbd> + <kbd>Tab</kbd> | <ul><li>Moves focus to previous focusable element inside the dialog.</li><li>When focus is on the first focusable element in the dialog, moves focus to the last focusable element in the dialog.</li></ul> |
-| <kbd>Esc</kbd>                    | Closes the dialog.                                                                                                                                                                                          |
+| Key                    | Function                                                                                                                                                                                                    |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <kbd>Tab</kbd>         | <ul><li>Moves focus to next focusable element inside the dialog.</li><li>When focus is on the last focusable element in the dialog, moves focus to the first focusable element in the dialog.</li></ul>     |
+| <kbd>Shift + Tab</kbd> | <ul><li>Moves focus to previous focusable element inside the dialog.</li><li>When focus is on the first focusable element in the dialog, moves focus to the last focusable element in the dialog.</li></ul> |
+| <kbd>Esc</kbd>         | Closes the dialog.                                                                                                                                                                                          |
 
 Source: [w3.org](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/dialog/#rps_label), [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog#accessibility)
 
@@ -143,13 +135,14 @@ Source: [w3.org](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/
 1. Button to show dialog
 2. `<dialog>` container
 
-<div class="example-wrapper">
-   <div class="example stack anatomy" style="min-height: 4rem;">
-
+<Example exampleClass="anatomy">
+<template #example>
 <button class="tonal">Open dialog</button>
 
-<dialog open style="margin: 1rem 0 0 0; position:relative;">Dialog</dialog>
-  </div>
+<div style="background-color: light-dark(white,rgb(18,18,18)); display: flex; margin: 1rem 0 0 0; width:fit-content; padding: .5rem;">Dialog</div>
+</template>
+
+<template #code>
 
 ```html
 <button id="open-dialog-button">Open dialog</button>
@@ -159,7 +152,8 @@ Source: [w3.org](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/
 </dialog>
 ```
 
-</div>
+</template>
+</Example>
 
 ## API
 

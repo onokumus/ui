@@ -1,9 +1,3 @@
-<style scoped>
-  @import "../../../src/inputs/input-base.css";
-  @import "../../../src/inputs/input-variants.css";
-  @import "../../../src/inputs/textarea.css";
-</style>
-
 # Textarea
 
 ## Variants

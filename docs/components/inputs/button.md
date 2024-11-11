@@ -1,8 +1,8 @@
-<style scoped>
-  @import "../../../src/inputs/button/button-base.css";
-  @import "../../../src/inputs/button/button-variants.css";
-  @import "../../../src/inputs/button/button-icon.css";
+<script setup>
+import Example from "../../.vitepress/theme/app/components/Example.vue"
+</script>
 
+<style>
   .anatomy {
     outline: var(--_anatomy-border-gray);
     outline-offset: 2px;
@@ -16,14 +16,16 @@
 
 ## Variants
 
-<div class="example-wrapper">
-  <div class="example row">
+<Example direction="row">
+<template #example>
     <button class="button">Text</button>
     <button class="button outlined">Outlined</button>
     <button class="button tonal">Tonal</button>
     <button class="button filled">Filled</button>
     <button class="button elevated">Elevated</button>
-  </div>
+</template>
+
+<template #code>
 
 ```html
 <button class="button">Text</button>
@@ -33,16 +35,19 @@
 <button class="button elevated">Elevated</button>
 ```
 
-</div>
+</template>
+</Example>
 
 ### Text
 
-<div class="example-wrapper">
-  <div class="example row">
+<Example direction="row">
+<template #example>
     <button class="button">Text</button>
     <button class="button" disabled>Disabled</button>
     <a href="#" class="button">Link</a>
-  </div>
+</template>
+
+<template #code>
 
 ```html
 <button class="button">Text</button>
@@ -50,16 +55,19 @@
 <a href="#" class="button">Link</a>
 ```
 
-</div>
+</template>
+</Example>
 
 ### Outlined
 
-<div class="example-wrapper">
-  <div class="example row">
+<Example direction="row">
+<template #example>
     <button class="button outlined">Outlined</button>
     <button class="button outlined" disabled>Disabled</button>
     <a href="#" class="button outlined">Link</a>
-  </div>
+</template>
+
+<template #code>
 
 ```html
 <button class="button outlined">Outlined</button>
@@ -67,16 +75,19 @@
 <a href="#" class="button outlined">Link</a>
 ```
 
-</div>
+</template>
+</Example>
 
 ### Tonal
 
-<div class="example-wrapper">
-  <div class="example row">
-    <button class="button tonal">Tonal</button>
+<Example direction="row">
+<template #example>
+     <button class="button tonal">Tonal</button>
     <button class="button tonal" disabled>Disabled</button>
     <a href="#" class="button tonal">Link</a>
-  </div>
+</template>
+
+<template #code>
 
 ```html
 <button class="button tonal">Tonal</button>
@@ -84,16 +95,19 @@
 <a href="#" class="button tonal">Link</a>
 ```
 
-</div>
+</template>
+</Example>
 
 ### Filled
 
-<div class="example-wrapper">
-  <div class="example row">
-    <button class="button filled">Filled</button>
+<Example direction="row">
+<template #example>
+   <button class="button filled">Filled</button>
     <button class="button filled" disabled>Disabled</button>
     <a href="#" class="button filled">Link</a>
-  </div>
+</template>
+
+<template #code>
 
 ```html
 <button class="button filled">Filled</button>
@@ -101,16 +115,19 @@
 <a href="#" class="button filled">Link</a>
 ```
 
-</div>
+</template>
+</Example>
 
 ### Elevated
 
-<div class="example-wrapper">
-  <div class="example row">
+<Example direction="row">
+<template #example>
     <button class="button elevated">Elevated</button>
     <button class="button elevated" disabled>Disabled</button>
     <a href="#" class="button elevated">Link</a>
-  </div>
+</template>
+
+<template #code>
 
 ```html
 <button class="button elevated">Elevated</button>
@@ -118,12 +135,14 @@
 <a href="#" class="button elevated">Link</a>
 ```
 
-</div>
+</template>
+</Example>
 
 ## Buttons with icon and label
 
-<div class="example-wrapper">
-  <div class="example row">
+<Example direction="stack">
+<template #example>
+<div class="row">
     <button class="button">
       Text
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11.75 3a.75.75 0 0 1 .743.648l.007.102l.001 7.25h7.253a.75.75 0 0 1 .102 1.493l-.102.007h-7.253l.002 7.25a.75.75 0 0 1-1.493.101l-.007-.102l-.002-7.249H3.752a.75.75 0 0 1-.102-1.493L3.752 11h7.25L11 3.75a.75.75 0 0 1 .75-.75"/></svg>
@@ -146,7 +165,7 @@
     </button>
   </div>
 
-   <div class="example row">
+   <div class="row">
     <button class="button">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11.75 3a.75.75 0 0 1 .743.648l.007.102l.001 7.25h7.253a.75.75 0 0 1 .102 1.493l-.102.007h-7.253l.002 7.25a.75.75 0 0 1-1.493.101l-.007-.102l-.002-7.249H3.752a.75.75 0 0 1-.102-1.493L3.752 11h7.25L11 3.75a.75.75 0 0 1 .75-.75"/></svg>
       Text
@@ -168,6 +187,9 @@
     Elevated
     </button>
   </div>
+</template>
+
+<template #code>
 
 ```html
 <!-- Label + icon -->
@@ -183,16 +205,17 @@
 </button>
 ```
 
-</div>
+</template>
+</Example>
 
 ## Icon button
 
 The `.sr-only` (screen reader only) class removes the visible text but still allows screen readers to
 access it.
 
-<div class="example-wrapper">
-  <div class="example row">
-    <button class="button">
+<Example direction="row">
+<template #example>
+ <button class="button">
       <span class="sr-only">
         Text
       </span>
@@ -222,7 +245,9 @@ access it.
       </span>
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11.75 3a.75.75 0 0 1 .743.648l.007.102l.001 7.25h7.253a.75.75 0 0 1 .102 1.493l-.102.007h-7.253l.002 7.25a.75.75 0 0 1-1.493.101l-.007-.102l-.002-7.249H3.752a.75.75 0 0 1-.102-1.493L3.752 11h7.25L11 3.75a.75.75 0 0 1 .75-.75"/></svg>
     </button>
-  </div>
+</template>
+
+<template #code>
 
 ```html
 <button class="button">
@@ -231,11 +256,15 @@ access it.
 </button>
 ```
 
-</div>
+</template>
+</Example>
 
 ### Without label
 
 If you can't provide a label or want to control the button from its root you can use the `.icon-only` class.
+
+<Example>
+<template #code>
 
 ```html
 <button class="button icon-only">
@@ -243,25 +272,29 @@ If you can't provide a label or want to control the button from its root you can
 </button>
 ```
 
+</template>
+</Example>
+
 ## File upload
 
 ## Sizes
 
 Resize any button with the `.small` and `.large` modifiers.
 
-<div class="example-wrapper">
-<div class="example row">
+<Example direction="stack">
+<template #example>
+<div class="row">
   <button class="button small">Small</button>
   <button class="button">Medium</button>
   <button class="button large">Large</button>
 </div>
-<div class="example row">
+<div class="row">
   <button class="button filled small">Small</button>
   <button class="button filled">Medium</button>
   <button class="button filled large">Large</button>
 </div>
 
-<div class="example row">
+<div class="row">
   <button class="button small">
       Text
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11.75 3a.75.75 0 0 1 .743.648l.007.102l.001 7.25h7.253a.75.75 0 0 1 .102 1.493l-.102.007h-7.253l.002 7.25a.75.75 0 0 1-1.493.101l-.007-.102l-.002-7.249H3.752a.75.75 0 0 1-.102-1.493L3.752 11h7.25L11 3.75a.75.75 0 0 1 .75-.75"/></svg>
@@ -276,7 +309,7 @@ Resize any button with the `.small` and `.large` modifiers.
   </button>
 </div>
 
-<div class="example row">
+<div class="row">
   <button class="button small">
     <span class="sr-only">
       Text
@@ -316,6 +349,9 @@ Resize any button with the `.small` and `.large` modifiers.
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11.75 3a.75.75 0 0 1 .743.648l.007.102l.001 7.25h7.253a.75.75 0 0 1 .102 1.493l-.102.007h-7.253l.002 7.25a.75.75 0 0 1-1.493.101l-.007-.102l-.002-7.249H3.752a.75.75 0 0 1-.102-1.493L3.752 11h7.25L11 3.75a.75.75 0 0 1 .75-.75"/></svg>
   </button>
 </div>
+</template>
+
+<template #code>
 
 ```html
 <button class="button small">Small</button>
@@ -323,28 +359,30 @@ Resize any button with the `.small` and `.large` modifiers.
 <button class="button large">Large</button>
 ```
 
-</div>
+</template>
+</Example>
 
 ## Disabled
 
 Add disabled styling with the `disabled` attribute or the `.disabled` class.
 
-<div class="example-wrapper">
-<div class="example row">
+<Example direction="stack">
+<template #example>
+<div class="row">
   <button class="button" disabled>Text</button>
   <button class="button outlined" disabled>Outlined</button>
   <button class="button tonal" disabled>Tonal</button>
   <button class="button filled" disabled>Filled</button>
   <button class="button elevated" disabled>Elevated</button>
 </div>
-<div class="example row">
+<div class="row">
   <button class="button" disabled>Text <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11.75 3a.75.75 0 0 1 .743.648l.007.102l.001 7.25h7.253a.75.75 0 0 1 .102 1.493l-.102.007h-7.253l.002 7.25a.75.75 0 0 1-1.493.101l-.007-.102l-.002-7.249H3.752a.75.75 0 0 1-.102-1.493L3.752 11h7.25L11 3.75a.75.75 0 0 1 .75-.75"/></svg></button>
   <button class="button outlined" disabled>Outlined <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11.75 3a.75.75 0 0 1 .743.648l.007.102l.001 7.25h7.253a.75.75 0 0 1 .102 1.493l-.102.007h-7.253l.002 7.25a.75.75 0 0 1-1.493.101l-.007-.102l-.002-7.249H3.752a.75.75 0 0 1-.102-1.493L3.752 11h7.25L11 3.75a.75.75 0 0 1 .75-.75"/></svg></button>
   <button class="button tonal" disabled>Tonal <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11.75 3a.75.75 0 0 1 .743.648l.007.102l.001 7.25h7.253a.75.75 0 0 1 .102 1.493l-.102.007h-7.253l.002 7.25a.75.75 0 0 1-1.493.101l-.007-.102l-.002-7.249H3.752a.75.75 0 0 1-.102-1.493L3.752 11h7.25L11 3.75a.75.75 0 0 1 .75-.75"/></svg></button>
   <button class="button filled" disabled>Filled <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11.75 3a.75.75 0 0 1 .743.648l.007.102l.001 7.25h7.253a.75.75 0 0 1 .102 1.493l-.102.007h-7.253l.002 7.25a.75.75 0 0 1-1.493.101l-.007-.102l-.002-7.249H3.752a.75.75 0 0 1-.102-1.493L3.752 11h7.25L11 3.75a.75.75 0 0 1 .75-.75"/></svg></button>
   <button class="button elevated" disabled>Elevated <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11.75 3a.75.75 0 0 1 .743.648l.007.102l.001 7.25h7.253a.75.75 0 0 1 .102 1.493l-.102.007h-7.253l.002 7.25a.75.75 0 0 1-1.493.101l-.007-.102l-.002-7.249H3.752a.75.75 0 0 1-.102-1.493L3.752 11h7.25L11 3.75a.75.75 0 0 1 .75-.75"/></svg></button>
 </div>
-  <div class="example row">
+  <div class="row">
     <button class="button" disabled>
       <span class="sr-only">
         Text
@@ -376,6 +414,9 @@ Add disabled styling with the `disabled` attribute or the `.disabled` class.
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11.75 3a.75.75 0 0 1 .743.648l.007.102l.001 7.25h7.253a.75.75 0 0 1 .102 1.493l-.102.007h-7.253l.002 7.25a.75.75 0 0 1-1.493.101l-.007-.102l-.002-7.249H3.752a.75.75 0 0 1-.102-1.493L3.752 11h7.25L11 3.75a.75.75 0 0 1 .75-.75"/></svg>
     </button>
   </div>
+</template>
+
+<template #code>
 
 ```html
 <button class="button" disabled>
@@ -391,7 +432,8 @@ Add disabled styling with the `disabled` attribute or the `.disabled` class.
 </button>
 ```
 
-</div>
+</template>
+</Example>
 
 ## Ripple effect
 
@@ -434,10 +476,9 @@ These are the out-of-the-box colors generated by the Open Props UI `theme.css` f
 2. Label text (optional)
 3. Icon (optional)
 
-<div class="example-wrapper">
-   <div class="example row">
-
- <button class="button filled anatomy">
+<Example direction="row">
+<template #example>
+<button class="button filled anatomy">
        <span> Text</span>
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11.75 3a.75.75 0 0 1 .743.648l.007.102l.001 7.25h7.253a.75.75 0 0 1 .102 1.493l-.102.007h-7.253l.002 7.25a.75.75 0 0 1-1.493.101l-.007-.102l-.002-7.249H3.752a.75.75 0 0 1-.102-1.493L3.752 11h7.25L11 3.75a.75.75 0 0 1 .75-.75"/></svg>
     </button>
@@ -451,9 +492,9 @@ These are the out-of-the-box colors generated by the Open Props UI `theme.css` f
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M11.75 3a.75.75 0 0 1 .743.648l.007.102l.001 7.25h7.253a.75.75 0 0 1 .102 1.493l-.102.007h-7.253l.002 7.25a.75.75 0 0 1-1.493.101l-.007-.102l-.002-7.249H3.752a.75.75 0 0 1-.102-1.493L3.752 11h7.25L11 3.75a.75.75 0 0 1 .75-.75"/></svg>
     <span class="sr-only">Text</span>
 </button>
-  </div>
+</template>
 
-</div>
+</Example>
 
 ## API
 
