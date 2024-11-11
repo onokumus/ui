@@ -180,9 +180,13 @@
   .custom-block-title {
     font-weight: 600;
     margin: 0;
+
+    & + * {
+      margin-block: var(--size-2);
+    }
   }
 
-  p + p {
+  * + *:not(:last-child) {
     margin: 8px 0;
   }
 

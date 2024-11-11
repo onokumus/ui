@@ -138,6 +138,7 @@
   /* Lists */
   ul,
   ol {
+    list-style-type: initial;
     margin-block-start: 1.25em;
     margin-block-end: 1.25em;
     padding-inline-start: 1.625em;
