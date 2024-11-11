@@ -103,7 +103,7 @@ Text <sup>Sup</sup> `<sup>`
 <blockquote>
   "Occupy your mind, don't stay home. Talk to all your friends, but don't look at your phone”
   <footer>
-    — Marika Hackman, <cite>No Caffeinie</cite>
+    — Marika Hackman, <cite>No Caffeine</cite>
   </footer>
 </blockquote>
 
@@ -115,7 +115,7 @@ Text <sup>Sup</sup> `<sup>`
 <blockquote>
   "Occupy your mind, don't stay home. Talk to all your friends, but don't look
   at your phone”
-  <footer>— Marika Hackman, <cite>No Caffeinie</cite></footer>
+  <footer>— Marika Hackman, <cite>No Caffeine</cite></footer>
 </blockquote>
 ```
 
