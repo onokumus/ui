@@ -76,20 +76,6 @@
   opacity: 1;
 }
 
-:where(input[type="text"][list]) {
-  background-image: var(--icon-arrow-down);
-  background-position: calc(100% - 1.25ch) center;
-  background-size: 2.25ch;
-
-  &:focus {
-    background-image: var(--icon-arrow-up);
-  }
-
-  &::-webkit-calendar-picker-indicator {
-    color: transparent;
-  }
-}
-
 :where(input[type="password"]) {
   background-image: var(--icon-password);
   background-position: calc(100% - 1.5ch) center;

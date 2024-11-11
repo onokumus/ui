@@ -1,0 +1,7 @@
+:where(input[type="text"][list]) {
+  &:focus {
+  }
+
+  &::-webkit-calendar-picker-indicator {
+  }
+}

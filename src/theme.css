@@ -28,6 +28,7 @@ html {
   @container style(--color-scheme: dark) {
     --palette-hue: var(--oklch-red);
   }
+
   --primary: var(--color-8);
   --primary-dark: color-mix(in oklch, var(--primary) 80%, black);
   --primary-light: color-mix(in oklch, var(--primary) 80%, white);
