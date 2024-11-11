@@ -22,6 +22,31 @@ export default defineConfig({
     nav: [
       { text: "Guide", link: "/guide/why-open-props-ui" },
       { text: "Components", link: "/components" },
+      {
+        text: "Version",
+        items: [
+          {
+            text: "HTML",
+            link: "#",
+          },
+          {
+            text: "React",
+            link: "#",
+          },
+          {
+            text: "Solid",
+            link: "#",
+          },
+          {
+            text: "Svelte",
+            link: "#",
+          },
+          {
+            text: "Vue",
+            link: "#",
+          },
+        ],
+      },
       { text: "Open Props", link: "https://open-props.style/" },
     ],
 

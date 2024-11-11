@@ -1,22 +1,22 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
-import { useFlyout } from '../composables/flyout'
-import VPMenu from './VPMenu.vue'
+import { ref } from "vue";
+import { useFlyout } from "../composables/flyout";
+import VPMenu from "./VPMenu.vue";
 
 defineProps<{
-  icon?: string
-  button?: string
-  label?: string
-  items?: any[]
-}>()
+  icon?: string;
+  button?: string;
+  label?: string;
+  items?: any[];
+}>();
 
-const open = ref(false)
-const el = ref<HTMLElement>()
+const open = ref(false);
+const el = ref<HTMLElement>();
 
-useFlyout({ el, onBlur })
+useFlyout({ el, onBlur });
 
 function onBlur() {
-  open.value = false
+  open.value = false;
 }
 </script>
 
@@ -98,6 +98,11 @@ function onBlur() {
   height: var(--vp-nav-height);
   color: var(--vp-c-text-1);
   transition: color 0.5s;
+
+  &:hover,
+  &:active {
+    --_bg-color: inherit;
+  }
 }
 
 .text {
@@ -131,6 +136,9 @@ function onBlur() {
   right: 0;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.25s, visibility 0.25s, transform 0.25s;
+  transition:
+    opacity 0.25s,
+    visibility 0.25s,
+    transform 0.25s;
 }
 </style>
