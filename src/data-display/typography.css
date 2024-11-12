@@ -34,6 +34,18 @@
   line-height: 1;
 }
 
+:where(.overline) {
+  color: light-dark(
+    color-mix(in oklch, var(--text-1) 75%, white),
+    color-mix(in oklch, var(--text-1) 75%, black)
+  );
+  font-size: var(--font-size-overline);
+  font-weight: var(--font-weight-5);
+  letter-spacing: 0.05em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
 :where(hgroup > *) {
   margin: 0;
 }

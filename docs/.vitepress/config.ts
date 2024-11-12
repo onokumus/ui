@@ -47,6 +47,7 @@ export default defineConfig({
       //     },
       //   ],
       // },
+      { text: "Blog", link: "/blog" },
       { text: "Open Props", link: "https://open-props.style/" },
     ],
 

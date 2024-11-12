@@ -13,6 +13,8 @@
   },
   "devDependencies": {
     "@types/node": "^22.3.0",
+    "date-fns": "^4.1.0",
+    "gray-matter": "^4.0.3",
     "lightningcss": "^1.24.1",
     "postcss": "^8.4.38",
     "postcss-custom-media": "^10.0.4",

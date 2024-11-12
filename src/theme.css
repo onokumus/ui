@@ -74,6 +74,7 @@ html {
   --font-size-h5: var(--font-size-2);
   --font-size-h6: var(--font-size-1);
   --font-size-p: var(--font-size-1);
+  --font-size-overline: 0.75rem;
 
   /* Borders */
   --border-color: light-dark(var(--gray-2), var(--gray-12));

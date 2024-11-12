@@ -80,7 +80,7 @@
   font-size: var(--font-size-p, var(--font-size-2));
 } */
 
-:where(a, u, ins, abbr) {
+:where(.link, u, ins, abbr) {
   text-underline-offset: 1px;
 
   @supports (-moz-appearance: none) {

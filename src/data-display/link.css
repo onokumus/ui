@@ -1,11 +1,12 @@
-:where(a) {
-  &:where([href]) {
-    color: var(--link, var(--primary));
-    text-decoration-color: var(--link, var(--indigo-2));
+:where(.link) {
+  color: var(--link, var(--link));
+  text-decoration-color: var(--link, var(--link));
+  text-decoration: underline;
 
+  &:where([href]) {
     &:where(:visited) {
       color: var(--link-visited, var(--primary-light));
-      text-decoration-color: var(--link-visited, var(--purple-2));
+      text-decoration-color: var(--link-visited);
     }
   }
 
