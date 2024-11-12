@@ -88,4 +88,5 @@ html {
 
   /* Butttons */
   --button-border-radius: 100vmax;
+  --button-ripple-size: 100%;
 }

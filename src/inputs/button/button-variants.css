@@ -199,7 +199,7 @@
     }
 
     &:where(:hover:active) {
-      background-size: var(--ripple-size);
+      background-size: var(--button-ripple-size);
       transition: background 0s;
     }
   }
