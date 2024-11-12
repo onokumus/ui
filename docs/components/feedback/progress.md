@@ -51,3 +51,5 @@
 ## Circular
 
 Check out the documentation for the [spinner](/components/feedback/spinner).
+
+## Accessibility

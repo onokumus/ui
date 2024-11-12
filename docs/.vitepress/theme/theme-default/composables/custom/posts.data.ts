@@ -20,6 +20,7 @@ export interface Post {
     since: string;
   };
   excerpt: string | undefined;
+  status: "private" | "public";
   data: Record<string, any>;
 }
 
@@ -32,6 +33,7 @@ async function load() {
   return fs
     .readdirSync(dir)
     .map((file) => getPost(file, dir))
+    .filter((post): post is Post => post !== undefined)
     .sort((a, b) => b.date.time - a.date.time);
 }
 
@@ -42,7 +44,7 @@ export default {
 
 const cache = new Map();
 
-function getPost(file: string, postDir: string): Post {
+function getPost(file: string, postDir: string) {
   const fullPath = path.join(postDir, file);
   const timestamp = fs.statSync(fullPath).mtimeMs;
 
@@ -54,6 +56,7 @@ function getPost(file: string, postDir: string): Post {
     href: `/posts/${file.replace(/\.md$/, ".html")}`,
     date: formatDate(data.date),
     excerpt: data?.excerpt,
+    status: data?.status ?? "private",
     data,
   };
 
@@ -61,6 +64,9 @@ function getPost(file: string, postDir: string): Post {
     timestamp,
     post,
   });
+
+  if (data?.status !== "public") return undefined;
+
   return post;
 }
 
