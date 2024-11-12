@@ -96,7 +96,6 @@ export default defineConfig({
                 { text: "Color", link: "/components/inputs/color" },
                 { text: "Date", link: "/components/inputs/date" },
                 { text: "File", link: "/components/inputs/file" },
-                { text: "Progress", link: "/components/inputs/progress" },
                 { text: "Radio", link: "/components/inputs/radio" },
                 { text: "Range", link: "/components/inputs/range" },
                 { text: "Search", link: "/components/inputs/search" },
