@@ -16,9 +16,7 @@
 
 # Progress
 
-## Linear
-
-### Indeterminate
+## Indeterminate
 
 <Example>
 <template #example>
@@ -34,7 +32,7 @@
 </template>
 </Example>
 
-### Determinate
+## Determinate
 
 <Example>
 <template #example>
