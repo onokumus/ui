@@ -439,7 +439,18 @@ Add disabled styling with the `disabled` attribute or the `.disabled` class.
 
 The ripple effect on button press is enabled by default. Here's how you disable it.
 
-Go to your `button-variants.css` file and remove all the ripple related styles:
+Either disable it by setting the ripple size to 0 in your theme config:
+
+::: code-group
+
+```css [theme.css]
+// [!code --:2]
+--button-ripple-size: 0;
+```
+
+:::
+
+... or to your `button-variants.css` file and remove all the ripple related styles:
 
 ::: code-group
 
