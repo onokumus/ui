@@ -1,7 +1,8 @@
 :where(.link) {
   color: var(--link, var(--link));
+  cursor: pointer;
   text-decoration-color: var(--link, var(--link));
-  text-decoration: underline;
+  text-underline-offset: 1px;
 
   &:where([href]) {
     &:where(:visited) {
@@ -10,7 +11,11 @@
     }
   }
 
-  &:where(:not(:hover)) {
-    text-decoration: inherit;
+  &:where(:hover) {
+    text-decoration: underline;
+  }
+
+  @supports (-moz-appearance: none) {
+    text-underline-offset: 2px;
   }
 }

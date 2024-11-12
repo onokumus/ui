@@ -4,7 +4,7 @@ import Example from "../../.vitepress/theme/app/components/Example.vue"
 
 # Spinner
 
-Spinnners are always indeterminate. Add it to an element with `aria-busy="true"`.
+Add it to an element with `aria-busy="true"`. Spinnners are always indeterminate.
 
 <Example>
 <template #example>
@@ -30,6 +30,7 @@ The spinner's size is set to `1em`, which means it will adjust to its current fo
 <h4 aria-busy="true">h4</h4>
 <p aria-busy="true">Paragraph</p>
 <span aria-busy="true">Span</span>
+<a aria-busy="true" class="link">Link</a>
 </template>
 
 <template #code>
@@ -44,7 +45,7 @@ The spinner's size is set to `1em`, which means it will adjust to its current fo
 </template>
 </Example>
 
-## Button spinner
+## Buttons
 
 Simply add `aria-busy="true"` to a `<button>`.
 
@@ -67,10 +68,12 @@ Simply add `aria-busy="true"` to a `<button>`.
 <template #code>
 
 ```html
+<!-- Text buttons -->
 <button aria-busy="true" class="button">Text</button>
 <button aria-busy="true" disabled class="button outlined">Outlined</button>
 <button aria-busy="true" class="button filled">Filled</button>
 
+<!-- Icon buttons -->
 <button aria-busy="true" class="button">
   <span class="sr-only">Text</span>
 </button>

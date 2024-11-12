@@ -88,8 +88,9 @@ h6,
   color: var(--success, var(--green-9));
 }
 
-:where(abbr, .abbr) {
+:where(abbr, .abbr, dfn, .dfn) {
   cursor: help;
+  font-style: normal;
   text-decoration-color: var(--info);
 }
 
