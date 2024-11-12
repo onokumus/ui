@@ -3,38 +3,48 @@
   text-wrap: pretty;
 }
 
-:where(h1, .h1) {
+h1,
+.h1 {
   font-size: var(--font-size-h1, var(--font-size-7));
   letter-spacing: -0.02em;
-  line-height: 1.1111111;
+  line-height: 1.15;
 }
 
-:where(h2, .h2) {
+h2,
+.h2 {
   font-size: var(--font-size-h2, var(--font-size-5));
   letter-spacing: -0.02em;
-  line-height: 1.3333333;
+  line-height: 1.2;
 }
 
-:where(h3, .h3) {
+h3,
+.h3 {
   font-size: var(--font-size-h3, var(--font-size-4));
   letter-spacing: -0.01em;
-  line-height: 1.6;
+  line-height: 1.167;
 }
-:where(h4, .h4) {
+
+h4,
+.h4 {
   font-size: var(--font-size-h4, var(--font-size-3));
   letter-spacing: -0.01em;
-  line-height: 1.5;
+  line-height: 1.235;
 }
-:where(h5, .h5) {
+
+h5,
+.h5 {
   font-size: var(--font-size-h5, var(--font-size-2));
-  line-height: 1;
+  line-height: 1.334;
 }
-:where(h6, .h6) {
+
+h6,
+.h6 {
   font-size: var(--font-size-h6, var(--font-size-1));
   line-height: 1;
 }
 
-:where(.overline) {
+/* Overline */
+:where(.overline, hgroup > p:first-of-type:first-child) {
   color: light-dark(
     color-mix(in oklch, var(--text-1) 75%, white),
     color-mix(in oklch, var(--text-1) 75%, black)
@@ -42,12 +52,23 @@
   font-size: var(--font-size-overline);
   font-weight: var(--font-weight-5);
   letter-spacing: 0.05em;
-  line-height: 1;
+  line-height: 2.5;
   text-transform: uppercase;
 }
 
-:where(hgroup > *) {
-  margin: 0;
+:where(hgroup) {
+  & > * {
+    margin: 0;
+  }
+
+  & > :where(h1, h2, h3, h4, h5, h6) {
+    margin-block-end: 0.4em;
+  }
+
+  /* The second p element */
+  & > p:last-of-type:last-child:not(:first-child) {
+    opacity: 0.75;
+  }
 }
 
 :where(p, .p) {

@@ -175,15 +175,9 @@
  * -------------------------------------------------------------------------- */
 
   :root {
-    --vp-c-text-1: rgba(60, 60, 67);
-    --vp-c-text-2: rgba(60, 60, 67, 0.78);
-    --vp-c-text-3: rgba(60, 60, 67, 0.56);
-  }
-
-  .dark {
-    --vp-c-text-1: rgba(255, 255, 245, 0.86);
-    --vp-c-text-2: rgba(235, 235, 245, 0.6);
-    --vp-c-text-3: rgba(235, 235, 245, 0.38);
+    --vp-c-text-1: var(--text-1);
+    --vp-c-text-2: color-mix(in oklch, var(--text-1) 78%, transparent);
+    --vp-c-text-3: color-mix(in oklch, var(--text-1) 56%, transparent);
   }
 
   /**
@@ -213,10 +207,10 @@
     --vp-c-default-3: var(--vp-c-gray-3);
     --vp-c-default-soft: var(--vp-c-gray-soft);
 
-    --vp-c-brand-1: steelblue;
-    --vp-c-brand-2: cornflowerblue;
-    --vp-c-brand-3: steelblue;
-    --vp-c-brand-soft: cornflowerblue;
+    --vp-c-brand-1: var(--primary);
+    --vp-c-brand-2: var(--primary-light);
+    --vp-c-brand-3: var(--primary);
+    --vp-c-brand-soft: var(--primary-light);
 
     /* DEPRECATED: Use `--vp-c-brand-1` instead. */
     --vp-c-brand: var(--vp-c-brand-1);

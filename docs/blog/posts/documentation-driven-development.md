@@ -1,12 +1,9 @@
 ---
 date: 2024-11-12
-title: Documentation driven development
+title: Documentation-driven development
 category: blog
 tags: ui
+excerpt: Asking how stuff should be consumed before coding it.
 ---
 
-Asking how stuff should be consumed before coding it.
-
----
-
-# Documentation driven development
+# Documentation-driven development

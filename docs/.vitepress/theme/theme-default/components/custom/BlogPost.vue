@@ -12,17 +12,17 @@ const { site } = useData();
   <a :href="`${site.base}blog${post.href}`">
     <article class="card outlined">
       <hgroup>
-        <p class="overline">{{ post.date.since }}</p>
-        <h2 class="h4 link">{{ post.title }}</h2>
+        <p>{{ post.date.since }}</p>
+        <h2 class="h5">{{ post.title }}</h2>
       </hgroup>
 
       <div class="content">
         <p v-html="post.excerpt" />
       </div>
 
-      <div class="actions">
+      <footer class="actions">
         <div class="button small">Read more</div>
-      </div>
+      </footer>
     </article>
   </a>
 </template>
@@ -34,7 +34,15 @@ a {
   text-decoration: none;
 
   .link {
-    text-decoration: underline;
+    text-decoration: none;
+  }
+
+  &:hover {
+    border-radius: var(--surface-border-radius);
+    outline: 1px solid var(--link);
+    .link {
+      text-decoration: underline;
+    }
   }
 }
 </style>

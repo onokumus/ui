@@ -46,14 +46,14 @@ function getPost(file: string, postDir: string): Post {
   const fullPath = path.join(postDir, file);
   const timestamp = fs.statSync(fullPath).mtimeMs;
 
-  const { data, excerpt } = readFrontMatter(file, postDir, cache);
+  const { data } = readFrontMatter(file, postDir, cache);
 
   const post: Post = {
     title: data.title,
     author: data.author ? data.author : "Felix",
     href: `/posts/${file.replace(/\.md$/, ".html")}`,
     date: formatDate(data.date),
-    excerpt: excerpt && md.render(excerpt),
+    excerpt: data?.excerpt,
     data,
   };
 

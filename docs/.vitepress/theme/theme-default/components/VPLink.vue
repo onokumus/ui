@@ -24,7 +24,6 @@ const isExternal = computed(
     :is="tag"
     class="VPLink"
     :class="{
-      link: href,
       'vp-external-link-icon': isExternal,
       'no-icon': noIcon,
     }"
