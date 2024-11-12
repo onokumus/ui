@@ -11,7 +11,7 @@
     --isRTL: 1;
   }
 
-  &:hover::before {
+  &:hover:before {
     --thumb-scale: 1;
   }
 
@@ -20,7 +20,7 @@
     block-size: 1.5rem;
   }
 
-  &::before {
+  &:before {
     --thumb-scale: 0.01;
     --thumb-highlight-size: 225%;
 

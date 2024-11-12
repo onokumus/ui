@@ -403,7 +403,7 @@
   display: inline-block;
 }
 
-.vp-doc [class*="language-"] code .diff::before {
+.vp-doc [class*="language-"] code .diff:before {
   position: absolute;
   left: 10px;
 }
@@ -433,7 +433,7 @@
   opacity: 0.7;
 }
 
-.vp-doc [class*="language-"] code .diff.remove::before {
+.vp-doc [class*="language-"] code .diff.remove:before {
   content: "-";
   color: var(--vp-code-line-diff-remove-symbol-color);
 }
@@ -442,7 +442,7 @@
   background-color: var(--vp-code-line-diff-add-color);
 }
 
-.vp-doc [class*="language-"] code .diff.add::before {
+.vp-doc [class*="language-"] code .diff.add:before {
   content: "+";
   color: var(--vp-code-line-diff-add-symbol-color);
 }
@@ -517,8 +517,8 @@
   background-image: var(--vp-icon-copied);
 }
 
-.vp-doc [class*="language-"] > button.copy.copied::before,
-.vp-doc [class*="language-"] > button.copy:hover.copied::before {
+.vp-doc [class*="language-"] > button.copy.copied:before,
+.vp-doc [class*="language-"] > button.copy:hover.copied:before {
   position: relative;
   top: -1px;
   /*rtl:ignore*/

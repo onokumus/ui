@@ -1,5 +1,5 @@
 *,
-::before,
+:before,
 ::after {
   box-sizing: border-box;
 }
@@ -19,7 +19,7 @@
   background-color: var(--surface-default);
   block-size: 100%;
   caret-color: var(--primary, var(--link));
-  color: var(--text-1);
+  color: var(--color-body);
   font-family: var(--font-sans);
   line-height: var(--font-lineheight-3);
   scrollbar-color: var(--scrollthumb-color) transparent;
@@ -160,11 +160,11 @@
 }
 
 :where(kbd, var) {
-  background-color: var(--text-1);
-  border-color: var(--text-1);
+  background-color: var(--color-body);
+  border-color: var(--color-body);
   border-radius: var(--border-radius, var(--radius-2));
   border-width: var(--border-size-1);
-  color: var(--text-1-contrast);
+  color: var(--color-body-contrast);
   padding: calc(var(--size-1) / 2) var(--size-1);
 }
 

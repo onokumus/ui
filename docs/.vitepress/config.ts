@@ -128,6 +128,7 @@ export default defineConfig({
                 { text: "Alert", link: "/components/feedback/alert" },
                 { text: "Dialog", link: "/components/feedback/dialog" },
                 { text: "Progress", link: "/components/feedback/progress" },
+                { text: "Spinner", link: "/components/feedback/spinner" },
               ],
             },
 

@@ -34,6 +34,7 @@
 /*** Feedback */
 @import "./feedback/dialog.css" layer(components.feedback.dialog);
 @import "./feedback/progress.css" layer(components.feedback.progress);
+@import "./feedback/spinner.css" layer(components.feedback.spinner);
 
 /*** Inputs */
 /***** Button  */

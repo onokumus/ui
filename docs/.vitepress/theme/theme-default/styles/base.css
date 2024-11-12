@@ -1,7 +1,7 @@
 @layer vitepress.base {
   @media (prefers-reduced-motion: reduce) {
     *,
-    ::before,
+    :before,
     ::after {
       animation-delay: -1ms !important;
       animation-duration: 1ms !important;
@@ -14,7 +14,7 @@
   }
 
   /* *,
-  ::before,
+  :before,
   ::after {
     box-sizing: border-box;
   } */
@@ -29,7 +29,7 @@
     color-scheme: dark;
 
     body {
-      &::before {
+      &:before {
         opacity: 0.075;
       }
     }
@@ -51,11 +51,11 @@
     position: relative;
     text-rendering: optimizeLegibility;
     width: 100%;
-    &::before {
+    &:before {
       content: ""; /* dev purposes */
       opacity: 0.2;
       background-image: radial-gradient(
-        var(--text-1) 1.4500000000000002px,
+        var(--color-body) 1.4500000000000002px,
         transparent 1.4500000000000002px
       );
       background-size: 20px 20px;

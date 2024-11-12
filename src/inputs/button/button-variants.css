@@ -24,7 +24,7 @@
     opacity: 0.64;
     --_text-color: color-mix(
       in oklch,
-      var(--text-1) 50%,
+      var(--color-body) 50%,
       var(--surface-default)
     );
     cursor: not-allowed;
@@ -76,12 +76,12 @@
       --_bg-color: var(--surface-default);
       --_border-color: color-mix(
         in oklch,
-        var(--text-1) 20%,
+        var(--color-body) 20%,
         var(--surface-default)
       );
       --_text-color: color-mix(
         in oklch,
-        var(--text-1) 40%,
+        var(--color-body) 40%,
         var(--surface-default)
       );
     }
@@ -105,12 +105,12 @@
     &:where(.disabled, [disabled]) {
       --_bg-color: color-mix(
         in oklch,
-        var(--text-1) 8%,
+        var(--color-body) 8%,
         var(--surface-default)
       );
       --_text-color: color-mix(
         in oklch,
-        var(--text-1) 70%,
+        var(--color-body) 70%,
         var(--surface-default)
       );
     }
@@ -134,12 +134,12 @@
     &:where(.disabled, [disabled]) {
       --_bg-color: color-mix(
         in oklch,
-        var(--text-1) 20%,
+        var(--color-body) 20%,
         var(--surface-default)
       );
       --_text-color: color-mix(
         in oklch,
-        var(--text-1) 70%,
+        var(--color-body) 70%,
         var(--surface-default)
       );
     }
@@ -177,12 +177,12 @@
     &:where(.disabled, [disabled]) {
       --_bg-color: color-mix(
         in oklch,
-        var(--text-1) 8%,
+        var(--color-body) 8%,
         var(--surface-elevated)
       );
       --_text-color: color-mix(
         in oklch,
-        var(--text-1) 70%,
+        var(--color-body) 70%,
         var(--surface-elevated)
       );
     }

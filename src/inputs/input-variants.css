@@ -58,7 +58,7 @@
 
   &:where(input[disabled], select[disabled], .disabled) {
     background-color: var(--surface-filled);
-    color: var(--text-1-contrast);
+    color: var(--color-body-contrast);
     opacity: 0.7;
   }
 

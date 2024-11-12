@@ -6,7 +6,6 @@
 	const progressValue = ref(10)
 
 	useIntervalFn(() => {
-
 		if (progressValue.value >= 100) {
 			progressValue.value = 10
 		} else {
@@ -51,16 +50,6 @@
 </template>
 </Example>
 
-### Color
-
 ## Circular
 
-### Indeterminate
-
-### Color
-
-### Size
-
-### Button integration
-
-Check out the docs on [loading button](/components/inputs/button#loading-button)
+Check out the documentation for the [spinner](/components/feedback/spinner).
