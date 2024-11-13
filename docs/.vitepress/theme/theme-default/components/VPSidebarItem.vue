@@ -120,33 +120,58 @@ function onCaretClick() {
   position: relative;
   display: flex;
   width: 100%;
+
+  &:hover {
+    .indicator {
+      background-color: var(--primary);
+    }
+  }
 }
 
 .VPSidebarItem.collapsible > .item {
   cursor: pointer;
+
+  .indicator {
+    visibility: hidden;
+  }
 }
 
 .indicator {
   position: absolute;
-  top: 6px;
-  bottom: 6px;
-  left: -17px;
+  inset-block-start: 6px;
+  inset-block-end: 6px;
+  inset-inline-start: -2px;
   width: 2px;
   border-radius: 2px;
   transition: background-color 0.25s;
+}
+
+:is(
+    .VPSidebarItem.level-2,
+    .VPSidebarItem.level-3,
+    .VPSidebarItem.level-4,
+    .VPSidebarItem.level-5
+  )
+  > .item {
+  border-radius: var(--radius-1);
+  padding-inline-start: 16px;
+  &:hover {
+    background-color: var(--surface-default);
+  }
 }
 
 .VPSidebarItem.level-2.is-active > .item > .indicator,
 .VPSidebarItem.level-3.is-active > .item > .indicator,
 .VPSidebarItem.level-4.is-active > .item > .indicator,
 .VPSidebarItem.level-5.is-active > .item > .indicator {
-  background-color: var(--vp-c-brand-1);
+  background-color: var(--primary);
 }
 
 .link {
   display: flex;
   align-items: center;
   flex-grow: 1;
+  text-decoration: none;
 }
 
 .text {
@@ -158,9 +183,17 @@ function onCaretClick() {
   transition: color 0.25s;
 }
 
-.VPSidebarItem.level-0 .text {
-  font-weight: 700;
-  color: var(--vp-c-text-1);
+.VPSidebarItem.level-0 {
+  & > .item {
+    .text {
+      font-weight: 700;
+      color: var(--vp-c-text-1);
+    }
+
+    .indicator {
+      visibility: hidden;
+    }
+  }
 }
 
 .VPSidebarItem.level-1 .text,
@@ -242,7 +275,6 @@ function onCaretClick() {
 .VPSidebarItem.level-4 .items,
 .VPSidebarItem.level-5 .items {
   border-left: 1px solid var(--vp-c-divider);
-  padding-left: 16px;
 }
 
 .VPSidebarItem.collapsed .items {
