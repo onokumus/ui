@@ -55,18 +55,14 @@
 }
 
 [dir="rtl"] {
-  @media (prefers-reduced-motion: no-preference) {
-    :where(progress):indeterminate {
-      animation-direction: reverse;
-    }
+  :where(progress):indeterminate {
+    animation-direction: reverse;
   }
 }
 
 [dir="rtl"] {
-  @media (prefers-reduced-motion: no-preference) {
-    :where(progress):indeterminate::after {
-      animation-direction: reverse;
-    }
+  :where(progress):indeterminate::after {
+    animation-direction: reverse;
   }
 }
 
