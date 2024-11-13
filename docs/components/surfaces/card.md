@@ -74,7 +74,8 @@ Open Props UI include these complementary utility components to handle various u
 <template #example>
 <div class="card elevated anatomy">
 		<hgroup>
-			<h2 class="h4">Headline</h2>
+		<p>Overline</p>
+			<h2 class="h3">Headline</h2>
 			<p>Subhead</p>
 		</hgroup>
 		<div class="content">Explain more about the topic shown in the headline and subhead through supporting text.</div>
@@ -90,7 +91,8 @@ Open Props UI include these complementary utility components to handle various u
 ```html
 <div class="card outlined">
   <hgroup>
-    <h2 class="h4">Headline</h2>
+    <p>Overline</p>
+    <h2 class="h3">Headline</h2>
     <p>Subhead</p>
   </hgroup>
   <div class="content">
