@@ -110,14 +110,9 @@ h6,
     text-underline-offset: 1px;
 
     &:where([href]) {
-      &:where(:visited) {
-        color: var(--primary-dark);
-        text-decoration-color: var(--primary-dark);
+      &:where(:hover) {
+        color: var(--primary-light);
       }
-    }
-
-    &:where(:hover) {
-      color: var(--primary-light);
     }
 
     @supports (-moz-appearance: none) {
