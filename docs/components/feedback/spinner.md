@@ -100,7 +100,7 @@ There are a few exceptions where `aria-busy="true"` won't render a spinner. Eith
 
 In conjunction with the `<progress>` element `aria-busy="true"` is used on the section that is being updated. Rendering a spinner here would result in a spinner _and_ a progress bar which doesn't make sense.
 
-See [progress accessibility](/componenets/feedback/progress#accessibility) section for more.
+See [progress accessibility](/components/feedback/progress#accessibility) section for more.
 
 ### Because it doesn't make sense
 
