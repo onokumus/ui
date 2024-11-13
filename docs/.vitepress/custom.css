@@ -6,7 +6,7 @@ html.dark {
 
 .opui-logo {
   display: inline-grid;
-  font-size: 3rem;
+  font-size: var(--font-size-fluid-3);
   text-transform: uppercase;
 
   span {
