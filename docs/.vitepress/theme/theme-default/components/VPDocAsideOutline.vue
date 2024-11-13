@@ -1,27 +1,27 @@
 <script setup lang="ts">
-import { onContentUpdated } from 'vitepress'
-import { ref, shallowRef } from 'vue'
-import { useData } from '../composables/data'
+import { onContentUpdated } from "vitepress";
+import { ref, shallowRef } from "vue";
+import { useData } from "../composables/data";
 import {
   getHeaders,
   resolveTitle,
   useActiveAnchor,
-  type MenuItem
-} from '../composables/outline'
-import VPDocOutlineItem from './VPDocOutlineItem.vue'
+  type MenuItem,
+} from "../composables/outline";
+import VPDocOutlineItem from "./VPDocOutlineItem.vue";
 
-const { frontmatter, theme } = useData()
+const { frontmatter, theme } = useData();
 
-const headers = shallowRef<MenuItem[]>([])
+const headers = shallowRef<MenuItem[]>([]);
 
 onContentUpdated(() => {
-  headers.value = getHeaders(frontmatter.value.outline ?? theme.value.outline)
-})
+  headers.value = getHeaders(frontmatter.value.outline ?? theme.value.outline);
+});
 
-const container = ref()
-const marker = ref()
+const container = ref();
+const marker = ref();
 
-useActiveAnchor(container, marker)
+useActiveAnchor(container, marker);
 </script>
 
 <template>
@@ -60,7 +60,7 @@ useActiveAnchor(container, marker)
 .content {
   position: relative;
   border-left: 1px solid var(--vp-c-divider);
-  padding-left: 16px;
+  padding-inline-start: 16px;
   font-size: 13px;
   font-weight: 500;
 }

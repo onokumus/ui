@@ -1,39 +1,39 @@
 <script lang="ts" setup>
-import { useWindowScroll } from '@vueuse/core'
-import { ref, watchPostEffect } from 'vue'
-import { useData } from '../composables/data'
-import { useSidebar } from '../composables/sidebar'
-import VPNavBarAppearance from './VPNavBarAppearance.vue'
-import VPNavBarExtra from './VPNavBarExtra.vue'
-import VPNavBarHamburger from './VPNavBarHamburger.vue'
-import VPNavBarMenu from './VPNavBarMenu.vue'
-import VPNavBarSearch from './VPNavBarSearch.vue'
-import VPNavBarSocialLinks from './VPNavBarSocialLinks.vue'
-import VPNavBarTitle from './VPNavBarTitle.vue'
-import VPNavBarTranslations from './VPNavBarTranslations.vue'
+import { useWindowScroll } from "@vueuse/core";
+import { ref, watchPostEffect } from "vue";
+import { useData } from "../composables/data";
+import { useSidebar } from "../composables/sidebar";
+import VPNavBarAppearance from "./VPNavBarAppearance.vue";
+import VPNavBarExtra from "./VPNavBarExtra.vue";
+import VPNavBarHamburger from "./VPNavBarHamburger.vue";
+import VPNavBarMenu from "./VPNavBarMenu.vue";
+import VPNavBarSearch from "./VPNavBarSearch.vue";
+import VPNavBarSocialLinks from "./VPNavBarSocialLinks.vue";
+import VPNavBarTitle from "./VPNavBarTitle.vue";
+import VPNavBarTranslations from "./VPNavBarTranslations.vue";
 
 const props = defineProps<{
-  isScreenOpen: boolean
-}>()
+  isScreenOpen: boolean;
+}>();
 
 defineEmits<{
-  (e: 'toggle-screen'): void
-}>()
+  (e: "toggle-screen"): void;
+}>();
 
-const { y } = useWindowScroll()
-const { hasSidebar } = useSidebar()
-const { frontmatter } = useData()
+const { y } = useWindowScroll();
+const { hasSidebar } = useSidebar();
+const { frontmatter } = useData();
 
-const classes = ref<Record<string, boolean>>({})
+const classes = ref<Record<string, boolean>>({});
 
 watchPostEffect(() => {
   classes.value = {
-    'has-sidebar': hasSidebar.value,
-    'home': frontmatter.value.layout === 'home',
-    'top': y.value === 0,
-    'screen-open': props.isScreenOpen
-  }
-})
+    "has-sidebar": hasSidebar.value,
+    home: frontmatter.value.layout === "home",
+    top: y.value === 0,
+    "screen-open": props.isScreenOpen,
+  };
+});
 </script>
 
 <template>
@@ -42,8 +42,12 @@ watchPostEffect(() => {
       <div class="container">
         <div class="title">
           <VPNavBarTitle>
-            <template #nav-bar-title-before><slot name="nav-bar-title-before" /></template>
-            <template #nav-bar-title-after><slot name="nav-bar-title-after" /></template>
+            <template #nav-bar-title-before
+              ><slot name="nav-bar-title-before"
+            /></template>
+            <template #nav-bar-title-after
+              ><slot name="nav-bar-title-after"
+            /></template>
           </VPNavBarTitle>
         </div>
 
@@ -57,7 +61,11 @@ watchPostEffect(() => {
             <VPNavBarSocialLinks class="social-links" />
             <VPNavBarExtra class="extra" />
             <slot name="nav-bar-content-after" />
-            <VPNavBarHamburger class="hamburger" :active="isScreenOpen" @click="$emit('toggle-screen')" />
+            <VPNavBarHamburger
+              class="hamburger"
+              :active="isScreenOpen"
+              @click="$emit('toggle-screen')"
+            />
           </div>
         </div>
       </div>
@@ -159,8 +167,14 @@ watchPostEffect(() => {
 
 @media (min-width: 1440px) {
   .VPNavBar.has-sidebar .title {
-    padding-left: max(32px, calc((100% - (var(--vp-layout-max-width) - 64px)) / 2));
-    width: calc((100% - (var(--vp-layout-max-width) - 64px)) / 2 + var(--vp-sidebar-width) - 32px);
+    padding-inline-start: max(
+      32px,
+      calc((100% - (var(--vp-layout-max-width) - 64px)) / 2)
+    );
+    width: calc(
+      (100% - (var(--vp-layout-max-width) - 64px)) / 2 + var(--vp-sidebar-width) -
+        32px
+    );
   }
 }
 
@@ -172,15 +186,17 @@ watchPostEffect(() => {
   .VPNavBar.has-sidebar .content {
     position: relative;
     z-index: 1;
-    padding-right: 32px;
-    padding-left: var(--vp-sidebar-width);
+    padding-inline-end: 32px;
+    padding-inline-start: var(--vp-sidebar-width);
   }
 }
 
 @media (min-width: 1440px) {
   .VPNavBar.has-sidebar .content {
-    padding-right: calc((100vw - var(--vp-layout-max-width)) / 2 + 32px);
-    padding-left: calc((100vw - var(--vp-layout-max-width)) / 2 + var(--vp-sidebar-width));
+    padding-inline-end: calc((100vw - var(--vp-layout-max-width)) / 2 + 32px);
+    padding-inline-start: calc(
+      (100vw - var(--vp-layout-max-width)) / 2 + var(--vp-sidebar-width)
+    );
   }
 }
 
@@ -214,8 +230,8 @@ watchPostEffect(() => {
 .menu + .social-links::before,
 .translations + .appearance::before,
 .appearance + .social-links::before {
-  margin-right: 8px;
-  margin-left: 8px;
+  margin-inline-end: 8px;
+  margin-inline-start: 8px;
   width: 1px;
   height: 24px;
   background-color: var(--vp-c-divider);
@@ -224,15 +240,15 @@ watchPostEffect(() => {
 
 .menu + .appearance::before,
 .translations + .appearance::before {
-  margin-right: 16px;
+  margin-inline-end: 16px;
 }
 
 .appearance + .social-links::before {
-  margin-left: 16px;
+  margin-inline-start: 16px;
 }
 
 .social-links {
-  margin-right: -8px;
+  margin-inline-end: -8px;
 }
 
 .divider {
@@ -242,13 +258,15 @@ watchPostEffect(() => {
 
 @media (min-width: 960px) {
   .VPNavBar.has-sidebar .divider {
-    padding-left: var(--vp-sidebar-width);
+    padding-inline-start: var(--vp-sidebar-width);
   }
 }
 
 @media (min-width: 1440px) {
   .VPNavBar.has-sidebar .divider {
-    padding-left: calc((100vw - var(--vp-layout-max-width)) / 2 + var(--vp-sidebar-width));
+    padding-inline-start: calc(
+      (100vw - var(--vp-layout-max-width)) / 2 + var(--vp-sidebar-width)
+    );
   }
 }
 

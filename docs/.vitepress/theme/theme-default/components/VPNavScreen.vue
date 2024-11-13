@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { useScrollLock } from '@vueuse/core'
-import { inBrowser } from 'vitepress'
-import { ref } from 'vue'
-import VPNavScreenAppearance from './VPNavScreenAppearance.vue'
-import VPNavScreenMenu from './VPNavScreenMenu.vue'
-import VPNavScreenSocialLinks from './VPNavScreenSocialLinks.vue'
-import VPNavScreenTranslations from './VPNavScreenTranslations.vue'
+import { useScrollLock } from "@vueuse/core";
+import { inBrowser } from "vitepress";
+import { ref } from "vue";
+import VPNavScreenAppearance from "./VPNavScreenAppearance.vue";
+import VPNavScreenMenu from "./VPNavScreenMenu.vue";
+import VPNavScreenSocialLinks from "./VPNavScreenSocialLinks.vue";
+import VPNavScreenTranslations from "./VPNavScreenTranslations.vue";
 
 defineProps<{
-  open: boolean
-}>()
+  open: boolean;
+}>();
 
-const screen = ref<HTMLElement | null>(null)
-const isLocked = useScrollLock(inBrowser ? document.body : null)
+const screen = ref<HTMLElement | null>(null);
+const isLocked = useScrollLock(inBrowser ? document.body : null);
 </script>
 
 <template>
@@ -86,14 +86,14 @@ const isLocked = useScrollLock(inBrowser ? document.body : null)
 .menu + .translations,
 .menu + .appearance,
 .translations + .appearance {
-  margin-top: 24px;
+  margin-block-start: 24px;
 }
 
 .menu + .social-links {
-  margin-top: 16px;
+  margin-block-start: 16px;
 }
 
 .appearance + .social-links {
-  margin-top: 16px;
+  margin-block-start: 16px;
 }
 </style>

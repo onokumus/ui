@@ -49,7 +49,7 @@ defineProps<{
 }
 
 .VPMenu :deep(.group:last-child) {
-  padding-bottom: 0;
+  padding-block-end: 0;
 }
 
 .VPMenu :deep(.group + .item) {
@@ -72,6 +72,6 @@ defineProps<{
 }
 
 .VPMenu :deep(.action) {
-  padding-left: 24px;
+  padding-inline-start: 24px;
 }
 </style>

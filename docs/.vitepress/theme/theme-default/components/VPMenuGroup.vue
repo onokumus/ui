@@ -1,10 +1,10 @@
 <script lang="ts" setup>
-import VPMenuLink from './VPMenuLink.vue'
+import VPMenuLink from "./VPMenuLink.vue";
 
 defineProps<{
-  text?: string
-  items: any[]
-}>()
+  text?: string;
+  items: any[];
+}>();
 </script>
 
 <template>
@@ -25,13 +25,13 @@ defineProps<{
 }
 
 .VPMenuGroup:first-child {
-  margin-top: 0;
+  margin-block-start: 0;
   border-top: 0;
-  padding-top: 0;
+  padding-block-start: 0;
 }
 
 .VPMenuGroup + .VPMenuGroup {
-  margin-top: 12px;
+  margin-block-start: 12px;
   border-top: 1px solid var(--vp-c-divider);
 }
 

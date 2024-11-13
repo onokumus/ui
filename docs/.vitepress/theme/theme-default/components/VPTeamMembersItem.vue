@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import type { DefaultTheme } from 'vitepress/theme'
-import VPLink from './VPLink.vue'
-import VPSocialLinks from './VPSocialLinks.vue'
+import type { DefaultTheme } from "vitepress/theme";
+import VPLink from "./VPLink.vue";
+import VPSocialLinks from "./VPSocialLinks.vue";
 
 interface Props {
-  size?: 'small' | 'medium'
-  member: DefaultTheme.TeamMember
+  size?: "small" | "medium";
+  member: DefaultTheme.TeamMember;
 }
 
 withDefaults(defineProps<Props>(), {
-  size: 'medium'
-})
+  size: "medium",
+});
 </script>
 
 <template>
@@ -46,7 +46,7 @@ withDefaults(defineProps<Props>(), {
     </div>
     <div v-if="member.sponsor" class="sp">
       <VPLink class="sp-link" :href="member.sponsor" no-icon>
-        <span class="vpi-heart sp-icon" /> {{ member.actionText || 'Sponsor' }}
+        <span class="vpi-heart sp-icon" /> {{ member.actionText || "Sponsor" }}
       </VPLink>
     </div>
   </article>
@@ -68,7 +68,7 @@ withDefaults(defineProps<Props>(), {
 }
 
 .VPTeamMembersItem.small .data {
-  padding-top: 20px;
+  padding-block-start: 20px;
 }
 
 .VPTeamMembersItem.small .avatar {
@@ -82,13 +82,13 @@ withDefaults(defineProps<Props>(), {
 }
 
 .VPTeamMembersItem.small .affiliation {
-  padding-top: 4px;
+  padding-block-start: 4px;
   line-height: 20px;
   font-size: 14px;
 }
 
 .VPTeamMembersItem.small .desc {
-  padding-top: 12px;
+  padding-block-start: 12px;
   line-height: 20px;
   font-size: 14px;
 }
@@ -103,7 +103,7 @@ withDefaults(defineProps<Props>(), {
 }
 
 .VPTeamMembersItem.medium .data {
-  padding-top: 24px;
+  padding-block-start: 24px;
   text-align: center;
 }
 
@@ -119,12 +119,12 @@ withDefaults(defineProps<Props>(), {
 }
 
 .VPTeamMembersItem.medium .affiliation {
-  padding-top: 4px;
+  padding-block-start: 4px;
   font-size: 16px;
 }
 
 .VPTeamMembersItem.medium .desc {
-  padding-top: 16px;
+  padding-block-start: 16px;
   max-width: 288px;
   font-size: 16px;
 }
@@ -208,7 +208,9 @@ withDefaults(defineProps<Props>(), {
   font-weight: 500;
   color: var(--vp-c-sponsor);
   background-color: var(--vp-c-bg-soft);
-  transition: color 0.25s, background-color 0.25s;
+  transition:
+    color 0.25s,
+    background-color 0.25s;
 }
 
 .sp .sp-link.link:hover,
@@ -219,7 +221,7 @@ withDefaults(defineProps<Props>(), {
 }
 
 .sp-icon {
-  margin-right: 8px;
+  margin-inline-end: 8px;
   font-size: 16px;
 }
 </style>

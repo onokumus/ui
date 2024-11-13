@@ -1,21 +1,21 @@
 <script lang="ts" setup>
-import { computed } from 'vue'
-import VPFlyout from './VPFlyout.vue'
-import VPMenuLink from './VPMenuLink.vue'
-import VPSwitchAppearance from './VPSwitchAppearance.vue'
-import VPSocialLinks from './VPSocialLinks.vue'
-import { useData } from '../composables/data'
-import { useLangs } from '../composables/langs'
+import { computed } from "vue";
+import VPFlyout from "./VPFlyout.vue";
+import VPMenuLink from "./VPMenuLink.vue";
+import VPSwitchAppearance from "./VPSwitchAppearance.vue";
+import VPSocialLinks from "./VPSocialLinks.vue";
+import { useData } from "../composables/data";
+import { useLangs } from "../composables/langs";
 
-const { site, theme } = useData()
-const { localeLinks, currentLang } = useLangs({ correspondingLink: true })
+const { site, theme } = useData();
+const { localeLinks, currentLang } = useLangs({ correspondingLink: true });
 
 const hasExtraContent = computed(
   () =>
     (localeLinks.value.length && currentLang.value.label) ||
     site.value.appearance ||
     theme.value.socialLinks
-)
+);
 </script>
 
 <template>
@@ -45,7 +45,7 @@ const hasExtraContent = computed(
     >
       <div class="item appearance">
         <p class="label">
-          {{ theme.darkModeSwitchLabel || 'Appearance' }}
+          {{ theme.darkModeSwitchLabel || "Appearance" }}
         </p>
         <div class="appearance-action">
           <VPSwitchAppearance />
@@ -64,7 +64,7 @@ const hasExtraContent = computed(
 <style scoped>
 .VPNavBarExtra {
   display: none;
-  margin-right: -12px;
+  margin-inline-end: -12px;
 }
 
 @media (min-width: 768px) {
@@ -99,7 +99,7 @@ const hasExtraContent = computed(
 }
 
 .appearance-action {
-  margin-right: -2px;
+  margin-inline-end: -2px;
 }
 
 .social-links-list {

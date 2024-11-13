@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useLangs } from '../composables/langs'
-import VPLink from './VPLink.vue'
+import { ref } from "vue";
+import { useLangs } from "../composables/langs";
+import VPLink from "./VPLink.vue";
 
-const { localeLinks, currentLang } = useLangs({ correspondingLink: true })
-const isOpen = ref(false)
+const { localeLinks, currentLang } = useLangs({ correspondingLink: true });
+const isOpen = ref(false);
 
 function toggle() {
-  isOpen.value = !isOpen.value
+  isOpen.value = !isOpen.value;
 }
 </script>
 
@@ -54,11 +54,11 @@ function toggle() {
 }
 
 .icon.lang {
-  margin-right: 8px;
+  margin-inline-end: 8px;
 }
 
 .icon.chevron {
-  margin-left: 4px;
+  margin-inline-start: 4px;
 }
 
 .list {

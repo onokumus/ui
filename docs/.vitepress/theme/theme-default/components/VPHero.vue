@@ -67,7 +67,7 @@ const heroImageSlotExists = inject("hero-image-slot-exists") as Ref<boolean>;
 
 <style scoped>
 .VPHero {
-  margin-top: calc(
+  margin-block-start: calc(
     (var(--vp-nav-height) + var(--vp-layout-top-height, 0px)) * -1
   );
   padding: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 48px)
@@ -225,7 +225,7 @@ const heroImageSlotExists = inject("hero-image-slot-exists") as Ref<boolean>;
   display: flex;
   flex-wrap: wrap;
   margin: -6px;
-  padding-top: 24px;
+  padding-block-start: 24px;
 }
 
 .VPHero.has-image .actions {
@@ -234,7 +234,7 @@ const heroImageSlotExists = inject("hero-image-slot-exists") as Ref<boolean>;
 
 @media (min-width: 640px) {
   .actions {
-    padding-top: 32px;
+    padding-block-start: 32px;
   }
 }
 

@@ -1,28 +1,28 @@
 <script setup lang="ts">
-import VPButton from './VPButton.vue'
-import VPSponsors from './VPSponsors.vue'
+import VPButton from "./VPButton.vue";
+import VPSponsors from "./VPSponsors.vue";
 
 export interface Sponsors {
-  tier: string
-  size?: 'medium' | 'big'
-  items: Sponsor[]
+  tier: string;
+  size?: "medium" | "big";
+  items: Sponsor[];
 }
 
 export interface Sponsor {
-  name: string
-  img: string
-  url: string
+  name: string;
+  img: string;
+  url: string;
 }
 interface Props {
-  message?: string
-  actionText?: string
-  actionLink?: string
-  data: Sponsors[]
+  message?: string;
+  actionText?: string;
+  actionLink?: string;
+  data: Sponsors[];
 }
 
 withDefaults(defineProps<Props>(), {
-  actionText: 'Become a sponsor'
-})
+  actionText: "Become a sponsor",
+});
 </script>
 
 <template>
@@ -49,7 +49,7 @@ withDefaults(defineProps<Props>(), {
 <style scoped>
 .VPHomeSponsors {
   border-top: 1px solid var(--vp-c-gutter);
-  padding-top: 88px !important;
+  padding-block-start: 88px !important;
 }
 
 .VPHomeSponsors {
@@ -96,7 +96,7 @@ withDefaults(defineProps<Props>(), {
 
 .message {
   margin: 0 auto;
-  padding-top: 10px;
+  padding-block-start: 10px;
   max-width: 320px;
   text-align: center;
   line-height: 24px;
@@ -106,11 +106,11 @@ withDefaults(defineProps<Props>(), {
 }
 
 .sponsors {
-  padding-top: 32px;
+  padding-block-start: 32px;
 }
 
 .action {
-  padding-top: 40px;
+  padding-block-start: 40px;
   text-align: center;
 }
 </style>

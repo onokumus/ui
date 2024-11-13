@@ -795,7 +795,7 @@ function formMarkRegex(terms: Set<string>) {
   max-height: 140px;
   overflow: hidden;
   position: relative;
-  margin-top: 4px;
+  margin-block-start: 4px;
 }
 
 .result.selected .excerpt {

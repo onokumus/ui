@@ -1,21 +1,21 @@
 <script lang="ts" setup>
-import { computed, ref } from 'vue'
-import VPNavScreenMenuGroupLink from './VPNavScreenMenuGroupLink.vue'
-import VPNavScreenMenuGroupSection from './VPNavScreenMenuGroupSection.vue'
+import { computed, ref } from "vue";
+import VPNavScreenMenuGroupLink from "./VPNavScreenMenuGroupLink.vue";
+import VPNavScreenMenuGroupSection from "./VPNavScreenMenuGroupSection.vue";
 
 const props = defineProps<{
-  text: string
-  items: any[]
-}>()
+  text: string;
+  items: any[];
+}>();
 
-const isOpen = ref(false)
+const isOpen = ref(false);
 
 const groupId = computed(
-  () => `NavScreenGroup-${props.text.replace(' ', '-').toLowerCase()}`
-)
+  () => `NavScreenGroup-${props.text.replace(" ", "-").toLowerCase()}`
+);
 
 function toggle() {
-  isOpen.value = !isOpen.value
+  isOpen.value = !isOpen.value;
 }
 </script>
 
@@ -66,12 +66,12 @@ function toggle() {
 }
 
 .VPNavScreenMenuGroup.open {
-  padding-bottom: 10px;
+  padding-block-end: 10px;
   height: auto;
 }
 
 .VPNavScreenMenuGroup.open .button {
-  padding-bottom: 6px;
+  padding-block-end: 6px;
   color: var(--vp-c-brand-1);
 }
 
@@ -102,11 +102,11 @@ function toggle() {
 }
 
 .group:first-child {
-  padding-top: 0px;
+  padding-block-start: 0px;
 }
 
 .group + .group,
 .group + .item {
-  padding-top: 4px;
+  padding-block-start: 4px;
 }
 </style>

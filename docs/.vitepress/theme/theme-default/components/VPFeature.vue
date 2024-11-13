@@ -68,7 +68,7 @@ defineProps<{
 .card {
   height: 100%;
   & > :deep(.VPImage) {
-    margin-bottom: 20px;
+    margin-block-end: 20px;
   }
 }
 
@@ -81,7 +81,7 @@ defineProps<{
   font-size: 24px;
   height: 48px;
   justify-content: center;
-  margin-bottom: 20px;
+  margin-block-end: 20px;
   transition: background-color 0.25s;
   width: 48px;
 }
@@ -95,7 +95,7 @@ defineProps<{
 
 .details {
   flex-grow: 1;
-  padding-top: 8px;
+  padding-block-start: 8px;
   line-height: 24px;
   font-size: 14px;
   font-weight: 500;
@@ -103,7 +103,7 @@ defineProps<{
 }
 
 .link-text {
-  padding-top: 8px;
+  padding-block-start: 8px;
 }
 
 .link-text-value {
@@ -115,6 +115,6 @@ defineProps<{
 }
 
 .link-text-icon {
-  margin-left: 6px;
+  margin-inline-start: 6px;
 }
 </style>

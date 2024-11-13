@@ -124,7 +124,7 @@ const translate = createSearchTranslate(defaultTranslations);
 @media (min-width: 768px) {
   .DocSearch-Button .DocSearch-Search-Icon {
     top: 1px;
-    margin-right: 8px;
+    margin-inline-end: 8px;
     width: 14px;
     height: 14px;
     color: var(--vp-c-text-2);
@@ -133,7 +133,7 @@ const translate = createSearchTranslate(defaultTranslations);
 
 .DocSearch-Button .DocSearch-Button-Placeholder {
   display: none;
-  margin-top: 2px;
+  margin-block-start: 2px;
   padding: 0 16px 0 0;
   font-size: 13px;
   font-weight: 500;
@@ -173,7 +173,7 @@ const translate = createSearchTranslate(defaultTranslations);
   border-right: none;
   border-radius: var(--surface-border-radius);
   border-radius: 0;
-  padding-left: 6px;
+  padding-inline-start: 6px;
   /*rtl:end:ignore*/
   min-width: 0;
   width: auto;
@@ -193,8 +193,8 @@ const translate = createSearchTranslate(defaultTranslations);
   border-left: none;
   border-radius: var(--surface-border-radius);
   border-radius: 0;
-  padding-left: 2px;
-  padding-right: 6px;
+  padding-inline-start: 2px;
+  padding-inline-end: 6px;
   /*rtl:end:ignore*/
 }
 
