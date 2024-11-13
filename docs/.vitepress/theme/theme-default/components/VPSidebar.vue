@@ -96,7 +96,7 @@ watch(
 }
 
 .dark .VPSidebar {
-  box-shadow: var(--vp-shadow-1);
+  box-shadow: var(--shadow-1);
 }
 
 @media (min-width: 960px) {

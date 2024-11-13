@@ -2,12 +2,16 @@
 defineProps<{
   direction?: "row" | "stack";
   exampleClass?: string;
+  richText?: "rich-text" | "not-rich-text";
   wrapperClass?: string;
 }>();
 </script>
 
 <template>
-  <article class="example-wrapper">
+  <article
+    class="example-wrapper"
+    :class="[wrapperClass, richText ?? 'not-rich-text']"
+  >
     <div
       v-if="$slots.example"
       class="example"

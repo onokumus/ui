@@ -74,7 +74,7 @@ useActiveAnchor(container, marker);
   width: 2px;
   border-radius: 2px;
   height: 18px;
-  background-color: var(--vp-c-brand-1);
+  background-color: var(--primary);
   transition:
     top 0.25s cubic-bezier(0, 1, 0.5, 1),
     background-color 0.5s,

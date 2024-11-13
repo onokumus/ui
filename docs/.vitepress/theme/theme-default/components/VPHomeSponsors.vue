@@ -87,7 +87,7 @@ withDefaults(defineProps<Props>(), {
   margin: 0 auto;
   width: fit-content;
   font-size: 28px;
-  color: var(--vp-c-text-3);
+  color: var(--text-color-2-56);
 }
 
 .icon {
@@ -102,7 +102,7 @@ withDefaults(defineProps<Props>(), {
   line-height: 24px;
   font-size: 16px;
   font-weight: 500;
-  color: var(--vp-c-text-2);
+  color: var(--text-color-2-78);
 }
 
 .sponsors {

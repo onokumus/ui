@@ -68,11 +68,16 @@ function scrollToTop() {
     :style="{ '--vp-vh': vh + 'px' }"
     ref="main"
   >
-    <button @click="toggle" :class="{ open }" v-if="headers.length > 0">
+    <button
+      class="small"
+      @click="toggle"
+      :class="{ open }"
+      v-if="headers.length > 0"
+    >
       <span class="menu-text">{{ resolveTitle(theme) }}</span>
       <span class="vpi-chevron-right icon" />
     </button>
-    <button @click="scrollToTop" v-else>
+    <button class="small" @click="scrollToTop" v-else>
       {{ theme.returnToTopLabel || "Return to top" }}
     </button>
     <Transition name="flyout">
@@ -102,22 +107,22 @@ function scrollToTop() {
 }
 
 .VPLocalNavOutlineDropdown button {
+  color: var(--text-color-2-78);
   display: block;
   font-size: 12px;
   font-weight: 500;
   line-height: 24px;
-  color: var(--vp-c-text-2);
-  transition: color 0.5s;
   position: relative;
+  transition: color 0.5s;
 }
 
 .VPLocalNavOutlineDropdown button:hover {
-  color: var(--vp-c-text-1);
+  color: var(--text-color-2);
   transition: color 0.25s;
 }
 
 .VPLocalNavOutlineDropdown button.open {
-  color: var(--vp-c-text-1);
+  color: var(--text-color-2);
 }
 
 .icon {
@@ -130,10 +135,6 @@ function scrollToTop() {
 }
 
 @media (min-width: 960px) {
-  .VPLocalNavOutlineDropdown button {
-    font-size: 14px;
-  }
-
   .icon {
     font-size: 16px;
   }
@@ -144,24 +145,22 @@ function scrollToTop() {
 }
 
 .items {
-  position: absolute;
-  top: 40px;
-  right: 16px;
-  left: 16px;
+  background-color: var(--vp-c-gutter);
+  border-radius: 8px;
+  border: 1px solid var(--vp-c-border);
+  box-shadow: var(--shadow-3);
   display: grid;
   gap: 1px;
-  border: 1px solid var(--vp-c-border);
-  border-radius: 8px;
-  background-color: var(--vp-c-gutter);
+  left: 16px;
   max-height: calc(var(--vp-vh, 100vh) - 86px);
   overflow: hidden auto;
-  box-shadow: var(--vp-shadow-3);
-}
+  position: absolute;
+  right: 16px;
+  top: 50px;
 
-@media (min-width: 960px) {
-  .items {
-    right: auto;
+  @media (min-width: 960px) {
     left: calc(var(--vp-sidebar-width) + 32px);
+    right: auto;
     width: 320px;
   }
 }
@@ -176,7 +175,7 @@ function scrollToTop() {
   line-height: 48px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--vp-c-brand-1);
+  color: var(--primary);
 }
 
 .outline {

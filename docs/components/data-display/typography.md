@@ -156,7 +156,7 @@ This is very similar to the `.prose` class in [TailwindCSS](https://tailwindcss.
 The test code below is taken right from their [markdown sample](https://github.com/tailwindlabs/tailwindcss-typography/blob/main/demo/components/MarkdownSample.mdx?plain=1).
 :::
 
-<Example>
+<Example richText="rich-text">
 <template #example>
 <article class="rich-text">
 By default, Tailwind removes all of the default browser styling from paragraphs, headings, lists and more. This ends up being really useful for building application UIs because you spend less time undoing user-agent styles, but when you _really are_ just trying to style some content that came from a rich-text editor in a CMS or a markdown file, it can be surprising and unintuitive.

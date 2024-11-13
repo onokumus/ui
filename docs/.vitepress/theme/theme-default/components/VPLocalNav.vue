@@ -137,12 +137,12 @@ const classes = computed(() => {
   line-height: 24px;
   font-size: 12px;
   font-weight: 500;
-  color: var(--vp-c-text-2);
+  color: var(--text-color-2-78);
   transition: color 0.5s;
 }
 
 .menu:hover {
-  color: var(--vp-c-text-1);
+  color: var(--text-color-2);
   transition: color 0.25s;
 }
 

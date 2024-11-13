@@ -29,11 +29,11 @@ const closeScreen = inject("close-screen") as () => void;
   line-height: 32px;
   font-size: 14px;
   font-weight: 400;
-  color: var(--vp-c-text-1);
+  color: var(--text-color-2);
   transition: color 0.25s;
 }
 
 .VPNavScreenMenuGroupLink:hover {
-  color: var(--vp-c-brand-1);
+  color: var(--primary);
 }
 </style>

@@ -1,13 +1,13 @@
 <script lang="ts" setup>
-import type { DefaultTheme } from 'vitepress/theme'
-import { inject } from 'vue'
-import VPLink from './VPLink.vue'
+import type { DefaultTheme } from "vitepress/theme";
+import { inject } from "vue";
+import VPLink from "./VPLink.vue";
 
 defineProps<{
-  item: DefaultTheme.NavItemWithLink
-}>()
+  item: DefaultTheme.NavItemWithLink;
+}>();
 
-const closeScreen = inject('close-screen') as () => void
+const closeScreen = inject("close-screen") as () => void;
 </script>
 
 <template>
@@ -29,11 +29,13 @@ const closeScreen = inject('close-screen') as () => void
   line-height: 24px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--vp-c-text-1);
-  transition: border-color 0.25s, color 0.25s;
+  color: var(--text-color-2);
+  transition:
+    border-color 0.25s,
+    color 0.25s;
 }
 
 .VPNavScreenMenuLink:hover {
-  color: var(--vp-c-brand-1);
+  color: var(--primary);
 }
 </style>

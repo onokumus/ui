@@ -116,12 +116,12 @@ const showFooter = computed(
   line-height: 32px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--vp-c-brand-1);
+  color: var(--primary);
   transition: color 0.25s;
 }
 
 .edit-link-button:hover {
-  color: var(--vp-c-brand-2);
+  color: var(--primary-light);
 }
 
 .edit-link-icon {
@@ -153,7 +153,7 @@ const showFooter = computed(
 }
 
 .pager-link:hover {
-  border-color: var(--vp-c-brand-1);
+  border-color: var(--primary);
 }
 
 .pager-link.next {
@@ -166,7 +166,7 @@ const showFooter = computed(
   line-height: 20px;
   font-size: 12px;
   font-weight: 500;
-  color: var(--vp-c-text-2);
+  color: var(--text-color-2-78);
 }
 
 .title {
@@ -174,7 +174,7 @@ const showFooter = computed(
   line-height: 20px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--vp-c-brand-1);
+  color: var(--primary);
   transition: color 0.25s;
 }
 </style>

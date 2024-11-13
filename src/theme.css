@@ -33,10 +33,12 @@ html {
   --primary-dark: color-mix(in oklch, var(--primary) 80%, black);
   --primary-light: color-mix(in oklch, var(--primary) 80%, white);
 
-  --color-heading: light-dark(var(--gray-14), var(--gray-1));
-  --color-heading-contrast: light-dark(var(--gray-1), var(--gray-14));
-  --color-body: light-dark(var(--gray-12), var(--gray-3));
-  --color-body-contrast: light-dark(var(--gray-3), var(--gray-12));
+  --text-color-1: light-dark(var(--gray-14), var(--gray-1));
+  --text-color-1-contrast: light-dark(var(--gray-1), var(--gray-14));
+  --text-color-2: light-dark(var(--gray-12), var(--gray-3));
+  --text-color-2-contrast: light-dark(var(--gray-3), var(--gray-12));
+  --text-color-2-78: color-mix(in oklch, var(--text-color-2) 78%, transparent);
+  --text-color-2-56: color-mix(in oklch, var(--text-color-2) 56%, transparent);
 
   --danger: var(--red-7);
   --danger-light: var(--red-5);

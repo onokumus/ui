@@ -32,7 +32,7 @@ defineProps<{
   min-width: 128px;
   border: 1px solid var(--vp-c-divider);
   background-color: var(--vp-c-bg-elv);
-  box-shadow: var(--vp-shadow-3);
+  box-shadow: var(--shadow-3);
   transition: background-color 0.5s;
   max-height: calc(100vh - var(--vp-nav-height));
   overflow-y: auto;
@@ -67,7 +67,7 @@ defineProps<{
   line-height: 28px;
   font-size: 12px;
   font-weight: 500;
-  color: var(--vp-c-text-2);
+  color: var(--text-color-2-78);
   transition: color 0.5s;
 }
 

@@ -41,7 +41,7 @@
       content: "";
       opacity: 0.2;
       background-image: radial-gradient(
-        var(--color-body) 1.4500000000000002px,
+        var(--text-color-2) 1.4500000000000002px,
         transparent 1.4500000000000002px
       );
       background-size: 20px 20px;
@@ -129,7 +129,7 @@
   code,
   kbd,
   samp {
-    font-family: var(--vp-font-family-mono);
+    font-family: var(--font-mono);
   }
 
   img,
@@ -202,17 +202,17 @@
 
   input:-ms-input-placeholder,
   textarea:-ms-input-placeholder {
-    color: var(--vp-c-text-3);
+    color: var(--text-color-2-56);
   }
 
   input::-ms-input-placeholder,
   textarea::-ms-input-placeholder {
-    color: var(--vp-c-text-3);
+    color: var(--text-color-2-56);
   }
 
   input::placeholder,
   textarea::placeholder {
-    color: var(--vp-c-text-3);
+    color: var(--text-color-2-56);
   }
 
   input::-webkit-outer-spin-button,

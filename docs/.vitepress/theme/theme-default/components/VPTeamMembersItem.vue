@@ -148,7 +148,7 @@ withDefaults(defineProps<Props>(), {
   flex-shrink: 0;
   margin: 0 auto;
   border-radius: 50%;
-  box-shadow: var(--vp-shadow-3);
+  box-shadow: var(--shadow-3);
 }
 
 .avatar-img {
@@ -169,16 +169,16 @@ withDefaults(defineProps<Props>(), {
 .affiliation {
   margin: 0;
   font-weight: 500;
-  color: var(--vp-c-text-2);
+  color: var(--text-color-2-78);
 }
 
 .org.link {
-  color: var(--vp-c-text-2);
+  color: var(--text-color-2-78);
   transition: color 0.25s;
 }
 
 .org.link:hover {
-  color: var(--vp-c-brand-1);
+  color: var(--primary);
 }
 
 .desc {
@@ -187,7 +187,7 @@ withDefaults(defineProps<Props>(), {
 
 .desc :deep(a) {
   font-weight: 500;
-  color: var(--vp-c-brand-1);
+  color: var(--primary);
   text-decoration-style: dotted;
   transition: color 0.25s;
 }

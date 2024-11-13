@@ -22,7 +22,7 @@
 }
 
 .VPSwitch:hover {
-  border-color: var(--vp-c-brand-1);
+  border-color: var(--primary);
 }
 
 .check {
@@ -34,7 +34,7 @@
   height: 18px;
   border-radius: 50%;
   background-color: var(--vp-c-neutral-inverse);
-  box-shadow: var(--vp-shadow-1);
+  box-shadow: var(--shadow-1);
   transition: transform 0.25s !important;
 }
 
@@ -53,11 +53,11 @@
   left: 3px;
   width: 12px;
   height: 12px;
-  color: var(--vp-c-text-2);
+  color: var(--text-color-2-78);
 }
 
 .dark .icon :deep([class^="vpi-"]) {
-  color: var(--vp-c-text-1);
+  color: var(--text-color-2);
   transition: opacity 0.25s !important;
 }
 </style>

@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { useData } from '../composables/data'
-import VPSwitchAppearance from './VPSwitchAppearance.vue'
+import { useData } from "../composables/data";
+import VPSwitchAppearance from "./VPSwitchAppearance.vue";
 
-const { site, theme } = useData()
+const { site, theme } = useData();
 </script>
 
 <template>
@@ -15,7 +15,7 @@ const { site, theme } = useData()
     class="VPNavScreenAppearance"
   >
     <p class="text">
-      {{ theme.darkModeSwitchLabel || 'Appearance' }}
+      {{ theme.darkModeSwitchLabel || "Appearance" }}
     </p>
     <VPSwitchAppearance />
   </div>
@@ -35,6 +35,6 @@ const { site, theme } = useData()
   line-height: 24px;
   font-size: 12px;
   font-weight: 500;
-  color: var(--vp-c-text-2);
+  color: var(--text-color-2-78);
 }
 </style>

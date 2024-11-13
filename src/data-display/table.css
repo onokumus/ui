@@ -32,7 +32,7 @@
 }
 
 :where(th) {
-  color: var(--color-body);
+  color: var(--text-color-2);
   background-color: var(--surface-filled);
 }
 

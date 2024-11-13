@@ -62,7 +62,7 @@ defineProps<{
 }
 
 .VPFeature.link:hover {
-  border-color: var(--vp-c-brand-1);
+  border-color: var(--primary);
 }
 
 .card {
@@ -99,7 +99,7 @@ defineProps<{
   line-height: 24px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--vp-c-text-2);
+  color: var(--text-color-2-78);
 }
 
 .link-text {
@@ -111,7 +111,7 @@ defineProps<{
   align-items: center;
   font-size: 14px;
   font-weight: 500;
-  color: var(--vp-c-brand-1);
+  color: var(--primary);
 }
 
 .link-text-icon {

@@ -49,7 +49,7 @@
   line-height: 24px;
   font-size: 16px;
   font-weight: 500;
-  color: var(--vp-c-text-2);
+  color: var(--text-color-2-78);
 }
 
 @media (min-width: 768px) {

@@ -72,7 +72,7 @@ function toggle() {
 
 .VPNavScreenMenuGroup.open .button {
   padding-block-end: 6px;
-  color: var(--vp-c-brand-1);
+  color: var(--primary);
 }
 
 .VPNavScreenMenuGroup.open .button-icon {
@@ -89,12 +89,12 @@ function toggle() {
   line-height: 24px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--vp-c-text-1);
+  color: var(--text-color-2);
   transition: color 0.25s;
 }
 
 .button:hover {
-  color: var(--vp-c-brand-1);
+  color: var(--primary);
 }
 
 .button-icon {

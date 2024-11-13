@@ -31,6 +31,7 @@
 /*** Data display */
 @import "./data-display/divider.css" layer(theme.data-display.divider);
 @import "./data-display/link.css" layer(theme.data-display.link);
+@import "./data-display/table.css" layer(theme.data-display.table);
 @import "./data-display/typography.css" layer(theme.data-display.typography);
 
 /*** Feedback */

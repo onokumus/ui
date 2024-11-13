@@ -59,7 +59,7 @@ const target = computed(() =>
   height: var(--vp-nav-height);
   font-size: 16px;
   font-weight: 600;
-  color: var(--vp-c-text-1);
+  color: var(--text-color-2);
   transition: opacity 0.25s;
 }
 

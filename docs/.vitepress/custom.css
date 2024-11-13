@@ -4,20 +4,39 @@ html.dark {
   }
 }
 
-:where(.vp-doc > div > :where(h1, h2, h3, h4, h5, h6, p)) {
-  margin-block-end: 1em;
-}
+.opui-logo {
+  display: inline-grid;
+  font-size: 3rem;
+  text-transform: uppercase;
 
-:where(.vp-doc > div > :where(h2, h3)) {
-  margin-block: 2em 1em;
-}
+  span {
+    color: var(--primary);
+    font-weight: 300;
 
-:where(.vp-doc > div > :where(h4, h5, h6, p)) {
-  margin-block: 1.25em;
-}
+    &:first-of-type {
+      align-self: end;
+      &::first-letter {
+        font-weight: var(--font-weight-9);
+      }
 
-:where(.vp-doc > div > hgroup + *) {
-  margin-block-start: 3em;
+      & + span {
+        align-self: start;
+        &::first-letter {
+          font-weight: var(--font-weight-9);
+        }
+      }
+    }
+
+    &:last-of-type {
+      align-self: center;
+      color: var(--text-1);
+      font-weight: var(--font-weight-9);
+      grid-column: 2;
+      grid-row: 1/3;
+      font-size: 3em;
+      margin-block-start: -0.1em;
+    }
+  }
 }
 
 .anatomy {

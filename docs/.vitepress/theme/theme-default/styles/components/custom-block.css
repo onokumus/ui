@@ -4,7 +4,7 @@
   padding: 16px 16px 8px;
   line-height: var(--font-lineheight-3);
   font-size: var(--vp-custom-block-font-size);
-  color: var(--vp-c-text-2);
+  color: var(--text-color-2-78);
   margin-block: var(--size-3);
 
   &.info {
@@ -14,12 +14,12 @@
 
     a,
     code {
-      color: var(--vp-c-brand-1);
+      color: var(--primary);
     }
 
     a:hover,
     a:hover > code {
-      color: var(--vp-c-brand-2);
+      color: var(--primary-light);
     }
 
     code {
@@ -34,12 +34,12 @@
 
     a,
     code {
-      color: var(--vp-c-brand-1);
+      color: var(--primary);
     }
 
     a:hover,
     a:hover > code {
-      color: var(--vp-c-brand-2);
+      color: var(--primary-light);
     }
 
     code {
@@ -153,12 +153,12 @@
     background-color: var(--vp-custom-block-details-bg);
 
     a {
-      color: var(--vp-c-brand-1);
+      color: var(--primary);
     }
 
     a:hover,
     a:hover > code {
-      color: var(--vp-c-brand-2);
+      color: var(--primary-light);
     }
 
     code {

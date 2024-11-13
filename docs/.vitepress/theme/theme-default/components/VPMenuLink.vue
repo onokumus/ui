@@ -44,7 +44,7 @@ const { page } = useData();
   line-height: 32px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--vp-c-text-1);
+  color: var(--text-color-2);
   white-space: nowrap;
   transition:
     background-color 0.25s,
@@ -52,11 +52,11 @@ const { page } = useData();
 }
 
 .link:hover {
-  color: var(--vp-c-brand-1);
+  color: var(--primary);
   background-color: var(--vp-c-default-soft);
 }
 
 .link.active {
-  color: var(--vp-c-brand-1);
+  color: var(--primary);
 }
 </style>

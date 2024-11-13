@@ -1,229 +1,98 @@
 @layer vitepress.components.doc {
   .vp-doc {
-    @scope (&) to (.example-wrapper) {
-      /**
+    /**
    * Headings
    * -------------------------------------------------------------------------- */
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        position: relative;
-        outline: none;
-      }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      position: relative;
+      outline: none;
+    }
 
-      .header-anchor {
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin-inline-start: -0.87em !important;
-        font-weight: 500;
-        user-select: none;
-        opacity: 0;
-        text-decoration: none !important;
-        transition:
-          color 0.25s,
-          opacity 0.25s;
-      }
+    .header-anchor {
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-inline-start: -0.87em !important;
+      font-weight: 500;
+      user-select: none;
+      opacity: 0;
+      text-decoration: none !important;
+      transition:
+        color 0.25s,
+        opacity 0.25s;
 
-      .header-anchor:before {
+      &:before {
         content: var(--vp-header-anchor-symbol);
       }
+    }
 
-      h1:hover .header-anchor,
-      h1 .header-anchor:focus,
-      h2:hover .header-anchor,
-      h2 .header-anchor:focus,
-      h3:hover .header-anchor,
-      h3 .header-anchor:focus,
-      h4:hover .header-anchor,
-      h4 .header-anchor:focus,
-      h5:hover .header-anchor,
-      h5 .header-anchor:focus,
-      h6:hover .header-anchor,
-      h6 .header-anchor:focus {
-        opacity: 1;
-      }
+    :where(h1, h2, h3, h4, h5, h6):where(:hover) .header-anchor,
+    :where(h1, h2, h3, h4, h5, h6):where(.header-anchor:focus) {
+      opacity: 1;
+    }
 
-      h2 .header-anchor {
-        top: 0;
-      }
+    h2 .header-anchor {
+      top: 0;
+    }
 
-      /**
-   * Paragraph and inline elements
-   * -------------------------------------------------------------------------- */
-
-      p,
-      summary {
-        margin: 16px 0;
-      }
-
-      blockquote {
-        margin: 16px 0;
-        border-left: 2px solid var(--vp-c-divider);
-        padding-inline-start: 16px;
-        transition: border-color 0.5s;
-        color: var(--vp-c-text-2);
-      }
-
-      blockquote > p {
-        margin: 0;
-        transition: color 0.5s;
-      }
-
-      /* link.css */
-      /* :empty to only target inline link */
-      a:not(:has(& > *)) {
-        color: var(--primary);
-        cursor: pointer;
-        font-weight: var(--font-weight-7);
-        text-decoration: underline;
-        text-decoration-color: var(--primary);
-        text-underline-offset: 1px;
-
-        &:where([href]) {
-          &:where(:hover) {
-            color: var(--primary-light);
-          }
-        }
-
-        @supports (-moz-appearance: none) {
-          text-underline-offset: 2px;
-        }
-      }
-
-      /**
-   * Lists
-   * -------------------------------------------------------------------------- */
-
-      ul,
-      ol {
-        padding-inline-start: 1.25rem;
-        margin: 16px 0;
-      }
-
-      ul {
-        list-style: disc;
-      }
-
-      ol {
-        list-style: decimal;
-      }
-
-      li + li {
-        margin-block-start: 8px;
-      }
-
-      li > ol,
-      li > ul {
-        margin: 8px 0 0;
-      }
-
-      /**
-   * Table
-   * -------------------------------------------------------------------------- */
-
-      table {
-        display: block;
-        border-collapse: collapse;
-        margin: 20px 0;
-        overflow-x: auto;
-      }
-
-      tr {
-        background-color: var(--vp-c-bg);
-        border-top: 1px solid var(--vp-c-divider);
-        transition: background-color 0.5s;
-      }
-
-      tr:nth-child(2n) {
-        background-color: var(--vp-c-bg-soft);
-      }
-
-      th,
-      td {
-        border: 1px solid var(--vp-c-divider);
-        padding: 8px 16px;
-      }
-
-      th {
-        text-align: left;
-        font-size: 14px;
-        font-weight: 600;
-        color: var(--vp-c-text-2);
-        background-color: var(--vp-c-bg-soft);
-      }
-
-      td {
-        font-size: 14px;
-      }
-
-      /**
-   * Decorational elements
-   * -------------------------------------------------------------------------- */
-
-      hr {
-        margin: 16px 0;
-        border: none;
-        border-top: 1px solid var(--vp-c-divider);
-      }
-
-      /**
+    /**
    * Custom Block
    * -------------------------------------------------------------------------- */
 
-      .custom-block {
-        margin: 16px 0;
-      }
+    .custom-block {
+      margin: 16px 0;
 
-      .custom-block p {
+      & p {
         margin: 8px 0;
         line-height: var(--font-lineheight-3);
       }
 
-      .custom-block p:first-child {
+      & p:first-child {
         margin: 0;
       }
 
-      .custom-block div[class*="language-"] {
+      & div[class*="language-"] {
         margin: 8px 0;
         border-radius: var(--size-8);
       }
 
-      .custom-block div[class*="language-"] code {
+      & div[class*="language-"] code {
         font-weight: 400;
         background-color: transparent;
       }
 
-      .custom-block .vp-code-group .tabs {
+      & .vp-code-group .tabs {
         margin: 0;
         border-radius: var(--size-8) var(--size-8) 0 0;
       }
+    }
 
-      /**
+    /**
    * Component: Team
    * -------------------------------------------------------------------------- */
 
-      .VPTeamMembers {
-        margin-block-start: 24px;
-      }
+    .VPTeamMembers {
+      margin-block-start: 24px;
+    }
 
-      .VPTeamMembers.small.count-1 .container {
-        margin: 0 !important;
-        max-width: calc((100% - 24px) / 2) !important;
-      }
+    .VPTeamMembers.small.count-1 .container {
+      margin: 0 !important;
+      max-width: calc((100% - 24px) / 2) !important;
+    }
 
-      .VPTeamMembers.small.count-2 .container,
-      .VPTeamMembers.small.count-3 .container {
-        max-width: 100% !important;
-      }
+    .VPTeamMembers.small.count-2 .container,
+    .VPTeamMembers.small.count-3 .container {
+      max-width: 100% !important;
+    }
 
-      .VPTeamMembers.medium.count-1 .container {
-        margin: 0 !important;
-        max-width: calc((100% - 24px) / 2) !important;
-      }
+    .VPTeamMembers.medium.count-1 .container {
+      margin: 0 !important;
+      max-width: calc((100% - 24px) / 2) !important;
     }
 
     /**
@@ -238,7 +107,7 @@
   width: 11px;
   height: 11px;
   background: currentColor;
-  color: var(--vp-c-text-3);
+  color: var(--text-color-2-56);
   flex-shrink: 0;
   --icon: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' %3E%3Cpath d='M0 0h24v24H0V0z' fill='none' /%3E%3Cpath d='M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5H9z' /%3E%3C/svg%3E");
   -webkit-mask-image: var(--icon);
@@ -453,7 +322,7 @@
   padding-block-start: 20px;
   width: 32px;
   text-align: center;
-  font-family: var(--vp-font-family-mono);
+  font-family: var(--font-mono);
   line-height: var(--vp-code-line-height);
   font-size: var(--vp-code-font-size);
   color: var(--vp-code-line-number-color);

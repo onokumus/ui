@@ -58,24 +58,24 @@ function onBlur() {
 }
 
 .VPFlyout:hover {
-  color: var(--vp-c-brand-1);
+  color: var(--primary);
   transition: color 0.25s;
 }
 
 .VPFlyout:hover .text {
-  color: var(--vp-c-text-2);
+  color: var(--text-color-2-78);
 }
 
 .VPFlyout:hover .icon {
-  fill: var(--vp-c-text-2);
+  fill: var(--text-color-2-78);
 }
 
 .VPFlyout.active .text {
-  color: var(--vp-c-brand-1);
+  color: var(--primary);
 }
 
 .VPFlyout.active:hover .text {
-  color: var(--vp-c-brand-2);
+  color: var(--primary-light);
 }
 
 .VPFlyout:hover .menu,
@@ -96,7 +96,7 @@ function onBlur() {
   align-items: center;
   padding: 0 12px;
   height: var(--vp-nav-height);
-  color: var(--vp-c-text-1);
+  color: var(--text-color-2);
   transition: color 0.5s;
 
   &:hover,
@@ -111,7 +111,7 @@ function onBlur() {
   line-height: var(--vp-nav-height);
   font-size: 14px;
   font-weight: 500;
-  color: var(--vp-c-text-1);
+  color: var(--text-color-2);
   transition: color 0.25s;
 }
 

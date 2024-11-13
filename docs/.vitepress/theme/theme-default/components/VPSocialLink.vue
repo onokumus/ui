@@ -1,17 +1,17 @@
 <script lang="ts" setup>
-import type { DefaultTheme } from 'vitepress/theme'
-import { computed } from 'vue'
+import type { DefaultTheme } from "vitepress/theme";
+import { computed } from "vue";
 
 const props = defineProps<{
-  icon: DefaultTheme.SocialLinkIcon
-  link: string
-  ariaLabel?: string
-}>()
+  icon: DefaultTheme.SocialLinkIcon;
+  link: string;
+  ariaLabel?: string;
+}>();
 
 const svg = computed(() => {
-  if (typeof props.icon === 'object') return props.icon.svg
-  return `<span class="vpi-social-${props.icon}" />`
-})
+  if (typeof props.icon === "object") return props.icon.svg;
+  return `<span class="vpi-social-${props.icon}" />`;
+});
 </script>
 
 <template>
@@ -32,12 +32,12 @@ const svg = computed(() => {
   align-items: center;
   width: 36px;
   height: 36px;
-  color: var(--vp-c-text-2);
+  color: var(--text-color-2-78);
   transition: color 0.5s;
 }
 
 .VPSocialLink:hover {
-  color: var(--vp-c-text-1);
+  color: var(--text-color-2);
   transition: color 0.25s;
 }
 

@@ -32,6 +32,11 @@ const heroImageSlotExists = inject("hero-image-slot-exists") as Ref<boolean>;
           <h1 v-if="name" class="name">
             <span v-html="name" class="clip"></span>
           </h1>
+          <h1 v-else class="opui-logo">
+            <span>Open</span>
+            <span>Props</span>
+            <span>UI</span>
+          </h1>
           <p v-if="text" v-html="text" class="text"></p>
           <p v-if="tagline" v-html="tagline" class="tagline"></p>
         </slot>
@@ -187,12 +192,12 @@ const heroImageSlotExists = inject("hero-image-slot-exists") as Ref<boolean>;
   font-size: 16px;
   font-weight: 500;
   white-space: pre-wrap;
-  color: var(--vp-c-text-2);
+  color: var(--text-color-2-78);
 }
 
 .text {
   font-size: 18px;
-  margin-block-start: 1rem;
+  margin-block-start: 0;
   color: var(--vp-home-hero-text-color);
 }
 

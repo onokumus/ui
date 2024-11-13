@@ -1,11 +1,11 @@
 <script lang="ts" setup>
-import VPFlyout from './VPFlyout.vue'
-import VPMenuLink from './VPMenuLink.vue'
-import { useData } from '../composables/data'
-import { useLangs } from '../composables/langs'
+import VPFlyout from "./VPFlyout.vue";
+import VPMenuLink from "./VPMenuLink.vue";
+import { useData } from "../composables/data";
+import { useLangs } from "../composables/langs";
 
-const { theme } = useData()
-const { localeLinks, currentLang } = useLangs({ correspondingLink: true })
+const { theme } = useData();
+const { localeLinks, currentLang } = useLangs({ correspondingLink: true });
 </script>
 
 <template>
@@ -42,6 +42,6 @@ const { localeLinks, currentLang } = useLangs({ correspondingLink: true })
   line-height: 32px;
   font-size: 14px;
   font-weight: 700;
-  color: var(--vp-c-text-1);
+  color: var(--text-color-2);
 }
 </style>

@@ -42,7 +42,7 @@ function onClick({ target: el }: Event) {
   line-height: 32px;
   font-size: 14px;
   font-weight: 400;
-  color: var(--vp-c-text-2);
+  color: var(--text-color-2-78);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -51,7 +51,7 @@ function onClick({ target: el }: Event) {
 
 .outline-link:hover,
 .outline-link.active {
-  color: var(--vp-c-text-1);
+  color: var(--text-color-2);
   transition: color 0.25s;
 }
 

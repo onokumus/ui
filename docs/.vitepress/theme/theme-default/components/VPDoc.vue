@@ -52,7 +52,7 @@ const pageName = computed(() =>
           <slot name="doc-before" />
           <main class="main">
             <Content
-              class="vp-doc"
+              class="rich-text vp-doc"
               :class="[
                 pageName,
                 theme.externalLinkIcon && 'external-link-icon-enabled',
