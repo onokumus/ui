@@ -81,7 +81,7 @@ status: public
 <hgroup>
 	<p>2024-11-12</p>
 	<h1>The ridiculously confusing task of styling a decent-looking progress bar</h1>
-	<p>You would think it's easy. I mean, it's just one teeny tiny, simple HTML element!</p>
+	<p>You would think it's easy. I mean, it's just one teeny tiny, simple <a class="link" href="/components/feedback/progress">progress</a> element!</p>
 </hgroup>
 
 <p v-if="stopIt < 1" @click="stopIt = 2" style="cursor: pointer;">How hard could it be?</p>
@@ -210,3 +210,123 @@ progress::-moz-progress-bar {
 </Example>
 
 Nothing happened? Hmm, no, guess it's not that.
+
+## The finished version
+
+At this point I'm just like... screw it!
+
+If it's going to be this hard I'll just bypass all that nonsense and do something that's readable and will work regardless of pseudo-class nonsense! **(╯°□°)╯︵ ┻━┻**
+
+I ended up reaching for the trusty `:after` pseudo-class. In this case it also enabled me to do some nice animations, so win-win!
+
+<Example>
+<template #example>
+<progress></progress>
+</template>
+
+<template #code>
+
+::: code-group
+
+```css [progress.css]
+:where(progress) {
+  --_accent-color: var(--primary);
+  --_bg-color: var(--surface-tonal);
+
+  appearance: none;
+  background-color: var(--_bg-color);
+  border-radius: var(--border-radius);
+  border: 0;
+  display: inline-block;
+  height: var(--size-2);
+  overflow: hidden;
+  position: relative;
+  vertical-align: baseline;
+  width: 100%;
+
+  &::-webkit-progress-bar {
+    border-radius: var(--border-radius);
+    background: none;
+  }
+
+  &[value]::-webkit-progress-value {
+    background-color: var(--_accent-color);
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: inline-size 0.2s var(--ease-out-4);
+    }
+  }
+
+  &::-moz-progress-bar {
+    background-color: var(--_accent-color);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  progress:indeterminate {
+    background-color: var(--_bg-color);
+
+    &::after {
+      animation: indeterminate 2s linear infinite;
+      background-color: var(--_accent-color);
+      content: "";
+      inset: 0 auto 0 0;
+      position: absolute;
+      will-change: inset-inline-start, inset-inline-end;
+    }
+
+    &[value]::-webkit-progress-value {
+      background-color: transparent;
+    }
+
+    &::-moz-progress-bar {
+      background-color: transparent;
+    }
+  }
+}
+
+[dir="rtl"] {
+  @media (prefers-reduced-motion: no-preference) {
+    :where(progress):indeterminate {
+      animation-direction: reverse;
+    }
+  }
+}
+
+[dir="rtl"] {
+  @media (prefers-reduced-motion: no-preference) {
+    :where(progress):indeterminate::after {
+      animation-direction: reverse;
+    }
+  }
+}
+
+@keyframes indeterminate {
+  0% {
+    left: -200%;
+    right: 100%;
+  }
+  60% {
+    left: 107%;
+    right: -8%;
+  }
+  100% {
+    left: 107%;
+    right: -8%;
+  }
+}
+```
+
+```html [progress.html]
+<progress></progress>
+```
+
+:::
+
+</template>
+</Example>
+
+## See more
+
+- [Progress](/components/feedback/progress)
+- [Spinner](/components/feedback/spinner)

@@ -4,20 +4,6 @@
       /**
    * Headings
    * -------------------------------------------------------------------------- */
-
-      /* h1 {
-        margin-block: 0 0.8888889em;
-      }
-      h2 {
-        margin-block: 2em 1em;
-      }
-      h3 {
-        margin-block: 1.6em 0.6em;
-      }
-      h4 {
-        margin-block: 1.5em 0.5em;
-      } */
-
       h1,
       h2,
       h3,
@@ -87,22 +73,29 @@
         transition: color 0.5s;
       }
 
+      /* Same as link.css */
       a {
-        font-weight: 500;
-        color: var(--vp-c-brand-1);
+        color: var(--primary);
+        cursor: pointer;
+        font-weight: var(--font-weight-7);
         text-decoration: underline;
-        text-underline-offset: 2px;
-        transition:
-          color 0.25s,
-          opacity 0.25s;
-      }
+        text-decoration-color: var(--primary);
+        text-underline-offset: 1px;
 
-      a:hover {
-        color: var(--vp-c-brand-2);
-      }
+        &:where([href]) {
+          &:where(:visited) {
+            color: var(--primary-dark);
+            text-decoration-color: var(--primary-dark);
+          }
+        }
 
-      strong {
-        font-weight: 600;
+        &:where(:hover) {
+          color: var(--primary-light);
+        }
+
+        @supports (-moz-appearance: none) {
+          text-underline-offset: 2px;
+        }
       }
 
       /**
