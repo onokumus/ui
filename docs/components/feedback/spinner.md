@@ -109,3 +109,4 @@ See [progress accessibility](/components/feedback/progress#accessibility) sectio
 - `<textarea>`
 - `<html>`
 - `<progress>`
+- any element with `[aria-describedby]` ([progress accessibility](/components/feedback/progress#accessibility))
