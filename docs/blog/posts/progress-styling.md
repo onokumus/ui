@@ -326,7 +326,7 @@ I ended up reaching for the trusty `:after` pseudo-class. In this case it also e
 </template>
 </Example>
 
-## See more
+## Read more
 
 - [Progress](/components/feedback/progress)
 - [Spinner](/components/feedback/spinner)
