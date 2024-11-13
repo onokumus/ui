@@ -217,7 +217,7 @@ At this point I'm just like... screw it!
 
 If it's going to be this hard I'll just bypass all that nonsense and do something that's readable and will work regardless of pseudo-class nonsense! **(╯°□°)╯︵ ┻━┻**
 
-I ended up reaching for the trusty `:after` pseudo-class. In this case it also enabled me to do some nice animations, so win-win!
+I ended up reaching for the trusty `:after` pseudo-class. In this case it also enables me to do some nice animations, so win-win!
 
 <Example>
 <template #example>

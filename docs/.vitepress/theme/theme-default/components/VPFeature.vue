@@ -23,30 +23,32 @@ defineProps<{
     :no-icon="true"
     :tag="link ? 'a' : 'div'"
   >
-    <article class="box">
-      <div v-if="typeof icon === 'object' && icon.wrap" class="icon">
+    <article class="card elevated">
+      <div class="content">
+        <div v-if="typeof icon === 'object' && icon.wrap" class="icon">
+          <VPImage
+            :image="icon"
+            :alt="icon.alt"
+            :height="icon.height || 48"
+            :width="icon.width || 48"
+          />
+        </div>
         <VPImage
+          v-else-if="typeof icon === 'object'"
           :image="icon"
           :alt="icon.alt"
           :height="icon.height || 48"
           :width="icon.width || 48"
         />
-      </div>
-      <VPImage
-        v-else-if="typeof icon === 'object'"
-        :image="icon"
-        :alt="icon.alt"
-        :height="icon.height || 48"
-        :width="icon.width || 48"
-      />
-      <div v-else-if="icon" class="icon" v-html="icon"></div>
-      <h2 class="title" v-html="title"></h2>
-      <p v-if="details" class="details" v-html="details"></p>
+        <div v-else-if="icon" class="icon" v-html="icon"></div>
+        <h2 class="title" v-html="title"></h2>
+        <p v-if="details" class="details" v-html="details"></p>
 
-      <div v-if="linkText" class="link-text">
-        <p class="link-text-value">
-          {{ linkText }} <span class="vpi-arrow-right link-text-icon" />
-        </p>
+        <div v-if="linkText" class="link-text">
+          <p class="link-text-value">
+            {{ linkText }} <span class="vpi-arrow-right link-text-icon" />
+          </p>
+        </div>
       </div>
     </article>
   </VPLink>
@@ -55,41 +57,33 @@ defineProps<{
 <style scoped>
 .VPFeature {
   display: block;
-  border: 1px solid var(--vp-c-bg-soft);
-  border-radius: var(--surface-border-radius);
+
   height: 100%;
-  background-color: var(--vp-c-bg-soft);
-  transition:
-    border-color 0.25s,
-    background-color 0.25s;
 }
 
 .VPFeature.link:hover {
   border-color: var(--vp-c-brand-1);
 }
 
-.box {
-  display: flex;
-  flex-direction: column;
-  padding: 24px;
+.card {
   height: 100%;
-}
-
-.box > :deep(.VPImage) {
-  margin-bottom: 20px;
+  & > :deep(.VPImage) {
+    margin-bottom: 20px;
+  }
 }
 
 .icon {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
-  border-radius: var(--surface-border-radius);
   background-color: var(--vp-c-default-soft);
-  width: 48px;
-  height: 48px;
+  border-radius: var(--surface-border-radius);
+  color: var(--primary);
+  display: flex;
   font-size: 24px;
+  height: 48px;
+  justify-content: center;
+  margin-bottom: 20px;
   transition: background-color 0.25s;
+  width: 48px;
 }
 
 .title {
