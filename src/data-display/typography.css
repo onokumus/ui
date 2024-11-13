@@ -52,13 +52,20 @@ h6,
   );
   font-size: var(--font-size-overline);
   font-weight: var(--font-weight-5);
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   line-height: 2.5;
   text-transform: uppercase;
 }
 
 :where(p, .p) {
   text-wrap: pretty;
+
+  &.small {
+    font-size: var(--font-size-body);
+  }
+  &.large {
+    font-size: var(--font-size-body-large);
+  }
 }
 
 :where(sup, .sup) {
@@ -92,6 +99,31 @@ h6,
 :where(.rich-text) {
   font-size: 1rem;
   line-height: 1.75;
+
+  /* link.css */
+  a {
+    color: var(--primary);
+    cursor: pointer;
+    font-weight: var(--font-weight-7);
+    text-decoration: underline;
+    text-decoration-color: var(--primary);
+    text-underline-offset: 1px;
+
+    &:where([href]) {
+      &:where(:visited) {
+        color: var(--primary-dark);
+        text-decoration-color: var(--primary-dark);
+      }
+    }
+
+    &:where(:hover) {
+      color: var(--primary-light);
+    }
+
+    @supports (-moz-appearance: none) {
+      text-underline-offset: 2px;
+    }
+  }
 
   p {
     margin-block: 1.25em;
