@@ -47,7 +47,7 @@ const showFooter = computed(
           site?.themeConfig?.socialLinks?.find((item) => item.icon === 'github')
             ?.link
         "
-        >Go to repo</a
+        ><span class="vpi-social-github"></span>Go to repo</a
       >
     </div>
 
@@ -89,6 +89,9 @@ const showFooter = computed(
 </template>
 
 <style scoped>
+.vpi-social-github {
+  margin-inline-end: 0.5em;
+}
 .VPDocFooter {
   margin-block-start: 64px;
 }

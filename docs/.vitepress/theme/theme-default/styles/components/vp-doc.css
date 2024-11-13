@@ -22,7 +22,7 @@
         font-weight: 500;
         user-select: none;
         opacity: 0;
-        text-decoration: none;
+        text-decoration: none !important;
         transition:
           color 0.25s,
           opacity 0.25s;
@@ -74,7 +74,8 @@
       }
 
       /* link.css */
-      a {
+      /* :empty to only target inline link */
+      a:not(:has(& > *)) {
         color: var(--primary);
         cursor: pointer;
         font-weight: var(--font-weight-7);
