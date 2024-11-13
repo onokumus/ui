@@ -75,8 +75,9 @@ html {
   --font-size-h4: var(--font-size-3);
   --font-size-h5: var(--font-size-2);
   --font-size-h6: var(--font-size-1);
-  --font-size-p: var(--font-size-1);
-  --font-size-overline: 0.75rem;
+  --font-size-body: var(--font-size-1);
+  --font-size-body-large: var(--font-size-3);
+  --font-size-overline: var(--font-size-0);
 
   /* Borders */
   --border-color: light-dark(var(--gray-2), var(--gray-12));
@@ -86,7 +87,7 @@ html {
   /* Input */
   --input-border-radius: var(--size-1);
 
-  /* Butttons */
+  /* Buttons */
   --button-border-radius: 100vmax;
   --button-ripple-size: 100%;
 }

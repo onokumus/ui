@@ -115,3 +115,7 @@ These are the classes and attributes a card can be styled with. As usual, feel f
 | --------------------- | ---------------------------------------------- | ------- | ------------------------------------ |
 | [Children](#anatomy)  | `& > <hgroup>`, `& > .content`, `& > .actions` | -       | Optional wrappers for child content. |
 | [Variants](#variants) | `.text`, `.outlined`, `.tonal`, `.elevated`    | `.text` | The variant to use.                  |
+
+## See also
+
+- [Card component architecture design decisions](/blog/posts/card-architecture)

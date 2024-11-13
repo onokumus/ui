@@ -60,7 +60,7 @@ status: public
 	.step-4 {
 		height: 2rem;
 		width: 100%;
-	&:indeterminate::-webkit-progress-bar {
+		&:indeterminate::-webkit-progress-bar {
 			background-color: yellow;
 		}
 
@@ -81,7 +81,7 @@ status: public
 <hgroup>
 	<p>2024-11-12</p>
 	<h1>The ridiculously confusing task of styling a decent-looking progress bar</h1>
-	<p>You would think it's easy. I mean, it's just _one_ puny, simple HTML element!</p>
+	<p>You would think it's easy. I mean, it's just one teeny tiny, simple HTML element!</p>
 </hgroup>
 
 <p v-if="stopIt < 1" @click="stopIt = 2" style="cursor: pointer;">How hard could it be?</p>
@@ -110,7 +110,7 @@ height="50px"
 
 ### Let's try to do something basic.
 
-It works! I managed to change the height, width and accent-color.
+Can we change the height, width and accent-color?
 
 <Example>
 <template #example>
@@ -130,7 +130,7 @@ progress {
 </template>
 </Example>
 
-I don't like that border-radius though. Let's set it to 0!
+It works! I don't like that border-radius though. Let's set it to 0!
 
 <Example>
 <template #example>
@@ -198,9 +198,15 @@ Armed with this knowledge - how do we change the `background-color` of... whatev
 progress::-webkit-progress-bar {
   background-color: yellow;
 }
+progress::-webkit-progress-value {
+  background-color: yellow;
+}
+progress::-moz-progress-bar {
+  background-color: yellow;
+}
 ```
 
 </template>
 </Example>
 
-Hmm, no, guess it's not that.
+Nothing happened? Hmm, no, guess it's not that.

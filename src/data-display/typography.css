@@ -68,6 +68,8 @@ h6,
 
   /* The second p element */
   & > p:last-of-type:last-child:not(:first-child) {
+    font-size: var(--font-size-body-large);
+    line-height: 1.6;
     opacity: 0.75;
   }
 }
@@ -111,14 +113,6 @@ h6,
 
   p {
     margin-block: 1.25em;
-  }
-
-  /* Lead paragraph */
-  [class~="lead"] {
-    font-size: 1.25em;
-    line-height: 1.6;
-    margin-block-start: 1.5em;
-    margin-block-end: 1.5em;
   }
 
   h1 {
@@ -168,6 +162,10 @@ h6,
     & + * {
       margin-block-start: 0;
     }
+  }
+
+  hgroup + * {
+    margin-block-start: 3em;
   }
 
   /* Lists */

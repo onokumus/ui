@@ -16,6 +16,10 @@ html.dark {
   margin-block: 1.25em;
 }
 
+:where(.vp-doc > div > hgroup + *) {
+  margin-block-start: 3em;
+}
+
 .anatomy {
   --_anatomy-border-red: 2px dotted tomato;
   --_anatomy-border-gray: 2px dotted gray;
