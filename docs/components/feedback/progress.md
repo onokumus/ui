@@ -20,7 +20,7 @@
 
 <Example>
 <template #example>
-<progress></progress>
+<progress  aria-busy="true"></progress>
 </template>
 
 <template #code>
@@ -53,3 +53,31 @@
 Check out the documentation for the [spinner](/components/feedback/spinner).
 
 ## Accessibility
+
+If the `<progress>` element is describing the loading progress of a section of a page:
+
+- use `aria-describedby` to point to the status
+- set `aria-busy="true"` on the section that is being updated, removing it when loading is finished.
+
+Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress#accessibility)
+
+<Example>
+<template #example>
+<div aria-busy="true" aria-describedby="progress-bar">
+  Content here is loading.
+</div>
+
+<progress id="progress-bar" aria-label="Content loading…"></progress>
+</template>
+<template #code>
+
+```html
+<div aria-busy="true" aria-describedby="progress-bar">
+  Content here is loading.
+</div>
+
+<progress id="progress-bar" aria-label="Content loading…"></progress>
+```
+
+</template>
+</Example>

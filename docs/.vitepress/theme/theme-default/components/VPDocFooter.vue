@@ -6,7 +6,7 @@ import { usePrevNext } from "../composables/prev-next";
 import VPLink from "./VPLink.vue";
 import VPDocFooterLastUpdated from "./VPDocFooterLastUpdated.vue";
 
-const { theme, page, frontmatter } = useData();
+const { theme, page, site, frontmatter } = useData();
 
 const editLink = useEditLink();
 const control = usePrevNext();
@@ -39,6 +39,16 @@ const showFooter = computed(
       <div v-if="hasLastUpdated" class="last-updated">
         <VPDocFooterLastUpdated />
       </div>
+
+      <a
+        class="edit-link-button"
+        v-if="site?.themeConfig?.socialLinks"
+        :href="
+          site?.themeConfig?.socialLinks?.find((item) => item.icon === 'github')
+            ?.link
+        "
+        >Contribute on Github</a
+      >
     </div>
 
     <nav

@@ -1,4 +1,11 @@
-[aria-busy="true"]:not(input, select, textarea, html) {
+[aria-busy="true"]:not(
+    input,
+    select,
+    textarea,
+    html,
+    progress,
+    [aria-describedby]
+  ) {
   position: relative;
 
   &:before {
