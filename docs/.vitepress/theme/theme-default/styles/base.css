@@ -36,23 +36,9 @@
   }
 
   body {
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    background-color: var(--vp-c-bg);
-    color: var(--vp-c-text-1);
-    font-family: var(--vp-font-family-base);
-    font-size: 16px;
-    font-synthesis: style;
-    font-weight: 400;
-    line-height: 24px;
-    margin: 0;
-    min-height: 100vh;
-    min-width: 320px;
-    position: relative;
-    text-rendering: optimizeLegibility;
-    width: 100%;
+    /* dev purposes */
     &:before {
-      content: ""; /* dev purposes */
+      content: "";
       opacity: 0.2;
       background-image: radial-gradient(
         var(--color-body) 1.4500000000000002px,
@@ -82,7 +68,7 @@
   h5,
   h6 {
     margin: 0;
-    line-height: 24px;
+    line-height: var(--font-lineheight-3);
     font-size: 16px;
     font-weight: 400;
   }

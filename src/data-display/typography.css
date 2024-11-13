@@ -91,7 +91,6 @@ h6,
 }
 
 :where(abbr, .abbr, dfn, .dfn) {
-  cursor: help;
   font-style: normal;
   text-decoration-color: var(--info);
 }

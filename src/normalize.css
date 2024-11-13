@@ -15,12 +15,14 @@
   );
 
   -webkit-text-size-adjust: none; /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
-  accent-color: var(--primary, var(--link));
+
+  accent-color: var(--primary);
   background-color: var(--surface-default);
   block-size: 100%;
-  caret-color: var(--primary, var(--link));
+  caret-color: var(--primary);
   color: var(--color-body);
   font-family: var(--font-sans);
+
   line-height: var(--font-lineheight-3);
   scrollbar-color: var(--scrollthumb-color) transparent;
 
@@ -30,7 +32,18 @@
 }
 
 :where(body) {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+  font-synthesis: style;
+  font-weight: var(--font-weight-4);
+  inline-size: 100%;
+  line-height: var(--font-lineheight-3);
+  margin: 0;
   min-block-size: 100%;
+  min-inline-size: 320px;
+  position: relative;
+  text-rendering: optimizeLegibility;
 }
 
 /* TODO */
@@ -72,17 +85,22 @@
   outline-offset: var(--outline-offset, 0px);
 }
 
-/* :where(h3, h4, h5, h6, dt) {
-  max-inline-size: var(--size-header-3);
+:where(ins, u, abbr, dfn) {
+  text-decoration: underline;
+  text-underline-offset: 1px;
+
+  @supports (-moz-appearance: none) {
+    text-underline-offset: 2px;
+  }
 }
 
-:where(p, ul, ol, dl, h6) {
-  font-size: var(--font-size-body, var(--font-size-2));
-} */
-
-:where(u, ins, abbr, dfn) {
+:where(abbr, dfn) {
   text-decoration: underline dotted;
-  text-underline-offset: 1px;
+
+  &[title] {
+    cursor: help;
+    text-underline-offset: 1px;
+  }
 
   @supports (-moz-appearance: none) {
     text-underline-offset: 2px;

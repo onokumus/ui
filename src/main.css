@@ -3,6 +3,8 @@
 /* Props */
 @import "https://unpkg.com/open-props@2.0.0-beta.5/css/index.css"
   layer(props.main);
+@import "https://unpkg.com/open-props@2.0.0-beta.5/css/font/lineheight.css"
+  layer(props.lineheight);
 @import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/red.hex.css"
   layer(props.colors.red);
 @import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/green.hex.css"
@@ -15,7 +17,7 @@
   layer(props.colors.hues);
 @import "../node_modules/open-props/gray-oklch.min.css" layer(props.colors.gray);
 
-/* Noramlize */
+/* Normalize */
 @import "./normalize.css" layer(normalize);
 
 /* Utils */
