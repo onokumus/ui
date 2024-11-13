@@ -1,6 +1,6 @@
 ---
 date: 2024-11-12
-title: The ridiculously hard task of styling a decent-looking progress bar
+title: The ridiculously confusing task of styling a decent-looking progress bar
 category: blog
 tags: ui
 excerpt: How hard can it be?
@@ -8,14 +8,18 @@ status: public
 ---
 
 <script setup>
+	import { ref } from "vue"
 	import Example from "../../.vitepress/theme/app/components/Example.vue"
+
+	const stopIt = ref(false)
 </script>
 
 <style scoped>
-	.unstyled {
+	:where(.unstyled) {
 		all: revert;
 
 		&:indeterminate {
+			all: revert;
 			&:after {
 				display: none;
 			}
@@ -56,19 +60,35 @@ status: public
 	.step-4 {
 		height: 2rem;
 		width: 100%;
+	&:indeterminate::-webkit-progress-bar {
+			background-color: yellow;
+		}
+
+		&:indeterminate::-webkit-progress-value {
+			background-color: yellow;
+		}
+
+		&:indeterminate::-moz-progress-bar {
+			background-color: yellow;
+		}
 	}
+
+
+
+
 </style>
 
-# The ridiculously hard task of styling a decent-looking progress bar
+# The ridiculously confusing task of styling a decent-looking progress bar
 
 You would think it's easy. I mean, it's just _one_ puny, simple HTML element!
 
-<marquee
-  direction="down"
-  width="200px"
-  height="50px"
-  behavior="alternate">
-<marquee  behavior="alternate"  class="my-favorite-html-element">How hard could it be?</marquee>
+<marquee @click="stopIt = !stopIt"
+class="this-is-my-favorite-html-element"
+direction="down"
+width="200px"
+height="50px"
+:behavior="stopIt ? '' : 'alternate'" style="cursor: pointer;" title="Try it!">
+<marquee :behavior="stopIt ? '' : 'alternate'">How hard could it be?</marquee>
 </marquee>
 
 <Example>
@@ -87,7 +107,7 @@ You would think it's easy. I mean, it's just _one_ puny, simple HTML element!
 
 ### Let's try to do something basic.
 
-It works!
+It works! I managed to change the height, width and accent-color.
 
 <Example>
 <template #example>
@@ -107,7 +127,7 @@ progress {
 </template>
 </Example>
 
-I don't like that `border-radius` though. Let's set it to `0`!
+I don't like that border-radius though. Let's set it to 0!
 
 <Example>
 <template #example>
@@ -130,7 +150,7 @@ progress {
 
 Uh-oh. It just... disappeared? Uhm.. ok let's ignore that then.
 
-It became gray, that's weird. How about doing something about that `background-color` then?
+It became gray, that's weird. How about doing something about that background color instead then?
 
 <Example>
 <template #example>
@@ -162,7 +182,7 @@ Turns out the `<progress>` element is the forgotten middle child in the browser 
 - `progress::-moz-progress-bar`
 - `progress::-webkit-progress-value`
 
-Armed with this knowledge - how do we change the `background-color`?
+Armed with this knowledge - how do we change the `background-color` of... whatever any of that is?
 
 <Example>
 <template #example>
@@ -172,11 +192,6 @@ Armed with this knowledge - how do we change the `background-color`?
 <template #code>
 
 ```css
-progress {
-  height: 2rem;
-  width: 100%;
-}
-
 progress::-webkit-progress-bar {
   background-color: yellow;
 }
