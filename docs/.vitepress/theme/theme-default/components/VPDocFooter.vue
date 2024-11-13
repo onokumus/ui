@@ -47,7 +47,7 @@ const showFooter = computed(
           site?.themeConfig?.socialLinks?.find((item) => item.icon === 'github')
             ?.link
         "
-        >Contribute on Github</a
+        >Go to repo</a
       >
     </div>
 
