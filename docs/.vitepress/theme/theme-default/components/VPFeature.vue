@@ -23,7 +23,7 @@ defineProps<{
     :no-icon="true"
     :tag="link ? 'a' : 'div'"
   >
-    <article class="card elevated">
+    <article class="card tonal">
       <div class="content">
         <div v-if="typeof icon === 'object' && icon.wrap" class="icon">
           <VPImage
