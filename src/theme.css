@@ -58,9 +58,6 @@ html {
   --success-dark: var(--green-9);
   --success-text: light-dark(var(--color-1), var(--color-11));
 
-  --link: var(--primary);
-  --link-visited: var(--primary-light);
-
   /* Surface */
   --surface-default: light-dark(var(--gray-0), var(--gray-13));
   --surface-filled: light-dark(var(--gray-1), var(--gray-14));
