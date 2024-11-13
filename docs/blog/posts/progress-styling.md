@@ -11,7 +11,7 @@ status: public
 	import { ref } from "vue"
 	import Example from "../../.vitepress/theme/app/components/Example.vue"
 
-	const stopIt = ref(false)
+	const stopIt = ref(2)
 </script>
 
 <style scoped>
@@ -78,17 +78,20 @@ status: public
 
 </style>
 
-# The ridiculously confusing task of styling a decent-looking progress bar
+<hgroup>
+	<p>2024-11-12</p>
+	<h1>The ridiculously confusing task of styling a decent-looking progress bar</h1>
+	<p>You would think it's easy. I mean, it's just _one_ puny, simple HTML element!</p>
+</hgroup>
 
-You would think it's easy. I mean, it's just _one_ puny, simple HTML element!
-
-<marquee @click="stopIt = !stopIt"
+<p v-if="stopIt < 1" @click="stopIt = 2" style="cursor: pointer;">How hard could it be?</p>
+<marquee v-else @click="stopIt--"
 class="this-is-my-favorite-html-element"
 direction="down"
 width="200px"
 height="50px"
-:behavior="stopIt ? '' : 'alternate'" style="cursor: pointer;" title="Try it!">
-<marquee :behavior="stopIt ? '' : 'alternate'">How hard could it be?</marquee>
+:behavior="stopIt === 1 ? '' : 'alternate'" style="cursor: pointer;" title="Try it!">
+<marquee direction="right" :behavior="stopIt === 1 ? '' : 'alternate'">How hard could it be?</marquee>
 </marquee>
 
 <Example>
