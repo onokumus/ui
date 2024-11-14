@@ -60,7 +60,7 @@
 }
 
 :where(td, th) {
-  padding: var(--size-2);
+  padding: var(--size-2, 0.5rem);
   text-align: left;
 }
 

@@ -220,10 +220,10 @@
     --vp-c-tip-3: var(--vp-c-indigo-3);
     --vp-c-tip-soft: var(--vp-c-indigo-soft);
 
-    --vp-c-note-1: var(--primary);
-    --vp-c-note-2: var(--primary-light);
-    --vp-c-note-3: var(--primary);
-    --vp-c-note-soft: var(--primary-light);
+    --vp-c-note-1: var(--primary, cornflowerblue);
+    --vp-c-note-2: var(--primary, deepskyblue);
+    --vp-c-note-3: var(--primary, cornflowerblue);
+    --vp-c-note-soft: var(--primary, deepskyblue);
 
     --vp-c-success-1: var(--vp-c-green-1);
     --vp-c-success-2: var(--vp-c-green-2);
@@ -304,9 +304,9 @@
   :root {
     --vp-code-line-height: 1.7;
     --vp-code-font-size: 0.875rem;
-    --vp-code-color: var(--primary);
-    --vp-code-link-color: var(--primary);
-    --vp-code-link-hover-color: var(--primary-light);
+    --vp-code-color: var(--primary, cornflowerblue);
+    --vp-code-link-color: var(--primary, cornflowerblue);
+    --vp-code-link-hover-color: var(--primary, deepskyblue);
     --vp-code-bg: var(
       --surface-tonal,
       light-dark(oklch(95% 0.01 255 / 1), oklch(31% 0.01 255 / 1))
@@ -342,7 +342,7 @@
     --vp-code-tab-text-color: rgba(235, 235, 245, 0.6);
     --vp-code-tab-hover-text-color: rgba(255, 255, 245, 0.86);
     --vp-code-tab-active-text-color: rgba(255, 255, 245, 0.86);
-    --vp-code-tab-active-bar-color: var(--primary);
+    --vp-code-tab-active-bar-color: var(--primary, cornflowerblue);
   }
 
   /**
@@ -352,13 +352,13 @@
   :root {
     --vp-button-brand-border: transparent;
     --vp-button-brand-text: var(--vp-c-white);
-    --vp-button-brand-bg: var(--primary);
+    --vp-button-brand-bg: var(--primary, cornflowerblue);
     --vp-button-brand-hover-border: transparent;
     --vp-button-brand-hover-text: var(--vp-c-white);
-    --vp-button-brand-hover-bg: var(--primary-light);
+    --vp-button-brand-hover-bg: var(--primary, deepskyblue);
     --vp-button-brand-active-border: transparent;
     --vp-button-brand-active-text: var(--vp-c-white);
-    --vp-button-brand-active-bg: var(--primary);
+    --vp-button-brand-active-bg: var(--primary, cornflowerblue);
 
     --vp-button-alt-border: transparent;
     --vp-button-alt-text: var(--text-color-2);
@@ -490,7 +490,7 @@
  * -------------------------------------------------------------------------- */
 
   :root {
-    --vp-home-hero-name-color: var(--primary);
+    --vp-home-hero-name-color: var(--primary, cornflowerblue);
     --vp-home-hero-name-background: transparent;
 
     --vp-home-hero-image-background-image: none;
@@ -527,7 +527,7 @@
     --vp-carbon-ads-text-color: var(--text-color-2);
     --vp-carbon-ads-poweredby-color: var(--text-color-2-78);
     --vp-carbon-ads-bg-color: var(--vp-c-bg-soft);
-    --vp-carbon-ads-hover-text-color: var(--primary);
+    --vp-carbon-ads-hover-text-color: var(--primary, cornflowerblue);
     --vp-carbon-ads-hover-poweredby-color: var(--text-color-2);
   }
 
@@ -540,8 +540,8 @@
     --vp-local-search-result-bg: var(--vp-c-bg);
     --vp-local-search-result-border: var(--vp-c-divider);
     --vp-local-search-result-selected-bg: var(--vp-c-bg);
-    --vp-local-search-result-selected-border: var(--primary);
-    --vp-local-search-highlight-bg: var(--primary);
+    --vp-local-search-result-selected-border: var(--primary, cornflowerblue);
+    --vp-local-search-highlight-bg: var(--primary, cornflowerblue);
     --vp-local-search-highlight-text: var(--vp-c-neutral-inverse);
   }
 }

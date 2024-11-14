@@ -14,12 +14,12 @@
 
     a,
     code {
-      color: var(--primary);
+      color: var(--primary, cornflowerblue);
     }
 
     a:hover,
     a:hover > code {
-      color: var(--primary-light);
+      color: var(--primary, deepskyblue);
     }
 
     code {
@@ -34,12 +34,12 @@
 
     a,
     code {
-      color: var(--primary);
+      color: var(--primary, cornflowerblue);
     }
 
     a:hover,
     a:hover > code {
-      color: var(--primary-light);
+      color: var(--primary, deepskyblue);
     }
 
     code {
@@ -153,12 +153,12 @@
     background-color: var(--vp-custom-block-details-bg);
 
     a {
-      color: var(--primary);
+      color: var(--primary, cornflowerblue);
     }
 
     a:hover,
     a:hover > code {
-      color: var(--primary-light);
+      color: var(--primary, deepskyblue);
     }
 
     code {
@@ -182,7 +182,7 @@
     margin: 0;
 
     & + * {
-      margin-block: var(--size-2);
+      margin-block: var(--size-2, 0.5rem);
     }
   }
 

@@ -16,13 +16,13 @@
 
   -webkit-text-size-adjust: none; /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
 
-  accent-color: var(--primary);
+  accent-color: var(--primary, cornflowerblue);
   background-color: var(
     --surface-default,
     light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
   );
   block-size: 100%;
-  caret-color: var(--primary);
+  caret-color: var(--primary, cornflowerblue);
   color: var(--text-color-2);
   font-family: var(--font-sans);
 
@@ -180,7 +180,7 @@
     light-dark(oklch(95% 0.01 255 / 1), oklch(18% 0.01 255 / 1))
   );
   border-radius: var(--border-radius, var(--radius-2));
-  padding: var(--size-1, 0.25rem) var(--size-2);
+  padding: var(--size-1, 0.25rem) var(--size-2, 0.5rem);
   writing-mode: lr;
 }
 
@@ -209,7 +209,7 @@
 
 :where(figure) {
   display: grid;
-  gap: var(--size-2);
+  gap: var(--size-2, 0.5rem);
   place-items: center;
 
   & > :where(figcaption) {

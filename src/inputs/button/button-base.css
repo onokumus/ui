@@ -21,7 +21,7 @@
   display: inline-flex;
   font-size: var(--_font-size);
   font-weight: var(--font-weight-7);
-  gap: var(--size-2);
+  gap: var(--size-2, 0.5rem);
   justify-content: center;
   padding-block: 1ex;
   padding-inline: 2ex;

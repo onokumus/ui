@@ -19,7 +19,7 @@ html {
 /*
 TODO: Make sure it doesn't show if there's nothing to scroll
 #progress {
-  background: var(--primary);
+  background: var(--primary, cornflowerblue);
   height: 0.25em;
   inset-block-start: 0;
   inset-inline-start: 0;
@@ -38,7 +38,7 @@ TODO: Make sure it doesn't show if there's nothing to scroll
   text-transform: uppercase;
 
   span {
-    color: var(--primary);
+    color: var(--primary, cornflowerblue);
     font-weight: 300;
 
     &:first-of-type {

@@ -1,7 +1,7 @@
 :where(button, .button) {
   --_bg-color: transparent;
   --_border-color: transparent;
-  --_text-color: var(--primary);
+  --_text-color: var(--primary, cornflowerblue);
 
   /* TODO */
   &:where(:not(.disabled, [disabled])) {

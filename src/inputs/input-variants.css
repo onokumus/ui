@@ -15,7 +15,7 @@
   ) {
   font-size: var(--font-size-body, 1rem);
   line-height: var(--font-lineheight-3);
-  padding: var(--size-2);
+  padding: var(--size-2, 0.5rem);
 
   /* Variants */
   &.underlined {
@@ -32,7 +32,7 @@
   /* TODO: font size should be 16px to avoid mobile zoom in */
   &.small {
     font-size: var(--font-size-0, var(--font-size-1, 1rem));
-    padding: var(--size-1, 0.25rem) var(--size-2);
+    padding: var(--size-1, 0.25rem) var(--size-2, 0.5rem);
   }
   /* TODO: font size should be 16px to avoid mobile zoom in */
   &.large {

@@ -1,5 +1,5 @@
 :where(progress) {
-  --_accent-color: var(--primary);
+  --_accent-color: var(--primary, cornflowerblue);
   --_bg-color: var(
     --surface-tonal,
     light-dark(oklch(95% 0.01 255 / 1), oklch(31% 0.01 255 / 1))
@@ -7,17 +7,17 @@
 
   appearance: none;
   background-color: var(--_bg-color);
-  border-radius: var(--border-radius);
+  border-radius: var(--border-radius, 0.25rem);
   border: 0;
   display: inline-block;
-  height: var(--size-2);
+  height: var(--size-2, 0.5rem);
   overflow: hidden;
   position: relative;
   vertical-align: baseline;
   width: 100%;
 
   &::-webkit-progress-bar {
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius, 0.25rem);
     background: none;
   }
 
