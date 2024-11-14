@@ -59,7 +59,7 @@
     );
     --_border-color: var(
       --border-color,
-      light-dark(oklch(99% 0.01 255 / 1), oklch(37% 0.01 255 / 1))
+      light-dark(oklch(37% 0.01 255 / 1), oklch(99% 0.01 255 / 1))
     );
     --_border-width: 1px;
   }
