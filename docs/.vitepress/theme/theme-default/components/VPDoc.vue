@@ -21,6 +21,8 @@ const pageName = computed(() =>
     class="VPDoc"
     :class="{ 'has-sidebar': hasSidebar, 'has-aside': hasAside }"
   >
+    <div id="progress"></div>
+
     <slot name="doc-top" />
     <div class="container">
       <div v-if="hasAside" class="aside" :class="{ 'left-aside': leftAside }">
@@ -75,6 +77,7 @@ const pageName = computed(() =>
 <style scoped>
 .VPDoc {
   padding: 32px 24px 96px;
+  position: relative;
   width: 100%;
 }
 
