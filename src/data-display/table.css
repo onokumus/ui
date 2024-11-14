@@ -1,91 +1,59 @@
 :where(table) {
-  background: var(
-    --surface-filled,
-    light-dark(oklch(95% 0.01 255 / 1), oklch(18% 0.01 255 / 1))
-  );
-  border-radius: var(--radius-3);
-  border: 1px solid
-    var(
-      --surface-filled,
-      light-dark(oklch(95% 0.01 255 / 1), oklch(18% 0.01 255 / 1))
-    );
-  width: fit-content;
-
-  --nice-inner-radius: calc(var(--radius-3) - 2px);
-}
-
-:where(table:not(:has(tfoot)) tr:last-child td:first-child) {
-  border-end-start-radius: var(--nice-inner-radius);
-}
-
-:where(table:not(:has(tfoot)) tr:last-child td:last-child) {
-  border-end-end-radius: var(--nice-inner-radius);
-}
-
-:where(table thead tr:first-child th:first-child) {
-  border-start-start-radius: var(--nice-inner-radius);
-}
-
-:where(table thead tr:first-child th:last-child) {
-  border-start-end-radius: var(--nice-inner-radius);
-}
-
-:where(tfoot tr:last-child :is(th, td):first-of-type) {
-  border-end-start-radius: var(--nice-inner-radius);
-}
-
-:where(tfoot tr:last-child :is(th, td):last-of-type) {
-  border-end-end-radius: var(--nice-inner-radius);
-}
-
-:where(th) {
-  color: var(--text-color-2);
-  background-color: var(
-    --surface-filled,
-    light-dark(oklch(95% 0.01 255 / 1), oklch(18% 0.01 255 / 1))
-  );
-}
-
-:where(table :is(a, button, [contenteditable]):is(:focus-visible)) {
-  outline-offset: -2px;
-}
-
-:where(td) {
-  background: var(
-    --surface-default,
-    light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
-  );
-  max-inline-size: var(--size-content-2);
-  text-wrap: pretty;
-}
-
-:where(td, th) {
-  padding: var(--size-2, 0.5rem);
-  text-align: left;
-}
-
-:where(:is(td, th):not([align])) {
-  text-align: center;
-}
-
-:where(thead) {
   border-collapse: collapse;
-}
+  display: block;
+  margin: var(--size-3, 1rem) 0;
+  overflow-x: auto;
 
-:where(table tr:hover td),
-:where(tbody tr:nth-child(even):hover td) {
-  background-color: var(--gray-10, oklch(43% 0.01 255 / 1));
-
-  @container style(--color-scheme: light) {
-    background-color: white;
+  tr {
+    background-color: var(
+      --surface-default,
+      light-dark(
+        var(--gray-0, oklch(99% 0.01 255 / 1)),
+        var(--gray-13, oklch(25% 0.01 255 / 1))
+      )
+    );
+    border-top: 1px solid
+      var(
+        --border-color,
+        light-dark(
+          var(--gray-2, oklch(88% 0.01 255 / 1)),
+          var(--gray-11, oklch(37% 0.01 255 / 1))
+        )
+      );
+    transition: background-color 0.5s;
   }
-}
 
-:where(table > caption) {
-  margin: var(--size-3, 1rem);
-}
+  tr:nth-child(2n) {
+    background-color: var(
+      --surface-filled,
+      light-dark(
+        var(--gray-1, oklch(95% 0.01 255 / 1)),
+        var(--gray-14, oklch(18% 0.01 255 / 1))
+      )
+    );
+  }
 
-:where(tfoot button) {
-  padding-block: var(--size-1, 0.25rem);
-  padding-inline: var(--size-3, 1rem);
+  th,
+  td {
+    border: 1px solid var(--border-color);
+    padding: 8px 16px;
+  }
+
+  th {
+    background-color: var(
+      --surface-filled,
+      light-dark(
+        var(--gray-1, oklch(95% 0.01 255 / 1)),
+        var(--gray-14, oklch(18% 0.01 255 / 1))
+      )
+    );
+    color: var(--text-color-1);
+    font-size: var(--font-size-body, 1rem);
+    font-weight: 600;
+    text-align: left;
+  }
+
+  td {
+    font-size: var(--font-size-body, 1rem);
+  }
 }
