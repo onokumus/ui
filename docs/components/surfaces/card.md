@@ -122,7 +122,7 @@ These are the classes and attributes a card can be styled with. As usual, feel f
 
 - [Card component architecture design decisions](/blog/posts/card-architecture)
 
-## Source code
+## Installation
 
 ::: warning
 Other components might depend on the card component. Be mindful when making changes.

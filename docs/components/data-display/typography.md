@@ -285,7 +285,7 @@ Nested lists basically always look bad which is why editors like Medium don't ev
 1. **Nested lists are rarely a good idea.**
    - You might feel like you are being really "organized" or something but you are just creating a gross shape on the screen that is hard to read.
    - Nested navigation in UIs is a bad idea too, keep things as flat as possible.
-   - Nesting tons of folders in your source code is also not helpful.
+   - Nesting tons of folders in your Installation is also not helpful.
 2. **Since we need to have more items, here's another one.**
    - I'm not sure if we'll bother styling more than two levels deep.
    - Two is already too much, three is guaranteed to be a bad idea.
@@ -383,7 +383,7 @@ What I've written here is probably long enough, but adding this final sentence c
 </template>
 </Example>
 
-## Source code
+## Installation
 
 Includes both basic styles for typographic elements as well as the `.rich-text` styles.
 

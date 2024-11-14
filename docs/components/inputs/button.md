@@ -518,7 +518,7 @@ These are the classes and attributes a button can be styled with. As usual, feel
 | [Sizes](#sizes)           | `.small`, `.medium`, `.large`                          | `.medium` | The size of the button.                            |
 | [Variants](#variants)     | `.text`, `.outlined`, `.tonal`, `.filled`, `.elevated` | `.text`   | The variant to use.                                |
 
-## Source code
+## Installation
 
 ::: code-group
 <<< @/../src/inputs/button/button-base.css [button-base.css]

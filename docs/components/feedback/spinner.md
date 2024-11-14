@@ -111,7 +111,7 @@ See [progress accessibility](/components/feedback/progress#accessibility) sectio
 - `<progress>`
 - any element with `[aria-describedby]` ([progress accessibility](/components/feedback/progress#accessibility))
 
-## Source code
+## Installation
 
 ::: code-group
 <<< @/../src/feedback/spinner.css [spinner.css]

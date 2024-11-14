@@ -159,7 +159,7 @@ Source: [w3.org](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/
 
 A `<dialog>` element on its own doesn't do much. It's recommended to use it in combination with the [card](/components/surfaces/card) component.
 
-## Source code
+## Installation
 
 ::: tip
 It's recommended to use the dialog in combination with the [card](/components/surfaces/card) component.
