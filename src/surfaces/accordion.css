@@ -40,11 +40,7 @@
     user-select: none;
   }
 
-  /* Alternative custom arrow  (commented out) */
-  /* Includes custom arrow implementation with rotation animation */
-  /*
-  Custom arrow
-  */
+  /* Custom arrow */
   /* summary {
     align-items: center;
     background-color: inherit;
