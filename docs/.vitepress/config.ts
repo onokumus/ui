@@ -3,7 +3,8 @@ import { defineConfig } from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Open Props UI",
-  description: "A scalable CSS happy path",
+  description:
+    "CSS framework leveraging the most modern features. Components you can copy and paste into your project.",
   markdown: {
     theme: "dark-plus",
   },
@@ -20,7 +21,7 @@ export default defineConfig({
       },
     },
     nav: [
-      { text: "Guide", link: "/guide/why-open-props-ui" },
+      { text: "Guide", link: "/guide/what-is-open-props-ui" },
       { text: "Components", link: "/components" },
       // {
       //   text: "Version",
@@ -57,23 +58,18 @@ export default defineConfig({
           text: "Guide",
           items: [
             {
-              text: "Getting started",
-              link: "/guide/getting-started",
+              text: "What is Open Props UI?",
+              link: "/guide/what-is-open-props-ui",
             },
             {
-              text: "Why Open Props UI?",
-              link: "/guide/why-open-props-ui",
+              text: "Getting started",
+              link: "/guide/getting-started",
             },
           ],
         },
         {
-          text: "About",
-          items: [
-            {
-              text: "Acknowledgments",
-              link: "/guide/acknowledgments",
-            },
-          ],
+          text: "Acknowledgments",
+          link: "/guide/acknowledgments",
         },
       ],
       "/components": [

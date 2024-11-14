@@ -108,7 +108,7 @@ height="50px"
 </template>
 </Example>
 
-### Let's try to do something basic.
+### Let's try to do something basic
 
 Can we change the height, width and accent-color?
 

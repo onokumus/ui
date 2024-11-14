@@ -147,10 +147,10 @@ function onCaretClick() {
 }
 
 :is(
-    .VPSidebarItem.level-2,
-    .VPSidebarItem.level-3,
-    .VPSidebarItem.level-4,
-    .VPSidebarItem.level-5
+    .VPSidebarItem.level-2:not(.collapsible),
+    .VPSidebarItem.level-3:not(.collapsible),
+    .VPSidebarItem.level-4:not(.collapsible),
+    .VPSidebarItem.level-5:not(.collapsible)
   )
   > .item {
   border-radius: var(--radius-1);
@@ -160,6 +160,14 @@ function onCaretClick() {
       --surface-default,
       light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
     );
+  }
+}
+
+:is(.VPSidebarItem.level-1:not(.collapsible)) > .item {
+  &:hover {
+    .indicator {
+      display: none;
+    }
   }
 }
 

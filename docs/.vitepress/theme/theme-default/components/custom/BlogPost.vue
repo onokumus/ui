@@ -14,11 +14,8 @@ const { site } = useData();
       <hgroup>
         <p>{{ post.date.since }}</p>
         <h2 class="h5">{{ post.title }}</h2>
-      </hgroup>
-
-      <div class="content">
         <p v-html="post.excerpt" />
-      </div>
+      </hgroup>
 
       <footer class="actions">
         <div class="button small">Read more</div>
