@@ -106,7 +106,7 @@
     border: 1px solid
       var(
         --border-color,
-        light-dark(oklch(99% 0.01 255 / 1), oklch(37% 0.01 255 / 1))
+        light-dark(oklch(37% 0.01 255 / 1), oklch(99% 0.01 255 / 1))
       );
   }
   &.tonal {
@@ -126,7 +126,7 @@
 :where(.card:has(details)) {
   --_gutter-color: var(
     --border-color,
-    light-dark(oklch(99% 0.01 255 / 1), oklch(37% 0.01 255 / 1))
+    light-dark(oklch(37% 0.01 255 / 1), oklch(99% 0.01 255 / 1))
   );
 
   & > .content {
