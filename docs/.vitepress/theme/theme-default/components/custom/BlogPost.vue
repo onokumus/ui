@@ -17,6 +17,11 @@ const { site } = useData();
         <p v-html="post.excerpt" />
       </hgroup>
 
+      <div class="content">
+        <!-- TODO: replace with chip -->
+        <kbd v-for="tag in post.tags">{{ tag }}</kbd>
+      </div>
+
       <footer class="actions">
         <div class="button small">Read more</div>
       </footer>
@@ -25,6 +30,12 @@ const { site } = useData();
 </template>
 
 <style scoped>
+.content {
+  display: flex;
+  flex-flow: wrap;
+  gap: var(--size-2);
+}
+
 a {
   color: var(--text-1);
   font-weight: var(--font-weight-4);

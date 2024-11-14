@@ -22,6 +22,7 @@ export interface Post {
   excerpt: string | undefined;
   status: "private" | "public";
   data: Record<string, any>;
+  tags?: string[];
 }
 
 declare const data: Post[];
@@ -57,6 +58,7 @@ function getPost(file: string, postDir: string) {
     date: formatDate(data.date),
     excerpt: data?.excerpt,
     status: data?.status ?? "private",
+    tags: data?.tags?.length ? data.tags.split(",") : [],
     data,
   };
 

@@ -173,7 +173,7 @@
 
   /* Lists */
   :where(ul, ol):not(:where([class~="not-rich-text"] *)) {
-    list-style-type: initial;
+    list-style-type: auto;
     margin-block-start: 1.25em;
     margin-block-end: 1.25em;
     padding-inline-start: 1.625em;

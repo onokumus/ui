@@ -1,3 +1,7 @@
+/*
+Screen-reader only
+When you visibly want to hide an element but make it accessible for screen readers.
+*/
 .sr-only {
   clip-path: inset(50%);
   height: 1px;

@@ -2,7 +2,7 @@
 date: 2024-11-12
 title: The ridiculously confusing task of styling a decent-looking progress bar
 category: blog
-tags: ui
+tags: progress bar
 excerpt: How hard can it be?
 status: public
 ---
@@ -176,9 +176,9 @@ progress {
 
 Gray, still?! What did I even do? :scream:
 
-## Pseudo-class heaven
+## Pseudo-element heaven
 
-Turns out the `<progress>` element is the forgotten middle child in the browser interop program. Pseudo-classes you'll need to remember to get going are:
+Turns out the `<progress>` element is the forgotten middle child in the browser interop program. Pseudo-elements and classes you'll need to remember to get going are:
 
 - `progress:indeterminate`
 - `progress::-webkit-progress-bar`
@@ -213,11 +213,11 @@ Nothing happened? Hmm, no, guess it's not that.
 
 ## The finished version
 
-At this point I'm just like... screw it!
+At this point I'm just like... screw it! I tried! **(╯°□°)╯︵ ┻━┻**
 
-If it's going to be this hard I'll just bypass all that nonsense and do something that's readable and will work regardless of pseudo-class nonsense! **(╯°□°)╯︵ ┻━┻**
+If it's going to be this hard I'll just bypass all that nonsense and do something that's readable and will work regardless of pseudo nonsense!
 
-I ended up reaching for the trusty `:after` pseudo-class. In this case it also enables me to do some nice animations, so win-win!
+I ended up reaching for the trusty `:after` pseudo-element. In this case it also enables me to do some nice animations, so win-win!
 
 <Example>
 <template #example>

@@ -2,7 +2,7 @@
 date: 2024-11-13
 title: Card component architecture design decisions
 category: blog
-tags: ui,card
+tags: card, architecture decisions
 excerpt: Is that even a thing? What is there to decide?
 status: public
 ---

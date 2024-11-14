@@ -1,20 +1,19 @@
-<div class="rich-text">
-
 # Acknowledgments
 
-Thank you to:
+## Thank you to {.h3}
 
 - Adam Argyle and the community at the Open Props Discord channel
 
-<hr>
-
-Sources of inspiration/theft:
+## Sources of inspiration/theft{.h3}
 
 - [Material UI](https://mui.com/material-ui)
 - [Google's Material Design guidelines](https://m3.material.io/)
-- [shadcn/ui](https://ui.shadcn.com/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Pico CSS](https://picocss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
 - [Open Components 2](https://github.com/Groene-Otter/oc2/)
 
-</div>
+## Other amazing resources{.h3}
+
+- [Mozilla Developer Network](https://developer.mozilla.org/)
+- [web.dev learning platform](https://web.dev/)
