@@ -48,12 +48,12 @@
       )
     );
     color: var(--text-color-1);
-    font-size: var(--font-size-body, 1rem);
+    font-size: var(--font-size-body-small, 0.75rem);
     font-weight: 600;
     text-align: left;
   }
 
   td {
-    font-size: var(--font-size-body, 1rem);
+    font-size: var(--font-size-body-small, 0.75rem);
   }
 }
