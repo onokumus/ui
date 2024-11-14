@@ -47,6 +47,7 @@ const showFooter = computed(
           site?.themeConfig?.socialLinks?.find((item) => item.icon === 'github')
             ?.link
         "
+        target="_blank"
         ><span class="vpi-social-github"></span>Go to repo</a
       >
     </div>
