@@ -1,6 +1,9 @@
-import { defineConfig } from "vite"
+import { defineConfig } from "vite";
 
 export default defineConfig({
+  optimizeDeps: {
+    include: ["baseline-status"],
+  },
   css: {
     transformer: "lightningcss",
     lightningcss: {
@@ -12,4 +15,4 @@ export default defineConfig({
   build: {
     cssMinify: "lightningcss",
   },
-})
+});

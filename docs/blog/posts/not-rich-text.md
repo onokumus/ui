@@ -1,43 +1,96 @@
 ---
 date: 2024-11-14
-title: Neat way to mix components and rich text
+title: A perfect use case for @scope
 category: blog
-tags: rich text, typography, Tailwind CSS
-excerpt: As with many other typography-related things I stole it from Tailwind CSS.
+tags: rich text, typography
+excerpt: What a life-saver!
 status: public
 ---
 
 <script setup>
 import Example from "../../.vitepress/theme/app/components/Example.vue"
+import 'baseline-status'
 </script>
 
 <hgroup>
 	<p>2024-11-14</p>
-	<h1>Neat way to mix components and rich text</h1>
-	<p>Learning other peoples' past lessons.</p>
+	<h1>A perfect use case for <code>@scope</code></h1>
+	<p>So many ugly hacks... gone!</p>
 </hgroup>
 
-Typography on the web is a moving target. In some ways it's kind of a solved problem - we roughly know what works in a hierarchical sense, what colors go better with others and so on.
+<article class="card outlined not-rich-text">
+<baseline-status featureId="scope"></baseline-status>
+</article>
 
-When designing the typographic rules of a component library though, especially in CSS where you're at the mercy of [ _the cascade_](https://web.dev/learn/css/the-cascade?continue=https%3A%2F%2Fweb.dev%2Flearn%2Fcss%2F%23article-https%3A%2F%2Fweb.dev%2Flearn%2Fcss%2Fthe-cascade):tm: you need to be mindful of what styles flow where.
+## Some context
 
-Before we continue there's some !important context you need to know.
+This is a simplification of what an article page on this website looks like. Wrapped around everything we find a `.rich-text` class and intermingled inside there could be some random components such as the code example component you see down below.
 
-The intended/default style hierarchy (at this date of writing) in Open Props UI is as follows:
+::: code-group
 
-```css
-@layer props, normalize, utils, theme, components;
+```html [article.html]
+<article class="rich-text">
+  <h1>Title</h1>
+  <p>Paragraph</p>
+
+  <div class="code-example-component">
+    <!--  -->
+  </div>
+</article>
 ```
 
-That means we:
+:::
 
-1. Reset some typographic elements in the `normalize` layer.
-2. Then Declare the `typography.css` component in the `components` layer and set most of our typographic styles there.
-3. Lastly we have the normal author CSS declarations (the ones outside of any `@layer` scope) which hierarchically sits on top of the CSS layers (though that [_depends_](https://developer.mozilla.org/en-US/docs/Web/CSS/@layer#description):tm:).
+The problem anyone runs into when approaching a page structure like this is that the `.rich-text` styles sneak into your preciously styled components you don't want polluted by anything else. Well, when coding vanilla CSS we're completely at the mercy of [ _the cascade_](https://web.dev/learn/css/the-cascade?continue=https%3A%2F%2Fweb.dev%2Flearn%2Fcss%2F%23article-https%3A%2F%2Fweb.dev%2Flearn%2Fcss%2Fthe-cascade):tm:, so we need to be mindful of what styles flow where.
 
-## So what's the problem?
+But what if we could tell CSS to just... look the other way and not care about our custom, precious components? :shrug:
 
-Notice how the typographic styles are different from the ones round the `<Example/>` component! There are no margins on the any of them for instance.
+## Enter `@scope`
+
+Developers have been quite confused by `@scope` ever since it was announced believing CSS _finally_ solved style scoping, but no that's not it. Basically `@scope` is primarily about defining a boundary for where your styles should apply, and depending on how creative you get with the selectors you can do some pretty cool stuff. If that meant absolutely nothing to you, you will get the hang of it soon, keep reading.
+
+::: tip
+Read through the [MDN docs](https://developer.mozilla.org/en-US/docs/Web/CSS/@scope) for more comprehensive info. It's actually quite good.
+:::
+
+If we introduce a second class, let's call it `.not-rich-text`, we can use `@scope` to create a little fence around the elements we want to protect.
+
+::: code-group
+
+```html{5} [article.html]
+<article class="rich-text">
+  <h1>Title</h1>
+  <p>Paragraph</p>
+
+  <div class="code-example-component not-rich-text">
+    <!--  -->
+  </div>
+</article>
+```
+
+:::
+
+The only change to our fairly large chunk of rich text styles is wrapping it like this:
+
+::: code-group
+
+```css [typography.css]
+@scope (.rich-text) to (.not-rich-text) {
+  :scope {
+    /* rich text styles */
+  }
+}
+```
+
+:::
+
+::: info Wait a minute! What's `:scope`?
+Easy! The `:scope` pseudo-class represents the scope's root. In this case it's `.rich-text`
+:::
+
+## End result
+
+Notice how the text styles are different from the ones in the article around the code example component! There are no margins on the any of them for instance. Our little style fence works!
 
 <Example>
 <template #example>
@@ -57,45 +110,27 @@ Notice how the typographic styles are different from the ones round the `<Exampl
 <template #code>
 
 ```html
-<h1>Heading 1</h1>
-<h2>Heading 2</h2>
-<h3>Heading 3</h3>
-<h4>Heading 4</h4>
-<h5>Heading 5</h5>
-<h6>Heading 6</h6>
-<p class="large">Body Large</p>
-<p>Body</p>
-<p class="overline">Overline</p>
-<caption>
-  Caption
-</caption>
+<article class="rich-text">
+  <!-- this article -->
+
+  <div class="code-example-component not-rich-text">
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    <p class="large">Body Large</p>
+    <p>Body</p>
+    <p class="overline">Overline</p>
+    <caption>
+      Caption
+    </caption>
+  </div>
+</article>
 ```
 
   </template>
 </Example>
 
-On a rich text page like a blog post or on a documentations article you want your text to be styled to encourage long-form reading. In a non-rich-text component you're probably not as interested in those styles.
-
-How are the styles kept separate? It's a bit tricky, but still easier that I thought.
-
-```css{12}
-h1 {
-  /***/
-  line-height: 1.15;
-}
-
-/*
-*
-*
-*/
-
-:where(.rich-text) {
-  :where(h1):not(:where([class~="not-rich-text"] *)) {
-    line-height: 1.1111111;
-  }
-}
-```
-
-The secret sauce is to wrap anything you don't want affected by the `.rich-text` styles with `.not-rich-text`, and then any element with that class _inside_ a `.rich-text` scope will be unaffected! Ta-daa!
-
-Totally stole that idea from [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss-typography), very very neat!
+Ta-daa! :clap:
