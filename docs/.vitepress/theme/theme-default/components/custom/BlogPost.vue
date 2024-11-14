@@ -38,7 +38,7 @@ a {
   }
 
   &:hover {
-    border-radius: var(--surface-border-radius);
+    border-radius: var(--surface-border-radius, 0.25rem);
     outline: 1px solid var(--primary);
     .link {
       text-decoration: underline;

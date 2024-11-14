@@ -27,7 +27,7 @@ defineProps<{
 
 <style scoped>
 .VPMenu {
-  border-radius: var(--surface-border-radius);
+  border-radius: var(--surface-border-radius, 0.25rem);
   padding: 12px;
   min-width: 128px;
   border: 1px solid var(--vp-c-divider);

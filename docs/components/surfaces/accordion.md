@@ -37,8 +37,7 @@
 
 # Accordion
 
-- Leverages the HTML `details` and `summary` elements.
-- Example with [custom arrow](#custom-arrow)
+Leverages the HTML `details` and `summary` elements. Uses the native HTML arrow, check out how to add your own [custom arrow](#custom-arrow).
 
 ## Basics
 
@@ -443,3 +442,5 @@ These are the classes and attributes a card can be styled with. As usual, feel f
 | --------------------- | --------------------------------------------- | ------- | ------------------------------------ |
 | [Anatomy](#anatomy)   | `& > summary`, `& > .content`, `& > .actions` | -       | Optional wrappers for child content. |
 | [Variants](#variants) | `.text`, `.elevated`, `.tonal`, `.outlined`,  | `.text` | The variant to use.                  |
+
+## Installation

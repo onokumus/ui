@@ -29,10 +29,11 @@
 /* Components */
 
 /*** Data display */
-@import "./data-display/divider.css" layer(theme.data-display.divider);
-@import "./data-display/link.css" layer(theme.data-display.link);
-@import "./data-display/table.css" layer(theme.data-display.table);
-@import "./data-display/typography.css" layer(theme.data-display.typography);
+@import "./data-display/divider.css" layer(components.data-display.divider);
+@import "./data-display/link.css" layer(components.data-display.link);
+@import "./data-display/table.css" layer(components.data-display.table);
+@import "./data-display/typography.css"
+  layer(components.data-display.typography);
 
 /*** Feedback */
 @import "./feedback/dialog.css" layer(components.feedback.dialog);

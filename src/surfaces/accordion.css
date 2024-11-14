@@ -1,12 +1,12 @@
 :where(details) {
   --_bg-color: transparent;
   --_shadow: none;
-  --_margin-inline: var(--size-1);
+  --_margin-inline: var(--size-1, 0.25rem);
   --_accordion-transition-time: 0.2s;
 
   background-color: var(--_bg-color);
   box-shadow: var(--_shadow);
-  border-radius: var(--surface-border-radius);
+  border-radius: var(--surface-border-radius, 4px);
   margin-inline: var(--_margin-inline);
   transition: all var(--_accordion-transition-time) ease-out;
 
@@ -37,8 +37,8 @@
   summary {
     background-color: inherit;
     cursor: pointer;
-    font-weight: var(--font-weight-7);
-    padding-block: var(--size-3);
+    font-weight: var(--font-weight-7, 700);
+    padding-block: var(--size-3, 1rem);
     user-select: none;
   }
 
@@ -52,7 +52,7 @@
     display: flex;
     justify-content: space-between;
     list-style: none;
-    padding-block: var(--size-3);
+    padding-block: var(--size-3, 1rem);
     user-select: none;
 
     &::marker,
@@ -70,46 +70,64 @@
   } */
 
   .content {
-    padding-block: var(--size-2) var(--size-3);
+    margin-block-start: 0;
+    padding-block: var(--size-2, 0.5rem) var(--size-3, 1rem);
   }
 
   .actions {
     display: flex;
-    gap: var(--size-1);
+    gap: var(--size-1, 0.25rem);
     justify-content: end;
-    margin-block-start: var(--size-3);
-    padding-block-end: var(--size-1);
-    padding-inline: var(--size-3) var(--size-1);
+    margin-block-start: var(--size-3, 1rem);
+    padding-block-end: var(--size-1, 0.25rem);
+    padding-inline: var(--size-3, 1rem) var(--size-1, 0.25rem);
   }
 
   /* Variants */
   &.card,
   &.text {
     --_bg-color: transparent;
-    --_margin-inline: var(--size-1);
+    --_margin-inline: var(--size-1, 0.25rem);
   }
   &.elevated {
-    --_bg-color: var(--surface-elevated);
+    --_bg-color: var(
+      --surface-elevated,
+      light-dark(oklch(99% 0.01 255 / 1), oklch(31% 0.01 255 / 1))
+    );
     --_margin-inline: 0;
   }
   &.outlined {
-    --_bg-color: var(--surface-default);
+    --_bg-color: var(
+      --surface-default,
+      light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
+    );
     --_margin-inline: 0;
 
-    border: 1px solid var(--border-color);
+    border: 1px solid
+      var(
+        --border-color,
+        light-dark(oklch(99% 0.01 255 / 1), oklch(37% 0.01 255 / 1))
+      );
   }
   &.tonal {
+    --_bg-color: var(
+      --surface-tonal,
+      light-dark(oklch(95% 0.01 255 / 1), oklch(31% 0.01 255 / 1))
+    );
     --_margin-inline: 0;
   }
 
   &:where(.elevated, .outlined, .tonal) > * {
-    padding-inline: var(--size-3);
+    padding-inline: var(--size-3, 1rem);
   }
 }
 
 /* Accordion group */
 :where(.card:has(details)) {
-  --_gutter-color: var(--border-color);
+  --_gutter-color: var(
+    --border-color,
+    light-dark(oklch(99% 0.01 255 / 1), oklch(37% 0.01 255 / 1))
+  );
 
   & > .content {
     margin-block: 0;
@@ -128,9 +146,13 @@
     }
   }
   &.tonal {
+    --_gutter-color-base: var(
+      --surface-tonal,
+      light-dark(oklch(95% 0.01 255 / 1), oklch(31% 0.01 255 / 1))
+    );
     --_gutter-color: light-dark(
-      color-mix(in oklch, var(--surface-tonal) 90%, black),
-      color-mix(in oklch, var(--surface-tonal) 90%, white)
+      color-mix(in oklch, --_gutter-color-base 90%, black),
+      color-mix(in oklch, --_gutter-color-base 90%, white)
     );
   }
 
@@ -140,7 +162,7 @@
     box-shadow: none;
 
     & > * {
-      padding-inline: var(--size-3);
+      padding-inline: var(--size-3, 1rem);
     }
 
     & + & {
@@ -151,20 +173,20 @@
     }
 
     &:first-of-type {
-      border-start-start-radius: var(--surface-border-radius);
-      border-start-end-radius: var(--surface-border-radius);
+      border-start-start-radius: var(--surface-border-radius, 0.25rem);
+      border-start-end-radius: var(--surface-border-radius, 0.25rem);
       summary {
-        border-start-start-radius: var(--surface-border-radius);
-        border-start-end-radius: var(--surface-border-radius);
+        border-start-start-radius: var(--surface-border-radius, 0.25rem);
+        border-start-end-radius: var(--surface-border-radius, 0.25rem);
       }
     }
 
     &:last-of-type {
-      border-end-start-radius: var(--surface-border-radius);
-      border-end-end-radius: var(--surface-border-radius);
+      border-end-start-radius: var(--surface-border-radius, 0.25rem);
+      border-end-end-radius: var(--surface-border-radius, 0.25rem);
       summary {
-        border-end-start-radius: var(--surface-border-radius);
-        border-end-end-radius: var(--surface-border-radius);
+        border-end-start-radius: var(--surface-border-radius, 0.25rem);
+        border-end-end-radius: var(--surface-border-radius, 0.25rem);
       }
     }
   }

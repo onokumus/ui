@@ -75,7 +75,7 @@ defineProps<{
 .icon {
   align-items: center;
   background-color: var(--vp-c-default-soft);
-  border-radius: var(--surface-border-radius);
+  border-radius: var(--surface-border-radius, 0.25rem);
   color: var(--primary);
   display: flex;
   font-size: 24px;

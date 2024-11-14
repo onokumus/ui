@@ -146,7 +146,7 @@ const showFooter = computed(
 .pager-link {
   display: block;
   border: 1px solid var(--vp-c-divider);
-  border-radius: var(--surface-border-radius);
+  border-radius: var(--surface-border-radius, 0.25rem);
   padding: 11px 16px 13px;
   width: 100%;
   height: 100%;

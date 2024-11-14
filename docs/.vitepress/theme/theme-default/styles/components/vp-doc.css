@@ -178,7 +178,7 @@
 @media (min-width: 640px) {
   .vp-doc div[class*="language-"],
   .vp-block {
-    border-radius: var(--surface-border-radius);
+    border-radius: var(--surface-border-radius, 0.25rem);
     margin: 16px 0;
   }
 }

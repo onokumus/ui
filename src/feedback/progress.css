@@ -1,6 +1,9 @@
 :where(progress) {
   --_accent-color: var(--primary);
-  --_bg-color: var(--surface-tonal);
+  --_bg-color: var(
+    --surface-tonal,
+    light-dark(oklch(95% 0.01 255 / 1), oklch(31% 0.01 255 / 1))
+  );
 
   appearance: none;
   background-color: var(--_bg-color);

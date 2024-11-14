@@ -17,7 +17,10 @@
   -webkit-text-size-adjust: none; /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
 
   accent-color: var(--primary);
-  background-color: var(--surface-default);
+  background-color: var(
+    --surface-default,
+    light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
+  );
   block-size: 100%;
   caret-color: var(--primary);
   color: var(--text-color-2);
@@ -172,9 +175,12 @@
 }
 
 :where(:not(pre) > code) {
-  background: var(--surface-filled);
+  background: var(
+    --surface-filled,
+    light-dark(oklch(95% 0.01 255 / 1), oklch(18% 0.01 255 / 1))
+  );
   border-radius: var(--border-radius, var(--radius-2));
-  padding: var(--size-1) var(--size-2);
+  padding: var(--size-1, 0.25rem) var(--size-2);
   writing-mode: lr;
 }
 
@@ -184,12 +190,12 @@
   border-radius: var(--border-radius, var(--radius-2));
   border-width: var(--border-size-1);
   color: var(--text-color-2-contrast);
-  padding: calc(var(--size-1) / 2) var(--size-1);
+  padding: calc(var(--size-1, 0.25rem) / 2) var(--size-1, 0.25rem);
 }
 
 :where(mark) {
   border-radius: var(--border-radius, 0);
-  padding: calc(var(--size-1) / 2) var(--size-1);
+  padding: calc(var(--size-1, 0.25rem) / 2) var(--size-1, 0.25rem);
   vertical-align: baseline;
 }
 
@@ -207,7 +213,7 @@
   place-items: center;
 
   & > :where(figcaption) {
-    font-size: var(--font-size-1);
+    font-size: var(--font-size-1, 1rem);
     text-wrap: balance;
   }
 }
@@ -219,7 +225,7 @@
 
 :where(menu) {
   display: flex;
-  gap: var(--size-3);
+  gap: var(--size-3, 1rem);
   padding-inline-start: 0;
 }
 

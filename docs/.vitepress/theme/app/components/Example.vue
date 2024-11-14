@@ -27,12 +27,12 @@ defineProps<{
 <style>
 .example-wrapper {
   border-color: var(--border-color);
-  border-radius: var(--surface-border-radius);
+  border-radius: var(--surface-border-radius, 0.25rem);
   border-style: solid;
   border-bottom-width: 0;
   box-shadow: var(--shadow-1);
   margin-inline: -1rem;
-  margin-block: var(--size-3);
+  margin-block: var(--size-3, 1rem);
   overflow: hidden;
 
   &:has(.example) {
@@ -44,7 +44,7 @@ defineProps<{
   }
 
   .example {
-    margin-block: var(--size-3);
+    margin-block: var(--size-3, 1rem);
     padding-block: 0;
   }
 
@@ -69,8 +69,8 @@ defineProps<{
 }
 
 .example {
-  margin-block: var(--size-7) var(--size-3);
-  padding: var(--size-3);
+  margin-block: var(--size-7) var(--size-3, 1rem);
+  padding: var(--size-3, 1rem);
 
   & + [class^="language"] {
     margin-block-start: 0 !important;
@@ -81,12 +81,12 @@ defineProps<{
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--size-3);
+  gap: var(--size-3, 1rem);
   justify-content: center;
 }
 
 .stack {
   display: grid;
-  gap: var(--size-3);
+  gap: var(--size-3, 1rem);
 }
 </style>

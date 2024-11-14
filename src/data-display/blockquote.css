@@ -4,10 +4,10 @@
 
 :where(blockquote) {
   display: grid;
-  gap: var(--size-3);
+  gap: var(--size-3, 1rem);
   max-inline-size: var(--size-content-2);
-  padding-block: var(--size-3);
-  padding-inline: var(--size-4);
+  padding-block: var(--size-3, 1rem);
+  padding-inline: var(--size-4, 1.25rem);
 }
 
 :where(:not(blockquote) > cite) {

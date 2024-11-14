@@ -79,7 +79,7 @@ const grid = computed(() => {
 
 .items {
   display: grid;
-  gap: var(--size-3);
+  gap: var(--size-3, 1rem);
   grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
 }
 </style>

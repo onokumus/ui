@@ -156,7 +156,10 @@ function onCaretClick() {
   border-radius: var(--radius-1);
   padding-inline-start: 16px;
   &:hover {
-    background-color: var(--surface-default);
+    background-color: var(
+      --surface-default,
+      light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
+    );
   }
 }
 

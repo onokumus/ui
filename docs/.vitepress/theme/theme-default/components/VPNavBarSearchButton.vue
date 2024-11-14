@@ -90,7 +90,7 @@ const translate = createSearchTranslate(defaultTranslations);
   .DocSearch-Button {
     justify-content: flex-start;
     border: 1px solid transparent;
-    border-radius: var(--surface-border-radius);
+    border-radius: var(--surface-border-radius, 0.25rem);
     padding: 0 10px 0 12px;
     width: 100%;
     height: 40px;
@@ -171,7 +171,7 @@ const translate = createSearchTranslate(defaultTranslations);
   border: 1px solid var(--vp-c-divider);
   /*rtl:begin:ignore*/
   border-right: none;
-  border-radius: var(--surface-border-radius);
+  border-radius: var(--surface-border-radius, 0.25rem);
   border-radius: 0;
   padding-inline-start: 6px;
   /*rtl:end:ignore*/
@@ -191,7 +191,7 @@ const translate = createSearchTranslate(defaultTranslations);
   /*rtl:begin:ignore*/
   border-right: 1px solid var(--vp-c-divider);
   border-left: none;
-  border-radius: var(--surface-border-radius);
+  border-radius: var(--surface-border-radius, 0.25rem);
   border-radius: 0;
   padding-inline-start: 2px;
   padding-inline-end: 6px;

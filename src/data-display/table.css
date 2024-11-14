@@ -1,7 +1,14 @@
 :where(table) {
-  background: var(--surface-filled);
+  background: var(
+    --surface-filled,
+    light-dark(oklch(95% 0.01 255 / 1), oklch(18% 0.01 255 / 1))
+  );
   border-radius: var(--radius-3);
-  border: 1px solid var(--surface-filled);
+  border: 1px solid
+    var(
+      --surface-filled,
+      light-dark(oklch(95% 0.01 255 / 1), oklch(18% 0.01 255 / 1))
+    );
   width: fit-content;
 
   --nice-inner-radius: calc(var(--radius-3) - 2px);
@@ -33,7 +40,10 @@
 
 :where(th) {
   color: var(--text-color-2);
-  background-color: var(--surface-filled);
+  background-color: var(
+    --surface-filled,
+    light-dark(oklch(95% 0.01 255 / 1), oklch(18% 0.01 255 / 1))
+  );
 }
 
 :where(table :is(a, button, [contenteditable]):is(:focus-visible)) {
@@ -41,7 +51,10 @@
 }
 
 :where(td) {
-  background: var(--surface-default);
+  background: var(
+    --surface-default,
+    light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
+  );
   max-inline-size: var(--size-content-2);
   text-wrap: pretty;
 }
@@ -61,7 +74,7 @@
 
 :where(table tr:hover td),
 :where(tbody tr:nth-child(even):hover td) {
-  background-color: var(--gray-10);
+  background-color: var(--gray-10, oklch(43% 0.01 255 / 1));
 
   @container style(--color-scheme: light) {
     background-color: white;
@@ -69,10 +82,10 @@
 }
 
 :where(table > caption) {
-  margin: var(--size-3);
+  margin: var(--size-3, 1rem);
 }
 
 :where(tfoot button) {
-  padding-block: var(--size-1);
-  padding-inline: var(--size-3);
+  padding-block: var(--size-1, 0.25rem);
+  padding-inline: var(--size-3, 1rem);
 }

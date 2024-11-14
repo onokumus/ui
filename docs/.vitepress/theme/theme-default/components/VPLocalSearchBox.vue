@@ -592,7 +592,7 @@ function formMarkRegex(terms: Set<string>) {
   width: min(100vw - 60px, 900px);
   height: min-content;
   max-height: min(100vh - 128px, 900px);
-  border-radius: var(--surface-border-radius);
+  border-radius: var(--surface-border-radius, 0.25rem);
 }
 
 @media (max-width: 767px) {
@@ -607,7 +607,7 @@ function formMarkRegex(terms: Set<string>) {
 
 .search-bar {
   border: 1px solid var(--vp-c-divider);
-  border-radius: var(--surface-border-radius);
+  border-radius: var(--surface-border-radius, 0.25rem);
   display: flex;
   align-items: center;
   padding: 0 12px;
@@ -709,7 +709,7 @@ function formMarkRegex(terms: Set<string>) {
 
 .search-keyboard-shortcuts kbd {
   background: rgba(128, 128, 128, 0.1);
-  border-radius: var(--surface-border-radius);
+  border-radius: var(--surface-border-radius, 0.25rem);
   padding: 3px 6px;
   min-width: 24px;
   display: inline-block;
@@ -732,7 +732,7 @@ function formMarkRegex(terms: Set<string>) {
   display: flex;
   align-items: center;
   gap: 8px;
-  border-radius: var(--surface-border-radius);
+  border-radius: var(--surface-border-radius, 0.25rem);
   transition: none;
   line-height: 1rem;
   border: solid 2px var(--vp-local-search-result-border);
@@ -820,7 +820,7 @@ function formMarkRegex(terms: Set<string>) {
 }
 
 .excerpt :deep(.vp-code-group) div[class*="language-"] {
-  border-radius: var(--surface-border-radius) !important;
+  border-radius: var(--surface-border-radius, 0.25rem) !important;
 }
 
 .excerpt-gradient-bottom {

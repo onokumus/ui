@@ -25,7 +25,10 @@
     --_text-color: color-mix(
       in oklch,
       var(--text-color-2) 50%,
-      var(--surface-default)
+      var(
+        --surface-default,
+        light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
+      )
     );
     cursor: not-allowed;
   }
@@ -54,7 +57,10 @@
 
   /* Variants */
   &.outlined {
-    --_bg-color: var(--surface-default);
+    --_bg-color: var(
+      --surface-default,
+      light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
+    );
     --_border-color: var(--color-8);
     --_text-color: var(--color-8);
 
@@ -73,16 +79,25 @@
     }
 
     &:where(.disabled, [disabled]) {
-      --_bg-color: var(--surface-default);
+      --_bg-color: var(
+        --surface-default,
+        light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
+      );
       --_border-color: color-mix(
         in oklch,
         var(--text-color-2) 20%,
-        var(--surface-default)
+        var(
+          --surface-default,
+          light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
+        )
       );
       --_text-color: color-mix(
         in oklch,
         var(--text-color-2) 40%,
-        var(--surface-default)
+        var(
+          --surface-default,
+          light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
+        )
       );
     }
   }
@@ -106,12 +121,18 @@
       --_bg-color: color-mix(
         in oklch,
         var(--text-color-2) 8%,
-        var(--surface-default)
+        var(
+          --surface-default,
+          light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
+        )
       );
       --_text-color: color-mix(
         in oklch,
         var(--text-color-2) 70%,
-        var(--surface-default)
+        var(
+          --surface-default,
+          light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
+        )
       );
     }
   }
@@ -135,17 +156,26 @@
       --_bg-color: color-mix(
         in oklch,
         var(--text-color-2) 20%,
-        var(--surface-default)
+        var(
+          --surface-default,
+          light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
+        )
       );
       --_text-color: color-mix(
         in oklch,
         var(--text-color-2) 70%,
-        var(--surface-default)
+        var(
+          --surface-default,
+          light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
+        )
       );
     }
   }
   &.elevated {
-    --_bg-color: light-dark(var(--gray-1), var(--gray-12));
+    --_bg-color: light-dark(
+      var(--gray-1, #f1f3f5),
+      var(--gray-12, oklch(31% 0.01 255 / 1))
+    );
     --_text-color: var(--color-8);
 
     box-shadow: var(--shadow-3);
@@ -178,12 +208,18 @@
       --_bg-color: color-mix(
         in oklch,
         var(--text-color-2) 8%,
-        var(--surface-elevated)
+        var(
+          --surface-elevated,
+          light-dark(oklch(99% 0.01 255 / 1), oklch(31% 0.01 255 / 1))
+        )
       );
       --_text-color: color-mix(
         in oklch,
         var(--text-color-2) 70%,
-        var(--surface-elevated)
+        var(
+          --surface-elevated,
+          light-dark(oklch(99% 0.01 255 / 1), oklch(31% 0.01 255 / 1))
+        )
       );
     }
   }

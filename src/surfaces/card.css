@@ -7,7 +7,7 @@
 
   background-color: var(--_bg-color);
   border-color: var(--_border-color);
-  border-radius: var(--surface-border-radius);
+  border-radius: var(--surface-border-radius, 0.25rem);
   border-style: solid;
   border-width: var(--_border-width);
   box-shadow: var(--_shadow);
@@ -23,12 +23,18 @@
   }
 
   &.tonal {
-    --_bg-color: var(--surface-tonal);
+    --_bg-color: var(
+      --surface-tonal,
+      light-dark(oklch(95% 0.01 255 / 1), oklch(31% 0.01 255 / 1))
+    );
     --_border-width: 1px;
   }
 
   &.elevated {
-    --_bg-color: var(--surface-elevated);
+    --_bg-color: var(
+      --surface-elevated,
+      light-dark(oklch(99% 0.01 255 / 1), oklch(31% 0.01 255 / 1))
+    );
     --_border-color: transparent;
     --_border-width: 0;
     --_shadow: var(--shadow-3);
@@ -39,18 +45,24 @@
   }
 
   &.outlined {
-    --_bg-color: var(--surface-default);
-    --_border-color: var(--border-color);
+    --_bg-color: var(
+      --surface-default,
+      light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
+    );
+    --_border-color: var(
+      --border-color,
+      light-dark(oklch(99% 0.01 255 / 1), oklch(37% 0.01 255 / 1))
+    );
     --_border-width: 1px;
   }
 
   /* Children */
   :where(hgroup, .content) {
-    margin-block: var(--size-3);
-    padding-inline: var(--size-3);
+    padding-inline: var(--size-3, 1rem);
   }
 
   hgroup {
+    margin-block: var(--size-3, 1rem);
     & > * {
       margin: 0;
     }
@@ -62,15 +74,19 @@
 
     /* The second p element */
     & > p:last-of-type:last-child:not(:first-child) {
-      font-size: var(--font-size-1);
+      font-size: var(--font-size-1, 1rem);
     }
+  }
+
+  .content {
+    margin-block: var(--size-3, 1rem) var(--size-4, 1.25rem);
   }
 
   .actions {
     display: flex;
-    gap: var(--size-1);
-    margin-block: var(--size-4) 0;
-    padding-block-end: var(--size-1);
-    padding-inline: var(--size-1) var(--size-3);
+    gap: var(--size-1, 0.25rem);
+    margin-block: var(--size-4, 1.25rem) 0;
+    padding-block-end: var(--size-1, 0.25rem);
+    padding-inline: var(--size-1, 0.25rem) var(--size-3, 1rem);
   }
 }

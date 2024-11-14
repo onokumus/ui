@@ -31,13 +31,13 @@
   /* Sizes */
   /* TODO: font size should be 16px to avoid mobile zoom in */
   &.small {
-    font-size: var(--font-size-0, var(--font-size-1));
-    padding: var(--size-1) var(--size-2);
+    font-size: var(--font-size-0, var(--font-size-1, 1rem));
+    padding: var(--size-1, 0.25rem) var(--size-2);
   }
   /* TODO: font size should be 16px to avoid mobile zoom in */
   &.large {
-    font-size: var(--font-size-2, var(--font-size-3));
-    padding: var(--size-3) var(--size-4);
+    font-size: var(--font-size-2, var(--font-size-3, 1.25rem));
+    padding: var(--size-3, 1rem) var(--size-4, 1.25rem);
   }
 
   /* States */
@@ -57,7 +57,10 @@
   }
 
   &:where(input[disabled], select[disabled], .disabled) {
-    background-color: var(--surface-filled);
+    background-color: var(
+      --surface-filled,
+      light-dark(oklch(95% 0.01 255 / 1), oklch(18% 0.01 255 / 1))
+    );
     color: var(--text-color-2-contrast);
     opacity: 0.7;
   }

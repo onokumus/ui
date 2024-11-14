@@ -10,9 +10,9 @@ status: public
 <style>
 	.grid {
 		display: grid;
-		gap: 0 var(--size-3);
+		gap: 0 var(--size-3, 1rem);
 		grid-template-columns: repeat(auto-fit, minmax(30ch, 1fr));
-		margin: var(--size-3) 0;
+		margin: var(--size-3, 1rem) 0;
 		& > * {
 			margin: 0 !important;
 		}

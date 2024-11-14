@@ -126,17 +126,41 @@
  * -------------------------------------------------------------------------- */
 
   :root {
-    --vp-c-bg: var(--surface-default);
-    --vp-c-bg-alt: var(--surface-filled);
-    --vp-c-bg-soft: var(--surface-filled);
-    --vp-c-bg-elv: var(--surface-filled);
+    --vp-c-bg: var(
+      --surface-default,
+      light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
+    );
+    --vp-c-bg-alt: var(
+      --surface-filled,
+      light-dark(oklch(95% 0.01 255 / 1), oklch(18% 0.01 255 / 1))
+    );
+    --vp-c-bg-soft: var(
+      --surface-filled,
+      light-dark(oklch(95% 0.01 255 / 1), oklch(18% 0.01 255 / 1))
+    );
+    --vp-c-bg-elv: var(
+      --surface-filled,
+      light-dark(oklch(95% 0.01 255 / 1), oklch(18% 0.01 255 / 1))
+    );
   }
 
   .dark {
-    --vp-c-bg: var(--surface-default);
-    --vp-c-bg-alt: var(--surface-filled);
-    --vp-c-bg-soft: var(--surface-filled);
-    --vp-c-bg-elv: var(--surface-filled);
+    --vp-c-bg: var(
+      --surface-default,
+      light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
+    );
+    --vp-c-bg-alt: var(
+      --surface-filled,
+      light-dark(oklch(95% 0.01 255 / 1), oklch(18% 0.01 255 / 1))
+    );
+    --vp-c-bg-soft: var(
+      --surface-filled,
+      light-dark(oklch(95% 0.01 255 / 1), oklch(18% 0.01 255 / 1))
+    );
+    --vp-c-bg-elv: var(
+      --surface-filled,
+      light-dark(oklch(95% 0.01 255 / 1), oklch(18% 0.01 255 / 1))
+    );
   }
 
   /**
@@ -283,10 +307,13 @@
     --vp-code-color: var(--primary);
     --vp-code-link-color: var(--primary);
     --vp-code-link-hover-color: var(--primary-light);
-    --vp-code-bg: var(--surface-tonal);
+    --vp-code-bg: var(
+      --surface-tonal,
+      light-dark(oklch(95% 0.01 255 / 1), oklch(31% 0.01 255 / 1))
+    );
 
     --vp-code-block-color: rgba(255, 255, 245, 0.86);
-    --vp-code-block-bg: var(--gray-15);
+    --vp-code-block-bg: var(--gray-15, oklch(10% 0.01 255 / 1));
     --vp-code-block-divider-color: #000000;
 
     --vp-code-lang-color: rgba(235, 235, 245, 0.38);

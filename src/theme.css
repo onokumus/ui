@@ -25,6 +25,7 @@ html {
   --palette-hue-rotate-by: 5;
   --palette-chroma: 0.89;
 
+  /* TODO: why isn't this working? */
   @container style(--color-scheme: dark) {
     --palette-hue: var(--oklch-red);
   }
@@ -33,10 +34,22 @@ html {
   --primary-dark: color-mix(in oklch, var(--primary) 80%, black);
   --primary-light: color-mix(in oklch, var(--primary) 80%, white);
 
-  --text-color-1: light-dark(var(--gray-14), var(--gray-1));
-  --text-color-1-contrast: light-dark(var(--gray-1), var(--gray-14));
-  --text-color-2: light-dark(var(--gray-12), var(--gray-3));
-  --text-color-2-contrast: light-dark(var(--gray-3), var(--gray-12));
+  --text-color-1: light-dark(
+    var(--gray-14, oklch(18% 0.01 255 / 1)),
+    var(--gray-1, oklch(95% 0.01 255 / 1))
+  );
+  --text-color-1-contrast: light-dark(
+    var(--gray-1, oklch(95% 0.01 255 / 1)),
+    var(--gray-14, oklch(18% 0.01 255 / 1))
+  );
+  --text-color-2: light-dark(
+    var(--gray-12, oklch(31% 0.01 255 / 1)),
+    var(--gray-3, oklch(80% 0.01 255 / 1))
+  );
+  --text-color-2-contrast: light-dark(
+    var(--gray-3, oklch(80% 0.01 255 / 1)),
+    var(--gray-12, oklch(31% 0.01 255 / 1))
+  );
   --text-color-2-78: color-mix(in oklch, var(--text-color-2) 78%, transparent);
   --text-color-2-56: color-mix(in oklch, var(--text-color-2) 56%, transparent);
 
@@ -61,31 +74,46 @@ html {
   --success-text: light-dark(var(--color-1), var(--color-11));
 
   /* Surface */
-  --surface-default: light-dark(var(--gray-0), var(--gray-13));
-  --surface-filled: light-dark(var(--gray-1), var(--gray-14));
-  --surface-tonal: light-dark(var(--gray-1), var(--gray-12));
-  --surface-elevated: light-dark(var(--gray-0), var(--gray-12));
-  --surface-border-radius: var(--size-1);
+  --surface-default: light-dark(
+    var(--gray-0, oklch(99% 0.01 255 / 1)),
+    var(--gray-13, oklch(25% 0.01 255 / 1))
+  );
+  --surface-filled: light-dark(
+    var(--gray-1, oklch(95% 0.01 255 / 1)),
+    var(--gray-14, oklch(18% 0.01 255 / 1))
+  );
+  --surface-tonal: light-dark(
+    var(--gray-1, oklch(95% 0.01 255 / 1)),
+    var(--gray-12, oklch(31% 0.01 255 / 1))
+  );
+  --surface-elevated: light-dark(
+    var(--gray-0, oklch(99% 0.01 255 / 1)),
+    var(--gray-12, oklch(31% 0.01 255 / 1))
+  );
+  --surface-border-radius: var(--size-1, 0.25rem);
 
   /* Typography */
-  --font-size-h1: var(--font-size-6);
-  --font-size-h2: var(--font-size-5);
-  --font-size-h3: var(--font-size-4);
-  --font-size-h4: var(--font-size-3);
-  --font-size-h5: var(--font-size-2);
-  --font-size-h6: var(--font-size-1);
-  --font-size-body: var(--font-size-1);
-  --font-size-body-large: var(--font-size-3);
-  --font-size-body-small: var(--font-size-0);
-  --font-size-overline: var(--font-size-0);
+  --font-size-h1: var(--font-size-6, 2.5rem);
+  --font-size-h2: var(--font-size-5, 2rem);
+  --font-size-h3: var(--font-size-4, 1.5rem);
+  --font-size-h4: var(--font-size-3, 1.25rem);
+  --font-size-h5: var(--font-size-2, 1.1rem);
+  --font-size-h6: var(--font-size-1, 1rem);
+  --font-size-body: var(--font-size-1, 1rem);
+  --font-size-body-large: var(--font-size-3, 1.25rem);
+  --font-size-body-small: var(--font-size-0, 0.75rem);
+  --font-size-overline: var(--font-size-0, 0.75rem);
 
   /* Borders */
-  --border-color: light-dark(var(--gray-2), var(--gray-11));
-  --border-radius: var(--size-1);
+  --border-color: light-dark(
+    var(--gray-2, oklch(88% 0.01 255 / 1)),
+    var(--gray-11, oklch(37% 0.01 255 / 1))
+  );
+  --border-radius: var(--size-1, 0.25rem);
   --border-width: 1px;
 
   /* Input */
-  --input-border-radius: var(--size-1);
+  --input-border-radius: var(--size-1, 0.25rem);
 
   /* Buttons */
   --button-border-radius: 100vmax;

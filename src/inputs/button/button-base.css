@@ -39,7 +39,11 @@
 :where(input[type="file"]) {
   align-self: flex-start;
   border-radius: var(--radius-2);
-  border: var(--border-size-1) solid var(--surface-filled);
+  border: var(--border-size-1) solid
+    var(
+      --surface-filled,
+      light-dark(oklch(95% 0.01 255 / 1), oklch(18% 0.01 255 / 1))
+    );
   box-shadow: var(--inner-shadow-4);
   color: var(--text-color-2-contrast);
   cursor: initial;
