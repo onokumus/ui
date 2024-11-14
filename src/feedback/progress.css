@@ -25,7 +25,7 @@
     background-color: var(--_accent-color);
 
     @media (prefers-reduced-motion: no-preference) {
-      transition: inline-size 0.2s var(--ease-out-4);
+      transition: inline-size 0.2s var(--ease-out-4, cubic-bezier(0, 0, 0.1, 1));
     }
   }
 

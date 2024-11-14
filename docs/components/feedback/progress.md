@@ -81,3 +81,9 @@ Source: [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/progress
 
 </template>
 </Example>
+
+## Source code
+
+::: code-group
+<<< @/../src/feedback/progress.css [progress.css]
+:::
