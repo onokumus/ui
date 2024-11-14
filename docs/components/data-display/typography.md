@@ -382,3 +382,11 @@ What I've written here is probably long enough, but adding this final sentence c
 </article>
 </template>
 </Example>
+
+## Source code
+
+Includes both basic styles for typographic elements as well as the `.rich-text` styles.
+
+::: code-group
+<<< @/../src/data-display/typography.css [typography.css]
+:::
