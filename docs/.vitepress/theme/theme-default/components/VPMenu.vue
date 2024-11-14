@@ -32,7 +32,11 @@ defineProps<{
   min-width: 128px;
   border: 1px solid var(--vp-c-divider);
   background-color: var(--vp-c-bg-elv);
-  box-shadow: var(--shadow-3);
+  box-shadow: var(
+    --shadow-3,
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1)
+  );
   transition: background-color 0.5s;
   max-height: calc(100vh - var(--vp-nav-height));
   overflow-y: auto;

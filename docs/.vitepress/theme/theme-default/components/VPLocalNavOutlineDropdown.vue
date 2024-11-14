@@ -148,7 +148,11 @@ function scrollToTop() {
   background-color: var(--vp-c-gutter);
   border-radius: 8px;
   border: 1px solid var(--vp-c-border);
-  box-shadow: var(--shadow-3);
+  box-shadow: var(
+    --shadow-3,
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1)
+  );
   display: grid;
   gap: 1px;
   left: 16px;
