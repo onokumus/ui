@@ -3,9 +3,7 @@
 <h1>What is Open Props UI?</h1>
 </hgroup>
 
-## Mission
-
-Leverage modern CSS to suit professional teams as well as tinkering hobbyists.
+A modern CSS framework to suit professional teams as well as tinkering hobbyists. Copy and paste the components into your projects in order to have complete ownership of your code.
 
 ## The goal of the component library
 
