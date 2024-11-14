@@ -121,3 +121,15 @@ These are the classes and attributes a card can be styled with. As usual, feel f
 ## See also
 
 - [Card component architecture design decisions](/blog/posts/card-architecture)
+
+## Source code
+
+::: warning
+Other components might depend on the card component. Be mindful when making changes.
+
+[Accordion](/components/surfaces/accordion), [Dialog](/components/feedback/dialog)
+:::
+
+::: code-group
+<<< @/../src/surfaces/card.css [card.css]
+:::
