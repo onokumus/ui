@@ -160,7 +160,6 @@ Leverages the HTML `details` and `summary` elements. Uses the native HTML arrow,
 <Example direction="stack">
 	<template #example>
 	<div class="card outlined">
-	<div class="content">
  <details>
 	<summary id="summary1" aria-controls="content1">
 		Accordion title
@@ -187,7 +186,6 @@ Leverages the HTML `details` and `summary` elements. Uses the native HTML arrow,
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales, nulla sit amet porttitor rhoncus, lacus ex vestibulum libero, ac mollis neque ante id justo. Nam tempor euismod nisi ac ornare. Pellentesque id sapien lacinia, venenatis est aliquam, dignissim elit. Suspendisse potenti. Cras ut ante in libero tempus sodales sed quis dolor.</p>
 	</div>
 </details>
-</div>
 </div>
 </template>
 

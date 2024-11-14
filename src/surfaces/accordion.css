@@ -138,23 +138,11 @@
   /* Variants */
   &.card,
   &.text {
-    --_bg-color: transparent;
-
     &:not(.tonal, .outlined, .elevated) {
       summary {
         padding-inline: 0;
       }
     }
-  }
-  &.tonal {
-    --_gutter-color-base: var(
-      --surface-tonal,
-      light-dark(oklch(95% 0.01 255 / 1), oklch(31% 0.01 255 / 1))
-    );
-    --_gutter-color: light-dark(
-      color-mix(in oklch, --_gutter-color-base 90%, black),
-      color-mix(in oklch, --_gutter-color-base 90%, white)
-    );
   }
 
   details {
