@@ -441,4 +441,13 @@ These are the classes and attributes a card can be styled with. As usual, feel f
 | [Anatomy](#anatomy)   | `& > summary`, `& > .content`, `& > .actions` | -       | Optional wrappers for child content. |
 | [Variants](#variants) | `.text`, `.elevated`, `.tonal`, `.outlined`,  | `.text` | The variant to use.                  |
 
-## Installation
+## Source code
+
+::: info
+Accordion has [card](/components/surfaces/card) as a dependency.
+:::
+
+::: code-group
+<<< @/../src/surfaces/accordion.css [accordion.css]
+<<< @/../src/surfaces/card.css [card.css]
+:::
