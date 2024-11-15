@@ -56,7 +56,7 @@
 
 </div>
 
-## Size
+## Sizes
 
 <div class="example-wrapper">
   <div class="example row">

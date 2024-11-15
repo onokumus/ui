@@ -8,6 +8,27 @@ export default defineConfig({
   markdown: {
     theme: "dark-plus",
   },
+  head: [
+    ["link", { rel: "icon", type: "image/ico", href: "/favicon.ico" }],
+    ["link", { rel: "icon", type: "image/png", href: "/ui-logo.png" }],
+    ["meta", { name: "theme-color", content: "var(--color-8)" }],
+    ["meta", { property: "og:type", content: "website" }],
+    ["meta", { property: "og:locale", content: "en" }],
+    [
+      "meta",
+      {
+        property: "og:title",
+        content: "Open Props UI | The Modern CSS framework",
+      },
+    ],
+    ["meta", { property: "og:site_name", content: "Open Props UI" }],
+    ["meta", { property: "og:image", content: "/opui-logo.png" }],
+    [
+      "meta",
+      { property: "og:url", content: "https://open-props-ui.netlify.app" },
+    ],
+  ],
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     editLink: {

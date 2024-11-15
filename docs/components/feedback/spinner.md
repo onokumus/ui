@@ -20,7 +20,7 @@ Add it to an element with `aria-busy="true"`. Spinnners are always indeterminate
 </template>
 </Example>
 
-## Size
+## Sizes
 
 The spinner's size is set to `1em`, which means it will adjust to its current font size.
 
