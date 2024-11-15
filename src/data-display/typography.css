@@ -106,7 +106,7 @@
 
       &[href] {
         &:hover {
-          color: var(--primary, deepskyblue);
+          color: var(--primary-light, deepskyblue);
         }
       }
 
