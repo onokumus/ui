@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useData } from "vitepress";
-import usePosts from "../../composables/custom/posts";
-import Post from "../custom/BlogPost.vue";
+import usePosts from "../composables/posts";
+import Post from "./BlogPost.vue";
 
 const { allPosts: posts } = usePosts();
 

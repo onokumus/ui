@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BlogPosts from "../.vitepress/theme/theme-default/components/custom/BlogPosts.vue"
+import BlogPosts from "../.vitepress/theme/app/components/BlogPosts.vue"
 
 </script>
 

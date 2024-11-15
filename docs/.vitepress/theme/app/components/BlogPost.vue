@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useData } from "vitepress";
-import type { Post } from "../../composables/custom/posts.data";
+import type { Post } from "../composables/posts.data";
 
 const props = defineProps<{
   post: Post;

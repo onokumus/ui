@@ -9,7 +9,7 @@ status: public
 
 <script setup>
 import Example from "../../.vitepress/theme/app/components/Example.vue"
-import 'baseline-status'
+import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
 </script>
 
 <hgroup>
@@ -18,13 +18,11 @@ import 'baseline-status'
 	<p>So many ugly hacks... gone!</p>
 </hgroup>
 
-<article class="card outlined not-rich-text">
-<baseline-status featureId="scope"></baseline-status>
-</article>
+<Baseline id="scope" />
 
 ## Some context
 
-This is a simplification of what an article page on this website looks like. Wrapped around everything we find a `.rich-text` class and intermingled inside there could be some random components such as the code example component you see down below.
+This is a simplification of what an article page on this website looks like. Wrapped around everything we find a `.rich-text` 32class and intermingled inside there could be some random components such as the code example component you see down below.
 
 ::: code-group
 

@@ -21,7 +21,7 @@ export default () => {
 
   function folderDir(name: string): string {
     const dirname = path.dirname(fileURLToPath(import.meta.url));
-    return path.resolve(dirname, `../../../../../blog/${name}`);
+    return path.resolve(dirname, `../../../../blog/${name}`);
   }
 
   return { folderDir, readFrontMatter };
