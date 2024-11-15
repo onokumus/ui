@@ -20,11 +20,9 @@ import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
 
 <Baseline :ids="['scope']" />
 
-## Some context
+## The problem
 
-This is a simplification of what an article page on this website looks like. Wrapped around everything we find a
-`.rich-text` 32class and intermingled inside there could be some random components such as the code example component
-you see down below.
+Below is a simplification of what an article page on this website could look like. `.rich-text` provides very nice rich text styles for blog and docs articles.
 
 ::: code-group
 
@@ -42,7 +40,7 @@ you see down below.
 :::
 
 The problem anyone runs into when approaching a page structure like this is that the `.rich-text` styles sneak into your
-preciously styled components you don't want polluted by anything else. Well, when coding vanilla CSS we're completely at
+preciously styled components you don't want polluted other styles. When coding vanilla CSS we're completely at
 the mercy of [ _the
 cascade_](https://web.dev/learn/css/the-cascade?continue=https%3A%2F%2Fweb.dev%2Flearn%2Fcss%2F%23article-https%3A%2F%2Fweb.dev%2Flearn%2Fcss%2Fthe-cascade):tm:,
 so we need to be mindful of what styles flow where.
