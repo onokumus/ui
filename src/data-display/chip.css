@@ -1,2 +1,92 @@
 :where(.chip) {
+  --_bg-color: var(
+    --surface-tonal,
+    light-dark(
+      var(--gray-1, oklch(95% 0.01 255 / 1)),
+      var(--gray-12, oklch(31% 0.01 255 / 1))
+    )
+  );
+  --_border-color: var(
+    --_border-color,
+    light-dark(
+      var(--gray-2, oklch(88% 0.01 255 / 1)),
+      var(--gray-11, oklch(37% 0.01 255 / 1))
+    )
+  );
+  --_color: var(
+    --text-color-1,
+    light-dark(
+      var(--gray-14, oklch(18% 0.01 255 / 1)),
+      var(--gray-1, oklch(95% 0.01 255 / 1))
+    )
+  );
+
+  align-items: center;
+  background-color: var(--_bg-color);
+  border: 1px solid var(--_border-color);
+  border-radius: var(--radius-2, 0.5rem);
+  color: var(--_color);
+  display: inline-flex;
+  font-size: var(--font-size-0, 0.75rem);
+  gap: var(--size-1, 0.25rem);
+  height: var(--size-7, 32px);
+  padding-inline: var(--size-2, 0.5rem);
+
+  /* Icon */
+  &:has(svg) {
+    padding-inline: var(--size-1, 0.25rem) var(--size-2, 0.5rem);
+
+    svg {
+      inline-size: var(--size-4, 1.25rem);
+    }
+  }
+
+  /* Default */
+  &.tonal {
+    --_bg-color: var(
+      --surface-tonal,
+      light-dark(
+        var(--gray-1, oklch(95% 0.01 255 / 1)),
+        var(--gray-12, oklch(31% 0.01 255 / 1))
+      )
+    );
+    --_border-color: var(
+      --_border-color,
+      light-dark(
+        var(--gray-2, oklch(88% 0.01 255 / 1)),
+        var(--gray-11, oklch(37% 0.01 255 / 1))
+      )
+    );
+    --_color: var(
+      --text-color-1,
+      light-dark(
+        var(--gray-14, oklch(18% 0.01 255 / 1)),
+        var(--gray-1, oklch(95% 0.01 255 / 1))
+      )
+    );
+  }
+
+  &.outlined {
+    --_bg-color: var(
+      --surface-default,
+      light-dark(
+        var(--gray-1, oklch(95% 0.01 255 / 1)),
+        var(--gray-14, oklch(18% 0.01 255 / 1))
+      )
+    );
+    --_border-color: var(
+      --text-color-1,
+      light-dark(
+        var(--gray-14, oklch(18% 0.01 255 / 1)),
+        var(--gray-1, oklch(95% 0.01 255 / 1))
+      )
+    );
+    --_color: var(
+      --text-color-1,
+      light-dark(
+        var(--gray-14, oklch(18% 0.01 255 / 1)),
+        var(--gray-1, oklch(95% 0.01 255 / 1))
+      )
+    );
+  }
 }
