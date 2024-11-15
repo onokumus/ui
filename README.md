@@ -7,6 +7,15 @@ https://open-props-ui.netlify.app/
 > [!NOTE]
 > This is work in progress. Contributions are welcome!
 
+## Development
+
+This repo holds the code for the component library and the docs. The docs are used as a testbed for the component library.
+
+1. Clone the repo.
+2. Navigate to the repo root `/ui`.
+3. Open the terminal and write:
+
+
 ## Backstory
 
 Practically all established component libraries need to take older browser versions into account. Some have only just dropped Internet Explorer. Some have barely discovered the power of CSS grid. Open Props UI starts from a blank slate and re-imagines how a component library could be built if you used the most modern features.
@@ -28,13 +37,6 @@ Practically all established component libraries need to take older browser versi
 
 The developer blog mostly consist of learnings made from the work on Open Props UI. Oftentimes we only get to see the finished product, but the journey there can be full of interesting stuff!
 
-## For contributors
-
-This repo holds the code for the component library and the docs. The docs are used as a testbed for the component library.
-
-1. Clone the repo.
-2. Navigate to the repo root `/ui`.
-3. Open the terminal and write:
 
 ```
 pnpm i
