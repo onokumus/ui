@@ -2,7 +2,7 @@
 
 ## Thank you to {.h3}
 
-- Adam Argyle and the community at the Open Props Discord channel
+- Adam Argyle and the community at the Open Props [Discord channel](https://discord.gg/AqA4fU886r)
 
 ## Sources of inspiration/theft{.h3}
 
