@@ -3,6 +3,8 @@
 <h1>What is Open Props UI?</h1>
 </hgroup>
 
+<marquee width="150" direction="left">Work in progress</marquee>
+
 A modern CSS framework to suit professional teams as well as tinkering hobbyists. Copy and paste the components into your projects in order to have complete ownership of your code.
 
 ## The goal of the component library
