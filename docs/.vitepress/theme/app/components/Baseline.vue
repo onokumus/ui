@@ -18,7 +18,7 @@ onMounted(async () => {
   </ClientOnly>
 </template>
 
-<style>
+<style scoped>
 article {
   margin-block: var(--size-3);
 }
