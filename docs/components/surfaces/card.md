@@ -1,5 +1,6 @@
 <script setup>
 	import Example from "../../.vitepress/theme/app/components/Example.vue"
+	import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
 	</script>
 
 <style>
@@ -121,6 +122,10 @@ These are the classes and attributes a card can be styled with. As usual, feel f
 ## See also
 
 - [Card component architecture design decisions](/blog/posts/card-architecture)
+
+## Browser compatibility
+
+<Baseline :ids="['container-style-queries', 'light-dark']" />
 
 ## Installation
 

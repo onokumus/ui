@@ -91,12 +91,12 @@
 
 /* Rich text */
 @scope (.rich-text) to (.not-rich-text) {
-  :scope {
+  :where(:scope) {
     font-size: 1rem;
     line-height: 1.75;
 
     /* link.css */
-    :where(a) {
+    a {
       color: var(--primary, cornflowerblue);
       cursor: pointer;
       font-weight: var(--font-weight-7);
@@ -104,8 +104,8 @@
       text-decoration-color: var(--primary, cornflowerblue);
       text-underline-offset: 1px;
 
-      &:where([href]) {
-        &:where(:hover) {
+      &[href] {
+        &:hover {
           color: var(--primary, deepskyblue);
         }
       }
@@ -115,17 +115,17 @@
       }
     }
 
-    :where(p) {
+    p {
       margin-block: 1.25em;
     }
 
-    :where(h1) {
+    h1 {
       letter-spacing: -0.02em;
       line-height: 1.1111111;
       margin-block: 0 0.8888889em;
     }
 
-    :where(h2) {
+    h2 {
       letter-spacing: -0.02em;
       line-height: 1.3333333;
       margin-block: 2em 1em;
@@ -134,7 +134,7 @@
       }
     }
 
-    :where(h3) {
+    h3 {
       letter-spacing: -0.01em;
       line-height: 1.6;
       margin-block: 1.6em 0.6em;
@@ -143,7 +143,7 @@
       }
     }
 
-    :where(h4) {
+    h4 {
       letter-spacing: -0.01em;
       line-height: 1.5;
       margin-block: 1.5em 0.5em;
@@ -152,7 +152,7 @@
       }
     }
 
-    :where(h5) {
+    h5 {
       line-height: 1;
       margin-block-end: var(--size-1, 0.25rem);
       & + * {
@@ -160,7 +160,7 @@
       }
     }
 
-    :where(h6) {
+    h6 {
       line-height: 1;
       margin-block-end: var(--size-1, 0.25rem);
       & + * {
@@ -183,8 +183,13 @@
     }
 
     /* Lists */
+    ul {
+      list-style-type: disc;
+    }
+    ol {
+      list-style-type: decimal;
+    }
     :where(ul, ol) {
-      list-style-type: auto;
       margin-block-start: 1.25em;
       margin-block-end: 1.25em;
       padding-inline-start: 1.625em;
@@ -206,22 +211,22 @@
     }
 
     /* Description lists */
-    :where(dl) {
+    dl {
       margin-block-start: 1.25em;
       margin-block-end: 1.25em;
     }
 
-    :where(dt) {
+    dt {
       margin-block-start: 1.25em;
     }
 
-    :where(dd) {
+    dd {
       margin-block-start: 0.5em;
       padding-inline-start: 1.625em;
     }
 
     /* Code blocks */
-    :where(pre) {
+    pre {
       border-radius: 0.375rem;
       font-size: 0.875rem;
       line-height: 1.7142857;
@@ -230,12 +235,12 @@
       padding-inline: 1.1428571em;
     }
 
-    :where(code) {
+    code {
       font-size: 0.875rem;
     }
 
     /* Figures */
-    :where(figure) {
+    figure {
       margin-block: 2em;
 
       & > * {
@@ -260,7 +265,7 @@
     }
 
     /* Horizontal rules */
-    :where(hr) {
+    hr {
       & + * {
         margin-block-start: 0;
       }

@@ -1,4 +1,5 @@
 <script setup>
+import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
 import Example from "../../.vitepress/theme/app/components/Example.vue"
 </script>
 
@@ -517,6 +518,10 @@ These are the classes and attributes a button can be styled with. As usual, feel
 | [Icon-only](#icon-button) | `.icon-only`                                           | -         | If applied, the button won't show its inner label. |
 | [Sizes](#sizes)           | `.small`, `.medium`, `.large`                          | `.medium` | The size of the button.                            |
 | [Variants](#variants)     | `.text`, `.outlined`, `.tonal`, `.filled`, `.elevated` | `.text`   | The variant to use.                                |
+
+## Browser compatibility
+
+<Baseline :ids="['container-style-queries', 'light-dark', 'color-mix']" />
 
 ## Installation
 

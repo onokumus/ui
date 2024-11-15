@@ -1,5 +1,7 @@
 <script setup>
 import Example from "../../.vitepress/theme/app/components/Example.vue"
+import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
+
 </script>
 
 # Typography
@@ -382,6 +384,10 @@ What I've written here is probably long enough, but adding this final sentence c
 </article>
 </template>
 </Example>
+
+## Browser compatibility
+
+<Baseline :ids="['scope', 'light-dark','color-mix']" />
 
 ## Installation
 

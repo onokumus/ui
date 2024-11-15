@@ -1,5 +1,7 @@
 <script setup>
 	import Example from "../../.vitepress/theme/app/components/Example.vue"
+	import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
+
 	</script>
 
 <style>
@@ -429,6 +431,7 @@ The [WAI-ARIA guidelines](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) f
 </details>
 ```
 
+2
 </template>
 </Example>
 
@@ -440,6 +443,10 @@ These are the classes and attributes a card can be styled with. As usual, feel f
 | --------------------- | --------------------------------------------- | ------- | ------------------------------------ |
 | [Anatomy](#anatomy)   | `& > summary`, `& > .content`, `& > .actions` | -       | Optional wrappers for child content. |
 | [Variants](#variants) | `.text`, `.elevated`, `.tonal`, `.outlined`,  | `.text` | The variant to use.                  |
+
+## Browser compatibility
+
+<Baseline :ids="['container-style-queries', 'interpolate-size', 'details-content', 'content-visibility', 'has']" />
 
 ## Installation
 

@@ -1,4 +1,5 @@
 <script setup>
+  import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
   import Example from "../../.vitepress/theme/app/components/Example.vue"
 
 	import {ref} from "vue"
@@ -158,6 +159,10 @@ Source: [w3.org](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/
 ## API
 
 A `<dialog>` element on its own doesn't do much. It's recommended to use it in combination with the [card](/components/surfaces/card) component.
+
+## Browser compatibility
+
+<Baseline :ids="['container-style-queries','light-dark']" />
 
 ## Installation
 

@@ -7,10 +7,13 @@
 
 A modern CSS framework to suit professional teams as well as tinkering hobbyists. Copy and paste the components into your projects in order to have complete ownership of your code.
 
+## Backstory
+
+Practically all established component libraries need to take older browser versions into account. Some have only just dropped Internet Explorer. Some have barely discovered the power of CSS grid. Open Props UI starts from a blank slate and re-imagines how a component library could be built if you used the most modern features.
+
 ## The goal of the component library
 
-- Be sensible without sacrificing flexibility and control
-- Have nice defaults while being 100% customizable
+- Have sensible defaults without sacrificing flexibility and control
 - Use modern HTML & CSS features
 - Follow accessibility guidelines
 - Be scalable

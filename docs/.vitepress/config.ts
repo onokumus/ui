@@ -65,6 +65,10 @@ export default defineConfig({
               text: "Getting started",
               link: "/guide/getting-started",
             },
+            {
+              text: "Browser compatibility",
+              link: "/guide/browser-compatibility",
+            },
           ],
         },
         {
