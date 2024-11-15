@@ -168,8 +168,18 @@
       }
     }
 
-    hgroup + * {
-      margin-block-start: 3em;
+    hgroup {
+      & > p {
+        margin: 0;
+      }
+
+      & > :where(h1, h2, h3, h4, h5, h6) {
+        margin-block-end: 0.4em;
+      }
+
+      & + * {
+        margin-block-start: 3em;
+      }
     }
 
     /* Lists */
@@ -257,8 +267,9 @@
     }
   }
 }
+
 :where(hgroup) {
-  & > * {
+  & > p {
     margin: 0;
   }
 

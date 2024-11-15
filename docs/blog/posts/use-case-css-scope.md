@@ -13,16 +13,18 @@ import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
 </script>
 
 <hgroup>
-	<p>2024-11-14</p>
-	<h1>A perfect use case for <code>@scope</code></h1>
-	<p>So many ugly hacks... gone!</p>
+  <p>2024-11-14</p>
+  <h1>A perfect use case for <code>@scope</code></h1>
+  <p>So many ugly hacks... gone!</p>
 </hgroup>
 
-<Baseline id="scope" />
+<Baseline :ids="['scope']" />
 
 ## Some context
 
-This is a simplification of what an article page on this website looks like. Wrapped around everything we find a `.rich-text` 32class and intermingled inside there could be some random components such as the code example component you see down below.
+This is a simplification of what an article page on this website looks like. Wrapped around everything we find a
+`.rich-text` 32class and intermingled inside there could be some random components such as the code example component
+you see down below.
 
 ::: code-group
 
@@ -39,19 +41,28 @@ This is a simplification of what an article page on this website looks like. Wra
 
 :::
 
-The problem anyone runs into when approaching a page structure like this is that the `.rich-text` styles sneak into your preciously styled components you don't want polluted by anything else. Well, when coding vanilla CSS we're completely at the mercy of [ _the cascade_](https://web.dev/learn/css/the-cascade?continue=https%3A%2F%2Fweb.dev%2Flearn%2Fcss%2F%23article-https%3A%2F%2Fweb.dev%2Flearn%2Fcss%2Fthe-cascade):tm:, so we need to be mindful of what styles flow where.
+The problem anyone runs into when approaching a page structure like this is that the `.rich-text` styles sneak into your
+preciously styled components you don't want polluted by anything else. Well, when coding vanilla CSS we're completely at
+the mercy of [ _the
+cascade_](https://web.dev/learn/css/the-cascade?continue=https%3A%2F%2Fweb.dev%2Flearn%2Fcss%2F%23article-https%3A%2F%2Fweb.dev%2Flearn%2Fcss%2Fthe-cascade):tm:,
+so we need to be mindful of what styles flow where.
 
 But what if we could tell CSS to just... look the other way and not care about our custom, precious components? :shrug:
 
 ## Enter `@scope`
 
-Developers have been quite confused by `@scope` ever since it was announced believing CSS _finally_ solved style scoping, but no that's not it. Basically `@scope` is primarily about defining a boundary for where your styles should apply, and depending on how creative you get with the selectors you can do some pretty cool stuff. If that meant absolutely nothing to you, you will get the hang of it soon, keep reading.
+Developers have been quite confused by `@scope` ever since it was announced believing CSS _finally_ solved style
+scoping, but no that's not it. Basically `@scope` is primarily about defining a boundary for where your styles should
+apply, and depending on how creative you get with the selectors you can do some pretty cool stuff. If that meant
+absolutely nothing to you, you will get the hang of it soon, keep reading.
 
 ::: tip
-Read through the [MDN docs](https://developer.mozilla.org/en-US/docs/Web/CSS/@scope) for more comprehensive info. It's actually quite good.
+Read through the [MDN docs](https://developer.mozilla.org/en-US/docs/Web/CSS/@scope) for more comprehensive info. It's
+actually quite good.
 :::
 
-If we introduce a second class, let's call it `.not-rich-text`, we can use `@scope` to create a little fence around the elements we want to protect.
+If we introduce a second class, let's call it `.not-rich-text`, we can use `@scope` to create a little fence around the
+elements we want to protect.
 
 ::: code-group
 
@@ -88,10 +99,11 @@ Easy! The `:scope` pseudo-class represents the scope's root. In this case it's `
 
 ## End result
 
-Notice how the text styles are different from the ones in the article around the code example component! There are no margins on the any of them for instance. Our little style fence works!
+Notice how the text styles are different from the ones in the article around the code example component! There are no
+margins on the any of them for instance. Our little style fence works!
 
 <Example>
-<template #example>
+  <template #example>
 <h1>Heading 1</h1>
 <h2>Heading 2</h2>
 <h3>Heading 3</h3>

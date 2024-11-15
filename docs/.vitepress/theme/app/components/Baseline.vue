@@ -2,7 +2,7 @@
 import { onMounted } from "vue";
 
 const props = defineProps<{
-  id: string;
+  ids: string[];
 }>();
 
 onMounted(async () => {
@@ -10,10 +10,16 @@ onMounted(async () => {
 });
 </script>
 
-<template>
+<template v-if="ids.length">
   <ClientOnly>
     <article class="card outlined not-rich-text">
-      <baseline-status :featureId="id"></baseline-status>
+      <baseline-status v-for="id in ids" :featureId="id"></baseline-status>
     </article>
   </ClientOnly>
 </template>
+
+<style>
+article {
+  margin-block: var(--size-3);
+}
+</style>

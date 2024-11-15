@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import BlogPosts from "../.vitepress/theme/app/components/BlogPosts.vue"
+import Post from "../.vitepress/theme/app/components/BlogPost.vue"
+import usePosts from '../.vitepress/theme/app/composables/posts'
 
+const { allPosts: posts } = usePosts();
 </script>
 
 <hgroup>
@@ -11,4 +13,13 @@ Learnings from the process of developing Open Props UI. Often jotted down right 
 </p>
 </hgroup>
 
-<BlogPosts />
+<div class="posts">
+	<Post v-for="post of posts" :post="post" />
+</div>
+
+<style>
+	.posts {
+		display:grid;
+		gap: var(--size-3);
+	}
+</style>
