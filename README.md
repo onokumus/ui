@@ -10,10 +10,6 @@ https://open-props-ui.netlify.app/
 ## Development
 
 This repo holds the code for the component library and the docs. The docs are used as a testbed for the component library.
-
-1. Clone the repo.
-2. Navigate to the repo root `/ui`.
-3. Open the terminal and write:
 ```
 pnpm i
 pnpm docs:dev
