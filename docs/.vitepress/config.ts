@@ -9,8 +9,8 @@ export default defineConfig({
     theme: "dark-plus",
   },
   head: [
-    ["link", { rel: "icon", type: "image/ico", href: "/img/favicon.ico" }],
-    ["link", { rel: "icon", type: "image/png", href: "/img/ui-logo.png" }],
+    ["link", { rel: "icon", type: "image/ico", href: "/favicon.ico" }],
+    ["link", { rel: "icon", type: "image/png", href: "/ui-logo.png" }],
     ["meta", { name: "theme-color", content: "var(--color-8)" }],
     ["meta", { property: "og:type", content: "website" }],
     ["meta", { property: "og:locale", content: "en" }],
