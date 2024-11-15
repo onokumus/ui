@@ -6,7 +6,7 @@ The `.sr-only` class refers to the "screen reader only" util which
 removes the visible text but still allows screen readers to
 access it.
 */
-:where(button, .button) {
+:where(.button) {
   /* Base */
   &:where(:has(svg), &.icon-only) {
     gap: 1ex;

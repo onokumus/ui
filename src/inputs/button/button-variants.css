@@ -1,4 +1,4 @@
-:where(button, .button) {
+:where(.button) {
   --_bg-color: transparent;
   --_border-color: transparent;
   --_text-color: var(--primary, cornflowerblue);

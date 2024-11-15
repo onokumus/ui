@@ -7,7 +7,7 @@
     )
   );
   --_border-color: var(
-    --_border-color,
+    --border-color,
     light-dark(
       var(--gray-2, oklch(88% 0.01 255 / 1)),
       var(--gray-11, oklch(37% 0.01 255 / 1))
@@ -22,7 +22,7 @@
   );
 
   align-items: center;
-  background-color: var(--_bg-color);
+  background: var(--_bg-color) var(--ripple, none);
   border: 1px solid var(--_border-color);
   border-radius: var(--radius-2, 0.5rem);
   color: var(--_color);
@@ -50,13 +50,6 @@
         var(--gray-12, oklch(31% 0.01 255 / 1))
       )
     );
-    --_border-color: var(
-      --_border-color,
-      light-dark(
-        var(--gray-2, oklch(88% 0.01 255 / 1)),
-        var(--gray-11, oklch(37% 0.01 255 / 1))
-      )
-    );
     --_color: var(
       --text-color-1,
       light-dark(
@@ -74,13 +67,7 @@
         var(--gray-14, oklch(18% 0.01 255 / 1))
       )
     );
-    --_border-color: var(
-      --text-color-1,
-      light-dark(
-        var(--gray-14, oklch(18% 0.01 255 / 1)),
-        var(--gray-1, oklch(95% 0.01 255 / 1))
-      )
-    );
+
     --_color: var(
       --text-color-1,
       light-dark(
@@ -88,5 +75,38 @@
         var(--gray-1, oklch(95% 0.01 255 / 1))
       )
     );
+  }
+
+  &:where(button:not(.disabled, [disabled])) {
+    &:where(:not(:active)):hover {
+      --_bg-color: light-dark(
+        color-mix(
+          in oklch,
+          var(--surface-tonal, var(--gray-1, oklch(95% 0.01 255 / 1))) 98%,
+          black
+        ),
+        color-mix(
+          in oklch,
+          var(--surface-tonal, var(--gray-12, oklch(31% 0.01 255 / 1))) 90%,
+          white
+        )
+      );
+    }
+  }
+
+  /* Ripple effect */
+  background-position: center;
+  transition: background 0.8s;
+
+  &:where(:not(.disabled, [disabled])) {
+    &:where(:not(:active):hover) {
+      --ripple: radial-gradient(circle, transparent 1%, var(--_bg-color) 1%)
+        center/15000%;
+    }
+
+    &:where(:hover:active) {
+      background-size: var(--button-ripple-size);
+      transition: background 0s;
+    }
   }
 }
