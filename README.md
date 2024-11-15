@@ -14,6 +14,10 @@ This repo holds the code for the component library and the docs. The docs are us
 1. Clone the repo.
 2. Navigate to the repo root `/ui`.
 3. Open the terminal and write:
+```
+pnpm i
+pnpm docs:dev
+```
 
 
 ## Backstory
