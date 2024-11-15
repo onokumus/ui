@@ -87,7 +87,7 @@ Tonal clickable
 </button>
 
 <button class="chip outlined">
-Tonal clickable
+Outlined clickable
 </button>
 </template>
 
