@@ -2,7 +2,7 @@
 date: 2024-11-14
 title: A perfect use case for @scope
 category: blog
-tags: rich text, typography
+tags: "@scope, typography"
 excerpt: What a life-saver!
 status: public
 ---
