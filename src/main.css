@@ -37,6 +37,7 @@
   layer(components.data-display.typography);
 
 /*** Feedback */
+@import "./feedback/alert.css" layer(components.feedback.alert);
 @import "./feedback/dialog.css" layer(components.feedback.dialog);
 @import "./feedback/progress.css" layer(components.feedback.progress);
 @import "./feedback/spinner.css" layer(components.feedback.spinner);
