@@ -306,7 +306,7 @@ Make sure the text is wrapped in a `.text` wrapper.
 
 ## Anatomy
 
-1. Container: `div` or `button`
+1. Container: `div`, `a` or `button`
 2. Text
 3. Icon (optional): `<svg>` element
 
