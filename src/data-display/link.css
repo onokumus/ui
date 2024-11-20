@@ -1,14 +1,14 @@
 :where(.link) {
-  color: var(--primary, cornflowerblue);
+  color: var(--primary);
   cursor: pointer;
-  font-weight: var(--font-weight-7);
+  font-weight: var(--font-weight-7, 700);
   text-decoration: underline;
-  text-decoration-color: var(--primary, cornflowerblue);
+  text-decoration-color: var(--primary);
   text-underline-offset: 1px;
 
   &:where([href]) {
     &:where(:hover) {
-      color: var(--primary-light, deepskyblue);
+      color: var(--primary-light);
     }
   }
 

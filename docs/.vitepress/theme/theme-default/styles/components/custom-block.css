@@ -14,7 +14,7 @@
 
     a,
     code {
-      color: var(--primary, cornflowerblue);
+      color: var(--primary);
     }
 
     a:hover,
@@ -34,7 +34,7 @@
 
     a,
     code {
-      color: var(--primary, cornflowerblue);
+      color: var(--primary);
     }
 
     a:hover,
@@ -153,7 +153,7 @@
     background-color: var(--vp-custom-block-details-bg);
 
     a {
-      color: var(--primary, cornflowerblue);
+      color: var(--primary);
     }
 
     a:hover,

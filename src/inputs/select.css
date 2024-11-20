@@ -8,10 +8,7 @@
   line-height: 1.5; */
 
   & :where(optgroup, option) {
-    background: var(
-      --surface-default,
-      light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
-    );
+    background: var(--surface-default);
   }
 
   &:where(:focus-visible) {
@@ -20,7 +17,7 @@
   }
   &:where(:hover, :focus) {
     /* add button hover */
-    /* background-color: var(--surface-default, light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1)));
+    /* background-color: var(--surface-default);
 		background-image: var(--icon-arrow-up); */
   }
 }

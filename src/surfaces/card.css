@@ -23,37 +23,25 @@
   }
 
   &.tonal {
-    --_bg-color: var(
-      --surface-tonal,
-      light-dark(oklch(95% 0.01 255 / 1), oklch(31% 0.01 255 / 1))
-    );
+    --_bg-color: var(--surface-tonal);
     --_border-width: 1px;
   }
 
   &.elevated {
-    --_bg-color: var(
-      --surface-elevated,
-      light-dark(oklch(99% 0.01 255 / 1), oklch(31% 0.01 255 / 1))
-    );
+    --_bg-color: var(--surface-elevated);
     --_border-color: transparent;
     --_border-width: 0;
-    --_shadow: var(--shadow-3, 0 4px 6px -1px rgb(0 0 0 / 0.1));
+    --_shadow: var(--shadow-3);
 
     /* Adjust shadow in dark mode */
     @container style(--color-scheme: dark) {
-      --_shadow: var(--shadow-4, 0 10px 15px -3px rgb(0 0 0 / 0.1));
+      --_shadow: var(--shadow-4);
     }
   }
 
   &.outlined {
-    --_bg-color: var(
-      --surface-default,
-      light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
-    );
-    --_border-color: var(
-      --border-color,
-      light-dark(oklch(37% 0.01 255 / 1), oklch(99% 0.01 255 / 1))
-    );
+    --_bg-color: var(--surface-default);
+    --_border-color: var(--border-color);
     --_border-width: 1px;
   }
 

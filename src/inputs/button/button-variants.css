@@ -1,7 +1,7 @@
 :where(.button) {
   --_bg-color: transparent;
   --_border-color: transparent;
-  --_text-color: var(--primary, cornflowerblue);
+  --_text-color: var(--primary);
 
   /* TODO */
   &:where(:not(.disabled, [disabled])) {
@@ -25,10 +25,7 @@
     --_text-color: color-mix(
       in oklch,
       var(--text-color-2) 50%,
-      var(
-        --surface-default,
-        light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
-      )
+      var(--surface-default)
     );
     cursor: not-allowed;
   }
@@ -57,10 +54,7 @@
 
   /* Variants */
   &.outlined {
-    --_bg-color: var(
-      --surface-default,
-      light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
-    );
+    --_bg-color: var(--surface-default);
     --_border-color: var(--color-8);
     --_text-color: var(--color-8);
 
@@ -79,25 +73,16 @@
     }
 
     &:where(.disabled, [disabled]) {
-      --_bg-color: var(
-        --surface-default,
-        light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
-      );
+      --_bg-color: var(--surface-default);
       --_border-color: color-mix(
         in oklch,
         var(--text-color-2) 20%,
-        var(
-          --surface-default,
-          light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
-        )
+        var(--surface-default)
       );
       --_text-color: color-mix(
         in oklch,
         var(--text-color-2) 40%,
-        var(
-          --surface-default,
-          light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
-        )
+        var(--surface-default)
       );
     }
   }
@@ -121,18 +106,12 @@
       --_bg-color: color-mix(
         in oklch,
         var(--text-color-2) 8%,
-        var(
-          --surface-default,
-          light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
-        )
+        var(--surface-default)
       );
       --_text-color: color-mix(
         in oklch,
         var(--text-color-2) 70%,
-        var(
-          --surface-default,
-          light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
-        )
+        var(--surface-default)
       );
     }
   }
@@ -156,50 +135,41 @@
       --_bg-color: color-mix(
         in oklch,
         var(--text-color-2) 20%,
-        var(
-          --surface-default,
-          light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
-        )
+        var(--surface-default)
       );
       --_text-color: color-mix(
         in oklch,
         var(--text-color-2) 70%,
-        var(
-          --surface-default,
-          light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
-        )
+        var(--surface-default)
       );
     }
   }
   &.elevated {
-    --_bg-color: light-dark(
-      var(--gray-1, #f1f3f5),
-      var(--gray-12, oklch(31% 0.01 255 / 1))
-    );
+    --_bg-color: light-dark(var(--gray-1), var(--gray-12));
     --_text-color: var(--color-8);
 
-    box-shadow: var(--shadow-3, 0 4px 6px -1px rgb(0 0 0 / 0.1));
+    box-shadow: var(--shadow-3);
 
     &:where(:not(.disabled, [disabled])) {
       &:where(:not(:active):hover) {
-        box-shadow: var(--shadow-4, 0 10px 15px -3px rgb(0 0 0 / 0.1));
+        box-shadow: var(--shadow-4);
       }
 
       &:where(:active) {
-        box-shadow: var(--shadow-6, 0 25px 50px -12px rgb(0 0 0 / 0.25));
+        box-shadow: var(--shadow-6);
       }
     }
 
     @container style(--color-scheme: dark) {
-      box-shadow: var(--shadow-4, 0 10px 15px -3px rgb(0 0 0 / 0.1));
+      box-shadow: var(--shadow-4);
 
       &:where(:not(.disabled, [disabled])) {
         &:where(:not(:active):hover) {
-          box-shadow: var(--shadow-5, 0 20px 25px -5px rgb(0 0 0 / 0.1));
+          box-shadow: var(--shadow-5);
         }
 
         &:where(:active) {
-          box-shadow: var(--shadow-6, 0 25px 50px -12px rgb(0 0 0 / 0.25));
+          box-shadow: var(--shadow-6);
         }
       }
     }
@@ -208,18 +178,12 @@
       --_bg-color: color-mix(
         in oklch,
         var(--text-color-2) 8%,
-        var(
-          --surface-elevated,
-          light-dark(oklch(99% 0.01 255 / 1), oklch(31% 0.01 255 / 1))
-        )
+        var(--surface-elevated)
       );
       --_text-color: color-mix(
         in oklch,
         var(--text-color-2) 70%,
-        var(
-          --surface-elevated,
-          light-dark(oklch(99% 0.01 255 / 1), oklch(31% 0.01 255 / 1))
-        )
+        var(--surface-elevated)
       );
     }
   }

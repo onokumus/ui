@@ -5,32 +5,13 @@
   overflow-x: auto;
 
   tr {
-    background-color: var(
-      --surface-default,
-      light-dark(
-        var(--gray-0, oklch(99% 0.01 255 / 1)),
-        var(--gray-13, oklch(25% 0.01 255 / 1))
-      )
-    );
-    border-top: 1px solid
-      var(
-        --border-color,
-        light-dark(
-          var(--gray-2, oklch(88% 0.01 255 / 1)),
-          var(--gray-11, oklch(37% 0.01 255 / 1))
-        )
-      );
+    background-color: var(--surface-default);
+    border-top: 1px solid var(--border-color);
     transition: background-color 0.5s;
   }
 
   tr:nth-child(2n) {
-    background-color: var(
-      --surface-filled,
-      light-dark(
-        var(--gray-1, oklch(95% 0.01 255 / 1)),
-        var(--gray-14, oklch(18% 0.01 255 / 1))
-      )
-    );
+    background-color: var(--surface-filled);
   }
 
   th,
@@ -40,13 +21,7 @@
   }
 
   th {
-    background-color: var(
-      --surface-filled,
-      light-dark(
-        var(--gray-1, oklch(95% 0.01 255 / 1)),
-        var(--gray-14, oklch(18% 0.01 255 / 1))
-      )
-    );
+    background-color: var(--surface-filled);
     color: var(--text-color-1);
     font-size: var(--font-size-body-small, 0.75rem);
     font-weight: 600;

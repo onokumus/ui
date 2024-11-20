@@ -1,6 +1,6 @@
 :where(h1, h2, h3, h4, h5, h6) {
   color: var(--text-color-1);
-  font-weight: var(--font-weight-7);
+  font-weight: var(--font-weight-7, 700);
   text-wrap: pretty;
 }
 
@@ -97,16 +97,16 @@
 
     /* link.css */
     a {
-      color: var(--primary, cornflowerblue);
+      color: var(--primary);
       cursor: pointer;
-      font-weight: var(--font-weight-7);
+      font-weight: var(--font-weight-7, 700);
       text-decoration: underline;
-      text-decoration-color: var(--primary, cornflowerblue);
+      text-decoration-color: var(--primary);
       text-underline-offset: 1px;
 
       &[href] {
         &:hover {
-          color: var(--primary-light, deepskyblue);
+          color: var(--primary-light);
         }
       }
 

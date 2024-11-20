@@ -35,7 +35,7 @@
   summary {
     background-color: inherit;
     cursor: pointer;
-    font-weight: var(--font-weight-7, 700);
+    font-weight: var(--font-weight-7, 700, 700);
     padding-block: var(--size-3, 1rem);
     user-select: none;
   }
@@ -87,32 +87,19 @@
   }
 
   &.elevated {
-    --_bg-color: var(
-      --surface-elevated,
-      light-dark(oklch(99% 0.01 255 / 1), oklch(31% 0.01 255 / 1))
-    );
+    --_bg-color: var(--surface-elevated);
     --_margin-inline: 0;
-    --_shadow: var(--shadow-2, 0 1px 3px 0 rgb(0 0 0 / 0.1));
+    --_shadow: var(--shadow-2);
   }
 
   &.outlined {
-    --_bg-color: var(
-      --surface-default,
-      light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
-    );
+    --_bg-color: var(--surface-default);
     --_margin-inline: 0;
-    border: 1px solid
-      var(
-        --border-color,
-        light-dark(oklch(37% 0.01 255 / 1), oklch(99% 0.01 255 / 1))
-      );
+    border: 1px solid var(--border-color);
   }
 
   &.tonal {
-    --_bg-color: var(
-      --surface-tonal,
-      light-dark(oklch(95% 0.01 255 / 1), oklch(31% 0.01 255 / 1))
-    );
+    --_bg-color: var(--surface-tonal);
     --_margin-inline: 0;
   }
 
@@ -123,10 +110,7 @@
 
 /* Accordion group  */
 :where(.card:has(details)) {
-  --_gutter-color: var(
-    --border-color,
-    light-dark(oklch(37% 0.01 255 / 1), oklch(99% 0.01 255 / 1))
-  );
+  --_gutter-color: var(--border-color);
 
   & > .content {
     margin-block: 0;

@@ -16,13 +16,13 @@
 
   -webkit-text-size-adjust: none; /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
 
-  accent-color: var(--primary, cornflowerblue);
+  accent-color: var(--primary);
   background-color: var(
     --surface-default,
     light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
   );
   block-size: 100%;
-  caret-color: var(--primary, cornflowerblue);
+  caret-color: var(--primary);
   color: var(--text-color-2);
   font-family: var(--font-sans);
 
@@ -200,7 +200,7 @@
 }
 
 :where(dt) {
-  font-weight: var(--font-weight-7);
+  font-weight: var(--font-weight-7, 700);
 }
 
 :where(dt:not(:first-of-type)) {
