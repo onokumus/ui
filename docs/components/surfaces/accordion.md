@@ -431,7 +431,6 @@ The [WAI-ARIA guidelines](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) f
 </details>
 ```
 
-2
 </template>
 </Example>
 
@@ -439,10 +438,7 @@ The [WAI-ARIA guidelines](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) f
 
 These are the classes and attributes a card can be styled with. As usual, feel free to add your own!
 
-| Type                  | Modifiers                                     | Default | Description                          |
-| --------------------- | --------------------------------------------- | ------- | ------------------------------------ |
-| [Anatomy](#anatomy)   | `& > summary`, `& > .content`, `& > .actions` | -       | Optional wrappers for child content. |
-| [Variants](#variants) | `.text`, `.elevated`, `.tonal`, `.outlined`,  | `.text` | The variant to use.                  |
+<!--@include: ./accordion-api.md -->
 
 ## Browser compatibility
 

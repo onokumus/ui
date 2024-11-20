@@ -11,18 +11,10 @@
   display: inline-flex;
   font-size: var(--font-size-0, 0.75rem);
   gap: var(--size-1, 0.25rem);
-  height: var(--size-7, 32px);
+  block-size: var(--size-7, 2rem);
   padding-inline: var(--size-2, 0.5rem);
 
-  /* Icon */
-  &:has(svg) {
-    padding-inline: var(--size-1, 0.25rem) var(--size-2, 0.5rem);
-
-    svg {
-      inline-size: var(--size-3, 1rem);
-    }
-  }
-
+  /* Variants */
   /* Default */
   &.tonal {
     --_bg-color: var(--surface-tonal);
@@ -44,6 +36,29 @@
     }
   }
 
+  /* Icon */
+  &:has(svg:first-child) {
+    padding-inline: var(--size-1, 0.25rem) var(--size-2, 0.5rem);
+  }
+  &:has(svg:last-child) {
+    padding-inline: var(--size-2, 0.5rem) var(--size-1, 0.25rem);
+  }
+
+  &:has(svg) {
+    svg {
+      flex-shrink: 0;
+      inline-size: var(--size-3, 1rem);
+    }
+  }
+
+  /* Sizes */
+  &.small {
+    block-size: var(--size-5, 1.5rem);
+  }
+  &.multiline {
+    block-size: auto;
+  }
+
   /* Ripple effect */
   background-position: center;
   transition: background 0.8s;
@@ -58,5 +73,16 @@
       background-size: var(--button-ripple-size);
       transition: background 0s;
     }
+  }
+
+  /* Disabled */
+  &:where(.disabled, [disabled]) {
+    opacity: 0.64;
+    --_text-color: color-mix(
+      in oklch,
+      var(--text-color-2) 50%,
+      var(--surface-default)
+    );
+    cursor: not-allowed;
   }
 }

@@ -114,10 +114,7 @@ Open Props UI include these complementary utility components to handle various u
 
 These are the classes and attributes a card can be styled with. As usual, feel free to add your own!
 
-| Type                  | Modifiers                                      | Default | Description                          |
-| --------------------- | ---------------------------------------------- | ------- | ------------------------------------ |
-| [Children](#anatomy)  | `& > <hgroup>`, `& > .content`, `& > .actions` | -       | Optional wrappers for child content. |
-| [Variants](#variants) | `.text`, `.outlined`, `.tonal`, `.elevated`    | `.text` | The variant to use.                  |
+<!--@include: ./card-api.md -->
 
 ## See also
 
