@@ -338,8 +338,6 @@ Make sure the text is wrapped in a `.text` wrapper.
 </template>
 </Example>
 
-## Accessibility
-
 ## API
 
 <!--@include: ./chip-api.md -->
