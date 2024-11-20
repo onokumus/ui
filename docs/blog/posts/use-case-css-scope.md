@@ -39,8 +39,7 @@ Below is a simplification of what an article page on this website could look lik
 
 :::
 
-The problem anyone runs into when approaching a page structure like this is that the `.rich-text` styles sneak into your
-preciously styled components you don't want polluted other styles. When coding vanilla CSS we're completely at
+The problem anyone runs into when approaching a page structure like this is that the `.rich-text` styles sneak into your preciously styled components that you don't want polluted with other styles. When coding vanilla CSS we're completely at
 the mercy of [ _the
 cascade_](https://web.dev/learn/css/the-cascade?continue=https%3A%2F%2Fweb.dev%2Flearn%2Fcss%2F%23article-https%3A%2F%2Fweb.dev%2Flearn%2Fcss%2Fthe-cascade):tm:,
 so we need to be mindful of what styles flow where.
@@ -51,8 +50,7 @@ But what if we could tell CSS to just... look the other way and not care about o
 
 Developers have been quite confused by `@scope` ever since it was announced believing CSS _finally_ solved style
 scoping, but no that's not it. Basically `@scope` is primarily about defining a boundary for where your styles should
-apply, and depending on how creative you get with the selectors you can do some pretty cool stuff. If that meant
-absolutely nothing to you, you will get the hang of it soon, keep reading.
+apply, and depending on how creative you get with the selectors you can do some pretty cool stuff. If that meant absolutely nothing to you, don't worry - you will get the hang of it soon. Keep reading.
 
 ::: tip
 Read through the [MDN docs](https://developer.mozilla.org/en-US/docs/Web/CSS/@scope) for more comprehensive info. It's
@@ -98,7 +96,7 @@ Easy! The `:scope` pseudo-class represents the scope's root. In this case it's `
 ## End result
 
 Notice how the text styles are different from the ones in the article around the code example component! There are no
-margins on the any of them for instance. Our little style fence works!
+margins on the any of them, for instance. Our little style fence works!
 
 <Example>
   <template #example>
