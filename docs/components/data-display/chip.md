@@ -45,6 +45,7 @@ The Chip has two variants: tonal (default) and outlined.
 
 ## Icon
 
+The icon can be placed before or after the text. <br>
 Make sure the text is wrapped in a `.text` wrapper.
 
 <Example direction="row">
@@ -181,8 +182,6 @@ Make sure the text is wrapped in a `.text` wrapper.
 
 <div class="chip" disabled><span class="text">Disabled attribute</span></div>
 
-<div class="chip danger" disabled><span class="text">Disabled danger</span></div>
-
 <button class="chip outlined" disabled>
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M29.907 5.14a1.25 1.25 0 0 1-.047 1.767l-19 18a1.25 1.25 0 0 1-1.775-.055l-6.75-7.25a1.25 1.25 0 0 1 1.83-1.704l5.89 6.327L28.14 5.093a1.25 1.25 0 0 1 1.767.047"/></svg>
 <span class="text">Disabled w/ icon</span>
@@ -199,10 +198,6 @@ Make sure the text is wrapped in a `.text` wrapper.
 
 <div class="chip" disabled>
   <span class="text">Disabled attribute</span>
-</div>
-
-<div class="chip danger" disabled>
-  <span class="text">Disabled danger</span>
 </div>
 
 <button class="chip outlined" disabled>
@@ -312,10 +307,10 @@ Make sure the text is wrapped in a `.text` wrapper.
 
 <Example direction="row">
 <template #example>
-<button class="chip tonal anatomy">
+<div class="chip tonal anatomy">
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M29.907 5.14a1.25 1.25 0 0 1-.047 1.767l-19 18a1.25 1.25 0 0 1-1.775-.055l-6.75-7.25a1.25 1.25 0 0 1 1.83-1.704l5.89 6.327L28.14 5.093a1.25 1.25 0 0 1 1.767.047"/></svg>
-<span class="text">Open now</span>
-</button>
+<span class="text">Chip example</span>
+</div>
 
 </template>
 
@@ -324,13 +319,8 @@ Make sure the text is wrapped in a `.text` wrapper.
 ```html
 <div class="chip">
   <svg><!----></svg>
-  <span class="text">With icon</span>
+  <span class="text">Text</span>
 </div>
-
-<button class="chip">
-  <svg><!----></svg>
-  <span class="text">With icon</span>
-</button>
 ```
 
 </template>
