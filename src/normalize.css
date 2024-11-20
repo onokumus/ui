@@ -135,6 +135,7 @@
     a[href],
     area,
     button,
+    [role="button"],
     input,
     label[for],
     select,

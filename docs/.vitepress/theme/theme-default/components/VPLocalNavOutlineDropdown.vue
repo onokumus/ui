@@ -69,7 +69,7 @@ function scrollToTop() {
     ref="main"
   >
     <button
-      class="small"
+      class="button small"
       @click="toggle"
       :class="{ open }"
       v-if="headers.length > 0"
@@ -174,12 +174,17 @@ function scrollToTop() {
 }
 
 .top-link {
+  color: var(--primary);
   display: block;
   padding: 0 16px;
   line-height: 48px;
   font-size: 14px;
   font-weight: 500;
-  color: var(--primary);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--primary-light);
+  }
 }
 
 .outline {

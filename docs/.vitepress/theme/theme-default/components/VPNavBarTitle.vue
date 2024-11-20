@@ -61,6 +61,7 @@ const target = computed(() =>
   font-weight: 600;
   color: var(--text-color-2);
   transition: opacity 0.25s;
+  text-decoration: inherit;
 }
 
 @media (min-width: 960px) {
