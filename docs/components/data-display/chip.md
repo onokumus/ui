@@ -18,8 +18,6 @@
 
 ## Variants
 
-### Basic
-
 The Chip has two variants: tonal (default) and outlined.
 
 <Example direction="row">
@@ -45,7 +43,7 @@ The Chip has two variants: tonal (default) and outlined.
 </template>
 </Example>
 
-### Icon
+## Icon
 
 Make sure the text is wrapped in a `.text` wrapper.
 
@@ -100,7 +98,7 @@ Make sure the text is wrapped in a `.text` wrapper.
 </template>
 </Example>
 
-### Button
+## Button
 
 <Example direction="stack">
 <template #example>
@@ -143,7 +141,7 @@ Make sure the text is wrapped in a `.text` wrapper.
 </template>
 </Example>
 
-### Link
+## Link
 
 <Example direction="row">
 <template #example>
@@ -174,7 +172,7 @@ Make sure the text is wrapped in a `.text` wrapper.
 </template>
 </Example>
 
-### Disabled
+## Disabled
 
 <Example direction="row">
 <template #example>
