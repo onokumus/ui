@@ -9,6 +9,27 @@ html {
   --color-scheme: dark;
 }
 
+.danger {
+  --palette-hue: var(--oklch-red);
+  --palette-chroma: 1;
+  --palette-hue-rotate-by: 1;
+}
+.info {
+  --palette-hue: var(--oklch-blue);
+  --palette-chroma: 1;
+  --palette-hue-rotate-by: 1;
+}
+.success {
+  --palette-hue: var(--oklch-green);
+  --palette-chroma: 1;
+  --palette-hue-rotate-by: 1;
+}
+.warning {
+  --palette-hue: var(--oklch-orange);
+  --palette-chroma: 1;
+  --palette-hue-rotate-by: 1;
+}
+
 /* Theme */
 :where(html) {
   color-scheme: light dark;

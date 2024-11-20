@@ -15,7 +15,6 @@
   padding-inline: var(--size-2, 0.5rem);
 
   /* Variants */
-  /* Default */
   &.tonal {
     --_bg-color: var(--surface-tonal);
     --_color: var(--text-color-1);
@@ -23,11 +22,55 @@
 
   &.outlined {
     --_bg-color: var(--surface-default);
-
     --_color: var(--text-color-1);
   }
 
-  &:where(button:not(.disabled, [disabled])) {
+  /* TODO: should this be out of the box? */
+  /* Colors */
+  /* &:hover {
+    --_bg-color: var(--color-11);
+    --_border-color: var(--color-11);
+    --_color: var(--text-color-1);
+  } */
+  /* &.danger,
+  &.info,
+  &.success,
+  &.warning,
+  &.primary {
+    --_bg-color: var(--color-5);
+    --_border-color: var(--color-7);
+    --_color: var(--text-color-1-contrast);
+
+    &:hover {
+      --_bg-color: var(--color-7);
+      --_border-color: var(--color-7);
+      --_color: var(--text-color-1-contrast);
+
+      &:active {
+        --_bg-color: var(--color-8);
+        --_border-color: var(--color-8);
+      }
+    }
+
+    &.outlined {
+      --_bg-color: var(--surface-tonal);
+      --_color: var(--text-color-1);
+      --_border-color: var(--color-9);
+
+      &:hover {
+        --_bg-color: var(--color-9);
+        --_border-color: var(--color-9);
+        --_color: var(--text-color-1);
+
+        &:active {
+          --_bg-color: var(--color-11);
+          --_border-color: var(--color-11);
+        }
+      }
+    }
+  } */
+
+  &:where(button, a):where(:not(.disabled, [disabled])) {
     &:where(:not(:active)):hover {
       --_bg-color: light-dark(
         color-mix(in oklch, var(--surface-tonal) 98%, black),

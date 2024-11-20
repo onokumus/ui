@@ -20,7 +20,7 @@
 
 ### Basic
 
-Chip has two variants: tonal (default) and outlined.
+The Chip has two variants: tonal (default) and outlined.
 
 <Example direction="row">
 <template #example>
@@ -100,17 +100,17 @@ Make sure the text is wrapped in a `.text` wrapper.
 </template>
 </Example>
 
-### Clickable
+### Button
 
 <Example direction="stack">
 <template #example>
 <div class="row">
 <button class="chip">
-<span class="text">Tonal clickable</span>
+<span class="text">Tonal button</span>
 </button>
 
 <button class="chip outlined">
-<span class="text">Outlined clickable</span>
+<span class="text">Outlined button</span>
 </button>
 </div>
 
@@ -143,17 +143,51 @@ Make sure the text is wrapped in a `.text` wrapper.
 </template>
 </Example>
 
-#### Disabled
+### Link
 
 <Example direction="row">
 <template #example>
-<div class="chip disabled"><span class="text">Disabled</span></div>
+<a href="#" class="chip">
+<span class="text">Tonal link</span>
+</a href="#">
 
-<div class="chip" disabled><span class="text">Disabled</span></div>
+<a href="#" class="chip outlined">
+<span class="text">Outlined link</span>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M7.75 5.5A2.25 2.25 0 0 0 5.5 7.75v16.5a2.25 2.25 0 0 0 2.25 2.25h16.5a2.25 2.25 0 0 0 2.25-2.25v-5a1.25 1.25 0 1 1 2.5 0v5A4.75 4.75 0 0 1 24.25 29H7.75A4.75 4.75 0 0 1 3 24.25V7.75A4.75 4.75 0 0 1 7.75 3h5a1.25 1.25 0 1 1 0 2.5zM18 4.25c0-.69.56-1.25 1.25-1.25h8.5c.69 0 1.25.56 1.25 1.25v8.5a1.25 1.25 0 1 1-2.5 0V7.268l-6.366 6.366a1.25 1.25 0 1 1-1.768-1.768L24.732 5.5H19.25c-.69 0-1.25-.56-1.25-1.25"/></svg>
+</a href="#">
+
+</template>
+
+<template #code>
+
+```html
+<a href="#" class="chip">
+  <span class="text">Without icon</span>
+</a href="#">
+
+<a href="#" class="chip">
+  <span class="text">With icon</span>
+  <svg><!----></svg>
+</a href="#">
+```
+
+</template>
+</Example>
+
+### Disabled
+
+<Example direction="row">
+<template #example>
+<div class="chip disabled">  <span class="text">Disabled class</span>
+</div>
+
+<div class="chip" disabled><span class="text">Disabled attribute</span></div>
+
+<div class="chip danger" disabled><span class="text">Disabled danger</span></div>
 
 <button class="chip outlined" disabled>
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M29.907 5.14a1.25 1.25 0 0 1-.047 1.767l-19 18a1.25 1.25 0 0 1-1.775-.055l-6.75-7.25a1.25 1.25 0 0 1 1.83-1.704l5.89 6.327L28.14 5.093a1.25 1.25 0 0 1 1.767.047"/></svg>
-<span class="text">Open now</span>
+<span class="text">Disabled w/ icon</span>
 </button>
 
 </template>
@@ -162,23 +196,74 @@ Make sure the text is wrapped in a `.text` wrapper.
 
 ```html
 <div class="chip disabled">
-  <span class="text">Disabled</span>
+  <span class="text">Disabled class</span>
 </div>
 
 <div class="chip" disabled>
-  <span class="text">Disabled</span>
+  <span class="text">Disabled attribute</span>
+</div>
+
+<div class="chip danger" disabled>
+  <span class="text">Disabled danger</span>
 </div>
 
 <button class="chip outlined" disabled>
   <svg><!--  --></svg>
-  <span class="text">Text</span>
+  <span class="text">Disabled w/ icon</span>
 </button>
 ```
 
 </template>
 </Example>
 
+<!-- TODO: should this be out of the box? -->
+<!--
 ## Colors
+
+<Example direction="stack">
+<template #example>
+<div class="row">
+<button class="chip tonal primary"><span class="text">Primary</span></button>
+<button class="chip tonal success"><span class="text">Success</span></button>
+<button class="chip tonal info"><span class="text">Info</span></button>
+<button class="chip tonal warning"><span class="text">Warning</span></button>
+<button class="chip tonal danger"><span class="text">Danger</span></button>
+</div>
+
+<div class="row">
+<button class="chip outlined primary"><span class="text">Primary</span></button>
+<button class="chip outlined success"><span class="text">Success</span></button>
+<button class="chip outlined info"><span class="text">Info</span></button>
+<button class="chip outlined warning"><span class="text">Warning</span></button>
+<button class="chip outlined danger"><span class="text">Danger</span></button>
+</div>
+
+<div class="row">
+<button class="chip outlined primary">
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M29.907 5.14a1.25 1.25 0 0 1-.047 1.767l-19 18a1.25 1.25 0 0 1-1.775-.055l-6.75-7.25a1.25 1.25 0 0 1 1.83-1.704l5.89 6.327L28.14 5.093a1.25 1.25 0 0 1 1.767.047"/></svg>
+<span class="text">With icon</span>
+</button>
+<button class="chip outlined success">
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M29.907 5.14a1.25 1.25 0 0 1-.047 1.767l-19 18a1.25 1.25 0 0 1-1.775-.055l-6.75-7.25a1.25 1.25 0 0 1 1.83-1.704l5.89 6.327L28.14 5.093a1.25 1.25 0 0 1 1.767.047"/></svg>
+<span class="text">With icon</span>
+</button>
+<button class="chip outlined info">
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M29.907 5.14a1.25 1.25 0 0 1-.047 1.767l-19 18a1.25 1.25 0 0 1-1.775-.055l-6.75-7.25a1.25 1.25 0 0 1 1.83-1.704l5.89 6.327L28.14 5.093a1.25 1.25 0 0 1 1.767.047"/></svg>
+<span class="text">With icon</span>
+</button>
+<button class="chip outlined warning">
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M29.907 5.14a1.25 1.25 0 0 1-.047 1.767l-19 18a1.25 1.25 0 0 1-1.775-.055l-6.75-7.25a1.25 1.25 0 0 1 1.83-1.704l5.89 6.327L28.14 5.093a1.25 1.25 0 0 1 1.767.047"/></svg>
+<span class="text">With icon</span>
+</button>
+<button class="chip outlined danger">
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M29.907 5.14a1.25 1.25 0 0 1-.047 1.767l-19 18a1.25 1.25 0 0 1-1.775-.055l-6.75-7.25a1.25 1.25 0 0 1 1.83-1.704l5.89 6.327L28.14 5.093a1.25 1.25 0 0 1 1.767.047"/></svg>
+<span class="text">With icon</span>
+</button>
+</div>
+
+</template>
+
+</Example> -->
 
 ## Sizes
 
@@ -216,6 +301,10 @@ Make sure the text is wrapped in a `.text` wrapper.
 
 </template>
 </Example>
+
+::: info
+`.multiline` simply sets `block-size: auto` on the Chip.
+:::
 
 ## Anatomy
 
