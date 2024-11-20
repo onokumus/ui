@@ -18,8 +18,7 @@ const { site } = useData();
       </hgroup>
 
       <div class="content">
-        <!-- TODO: replace with chip -->
-        <kbd v-for="tag in post.tags">{{ tag }}</kbd>
+        <div class="chip" v-for="tag in post.tags">{{ tag }}</div>
       </div>
 
       <footer class="actions">
