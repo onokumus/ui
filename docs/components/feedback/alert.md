@@ -92,9 +92,9 @@ Icon must be placed before the content.
 </template>
 </Example>
 
-## Severity
+## Severities
 
-There are three different severities - neutral (default), warning, danger.
+There are four different severities - neutral (default), info, warning, danger.
 
 ::: tip Icons and accessibility
 Omitting an icon is possible. However, it helps having one if you need to convey a specific kind of severity in your Alert message. For instance, colorblind users might be left confused if there's not enough visual guidance.
@@ -180,6 +180,8 @@ Omitting an icon is possible. However, it helps having one if you need to convey
 </Example>
 
 ## API
+
+<!--@include: ./alert-api.md -->
 
 ## Browser compatibility
 

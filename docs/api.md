@@ -50,7 +50,9 @@
 
 ## Feedback
 
-### Alert
+### [Alert](/components/feedback/alert)
+
+<!--@include: ./components/feedback/alert-api.md -->
 
 ### [Dialog](/components/feedback/dialog)
 
