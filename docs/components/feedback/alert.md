@@ -14,7 +14,7 @@
 
 # Alert
 
-Alerts call out for user attention, but should be used **without** interrupting the user's task.
+Alerts call out for user attention. Alerts should be part of the flow and used **without** interrupting the user's task.
 
 ::: info
 If you need to interrupt the user you might want to check out:
