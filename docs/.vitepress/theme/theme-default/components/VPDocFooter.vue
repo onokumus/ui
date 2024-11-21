@@ -151,6 +151,7 @@ const showFooter = computed(
   width: 100%;
   height: 100%;
   transition: border-color 0.25s;
+  text-decoration: none;
 }
 
 .pager-link:hover {
