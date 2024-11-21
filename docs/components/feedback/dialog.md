@@ -28,7 +28,7 @@ In order to toggle a `<dialog>` you will need to use Javascript.
 <template #example>
 <button @click="openModal" class="button tonal">Open dialog</button>
 
-<dialog ref="dialog" role="dialog" aria-labelledby="dialog-heading" aria-modal="true" class="card elevated">
+<dialog ref="dialog" role="alertdialog" aria-labelledby="dialog-heading" aria-modal="true" class="card elevated">
 		<hgroup>
 			<h2 id="dialog-heading" class="h4">Are you sure?</h2>
 		</hgroup>
@@ -94,7 +94,7 @@ closeButton.addEventListener("click", () => {
 
 | Role/attribute           | Usage                                                                                                                                      |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| role="dialog"            | Identifies the element that serves as the dialog container.                                                                                |
+| role="alertdialog"       | Identifies the element that serves as the dialog container.                                                                                |
 | role="alertdialog"       | If the dialog is a confirmation window communicating an important message that requires a confirmation or other user response.             |
 | aria-labelledby="IDREF"  | Gives the dialog an accessible name by referring to the element that provides the dialog title.                                            |
 | aria-describedby="IDREF" | Gives the dialog an accessible description by referring to the dialog content that describes the primary message or purpose of the dialog. |
@@ -114,7 +114,7 @@ Source: [w3.org](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/
 
 ```html {2,3,4,5,9,11}
 <dialog
-  role="dialog"
+  role="alertdialog"
   aria-labelledby="dialog-heading"
   aria-describedby="dialog-content"
   aria-modal="true"
