@@ -1,2 +1,58 @@
 :where(.snackbar) {
+  align-items: center;
+  background-color: var(--surface-filled);
+  border-radius: var(--surface-border-radius);
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-2);
+  display: flex;
+  font-size: var(--font-size-body-small);
+  gap: var(--size-3, 1rem);
+  justify-content: space-between;
+  min-width: min(100%, 28ch);
+  max-width: min(100%, 60ch);
+  padding: var(--size-2, 0.5rem) var(--size-3, 1rem);
+
+  &:where(dialog[open]) {
+    inset-block-end: var(--size-3, 1rem);
+    margin-inline: var(--size-3, 1rem) auto;
+    position: fixed;
+    width: calc(100% - var(--size-6));
+    z-index: 100;
+
+    /* TODO px */
+    @media (width > 640px) {
+      inset-block-end: var(--size-7, 2rem);
+      margin-inline: var(--size-7, 2rem) auto;
+      width: minmax(fit-content, 50ch);
+    }
+  }
+
+  * {
+    word-break: break-word;
+  }
+
+  .actions {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    gap: var(--size-3, 1rem);
+
+    button:not(:has(svg)) {
+      font-size: inherit;
+      max-block-size: var(--size-6);
+      padding: 1ex;
+    }
+
+    button:has(svg) {
+      max-inline-size: var(--size-6);
+      padding: var(--size-1);
+    }
+  }
+
+  /* Variants */
+  &.dark {
+  }
+
+  &.light {
+  }
 }

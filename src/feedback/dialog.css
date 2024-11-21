@@ -1,5 +1,5 @@
 :where(dialog) {
-  margin-block-start: 15%; /* vertical aligment */
+  margin-block-start: 15%; /* vertical alignment */
   padding-block: 0;
 
   &::backdrop {

@@ -16,13 +16,23 @@
 
 # Dialog
 
-A `<dialog>` element on its own doesn't do much, but combined with the [card](/components/surfaces/card) component you have a foundation to quickly compose pretty much whatever you need.
+A minimally styled window overlaid on the main content. By design the Dialog is minimal with zero content to allow for both modal and non-modal use.
+
+::: info Modal vs Dialog
+The term "modal" and "dialog" are often used interchangeably, but there's an important difference. A modal window describes parts of a UI that [blocks user interaction](#modal). A dialog [doesn't have to be blocking](#non-modal).
+:::
+
+## Usage
 
 ::: tip Javascript is required
 In order to toggle a `<dialog>` you will need to use Javascript.
 :::
 
-## Basics
+### Non-modal
+
+- [Snackbar](/components/feedback/snackbar)
+
+### Modal
 
 <Example>
 <template #example>
@@ -37,8 +47,8 @@ In order to toggle a `<dialog>` you will need to use Javascript.
       nulla sit amet porttitor rhoncus.
 		</div>
 		<div class="actions">
-			<button @click="closeModal">Cancel</button>
-			<button @click="closeModal">Save</button>
+			<button class="button small" @click="closeModal">Cancel</button>
+			<button class="button small" @click="closeModal">Save</button>
 		</div>
 </dialog>
 </template>
@@ -48,19 +58,17 @@ In order to toggle a `<dialog>` you will need to use Javascript.
 ::: code-group
 
 ```html [dialog.html]
-<dialog>
-  <div class="card">
-    <hgroup>
-      <h2 class="h4">Are you sure?</h2>
-    </hgroup>
-    <div class="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales,
-      nulla sit amet porttitor rhoncus.
-    </div>
-    <div class="actions">
-      <button>Cancel</button>
-      <button>Save</button>
-    </div>
+<dialog class="card elevated">
+  <hgroup>
+    <h2 class="h4">Are you sure?</h2>
+  </hgroup>
+  <div class="content">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sodales,
+    nulla sit amet porttitor rhoncus.
+  </div>
+  <div class="actions">
+    <button class="button">Cancel</button>
+    <button class="button">Save</button>
   </div>
 </dialog>
 
@@ -94,7 +102,7 @@ closeButton.addEventListener("click", () => {
 
 | Role/attribute           | Usage                                                                                                                                      |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| role="alertdialog"       | Identifies the element that serves as the dialog container.                                                                                |
+| role="dialog"            | Identifies the element that serves as the dialog container.                                                                                |
 | role="alertdialog"       | If the dialog is a confirmation window communicating an important message that requires a confirmation or other user response.             |
 | aria-labelledby="IDREF"  | Gives the dialog an accessible name by referring to the element that provides the dialog title.                                            |
 | aria-describedby="IDREF" | Gives the dialog an accessible description by referring to the dialog content that describes the primary message or purpose of the dialog. |
@@ -133,7 +141,7 @@ Source: [w3.org](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/
 
 ## Anatomy
 
-1. Button to show dialog
+1. Action to show dialog
 2. `<dialog>` container
 
 <Example exampleClass="anatomy">
@@ -165,10 +173,6 @@ A `<dialog>` element on its own doesn't do much. It's recommended to use it in c
 <Baseline :ids="['container-style-queries','light-dark']" />
 
 ## Installation
-
-::: tip
-It's recommended to use the dialog in combination with the [card](/components/surfaces/card) component.
-:::
 
 ::: code-group
 <<< @/../src/feedback/dialog.css [dialog.css]

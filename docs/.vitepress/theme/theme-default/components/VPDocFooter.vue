@@ -119,6 +119,7 @@ const showFooter = computed(
   font-weight: 500;
   color: var(--primary);
   transition: color 0.25s;
+  text-decoration: none;
 }
 
 .edit-link-button:hover {

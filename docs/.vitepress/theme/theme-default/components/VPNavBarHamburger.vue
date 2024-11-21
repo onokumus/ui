@@ -28,6 +28,7 @@ defineEmits<{
 
 <style scoped>
 .VPNavBarHamburger {
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;

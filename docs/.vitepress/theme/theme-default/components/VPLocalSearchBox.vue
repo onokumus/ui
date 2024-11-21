@@ -567,6 +567,10 @@ function formMarkRegex(terms: Set<string>) {
 </template>
 
 <style scoped>
+.back-button,
+.toggle-layout-button {
+  background-color: transparent;
+}
 .VPLocalSearchBox {
   position: fixed;
   z-index: 100;

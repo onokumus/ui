@@ -131,6 +131,7 @@ const classes = computed(() => {
 }
 
 .menu {
+  background-color: transparent;
   display: flex;
   align-items: center;
   padding: 12px 24px 11px;

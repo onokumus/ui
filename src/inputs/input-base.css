@@ -22,7 +22,6 @@
 
 :where(
     input:not(
-        button,
         [disabled],
         [readonly],
         [type="button"],
