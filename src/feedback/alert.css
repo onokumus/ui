@@ -1,31 +1,62 @@
 :where(.alert) {
   --_bg-color: var(--surface-tonal);
-  --_color: var(--text-color-1);
   --_border-color: var(--surface-tonal);
+  --_color: var(--text-color-1);
 
   &.outlined {
     --_bg-color: var(--surface-default);
     --_border-color: var(--border-color);
+    --_color: var(--text-color-1);
   }
 
   background-color: var(--_bg-color);
   border: 1px solid var(--_border-color);
   border-radius: var(--surface-border-radius);
   color: var(--_color);
+  line-height: 1.43;
   padding: var(--size-3, 1rem);
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: var(--font-size-body);
+    font-weight: 600;
+    color: inherit;
+  }
+
+  &:has(h1, h2, h3, h4, h5, h6) p {
+    color: inherit;
+    font-size: var(--font-size-body-small);
+    margin-block-start: var(--size-2, 0.5rem);
+  }
+
+  /* Colors */
   &.danger,
   &.info,
-  &.success,
   &.warning {
     --_bg-color: var(--color-3);
     --_border-color: var(--color-7);
-    --_color: var(--text-color-1-contrast);
+    --_color: var(--gray-14);
+
+    svg {
+      stroke: var(--color-7);
+    }
 
     &.outlined {
       --_bg-color: var(--surface-default);
-      --_color: var(--text-color-1);
       --_border-color: var(--color-9);
+      --_color: var(--text-color-1);
     }
+  }
+
+  /* Icon */
+  &:has(svg) {
+    align-items: center;
+    display: grid;
+    gap: var(--size-3, 1rem);
+    grid-template-columns: var(--size-4, 1.25rem) 1fr;
   }
 }

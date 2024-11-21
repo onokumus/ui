@@ -26,7 +26,7 @@ In order to toggle a `<dialog>` you will need to use Javascript.
 
 <Example>
 <template #example>
-<button @click="openModal" class="tonal">Open dialog</button>
+<button @click="openModal" class="button tonal">Open dialog</button>
 
 <dialog ref="dialog" role="dialog" aria-labelledby="dialog-heading" aria-modal="true" class="card elevated">
 		<hgroup>
@@ -138,7 +138,7 @@ Source: [w3.org](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/
 
 <Example exampleClass="anatomy">
 <template #example>
-<button class="tonal">Open dialog</button>
+<button class="button tonal">Open dialog</button>
 
 <div style="background-color: light-dark(white,rgb(18,18,18)); display: flex; margin: 1rem 0 0 0; width:fit-content; padding: .5rem;">Dialog</div>
 </template>

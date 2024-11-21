@@ -10,22 +10,22 @@ html {
 }
 
 .danger {
-  --palette-hue: var(--oklch-red);
+  --palette-hue: var(--oklch-red, 25);
   --palette-chroma: 1;
   --palette-hue-rotate-by: 1;
 }
 .info {
-  --palette-hue: var(--oklch-blue);
+  --palette-hue: var(--oklch-indigo, 310);
   --palette-chroma: 1;
   --palette-hue-rotate-by: 1;
 }
 .success {
-  --palette-hue: var(--oklch-green);
+  --palette-hue: var(--oklch-green, 145);
   --palette-chroma: 1;
   --palette-hue-rotate-by: 1;
 }
 .warning {
-  --palette-hue: var(--oklch-orange);
+  --palette-hue: var(--oklch-orange, 75);
   --palette-chroma: 1;
   --palette-hue-rotate-by: 1;
 }
@@ -123,7 +123,7 @@ html {
   --font-size-h6: var(--font-size-1, 1rem);
   --font-size-body: var(--font-size-1, 1rem);
   --font-size-body-large: var(--font-size-3, 1.25rem);
-  --font-size-body-small: var(--font-size-0, 0.75rem);
+  --font-size-body-small: 0.875rem;
   --font-size-overline: var(--font-size-0, 0.75rem);
 
   /* Borders */
