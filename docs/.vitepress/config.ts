@@ -150,6 +150,7 @@ export default defineConfig({
                 { text: "Alert", link: "/components/feedback/alert" },
                 { text: "Dialog", link: "/components/feedback/dialog" },
                 { text: "Progress", link: "/components/feedback/progress" },
+                { text: "Snackbar", link: "/components/feedback/snackbar" },
                 { text: "Spinner", link: "/components/feedback/spinner" },
               ],
             },
