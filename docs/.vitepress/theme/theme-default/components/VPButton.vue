@@ -46,6 +46,7 @@ const component = computed(() => {
   text-align: center;
   font-weight: 600;
   white-space: nowrap;
+  text-decoration: none;
   transition:
     color 0.25s,
     border-color 0.25s,
