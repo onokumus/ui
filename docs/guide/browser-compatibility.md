@@ -1,7 +1,8 @@
 <script setup lang="ts">
 		import Baseline from "../.vitepress/theme/app/components/Baseline.vue"
-const limited = ['container-style-queries', 'scope', 'interpolate-size', 'details-content', 'accent-color']
-const baseline = ['content-visibility', 'light-dark',  'color-mix', 'has','nesting']
+const limited = ['container-style-queries', 'scope', 'interpolate-size', 'details-content', 'accent-color', 'starting-style', 'overlay']
+const baseline2024 = ['transition-behavior','content-visibility', 'light-dark']
+const baseline2023 = [ 'color-mix', 'has','nesting']
 </script>
 
 <hgroup>
@@ -10,4 +11,4 @@ const baseline = ['content-visibility', 'light-dark',  'color-mix', 'has','nesti
 <p>These are the latest (and not always super-supported) features used by Open Props UI.</p>
 </hgroup>
 
-<Baseline :ids="[...limited, ...baseline]" />
+<Baseline :ids="[...limited, ...baseline2024, ...baseline2023]" />

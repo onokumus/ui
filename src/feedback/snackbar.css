@@ -1,58 +1,106 @@
 :where(.snackbar) {
   align-items: center;
-  background-color: var(--surface-filled);
+  /* Inverse surface-filled */
+  background-color: light-dark(var(--gray-14), var(--gray-1));
   border-radius: var(--surface-border-radius);
-  border: 1px solid var(--border-color);
   box-shadow: var(--shadow-2);
+  color: var(--text-color-1-contrast);
   display: flex;
   font-size: var(--font-size-body-small);
   gap: var(--size-3, 1rem);
+  inset-block: auto var(--size-3, 1rem);
+  inset-inline: var(--size-3, 1rem) auto;
   justify-content: space-between;
-  min-width: min(100%, 28ch);
   max-width: min(100%, 60ch);
+  min-width: min(100%, 28ch);
   padding: var(--size-2, 0.5rem) var(--size-3, 1rem);
+  position: fixed;
+  width: calc(100% - var(--size-6, 1.75rem));
+  z-index: 100;
 
-  &:where(dialog[open]) {
-    inset-block-end: var(--size-3, 1rem);
-    margin-inline: var(--size-3, 1rem) auto;
-    position: fixed;
-    width: calc(100% - var(--size-6));
-    z-index: 100;
+  &::backdrop {
+    display: none;
+  }
 
-    /* TODO px */
-    @media (width > 640px) {
-      inset-block-end: var(--size-7, 2rem);
-      margin-inline: var(--size-7, 2rem) auto;
-      width: minmax(fit-content, 50ch);
-    }
+  /* TODO px */
+  @media (width > 640px) {
+    inset-block-end: var(--size-7, 2rem);
+    inset-inline: var(--size-7, 2rem) auto;
   }
 
   * {
     word-break: break-word;
   }
 
+  /* Actions */
   .actions {
     align-items: center;
     display: flex;
     flex-shrink: 0;
     gap: var(--size-3, 1rem);
+    padding-inline: 0;
+
+    button {
+      /* Inverse hover and active backgrounds */
+      &:where(:not(.disabled, [disabled])) {
+        &:where(:not(:active):hover) {
+          --_bg-color: light-dark(
+            color-mix(in oklch, white 40%, black),
+            color-mix(in oklch, white 85%, black)
+          );
+        }
+
+        &:where(:hover:active) {
+          --_bg-color: light-dark(
+            color-mix(in oklch, white 45%, black),
+            color-mix(in oklch, white 80%, black)
+          );
+        }
+      }
+    }
 
     button:not(:has(svg)) {
+      border-radius: var(--surface-border-radius);
       font-size: inherit;
-      max-block-size: var(--size-6);
+      max-block-size: var(--size-6, 1.5rem);
       padding: 1ex;
     }
 
     button:has(svg) {
-      max-inline-size: var(--size-6);
-      padding: var(--size-1);
+      color: inherit;
+      max-inline-size: var(--size-6, 1.75rem);
+      margin: var(--size-00);
+      padding: var(--size-1, 0.25rem);
     }
   }
 
-  /* Variants */
-  &.dark {
+  /* Animations */
+  opacity: 0;
+
+  &:popover-open,
+  :popover-open::backdrop {
+    opacity: 1;
+    transition:
+      display 0.3s allow-discrete,
+      margin-block-end 0.3s var(--ease-1),
+      overlay 0.3s allow-discrete,
+      opacity 0.3s var(--ease-out-1);
+
+    @starting-style {
+      opacity: 0;
+    }
   }
 
-  &.light {
+  @media (prefers-reduced-motion: no-preference) {
+    margin-block-end: calc(0rem - var(--size-3));
+
+    :popover-open,
+    :popover-open::backdrop {
+      margin-block-end: 0;
+
+      @starting-style {
+        margin-block-end: calc(0rem - var(--size-3));
+      }
+    }
   }
 }

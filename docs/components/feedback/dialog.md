@@ -34,9 +34,9 @@ In order to toggle a `<dialog>` you will need to use Javascript.
 
 ### Modal
 
-<Example>
+<Example direction="row">
 <template #example>
-<button @click="openModal" class="button tonal">Open dialog</button>
+<button @click="openModal" class="button">Open dialog</button>
 
 <dialog ref="dialog" role="alertdialog" aria-labelledby="dialog-heading" aria-modal="true" class="card elevated">
 		<hgroup>
@@ -141,12 +141,10 @@ Source: [w3.org](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/
 
 ## Anatomy
 
-1. Action to show dialog
-2. `<dialog>` container
+1. `<dialog>` container
 
-<Example exampleClass="anatomy">
+<Example>
 <template #example>
-<button class="button tonal">Open dialog</button>
 
 <div style="background-color: light-dark(white,rgb(18,18,18)); display: flex; margin: 1rem 0 0 0; width:fit-content; padding: .5rem;">Dialog</div>
 </template>
@@ -154,9 +152,7 @@ Source: [w3.org](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/
 <template #code>
 
 ```html
-<button id="open-dialog-button">Open dialog</button>
-
-<dialog open>
+<dialog>
   <!--  -->
 </dialog>
 ```
@@ -170,7 +166,7 @@ A `<dialog>` element on its own doesn't do much. It's recommended to use it in c
 
 ## Browser compatibility
 
-<Baseline :ids="['container-style-queries','light-dark']" />
+<Baseline :ids="['starting-style', 'overlay', 'container-style-queries','transition-behavior','light-dark']" />
 
 ## Installation
 
