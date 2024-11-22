@@ -46,7 +46,7 @@ TODO: Make sure it doesn't show if there's nothing to scroll
       font-size: 0.9em;
       &::first-letter {
         font-size: 1.043em;
-        font-weight: var(--font-weight-9);
+        font-weight: 900;
       }
 
       & + span {
@@ -54,7 +54,7 @@ TODO: Make sure it doesn't show if there's nothing to scroll
         font-size: 0.9em;
         &::first-letter {
           font-size: 1.043em;
-          font-weight: var(--font-weight-9);
+          font-weight: 900;
         }
       }
     }
@@ -63,7 +63,7 @@ TODO: Make sure it doesn't show if there's nothing to scroll
       align-self: center;
       color: var(--text-color-1);
       font-size: 3em;
-      font-weight: var(--font-weight-9);
+      font-weight: 900;
       grid-column: 2;
       grid-row: 1/3;
       line-height: 0;

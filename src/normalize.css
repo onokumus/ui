@@ -39,7 +39,7 @@
   -webkit-font-smoothing: antialiased;
   font-size: 16px;
   font-synthesis: style;
-  font-weight: var(--font-weight-4);
+  font-weight: 400;
   inline-size: 100%;
   line-height: var(--font-lineheight-3);
   margin: 0;
@@ -201,7 +201,7 @@
 }
 
 :where(dt) {
-  font-weight: var(--font-weight-7, 700);
+  font-weight: 700;
 }
 
 :where(dt:not(:first-of-type)) {

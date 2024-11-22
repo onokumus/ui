@@ -16,7 +16,7 @@
   color: var(--_text-color);
   display: inline-flex;
   font-size: var(--_font-size);
-  font-weight: var(--font-weight-7, 700);
+  font-weight: 700;
   gap: var(--size-2, 0.5rem);
   justify-content: center;
   padding-block: 1ex;

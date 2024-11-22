@@ -1,7 +1,7 @@
 :where(.link) {
   color: var(--primary);
   cursor: pointer;
-  font-weight: var(--font-weight-7, 700);
+  font-weight: 700;
   text-decoration: underline;
   text-decoration-color: var(--primary);
   text-underline-offset: 1px;
