@@ -78,35 +78,20 @@ import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
 
 ## Inline text elements
 
-<Example direction="stack">
-<template #example>
-
-<abbr title="Abbreviation">Abbr.</abbr> `<abbr>`
-
-<strong>Bold</strong> `<strong>`, `<b>`
-
-<i>Italic</i> `<i>`, `<em>`, `<cite>`
-
-<del>Deleted</del> `<del>`
-
-<ins>Inserted</ins> `<ins>`
-
-<kbd>Ctrl + S</kbd> `<kbd>`
-
-<mark>Highlighted</mark> `<mark>`
-
-<s>Strikethrough</s> `<s>`
-
-<small>Small</small> `<small>`
-
-Text <sub>Sub</sub> `<sub>`
-
-Text <sup>Sup</sup> `<sup>`
-
-<u>Underline</u> `<u>`
-</template>
-
-</Example>
+| Result                                  | Code                    |
+| --------------------------------------- | ----------------------- |
+| <abbr title="Abbreviation">Abbr.</abbr> | `<abbr>`                |
+| <strong>Bold</strong>                   | `<strong>`, `<b>`       |
+| <i>Italic</i>                           | `<i>`, `<em>`, `<cite>` |
+| <del>Deleted</del>                      | `<del>`                 |
+| <ins>Inserted</ins>                     | `<ins>`                 |
+| <kbd>Ctrl + S</kbd>                     | `<kbd>`                 |
+| <mark>Highlighted</mark>                | `<mark>`                |
+| <s>Strikethrough</s>                    | `<s>`                   |
+| <small>Small</small>                    | `<small>`               |
+| Text <sub>Sub</sub>                     | `<sub>`                 |
+| Text <sup>Sup</sup>                     | `<sup>`                 |
+| <u>Underline</u>                        | `<u>`                   |
 
 ## Blockquote
 
@@ -125,11 +110,13 @@ Text <sup>Sup</sup> `<sup>`
 
 <template #code>
 
+<!-- prettier-ignore -->
 ```html
 <blockquote>
-  "Occupy your mind, don't stay home. Talk to all your friends, but don't look
-  at your phone”
-  <footer>— Marika Hackman, <cite>No Caffeine</cite></footer>
+  "Occupy your mind, don't stay home. Talk to all your friends, but don't look at your phone”
+  <footer>
+    — Marika Hackman, <cite>No Caffeine</cite>
+  </footer>
 </blockquote>
 ```
 
