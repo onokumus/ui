@@ -76,15 +76,20 @@
 
   /* Animations */
   opacity: 0;
+  transition:
+    display 0.075s allow-discrete,
+    margin-block-end 0.075s var(--ease-1) 0.1s,
+    overlay 0.075s allow-discrete,
+    opacity 0.075s var(--ease-out-1);
 
   &:popover-open,
-  :popover-open::backdrop {
+  &:popover-open::backdrop {
     opacity: 1;
     transition:
-      display 0.3s allow-discrete,
-      margin-block-end 0.3s var(--ease-1),
-      overlay 0.3s allow-discrete,
-      opacity 0.3s var(--ease-out-1);
+      display 0.25s allow-discrete,
+      margin-block-end 0.25s var(--ease-1),
+      overlay 0.25s allow-discrete,
+      opacity 0.25s var(--ease-out-1);
 
     @starting-style {
       opacity: 0;
@@ -94,8 +99,8 @@
   @media (prefers-reduced-motion: no-preference) {
     margin-block-end: calc(0rem - var(--size-3));
 
-    :popover-open,
-    :popover-open::backdrop {
+    &:popover-open,
+    &:popover-open::backdrop {
       margin-block-end: 0;
 
       @starting-style {
