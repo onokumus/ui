@@ -46,6 +46,12 @@ watch(showPositionSnackbar, (newValue) => {
   }
 })
 
+// Absolute Snackbar
+const showAbsoluteSnackbar = ref(false)
+watch(showAbsoluteSnackbar, () => useTimeoutFn(() => {
+	showAbsoluteSnackbar.value = false
+}, 3000))
+
 </script>
 
 <style>
@@ -64,11 +70,11 @@ watch(showPositionSnackbar, (newValue) => {
 
 Snackbars inform users of a process that has or will be preformed. They shouldn't interrupt the user and you should be able to keep browsing without having to interact with it.
 
-::: tip Javascript is required
-In order to toggle a Snackbar you will need to use Javascript.
-:::
+See [Snackbar guidelines](https://m3.material.io/components/snackbar/guidelines).
 
 ## Basics
+
+The most common way to use a Snackbar is to position it in relation to the browser window. This solution leverages [popover](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/popover).
 
 <Example>
 <template #example>
@@ -99,7 +105,13 @@ In order to toggle a Snackbar you will need to use Javascript.
 
 <template #code>
 
-```html
+::: code-group
+
+```html [snackbar-1.html]
+<!-- Button -->
+<button class="button" popovertarget="snackbar1">Show snackbar 1</button>
+
+<!-- Snackbar -->
 <article popover="manual" id="snackbar1" class="snackbar" role="status">
   <div class="content">
     <p>Popover text content</p>
@@ -116,6 +128,19 @@ In order to toggle a Snackbar you will need to use Javascript.
 </article>
 ```
 
+```html [snackbar-2.html]
+<!-- Button -->
+<button class="button" popovertarget="snackbar2">Show snackbar 2</button>
+
+<!-- Snackbar -->
+<article id="snackbar2" popover="manual" class="snackbar" role="status">
+  <div class="content">
+    <p>All changes saved</p>
+  </div>
+</article>
+```
+
+:::
 </template>
 </Example>
 
@@ -123,19 +148,21 @@ In order to toggle a Snackbar you will need to use Javascript.
 
 ### Fixed
 
-Position relative to the browser window. Default is bottom-left.
+Position relative to the browser window. This is the default positioning behavior.
+
+Use the positional classes in order to place the Snackbar. Default is `.bottom-left`.
 
 <Example direction="stack">
 <template #example>
 	<div class="row">
-		<button popovertarget="position-snackbar" @click="positionClick('top-left')" class="button small">Top-left</button>
-		<button popovertarget="position-snackbar" @click="positionClick('top-center')" class="button small">Top-center</button>
-		<button popovertarget="position-snackbar" @click="positionClick('top-right')" class="button small">Top-right</button>
+		<button popovertarget="position-snackbar" @click="positionClick('top-left')" class="button small">.top-left</button>
+		<button popovertarget="position-snackbar" @click="positionClick('top-center')" class="button small">.top-center</button>
+		<button popovertarget="position-snackbar" @click="positionClick('top-right')" class="button small">.top-right</button>
 	</div>
 	<div class="row">
-		<button popovertarget="position-snackbar" @click="positionClick('bottom-left')" class="button small">Bottom-left</button>
-		<button popovertarget="position-snackbar" @click="positionClick('bottom-center')" class="button small">Bottom-center</button>
-		<button popovertarget="position-snackbar" @click="positionClick('bottom-right')" class="button small">Bottom-right</button>
+		<button popovertarget="position-snackbar" @click="positionClick('bottom-left')" class="button small">.bottom-left</button>
+		<button popovertarget="position-snackbar" @click="positionClick('bottom-center')" class="button small">.bottom-center</button>
+		<button popovertarget="position-snackbar" @click="positionClick('bottom-right')" class="button small">.bottom-right</button>
 	</div>
 
 <article id="position-snackbar" popover="manual" ref="positionSnackbar"  class="snackbar" :class="positionClass" role="status">
@@ -149,35 +176,39 @@ Position relative to the browser window. Default is bottom-left.
 
 <style>
 	.position-parent {
-		anchor-name: --position-parent;
+		container-type: inline-size;
+		border: 2px dotted gray;
 		height: 300px;
 		position: relative;
 		width: 100%;
-
-		.snackbar {
-			align-self: start;
-			position-anchor: --position-parent;
-			position-area: bottom center;
-		}
 	}
 </style>
 
-### Anchored
+### Absolute
 
-Position relative to an element. Leverages anchor positioning.
+In some edge-cases where the Snackbar might block or overlap other UI elements such as navigational elements it might be easier to absolute position the Snackbar instead of changing its `inset` values.
 
-::: info Note
-This will require some custom code depending on use-case.
+#### Differences from [fixed](#fixed) Snackbar
 
-See CSS example below.
+- Does not make use of popover.
+- Uses `.visible` class for visibility toggling.
+- Uses `.absolute` class for absolute positioning.
+- Needs Javascript to work.
+
+::: tip Javascript is required
+This solution **does not** leverage popover, so the Snackbar must be triggered with Javascript.
+
+That's because when open, popover elements aren't influenced by a parents' `position` styling - popovers exist in the [top layer](https://developer.mozilla.org/en-US/docs/Glossary/Top_layer).
+
 :::
 
 <Example direction="row">
 <template #example>
 
 <div class="position-parent">
-<button class="button" popovertarget="absolute-snackbar">Toggle snackbar</button>
-	<article id="absolute-snackbar" popover="manual" class="snackbar absolute" role="status">
+<button class="button" @click="showAbsoluteSnackbar = true">Toggle snackbar</button>
+
+<article :class="{'visible': showAbsoluteSnackbar}" class="snackbar absolute bottom-center" role="status">
 <div class="content">
 	<p>All changes saved</p>
 </div>
@@ -188,41 +219,13 @@ See CSS example below.
 
 <template #code>
 
-::: code-group
-
-```html{8} [html]
-<button class="button" popovertarget="absolute-snackbar">
-  Toggle snackbar
-</button>
-
-<article
-  id="absolute-snackbar"
-  popover="manual"
-  class="snackbar absolute"
-  role="status"
->
+```html
+<article class="snackbar absolute visible bottom-center" role="status">
   <div class="content">
     <p>All changes saved</p>
   </div>
 </article>
 ```
-
-```css [css]
-.position-parent {
-  anchor-name: --position-parent;
-  height: 300px;
-  position: relative;
-  width: 100%;
-
-  .snackbar {
-    align-self: start;
-    position-anchor: --position-parent;
-    position-area: bottom center;
-  }
-}
-```
-
-:::
 
 </template>
 </Example>
@@ -236,7 +239,7 @@ See CSS example below.
 
 <Example>
 <template #example>
-<div class="snackbar anatomy" style="opacity: 1; position: relative; margin: 0; width: 100%; inset: revert; z-index: 1;">
+<div class="snackbar anatomy" style="opacity: 1; position: relative; margin: 0; inset: revert; z-index: 1;">
 	<div class="content">
 		<p>Content</p>
 	</div>
@@ -253,6 +256,12 @@ See CSS example below.
 
 ## API
 
+<!--@include: ./snackbar-api.md -->
+
 ## Browser compatibility
 
-<Baseline :ids="['anchor-positioning','popover','starting-style', 'overlay', 'transition-behavior', 'light-dark', 'color-mix', 'has']" />
+<Baseline :ids="['popover','starting-style', 'overlay', 'transition-behavior', 'light-dark', 'color-mix', 'has']" />
+
+## Installation
+
+<<< @/../src/feedback/snackbar.css

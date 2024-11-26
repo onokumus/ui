@@ -62,6 +62,10 @@ See [Card API](#card)
 
 ### Progress
 
+### [Snackbar](/component/feedback/snackbar)
+
+<!--@include: ./components/feedback/snackbar-api.md -->
+
 ### Spinner
 
 ## Surfaces

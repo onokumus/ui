@@ -1,6 +1,6 @@
 <script setup lang="ts">
 		import Baseline from "../.vitepress/theme/app/components/Baseline.vue"
-const limited = ['anchor-positioning','popover','container-style-queries', 'scope', 'interpolate-size', 'details-content', 'accent-color', 'starting-style', 'overlay']
+const limited = ['popover','container-style-queries', 'scope', 'interpolate-size', 'details-content', 'accent-color', 'starting-style', 'overlay']
 const baseline2024 = ['transition-behavior','content-visibility', 'light-dark']
 const baseline2023 = [ 'color-mix', 'has','nesting']
 </script>

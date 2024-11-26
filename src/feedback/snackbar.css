@@ -11,7 +11,6 @@
   inset-block: auto var(--size-3, 1rem);
   inset-inline: var(--size-3, 1rem) auto;
   justify-content: space-between;
-  max-width: min(100%, 60ch);
   min-width: min(100%, 37ch);
   padding: var(--size-2, 0.5rem) var(--size-3, 1rem);
   position: fixed;
@@ -27,7 +26,6 @@
   }
 
   /* Global positioning (in relation to the window) */
-
   /*** Default (bottom-left) */
   inset-block: auto var(--size-3, 1rem);
   inset-inline: 50% 0;
@@ -39,8 +37,8 @@
     inset-block: var(--size-3, 1rem) auto;
   }
 
-  /* TODO px */
-  @media (width > 640px) {
+  /* TODO use @custom-media instead? */
+  @container (width > 640px) {
     /* Default (bottom-left) */
     inset-block: auto var(--size-7, 2rem);
     inset-inline: var(--size-7, 2rem) auto;
@@ -88,11 +86,6 @@
   }
 
   /* Actions */
-  &:has(.actions) {
-    min-width: min(100%, 45ch);
-    width: calc(100% - var(--size-6, 1.75rem));
-  }
-
   .actions {
     align-items: center;
     display: flex;
@@ -142,7 +135,8 @@
     opacity 0.075s var(--ease-out-1);
 
   &:popover-open,
-  &:popover-open::backdrop {
+  &:popover-open::backdrop,
+  &.visible {
     opacity: 1;
     transition:
       display 0.25s allow-discrete,
