@@ -144,6 +144,10 @@ The most common way to use a Snackbar is to position it in relation to the brows
 </template>
 </Example>
 
+## Stacking Snackbars
+
+Don't.
+
 ## Position
 
 ### Fixed
