@@ -6,7 +6,7 @@
   box-shadow: var(--shadow-2);
   color: var(--text-color-1-contrast);
   display: flex;
-  font-size: var(--font-size-body-small);
+  font-size: var(--font-size-sm);
   gap: var(--size-3, 1rem);
   inset-block: auto var(--size-3, 1rem);
   inset-inline: var(--size-3, 1rem) auto;

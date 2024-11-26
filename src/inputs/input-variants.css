@@ -13,7 +13,7 @@
     textarea,
     select
   ) {
-  font-size: var(--font-size-body, 1rem);
+  font-size: var(--font-size-md, 1rem);
   line-height: var(--font-lineheight-3);
   padding: var(--size-2, 0.5rem);
 

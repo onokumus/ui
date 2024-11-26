@@ -23,12 +23,12 @@
   th {
     background-color: var(--surface-filled);
     color: var(--text-color-1);
-    font-size: var(--font-size-body-small, 0.75rem);
+    font-size: var(--font-size-sm, 0.75rem);
     font-weight: 600;
     text-align: left;
   }
 
   td {
-    font-size: var(--font-size-body-small, 0.75rem);
+    font-size: var(--font-size-sm, 0.75rem);
   }
 }

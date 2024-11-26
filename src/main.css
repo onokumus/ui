@@ -52,6 +52,7 @@
 @import "./data-display/chip.css" layer(components.data-display.chip);
 @import "./data-display/divider.css" layer(components.data-display.divider);
 @import "./data-display/link.css" layer(components.data-display.link);
+@import "./data-display/list.css" layer(components.data-display.list);
 @import "./data-display/table.css" layer(components.data-display.table);
 
 /*** Feedback */

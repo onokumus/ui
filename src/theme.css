@@ -121,10 +121,10 @@ html {
   --font-size-h4: var(--font-size-3, 1.25rem);
   --font-size-h5: var(--font-size-2, 1.1rem);
   --font-size-h6: var(--font-size-1, 1rem);
-  --font-size-body: var(--font-size-1, 1rem);
-  --font-size-body-large: var(--font-size-3, 1.25rem);
-  --font-size-body-small: 0.875rem;
-  --font-size-overline: var(--font-size-0, 0.75rem);
+  --font-size-lg: var(--font-size-3, 1.25rem);
+  --font-size-md: var(--font-size-1, 1rem);
+  --font-size-sm: 0.875rem;
+  --font-size-xs: var(--font-size-0, 0.75rem);
 
   /* Borders */
   --border-color: light-dark(

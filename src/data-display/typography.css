@@ -44,7 +44,7 @@
     color-mix(in oklch, var(--text-color-2) 75%, white),
     color-mix(in oklch, var(--text-color-2) 75%, black)
   );
-  font-size: var(--font-size-overline);
+  font-size: var(--font-size-xs);
   font-weight: 500;
   letter-spacing: 0.06em;
   line-height: 2.5;
@@ -55,10 +55,10 @@
   text-wrap: pretty;
 
   &.small {
-    font-size: var(--font-size-body);
+    font-size: var(--font-size-md);
   }
   &.large {
-    font-size: var(--font-size-body-large);
+    font-size: var(--font-size-lg);
   }
 }
 
@@ -284,7 +284,7 @@
 
   /* The second p element */
   & > p:last-of-type:last-child:not(:first-child) {
-    font-size: var(--font-size-body-large);
+    font-size: var(--font-size-lg);
     line-height: 1.6;
     opacity: 0.75;
   }

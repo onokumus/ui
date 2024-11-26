@@ -1,5 +1,5 @@
 :where(textarea, .textarea) {
-  font-size: var(--font-size-body, 1rem);
+  font-size: var(--font-size-md, 1rem);
   line-height: var(--font-lineheight-3);
   min-height: 5rem;
   padding: var(--size-2, 0.5rem);
