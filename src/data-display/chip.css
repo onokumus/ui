@@ -13,6 +13,7 @@
   gap: var(--size-1, 0.25rem);
   block-size: var(--size-7, 2rem);
   padding-inline: var(--size-2, 0.5rem);
+  text-decoration: none;
 
   /* Variants */
   &.tonal {
