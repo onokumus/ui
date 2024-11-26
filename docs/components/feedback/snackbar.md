@@ -186,6 +186,10 @@ Use the positional classes in order to place the Snackbar. Default is `.bottom-l
 
 ### Absolute
 
+::: warning Work in progress!
+This solution might get replaced with a cooler one using `anchor-positioning`.
+:::
+
 In some edge-cases where the Snackbar might block or overlap other UI elements such as navigational elements it might be easier to absolute position the Snackbar instead of changing its `inset` values.
 
 #### Differences from fixed Snackbar
