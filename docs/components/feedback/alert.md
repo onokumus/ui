@@ -16,11 +16,11 @@
 
 Alerts call out for user attention. Alerts should be part of the flow and used **without** interrupting the user's task.
 
-::: info
-If you need to interrupt the user you might want to check out:
+::: info Alternatives
+You might want to check out:
 
-- [Dialog](/components/feedback/dialog)
-- [Snackbar](/components/feedback/snackbar)
+- [Dialog](/components/feedback/dialog) - takes over completely
+- [Snackbar](/components/feedback/snackbar) - informative but non-interruptive
   :::
 
 ## Variants
