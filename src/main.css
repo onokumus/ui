@@ -48,6 +48,7 @@
 @import "./surfaces/accordion.css" layer(components.surfaces.accordion);
 
 /*** Data display */
+@import "./data-display/badge.css" layer(components.data-display.badge);
 @import "./data-display/chip.css" layer(components.data-display.chip);
 @import "./data-display/divider.css" layer(components.data-display.divider);
 @import "./data-display/link.css" layer(components.data-display.link);

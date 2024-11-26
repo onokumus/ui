@@ -32,7 +32,9 @@
 
 ## Data display
 
-### Badge
+### [Badge](/components/data-display-badge)
+
+<!--@include: ./components/data-display/badge-api.md -->
 
 ### [Chip](/components/data-display/chip)
 
