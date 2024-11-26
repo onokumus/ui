@@ -24,15 +24,15 @@ The term "modal" and "dialog" are often used interchangeably, but there's an imp
 
 ## Usage
 
+### Non-modal
+
+- [Snackbar](/components/feedback/snackbar): informative but non-interruptive
+
+### Modal
+
 ::: tip Javascript is required
 In order to toggle a `<dialog>` you will need to use Javascript.
 :::
-
-### Non-modal
-
-- [Snackbar](/components/feedback/snackbar)
-
-### Modal
 
 <Example direction="row">
 <template #example>

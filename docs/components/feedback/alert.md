@@ -19,8 +19,8 @@ Alerts call out for user attention. Alerts should be part of the flow and used *
 ::: info Alternatives
 You might want to check out:
 
-- [Dialog](/components/feedback/dialog) - takes over completely
-- [Snackbar](/components/feedback/snackbar) - informative but non-interruptive
+- [Dialog](/components/feedback/dialog): takes over completely
+- [Snackbar](/components/feedback/snackbar): informative but non-interruptive
   :::
 
 ## Variants
