@@ -26,55 +26,55 @@
   }
 
   /* Global positioning (in relation to the window) */
-  /*** Default (bottom-left) */
+  /*** Default (end-start) */
   inset-block: auto var(--size-3, 1rem);
   inset-inline: 50% 0;
   translate: -50% 0;
 
-  &.top-left,
-  &.top-center,
-  &.top-right {
+  &.start-start,
+  &.start-center,
+  &.start-end {
     inset-block: var(--size-3, 1rem) auto;
   }
 
   /* TODO use @custom-media instead? */
-  @container (width > 640px) {
-    /* Default (bottom-left) */
+  @container (width > 480px) {
+    /* Default (end-start) */
     inset-block: auto var(--size-7, 2rem);
     inset-inline: var(--size-7, 2rem) auto;
     translate: revert;
     width: fit-content;
 
-    &.bottom-left,
-    &.bottom-right,
-    &.top-left,
-    &.top-right {
+    &.end-start,
+    &.end-end,
+    &.start-start,
+    &.start-end {
       translate: revert;
     }
 
-    &.top-left {
+    &.start-start {
       inset-block: var(--size-7, 2rem) auto;
       inset-inline: var(--size-7, 2rem) auto;
     }
-    &.top-center {
+    &.start-center {
       inset-block: var(--size-7, 2rem) auto;
       inset-inline: 50% 0;
       translate: -50% 0;
     }
-    &.top-right {
+    &.start-end {
       inset-block: var(--size-7, 2rem) auto;
       inset-inline: auto var(--size-7, 2rem);
     }
-    &.bottom-left {
+    &.end-start {
       inset-block-end: var(--size-7, 2rem);
       inset-inline: var(--size-7, 2rem) auto;
     }
-    &.bottom-center {
+    &.end-center {
       inset-block: auto var(--size-7, 2rem);
       inset-inline: 50% 0;
       translate: -50% 0;
     }
-    &.bottom-right {
+    &.end-end {
       inset-block: auto var(--size-7, 2rem);
       inset-inline: auto var(--size-7, 2rem);
     }

@@ -48,9 +48,9 @@ watch(showPositionSnackbar, (newValue) => {
 
 // Absolute Snackbar
 const showAbsoluteSnackbar = ref(false)
-watch(showAbsoluteSnackbar, () => useTimeoutFn(() => {
-	showAbsoluteSnackbar.value = false
-}, 3000))
+// watch(showAbsoluteSnackbar, () => useTimeoutFn(() => {
+// 	showAbsoluteSnackbar.value = false
+// }, 3000))
 
 </script>
 
@@ -154,19 +154,19 @@ Don't.
 
 Position relative to the browser window. This is the default positioning behavior.
 
-Use the positional classes in order to place the Snackbar. Default is `.bottom-left`.
+Use the positional classes in order to place the Snackbar. Default is `.end-start`.
 
 <Example direction="stack">
 <template #example>
 	<div class="row">
-		<button popovertarget="position-snackbar" @click="positionClick('top-left')" class="button small">.top-left</button>
-		<button popovertarget="position-snackbar" @click="positionClick('top-center')" class="button small">.top-center</button>
-		<button popovertarget="position-snackbar" @click="positionClick('top-right')" class="button small">.top-right</button>
+		<button popovertarget="position-snackbar" @click="positionClick('start-start')" class="button small">.start-start</button>
+		<button popovertarget="position-snackbar" @click="positionClick('start-center')" class="button small">.start-center</button>
+		<button popovertarget="position-snackbar" @click="positionClick('start-end')" class="button small">.start-end</button>
 	</div>
 	<div class="row">
-		<button popovertarget="position-snackbar" @click="positionClick('bottom-left')" class="button small">.bottom-left</button>
-		<button popovertarget="position-snackbar" @click="positionClick('bottom-center')" class="button small">.bottom-center</button>
-		<button popovertarget="position-snackbar" @click="positionClick('bottom-right')" class="button small">.bottom-right</button>
+		<button popovertarget="position-snackbar" @click="positionClick('end-start')" class="button small">.end-start</button>
+		<button popovertarget="position-snackbar" @click="positionClick('end-center')" class="button small">.end-center</button>
+		<button popovertarget="position-snackbar" @click="positionClick('end-end')" class="button small">.end-end</button>
 	</div>
 
 <article id="position-snackbar" popover="manual" ref="positionSnackbar"  class="snackbar" :class="positionClass" role="status">
@@ -216,7 +216,7 @@ That's because when open, popover elements aren't influenced by a parents' `posi
 <div class="position-parent">
 <button class="button" @click="showAbsoluteSnackbar = true">Toggle snackbar</button>
 
-<article :class="{'visible': showAbsoluteSnackbar}" class="snackbar absolute bottom-center" role="status">
+<article :class="{'visible': showAbsoluteSnackbar}" class="snackbar absolute end-center" role="status">
 <div class="content">
 	<p>All changes saved</p>
 </div>
@@ -228,7 +228,7 @@ That's because when open, popover elements aren't influenced by a parents' `posi
 <template #code>
 
 ```html
-<article class="snackbar absolute visible bottom-center" role="status">
+<article class="snackbar absolute visible end-center" role="status">
   <div class="content">
     <p>All changes saved</p>
   </div>
