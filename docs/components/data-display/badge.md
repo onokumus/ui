@@ -9,7 +9,9 @@
 
 # Badge
 
-Generate a badge on top of its child. Use the `aria-label` tag to add content inside the Badge.
+Generate a badge on top of its child.
+
+Use the `aria-label` tag to add content inside the Badge.
 
 ## Variants
 
