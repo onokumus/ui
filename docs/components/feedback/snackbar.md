@@ -59,6 +59,10 @@ const showAbsoluteSnackbar = ref(false)
     outline: var(--_anatomy-border-gray);
     outline-offset: 2px;
 
+		.actions, button * {
+			outline: 0;
+		}
+
     .content, button {
 			outline: var(--_anatomy-border-red);
     }
