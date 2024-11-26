@@ -1,15 +1,36 @@
 :where(.list) {
+  background-color: light-dark(var(--gray-0), var(--gray-14));
   list-style: none;
   padding: var(--size-2, 0.5rem) 0;
 
+  /* Borders on all list items */
+  &.bordered {
+    li + li {
+      margin-block-start: var(--size-3, 1rem);
+      &:before {
+        border-block-start: 1px solid var(--border-color);
+        content: "";
+        position: absolute;
+        inset: calc(0rem - var(--size-2, 0.5rem)) 0 auto 0;
+        width: 100%;
+        height: 1px;
+      }
+    }
+  }
+
   li {
     align-items: center;
-    background-color: light-dark(var(--gray-0), var(--gray-14));
+    cursor: pointer;
     display: flex;
     font-size: var(--font-size-sm);
     gap: var(--size-3, 1rem);
     min-height: 40px;
     padding: var(--size-2, 0.5rem) var(--size-3, 1rem);
+    position: relative;
+
+    &:hover {
+      background-color: light-dark(var(--gray-1), var(--gray-13));
+    }
 
     &:has(video) {
       padding: 0.75rem var(--size-3, 1rem) 0.75rem 0;
@@ -19,16 +40,26 @@
       font-size: inherit;
     }
 
-    /* hgroup */
-    hgroup {
+    /* Border */
+    &.border-top {
+      margin-block-start: var(--size-3, 1rem);
+      &:before {
+        border-block-start: 1px solid var(--border-color);
+        content: "";
+        position: absolute;
+        inset: calc(0rem - var(--size-2, 0.5rem)) 0 auto 0;
+        width: 100%;
+        height: 1px;
+      }
+    }
+
+    /* Text */
+    .text {
       flex: 1;
 
-      :where(h1, h2, h3, h4, h5, h6) {
-        font-size: var(--font-size-md);
-        margin: 0;
+      p + p {
+        font-size: var(--font-size-xs);
       }
-
-      justify-self: start;
     }
 
     /* Leading */
