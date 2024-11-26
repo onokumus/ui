@@ -62,7 +62,7 @@ See [Card API](#card)
 
 ### Progress
 
-### [Snackbar](/component/feedback/snackbar)
+### [Snackbar](/components/feedback/snackbar)
 
 <!--@include: ./components/feedback/snackbar-api.md -->
 

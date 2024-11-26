@@ -188,7 +188,7 @@ Use the positional classes in order to place the Snackbar. Default is `.bottom-l
 
 In some edge-cases where the Snackbar might block or overlap other UI elements such as navigational elements it might be easier to absolute position the Snackbar instead of changing its `inset` values.
 
-#### Differences from [fixed](#fixed) Snackbar
+#### Differences from fixed Snackbar
 
 - Does not make use of popover.
 - Uses `.visible` class for visibility toggling.
