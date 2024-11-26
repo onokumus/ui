@@ -70,7 +70,7 @@ watch(showAbsoluteSnackbar, () => useTimeoutFn(() => {
 
 Snackbars inform users of a process that has or will be preformed. They shouldn't interrupt the user and you should be able to keep browsing without having to interact with it.
 
-See [Snackbar guidelines](https://m3.material.io/components/snackbar/guidelines).
+These [Snackbar guidelines](https://m3.material.io/components/snackbar/guidelines) are a great way to get your head around the dos and don'ts.
 
 ## Basics
 
