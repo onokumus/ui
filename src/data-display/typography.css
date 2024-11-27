@@ -173,7 +173,7 @@ code {
 
     h5 {
       line-height: 1;
-      margin-block-end: var(--size-1, 0.25rem);
+      margin-block-end: var(--size-1);
       & + * {
         margin-block-start: 0;
       }
@@ -181,7 +181,7 @@ code {
 
     h6 {
       line-height: 1;
-      margin-block-end: var(--size-1, 0.25rem);
+      margin-block-end: var(--size-1);
       & + * {
         margin-block-start: 0;
       }

@@ -111,7 +111,7 @@ html {
     var(--gray-0, oklch(99% 0.01 255 / 1)),
     var(--gray-12, oklch(31% 0.01 255 / 1))
   );
-  --surface-border-radius: var(--size-1, 0.25rem);
+  --surface-border-radius: var(--size-1);
 
   /* Typography */
   /* TODO: clamp */
@@ -131,11 +131,11 @@ html {
     var(--gray-2, oklch(88% 0.01 255 / 1)),
     var(--gray-11, oklch(37% 0.01 255 / 1))
   );
-  --border-radius: var(--size-1, 0.25rem);
+  --border-radius: var(--size-1);
   --border-width: 1px;
 
   /* Input */
-  --input-border-radius: var(--size-1, 0.25rem);
+  --input-border-radius: var(--size-1);
 
   /* Buttons */
   --button-border-radius: 100vmax;

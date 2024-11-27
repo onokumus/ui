@@ -7,12 +7,12 @@
   color: var(--text-color-1-contrast);
   display: flex;
   font-size: var(--font-size-sm);
-  gap: var(--size-3, 1rem);
-  inset-block: auto var(--size-3, 1rem);
-  inset-inline: var(--size-3, 1rem) auto;
+  gap: var(--size-3);
+  inset-block: auto var(--size-3);
+  inset-inline: var(--size-3) auto;
   justify-content: space-between;
   min-inline-size: min(100%, 37ch);
-  padding: var(--size-2, 0.5rem) var(--size-3, 1rem);
+  padding: var(--size-2) var(--size-3);
   position: fixed;
   inline-size: calc(100% - var(--size-6, 1.75rem));
   z-index: 100;
@@ -27,14 +27,14 @@
 
   /* Global positioning (in relation to the window) */
   /*** Default (end-start) */
-  inset-block: auto var(--size-3, 1rem);
+  inset-block: auto var(--size-3);
   inset-inline: 50% 0;
   translate: -50% 0;
 
   &.start-start,
   &.start-center,
   &.start-end {
-    inset-block: var(--size-3, 1rem) auto;
+    inset-block: var(--size-3) auto;
   }
 
   /* TODO use @custom-media instead? */
@@ -90,7 +90,7 @@
     align-items: center;
     display: flex;
     flex-shrink: 0;
-    gap: var(--size-3, 1rem);
+    gap: var(--size-3);
     padding-inline: 0;
 
     button {
@@ -123,7 +123,7 @@
       color: inherit;
       max-inline-size: var(--size-6, 1.75rem);
       margin: var(--size-00);
-      padding: var(--size-1, 0.25rem);
+      padding: var(--size-1);
     }
   }
 

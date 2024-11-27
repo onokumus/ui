@@ -5,7 +5,7 @@
   line-height: var(--font-lineheight-3);
   font-size: var(--vp-custom-block-font-size);
   color: var(--text-color-2-78);
-  margin-block: var(--size-3, 1rem);
+  margin-block: var(--size-3);
 
   &.info {
     border-color: var(--vp-custom-block-info-border);
@@ -182,7 +182,7 @@
     margin: 0;
 
     & + * {
-      margin-block: var(--size-2, 0.5rem);
+      margin-block: var(--size-2);
     }
   }
 

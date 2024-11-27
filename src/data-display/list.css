@@ -3,18 +3,18 @@
 
   background-color: var(--_bg-color);
   list-style: none;
-  padding: var(--size-2, 0.5rem) 0;
+  padding: var(--size-2) 0;
 
   /* Borders on all list items */
   &.bordered {
     li + li {
-      margin-block-start: var(--size-3, 1rem);
+      margin-block-start: var(--size-3);
       &:before {
         block-size: 1px;
         border-block-start: 1px solid var(--border-color);
         content: "";
         inline-size: 100%;
-        inset: calc(0rem - var(--size-2, 0.5rem)) 0 auto 0;
+        inset: calc(0rem - var(--size-2)) 0 auto 0;
         position: absolute;
       }
     }
@@ -25,10 +25,10 @@
     background: var(--_bg-color) var(--ripple, none);
     display: flex;
     font-size: var(--font-size-sm);
-    gap: var(--size-3, 1rem);
+    gap: var(--size-3);
     isolation: isolate;
     min-block-size: 40px;
-    padding: var(--size-2, 0.5rem) var(--size-3, 1rem);
+    padding: var(--size-2) var(--size-3);
     position: relative;
 
     * {
@@ -49,10 +49,10 @@
       color: inherit;
       cursor: pointer;
       display: flex;
-      gap: var(--size-3, 1rem);
+      gap: var(--size-3);
       inline-size: 100%;
       margin: 0;
-      padding: var(--size-2, 0.5rem) var(--size-3, 1rem);
+      padding: var(--size-2) var(--size-3);
       text-align: start;
       text-decoration: none;
       z-index: 0;
@@ -84,18 +84,18 @@
 
     /* Video */
     &:has(video) {
-      padding: 0.75rem var(--size-3, 1rem) 0.75rem 0;
+      padding: 0.75rem var(--size-3) 0.75rem 0;
     }
 
     /* Border */
     &.border-top {
-      margin-block-start: var(--size-3, 1rem);
+      margin-block-start: var(--size-3);
       &:before {
         block-size: 1px;
         border-block-start: 1px solid var(--border-color);
         content: "";
         inline-size: 100%;
-        inset: calc(0rem - var(--size-2, 0.5rem)) 0 auto 0;
+        inset: calc(0rem - var(--size-2)) 0 auto 0;
         position: absolute;
       }
     }
@@ -133,10 +133,12 @@
 
     /* Trailing content */
     .end {
+      align-items: center;
+      display: flex;
       font-size: var(--font-size-xs);
       z-index: 1;
 
-      &:not(:has(input)) {
+      &:not(:has(a, button, input)) {
         pointer-events: none;
       }
 
@@ -149,7 +151,7 @@
     /* Inset */
     &.inset {
       .text {
-        padding-inline-start: calc(var(--size-5, 1.5rem) + var(--size-3, 1rem));
+        padding-inline-start: calc(var(--size-5) + var(--size-3));
       }
 
       /* Safety measure so it won't look bad if there for some reason should exist a leading element inside. */

@@ -18,7 +18,7 @@
 
   .actions {
     justify-content: end;
-    padding-inline: var(--size-3, 1rem) var(--size-1, 0.25rem);
+    padding-inline: var(--size-3) var(--size-1);
   }
 
   /* Animation */

@@ -1,7 +1,7 @@
 :where(table) {
   border-collapse: collapse;
   display: block;
-  margin: var(--size-3, 1rem) 0;
+  margin: var(--size-3) 0;
   overflow-x: auto;
 
   tr {

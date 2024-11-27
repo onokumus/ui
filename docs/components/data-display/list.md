@@ -168,6 +168,18 @@ ul {
     </div>
   </button>
 </li>
+
+<li class="border-top">
+    <div class="text">
+      <p>Trailing icon button</p>
+    </div>
+    <div class="end">
+    <button class="button">
+      <span class="sr-only">More</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M16 9.5a2.5 2.5 0 1 1 0-5a2.5 2.5 0 0 1 0 5m0 9a2.5 2.5 0 1 1 0-5a2.5 2.5 0 0 1 0 5M13.5 25a2.5 2.5 0 1 0 5 0a2.5 2.5 0 0 0-5 0"/></svg>
+    </button>
+    </div>
+</li>
 </ul>
 </template>
 

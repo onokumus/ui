@@ -1,7 +1,7 @@
 :where(details) {
   --_accordion-transition-time: 0.2s;
   --_bg-color: transparent;
-  --_margin-inline: var(--size-1, 0.25rem);
+  --_margin-inline: var(--size-1);
   --_shadow: none;
 
   background-color: var(--_bg-color);
@@ -36,7 +36,7 @@
     background-color: inherit;
     cursor: pointer;
     font-weight: 700;
-    padding-block: var(--size-3, 1rem);
+    padding-block: var(--size-3);
     user-select: none;
   }
 
@@ -48,7 +48,7 @@
     display: flex;
     justify-content: space-between;
     list-style: none;
-    padding-block: var(--size-3, 1rem);
+    padding-block: var(--size-3);
     user-select: none;
 
     &::marker,
@@ -67,23 +67,23 @@
 
   .content {
     margin-block-start: 0;
-    padding-block: var(--size-2, 0.5rem) var(--size-3, 1rem);
+    padding-block: var(--size-2) var(--size-3);
   }
 
   .actions {
     display: flex;
-    gap: var(--size-1, 0.25rem);
+    gap: var(--size-1);
     justify-content: end;
-    margin-block-start: var(--size-3, 1rem);
-    padding-block-end: var(--size-1, 0.25rem);
-    padding-inline: var(--size-3, 1rem) var(--size-1, 0.25rem);
+    margin-block-start: var(--size-3);
+    padding-block-end: var(--size-1);
+    padding-inline: var(--size-3) var(--size-1);
   }
 
   /* Variants */
   &.card,
   &.text {
     --_bg-color: transparent;
-    --_margin-inline: var(--size-1, 0.25rem);
+    --_margin-inline: var(--size-1);
   }
 
   &.elevated {
@@ -104,7 +104,7 @@
   }
 
   &:where(.elevated, .outlined, .tonal) > * {
-    padding-inline: var(--size-3, 1rem);
+    padding-inline: var(--size-3);
   }
 }
 
@@ -132,7 +132,7 @@
     box-shadow: none;
 
     & > * {
-      padding-inline: var(--size-3, 1rem);
+      padding-inline: var(--size-3);
     }
 
     /* Border between accordion items */

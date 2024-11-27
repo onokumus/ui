@@ -14,7 +14,7 @@
   border-radius: var(--surface-border-radius);
   color: var(--_color);
   line-height: 1.43;
-  padding: var(--size-3, 1rem);
+  padding: var(--size-3);
 
   h1,
   h2,
@@ -30,7 +30,7 @@
   &:has(h1, h2, h3, h4, h5, h6) p {
     color: inherit;
     font-size: var(--font-size-sm);
-    margin-block-start: var(--size-2, 0.5rem);
+    margin-block-start: var(--size-2);
   }
 
   /* Colors */
@@ -56,7 +56,7 @@
   &:has(svg) {
     align-items: center;
     display: grid;
-    gap: var(--size-3, 1rem);
+    gap: var(--size-3);
     grid-template-columns: var(--size-4, 1.25rem) 1fr;
   }
 }

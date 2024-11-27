@@ -10,9 +10,9 @@
   color: var(--_color);
   display: inline-flex;
   font-size: var(--font-size-0, 0.75rem);
-  gap: var(--size-1, 0.25rem);
+  gap: var(--size-1);
   block-size: var(--size-7, 2rem);
-  padding-inline: var(--size-2, 0.5rem);
+  padding-inline: var(--size-2);
   text-decoration: none;
 
   /* Variants */
@@ -82,22 +82,22 @@
 
   /* Icon */
   &:has(svg:first-child) {
-    padding-inline: var(--size-1, 0.25rem) var(--size-2, 0.5rem);
+    padding-inline: var(--size-1) var(--size-2);
   }
   &:has(svg:last-child) {
-    padding-inline: var(--size-2, 0.5rem) var(--size-1, 0.25rem);
+    padding-inline: var(--size-2) var(--size-1);
   }
 
   &:has(svg) {
     svg {
       flex-shrink: 0;
-      inline-size: var(--size-3, 1rem);
+      inline-size: var(--size-3);
     }
   }
 
   /* Sizes */
   &.small {
-    block-size: var(--size-5, 1.5rem);
+    block-size: var(--size-5);
   }
   &.multiline {
     block-size: auto;

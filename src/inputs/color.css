@@ -4,7 +4,7 @@
   border-color: var(--border-color);
   border-radius: var(--border-radius, 0.25rem);
   border-style: solid;
-  border-width: var(--size-1, 0.25rem);
+  border-width: var(--size-1);
   cursor: pointer;
   overflow: hidden;
   transition: outline 0.15s var(--ease-2);
