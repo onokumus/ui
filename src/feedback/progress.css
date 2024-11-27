@@ -7,11 +7,11 @@
   border-radius: var(--border-radius, 0.25rem);
   border: 0;
   display: inline-block;
-  height: var(--size-1, 0.25rem);
+  block-size: var(--size-1, 0.25rem);
   overflow: hidden;
   position: relative;
   vertical-align: baseline;
-  width: 100%;
+  inline-size: 100%;
 
   &::-webkit-progress-bar {
     border-radius: var(--border-radius, 0.25rem);

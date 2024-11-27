@@ -21,7 +21,7 @@
     text-align: center;
     letter-spacing: 1px !important;
     line-height: var(--font-lineheight-3);
-    width: 100%;
+    inline-size: 100%;
     font-weight: 600;
     color: var(--text-color-2-78);
     background-color: var(--vp-c-bg-soft);
@@ -48,7 +48,7 @@
   }
 
   .vp-sponsor-grid.xmini .vp-sponsor-grid-link {
-    height: 64px;
+    block-size: 64px;
   }
   .vp-sponsor-grid.xmini .vp-sponsor-grid-image {
     max-width: 64px;
@@ -56,7 +56,7 @@
   }
 
   .vp-sponsor-grid.mini .vp-sponsor-grid-link {
-    height: 72px;
+    block-size: 72px;
   }
   .vp-sponsor-grid.mini .vp-sponsor-grid-image {
     max-width: 96px;
@@ -64,7 +64,7 @@
   }
 
   .vp-sponsor-grid.small .vp-sponsor-grid-link {
-    height: 96px;
+    block-size: 96px;
   }
   .vp-sponsor-grid.small .vp-sponsor-grid-image {
     max-width: 96px;
@@ -72,7 +72,7 @@
   }
 
   .vp-sponsor-grid.medium .vp-sponsor-grid-link {
-    height: 112px;
+    block-size: 112px;
   }
   .vp-sponsor-grid.medium .vp-sponsor-grid-image {
     max-width: 120px;
@@ -80,7 +80,7 @@
   }
 
   .vp-sponsor-grid.big .vp-sponsor-grid-link {
-    height: 184px;
+    block-size: 184px;
   }
   .vp-sponsor-grid.big .vp-sponsor-grid-image {
     max-width: 192px;
@@ -88,28 +88,28 @@
   }
 
   .vp-sponsor-grid[data-vp-grid="2"] .vp-sponsor-grid-item {
-    width: calc((100% - 4px) / 2);
+    inline-size: calc((100% - 4px) / 2);
   }
 
   .vp-sponsor-grid[data-vp-grid="3"] .vp-sponsor-grid-item {
-    width: calc((100% - 4px * 2) / 3);
+    inline-size: calc((100% - 4px * 2) / 3);
   }
 
   .vp-sponsor-grid[data-vp-grid="4"] .vp-sponsor-grid-item {
-    width: calc((100% - 4px * 3) / 4);
+    inline-size: calc((100% - 4px * 3) / 4);
   }
 
   .vp-sponsor-grid[data-vp-grid="5"] .vp-sponsor-grid-item {
-    width: calc((100% - 4px * 4) / 5);
+    inline-size: calc((100% - 4px * 4) / 5);
   }
 
   .vp-sponsor-grid[data-vp-grid="6"] .vp-sponsor-grid-item {
-    width: calc((100% - 4px * 5) / 6);
+    inline-size: calc((100% - 4px * 5) / 6);
   }
 
   .vp-sponsor-grid-item {
     flex-shrink: 0;
-    width: 100%;
+    inline-size: 100%;
     background-color: var(--vp-c-bg-soft);
     transition: background-color 0.25s;
   }
@@ -142,7 +142,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    inline-size: 100%;
   }
 
   .vp-sponsor-grid-image {

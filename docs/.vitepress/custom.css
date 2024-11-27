@@ -20,12 +20,12 @@ html {
 TODO: Make sure it doesn't show if there's nothing to scroll
 #progress {
   background: var(--primary);
-  height: 0.25em;
+  block-size: 0.25em;
   inset-block-start: 0;
   inset-inline-start: 0;
   position: fixed;
   transform-origin: 0 50%;
-  width: 100%;
+  inline-size: 100%;
   z-index: var(--layer-important);
   animation: grow-progress auto linear;
   animation-timeline: --page-scroll;

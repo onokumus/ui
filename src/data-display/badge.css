@@ -16,16 +16,16 @@
     content: attr(aria-label);
     font-size: 12px;
     font-weight: 500;
-    height: var(--size-4, 1.25rem);
+    block-size: var(--size-4, 1.25rem);
     line-height: normal;
-    min-width: var(--size-4, 1.125rem);
+    min-inline-size: var(--size-4, 1.125rem);
     padding-inline: var(--size-1, 0.25rem);
     inset: var(--_inset);
     position: absolute;
     text-align: center;
     translate: var(--_translate);
     transition: opacity 0.2s var(--ease-out-1);
-    width: max-content;
+    inline-size: max-content;
   }
 
   /* Alignment */
@@ -47,9 +47,9 @@
     --_inset: 0 -1px auto auto;
     &:after {
       content: "";
-      min-width: var(--size-2, 0.5rem);
-      height: var(--size-2, 0.5rem);
-      width: var(--size-2, 0.5rem);
+      min-inline-size: var(--size-2, 0.5rem);
+      block-size: var(--size-2, 0.5rem);
+      inline-size: var(--size-2, 0.5rem);
       padding: 0;
     }
   }

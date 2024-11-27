@@ -11,10 +11,10 @@
   inset-block: auto var(--size-3, 1rem);
   inset-inline: var(--size-3, 1rem) auto;
   justify-content: space-between;
-  min-width: min(100%, 37ch);
+  min-inline-size: min(100%, 37ch);
   padding: var(--size-2, 0.5rem) var(--size-3, 1rem);
   position: fixed;
-  width: calc(100% - var(--size-6, 1.75rem));
+  inline-size: calc(100% - var(--size-6, 1.75rem));
   z-index: 100;
 
   &::backdrop {
@@ -43,7 +43,7 @@
     inset-block: auto var(--size-7, 2rem);
     inset-inline: var(--size-7, 2rem) auto;
     translate: revert;
-    width: fit-content;
+    inline-size: fit-content;
 
     &.end-start,
     &.end-end,

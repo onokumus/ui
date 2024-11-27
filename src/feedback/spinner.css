@@ -16,10 +16,10 @@
     border-width: 3px;
     content: "";
     display: inline-block;
-    height: 1em;
+    block-size: 1em;
     opacity: 0.5;
     vertical-align: -0.14em;
-    width: 1em;
+    inline-size: 1em;
   }
 
   &:not(button.button):not(:empty) {
