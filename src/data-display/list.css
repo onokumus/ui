@@ -35,7 +35,7 @@
       font-size: inherit;
     }
 
-    /* Clickable List Item */
+    /* Clickable list item */
     &:has(> a, > button) {
       background: transparent;
       display: block;
@@ -75,7 +75,7 @@
       }
 
       /*** Remove ripple effect when trailing button is clicked */
-      &:has(.trailing:hover) {
+      &:has(.end:hover) {
         &:where(:not(:active):hover) {
           --ripple: none;
         }
@@ -109,8 +109,8 @@
       }
     }
 
-    /* Leading */
-    .leading {
+    /* Leading content */
+    .start {
       align-self: start;
       z-index: 1;
 
@@ -131,18 +131,13 @@
       }
     }
 
-    /* Trailing */
-    .trailing {
+    /* Trailing content */
+    .end {
       font-size: var(--font-size-xs);
       z-index: 1;
 
-      &:not(:has(a, button, input)) {
+      &:not(:has(input)) {
         pointer-events: none;
-      }
-
-      button {
-        inline-size: var(--size-7);
-        padding: 0;
       }
 
       svg {
@@ -158,7 +153,7 @@
       }
 
       /* Safety measure so it won't look bad if there for some reason should exist a leading element inside. */
-      .leading {
+      .start {
         display: none;
       }
     }
