@@ -30,11 +30,11 @@ Default, and `.dot`.
 
 ```html
 <span class="badge" aria-label="5">
-  <svg><!--  --></svg>
+  <svg></svg>
 </span>
 
 <span class="badge dot">
-  <svg><!--  --></svg>
+  <svg></svg>
 </span>
 ```
 

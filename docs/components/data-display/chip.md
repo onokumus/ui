@@ -86,13 +86,13 @@ Make sure the text is wrapped in a `.text` wrapper.
 
 ```html
 <div class="chip">
-  <svg><!----></svg>
+  <svg></svg>
   <span class="text">Text</span>
 </div>
 
 <div class="chip">
   <span class="text">Text</span>
-  <svg><!----></svg>
+  <svg></svg>
 </div>
 ```
 
@@ -134,7 +134,7 @@ Make sure the text is wrapped in a `.text` wrapper.
 </button>
 
 <button class="chip">
-  <svg><!----></svg>
+  <svg></svg>
   <span class="text">With icon</span>
 </button>
 ```
@@ -166,7 +166,7 @@ Make sure the text is wrapped in a `.text` wrapper.
 
 <a href="#" class="chip">
   <span class="text">With icon</span>
-  <svg><!----></svg>
+  <svg></svg>
 </a href="#">
 ```
 
@@ -201,7 +201,7 @@ Make sure the text is wrapped in a `.text` wrapper.
 </div>
 
 <button class="chip outlined" disabled>
-  <svg><!--  --></svg>
+  <svg></svg>
   <span class="text">Disabled w/ icon</span>
 </button>
 ```
@@ -318,7 +318,7 @@ Make sure the text is wrapped in a `.text` wrapper.
 
 ```html
 <div class="chip">
-  <svg><!----></svg>
+  <svg></svg>
   <span class="text">Text</span>
 </div>
 ```

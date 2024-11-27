@@ -84,7 +84,7 @@ Icon must be placed before the content.
 
 ```html{2}
 <article role="alert" class="alert">
-  <svg><!--  --></svg>
+  <svg></svg>
   <div class="content">This is a tonal Alert with an icon.</div>
 </article>
 ```
@@ -127,7 +127,7 @@ Omitting an icon is possible. However, it helps having one if you need to convey
 
 ```html{1}
 <article role="alert" class="alert info">
-  <svg><!--  --></svg>
+  <svg></svg>
   <div class="content">Warning</div>
 </article>
 ```
@@ -162,7 +162,7 @@ Omitting an icon is possible. However, it helps having one if you need to convey
 
 ```html
 <article role="alert" class="alert outlined">
-  <svg><!--  --></svg>
+  <svg></svg>
 
   <div class="content">
     <h3>Another Alert</h3>

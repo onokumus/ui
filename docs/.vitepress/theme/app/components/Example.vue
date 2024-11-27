@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, useId } from "vue";
 
 const props = withDefaults(
   defineProps<{
@@ -14,7 +14,8 @@ const props = withDefaults(
   }
 );
 
-const showCode = ref(props?.hideCode ?? true);
+const codeViewerId = useId();
+const showCode = ref(!props?.hideCode);
 </script>
 
 <template>
@@ -31,6 +32,7 @@ const showCode = ref(props?.hideCode ?? true);
     </div>
 
     <button
+      :aria-controls="codeViewerId"
       v-if="$slots.code && hideCode !== undefined"
       @click="showCode = !showCode"
       class="chip outlined"
@@ -49,7 +51,10 @@ const showCode = ref(props?.hideCode ?? true);
         />
       </svg>
     </button>
-    <slot v-if="showCode && $slots.code" name="code" />
+
+    <div :id="codeViewerId" role="region">
+      <slot v-if="showCode && $slots.code" name="code" />
+    </div>
   </article>
 </template>
 

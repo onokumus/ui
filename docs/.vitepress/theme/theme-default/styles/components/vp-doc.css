@@ -132,20 +132,10 @@
  * -------------------------------------------------------------------------- */
 
 /* inline code */
-.vp-doc :not(pre, h1, h2, h3, h4, h5, h6) > code {
+/* .vp-doc :not(pre, h1, h2, h3, h4, h5, h6) > code {
   font-size: var(--vp-code-font-size);
   color: var(--vp-code-color);
-}
-
-.vp-doc :not(pre) > code {
-  border-radius: 4px;
-  padding: 3px 6px;
-  background-color: var(--vp-code-bg);
-  transition:
-    color 0.25s,
-    background-color 0.5s;
-  white-space: nowrap;
-}
+} */
 
 .vp-doc a > code {
   color: var(--vp-code-link-color);
@@ -197,6 +187,7 @@
 
 .vp-doc [class*="language-"] pre,
 .vp-doc [class*="language-"] code {
+  background-color: inherit;
   cursor: default;
   /*rtl:ignore*/
   direction: ltr;

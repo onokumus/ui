@@ -1,4 +1,4 @@
-:where(.list) {
+:where(ul.list) {
   --_bg-color: light-dark(var(--gray-0), var(--gray-14));
 
   background-color: var(--_bg-color);

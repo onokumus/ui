@@ -126,7 +126,7 @@ The most common way to use a Snackbar is to position it in relation to the brows
 
     <button class="button" popovertarget="snackbar1">
       <span class="sr-only">Close</span>
-      <svg><!--  --></svg>
+      <svg></svg>
     </button>
   </div>
 </article>

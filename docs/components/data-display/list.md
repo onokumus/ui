@@ -147,105 +147,18 @@
 </template>
 </Example>
 
-## Inset
-
-## Borders
-
-### On every item
-
-Apply the `.bordered` class on the `ul.list` element to give all list items a border.
-
-<Example>
-<template #example>
-<ul class="list bordered">
-	<li>
-<div class="text">
-	<p>Item 1</p>
-</div>
-</li>
-	<li>
-<div class="text">
-	<p>Item 2</p>
-</div>
-</li>
-	<li>
-<div class="text">
-	<p>Item 3</p>
-</div>
-</li>
-</ul>
-
-</template>
-
-<template #code>
-
-```html
-<ul class="list bordered">
-  <!--  -->
-</ul>
-```
-
-</template>
-</Example>
-
-### On one item
-
-Apply the `.border-top` class on a `li.list` item to give it an upper border.
-
-<Example>
-<template #example>
-<ul class="list">
-	<li>
-<div class="text">
-	<p>Settings</p>
-</div>
-
-</li>
-	<li>
-<div class="text">
-	<p>Help</p>
-</div>
-
-</li>
-	<li class="border-top">
-<div class="text">
-	<p>Logout</p>
-</div>
-
-</li>
-</ul>
-
-</template>
-
-<template #code>
-
-```html
-<ul class="list">
-  <li></li>
-  <li></li>
-  <li class="border-top"></li>
-</ul>
-```
-
-</template>
-</Example>
-
 ## Configurations
 
 ### Text-only
 
-<Example>
+<Example hideCode>
 <template #example>
 <ul class="list">
 	<li>
 <div class="text">
 	<p>Headline</p>
-	<p>Supporting text</p>
 </div>
 
-<div class="trailing">
-	100+
-</div>
 </li>
 	<li>
 <div class="text">
@@ -254,17 +167,17 @@ Apply the `.border-top` class on a `li.list` item to give it an upper border.
 </div>
 
 <div class="trailing">
-	100+
+	42kb
 </div>
 </li>
 	<li>
 <div class="text">
 	<p>Headline</p>
-	<p>Supporting text</p>
+	<p>Supporting text that truly is quite long enough to fill up multiple lines.</p>
 </div>
 
 <div class="trailing">
-	100+
+	999+
 </div>
 </li>
 </ul>
@@ -272,6 +185,35 @@ Apply the `.border-top` class on a `li.list` item to give it an upper border.
 </template>
 
 <template #code>
+
+```html
+<ul class="list">
+  <li>
+    <div class="text">
+      <p>Headline</p>
+    </div>
+  </li>
+
+  <li>
+    <div class="text">
+      <p>Headline</p>
+      <p>Supporting text</p>
+    </div>
+    <div class="trailing">42kb</div>
+  </li>
+
+  <li>
+    <div class="text">
+      <p>Headline</p>
+      <p>
+        Supporting text that truly is quite long enough to fill up multiple
+        lines.
+      </p>
+    </div>
+    <div class="trailing">999+</div>
+  </li>
+</ul>
+```
 
 </template>
 </Example>
@@ -508,6 +450,153 @@ Apply the `.border-top` class on a `li.list` item to give it an upper border.
 </template>
 
 <template #code>
+
+</template>
+</Example>
+
+## Inset
+
+<Example>
+<template #example>
+<ul class="list">
+<li>
+	<div class="leading">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m13.94 5l5.061 5.06L9.063 20a2.25 2.25 0 0 1-1 .58l-5.115 1.395a.75.75 0 0 1-.92-.921l1.394-5.116a2.25 2.25 0 0 1 .58-.999zm-7.414 6l-1.5 1.5H2.75a.75.75 0 0 1 0-1.5zm14.352-8.174l.153.144l.145.153a3.58 3.58 0 0 1-.145 4.908l-.97.969L15 3.94l.97-.97a3.58 3.58 0 0 1 4.908-.144M10.526 7l-1.5 1.5H2.75a.75.75 0 1 1 0-1.5zm4-4l-1.5 1.5H2.75a.75.75 0 1 1 0-1.5z"/></svg>
+	</div>
+<div class="text">
+	<p>Inset class</p>
+</div>
+</li>
+
+<li class="inset">
+<div class="text">
+	<p>Inset class</p>
+  <p>Makes the text line up with the icons</p>
+</div>
+</li>
+
+<li class="inset">
+	<div class="leading">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m13.94 5l5.061 5.06L9.063 20a2.25 2.25 0 0 1-1 .58l-5.115 1.395a.75.75 0 0 1-.92-.921l1.394-5.116a2.25 2.25 0 0 1 .58-.999zm-7.414 6l-1.5 1.5H2.75a.75.75 0 0 1 0-1.5zm14.352-8.174l.153.144l.145.153a3.58 3.58 0 0 1-.145 4.908l-.97.969L15 3.94l.97-.97a3.58 3.58 0 0 1 4.908-.144M10.526 7l-1.5 1.5H2.75a.75.75 0 1 1 0-1.5zm4-4l-1.5 1.5H2.75a.75.75 0 1 1 0-1.5z"/></svg>
+	</div>
+<div class="text">
+	<p>Inset class</p>
+  <p>Any <code>div.leading</code> will be hidden when inset</p>
+</div>
+</li>
+</ul>
+</template>
+
+<template #code>
+
+```html
+<ul class="list">
+  <li class="inset">
+    <div class="text">
+      <p>Inset class</p>
+      <p>Makes the text line up with the icons</p>
+    </div>
+  </li>
+
+  <li class="inset">
+    <div class="text">
+      <p>Inset class</p>
+      <p>Makes the text line up with the icons</p>
+    </div>
+  </li>
+
+  <li class="inset">
+    <div class="leading">
+      <svg></svg>
+    </div>
+    <div class="text">
+      <p>Inset class</p>
+      <p>Any <code>div.leading</code> will be hidden when inset</p>
+    </div>
+  </li>
+</ul>
+```
+
+</template>
+</Example>
+
+## Borders
+
+### On every item
+
+Apply the `.bordered` class on the `ul.list` element to give all list items a border.
+
+<Example>
+<template #example>
+<ul class="list bordered">
+	<li>
+<div class="text">
+	<p>Item 1</p>
+</div>
+</li>
+	<li>
+<div class="text">
+	<p>Item 2</p>
+</div>
+</li>
+	<li>
+<div class="text">
+	<p>Item 3</p>
+</div>
+</li>
+</ul>
+
+</template>
+
+<template #code>
+
+```html
+<ul class="list bordered">
+  <!--  -->
+</ul>
+```
+
+</template>
+</Example>
+
+### On one item
+
+Apply the `.border-top` class on a `li.list` item to give it an upper border.
+
+<Example>
+<template #example>
+<ul class="list">
+	<li>
+<div class="text">
+	<p>Settings</p>
+</div>
+
+</li>
+	<li>
+<div class="text">
+	<p>Help</p>
+</div>
+
+</li>
+	<li class="border-top">
+<div class="text">
+	<p>Logout</p>
+</div>
+
+</li>
+</ul>
+
+</template>
+
+<template #code>
+
+```html
+<ul class="list">
+  <li></li>
+  <li></li>
+  <li class="border-top"></li>
+</ul>
+```
 
 </template>
 </Example>
