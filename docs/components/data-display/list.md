@@ -775,7 +775,7 @@ Apply the `.border-top` class on a `li.list` item to give it an upper border.
 
 ## Browser compatibility
 
-<Baseline />
+<Baseline :ids="['light-dark']" />
 
 ## Installation
 
