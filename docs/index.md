@@ -6,13 +6,13 @@ hero:
   text: "Components you can copy and paste into your project."
   tagline: "Made with Open Props."
   actions:
-    - theme: brand
+    - theme: filled
       text: Quickstart
       link: /guide/getting-started
-    - theme: alt
+    - theme: outlined
       text: Components
       link: /components
-    - theme: alt
+    - theme: outlined
       text: Github
       link: https://github.com/felix-bohlin/ui
 

@@ -44,15 +44,15 @@ const heroImageSlotExists = inject("hero-image-slot-exists") as Ref<boolean>;
 
         <div v-if="actions" class="actions">
           <div v-for="action in actions" :key="action.link" class="action">
-            <VPButton
-              tag="a"
-              size="medium"
-              :theme="action.theme"
-              :text="action.text"
+            <a
               :href="action.link"
-              :target="action.target"
+              :class="[action.theme]"
+              class="button large"
               :rel="action.rel"
-            />
+              :target="action.target"
+            >
+              {{ action.text }}
+            </a>
           </div>
         </div>
         <slot name="home-hero-actions-after" />
