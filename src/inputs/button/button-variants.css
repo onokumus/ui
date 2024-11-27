@@ -32,17 +32,17 @@
 
   /* Sizes */
   &.small {
-    padding-block: 0.5ex;
+    padding-block: 0;
     padding-inline: 1ex;
   }
 
   &.medium {
-    padding-block: 1ex;
-    padding-inline: 2ex;
+    padding-block: 0.5ex;
+    padding-inline: 1.5ex;
   }
 
   &.large {
-    padding-block: 1.5ex;
+    padding-block: 1ex;
     padding-inline: 2.5ex;
   }
 

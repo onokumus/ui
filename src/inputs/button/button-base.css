@@ -19,8 +19,8 @@
   font-weight: 700;
   gap: var(--size-2, 0.5rem);
   justify-content: center;
-  padding-block: 1ex;
-  padding-inline: 2ex;
+  padding-block: 0.5ex;
+  padding-inline: 1.5ex;
   text-align: center;
   text-decoration: none;
   transition:
