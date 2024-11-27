@@ -28,6 +28,7 @@ access it.
 
     svg {
       inline-size: 85%;
+      pointer-events: none;
     }
 
     &.small {

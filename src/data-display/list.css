@@ -111,6 +111,7 @@
 
     /* Leading */
     .leading {
+      align-self: start;
       z-index: 1;
 
       &:has(svg) {
@@ -135,14 +136,18 @@
       font-size: var(--font-size-xs);
       z-index: 1;
 
+      &:not(:has(a, button, input)) {
+        pointer-events: none;
+      }
+
       button {
         inline-size: var(--size-7);
         padding: 0;
+      }
 
-        svg {
-          max-inline-size: var(--size-5);
-          inline-size: 100%;
-        }
+      svg {
+        max-inline-size: var(--size-5);
+        inline-size: 100%;
       }
     }
 
