@@ -36,14 +36,15 @@
     }
 
     /* Clickable list item */
-    &:has(> a, > button) {
+    &:has(> a, > button, > label) {
       background: transparent;
       display: block;
       padding: 0;
     }
 
     & > a,
-    & > button {
+    & > button,
+    & > label {
       align-items: center;
       background: var(--_bg-color) var(--ripple, none);
       color: inherit;

@@ -12,6 +12,14 @@ ul {
 
 # List
 
+## Configurations
+
+::: tip With great power...
+The List component is _extremely_ flexible and versatile. Be careful if you start creating new configurations on your own. Maybe an existing one can solve your problem, but in another way?
+:::
+
+### All
+
 <Example>
 
 <template #example>
@@ -86,7 +94,7 @@ ul {
 <li class="inset">
   <div class="text">
     <p>Inset class</p>
-    <p>Makes the text line up with the icons</p>
+    <p>Makes the text line up nicely</p>
   </div>
 </li>
 
@@ -151,7 +159,7 @@ ul {
 <li class="border-top">
   <button>
     <div class="text">
-      <p>Trailing icon</p>
+      <p>End icon</p>
     </div>
     <div class="end">
       <svg
@@ -169,9 +177,9 @@ ul {
   </button>
 </li>
 
-<li class="border-top">
+<li>
     <div class="text">
-      <p>Trailing icon button</p>
+      <p>End icon button</p>
     </div>
     <div class="end">
     <button class="button">
@@ -180,12 +188,44 @@ ul {
     </button>
     </div>
 </li>
+
+<li class="border-top">
+  <label for="checkbox-1">
+    <div class="text">
+      <p>Checkbox</p>
+    </div>
+    <div class="end">
+      <input id="checkbox-1" type="checkbox" class="checkbox" />
+    </div>
+    </label>
+</li>
+
+<li class="border-top">
+  <label for="radio-1">
+    <div class="text">
+      <p>Radio 1</p>
+    </div>
+    <div class="end">
+      <input id="radio-1" name="radio-group-1" type="radio" class="radio" />
+    </div>
+    </label>
+</li>
+
+<li>
+  <label for="radio-2">
+    <div class="text">
+      <p>Radio 2</p>
+    </div>
+    <div class="end">
+      <input id="radio-2" name="radio-group-1" type="radio" class="radio" />
+    </div>
+    </label>
+</li>
+
 </ul>
 </template>
 
 </Example>
-
-## Configurations
 
 ### Text-only
 
@@ -422,7 +462,118 @@ ul {
 
 ### Checkbox
 
+Wrap the List item content with a `<label for="INPUTID">` to make the entire surface clickable.
+
+<Example>
+<template #example>
+<ul class="list">
+<li>
+  <label for="checkbox-example-1">
+    <div class="text">
+      <p>Checkbox</p>
+    </div>
+    <div class="end">
+      <input id="checkbox-example-1" type="checkbox" class="checkbox" />
+    </div>
+    </label>
+</li>
+<li>
+  <label for="checkbox-example-2">
+    <div class="text">
+      <p>Checkbox</p>
+    </div>
+    <div class="end">
+      <input id="checkbox-example-2" type="checkbox" class="checkbox" />
+    </div>
+    </label>
+</li>
+
+</ul>
+</template>
+
+<template #code>
+
+```html
+<li>
+  <label for="checkbox-example-1">
+    <div class="text"></div>
+    <div class="end">
+      <input class="checkbox" id="checkbox-example-1" type="checkbox" />
+    </div>
+  </label>
+</li>
+```
+
+</template>
+</Example>
+
 ### Radio
+
+Wrap the List item content with a `<label for="INPUTID">` to make the entire surface clickable.
+Add a common name to each `<input>` for radio group behavior.
+
+<Example hideCode>
+<template #example>
+<ul class="list">
+<li>
+  <label for="radio-example-1">
+    <div class="text">
+      <p>Radio 1</p>
+    </div>
+    <div class="end">
+      <input class="radio" id="radio-example-1" name="radio-example-group-1" type="radio"  />
+    </div>
+    </label>
+</li>
+
+<li>
+  <label for="radio-example-2">
+    <div class="text">
+      <p>Radio 2</p>
+    </div>
+    <div class="end">
+      <input id="radio-example-2" name="radio-example-group-1" type="radio" class="radio" />
+    </div>
+    </label>
+</li>
+
+</ul>
+</template>
+
+<template #code>
+
+```html
+<li>
+  <label for="radio-example-1">
+    <div class="text">Radio 1</div>
+    <div class="end">
+      <input
+        class="radio"
+        id="radio-example-1"
+        name="radio-example-group"
+        type="radio"
+      />
+    </div>
+  </label>
+</li>
+
+<li>
+  <label for="radio-example-2">
+    <div class="text">Radio 2</div>
+    <div class="end">
+      <input
+        class="radio"
+        id="radio-example-2"
+        name="radio-example-group"
+        type="radio"
+      />
+    </div>
+  </label>
+</li>
+```
+
+</template>
+</Example>
 
 ### Switch
 
@@ -446,7 +597,7 @@ ul {
 <li class="inset">
   <div class="text">
     <p>Inset class</p>
-    <p>Makes the text line up with the icons</p>
+    <p>Makes the text line up nicely</p>
   </div>
 </li>
 
@@ -479,7 +630,7 @@ ul {
   <li class="inset">
     <div class="text">
       <p>Inset class</p>
-      <p>Makes the text line up with the icons</p>
+      <p>Makes the text line up nicely</p>
     </div>
   </li>
 
@@ -576,3 +727,56 @@ Apply the `.border-top` class on a `li.list` item to give it an upper border.
 
 </template>
 </Example>
+
+## Anatomy
+
+1. Container: `ul.list`
+2. List item: `li`
+3. Content wrapper (optional): `a`, `button`, `label`
+4. Start content (optional): `.start` > `svg`, `img`, `video`
+5. Text content: `.text` > `p`, `p + p`
+6. End content (optional): `.end` > `svg`, `p`, `button`, `a`, `input`
+
+<Example>
+<template #example>
+<ul class="list anatomy">
+  <li class="anatomy">
+    <div class="start">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M7.75 10.5a1.25 1.25 0 1 1 0 2.5a1.25 1.25 0 0 1 0-2.5m4.25 0a1.25 1.25 0 1 1 0 2.5a1.25 1.25 0 0 1 0-2.5m5.5 1.25a1.25 1.25 0 1 0-2.5 0a1.25 1.25 0 0 0 2.5 0m-8.5 4a1.25 1.25 0 1 0-2.5 0a1.25 1.25 0 0 0 2.5 0m4.25 0a1.25 1.25 0 1 0-2.5 0a1.25 1.25 0 0 0 2.5 0m3-1.25a1.25 1.25 0 1 1 0 2.5a1.25 1.25 0 0 1 0-2.5M10.537 2.534a2.25 2.25 0 0 1 2.903-.002L20.2 8.23c.507.427.8 1.057.8 1.72v9.299A1.75 1.75 0 0 1 19.25 21H4.75A1.75 1.75 0 0 1 3 19.25v-9.3c0-.662.292-1.29.797-1.718zm1.936 1.145a.75.75 0 0 0-.968 0l-6.74 5.698a.75.75 0 0 0-.265.573v9.3c0 .138.112.25.25.25h14.5a.25.25 0 0 0 .25-.25v-9.3a.75.75 0 0 0-.267-.573z"/></svg>
+    </div>
+    <div class="text">
+      <p>Text</p>
+    </div>
+    <div class="end">15%</div>
+  </li>
+</ul>
+</template>
+
+<template #code>
+
+```html
+<ul class="list">
+  <li>
+    <button>
+      <div class="start"></div>
+      <div class="text"></div>
+      <div class="end"></div>
+    </button>
+  </li>
+</ul>
+```
+
+</template>
+</Example>
+
+## API
+
+<!--@include: ./list-api.md -->
+
+## Browser compatibility
+
+<Baseline />
+
+## Installation
+
+<<< @/../src/data-display/list.css
