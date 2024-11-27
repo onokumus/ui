@@ -1,5 +1,7 @@
 :where(.list) {
-  background-color: light-dark(var(--gray-0), var(--gray-14));
+  --_bg-color: light-dark(var(--gray-0), var(--gray-14));
+
+  background-color: var(--_bg-color);
   list-style: none;
   padding: var(--size-2, 0.5rem) 0;
 
@@ -8,48 +10,93 @@
     li + li {
       margin-block-start: var(--size-3, 1rem);
       &:before {
+        block-size: 1px;
         border-block-start: 1px solid var(--border-color);
         content: "";
-        position: absolute;
+        inline-size: 100%;
         inset: calc(0rem - var(--size-2, 0.5rem)) 0 auto 0;
-        width: 100%;
-        height: 1px;
+        position: absolute;
       }
     }
   }
 
   li {
     align-items: center;
-    cursor: pointer;
+    background: var(--_bg-color) var(--ripple, none);
     display: flex;
     font-size: var(--font-size-sm);
     gap: var(--size-3, 1rem);
-    min-height: 40px;
+    isolation: isolate;
+    min-block-size: 40px;
     padding: var(--size-2, 0.5rem) var(--size-3, 1rem);
     position: relative;
 
-    &:hover {
-      background-color: light-dark(var(--gray-1), var(--gray-13));
-    }
-
-    &:has(video) {
-      padding: 0.75rem var(--size-3, 1rem) 0.75rem 0;
-    }
-
     * {
       font-size: inherit;
+    }
+
+    /* Clickable List Item */
+    &:has(> a, > button) {
+      background: transparent;
+      display: block;
+      padding: 0;
+    }
+
+    & > a,
+    & > button {
+      align-items: center;
+      background: var(--_bg-color) var(--ripple, none);
+      color: inherit;
+      cursor: pointer;
+      display: flex;
+      gap: var(--size-3, 1rem);
+      inline-size: 100%;
+      margin: 0;
+      padding: var(--size-2, 0.5rem) var(--size-3, 1rem);
+      text-align: start;
+      text-decoration: none;
+      z-index: 0;
+
+      /*** Ripple effect */
+      background-position: center;
+      transition: background 0.8s;
+      &:where(:not(:active):hover) {
+        --ripple: radial-gradient(circle, transparent 1%, var(--_bg-color) 1%)
+          center/15000%;
+      }
+
+      &:where(:hover:active) {
+        background-size: var(--button-ripple-size);
+        transition: background 0s;
+      }
+
+      &:hover {
+        background-color: light-dark(var(--gray-1), var(--gray-13));
+      }
+
+      /*** Remove ripple effect when trailing button is clicked */
+      &:has(.trailing:hover) {
+        &:where(:not(:active):hover) {
+          --ripple: none;
+        }
+      }
+    }
+
+    /* Video */
+    &:has(video) {
+      padding: 0.75rem var(--size-3, 1rem) 0.75rem 0;
     }
 
     /* Border */
     &.border-top {
       margin-block-start: var(--size-3, 1rem);
       &:before {
+        block-size: 1px;
         border-block-start: 1px solid var(--border-color);
         content: "";
-        position: absolute;
+        inline-size: 100%;
         inset: calc(0rem - var(--size-2, 0.5rem)) 0 auto 0;
-        width: 100%;
-        height: 1px;
+        position: absolute;
       }
     }
 
@@ -64,26 +111,51 @@
 
     /* Leading */
     .leading {
+      z-index: 1;
+
       &:has(svg) {
-        max-width: var(--size-5);
+        max-inline-size: var(--size-5);
       }
 
       img {
         aspect-ratio: 1;
+        inline-size: 56px;
         object-fit: cover;
-        width: 56px;
       }
 
       video {
         aspect-ratio: 16/9;
+        block-size: 64px;
         object-fit: cover;
-        height: 64px;
       }
     }
 
     /* Trailing */
     .trailing {
       font-size: var(--font-size-xs);
+      z-index: 1;
+
+      button {
+        inline-size: var(--size-7);
+        padding: 0;
+
+        svg {
+          max-inline-size: var(--size-5);
+          inline-size: 100%;
+        }
+      }
+    }
+
+    /* Inset */
+    &.inset {
+      .text {
+        padding-inline-start: calc(var(--size-5, 1.5rem) + var(--size-3, 1rem));
+      }
+
+      /* Safety measure so it won't look bad if there for some reason should exist a leading element inside. */
+      .leading {
+        display: none;
+      }
     }
   }
 }

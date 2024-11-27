@@ -10,32 +10,75 @@
 
 <ul class="list">
 <li>
+<div class="text">
+	<p>Trailing button</p>
+</div>
+
+<div class="trailing">
+<button class="button">
+    <span class="sr-only">Inbox</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 28 28"><path fill="currentColor" d="M21.75 3A3.25 3.25 0 0 1 25 6.25v15.5A3.25 3.25 0 0 1 21.75 25H6.25A3.25 3.25 0 0 1 3 21.75V6.25A3.25 3.25 0 0 1 6.25 3zm0 1.5H6.25A1.75 1.75 0 0 0 4.5 6.25V15h6a.75.75 0 0 1 .743.648l.007.102a2.75 2.75 0 1 0 5.5 0a.75.75 0 0 1 .648-.743L17.5 15h6V6.25a1.75 1.75 0 0 0-1.75-1.75"/></svg>
+  </button>
+</div>
+</li>
+
+<li>
+<button>
+<div class="text">
+	<p>Button</p>
+  <p>With trailing button</p>
+</div>
+
+<div class="trailing">
+<button class="button">
+    <span class="sr-only">Inbox</span>
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 28 28"><path fill="currentColor" d="M21.75 3A3.25 3.25 0 0 1 25 6.25v15.5A3.25 3.25 0 0 1 21.75 25H6.25A3.25 3.25 0 0 1 3 21.75V6.25A3.25 3.25 0 0 1 6.25 3zm0 1.5H6.25A1.75 1.75 0 0 0 4.5 6.25V15h6a.75.75 0 0 1 .743.648l.007.102a2.75 2.75 0 1 0 5.5 0a.75.75 0 0 1 .648-.743L17.5 15h6V6.25a1.75 1.75 0 0 0-1.75-1.75"/></svg>
+  </button>
+</div>
+</button>
+</li>
+
+<li class="border-top">
+<button>
 	<div class="leading">
 		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 28 28"><path fill="currentColor" d="M21.75 3A3.25 3.25 0 0 1 25 6.25v15.5A3.25 3.25 0 0 1 21.75 25H6.25A3.25 3.25 0 0 1 3 21.75V6.25A3.25 3.25 0 0 1 6.25 3zm0 1.5H6.25A1.75 1.75 0 0 0 4.5 6.25V15h6a.75.75 0 0 1 .743.648l.007.102a2.75 2.75 0 1 0 5.5 0a.75.75 0 0 1 .648-.743L17.5 15h6V6.25a1.75 1.75 0 0 0-1.75-1.75"/></svg>
 	</div>
 
 <div class="text">
-	<p>Inbox</p>
+	<p>Button</p>
 </div>
-
+</button>
 </li>
+
 <li>
+<a href="#">
 	<div class="leading">
 		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="m13.94 5l5.061 5.06L9.063 20a2.25 2.25 0 0 1-1 .58l-5.115 1.395a.75.75 0 0 1-.92-.921l1.394-5.116a2.25 2.25 0 0 1 .58-.999zm-7.414 6l-1.5 1.5H2.75a.75.75 0 0 1 0-1.5zm14.352-8.174l.153.144l.145.153a3.58 3.58 0 0 1-.145 4.908l-.97.969L15 3.94l.97-.97a3.58 3.58 0 0 1 4.908-.144M10.526 7l-1.5 1.5H2.75a.75.75 0 1 1 0-1.5zm4-4l-1.5 1.5H2.75a.75.75 0 1 1 0-1.5z"/></svg>
 	</div>
 
 <div class="text">
-	<p>Drafts</p>
+	<p>Link</p>
+</div>
+</a>
+
+</li>
+
+<li class="inset">
+<div class="text">
+	<p>Inset</p>
+  <p>Makes the text line up with icons</p>
 </div>
 
 </li>
-	<li class="border-top">
+
+<li class="border-top">
 <div class="text">
 	<p>Trash</p>
 </div>
 
 </li>
-	<li>
+
+<li>
 <div class="text">
 	<p>Spam</p>
 </div>
@@ -50,6 +93,8 @@
 
 </template>
 </Example>
+
+## Inset
 
 ## Borders
 

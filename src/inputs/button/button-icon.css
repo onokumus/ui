@@ -18,14 +18,23 @@ access it.
 
   /* Icon-only */
   &:where(:has(.sr-only), &.icon-only) {
-    border-radius: var(--button-border-radius);
+    --_text-color: inherit;
+
     aspect-ratio: 1;
+    border: 0;
+    border-radius: var(--button-border-radius);
+    gap: 0;
     padding: 0.5ex;
 
+    svg {
+      inline-size: 85%;
+    }
+
     &.small {
-      padding: 0.25ex;
+      padding: 0.125ex;
       & * {
         scale: 0.9;
+        transform-origin: center;
       }
     }
 
@@ -33,6 +42,7 @@ access it.
       padding: 1ex;
       & * {
         scale: 1.1;
+        transform-origin: center;
       }
     }
   }
