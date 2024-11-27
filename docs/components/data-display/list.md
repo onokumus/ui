@@ -456,7 +456,7 @@
 
 ## Inset
 
-<Example>
+<Example hideCode>
 <template #example>
 <ul class="list">
 <li>
