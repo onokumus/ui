@@ -1,10 +1,20 @@
 <script setup lang="ts">
-defineProps<{
-  direction?: "row" | "stack";
-  exampleClass?: string;
-  richText?: "rich-text" | "not-rich-text";
-  wrapperClass?: string;
-}>();
+import { ref } from "vue";
+
+const props = withDefaults(
+  defineProps<{
+    hideCode?: boolean;
+    direction?: "row" | "stack";
+    exampleClass?: string;
+    richText?: "rich-text" | "not-rich-text";
+    wrapperClass?: string;
+  }>(),
+  {
+    hideCode: undefined,
+  }
+);
+
+const showCode = ref(props?.hideCode ?? true);
 </script>
 
 <template>
@@ -20,11 +30,39 @@ defineProps<{
       <slot name="example" />
     </div>
 
-    <slot v-if="$slots.code" name="code" />
+    <button
+      v-if="$slots.code && hideCode !== undefined"
+      @click="showCode = !showCode"
+      class="chip outlined"
+    >
+      <span class="text"> {{ showCode ? "Hide code" : "Show code" }}</span>
+      <svg
+        :class="{ rotated: showCode }"
+        xmlns="http://www.w3.org/2000/svg"
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+      >
+        <path
+          fill="currentColor"
+          d="M5.366 11.116a1.25 1.25 0 0 1 1.768 0L16 19.982l8.866-8.866a1.25 1.25 0 0 1 1.768 1.768l-9.75 9.75a1.25 1.25 0 0 1-1.768 0l-9.75-9.75a1.25 1.25 0 0 1 0-1.768"
+        />
+      </svg>
+    </button>
+    <slot v-if="showCode && $slots.code" name="code" />
   </article>
 </template>
 
 <style>
+.chip {
+  border-radius: var(--surface-border-radius);
+  margin: 0 0 -1px -1px;
+
+  .rotated {
+    rotate: 180deg;
+  }
+}
+
 .example-wrapper {
   border-color: var(--border-color);
   border-radius: var(--surface-border-radius, 0.25rem);
