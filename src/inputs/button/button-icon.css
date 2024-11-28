@@ -1,50 +1,38 @@
-/*
-Inspired by ModernCSS.dev
-https://moderncss.dev/modern-css-for-dynamic-component-based-architecture/#creating-variant-styles-with-has
+:where(.button-icon) {
+  --_text-color: inherit;
 
-The `.sr-only` class refers to the "screen reader only" util which
-removes the visible text but still allows screen readers to
-access it.
-*/
-:where(.button) {
-  /* Base */
-  &:where(:has(svg), &.icon-only) {
-    gap: 1ex;
+  align-items: center;
+  aspect-ratio: 1;
+  background-color: transparent;
+  border: 0;
+  border-radius: var(--button-border-radius);
+  display: inline-flex;
+  inline-size: var(--size-6);
+  justify-content: center;
+  padding: 0;
+  transform-style: preserve-3d;
 
-    & svg {
-      fill: currentColor;
-    }
+  &:where(.disabled, [disabled]) {
+    color: light-dark(rgb(0, 0, 0/0.3), rgb(255, 255, 255/0.26));
+    cursor: not-allowed;
+    opacity: 0.64;
   }
 
-  /* Icon-only */
-  &:where(:has(.sr-only), &.icon-only) {
-    --_text-color: inherit;
+  svg {
+    max-inline-size: var(--size-5);
+    pointer-events: none;
+  }
 
-    aspect-ratio: 1;
-    border: 0;
-    border-radius: var(--button-border-radius);
-    gap: 0;
-    padding: 0.5ex;
+  /* Ripple effect, utils > index.css */
+  &:before {
+    --thumb-highlight-size: 130%;
+  }
 
+  /* Size */
+  &.small {
+    inline-size: var(--size-4);
     svg {
-      inline-size: 85%;
-      pointer-events: none;
-    }
-
-    &.small {
-      padding: 0.125ex;
-      & * {
-        scale: 0.9;
-        transform-origin: center;
-      }
-    }
-
-    &.large {
-      padding: 1ex;
-      & * {
-        scale: 1.1;
-        transform-origin: center;
-      }
+      max-inline-size: var(--size-4);
     }
   }
 }

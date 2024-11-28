@@ -37,7 +37,7 @@
   /* TODO: font size should be 16px to avoid mobile zoom in */
   &.large {
     font-size: var(--font-size-2, var(--font-size-3, 1.25rem));
-    padding: var(--size-3) var(--size-4, 1.25rem);
+    padding: var(--size-3) var(--size-4);
   }
 
   /* States */

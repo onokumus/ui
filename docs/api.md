@@ -8,6 +8,10 @@
 
 <!--@include: ./components/inputs/button-api.md -->
 
+### [Icon Button](/components/inputs/icon-button)
+
+<!--@include: ./components/inputs/icon-button-api.md -->
+
 ### Button group
 
 ### Checkbox

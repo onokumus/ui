@@ -4,13 +4,24 @@ import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
 </script>
 
 <style>
-ul {
+.example ul {
   margin: 0 auto;
   max-inline-size: 40ch;
 }
 </style>
 
 # List
+
+::: details About
+Lists are continuous, vertical indexes of text and images and video
+
+- Use lists to help users find a specific item and act on it
+- Order list items in logical ways (like alphabetical or numerical)
+- Three sizes: one-line, two-line, and three-line
+- Keep items short and easy to scan
+- Show icons, text, and actions in a consistent format
+
+  :::
 
 ## Configurations
 
@@ -182,7 +193,7 @@ The List component is _extremely_ flexible and versatile. Be careful if you star
       <p>End icon button</p>
     </div>
     <div class="end">
-    <button class="button">
+    <button class="button-icon">
       <span class="sr-only">More</span>
       <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M16 9.5a2.5 2.5 0 1 1 0-5a2.5 2.5 0 0 1 0 5m0 9a2.5 2.5 0 1 1 0-5a2.5 2.5 0 0 1 0 5M13.5 25a2.5 2.5 0 1 0 5 0a2.5 2.5 0 0 0-5 0"/></svg>
     </button>

@@ -111,6 +111,7 @@ export default defineConfig({
                   link: "/components/inputs/autocomplete",
                 },
                 { text: "Button", link: "/components/inputs/button" },
+                { text: "Icon Button", link: "/components/inputs/icon-button" },
                 {
                   text: "Button group",
                   link: "/components/inputs/button-group",
@@ -154,7 +155,6 @@ export default defineConfig({
                 { text: "Spinner", link: "/components/feedback/spinner" },
               ],
             },
-
             {
               text: "Surfaces",
               collapsed: false,
@@ -162,6 +162,10 @@ export default defineConfig({
                 { text: "Accordion", link: "/components/surfaces/accordion" },
                 { text: "Card", link: "/components/surfaces/card" },
               ],
+            },
+            {
+              text: "Utils",
+              link: "/components/utils",
             },
           ],
         },

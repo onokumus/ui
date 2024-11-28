@@ -16,7 +16,7 @@
     content: attr(aria-label);
     font-size: 12px;
     font-weight: 500;
-    block-size: var(--size-4, 1.25rem);
+    block-size: var(--size-4);
     line-height: normal;
     min-inline-size: var(--size-4, 1.125rem);
     padding-inline: var(--size-1);

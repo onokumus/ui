@@ -1,6 +1,4 @@
-:where(.button, input:is([type="button"], [type="submit"], [type="reset"])),
-:where(input[type="file"])::-webkit-file-upload-button,
-:where(input[type="file"])::file-selector-button {
+:where(.button) {
   --_bg-color: initial;
   --_border-color: initial;
   --_border-radius: var(--button-border-radius, initial);
@@ -10,7 +8,7 @@
   -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   align-items: center;
-  background: var(--_bg-color) var(--ripple, none);
+  background-color: var(--_bg-color);
   border-radius: var(--_border-radius);
   border: var(--border-size-1) solid var(--_border-color);
   color: var(--_text-color);
@@ -29,6 +27,11 @@
     border-color 0.2s var(--ease-out-3),
     color 0.2s var(--ease-out-3);
   user-select: none;
+
+  &:where(.disabled, [disabled]) {
+    cursor: not-allowed;
+    opacity: 0.64;
+  }
 }
 
 /* file input */

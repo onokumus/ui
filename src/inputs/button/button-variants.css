@@ -3,6 +3,8 @@
   --_border-color: transparent;
   --_text-color: var(--primary);
 
+  background: var(--_bg-color) var(--ripple, none);
+
   /* TODO */
   &:where(:not(.disabled, [disabled])) {
     &:where(:not(:active):hover) {
@@ -21,13 +23,20 @@
   }
 
   &:where(.disabled, [disabled]) {
-    opacity: 0.64;
     --_text-color: color-mix(
       in oklch,
       var(--text-color-2) 50%,
       var(--surface-default)
     );
-    cursor: not-allowed;
+  }
+
+  /* Icon */
+  &:where(:has(svg), &.icon-only) {
+    gap: 1ex;
+
+    & svg {
+      fill: currentColor;
+    }
   }
 
   /* Sizes */

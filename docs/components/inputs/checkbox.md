@@ -1,87 +1,94 @@
+<script setup>
+import Example from "../../.vitepress/theme/app/components/Example.vue";
+import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
+</script>
+
 # Checkbox
 
-## Basic checkboxes
+<Example direction="row">
+<template #example>
+   <input class="checkbox" id="checkboxa1" name="checkbox" type="checkbox" checked="checked">
+   <input class="checkbox" id="checkboxa2" name="checkbox" type="checkbox">
+   <input class="checkbox" id="checkboxa3" name="checkbox" type="checkbox" disabled>
+   <input class="checkbox" id="checkboxa4" name="checkbox" type="checkbox" checked="checked" disabled>
 
-<div class="example-wrapper">
-  <div class="example row">
-   <input id="checkboxa1" name="checkbox" type="checkbox" checked="checked">
-   <input id="checkboxa2" name="checkbox" type="checkbox">
-   <input id="checkboxa3" name="checkbox" type="checkbox" disabled>
-   <input id="checkboxa4" name="checkbox" type="checkbox" checked="checked" disabled>
-  </div>
+</template>
 
-```html
-<input id="checkboxa1" name="checkbox" type="checkbox" checked="checked" />
-<input id="checkboxa2" name="checkbox" type="checkbox" />
-<input id="checkboxa3" name="checkbox" type="checkbox" disabled />
+<template #code>
+
 <!-- prettier-ignore -->
-<input id="checkboxa4" name="checkbox" type="checkbox" checked="checked" disabled>
+```html
+<input class="checkbox" id="checkboxa1" name="checkbox" type="checkbox" checked="checked" />
+
+<input class="checkbox" id="checkboxa2" name="checkbox" type="checkbox" />
+
+<input class="checkbox" id="checkboxa3" name="checkbox" type="checkbox" disabled />
+
+<input class="checkbox" id="checkboxa4" name="checkbox" type="checkbox" checked="checked" disabled />
 ```
 
-</div>
+</template>
 
-## Labels
+</Example>
 
-<div class="example-wrapper">
-  <div class="example row">
-    <label for="checkboxb1"><input id="checkboxb1" name="checkbox" type="checkbox" checked="checked"> Choice A</label>
-    <label for="checkboxb2"><input id="checkboxb2" name="checkbox" type="checkbox"> Choice B</label>
-    <label for="checkboxb3"><input id="checkboxb3" name="checkbox" type="checkbox" disabled> Disabled</label>
-     <label for="checkboxb4"><input id="checkboxb4" name="checkbox" type="checkbox" checked="checked" disabled>Checked and disabled
+## Label
+
+<Example hideCode direction="row">
+<template #example>
+    <label for="checkboxb1"><input class="checkbox" id="checkboxb1" name="checkbox" type="checkbox" checked="checked"> Choice A</label>
+    <label for="checkboxb2"><input class="checkbox" id="checkboxb2" name="checkbox" type="checkbox"> Choice B</label>
+    <label for="checkboxb3"><input class="checkbox" id="checkboxb3" name="checkbox" type="checkbox" disabled> Disabled</label>
+     <label for="checkboxb4"><input class="checkbox" id="checkboxb4" name="checkbox" type="checkbox" checked="checked" disabled>Checked and disabled
      </label>
-  </div>
+</template>
 
+<template #code>
+
+<!-- prettier-ignore -->
 ```html
 <label for="checkboxb1">
-  <input id="checkboxb1" name="checkbox" type="checkbox" checked="checked" />
+  <input class="checkbox" id="checkboxb1" name="checkbox" type="checkbox" checked="checked" />
   Choice A
 </label>
+
 <label for="checkboxb2">
-  <input id="checkboxb2" name="checkbox" type="checkbox" /> Choice B
+  <input class="checkbox" id="checkboxb2" name="checkbox" type="checkbox" />
+  Choice B
 </label>
+
 <label for="checkboxb3">
-  <input id="checkboxb3" name="checkbox" type="checkbox" disabled />
+  <input class="checkbox" id="checkboxb3" name="checkbox" type="checkbox" disabled />
   Disabled
 </label>
+
 <label for="checkboxb4">
-  <input
-    id="checkboxb4"
-    name="checkbox"
-    type="checkbox"
-    checked="checked"
-    disabled
-  />Checked and disabled
+  <input class="checkbox" id="checkboxb4" name="checkbox" type="checkbox" checked="checked" disabled />
+  Checked and disabled
 </label>
 ```
 
-</div>
+</template>
+</Example>
 
-## Sizes
+## Size
 
-<div class="example-wrapper">
-  <div class="example row">
-   <input class="small" id="checkboxc1" name="checkbox" type="checkbox" checked="checked">
-   <input id="checkboxc1" name="checkbox" type="checkbox" checked="checked">
-   <input class="large" id="checkboxc1" name="checkbox" type="checkbox" checked="checked">
+<Example hideCode direction="row">
+<template #example>
+   <input class="checkbox small" id="c-size-1" name="checkbox" type="checkbox" checked="checked">
+   <input class="checkbox" id="c-size-2" name="checkbox" type="checkbox" checked="checked">
+   <input class="checkbox large" id="c-size-3" name="checkbox" type="checkbox" checked="checked">
+</template>
 
-  </div>
+<template #code>
 
+<!-- prettier-ignore -->
 ```html
-<input
-  class="small"
-  id="checkboxc1"
-  name="checkbox"
-  type="checkbox"
-  checked="checked"
-/>
-<input id="checkboxc1" name="checkbox" type="checkbox" checked="checked" />
-<input
-  class="large"
-  id="checkboxc1"
-  name="checkbox"
-  type="checkbox"
-  checked="checked"
-/>
+<input class="checkbox small" id="c-size-1" name="checkbox" type="checkbox" checked="checked" />
+
+<input class="checkbox" id="c-size-2" name="checkbox" type="checkbox" checked="checked" />
+
+<input class="checkbox large" id="c-size-3" name="checkbox" type="checkbox" checked="checked" />
 ```
 
-</div>
+</template>
+</Example>
