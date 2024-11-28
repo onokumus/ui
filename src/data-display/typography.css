@@ -103,7 +103,7 @@ code {
   background-color: var(--surface-tonal);
   border-radius: var(--border-size-3);
   color: var(--primary);
-  font-size: inherit;
+  font-size: 90%;
   min-inline-size: fit-content;
   padding: 0.2ex 0.5ex;
 }
