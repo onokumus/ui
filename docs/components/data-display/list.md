@@ -202,10 +202,6 @@ The List component is _extremely_ flexible and versatile. Be careful if you star
   <p>Headline</p>
   <p>Supporting text</p>
 </div>
-
-<div class="end">
-	100+
-</div>
 </li>
 <li>
 	<div class="start">
@@ -216,15 +212,26 @@ The List component is _extremely_ flexible and versatile. Be careful if you star
   <p>Headline</p>
   <p>Supporting text</p>
 </div>
-
-<div class="end">
-	100+
-</div>
 </li>
 </ul>
 
 </template>
+<template #code>
 
+```html{2-4}
+<li>
+  <div class="start">
+    <img />
+  </div>
+
+  <div class="text">
+    <p>Headline</p>
+    <p>Supporting text</p>
+  </div>
+</li>
+```
+
+</template>
 </Example>
 
 ### Video
@@ -248,7 +255,7 @@ The List component is _extremely_ flexible and versatile. Be careful if you star
 </div>
 
 <div class="end">
-	100+
+	13:37
 </div>
 </li>
 <li>
@@ -265,13 +272,26 @@ The List component is _extremely_ flexible and versatile. Be careful if you star
 </div>
 
 <div class="end">
-	100+
+	90s
 </div>
 </li>
 </ul>
 </template>
 
 <template #code>
+
+```html{2-4}
+<li>
+  <div class="start">
+    <video><source /></video>
+  </div>
+
+  <div class="text">
+    <p>Headline</p>
+    <p>Supporting text</p>
+  </div>
+</li>
+```
 
 </template>
 </Example>
@@ -309,7 +329,7 @@ Wrap the List item content with a `<label for="INPUTID">` to make the entire sur
 
 <template #code>
 
-```html
+```html{2,4-6}
 <li>
   <label for="checkbox-example-1">
     <div class="text"></div>
@@ -559,7 +579,7 @@ Apply the `.border-top` class on a `li.list` item to give it an upper border.
 
 <template #code>
 
-```html
+```html{4}
 <ul class="list">
   <li></li>
   <li></li>
@@ -602,6 +622,16 @@ Simply add the `.dense` class to the `ul` element.
 
 </Example>
 
+<style>
+  .anatomy {
+    outline: var(--_anatomy-border-gray);
+    outline-offset: 2px;
+    & > * {
+      outline: var(--_anatomy-border-red);
+    }
+  }
+</style>
+
 ## Anatomy
 
 1. Container: `ul.list`
@@ -631,11 +661,19 @@ Simply add the `.dense` class to the `ul` element.
 ```html
 <ul class="list">
   <li>
-    <button>
-      <div class="start"></div>
-      <div class="text"></div>
-      <div class="end"></div>
-    </button>
+    <!-- 3 -->
+
+    <div class="start">
+      <!-- 4 -->
+    </div>
+
+    <div class="text">
+      <!-- 5 -->
+    </div>
+
+    <div class="end">
+      <!-- 6 -->
+    </div>
   </li>
 </ul>
 ```

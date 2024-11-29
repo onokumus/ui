@@ -5,6 +5,13 @@
   list-style: none;
   padding: var(--size-2) 0;
 
+  @media (pointer: coarse) {
+    &,
+    * {
+      user-select: none;
+    }
+  }
+
   /* Borders on all list items */
   &.bordered {
     li + li {
