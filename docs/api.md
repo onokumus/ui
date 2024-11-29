@@ -44,9 +44,9 @@
 
 <!--@include: ./components/data-display/chip-api.md -->
 
-### Divider
+### [List](/components/data-display/list)
 
-### List
+<!--@include: ./components/data-display/list-api.md -->
 
 ### Table
 

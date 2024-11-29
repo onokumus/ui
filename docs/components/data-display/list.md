@@ -29,11 +29,15 @@ Lists are continuous, vertical indexes of text and images and video
 
 ## Configurations
 
+A List item is split up in three parts:
+
+- [`.text`](#text): main content
+- [`.start`](#start-items) (optional): items before the main content
+- [`.end`](#end-items) (optional): items after the main content
+
 ::: tip With great power...
 The List component is _extremely_ flexible and versatile. Be careful if you start creating new configurations on your own. Maybe an existing one can solve your problem, but in another way?
 :::
-
-### All
 
 <Example>
 
@@ -48,7 +52,9 @@ The List component is _extremely_ flexible and versatile. Be careful if you star
 
 </Example>
 
-### Text-only
+### Text
+
+Main text lives in `div.text`.
 
 <Example>
 
@@ -94,7 +100,66 @@ The List component is _extremely_ flexible and versatile. Be careful if you star
 </template>
 </Example>
 
-### Icon
+### Clickable List item
+
+Wrap the elements of your List item with a `a`, `button` or `label` depending on use-case.
+
+<Example>
+
+<template #example>
+
+<ul class="list">
+  <li>
+    <button>
+      <div class="text">
+        <p>Button list item</p>
+      </div>
+    </button>
+  </li>
+  <li>
+    <a href="#clickable-list-item">
+      <div class="text">
+        <p>Link list item</p>
+      </div>
+    </a>
+  </li>
+<li>
+    <label for="clickable-checkbox">
+      <div class="text">
+        <p>Checkbox</p>
+      </div>
+      <div class="end">
+        <input id="clickable-checkbox" type="checkbox" class="checkbox" />
+      </div>
+    </label>
+  </li>
+</ul>
+</template>
+
+<template #code>
+
+```html{2,6,10}
+<li>
+  <a><!--  --></a>
+</li>
+
+<li>
+  <button><!--  --></button>
+</li>
+
+<li>
+  <label><!--  --></label>
+</li>
+```
+
+</template>
+</Example>
+
+### Start items
+
+Found in `div.start`.
+
+#### Icon
 
 <Example>
 <template #example>
@@ -140,7 +205,7 @@ The List component is _extremely_ flexible and versatile. Be careful if you star
 </template>
 </Example>
 
-### Avatar
+#### Avatar
 
 <Example>
 <template #example>
@@ -188,7 +253,7 @@ The List component is _extremely_ flexible and versatile. Be careful if you star
 </template>
 </Example>
 
-### Image
+#### Image
 
 <Example>
 <template #example>
@@ -234,7 +299,7 @@ The List component is _extremely_ flexible and versatile. Be careful if you star
 </template>
 </Example>
 
-### Video
+#### Video
 
 <Example>
 
@@ -296,7 +361,68 @@ The List component is _extremely_ flexible and versatile. Be careful if you star
 </template>
 </Example>
 
-### Checkbox
+### End items
+
+Found in `div.end`.
+
+#### Text
+
+<Example>
+
+<template #example>
+
+<ul class="list">
+  <li>
+    <div class="text">
+      <p>Headline</p>
+    </div>
+
+  <div class="end">
+    30kB
+  </div>
+  </li>
+  <li>
+    <div class="text">
+      <p>Headline</p>
+      <p>Supporting text</p>
+    </div>
+
+  <div class="end">
+99%
+  </div>
+  </li>
+
+  <li>
+    <div class="text">
+      <p>Headline</p>
+      <p>
+        Supporting text that truly is quite long enough to fill up multiple lines.
+      </p>
+    </div>
+
+  <div class="end">
+    100+
+  </div>
+  </li>
+</ul>
+</template>
+
+<template #code>
+
+```html{6}
+<li>
+  <div class="text">
+    <p>Headline</p>
+  </div>
+
+  <div class="end">30kB</div>
+</li>
+```
+
+</template>
+</Example>
+
+#### Checkbox
 
 Wrap the List item content with a `<label for="INPUTID">` to make the entire surface clickable.
 
@@ -343,7 +469,7 @@ Wrap the List item content with a `<label for="INPUTID">` to make the entire sur
 </template>
 </Example>
 
-### Radio
+#### Radio
 
 Wrap the List item content with a `<label for="INPUTID">` to make the entire surface clickable.
 
@@ -412,7 +538,17 @@ Radio group: Add a common name to each `<input>` for radio group behavior.
 </template>
 </Example>
 
-### Switch
+#### Switch
+
+<Example>
+<template #example>
+
+</template>
+
+<template #code>
+
+</template>
+</Example>
 
 ## Inset
 
@@ -590,7 +726,7 @@ Apply the `.border-top` class on a `li.list` item to give it an upper border.
 </template>
 </Example>
 
-### Dense
+## Dense
 
 Simply add the `.dense` class to the `ul` element.
 
@@ -627,7 +763,7 @@ Simply add the `.dense` class to the `ul` element.
     outline: var(--_anatomy-border-gray);
     outline-offset: 2px;
     & > * {
-      outline: var(--_anatomy-border-red);
+      outline: var(--_anatomy-border-red) !important;
     }
   }
 </style>
