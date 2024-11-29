@@ -27,18 +27,6 @@ Lists are continuous, vertical indexes of text and images and video
 
   :::
 
-## Configurations
-
-A List item is split up in three parts:
-
-- [`.text`](#text): main content
-- [`.start`](#start-items) (optional): items before the main content
-- [`.end`](#end-items) (optional): items after the main content
-
-::: tip With great power...
-The List component is _extremely_ flexible and versatile. Be careful if you start creating new configurations on your own. Maybe an existing one can solve your problem, but in another way?
-:::
-
 <Example>
 
 <template #example>
@@ -51,6 +39,18 @@ The List component is _extremely_ flexible and versatile. Be careful if you star
 </template>
 
 </Example>
+
+## Configurations
+
+A List item is split up in three parts:
+
+- [`.text`](#text): main content
+- [`.start`](#start-items) (optional): items before the main content
+- [`.end`](#end-items) (optional): items after the main content
+
+::: tip With great power...
+The List component is _extremely_ flexible and versatile. Be careful if you start creating new configurations on your own. Maybe an existing one can solve your problem, but in another way?
+:::
 
 ### Clickable List item
 
