@@ -13,6 +13,7 @@
   justify-content: center;
   overflow: clip;
   position: relative;
+  text-align: center;
   text-decoration: none;
 
   &:has(img) {
@@ -37,5 +38,29 @@
 
   &.rounded {
     border-radius: var(--border-size-3);
+  }
+}
+
+/*
+TODO: implement reading-order if that becomes a thing.
+https://developer.chrome.com/blog/reading-order/
+*/
+:where(.avatar-group) {
+  --_margin: var(--size-1);
+
+  display: flex;
+  flex-direction: row-reverse;
+
+  &.small {
+    --_margin: var(--size-2);
+  }
+
+  &.x-small {
+    --_margin: var(--size-3);
+  }
+
+  .avatar {
+    margin-inline-end: calc(-1 * var(--_margin));
+    outline: 2px solid var(--surface-default);
   }
 }

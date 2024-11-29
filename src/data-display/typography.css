@@ -62,24 +62,24 @@
   }
 }
 
-:where(sup, .sup) {
+:where(sup) {
   font-size: 0.5em;
 }
 
-:where(del, .del) {
+:where(del) {
   color: var(--red, var(--red-9));
 }
 
-:where(ins, .ins) {
+:where(ins) {
   color: var(--green, var(--green-9));
 }
 
-:where(abbr, .abbr, dfn, .dfn) {
+:where(abbr, dfn) {
   font-style: normal;
   text-decoration-color: var(--blue);
 }
 
-:where(small, .small) {
+:where(small) {
   font-size: max(0.5em, var(--font-size-0, 0.75rem));
   max-inline-size: var(--size-content-1);
 }
