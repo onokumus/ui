@@ -52,54 +52,6 @@ The List component is _extremely_ flexible and versatile. Be careful if you star
 
 </Example>
 
-### Text
-
-Main text lives in `div.text`.
-
-<Example>
-
-<template #example>
-
-<ul class="list">
-  <li>
-    <div class="text">
-      <p>Headline</p>
-    </div>
-  </li>
-  <li>
-    <div class="text">
-      <p>Headline</p>
-      <p>Supporting text</p>
-    </div>
-  </li>
-
-  <li>
-    <div class="text">
-      <p>Headline</p>
-      <p>
-        Supporting text that truly is quite long enough to fill up multiple lines.
-      </p>
-    </div>
-  </li>
-</ul>
-</template>
-
-<template #code>
-
-```html
-<li>
-  <div class="text">
-    <p>Headline</p>
-    <p>
-      Supporting text that truly is quite long enough to fill up multiple lines.
-    </p>
-  </div>
-</li>
-```
-
-</template>
-</Example>
-
 ### Clickable List item
 
 Wrap the elements of your List item with a `a`, `button` or `label` depending on use-case.
@@ -149,6 +101,54 @@ Wrap the elements of your List item with a `a`, `button` or `label` depending on
 
 <li>
   <label><!--  --></label>
+</li>
+```
+
+</template>
+</Example>
+
+### Text
+
+Main text lives in `div.text`.
+
+<Example>
+
+<template #example>
+
+<ul class="list">
+  <li>
+    <div class="text">
+      <p>Headline</p>
+    </div>
+  </li>
+  <li>
+    <div class="text">
+      <p>Headline</p>
+      <p>Supporting text</p>
+    </div>
+  </li>
+
+  <li>
+    <div class="text">
+      <p>Headline</p>
+      <p>
+        Supporting text that truly is quite long enough to fill up multiple lines.
+      </p>
+    </div>
+  </li>
+</ul>
+</template>
+
+<template #code>
+
+```html
+<li>
+  <div class="text">
+    <p>Headline</p>
+    <p>
+      Supporting text that truly is quite long enough to fill up multiple lines.
+    </p>
+  </div>
 </li>
 ```
 
