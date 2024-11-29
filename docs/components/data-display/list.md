@@ -2,6 +2,7 @@
 import {ref} from "vue"
 import Example from "../../.vitepress/theme/app/components/Example.vue";
 import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
+import ListAll from "./list-all.vue"
 
 const denseClass = ref(true)
 </script>
@@ -40,7 +41,7 @@ The List component is _extremely_ flexible and versatile. Be careful if you star
 
 <ul class="list">
 
-<!--@include: ./list-all.md -->
+<ListAll />
 
 </ul>
 </template>
@@ -143,10 +144,46 @@ The List component is _extremely_ flexible and versatile. Be careful if you star
 
 <Example>
 <template #example>
+<ul class="list">
+<li>
+	<div class="start">
+		<div class="avatar">AB</div>
+	</div>
+
+<div class="text">
+  <p>Headline</p>
+</div>
+</li>
+
+<li>
+	<div class="start">
+		<div class="avatar">
+    <img src="https://images.unsplash.com/photo-1614530606961-c4ce986825c1?q=80&w=1827&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+    </div>
+	</div>
+
+<div class="text">
+  <p>Headline</p>
+  <p>Supporting text</p>
+</div>
+</li>
+</ul>
 
 </template>
 
 <template #code>
+
+```html{2-4}
+<li>
+  <div class="start">
+    <div class="avatar"></div>
+  </div>
+
+  <div class="text">
+    <p>Headline</p>
+  </div>
+</li>
+```
 
 </template>
 </Example>
@@ -548,7 +585,7 @@ Simply add the `.dense` class to the `ul` element.
 
 <ul class="list" :class="{'dense': denseClass}">
 
-<!--@include: ./list-all.md -->
+<ListAll />
 
 </ul>
 </template>

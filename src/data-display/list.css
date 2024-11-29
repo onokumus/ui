@@ -56,6 +56,10 @@
       /* Leading and trailing content */
       .start,
       .end {
+        .avatar {
+          max-inline-size: var(--size-6);
+        }
+
         .icon-button,
         svg {
           max-inline-size: var(--size-4);
@@ -174,6 +178,7 @@
     /* Text */
     .text {
       flex: 1;
+      line-height: 1.6;
 
       :where(h1, h2, h3, h4, h5, h6, p, span) {
         color: inherit;
@@ -187,7 +192,9 @@
 
     /* Leading content */
     .start {
-      align-self: start;
+      align-self: center;
+      align-items: center;
+      display: grid;
       z-index: 1;
 
       &:has(svg) {
