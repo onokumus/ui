@@ -12,7 +12,7 @@ When you visibly want to hide an element but make it accessible for screen reade
 }
 
 /* Hover and active effect for checkbox, radio and icon buttons */
-:where(.checkbox, .radio, .button-icon) {
+:where(.checkbox, .radio, .icon-button) {
   --isLTR: 1;
   --isRTL: -1;
 

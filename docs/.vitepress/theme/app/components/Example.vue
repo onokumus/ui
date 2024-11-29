@@ -3,15 +3,15 @@ import { ref, useId } from "vue";
 
 const props = withDefaults(
   defineProps<{
-    hideCode?: boolean;
     direction?: "row" | "stack";
     exampleClass?: string;
+    hideCode?: boolean;
     richText?: "rich-text" | "not-rich-text";
     wrapperClass?: string;
   }>(),
   {
     hideCode: undefined,
-  }
+  },
 );
 
 const codeViewerId = useId();
@@ -33,9 +33,9 @@ const showCode = ref(!props?.hideCode);
 
     <button
       :aria-controls="codeViewerId"
-      v-if="$slots.code && hideCode !== undefined"
+      v-if="$slots.code"
       @click="showCode = !showCode"
-      class="chip outlined"
+      class="chip small"
     >
       <span class="text"> {{ showCode ? "Hide code" : "Show code" }}</span>
       <svg
@@ -61,7 +61,9 @@ const showCode = ref(!props?.hideCode);
 <style>
 .chip {
   border-radius: var(--surface-border-radius);
-  margin: 0 0 -1px -1px;
+  justify-self: end;
+  margin: 0 -1px -1px 0;
+  opacity: 0.64;
 
   .rotated {
     rotate: 180deg;
@@ -74,6 +76,7 @@ const showCode = ref(!props?.hideCode);
   border-style: solid;
   border-bottom-width: 0;
   box-shadow: var(--shadow-1);
+  display: grid;
   margin-inline: -1rem;
   margin-block: var(--size-3, 1rem);
   overflow: hidden;

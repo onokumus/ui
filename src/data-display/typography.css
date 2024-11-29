@@ -67,16 +67,16 @@
 }
 
 :where(del, .del) {
-  color: var(--danger, var(--red-9));
+  color: var(--red, var(--red-9));
 }
 
 :where(ins, .ins) {
-  color: var(--success, var(--green-9));
+  color: var(--green, var(--green-9));
 }
 
 :where(abbr, .abbr, dfn, .dfn) {
   font-style: normal;
-  text-decoration-color: var(--info);
+  text-decoration-color: var(--blue);
 }
 
 :where(small, .small) {

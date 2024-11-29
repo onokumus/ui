@@ -9,22 +9,22 @@ html {
   --color-scheme: dark;
 }
 
-.danger {
+.red {
   --palette-hue: var(--oklch-red, 25);
   --palette-chroma: 1;
   --palette-hue-rotate-by: 1;
 }
-.info {
-  --palette-hue: var(--oklch-indigo, 310);
+.blue {
+  --palette-hue: var(--oklch-blue, 310);
   --palette-chroma: 1;
   --palette-hue-rotate-by: 1;
 }
-.success {
+.green {
   --palette-hue: var(--oklch-green, 145);
   --palette-chroma: 1;
   --palette-hue-rotate-by: 1;
 }
-.warning {
+.orange {
   --palette-hue: var(--oklch-orange, 75);
   --palette-chroma: 1;
   --palette-hue-rotate-by: 1;
@@ -74,25 +74,25 @@ html {
   --text-color-2-78: color-mix(in oklch, var(--text-color-2) 78%, transparent);
   --text-color-2-56: color-mix(in oklch, var(--text-color-2) 56%, transparent);
 
-  --danger: var(--red-7);
-  --danger-light: var(--red-5);
-  --danger-dark: var(--red-9);
-  --danger-text: light-dark(var(--color-1), var(--color-11));
+  --red: var(--red-7);
+  --red-light: var(--red-5);
+  --red-dark: var(--red-9);
+  --red-text: light-dark(var(--color-1), var(--color-11));
 
-  --warning: var(--orange-7);
-  --warning-light: var(--orange-5);
-  --warning-dark: var(--orange-9);
-  --warning-text: light-dark(var(--color-1), var(--color-11));
+  --orange: var(--orange-7);
+  --orange-light: var(--orange-5);
+  --orange-dark: var(--orange-9);
+  --orange-text: light-dark(var(--color-1), var(--color-11));
 
-  --info: var(--blue-7);
-  --info-light: var(--blue-5);
-  --info-dark: var(--blue-9);
-  --info-text: light-dark(var(--color-1), var(--color-11));
+  --blue: var(--blue-7);
+  --blue-light: var(--blue-5);
+  --blue-dark: var(--blue-9);
+  --blue-text: light-dark(var(--color-1), var(--color-11));
 
-  --success: var(--green-7);
-  --success-light: var(--green-5);
-  --success-dark: var(--green-9);
-  --success-text: light-dark(var(--color-1), var(--color-11));
+  --green: var(--green-7);
+  --green-light: var(--green-5);
+  --green-dark: var(--green-9);
+  --green-text: light-dark(var(--color-1), var(--color-11));
 
   /* Surface */
   --surface-default: light-dark(

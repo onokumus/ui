@@ -1,6 +1,9 @@
 <script setup>
+import {ref} from "vue"
 import Example from "../../.vitepress/theme/app/components/Example.vue";
 import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
+
+const denseClass = ref(true)
 </script>
 
 <style>
@@ -37,201 +40,7 @@ The List component is _extremely_ flexible and versatile. Be careful if you star
 
 <ul class="list">
 
-<li>
-  <div class="text">
-    <p>Headline</p>
-  </div>
-</li>
-
-<li>
-  <div class="text">
-    <p>Headline</p>
-    <p>
-      Supporting text that truly is quite long enough to fill up multiple lines.
-    </p>
-  </div>
-</li>
-
-<li>
-  <div class="text">
-    <p>Trailing supporting text</p>
-  </div>
-  <div class="end">
-    100+
-  </div>
-</li>
-
-<li class="border-top">
-  <div class="start">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
-      viewBox="0 0 32 32"
-    >
-      <path
-        fill="currentColor"
-        d="M16 16a7 7 0 1 0 0-14a7 7 0 0 0 0 14m-8.5 2A3.5 3.5 0 0 0 4 21.5v.5c0 2.393 1.523 4.417 3.685 5.793C9.859 29.177 12.802 30 16 30s6.14-.823 8.315-2.207C26.477 26.417 28 24.393 28 22v-.5a3.5 3.5 0 0 0-3.5-3.5z"
-      />
-    </svg>
-  </div>
-  <div class="text">
-    <p>Headline with start icon</p>
-  </div>
-</li>
-
-<li>
-  <div class="start">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="32"
-      height="32"
-      viewBox="0 0 32 32"
-    >
-      <path
-        fill="currentColor"
-        d="M16 16a7 7 0 1 0 0-14a7 7 0 0 0 0 14m-8.5 2A3.5 3.5 0 0 0 4 21.5v.5c0 2.393 1.523 4.417 3.685 5.793C9.859 29.177 12.802 30 16 30s6.14-.823 8.315-2.207C26.477 26.417 28 24.393 28 22v-.5a3.5 3.5 0 0 0-3.5-3.5z"
-      />
-    </svg>
-  </div>
-  <div class="text">
-    <p>Headline with start icon</p>
-    <p>
-      Supporting text that truly is quite long enough to fill up multiple lines.
-    </p>
-  </div>
-</li>
-
-<li class="inset">
-  <div class="text">
-    <p>Inset class</p>
-    <p>Makes the text line up nicely</p>
-  </div>
-</li>
-
-<li class="border-top">
-  <button>
-    <div class="text">
-      <p>Button list item</p>
-    </div>
-  </button>
-</li>
-
-<li>
-  <a href="#">
-    <div class="text">
-      <p>Link list item</p>
-    </div>
-  </a>
-</li>
-
-<li class="border-top">
-  <button>
-    <div class="start">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
-        viewBox="0 0 28 28"
-      >
-        <path
-          fill="currentColor"
-          d="M21.75 3A3.25 3.25 0 0 1 25 6.25v15.5A3.25 3.25 0 0 1 21.75 25H6.25A3.25 3.25 0 0 1 3 21.75V6.25A3.25 3.25 0 0 1 6.25 3zm0 1.5H6.25A1.75 1.75 0 0 0 4.5 6.25V15h6a.75.75 0 0 1 .743.648l.007.102a2.75 2.75 0 1 0 5.5 0a.75.75 0 0 1 .648-.743L17.5 15h6V6.25a1.75 1.75 0 0 0-1.75-1.75"
-        />
-      </svg>
-    </div>
-    <div class="text">
-      <p>Button with start icon</p>
-    </div>
-  </button>
-</li>
-
-<li>
-  <a href="#">
-    <div class="start">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
-        viewBox="0 0 24 24"
-      >
-        <path
-          fill="currentColor"
-          d="m13.94 5l5.061 5.06L9.063 20a2.25 2.25 0 0 1-1 .58l-5.115 1.395a.75.75 0 0 1-.92-.921l1.394-5.116a2.25 2.25 0 0 1 .58-.999zm-7.414 6l-1.5 1.5H2.75a.75.75 0 0 1 0-1.5zm14.352-8.174l.153.144l.145.153a3.58 3.58 0 0 1-.145 4.908l-.97.969L15 3.94l.97-.97a3.58 3.58 0 0 1 4.908-.144M10.526 7l-1.5 1.5H2.75a.75.75 0 1 1 0-1.5zm4-4l-1.5 1.5H2.75a.75.75 0 1 1 0-1.5z"
-        />
-      </svg>
-    </div>
-    <div class="text">
-      <p>Link with start icon</p>
-    </div>
-  </a>
-</li>
-
-<li class="border-top">
-  <button>
-    <div class="text">
-      <p>End icon</p>
-    </div>
-    <div class="end">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="32"
-        height="32"
-        viewBox="0 0 32 32"
-      >
-        <path
-          fill="currentColor"
-          d="M11.116 26.634a1.25 1.25 0 0 1 0-1.768L19.982 16l-8.866-8.866a1.25 1.25 0 0 1 1.768-1.768l9.75 9.75a1.25 1.25 0 0 1 0 1.768l-9.75 9.75a1.25 1.25 0 0 1-1.768 0"
-        />
-      </svg>
-    </div>
-  </button>
-</li>
-
-<li>
-    <div class="text">
-      <p>End icon button</p>
-    </div>
-    <div class="end">
-    <button class="button-icon">
-      <span class="sr-only">More</span>
-      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M16 9.5a2.5 2.5 0 1 1 0-5a2.5 2.5 0 0 1 0 5m0 9a2.5 2.5 0 1 1 0-5a2.5 2.5 0 0 1 0 5M13.5 25a2.5 2.5 0 1 0 5 0a2.5 2.5 0 0 0-5 0"/></svg>
-    </button>
-    </div>
-</li>
-
-<li class="border-top">
-  <label for="checkbox-1">
-    <div class="text">
-      <p>Checkbox</p>
-    </div>
-    <div class="end">
-      <input id="checkbox-1" type="checkbox" class="checkbox" />
-    </div>
-    </label>
-</li>
-
-<li class="border-top">
-  <label for="radio-1">
-    <div class="text">
-      <p>Radio 1</p>
-    </div>
-    <div class="end">
-      <input id="radio-1" name="radio-group-1" type="radio" class="radio" />
-    </div>
-    </label>
-</li>
-
-<li>
-  <label for="radio-2">
-    <div class="text">
-      <p>Radio 2</p>
-    </div>
-    <div class="end">
-      <input id="radio-2" name="radio-group-1" type="radio" class="radio" />
-    </div>
-    </label>
-</li>
+<!--@include: ./list-all.md -->
 
 </ul>
 </template>
@@ -240,7 +49,7 @@ The List component is _extremely_ flexible and versatile. Be careful if you star
 
 ### Text-only
 
-<Example hideCode>
+<Example>
 
 <template #example>
 
@@ -255,7 +64,6 @@ The List component is _extremely_ flexible and versatile. Be careful if you star
       <p>Headline</p>
       <p>Supporting text</p>
     </div>
-    <div class="end">42kb</div>
   </li>
 
   <li>
@@ -265,9 +73,6 @@ The List component is _extremely_ flexible and versatile. Be careful if you star
         Supporting text that truly is quite long enough to fill up multiple lines.
       </p>
     </div>
-    <div class="end">
-      999+
-    </div>
   </li>
 </ul>
 </template>
@@ -275,32 +80,14 @@ The List component is _extremely_ flexible and versatile. Be careful if you star
 <template #code>
 
 ```html
-<ul class="list">
-  <li>
-    <div class="text">
-      <p>Headline</p>
-    </div>
-  </li>
-
-  <li>
-    <div class="text">
-      <p>Headline</p>
-      <p>Supporting text</p>
-    </div>
-    <div class="end">42kb</div>
-  </li>
-
-  <li>
-    <div class="text">
-      <p>Headline</p>
-      <p>
-        Supporting text that truly is quite long enough to fill up multiple
-        lines.
-      </p>
-    </div>
-    <div class="end">999+</div>
-  </li>
-</ul>
+<li>
+  <div class="text">
+    <p>Headline</p>
+    <p>
+      Supporting text that truly is quite long enough to fill up multiple lines.
+    </p>
+  </div>
+</li>
 ```
 
 </template>
@@ -308,7 +95,7 @@ The List component is _extremely_ flexible and versatile. Be careful if you star
 
 ### Icon
 
-<Example hideCode>
+<Example>
 <template #example>
 <ul class="list">
 <li>
@@ -330,10 +117,6 @@ The List component is _extremely_ flexible and versatile. Be careful if you star
   <p>Headline</p>
   <p>Supporting text</p>
 </div>
-
-<div class="end">
-	100+
-</div>
 </li>
 </ul>
 
@@ -341,31 +124,16 @@ The List component is _extremely_ flexible and versatile. Be careful if you star
 
 <template #code>
 
-```html
-<ul class="list">
-  <li>
-    <div class="start">
-      <svg></svg>
-    </div>
+```html{2-4}
+<li>
+  <div class="start">
+    <svg></svg>
+  </div>
 
-    <div class="text">
-      <p>Headline</p>
-    </div>
-  </li>
-
-  <li>
-    <div class="start">
-      <svg></svg>
-    </div>
-
-    <div class="text">
-      <p>Headline</p>
-      <p>Supporting text</p>
-    </div>
-
-    <div class="end">100+</div>
-  </li>
-</ul>
+  <div class="text">
+    <p>Headline</p>
+  </div>
+</li>
 ```
 
 </template>
@@ -521,7 +289,8 @@ Wrap the List item content with a `<label for="INPUTID">` to make the entire sur
 ### Radio
 
 Wrap the List item content with a `<label for="INPUTID">` to make the entire surface clickable.
-Add a common name to each `<input>` for radio group behavior.
+
+Radio group: Add a common name to each `<input>` for radio group behavior.
 
 <Example hideCode>
 <template #example>
@@ -590,7 +359,9 @@ Add a common name to each `<input>` for radio group behavior.
 
 ## Inset
 
-<Example hideCode>
+Enables a list item without a start icon to align with items that do.
+
+<Example>
 
 <template #example>
 
@@ -627,33 +398,55 @@ Add a common name to each `<input>` for radio group behavior.
 <template #code>
 
 ```html
-<ul class="list">
-  <li>
-    <div class="start">
-      <svg></svg>
-    </div>
+<li class="inset">
+  <!--  -->
+</li>
+```
 
-    <div class="text">
-      <p>No inset</p>
-    </div>
-  </li>
+</template>
+</Example>
 
-  <li class="inset">
-    <div class="text">
-      <p>Inset class</p>
-      <p>Makes the text line up nicely</p>
-    </div>
-  </li>
+## Gutterless
 
-  <li class="inset">
-    <div class="start">
-      <svg></svg>
-    </div>
-    <div class="text">
-      <p>Inset class</p>
-      <p>Any <code>div.start</code> will be hidden when inset</p>
-    </div>
-  </li>
+Apply the `.gutterless` class on the `ul.list` element to remove the inline padding on the list items.
+
+<Example>
+<template #example>
+<ul class="list gutterless">
+<li>
+<div class="text">
+  <p>Delete</p>
+</div>
+
+<div class="end">
+  <button class="icon-button">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M13.5 6.5V7h5v-.5a2.5 2.5 0 0 0-5 0m-2 .5v-.5a4.5 4.5 0 1 1 9 0V7H28a1 1 0 1 1 0 2h-1.508L24.6 25.568A5 5 0 0 1 19.63 30h-7.26a5 5 0 0 1-4.97-4.432L5.508 9H4a1 1 0 0 1 0-2zm2.5 6.5a1 1 0 1 0-2 0v10a1 1 0 1 0 2 0zm5-1a1 1 0 0 0-1 1v10a1 1 0 1 0 2 0v-10a1 1 0 0 0-1-1"/></svg>
+    </button>
+</div>
+</li>
+
+<li>
+	<div class="start">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M16 16a7 7 0 1 0 0-14a7 7 0 0 0 0 14m-8.5 2A3.5 3.5 0 0 0 4 21.5v.5c0 2.393 1.523 4.417 3.685 5.793C9.859 29.177 12.802 30 16 30s6.14-.823 8.315-2.207C26.477 26.417 28 24.393 28 22v-.5a3.5 3.5 0 0 0-3.5-3.5z"/></svg>
+	</div>
+
+<div class="text">
+  <p>Headline</p>
+  <p>Supporting text</p>
+</div>
+
+<div class="end">
+	100+
+</div>
+</li>
+</ul>
+</template>
+
+<template #code>
+
+```html
+<ul class="list gutterless">
+  <!--  -->
 </ul>
 ```
 
@@ -669,21 +462,22 @@ Apply the `.bordered` class on the `ul.list` element to give all list items a bo
 <Example>
 <template #example>
 <ul class="list bordered">
-  <li>
-    <div class="text">
-      <p>Headline</p>
-    </div>
-  </li>
-   <li>
-    <div class="text">
-      <p>Headline</p>
-    </div>
-  </li>
-    <li>
-    <div class="text">
-      <p>Headline</p>
-    </div>
-  </li>
+	<li>
+<div class="text">
+	<p>So</p>
+</div>
+</li>
+<li>
+<div class="text">
+	<p>Many</p>
+</div>
+</li>
+	<li>
+<div class="text">
+	<p>Borders</p>
+</div>
+
+</li>
 </ul>
 </template>
 
@@ -708,12 +502,12 @@ Apply the `.border-top` class on a `li.list` item to give it an upper border.
 <ul class="list">
 	<li>
 <div class="text">
-	<p>Help</p>
+	<p>I need borders</p>
 </div>
 </li>
 <li>
 <div class="text">
-	<p>I need borders</p>
+	<p>Help</p>
 </div>
 </li>
 	<li class="border-top">
@@ -737,6 +531,38 @@ Apply the `.border-top` class on a `li.list` item to give it an upper border.
 ```
 
 </template>
+</Example>
+
+### Dense
+
+Simply add the `.dense` class to the `ul` element.
+
+<Example>
+
+<template #example>
+
+<label for="dense-toggle">
+  <input v-model="denseClass" class="checkbox" id="dense-toggle" name="checkbox" type="checkbox" checked="checked" />
+  <code>{{denseClass ? `<ul class="list dense">` : `<ul class="list">`}}</code>
+</label>
+
+<ul class="list" :class="{'dense': denseClass}">
+
+<!--@include: ./list-all.md -->
+
+</ul>
+</template>
+
+<template #code>
+
+```html
+<ul class="list dense">
+  <!--  -->
+</ul>
+```
+
+</template>
+
 </Example>
 
 ## Anatomy
@@ -790,4 +616,6 @@ Apply the `.border-top` class on a `li.list` item to give it an upper border.
 
 ## Installation
 
+::: code-group
 <<< @/../src/data-display/list.css
+:::

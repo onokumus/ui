@@ -132,6 +132,7 @@ export default defineConfig({
               text: "Data display",
               collapsed: false,
               items: [
+                { text: "Avatar", link: "/components/data-display/avatar" },
                 { text: "Badge", link: "/components/data-display/badge" },
                 { text: "Chip", link: "/components/data-display/chip" },
                 { text: "Divider", link: "/components/data-display/divider" },

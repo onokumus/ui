@@ -29,7 +29,7 @@ function onBlur() {
   >
     <button
       type="button"
-      class="button"
+      class="icon-button"
       aria-haspopup="true"
       :aria-expanded="open"
       :aria-label="label"
@@ -55,11 +55,6 @@ function onBlur() {
 <style scoped>
 .VPFlyout {
   position: relative;
-}
-
-.VPFlyout:hover {
-  color: var(--primary);
-  transition: color 0.25s;
 }
 
 .VPFlyout:hover .text {

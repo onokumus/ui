@@ -34,9 +34,9 @@
   }
 
   /* Colors */
-  &.danger,
-  &.info,
-  &.warning {
+  &.red,
+  &.blue,
+  &.orange {
     --_bg-color: var(--color-3);
     --_border-color: var(--color-7);
     --_color: var(--gray-14);

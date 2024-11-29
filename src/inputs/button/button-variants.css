@@ -169,7 +169,7 @@
       }
     }
 
-    @container style(--color-scheme: dark) {
+    /* @container style(--color-scheme: dark) {
       box-shadow: var(--shadow-4);
 
       &:where(:not(.disabled, [disabled])) {
@@ -181,7 +181,7 @@
           box-shadow: var(--shadow-6);
         }
       }
-    }
+    } */
 
     &:where(.disabled, [disabled]) {
       --_bg-color: color-mix(

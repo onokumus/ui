@@ -1,4 +1,4 @@
-:where(.button-icon) {
+:where(.icon-button) {
   --_text-color: inherit;
 
   align-items: center;

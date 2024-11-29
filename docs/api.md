@@ -8,9 +8,9 @@
 
 <!--@include: ./components/inputs/button-api.md -->
 
-### [Icon Button](/components/inputs/icon-button)
+### [Icon Button](/components/inputs/icon)
 
-<!--@include: ./components/inputs/icon-button-api.md -->
+<!--@include: ./components/inputs/icon-api.md -->
 
 ### Button group
 

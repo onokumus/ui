@@ -1,18 +1,18 @@
 :where(
-    input:not(
-        button,
-        [disabled],
-        [readonly],
-        [type="file"],
-        [type="button"],
-        [type="submit"],
-        [type="reset"],
-        [type="checkbox"],
-        [type="radio"]
-      ),
-    textarea,
-    select
-  ) {
+  input:not(
+      button,
+      [disabled],
+      [readonly],
+      [type="file"],
+      [type="button"],
+      [type="submit"],
+      [type="reset"],
+      [type="checkbox"],
+      [type="radio"]
+    ),
+  textarea,
+  select
+) {
   font-size: var(--font-size-md, 1rem);
   line-height: var(--font-lineheight-3);
   padding: var(--size-2);
@@ -63,6 +63,6 @@
   }
 
   &:invalid {
-    border-color: var(--danger);
+    border-color: var(--red);
   }
 }

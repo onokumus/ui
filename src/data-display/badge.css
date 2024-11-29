@@ -63,10 +63,10 @@
   }
 
   /* Colors */
-  &.danger,
-  &.info,
-  &.success,
-  &.warning {
+  &.red,
+  &.blue,
+  &.green,
+  &.orange {
     --_bg-color: var(--color-8);
     --_border-color: var(--color-8);
   }
