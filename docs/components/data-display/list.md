@@ -455,7 +455,7 @@ Wrap the List item content with a `<label for="INPUTID">` to make the entire sur
 
 <template #code>
 
-```html{2,4-6}
+```html
 <li>
   <label for="checkbox-example-1">
     <div class="text"></div>
