@@ -88,7 +88,10 @@ Primary (default), `.red`, `.blue`, `.green`, `.orange`.
 
 <Example>
 <template #example>
-<button class="button" @click="visibility = !visibility">Toggle visibility</button>
+<label for="visibility-toggle">
+	<input id="visibility-toggle" v-model="visibility" type="checkbox" class="checkbox" />
+	Toggle visibility
+</label>
 
 <div class="row">
 <span class="badge" :class="{'invisible': !visibility}" aria-label="5">

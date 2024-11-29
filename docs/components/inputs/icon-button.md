@@ -111,6 +111,14 @@ Add disabled styling with the `disabled` attribute or the `.disabled` class.
 2. Icon: `svg`
 3. Label text (optional)
 
+<style>
+	.anatomy {
+		* > * {
+			outline: none;
+		}
+	}
+</style>
+
 <Example direction="row">
 <template #example>
 <button class="icon-button anatomy">
