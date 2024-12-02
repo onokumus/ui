@@ -3,7 +3,7 @@ import { ref, useId } from "vue";
 
 const props = withDefaults(
   defineProps<{
-    direction?: "row" | "stack";
+    direction?: "row" | "column";
     exampleClass?: string;
     hideCode?: boolean;
     richText?: "rich-text" | "not-rich-text";
@@ -131,7 +131,7 @@ const showCode = ref(!props?.hideCode);
   justify-content: center;
 }
 
-.stack {
+.column {
   display: grid;
   gap: var(--size-3, 1rem);
 }

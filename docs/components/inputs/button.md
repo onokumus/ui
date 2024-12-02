@@ -141,7 +141,7 @@ import Example from "../../.vitepress/theme/app/components/Example.vue"
 
 ## Buttons with icon and label
 
-<Example direction="stack">
+<Example direction="column">
 <template #example>
 <div class="row">
     <button class="button">
@@ -215,7 +215,7 @@ import Example from "../../.vitepress/theme/app/components/Example.vue"
 
 Resize any button with the `.small` and `.large` modifiers.
 
-<Example direction="stack">
+<Example direction="column">
 <template #example>
 <div class="row">
   <button class="button small">Small</button>
@@ -260,7 +260,7 @@ Resize any button with the `.small` and `.large` modifiers.
 
 Add disabled styling with the `disabled` attribute or the `.disabled` class.
 
-<Example direction="stack">
+<Example direction="column">
 <template #example>
 <div class="row">
   <button class="button" disabled>Text</button>

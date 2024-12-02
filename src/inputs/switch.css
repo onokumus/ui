@@ -17,8 +17,16 @@
   cursor: pointer;
   display: flex;
   gap: var(--size-2);
+  line-height: 1.43;
   position: relative;
   user-select: none;
+
+  input {
+    block-size: 0;
+    inline-size: 0;
+    opacity: 0;
+    position: absolute;
+  }
 
   /* Track */
   &:before {
@@ -40,16 +48,16 @@
   &:after {
     background-color: var(--_dot-bg-color);
     block-size: var(--_dot-size);
-    border: 1px solid var(--_dot-border-color);
     border-radius: 100vmax;
+    border: 1px solid var(--_dot-border-color);
     content: "";
     inline-size: var(--_dot-size);
-    outline: var(--_dot-outline-size) solid var(--_dot-bg-color);
-    outline-offset: -1px;
-    position: absolute;
-    inset-block-start: 50%;
+    /* Fixed inset-block-start value in order to accommodate stacked layout */
+    inset-block-start: var(--size-1);
     inset-inline-start: var(--size-1);
-    translate: 0 -50%;
+    outline-offset: -1px;
+    outline: var(--_dot-outline-size) solid var(--_dot-bg-color);
+    position: absolute;
   }
 
   /* Checked */
@@ -80,13 +88,6 @@
     opacity: 0.64;
   }
 
-  input {
-    block-size: 0;
-    inline-size: 0;
-    opacity: 0;
-    position: absolute;
-  }
-
   /* Size */
   &.small {
     --_track-height: var(--size-4);
@@ -100,6 +101,7 @@
 
     /* Dot */
     &:after {
+      inset-block-start: 0.35rem;
       inset-inline-start: 0.125rem;
     }
 

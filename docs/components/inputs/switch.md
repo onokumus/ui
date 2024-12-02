@@ -74,6 +74,7 @@ Notice the use of `aria-label` on the `label` element. Read more about labels an
 	<input id="switch3" type="checkbox" disabled/>
 	Disabled
 </label>
+
 </template>
 
 <template #code>

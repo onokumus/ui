@@ -27,7 +27,7 @@ You might want to check out:
 
 Tonal (default) and outlined.
 
-<Example direction="stack">
+<Example direction="column">
 <template #example>
 <article role="alert" class="alert">
 	<div class="content">
@@ -70,7 +70,7 @@ Tonal (default) and outlined.
 
 Icon must be placed before the content.
 
-<Example direction="stack">
+<Example direction="column">
 <template #example>
 
 <article role="alert" class="alert">
@@ -100,7 +100,7 @@ There are four different severities - neutral (default), blue, orange, red.
 Omitting an icon is possible. However, it helps having one if you need to convey a specific kind of severity in your Alert message. For instance, colorblind users might be left confused if there's not enough visual guidance.
 :::
 
-<Example direction="stack">
+<Example direction="column">
 <template #example>
 <article role="alert" class="alert blue">
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M16 13a1 1 0 0 1 1 1v9a1 1 0 1 1-2 0v-9a1 1 0 0 1 1-1m0-2a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3M2 16C2 8.268 8.268 2 16 2s14 6.268 14 14s-6.268 14-14 14S2 23.732 2 16M16 4C9.373 4 4 9.373 4 16s5.373 12 12 12s12-5.373 12-12S22.627 4 16 4"/></svg>
@@ -147,7 +147,7 @@ Omitting an icon is possible. However, it helps having one if you need to convey
 2. Content: text, or wrapper with `.container` class.
 3. Icon (optional): `<svg>` element
 
-<Example direction="stack">
+<Example direction="column">
 <template #example>
 <article role="alert" class="alert outlined anatomy">
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M16 13a1 1 0 0 1 1 1v9a1 1 0 1 1-2 0v-9a1 1 0 0 1 1-1m0-2a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3M2 16C2 8.268 8.268 2 16 2s14 6.268 14 14s-6.268 14-14 14S2 23.732 2 16M16 4C9.373 4 4 9.373 4 16s5.373 12 12 12s12-5.373 12-12S22.627 4 16 4"/></svg>

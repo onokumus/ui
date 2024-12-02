@@ -101,7 +101,7 @@ Make sure the text is wrapped in a `.text` wrapper.
 
 ## Button
 
-<Example direction="stack">
+<Example direction="column">
 <template #example>
 <div class="row">
 <button class="chip">
@@ -213,7 +213,7 @@ Make sure the text is wrapped in a `.text` wrapper.
 <!--
 ## Colors
 
-<Example direction="stack">
+<Example direction="column">
 <template #example>
 <div class="row">
 <button class="chip tonal primary"><span class="text">Primary</span></button>

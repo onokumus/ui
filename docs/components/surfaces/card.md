@@ -20,7 +20,7 @@ The card is extremely versetile and can be used on its own, or as a building blo
 
 ## Variants
 
-<Example direction="stack">
+<Example direction="column">
 <template #example>
 <div class="card"><div class="content">Text</div></div>
 
@@ -71,7 +71,7 @@ Open Props UI include these complementary utility components to handle various u
 3. `.content` (optional): a wrapper for the card content
 4. `.actions` (optional): a wrapper that groups a set of buttons
 
-<Example direction="stack">
+<Example direction="column">
 <template #example>
 <div class="card elevated anatomy">
 		<hgroup>
