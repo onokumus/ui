@@ -77,7 +77,7 @@ function scrollToTop() {
       <span class="menu-text">{{ resolveTitle(theme) }}</span>
       <span class="vpi-chevron-right icon" />
     </button>
-    <button class="small" @click="scrollToTop" v-else>
+    <button class="button small" @click="scrollToTop" v-else>
       {{ theme.returnToTopLabel || "Return to top" }}
     </button>
     <Transition name="flyout">

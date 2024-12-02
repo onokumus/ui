@@ -92,11 +92,11 @@ Wrap the elements of your List item with a `a`, `button` or `label` depending on
 
 ```html{2,6,10}
 <li>
-  <a><!--  --></a>
+  <button><!--  --></button>
 </li>
 
-<li>
-  <button><!--  --></button>
+e<li>
+  <a><!--  --></a>
 </li>
 
 <li>

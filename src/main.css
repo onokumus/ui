@@ -41,6 +41,7 @@
 @import "./inputs/autocomplete.css" layer(components.inputs.autocomplete);
 @import "./inputs/checkbox.css" layer(components.inputs.checkbox);
 @import "./inputs/color.css" layer(components.inputs.color);
+@import "./inputs/switch.css" layer(components.inputs.switch);
 @import "./inputs/textarea.css" layer(components.inputs.textarea);
 
 /*** Surfaces */

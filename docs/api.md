@@ -30,6 +30,10 @@
 
 ### Select
 
+### [Switch](/components/inputs/switch-api.md)
+
+<!--@include: ./components/inputs/switch-api.md -->
+
 ### Textarea
 
 ### Text input

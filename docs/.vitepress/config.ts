@@ -124,6 +124,7 @@ export default defineConfig({
                 { text: "Range", link: "/components/inputs/range" },
                 { text: "Search", link: "/components/inputs/search" },
                 { text: "Select", link: "/components/inputs/select" },
+                { text: "Switch", link: "/components/inputs/switch" },
                 { text: "Textarea", link: "/components/inputs/textarea" },
                 { text: "Text input", link: "/components/inputs/index" },
               ],
