@@ -157,10 +157,16 @@
       }
     }
 
-    /* Checkbox / Radio */
+    /* Checkbox / Radio / Switch */
     & > label {
       .end {
         padding-inline-end: var(--size-1);
+      }
+
+      &.switch {
+        --_dot-size: 0.75rem;
+        --_track-height: var(--size-4);
+        --_track-width: 2.5rem;
       }
     }
 

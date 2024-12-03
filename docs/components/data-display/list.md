@@ -7,7 +7,7 @@ import ListAll from "./list-all.vue"
 const denseClass = ref(true)
 </script>
 
-<style>
+<style scoped>
 .example ul {
   margin: 0 auto;
   max-inline-size: 40ch;

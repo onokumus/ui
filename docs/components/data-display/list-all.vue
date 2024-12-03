@@ -4,6 +4,7 @@ import { useId } from "vue";
 const idCheckbox = useId();
 const idRadio1 = useId();
 const idRadio2 = useId();
+const idSwitch = useId();
 </script>
 
 <template>
@@ -244,6 +245,23 @@ const idRadio2 = useId();
           type="radio"
           class="radio"
         />
+      </div>
+    </label>
+  </li>
+
+  <li class="border-top">
+    <label
+      :for="idSwitch"
+      role="switch"
+      for="switch-checked"
+      class="switch"
+      aria-label="Label"
+    >
+      <div class="text">
+        <p>Radio 1</p>
+      </div>
+      <div class="end">
+        <input :id="idSwitch" type="checkbox" />
       </div>
     </label>
   </li>

@@ -10,6 +10,7 @@
   --_dot-bg-color: var(--gray-10);
   --_dot-border-color: var(--gray-10);
   --_dot-outline-size: 0;
+  --_dot-inset: var(--size-1) auto auto var(--size-1);
 
   --_track-height: var(--size-5);
   --_track-width: var(--size-8);
@@ -31,9 +32,11 @@
     /* Track */
     &:before {
       background-color: var(--gray-3);
+      block-size: var(--_track-height);
       border-radius: 100vmax;
       border: 1px solid var(--gray-10);
       content: "";
+      inline-size: var(--_track-width);
       inset: 0;
       position: absolute;
     }
@@ -52,8 +55,7 @@
       content: "";
       inline-size: var(--_dot-size);
       /* Fixed inset-block-start value in order to accommodate stacked layout */
-      inset-block-start: var(--size-1);
-      inset-inline-start: var(--size-1);
+      inset: var(--_dot-inset);
       outline-offset: -1px;
       outline: var(--_dot-outline-size) solid var(--_dot-bg-color);
       position: absolute;
@@ -126,32 +128,6 @@
     --_dot-size: 0.75rem;
     --_track-height: var(--size-4);
     --_track-width: 2.5rem;
-
-    input {
-      /* Track */
-      &:before {
-        block-size: var(--size-4);
-        inline-size: 2.5rem;
-      }
-
-      /* Dot */
-      &:after {
-        inset-block-start: var(--size-1);
-        inset-inline-start: var(--size-1);
-      }
-
-      &:active:after {
-        inset-inline-start: var(--size-1);
-      }
-
-      &:checked {
-        &:after {
-          inset-inline-start: calc(
-            var(--_track-width) - var(--_dot-size) - var(--size-1)
-          );
-        }
-      }
-    }
   }
 
   /* Stacked layout */
