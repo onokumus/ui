@@ -61,6 +61,22 @@
     --_text-color: initial;
   }
 
+  /* Ripple effect */
+  background-position: center;
+  transition: background 0.8s;
+
+  &:where(:not(.disabled, [disabled])) {
+    &:where(:not(:active):hover) {
+      --ripple: radial-gradient(circle, transparent 1%, var(--_bg-color) 1%)
+        center/15000%;
+    }
+
+    &:where(:hover:active) {
+      background-size: var(--button-ripple-size);
+      transition: background 0s;
+    }
+  }
+
   /* Variants */
   &.outlined {
     --_bg-color: var(--surface-default);
@@ -155,33 +171,29 @@
   }
   &.elevated {
     --_bg-color: light-dark(var(--gray-1), var(--gray-12));
+    --_ripple-color: light-dark(
+      color-mix(in oklch, var(--gray-1) 80%, var(--color-8)),
+      color-mix(in oklch, var(--gray-12) 80%, var(--color-8))
+    );
     --_text-color: var(--color-8);
 
-    box-shadow: var(--shadow-3);
+    box-shadow: var(--shadow-1);
 
     &:where(:not(.disabled, [disabled])) {
       &:where(:not(:active):hover) {
-        box-shadow: var(--shadow-4);
+        --ripple: radial-gradient(
+            circle,
+            transparent 1%,
+            var(--_ripple-color) 1%
+          )
+          center/15000%;
+        box-shadow: var(--shadow-2);
       }
 
-      &:where(:active) {
-        box-shadow: var(--shadow-6);
+      &:where(:hover:active) {
+        box-shadow: var(--shadow-3);
       }
     }
-
-    /* @container style(--color-scheme: dark) {
-      box-shadow: var(--shadow-4);
-
-      &:where(:not(.disabled, [disabled])) {
-        &:where(:not(:active):hover) {
-          box-shadow: var(--shadow-5);
-        }
-
-        &:where(:active) {
-          box-shadow: var(--shadow-6);
-        }
-      }
-    } */
 
     &:where(.disabled, [disabled]) {
       --_bg-color: color-mix(
@@ -194,22 +206,6 @@
         var(--text-color-2) 70%,
         var(--surface-elevated)
       );
-    }
-  }
-
-  /* Ripple effect */
-  background-position: center;
-  transition: background 0.8s;
-
-  &:where(:not(.disabled, [disabled])) {
-    &:where(:not(:active):hover) {
-      --ripple: radial-gradient(circle, transparent 1%, var(--_bg-color) 1%)
-        center/15000%;
-    }
-
-    &:where(:hover:active) {
-      background-size: var(--button-ripple-size);
-      transition: background 0s;
     }
   }
 }
