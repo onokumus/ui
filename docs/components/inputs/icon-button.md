@@ -43,10 +43,7 @@ import Example from "../../.vitepress/theme/app/components/Example.vue"
 </template>
 </Example>
 
-::: info
-The `.sr-only` (screen reader only) class removes the visible text but still allows screen readers to
-access it.
-:::
+<!--@include: ../../sr-only.md -->
 
 ## Sizes
 

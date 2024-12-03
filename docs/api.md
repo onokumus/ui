@@ -16,6 +16,8 @@
 
 ### Checkbox
 
+<!--@include: ./components/inputs/checkbox-api.md -->
+
 ### Color
 
 ### Date

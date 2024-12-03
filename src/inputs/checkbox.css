@@ -10,6 +10,10 @@ label:where(.checkbox, .radio) {
     cursor: not-allowed;
     opacity: 0.64;
     user-select: none;
+
+    input {
+      cursor: not-allowed;
+    }
   }
 
   &.stack {

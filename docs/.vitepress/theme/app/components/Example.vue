@@ -135,7 +135,7 @@ const showCode = ref(!props?.hideCode);
     gap: var(--size-8);
   }
 
-  .centered {
+  &.centered {
     .column {
       justify-content: center;
     }

@@ -60,12 +60,7 @@ import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
 
 </Example>
 
-::: tip What's `.sr-only`?
-The `.sr-only` (screen reader only) class removes the visible text but still allows screen readers to
-access it. In this case we need a label for accessibility but don't want to visually show it.
-
-Check out more [utils](/components/utils).
-:::
+<!--@include: ../../sr-only.md -->
 
 ## Visible label
 
@@ -218,3 +213,13 @@ Accessible checkboxes must have a label. You can choose between three approaches
 | ---------------- | --------------------------------------------------------- |
 | <kbd>Space</kbd> | When Checkbox is focused it changes its state.            |
 | <kbd>Enter</kbd> | (Optional) When Checkbox is focused it changes its state. |
+
+## API
+
+<!--@include: ./checkbox-api.md -->
+
+## Installation
+
+::: code-group
+<<< @/../src/inputs/checkbox.css [checkbox.css]
+:::
