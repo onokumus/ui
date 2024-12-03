@@ -214,6 +214,10 @@ To have an accessible label you can choose between three approaches.
 
 <!--@include: ./switch-api.md -->
 
+## Browser compatibility
+
+<Baseline :ids="['light-dark']" />
+
 ## Installation
 
 ::: code-group
