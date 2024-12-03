@@ -163,14 +163,14 @@ Use the positional classes in order to place the Snackbar. Default is `.end-star
 <Example direction="stack">
 <template #example>
 	<div class="row">
-		<button popovertarget="position-snackbar" @click="positionClick('start-start')" class="button small">.start-start</button>
-		<button popovertarget="position-snackbar" @click="positionClick('start-center')" class="button small">.start-center</button>
-		<button popovertarget="position-snackbar" @click="positionClick('start-end')" class="button small">.start-end</button>
+		<button popovertarget="position-snackbar" @click="positionClick('start-start')" class="button">.start-start</button>
+		<button popovertarget="position-snackbar" @click="positionClick('start-center')" class="button">.start-center</button>
+		<button popovertarget="position-snackbar" @click="positionClick('start-end')" class="button">.start-end</button>
 	</div>
 	<div class="row">
-		<button popovertarget="position-snackbar" @click="positionClick('end-start')" class="button small">.end-start</button>
-		<button popovertarget="position-snackbar" @click="positionClick('end-center')" class="button small">.end-center</button>
-		<button popovertarget="position-snackbar" @click="positionClick('end-end')" class="button small">.end-end</button>
+		<button popovertarget="position-snackbar" @click="positionClick('end-start')" class="button">.end-start</button>
+		<button popovertarget="position-snackbar" @click="positionClick('end-center')" class="button">.end-center</button>
+		<button popovertarget="position-snackbar" @click="positionClick('end-end')" class="button">.end-end</button>
 	</div>
 
 <article id="position-snackbar" popover="manual" ref="positionSnackbar"  class="snackbar" :class="positionClass" role="status">

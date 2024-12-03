@@ -47,8 +47,8 @@ In order to toggle a `<dialog>` you will need to use Javascript.
       nulla sit amet porttitor rhoncus.
 		</div>
 		<div class="actions">
-			<button class="button small" @click="closeModal">Cancel</button>
-			<button class="button small" @click="closeModal">Save</button>
+			<button class="button" @click="closeModal">Cancel</button>
+			<button class="button" @click="closeModal">Save</button>
 		</div>
 </dialog>
 </template>
