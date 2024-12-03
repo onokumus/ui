@@ -207,6 +207,8 @@ Found in `div.start`.
 
 #### Avatar
 
+Read more: [Avatar](/components/data-display/avatar)
+
 <Example>
 <template #example>
 <ul class="list">
@@ -426,6 +428,8 @@ Found in `div.end`.
 
 Wrap the List item content with a `<label for="INPUTID">` to make the entire surface clickable.
 
+Read more: [Checkbox](/components/inputs/checkbox)
+
 <Example>
 <template #example>
 <ul class="list">
@@ -474,6 +478,8 @@ Wrap the List item content with a `<label for="INPUTID">` to make the entire sur
 Wrap the List item content with a `<label for="INPUTID">` to make the entire surface clickable.
 
 Radio group: Add a common name to each `<input>` for radio group behavior.
+
+Read more: [Radio](/components/inputs/radio)
 
 <Example hideCode>
 <template #example>
@@ -540,12 +546,48 @@ Radio group: Add a common name to each `<input>` for radio group behavior.
 
 #### Switch
 
-<Example>
-<template #example>
+Read more: [Switch](/components/inputs/switch)
 
+<Example hideCode>
+<template #example>
+<ul class="list">
+<li>
+  <label role="switch" class="switch" for="switch-example-1">
+    <div class="text">
+      <p>Switch 1</p>
+    </div>
+    <div class="end">
+      <input id="switch-example-1" type="checkbox"  />
+    </div>
+  </label>
+</li>
+
+<li>
+  <label role="switch" class="switch" for="switch-example-2">
+    <div class="text">
+      <p>Switch 2</p>
+    </div>
+    <div class="end">
+      <input id="switch-example-2" type="checkbox" />
+    </div>
+    </label>
+</li>
+
+</ul>
 </template>
 
 <template #code>
+
+```html
+<li>
+  <label role="switch" class="switch" for="switch-example-1">
+    <div class="text">Switch 1</div>
+    <div class="end">
+      <input id="switch-example-1" type="checkbox" />
+    </div>
+  </label>
+</li>
+```
 
 </template>
 </Example>

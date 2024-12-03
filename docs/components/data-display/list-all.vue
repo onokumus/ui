@@ -250,15 +250,9 @@ const idSwitch = useId();
   </li>
 
   <li class="border-top">
-    <label
-      :for="idSwitch"
-      role="switch"
-      for="switch-checked"
-      class="switch"
-      aria-label="Label"
-    >
+    <label :for="idSwitch" role="switch" for="switch-checked" class="switch">
       <div class="text">
-        <p>Radio 1</p>
+        <p>Switch 1</p>
       </div>
       <div class="end">
         <input :id="idSwitch" type="checkbox" />
