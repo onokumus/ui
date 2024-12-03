@@ -3,6 +3,7 @@ import { ref, useId } from "vue";
 
 const props = withDefaults(
   defineProps<{
+    centered?: boolean;
     direction?: "row" | "column";
     exampleClass?: string;
     hideCode?: boolean;
@@ -21,7 +22,11 @@ const showCode = ref(!props?.hideCode);
 <template>
   <article
     class="example-wrapper"
-    :class="[wrapperClass, richText ?? 'not-rich-text']"
+    :class="[
+      wrapperClass,
+      centered ? 'centered' : '',
+      richText ?? 'not-rich-text',
+    ]"
   >
     <div
       v-if="$slots.example"
@@ -129,14 +134,20 @@ const showCode = ref(!props?.hideCode);
   .gap-l {
     gap: var(--size-8);
   }
-}
 
-.example {
-  margin-block: var(--size-7) var(--size-3, 1rem);
-  padding: var(--size-3, 1rem);
+  .centered {
+    .column {
+      justify-content: center;
+    }
+  }
 
-  & + [class^="language"] {
-    margin-block-start: 0 !important;
+  .example {
+    margin-block: var(--size-7) var(--size-3, 1rem);
+    padding: var(--size-3, 1rem);
+
+    & + [class^="language"] {
+      margin-block-start: 0 !important;
+    }
   }
 }
 </style>

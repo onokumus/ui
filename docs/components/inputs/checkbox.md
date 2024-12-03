@@ -7,64 +7,131 @@ import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
 
 <Example direction="row">
 <template #example>
-   <input class="checkbox" id="checkboxa1" name="checkbox" type="checkbox" checked="checked">
-   <input class="checkbox" id="checkboxa2" name="checkbox" type="checkbox">
-   <input class="checkbox" id="checkboxa3" name="checkbox" type="checkbox" disabled>
-   <input class="checkbox" id="checkboxa4" name="checkbox" type="checkbox" checked="checked" disabled>
+  <label class="checkbox">
+   <input name="checkbox" type="checkbox" checked="checked">
+    <span class="sr-only">Label</span>
+  </label>
 
+  <label class="checkbox">
+   <input name="checkbox" type="checkbox">
+    <span class="sr-only">Label</span>
+   </label>
+
+  <label class="checkbox">
+   <input name="checkbox" type="checkbox" disabled>
+    <span class="sr-only">Label</span>
+   </label>
+
+  <label class="checkbox">
+   <input name="checkbox" type="checkbox" checked="checked" disabled>
+  <span class="sr-only">Label</span>
+</label>
 </template>
 
 <template #code>
 
 <!-- prettier-ignore -->
 ```html
-<input class="checkbox" id="checkboxa1" name="checkbox" type="checkbox" checked="checked" />
+<label class="checkbox">
+  <input   name="checkbox" type="checkbox" checked="checked" />
+  <span class="sr-only">Label</span>
+</label>
 
-<input class="checkbox" id="checkboxa2" name="checkbox" type="checkbox" />
+<!-- Checked -->
+<label class="checkbox">
+  <input   name="checkbox" type="checkbox" />
+  <span class="sr-only">Label</span>
+</label>
 
-<input class="checkbox" id="checkboxa3" name="checkbox" type="checkbox" disabled />
+<!-- Unchecked & disabled -->
+<label class="checkbox">
+  <input   name="checkbox" type="checkbox" disabled />
+  <span class="sr-only">Label</span>
+</label>
 
-<input class="checkbox" id="checkboxa4" name="checkbox" type="checkbox" checked="checked" disabled />
+<!-- Checked & disabled -->
+<label class="checkbox">
+  <input   name="checkbox" type="checkbox" checked="checked" disabled />
+  <span class="sr-only">Label</span>
+</label>
 ```
 
 </template>
 
 </Example>
 
-## Label
+::: tip What's `.sr-only`?
+The `.sr-only` (screen reader only) class removes the visible text but still allows screen readers to
+access it. In this case we need a label for accessibility but don't want to visually show it.
 
-<Example hideCode direction="row">
+Check out more [utils](/components/utils).
+:::
+
+## Visible label
+
+Render the label text inside an element with a `.text` class.
+
+<Example direction="column" centered>
 <template #example>
-    <label for="checkboxb1"><input class="checkbox" id="checkboxb1" name="checkbox" type="checkbox" checked="checked"> Choice A</label>
-    <label for="checkboxb2"><input class="checkbox" id="checkboxb2" name="checkbox" type="checkbox"> Choice B</label>
-    <label for="checkboxb3"><input class="checkbox" id="checkboxb3" name="checkbox" type="checkbox" disabled> Disabled</label>
-     <label for="checkboxb4"><input class="checkbox" id="checkboxb4" name="checkbox" type="checkbox" checked="checked" disabled>Checked and disabled
-     </label>
+    <label class="checkbox">
+      <input   name="checkbox" type="checkbox" checked="checked">
+      <span class="text">Choice A</span>
+    </label>
+
+  <label class="checkbox">
+    <input   name="checkbox" type="checkbox">
+    <span class="text">Long text dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole celiac swag.</span>
+  </label>
+
+  <label class="checkbox">
+    <input   name="checkbox" type="checkbox" disabled>
+    <span clas="text">Disabled</span>
+  </label>
+
+  <label class="checkbox">
+    <input  name="checkbox" type="checkbox" checked="checked" disabled>
+    <span class="text">Checked and disabled</span>
+  </label>
+
 </template>
 
 <template #code>
 
-<!-- prettier-ignore -->
-```html
-<label for="checkboxb1">
-  <input class="checkbox" id="checkboxb1" name="checkbox" type="checkbox" checked="checked" />
-  Choice A
+```html{3}
+<label class="checkbox">
+  <input   name="checkbox" type="checkbox" checked="checked" />
+  <span class="text">Label</span>
 </label>
 
-<label for="checkboxb2">
-  <input class="checkbox" id="checkboxb2" name="checkbox" type="checkbox" />
-  Choice B
+```
+
+</template>
+</Example>
+
+### Label position
+
+<Example direction="row" exampleClass="gap-l">
+<template #example>
+  <label class="checkbox">
+    <input   name="checkbox" type="checkbox">
+    <span class="text">Default</span>
+  </label>
+
+  <label class="checkbox stack">
+    <input   name="checkbox" type="checkbox">
+    <span class="text">Stack</span>
+  </label>
+
+</template>
+
+<template #code>
+
+```html{1}
+<label class="checkbox stack">
+  <input   name="checkbox" type="checkbox">
+  <span class="text">Stack</span>
 </label>
 
-<label for="checkboxb3">
-  <input class="checkbox" id="checkboxb3" name="checkbox" type="checkbox" disabled />
-  Disabled
-</label>
-
-<label for="checkboxb4">
-  <input class="checkbox" id="checkboxb4" name="checkbox" type="checkbox" checked="checked" disabled />
-  Checked and disabled
-</label>
 ```
 
 </template>
@@ -72,23 +139,82 @@ import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
 
 ## Size
 
-<Example hideCode direction="row">
+<Example direction="column" exampleClass="gap-l" centered>
 <template #example>
-   <input class="checkbox small" id="c-size-1" name="checkbox" type="checkbox" checked="checked">
-   <input class="checkbox" id="c-size-2" name="checkbox" type="checkbox" checked="checked">
-   <input class="checkbox large" id="c-size-3" name="checkbox" type="checkbox" checked="checked">
+   <div class="row">
+   <label class="checkbox small">
+      <input name="checkbox" type="checkbox" checked="checked">
+      <span class="sr-only">Label</span>
+  </label>
+  <label class="checkbox">
+     <input   name="checkbox" type="checkbox" checked="checked">
+     <span class="sr-only">Label</span>
+  </label>
+  <label class="checkbox large">
+     <input name="checkbox" type="checkbox" checked="checked">
+     <span class="sr-only">Label</span>
+  </label>
+   </div>
+
+   <div class="row">
+    <label class="checkbox small">
+      <input name="checkbox" type="checkbox" checked="checked">
+      <span class="text">Small</span>
+    </label>
+    <label class="checkbox">
+      <input   name="checkbox" type="checkbox" checked="checked">
+      <span class="text">Default</span>
+    </label>
+    <label class="checkbox large">
+      <input name="checkbox" type="checkbox" checked="checked">
+      <span class="text">Large</span>
+    </label>
+   </div>
 </template>
 
 <template #code>
 
-<!-- prettier-ignore -->
-```html
-<input class="checkbox small" id="c-size-1" name="checkbox" type="checkbox" checked="checked" />
+```html{1,6,12,17}
+<label class="checkbox small">
+  <input checked="checked" name="checkbox" type="checkbox" />
+  <span class="sr-only">Label</span>
+</label>
 
-<input class="checkbox" id="c-size-2" name="checkbox" type="checkbox" checked="checked" />
+<label class="checkbox large">
+  <input checked="checked" name="checkbox" type="checkbox" />
+  <span class="sr-only">Label</span>
+</label>
 
-<input class="checkbox large" id="c-size-3" name="checkbox" type="checkbox" checked="checked" />
+<!-- With label -->
+<label class="checkbox small">
+  <input checked="checked" name="checkbox" type="checkbox" />
+  <span class="text">Small</span>
+</label>
+
+<label class="checkbox large">
+  <input checked="checked" name="checkbox" type="checkbox" />
+  <span class="text">Large</span>
+</label>
 ```
 
 </template>
 </Example>
+
+## Accessibility
+
+### Labels
+
+Accessible checkboxes must have a label. You can choose between three approaches:
+
+| Approach                                                          | Usage in Checkbox component |
+| ----------------------------------------------------------------- | --------------------------- |
+| Provide a label text inside the `label`/`role="checkbox"` element | Default                     |
+| Add a `aria-label` on the input element                           | Not used                    |
+| Have a visible label that you reference with `aria-labelledby`    | Not used                    |
+
+### Keyboard support
+
+| Key              | Function                                                  |
+| ---------------- | --------------------------------------------------------- |
+| <kbd>Space</kbd> | When Checkbox is focused it changes its state.            |
+| <kbd>Enter</kbd> | (Optional) When Checkbox is focused it changes its state. |
