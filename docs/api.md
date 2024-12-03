@@ -16,7 +16,7 @@
 
 ### Checkbox
 
-<!--@include: ./components/inputs/checkbox-api.md -->
+<!--@include: ./components/inputs/checkbox-radio-api.md -->
 
 ### Color
 

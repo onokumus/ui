@@ -216,10 +216,10 @@ Accessible checkboxes must have a label. You can choose between three approaches
 
 ## API
 
-<!--@include: ./checkbox-api.md -->
+<!--@include: ./checkbox-radio-api.md -->
 
 ## Installation
 
 ::: code-group
-<<< @/../src/inputs/checkbox.css [checkbox.css]
+<<< @/../src/inputs/checkbox-radio.css [checkbox-radio.css]
 :::
