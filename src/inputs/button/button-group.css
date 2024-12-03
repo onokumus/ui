@@ -1,0 +1,37 @@
+:where([role="group"].button-group) {
+  border-radius: 100vmax;
+  width: fit-content;
+
+  button {
+    border-radius: 0;
+
+    & + & {
+      border-inline-start: 0;
+    }
+
+    &:first-of-type {
+      border-bottom-left-radius: 100vmax;
+      border-top-left-radius: 100vmax;
+    }
+    &:last-of-type {
+      border-bottom-right-radius: 100vmax;
+      border-top-right-radius: 100vmax;
+    }
+  }
+
+  /* Variants */
+  &:not(:has(.tonal), :has(.filled), :has(.outlined)) {
+    button + button {
+      border-inline-start: 1px solid var(--border-color);
+    }
+  }
+
+  &:has(.tonal),
+  &:has(.filled) {
+    button {
+      &:not(:first-of-type) {
+        border-inline-start: 1px solid var(--color-6);
+      }
+    }
+  }
+}

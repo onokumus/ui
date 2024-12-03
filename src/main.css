@@ -35,7 +35,7 @@
   layer(components.inputs.button.variants);
 @import "./inputs/input-base.css" layer(components.inputs.input.base);
 @import "./inputs/button/icon-button.css" layer(components.inputs.button.icon);
-
+@import "./inputs/button/button-group.css" layer(components.inputs.button.group);
 /***** Input  */
 @import "./inputs/input-variants.css" layer(components.inputs.input.variants);
 @import "./inputs/autocomplete.css" layer(components.inputs.autocomplete);
