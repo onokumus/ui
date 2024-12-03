@@ -66,23 +66,23 @@ All switches should have labels. Notice the use of `aria-label` on the `label` e
 
 ## Visible labels
 
-Add an element with the `.label` class. Also, don't miss the info on label [accessibility](#accessibility).
+Add an element with the `.text` class. Also, don't miss the info on label [accessibility](#accessibility).
 
 <Example direction="column">
 <template #example>
 <label role="switch" for="switch-visible-label" class="switch">
 	<input id="switch-visible-label" type="checkbox"/>
-	<span class="label">Label</span>
+	<span class="text">Label</span>
 </label>
 
 <label role="switch" for="switch-visible-label-disabled" class="switch">
 	<input id="switch-visible-label-disabled" type="checkbox" disabled/>
-	<span class="label">Disabled</span>
+	<span class="text">Disabled</span>
 </label>
 
 <label role="switch" for="switch-long-label" class="switch">
 	<input id="switch-long-label" type="checkbox"/>
-	<span class="label">Long text bacon ipsum dolor amet prosciutto tenderloin biltong leberkas ribeye short ribs shankle tri-tip doner buffalo chislic meatloaf meatball.</span>
+	<span class="text">Long text bacon ipsum dolor amet prosciutto tenderloin biltong leberkas ribeye short ribs shankle tri-tip doner buffalo chislic meatloaf meatball.</span>
 </label>
 
 </template>
@@ -92,7 +92,7 @@ Add an element with the `.label` class. Also, don't miss the info on label [acce
 ```html{3}
 <label role="switch" for="switch-with-label" class="switch">
   <input id="switch-with-label" type="checkbox" />
-  <span class="label">Label</span>
+  <span class="text">Label</span>
 </label>
 ```
 
@@ -105,12 +105,12 @@ Add an element with the `.label` class. Also, don't miss the info on label [acce
 <template #example>
 <label role="switch" for="switch-label-default" class="switch">
 	<input id="switch-label-default" type="checkbox"/>
-	<span class="label">Default</span>
+	<span class="text">Default</span>
 </label>
 
 <label role="switch" for="switch-label-bottom" class="switch stack">
 	<input id="switch-label-bottom" type="checkbox"/>
-	<span class="label">Stack</span>
+	<span class="text">Stack</span>
 </label>
 
 </template>
@@ -120,7 +120,7 @@ Add an element with the `.label` class. Also, don't miss the info on label [acce
 ```html{3}
 <label role="switch" for="switch-with-label" class="switch">
   <input id="switch-with-label" type="checkbox" />
-  <span class="label">Label</span>
+  <span class="text">Label</span>
 </label>
 ```
 
@@ -135,12 +135,12 @@ Add the `.small` class on the parent for a smaller Switch variant.
 <template #example>
 <label role="switch" for="switch-small" class="switch small">
 	<input id="switch-small" type="checkbox"/>
-	<span class="label">Small</span>
+	<span class="text">Small</span>
 </label>
 
 <label role="switch" for="switch-default" class="switch">
 	<input id="switch-default" type="checkbox"/>
-	<span class="label">Default</span>
+	<span class="text">Default</span>
 </label>
 </template>
 
@@ -183,6 +183,32 @@ To have an accessible label you can choose between three approaches.
 | ---------------- | -------------------------------------------------------------- |
 | <kbd>Space</kbd> | When switch is focused, changes the switch's state.            |
 | <kbd>Enter</kbd> | (Optional) When switch is focused, changes the switch's state. |
+
+<style scoped>
+  .anatomy {
+    outline-offset: 8px;
+    input {
+      border-radius: 100vmax;
+      outline-offset: 2px;
+    }
+
+  }
+</style>
+
+## Anatomy
+
+1. Container: `label` element
+2. Switch: `& input type="checkbox"`
+3. Label (optional): & `.text`
+
+<Example direction="row">
+<template #example>
+<label role="switch" for="switch-anatomy" class="switch anatomy" aria-label="Label">
+  <input id="switch-anatomy" type="checkbox" />
+  <span class="text">Label</span>
+</label>
+</template>
+</Example>
 
 ## API
 
