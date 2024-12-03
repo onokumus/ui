@@ -112,6 +112,23 @@ const showCode = ref(!props?.hideCode);
       margin-inline: 0 !important;
     }
   }
+
+  .row {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--size-3, 1rem);
+    justify-content: center;
+  }
+
+  .column {
+    display: grid;
+    gap: var(--size-3, 1rem);
+  }
+
+  .gap-l {
+    gap: var(--size-8);
+  }
 }
 
 .example {
@@ -121,18 +138,5 @@ const showCode = ref(!props?.hideCode);
   & + [class^="language"] {
     margin-block-start: 0 !important;
   }
-}
-
-.row {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--size-3, 1rem);
-  justify-content: center;
-}
-
-.column {
-  display: grid;
-  gap: var(--size-3, 1rem);
 }
 </style>
