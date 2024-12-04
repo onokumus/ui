@@ -184,9 +184,9 @@ Choose between row(default) and stacked(`.stack`).
 <Example direction="column">
 <template #example>
 <div role="group" class="button-group anatomy">
-  <button class="button outlined">Outlined</button>
-  <button class="button outlined">Outlined</button>
-  <button class="button outlined">Outlined</button>
+  <button class="button">Button</button>
+  <button class="button">Button</button>
+  <button class="button">Button</button>
 </div>
 </template>
 </Example>
