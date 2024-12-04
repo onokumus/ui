@@ -83,9 +83,9 @@ const searchIndex = computedAsync(async () =>
         },
         ...(theme.value.search?.provider === "local" &&
           theme.value.search.options?.miniSearch?.options),
-      }
-    )
-  )
+      },
+    ),
+  ),
 );
 
 const disableQueryPersistence = computed(() => {
@@ -102,7 +102,7 @@ const filterText = disableQueryPersistence.value
 const showDetailedList = useLocalStorage(
   "vitepress:local-search-detailed-list",
   theme.value.search?.provider === "local" &&
-    theme.value.search.options?.detailedView === true
+    theme.value.search.options?.detailedView === true,
 );
 
 const disableDetailedView = computed(() => {
@@ -243,7 +243,7 @@ debouncedWatch(
     // FIXME: without this whole page scrolls to the bottom
     resultsEl.value?.firstElementChild?.scrollIntoView({ block: "start" });
   },
-  { debounce: 200, immediate: true }
+  { debounce: 200, immediate: true },
 );
 
 async function fetchExcerpt(id: string) {
@@ -397,7 +397,7 @@ function formMarkRegex(terms: Set<string>) {
       .sort((a, b) => b.length - a.length)
       .map((term) => `(${escapeRegExp(term)})`)
       .join("|"),
-    "gi"
+    "gi",
   );
 }
 </script>
@@ -709,18 +709,6 @@ function formMarkRegex(terms: Set<string>) {
   .search-keyboard-shortcuts {
     display: none;
   }
-}
-
-.search-keyboard-shortcuts kbd {
-  background: rgba(128, 128, 128, 0.1);
-  border-radius: var(--surface-border-radius, 0.25rem);
-  padding: 3px 6px;
-  min-width: 24px;
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-  border: 1px solid rgba(128, 128, 128, 0.15);
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
 }
 
 .results {

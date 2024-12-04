@@ -1,5 +1,6 @@
 :where([role="group"].button-group) {
-  border-radius: 100vmax;
+  --_border-radius: var(--button-border-radius);
+  border-radius: var(--_border-radius);
   width: fit-content;
 
   button {
@@ -10,12 +11,12 @@
     }
 
     &:first-of-type {
-      border-bottom-left-radius: 100vmax;
-      border-top-left-radius: 100vmax;
+      border-bottom-left-radius: var(--_border-radius);
+      border-top-left-radius: var(--_border-radius);
     }
     &:last-of-type {
-      border-bottom-right-radius: 100vmax;
-      border-top-right-radius: 100vmax;
+      border-bottom-right-radius: var(--_border-radius);
+      border-top-right-radius: var(--_border-radius);
     }
   }
 

@@ -96,20 +96,19 @@ Check out the documentation for the [progress bar](/components/feedback/progress
 
 There are a few exceptions where `aria-busy="true"` won't render a spinner. Either because it doesn't make sense or because there are other reasons you would like to use that aria attribute.
 
-### Blocked by another use case
+### 1. Because it's blocked by another use case
 
 In conjunction with the `<progress>` element `aria-busy="true"` is used on the section that is being updated. Rendering a spinner here would result in a spinner _and_ a progress bar which doesn't make sense.
 
 See [progress accessibility](/components/feedback/progress#accessibility) section for more.
 
-### Because it doesn't make sense
+### 2. Because it doesn't make sense
 
 - `<input>`
 - `<select>`
 - `<textarea>`
 - `<html>`
 - `<progress>`
-- any element with `[aria-describedby]` ([progress accessibility](/components/feedback/progress#accessibility))
 
 ## Installation
 
