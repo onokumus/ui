@@ -207,44 +207,34 @@ const idSwitch = useId();
   </li>
 
   <li class="border-top">
-    <label :for="idCheckbox">
+    <label class="checkbox" :for="idCheckbox">
       <div class="text">
         <p>Checkbox</p>
       </div>
       <div class="end">
-        <input :id="idCheckbox" type="checkbox" class="checkbox" />
+        <input :id="idCheckbox" type="checkbox" />
       </div>
     </label>
   </li>
 
   <li class="border-top">
-    <label :for="idRadio1">
+    <label class="radio" :for="idRadio1">
       <div class="text">
         <p>Radio 1</p>
       </div>
       <div class="end">
-        <input
-          :id="idRadio1"
-          :name="`radio-group-${idRadio1}`"
-          type="radio"
-          class="radio"
-        />
+        <input :id="idRadio1" :name="`radio-group-${idRadio1}`" type="radio" />
       </div>
     </label>
   </li>
 
   <li>
-    <label :for="idRadio2">
+    <label class="radio" :for="idRadio2">
       <div class="text">
         <p>Radio 2</p>
       </div>
       <div class="end">
-        <input
-          :id="idRadio2"
-          :name="`radio-group-${idRadio1}`"
-          type="radio"
-          class="radio"
-        />
+        <input :id="idRadio2" :name="`radio-group-${idRadio1}`" type="radio" />
       </div>
     </label>
   </li>

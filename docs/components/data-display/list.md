@@ -76,12 +76,12 @@ Wrap the elements of your List item with a `a`, `button` or `label` depending on
     </a>
   </li>
 <li>
-    <label for="clickable-checkbox">
+    <label class="checkbox" for="clickable-checkbox">
       <div class="text">
         <p>Checkbox</p>
       </div>
       <div class="end">
-        <input id="clickable-checkbox" type="checkbox" class="checkbox" />
+        <input id="clickable-checkbox" type="checkbox"  />
       </div>
     </label>
   </li>
@@ -426,7 +426,7 @@ Found in `div.end`.
 
 #### Checkbox
 
-Wrap the List item content with a `<label for="INPUTID">` to make the entire surface clickable.
+Wrap the List item content with a `<label class="checkbox" for="INPUTID">` to make the entire surface clickable.
 
 Read more: [Checkbox](/components/inputs/checkbox)
 
@@ -434,22 +434,22 @@ Read more: [Checkbox](/components/inputs/checkbox)
 <template #example>
 <ul class="list">
 <li>
-  <label for="checkbox-example-1">
+  <label class="checkbox" for="checkbox-example-1">
     <div class="text">
       <p>Checkbox</p>
     </div>
     <div class="end">
-      <input id="checkbox-example-1" type="checkbox" class="checkbox" />
+      <input id="checkbox-example-1" type="checkbox"  />
     </div>
     </label>
 </li>
 <li>
-  <label for="checkbox-example-2">
+  <label class="checkbox" for="checkbox-example-2">
     <div class="text">
       <p>Checkbox</p>
     </div>
     <div class="end">
-      <input id="checkbox-example-2" type="checkbox" class="checkbox" />
+      <input id="checkbox-example-2" type="checkbox"  />
     </div>
     </label>
 </li>
@@ -461,10 +461,10 @@ Read more: [Checkbox](/components/inputs/checkbox)
 
 ```html
 <li>
-  <label for="checkbox-example-1">
+  <label class="checkbox" for="checkbox-example-1">
     <div class="text"></div>
     <div class="end">
-      <input class="checkbox" id="checkbox-example-1" type="checkbox" />
+      <input id="checkbox-example-1" type="checkbox" />
     </div>
   </label>
 </li>
@@ -475,7 +475,7 @@ Read more: [Checkbox](/components/inputs/checkbox)
 
 #### Radio
 
-Wrap the List item content with a `<label for="INPUTID">` to make the entire surface clickable.
+Wrap the List item content with a `<label class="radio" for="INPUTID">` to make the entire surface clickable.
 
 Radio group: Add a common name to each `<input>` for radio group behavior.
 
@@ -485,23 +485,23 @@ Read more: [Radio](/components/inputs/radio)
 <template #example>
 <ul class="list">
 <li>
-  <label for="radio-example-1">
+  <label class="radio" for="radio-example-1">
     <div class="text">
       <p>Radio 1</p>
     </div>
     <div class="end">
-      <input class="radio" id="radio-example-1" name="radio-example-group-1" type="radio"  />
+      <input  id="radio-example-1" name="radio-example-group-1" type="radio" />
     </div>
     </label>
 </li>
 
 <li>
-  <label for="radio-example-2">
+  <label class="radio" for="radio-example-2">
     <div class="text">
       <p>Radio 2</p>
     </div>
     <div class="end">
-      <input id="radio-example-2" name="radio-example-group-1" type="radio" class="radio" />
+      <input id="radio-example-2" name="radio-example-group-1" type="radio" />
     </div>
     </label>
 </li>
@@ -513,29 +513,19 @@ Read more: [Radio](/components/inputs/radio)
 
 ```html
 <li>
-  <label for="radio-example-1">
+  <label class="radio" for="radio-example-1">
     <div class="text">Radio 1</div>
     <div class="end">
-      <input
-        class="radio"
-        id="radio-example-1"
-        name="radio-example-group"
-        type="radio"
-      />
+      <input id="radio-example-1" name="radio-example-group" type="radio" />
     </div>
   </label>
 </li>
 
 <li>
-  <label for="radio-example-2">
+  <label class="radio" for="radio-example-2">
     <div class="text">Radio 2</div>
     <div class="end">
-      <input
-        class="radio"
-        id="radio-example-2"
-        name="radio-example-group"
-        type="radio"
-      />
+      <input id="radio-example-2" name="radio-example-group" type="radio" />
     </div>
   </label>
 </li>
@@ -776,8 +766,8 @@ Simply add the `.dense` class to the `ul` element.
 
 <template #example>
 
-<label for="dense-toggle">
-  <input v-model="denseClass" class="checkbox" id="dense-toggle" name="checkbox" type="checkbox" checked="checked" />
+<label class="checkbox"  for="dense-toggle">
+  <input v-model="denseClass" id="dense-toggle" name="checkbox" type="checkbox" checked="checked" />
   <code>{{denseClass ? `<ul class="list dense">` : `<ul class="list">`}}</code>
 </label>
 
