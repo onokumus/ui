@@ -111,7 +111,6 @@ export default defineConfig({
                   link: "/components/inputs/autocomplete",
                 },
                 { text: "Button", link: "/components/inputs/button" },
-                { text: "Icon Button", link: "/components/inputs/icon-button" },
                 {
                   text: "Button group",
                   link: "/components/inputs/button-group",
@@ -120,6 +119,7 @@ export default defineConfig({
                 { text: "Color", link: "/components/inputs/color" },
                 { text: "Date", link: "/components/inputs/date" },
                 { text: "File", link: "/components/inputs/file" },
+                { text: "Icon Button", link: "/components/inputs/icon-button" },
                 { text: "Radio", link: "/components/inputs/radio" },
                 { text: "Range", link: "/components/inputs/range" },
                 { text: "Search", link: "/components/inputs/search" },
@@ -127,6 +127,10 @@ export default defineConfig({
                 { text: "Switch", link: "/components/inputs/switch" },
                 { text: "Textarea", link: "/components/inputs/textarea" },
                 { text: "Text input", link: "/components/inputs/index" },
+                {
+                  text: "Toggle button group",
+                  link: "/components/inputs/toggle-button-group",
+                },
               ],
             },
             {

@@ -139,6 +139,6 @@ html {
   --input-border-radius: var(--size-1);
 
   /* Buttons */
-  --button-border-radius: var(--radius-2);
+  --button-border-radius: 100vmax;
   --button-ripple-size: 100%;
 }

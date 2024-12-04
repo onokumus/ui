@@ -1,13 +1,14 @@
 :where([role="group"].button-group) {
   --_border-radius: var(--button-border-radius);
+
   border-radius: var(--_border-radius);
-  width: fit-content;
+  display: inline-flex;
 
   button {
     border-radius: 0;
 
     & + & {
-      border-inline-start: 0;
+      border-inline-start-width: 0;
     }
 
     &:first-of-type {
@@ -32,6 +33,67 @@
     button {
       &:not(:first-of-type) {
         border-inline-start: 1px solid var(--color-6);
+      }
+    }
+  }
+
+  &:has(.elevated) {
+    box-shadow: var(--shadow-1);
+
+    button {
+      &:not(:hover) {
+        box-shadow: none;
+      }
+    }
+  }
+
+  /* Stacked */
+  &.stack {
+    display: inline-grid;
+
+    button {
+      --_border-radius: var(--border-size-3);
+
+      border-radius: 0;
+
+      & + & {
+        border-block-width: 0;
+        border-width: 1px;
+      }
+
+      &:first-of-type {
+        border-top-left-radius: var(--_border-radius);
+        border-top-right-radius: var(--_border-radius);
+      }
+      &:last-of-type {
+        border-bottom-left-radius: var(--_border-radius);
+        border-bottom-right-radius: var(--_border-radius);
+      }
+    }
+
+    /* Variants */
+    &:not(:has(.tonal), :has(.filled), :has(.outlined)) {
+      button + button {
+        border-inline: 0;
+        border-block-start: 1px solid var(--border-color);
+      }
+    }
+
+    &:has(.outlined) {
+      button {
+        &:not(:first-of-type) {
+          border-block-start: 0;
+        }
+      }
+    }
+
+    &:has(.tonal),
+    &:has(.filled) {
+      button {
+        &:not(:first-of-type) {
+          border-inline: 0;
+          border-block-start: 1px solid var(--color-6);
+        }
       }
     }
   }

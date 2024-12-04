@@ -209,7 +209,9 @@ import Example from "../../.vitepress/theme/app/components/Example.vue"
 </template>
 </Example>
 
-## File upload
+## Icon-only
+
+See [Icon button](/components/inputs/icon-button) documentation.
 
 ## Sizes
 
