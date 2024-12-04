@@ -163,6 +163,39 @@ Choose between row(default) and stacked(`.stack`).
 </template>
 </Example>
 
+## Disabled
+
+<Example direction="column" centered>
+<template #example>
+
+<div role="group" class="button-group">
+  <button class="button outlined">Text</button>
+  <button class="button outlined" disabled>Disabled</button>
+  <button class="button outlined" disabled>Disabled</button>
+  <button class="button outlined">Text</button>
+  <button class="button outlined" disabled>Disabled</button>
+</div>
+
+<div role="group" class="button-group stack">
+  <button class="button outlined">Text</button>
+  <button class="button outlined" disabled>Disabled</button>
+  <button class="button outlined">Text</button>
+</div>
+</template>
+
+<template #code>
+
+```html
+<div role="group" class="button-group">
+  <button class="button">Text</button>
+  <button class="button">Text</button>
+  <button class="button">Text</button>
+</div>
+```
+
+</template>
+</Example>
+
 ## Anatomy
 
 1. Container: `<element role="group" class="button-group">`

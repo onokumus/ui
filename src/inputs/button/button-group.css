@@ -28,6 +28,30 @@
     }
   }
 
+  &:has(.outlined) {
+    button {
+      & + & {
+        border-inline-start: 1px solid;
+      }
+    }
+  }
+
+  &:has(.tonal),
+  &:has(.filled),
+  &:has(.elevated) {
+    button {
+      &:where([disabled]) {
+        & + & {
+          border-inline-start-color: color-mix(
+            in oklch,
+            var(--border-color) 90%,
+            white
+          );
+        }
+      }
+    }
+  }
+
   &:has(.tonal),
   &:has(.filled) {
     button {
@@ -83,6 +107,10 @@
       button {
         &:not(:first-of-type) {
           border-block-start: 0;
+        }
+
+        &:where([disabled]) + &:not([disabled]) {
+          border-block-start: 1px solid;
         }
       }
     }
