@@ -8,11 +8,9 @@
 
 <!--@include: ./components/inputs/button-api.md -->
 
-### [Icon Button](/components/inputs/icon-button)
+### [Button group](/components/inputs/button-group)
 
-<!--@include: ./components/inputs/icon-button-api.md -->
-
-### Button group
+<!--@include: ./components/inputs/button-group-api.md -->
 
 ### Checkbox
 
@@ -23,6 +21,10 @@
 ### Date
 
 ### File
+
+### [Icon Button](/components/inputs/icon-button)
+
+<!--@include: ./components/inputs/icon-button-api.md -->
 
 ### Radio
 
@@ -39,6 +41,8 @@
 ### Textarea
 
 ### Text input
+
+### Toggle button group
 
 ## Data display
 

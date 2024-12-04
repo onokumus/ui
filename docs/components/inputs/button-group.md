@@ -57,6 +57,18 @@ Make sure you pick the right tool for the job. [Toggle button group](/components
 </div>
 
 </template>
+
+<template #code>
+
+```html
+<div role="group" class="button-group">
+  <button class="button">Text</button>
+  <button class="button">Text</button>
+  <button class="button">Text</button>
+</div>
+```
+
+</template>
 </Example>
 
 ## Size
@@ -83,9 +95,23 @@ Make sure you pick the right tool for the job. [Toggle button group](/components
 </div>
 
 </template>
+
+<template #code>
+
+```html
+<div role="group" class="button-group">
+  <button class="button small outlined">Small</button>
+  <button class="button small outlined">Small</button>
+  <button class="button small outlined">Small</button>
+</div>
+```
+
+</template>
 </Example>
 
-## Stacked
+## Orientation
+
+Choose between row(default) and stacked(`.stack`).
 
 <Example direction="row">
 <template #example>
@@ -121,4 +147,56 @@ Make sure you pick the right tool for the job. [Toggle button group](/components
 </div>
 
 </template>
+
+<template #code>
+
+```html{1}
+<div role="group" class="button-group stack">
+  <button class="button">Text</button>
+  <button class="button">Text</button>
+  <button class="button">Text</button>
+</div>
+```
+
+</template>
 </Example>
+
+## Anatomy
+
+1. Container: `<element role="group" class="button-group">`
+2. Buttons: [Button](/components/inputs/button)
+
+<style>
+	.anatomy {
+    outline: var(--_anatomy-border-gray);
+    outline-offset: 4px;
+
+		* {
+			outline: var(--_anatomy-border-red);
+      outline-offset: -5px;
+		}
+	}
+
+</style>
+
+<Example direction="column">
+<template #example>
+<div role="group" class="button-group anatomy">
+  <button class="button outlined">Outlined</button>
+  <button class="button outlined">Outlined</button>
+  <button class="button outlined">Outlined</button>
+</div>
+</template>
+</Example>
+
+## API
+
+<!--@include: ./button-group-api.md -->
+
+### Button API
+
+[Button docs](/components/inputs/button).
+
+<!--@include: ./button-api.md -->
+
+## Installation
