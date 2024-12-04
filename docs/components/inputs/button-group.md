@@ -200,3 +200,7 @@ Choose between row(default) and stacked(`.stack`).
 <!--@include: ./button-api.md -->
 
 ## Installation
+
+::: code-group
+<<< @/../src/inputs/button/button-group.css [button-group.css]
+:::
