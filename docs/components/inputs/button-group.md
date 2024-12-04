@@ -150,11 +150,13 @@ Choose between row(default) and stacked(`.stack`).
 
 <template #code>
 
-```html{1}
+```html{1,5}
+<div role="group" class="button-group">
+  <!--  -->
+</div>
+
 <div role="group" class="button-group stack">
-  <button class="button">Text</button>
-  <button class="button">Text</button>
-  <button class="button">Text</button>
+  <!--  -->
 </div>
 ```
 
