@@ -169,17 +169,20 @@ Choose between row(default) and stacked(`.stack`).
 <template #example>
 
 <div role="group" class="button-group">
-  <button class="button outlined">Text</button>
-  <button class="button outlined" disabled>Disabled</button>
-  <button class="button outlined" disabled>Disabled</button>
-  <button class="button outlined">Text</button>
-  <button class="button outlined" disabled>Disabled</button>
+  <button class="button filled">Text</button>
+  <button class="button filled" disabled>Disabled</button>
+  <button class="button filled" disabled>Disabled</button>
+  <button class="button filled">Text</button>
+  <button class="button filled" disabled>Disabled</button>
 </div>
 
 <div role="group" class="button-group stack">
-  <button class="button outlined">Text</button>
-  <button class="button outlined" disabled>Disabled</button>
-  <button class="button outlined">Text</button>
+    <button class="button tonal">Text</button>
+  <button class="button tonal" disabled>Disabled</button>
+  <button class="button tonal" disabled>Disabled</button>
+  <button class="button tonal">Text</button>
+  <button class="button tonal">Text</button>
+  <button class="button tonal" disabled>Disabled</button>
 </div>
 </template>
 
