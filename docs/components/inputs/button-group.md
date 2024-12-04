@@ -171,7 +171,6 @@ Choose between row(default) and stacked(`.stack`).
 <div role="group" class="button-group">
   <button class="button filled">Text</button>
   <button class="button filled" disabled>Disabled</button>
-  <button class="button filled" disabled>Disabled</button>
   <button class="button filled">Text</button>
   <button class="button filled" disabled>Disabled</button>
 </div>
@@ -179,8 +178,6 @@ Choose between row(default) and stacked(`.stack`).
 <div role="group" class="button-group stack">
     <button class="button tonal">Text</button>
   <button class="button tonal" disabled>Disabled</button>
-  <button class="button tonal" disabled>Disabled</button>
-  <button class="button tonal">Text</button>
   <button class="button tonal">Text</button>
   <button class="button tonal" disabled>Disabled</button>
 </div>
