@@ -122,6 +122,10 @@ Vertical button groups are largely a legacy design pattern that can be better ha
 
 Horizontal groups or alternative patterns altogether usually provide better UX.
 
+::: info Am I wrong?
+Create an [issue or a PR](https://github.com/felix-bohlin/ui) and let me know!
+:::
+
 ## Disabled
 
 <Example direction="column" centered exampleClass="gap-l">

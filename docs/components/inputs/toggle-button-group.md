@@ -53,3 +53,18 @@ If your buttons depend on state (controlled) - use Toggle button group.
 
 </template>
 </Example>
+
+## Vertical orientation
+
+Vertical button groups are largely a legacy design pattern that can be better handled through:
+
+- Responsive design
+- Selects/Dropdown menus
+- More concise label writing
+- Other UI patterns that better match what you're actually trying to solve
+
+Horizontal groups or alternative patterns altogether usually provide better UX.
+
+::: info Am I wrong?
+Create an [issue or a PR](https://github.com/felix-bohlin/ui) and let me know!
+:::
