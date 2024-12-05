@@ -59,49 +59,4 @@
       }
     }
   }
-
-  /* Orientation */
-  &.stack {
-    display: inline-grid;
-
-    button {
-      --_border-radius: var(--border-size-3);
-
-      border-radius: 0;
-
-      & + & {
-        margin-inline-start: 0;
-        margin-block-start: -1px;
-      }
-
-      &:first-of-type {
-        border-top-left-radius: var(--_border-radius);
-        border-top-right-radius: var(--_border-radius);
-      }
-      &:last-of-type {
-        border-bottom-left-radius: var(--_border-radius);
-        border-bottom-right-radius: var(--_border-radius);
-      }
-
-      /* Variants */
-      &:not(:where(.outlined)) {
-        & + button {
-          border-inline-color: transparent;
-          border-block-start: 1px solid var(--border-color);
-        }
-      }
-
-      &:where(.elevated) {
-        & + button {
-          border-block-start-color: var(--border-color);
-        }
-      }
-
-      &:where(.tonal, .filled) {
-        & + button {
-          border-block-start-color: var(--color-7);
-        }
-      }
-    }
-  }
 }

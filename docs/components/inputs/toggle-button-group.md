@@ -13,7 +13,10 @@ Groups related buttons by wrapping them with `<yourElement class="toggle-button-
 
 [More helpful guidelines](https://m3.material.io/components/segmented-buttons/guidelines).
 
-::: tip Button group or Toggle button group?
+::: tip Javascript is required
+The whole idea of Toggle button group is that it relies on state change. Therefore Javascript is needed for it to work as intended.
+:::
+::: details Button group or Toggle button group?
 If you just need to group a bunch of "dumb" (uncontrolled) buttons - use [Button group](/components/inputs/button-group).
 
 If your buttons depend on state (controlled) - use Toggle button group.
@@ -23,9 +26,12 @@ If your buttons depend on state (controlled) - use Toggle button group.
 <template #example>
 
 <div role="group" class="toggle-button-group">
-  <button class="selected">Selected</button>
-  <button disabled>Disabled</button>
+  <button class="selected">
+		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M29.907 5.14a1.25 1.25 0 0 1-.047 1.767l-19 18a1.25 1.25 0 0 1-1.775-.055l-6.75-7.25a1.25 1.25 0 0 1 1.83-1.704l5.89 6.327L28.14 5.093a1.25 1.25 0 0 1 1.767.047"/></svg>
+		Selected
+	</button>
   <button>Enabled</button>
+  <button disabled>Disabled</button>
 </div>
 
 </template>
@@ -34,39 +40,14 @@ If your buttons depend on state (controlled) - use Toggle button group.
 
 ```html
 <div role="group" class="toggle-button-group">
-  <button class="selected">Text</button>
-  <button>Text</button>
-  <button>Text</button>
-</div>
-```
+  <button class="selected">
+    <svg></svg>
+    Selected
+  </button>
 
-</template>
-</Example>
+  <button>Enabled</button>
 
-## Orientation
-
-<Example direction="column" centered exampleClass="gap-l">
-<template #example>
-
-<div role="group" class="toggle-button-group">
-  <button>Text</button>
-  <button>Text</button>
-  <button>Text</button>
-</div>
-
-<div role="group" class="toggle-button-group stack">
-  <button>Text</button>
-  <button>Text</button>
-  <button>Text</button>
-</div>
-
-</template>
-
-<template #code>
-
-```html
-<div role="group" class="toggle-button-group stack">
-  <!--  -->
+  <button disabled>Disabled</button>
 </div>
 ```
 

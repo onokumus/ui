@@ -8,10 +8,13 @@
   button {
     --_bg-color: transparent;
 
+    align-items: center;
     background: var(--_bg-color) var(--ripple, none);
     border-radius: 0;
     border: 1px solid var(--border-color);
     color: var(--text-color-1);
+    display: inline-flex;
+    gap: 1ex;
     padding: 0.5ex 1.5ex;
 
     &:hover {
@@ -19,7 +22,16 @@
     }
 
     &.selected {
-      --_bg-color: light-dark(oklch(0% 0 0 / 0.08), oklch(100% 0 0 / 0.16));
+      --_bg-color: color-mix(
+        in oklch,
+        var(--primary) 12%,
+        var(--surface-default)
+      );
+
+      svg {
+        margin-block-end: -3px;
+        max-width: 1em;
+      }
     }
 
     /* Ripple effect */
@@ -62,39 +74,6 @@
 
     &[disabled] + &:not([disabled]) {
       border-inline-start-width: 1px;
-    }
-  }
-
-  /* Orientation */
-  &.stack {
-    display: inline-grid;
-
-    button {
-      --_border-radius: var(--border-size-3);
-
-      border-radius: 0;
-
-      & + & {
-        border-block-width: 0;
-        border-width: 1px;
-      }
-
-      &:first-of-type {
-        border-top-left-radius: var(--_border-radius);
-        border-top-right-radius: var(--_border-radius);
-      }
-      &:last-of-type {
-        border-bottom-left-radius: var(--_border-radius);
-        border-bottom-right-radius: var(--_border-radius);
-      }
-
-      &:not(:first-of-type) {
-        border-block-start-width: 0;
-      }
-
-      &:where([disabled]) + &:not([disabled]) {
-        border-block-start-width: 1px;
-      }
     }
   }
 }

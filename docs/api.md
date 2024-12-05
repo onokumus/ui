@@ -8,10 +8,6 @@
 
 <!--@include: ./components/inputs/button-api.md -->
 
-### [Button group](/components/inputs/button-group)
-
-<!--@include: ./components/inputs/button-group-api.md -->
-
 ### Checkbox
 
 <!--@include: ./components/inputs/checkbox-radio-api.md -->

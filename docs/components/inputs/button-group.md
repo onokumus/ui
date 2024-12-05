@@ -17,7 +17,7 @@ Groups related buttons by wrapping them with `<yourElement class="button-group" 
 - Don't allow them to wrap onto a new line.
 - If an icon is used without label text make sure the button communicates clearly what it does.
 
-::: tip Button group or Toggle button group?
+::: details Button group or Toggle button group?
 If you just need to group a bunch of "dumb" (uncontrolled) buttons - use Button group.
 
 If your buttons depend on state (controlled) - use [Toggle button group](/components/inputs/toggle-button-group).
@@ -111,55 +111,16 @@ If your buttons depend on state (controlled) - use [Toggle button group](/compon
 </template>
 </Example>
 
-## Orientation
+## Vertical orientation
 
-Choose between row(default) and stacked(`.stack`).
+Vertical button groups are largely a legacy design pattern that can be better handled through:
 
-<Example direction="row">
-<template #example>
+- Responsive design
+- Selects/Dropdown menus
+- Better label writing to be more concise
+- Different UI patterns
 
-<div role="group" class="button-group stack">
-  <button class="button">Text</button>
-  <button class="button">Text</button>
-  <button class="button">Text</button>
-</div>
-
-<div role="group" class="button-group stack">
-  <button class="button outlined">Outlined</button>
-  <button class="button outlined">Outlined</button>
-  <button class="button outlined">Outlined</button>
-</div>
-
-<div role="group" class="button-group stack">
-  <button class="button tonal">Tonal</button>
-  <button class="button tonal">Tonal</button>
-  <button class="button tonal">Tonal</button>
-</div>
-
-<div role="group" class="button-group stack">
-  <button class="button filled">Filled</button>
-  <button class="button filled">Filled</button>
-  <button class="button filled">Filled</button>
-</div>
-
-<div role="group" class="button-group stack">
-  <button class="button elevated">Elevated</button>
-  <button class="button elevated">Elevated</button>
-  <button class="button elevated">Elevated</button>
-</div>
-
-</template>
-
-<template #code>
-
-```html{1}
-<div role="group" class="button-group stack">
-  <!--  -->
-</div>
-```
-
-</template>
-</Example>
+Horizontal groups or alternative patterns altogether usually provide better UX.
 
 ## Disabled
 
@@ -170,12 +131,6 @@ Choose between row(default) and stacked(`.stack`).
   <button class="button filled">Enabled</button>
   <button class="button filled" disabled>Disabled</button>
   <button class="button filled">Enabled</button>
-</div>
-
-<div role="group" class="button-group stack">
-    <button class="button outlined">Enabled</button>
-  <button class="button outlined" disabled>Disabled</button>
-  <button class="button outlined">Enabled</button>
 </div>
 </template>
 
@@ -219,10 +174,6 @@ Choose between row(default) and stacked(`.stack`).
 </div>
 </template>
 </Example>
-
-## API
-
-<!--@include: ./button-group-api.md -->
 
 ### Button API
 
