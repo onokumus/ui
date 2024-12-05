@@ -117,8 +117,8 @@ Vertical button groups are largely a legacy design pattern that can be better ha
 
 - Responsive design
 - Selects/Dropdown menus
-- Better label writing to be more concise
-- Different UI patterns
+- More concise label writing
+- Other UI patterns that better match what you're actually trying to solve
 
 Horizontal groups or alternative patterns altogether usually provide better UX.
 
