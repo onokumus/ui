@@ -81,6 +81,7 @@ const showCode = ref(!props?.hideCode);
   border-style: solid;
   border-bottom-width: 0;
   box-shadow: var(--shadow-1);
+  container-type: inline-size;
   display: grid;
   margin-inline: -1rem;
   margin-block: var(--size-3, 1rem);

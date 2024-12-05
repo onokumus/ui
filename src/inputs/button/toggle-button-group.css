@@ -1,10 +1,18 @@
 :where([role="group"].toggle-button-group) {
   --_border-radius: var(--button-border-radius);
+  --_max-width: auto;
 
   background-color: var(--surface-default);
   border-radius: var(--_border-radius);
   display: inline-flex;
-  min-width: min-content;
+  max-inline-size: var(--_max-width);
+  min-width: max-content;
+
+  &.equal {
+    button {
+      flex: 1;
+    }
+  }
 
   button {
     --_bg-color: transparent;
@@ -16,7 +24,10 @@
     color: var(--text-color-1);
     display: inline-flex;
     gap: 1ex;
-    padding: 0.5ex 1.5ex;
+    justify-content: center;
+    min-block-size: 40px;
+    min-inline-size: 5ex;
+    padding: 0 var(--size-4);
 
     &:hover {
       --_bg-color: light-dark(oklch(0% 0 0 / 0.04), oklch(100% 0 0 / 0.08));
@@ -29,10 +40,18 @@
         var(--surface-default)
       );
 
-      svg {
+      /* Checkmark */
+      svg:first-of-type {
+        inline-size: 100%;
         margin-block-end: -3px;
-        max-width: 1em;
+        max-inline-size: 1em;
       }
+    }
+
+    svg {
+      inline-size: 100%;
+      max-block-size: var(--size-5);
+      max-inline-size: var(--size-7);
     }
 
     /* Ripple effect */
@@ -54,9 +73,9 @@
 
     /* Disabled */
     &[disabled] {
+      border-color: color-mix(in oklch, var(--border-color) 50%, transparent);
       cursor: not-allowed;
       color: color-mix(in oklch, var(--text-color-1) 30%, transparent);
-      border-color: color-mix(in oklch, var(--border-color) 50%, transparent);
     }
 
     & + & {

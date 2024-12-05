@@ -113,6 +113,8 @@ If your buttons depend on state (controlled) - use [Toggle button group](/compon
 
 ## Vertical orientation
 
+You probably don't need that.
+
 Vertical button groups are largely a legacy design pattern that can be better handled through:
 
 - Responsive design
