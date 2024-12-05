@@ -1,0 +1,100 @@
+:where([role="group"].toggle-button-group) {
+  --_border-radius: var(--button-border-radius);
+
+  background-color: var(--surface-default);
+  border-radius: var(--_border-radius);
+  display: inline-flex;
+
+  button {
+    --_bg-color: transparent;
+
+    background: var(--_bg-color) var(--ripple, none);
+    border-radius: 0;
+    border: 1px solid var(--border-color);
+    color: var(--text-color-1);
+    padding: 0.5ex 1.5ex;
+
+    &:hover {
+      --_bg-color: light-dark(oklch(0% 0 0 / 0.04), oklch(100% 0 0 / 0.08));
+    }
+
+    &.selected {
+      --_bg-color: light-dark(oklch(0% 0 0 / 0.08), oklch(100% 0 0 / 0.16));
+    }
+
+    /* Ripple effect */
+    background-position: center;
+
+    &:where(:not(.disabled, [disabled])) {
+      &:where(:not(:active):hover) {
+        --ripple: radial-gradient(circle, transparent 1%, var(--_bg-color) 1%)
+          center/15000%;
+
+        transition: background 0.5s;
+      }
+
+      &:where(:hover:active) {
+        background-size: var(--button-ripple-size);
+        transition: background 0s;
+      }
+    }
+
+    /* Disabled */
+    &[disabled] {
+      cursor: not-allowed;
+      color: color-mix(in oklch, var(--text-color-1) 30%, transparent);
+      border-color: color-mix(in oklch, var(--border-color) 50%, transparent);
+    }
+
+    & + & {
+      border-inline-start-width: 0;
+      margin-inline-start: -1px;
+    }
+
+    &:first-of-type {
+      border-bottom-left-radius: var(--_border-radius);
+      border-top-left-radius: var(--_border-radius);
+    }
+    &:last-of-type {
+      border-bottom-right-radius: var(--_border-radius);
+      border-top-right-radius: var(--_border-radius);
+    }
+
+    &[disabled] + &:not([disabled]) {
+      border-inline-start-width: 1px;
+    }
+  }
+
+  /* Orientation */
+  &.stack {
+    display: inline-grid;
+
+    button {
+      --_border-radius: var(--border-size-3);
+
+      border-radius: 0;
+
+      & + & {
+        border-block-width: 0;
+        border-width: 1px;
+      }
+
+      &:first-of-type {
+        border-top-left-radius: var(--_border-radius);
+        border-top-right-radius: var(--_border-radius);
+      }
+      &:last-of-type {
+        border-bottom-left-radius: var(--_border-radius);
+        border-bottom-right-radius: var(--_border-radius);
+      }
+
+      &:not(:first-of-type) {
+        border-block-start-width: 0;
+      }
+
+      &:where([disabled]) + &:not([disabled]) {
+        border-block-start-width: 1px;
+      }
+    }
+  }
+}

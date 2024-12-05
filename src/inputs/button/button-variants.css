@@ -61,19 +61,22 @@
     --_text-color: initial;
   }
 
-  /* Ripple effect */
-  background-position: center;
-  transition: background 0.8s;
+  @media (prefers-reduced-motion: no-preference) {
+    /* Ripple effect */
+    background-position: center;
 
-  &:where(:not(.disabled, [disabled])) {
-    &:where(:not(:active):hover) {
-      --ripple: radial-gradient(circle, transparent 1%, var(--_bg-color) 1%)
-        center/15000%;
-    }
+    &:where(:not(.disabled, [disabled])) {
+      &:where(:not(:active):hover) {
+        --ripple: radial-gradient(circle, transparent 1%, var(--_bg-color) 1%)
+          center/15000%;
 
-    &:where(:hover:active) {
-      background-size: var(--button-ripple-size);
-      transition: background 0s;
+        transition: background 0.5s;
+      }
+
+      &:where(:hover:active) {
+        background-size: var(--button-ripple-size);
+        transition: background 0s;
+      }
     }
   }
 

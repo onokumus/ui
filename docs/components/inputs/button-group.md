@@ -18,7 +18,9 @@ Groups related buttons by wrapping them with `<yourElement class="button-group" 
 - If an icon is used without label text make sure the button communicates clearly what it does.
 
 ::: tip Button group or Toggle button group?
-Make sure you pick the right tool for the job. [Toggle button group](/components/inputs/toggle-button-group).
+If you just need to group a bunch of "dumb" (uncontrolled) buttons - use Button group.
+
+If your buttons depend on state (controlled) - use [Toggle button group](/components/inputs/toggle-button-group).
 :::
 
 ## Variants
@@ -100,9 +102,9 @@ Make sure you pick the right tool for the job. [Toggle button group](/components
 
 ```html
 <div role="group" class="button-group">
-  <button class="button small outlined">Small</button>
-  <button class="button small outlined">Small</button>
-  <button class="button small outlined">Small</button>
+  <button class="button small">Small</button>
+  <button class="button">Default</button>
+  <button class="button large">Large</button>
 </div>
 ```
 
@@ -150,11 +152,7 @@ Choose between row(default) and stacked(`.stack`).
 
 <template #code>
 
-```html{1,5}
-<div role="group" class="button-group">
-  <!--  -->
-</div>
-
+```html{1}
 <div role="group" class="button-group stack">
   <!--  -->
 </div>
@@ -165,30 +163,29 @@ Choose between row(default) and stacked(`.stack`).
 
 ## Disabled
 
-<Example direction="column" centered>
+<Example direction="column" centered exampleClass="gap-l">
 <template #example>
 
 <div role="group" class="button-group">
   <button class="button filled">Enabled</button>
   <button class="button filled" disabled>Disabled</button>
   <button class="button filled">Enabled</button>
-  <button class="button filled" disabled>Disabled</button>
 </div>
 
 <div role="group" class="button-group stack">
-    <button class="button tonal">Enabled</button>
-  <button class="button tonal" disabled>Disabled</button>
-  <button class="button tonal">Enabled</button>
-  <button class="button tonal" disabled>Disabled</button>
+    <button class="button outlined">Enabled</button>
+  <button class="button outlined" disabled>Disabled</button>
+  <button class="button outlined">Enabled</button>
 </div>
 </template>
 
 <template #code>
 
-```html{3}
+```html
 <div role="group" class="button-group">
   <button class="button">Enabled</button>
   <button class="button" disabled>Disabled</button>
+  <button class="button">Enabled</button>
 </div>
 ```
 

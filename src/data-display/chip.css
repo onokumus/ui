@@ -105,12 +105,13 @@
 
   /* Ripple effect */
   background-position: center;
-  transition: background 0.8s;
 
   &:where(:not(.disabled, [disabled])) {
     &:where(:not(:active):hover) {
       --ripple: radial-gradient(circle, transparent 1%, var(--_bg-color) 1%)
         center/15000%;
+
+      transition: background 0.5s;
     }
 
     &:where(:hover:active) {

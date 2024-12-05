@@ -71,9 +71,9 @@
 }
 
 :focus-visible {
-  outline: 2px solid var(--text-color-1, currentColor);
-  outline-offset: 2px;
   border-radius: var(--border-radius, 0px);
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
 }
 
 @media (--motionOK) {

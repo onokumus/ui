@@ -117,13 +117,13 @@ html {
   /* Typography */
   /* TODO: clamp */
   --font-size-h1: var(--font-size-6, 2.5rem);
-  --font-size-h2: var(--font-size-5, 2rem);
-  --font-size-h3: var(--font-size-4, 1.5rem);
+  --font-size-h2: var(--font-size-fluid-2;, 2rem);
+  --font-size-h3: var(--font-size-fluid-1;, 1.5rem);
   --font-size-h4: var(--font-size-3, 1.25rem);
   --font-size-h5: var(--font-size-2, 1.1rem);
-  --font-size-h6: var(--font-size-1, 1rem);
+  --font-size-h6: var(--font-size-fluid-0;, 1rem);
   --font-size-lg: var(--font-size-3, 1.25rem);
-  --font-size-md: var(--font-size-1, 1rem);
+  --font-size-md: var(--font-size-fluid-0, 1rem);
   --font-size-sm: 0.875rem;
   --font-size-xs: var(--font-size-0, 0.75rem);
 
@@ -140,5 +140,9 @@ html {
 
   /* Buttons */
   --button-border-radius: 100vmax;
-  --button-ripple-size: 100%;
+
+  @media (prefers-reduced-motion: no-preference) {
+    /* Ripple effect */
+    --button-ripple-size: 100%;
+  }
 }

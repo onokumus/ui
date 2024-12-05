@@ -7,8 +7,13 @@
   button {
     border-radius: 0;
 
+    &:focus-visible {
+      outline-offset: -4px;
+    }
+
     & + & {
-      border-inline-start-width: 0;
+      border-inline-width: 1px;
+      margin-inline-start: -1px;
     }
 
     &:first-of-type {
@@ -19,27 +24,22 @@
       border-bottom-right-radius: var(--_border-radius);
       border-top-right-radius: var(--_border-radius);
     }
-  }
 
-  /* Variants */
-  &:not(:has(.tonal), :has(.filled), :has(.outlined)) {
-    button + button {
-      border-inline-start: 1px solid var(--border-color);
-    }
-  }
-
-  &:has(.outlined) {
-    button {
-      &[disabled] + &:not([disabled]) {
-        border-inline-start-width: 1px;
+    /* Variants */
+    /*** Text & Elevated */
+    &:not(:where(.tonal, .filled, .outlined)) {
+      & + button {
+        border-inline-start: 1px solid var(--border-color);
       }
     }
-  }
 
-  &:has(.tonal),
-  &:has(.filled),
-  &:has(.elevated) {
-    button {
+    &:where(.tonal, .filled) {
+      & + button {
+        border-inline-start-color: var(--color-7);
+      }
+    }
+
+    &:where(.tonal, .filled, .elevated) {
       & + &[disabled] {
         border-inline-start-color: color-mix(
           in oklch,
@@ -48,26 +48,14 @@
         );
       }
     }
-  }
 
-  &:has(.tonal),
-  &:has(.filled) {
-    button {
-      &:not(:first-of-type) {
-        border-inline-start: 1px solid var(--color-6);
-      }
-      &[disabled] + &:not([disabled]) {
-        border-inline-start: 0;
-      }
-    }
-  }
+    &:where(.elevated) {
+      box-shadow: var(--shadow-1);
 
-  &:has(.elevated) {
-    box-shadow: var(--shadow-1);
-
-    button {
-      &:not(:hover) {
-        box-shadow: none;
+      button {
+        &:not(:hover) {
+          box-shadow: none;
+        }
       }
     }
   }
@@ -82,8 +70,8 @@
       border-radius: 0;
 
       & + & {
-        border-block-width: 0;
-        border-width: 1px;
+        margin-inline-start: 0;
+        margin-block-start: -1px;
       }
 
       &:first-of-type {
@@ -94,52 +82,24 @@
         border-bottom-left-radius: var(--_border-radius);
         border-bottom-right-radius: var(--_border-radius);
       }
-    }
 
-    /* Variants */
-    &:not(:has(.tonal), :has(.filled), :has(.outlined)) {
-      button + button {
-        border-inline: 0;
-        border-block-start: 1px solid var(--border-color);
-      }
-    }
-
-    &:has(.outlined) {
-      button {
-        &:not(:first-of-type) {
-          border-block-start-width: 0;
-        }
-
-        &:where([disabled]) + &:not([disabled]) {
-          border-block-start-width: 1px;
+      /* Variants */
+      &:not(:where(.outlined)) {
+        & + button {
+          border-inline-color: transparent;
+          border-block-start: 1px solid var(--border-color);
         }
       }
-    }
 
-    &:has(.tonal),
-    &:has(.filled),
-    &:has(.elevated) {
-      button {
-        & + &[disabled] {
-          border-block-start-color: color-mix(
-            in oklch,
-            var(--border-color) 90%,
-            white
-          );
+      &:where(.elevated) {
+        & + button {
+          border-block-start-color: var(--border-color);
         }
       }
-    }
 
-    &:has(.tonal),
-    &:has(.filled) {
-      button {
-        &:not(:first-of-type) {
-          border-inline-width: 0;
-          border-block-start: 1px solid var(--color-6);
-        }
-
-        &[disabled] + &:not([disabled]) {
-          border-block-start-width: 0;
+      &:where(.tonal, .filled) {
+        & + button {
+          border-block-start-color: var(--color-7);
         }
       }
     }

@@ -3,12 +3,12 @@ Screen-reader only
 When you visibly want to hide an element but make it accessible for screen readers.
 */
 .sr-only {
-  clip-path: inset(50%);
   block-size: 1px;
+  clip-path: inset(50%);
+  inline-size: 1px;
   overflow: hidden;
   position: absolute;
   white-space: nowrap;
-  inline-size: 1px;
 }
 
 /* Hover and active effect for checkbox, radio and icon buttons */
