@@ -3,6 +3,7 @@
 
   border-radius: var(--_border-radius);
   display: inline-flex;
+  min-width: min-content;
 
   button {
     border-radius: 0;
