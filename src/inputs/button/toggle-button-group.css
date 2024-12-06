@@ -15,6 +15,19 @@
     }
   }
 
+  /* Size */
+  &.small {
+    button {
+      min-block-size: 2.1875rem; /* 35px */
+    }
+  }
+
+  &.x-small {
+    button {
+      min-block-size: var(--size-6); /* 30px */
+    }
+  }
+
   button {
     --_bg-color: transparent;
 
@@ -26,7 +39,7 @@
     display: inline-flex;
     gap: 1ex;
     justify-content: center;
-    min-block-size: 40px;
+    min-block-size: 2.5rem; /* 40px */
     min-inline-size: 5ex;
     padding: 0 var(--size-4);
     user-select: none;
