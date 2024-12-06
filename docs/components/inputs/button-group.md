@@ -79,7 +79,8 @@ If your buttons depend on state (controlled) - use [Toggle button group](/compon
 <template #example>
 
 <div role="group" class="button-group">
-  <button class="button outlined" aria-label="Label"> <svg
+  <button class="button outlined" aria-label="Label">
+  <svg
       xmlns="http://www.w3.org/2000/svg"
       width="32"
       height="32"
