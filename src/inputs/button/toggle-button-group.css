@@ -1,5 +1,5 @@
 :where([role="group"].toggle-button-group) {
-  --_border-radius: var(--button-border-radius);
+  --_border-radius: 4px;
   --_max-width: auto;
 
   background-color: var(--surface-default);
@@ -8,10 +8,10 @@
   max-inline-size: var(--_max-width);
   min-inline-size: max-content;
 
-  /* Equal width on buttons */
-  &.equal {
+  /* Dynamic width on buttons */
+  &.dynamic {
     button {
-      flex: 1;
+      flex: auto;
     }
   }
 
@@ -38,6 +38,7 @@
     border: 1px solid var(--border-color);
     color: var(--text-color-1);
     display: inline-flex;
+    flex: 1;
     gap: 1ex;
     justify-content: center;
     min-block-size: 2.5rem; /* 40px */
@@ -51,7 +52,6 @@
 
     & + & {
       border-inline-start-width: 0;
-      margin-inline-start: -1px;
     }
 
     &:first-of-type {
@@ -94,9 +94,12 @@
     /* Icons */
     svg {
       flex-shrink: 0;
-      inline-size: auto;
-      max-block-size: var(--size-5);
-      max-inline-size: var(--size-7);
+      inline-size: var(--size-4);
+
+      & + svg {
+        max-block-size: var(--size-5);
+        max-inline-size: var(--size-7);
+      }
     }
 
     /* Selected */
@@ -110,7 +113,6 @@
       /* Checkmark */
       svg:first-of-type {
         margin-block-end: -3px;
-        inline-size: var(--size-3);
       }
     }
   }
