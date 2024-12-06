@@ -4,6 +4,7 @@
   --_text-color: var(--primary);
 
   background: var(--_bg-color) var(--ripple, none);
+  min-block-size: 2.375rem;
 
   /* TODO */
   &:where(:not(.disabled, [disabled])) {
@@ -41,24 +42,13 @@
 
   /* Sizes */
   &.small {
-    padding-block: 0;
+    min-block-size: 1.875rem;
     padding-inline: 1ex;
   }
 
-  &.medium {
-    padding-block: 0.5ex;
-    padding-inline: 1.5ex;
-  }
-
   &.large {
-    padding-block: 1ex;
-    padding-inline: 2.5ex;
-  }
-
-  &.text {
-    --_bg-color: transparent;
-    --_border-color: transparent;
-    --_text-color: initial;
+    min-block-size: 2.875rem;
+    padding-inline: 4ex;
   }
 
   @media (prefers-reduced-motion: no-preference) {
