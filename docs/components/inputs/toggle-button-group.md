@@ -87,6 +87,8 @@ If your buttons depend on state (controlled) - use Toggle button group.
 
 Try playing with this example. Notice how the `.selected` icon replaces the pre-existing one.
 
+Only show two things at once: icon + text or icon + icon.
+
 <Example direction="column" centered>
 <template #example>
 
