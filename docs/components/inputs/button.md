@@ -324,7 +324,7 @@ Either disable it by setting the ripple size to 0 in your theme config:
     &:where(:not(:active):hover) {
       --ripple: radial-gradient(circle, transparent 1%, var(--_bg-color) 1%) center/15000%; // [!code --]
 
-      transition: background 0.5s; // [!code --]
+      transition: background var(--button-ripple-duration); // [!code --]
     }
 
     &:where(:hover:active) {
