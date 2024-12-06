@@ -225,7 +225,7 @@ Create an [issue or a PR](https://github.com/felix-bohlin/ui) and let me know!
 
 </style>
 
-<Example direction="column">
+<Example direction="row">
 <template #example>
 <div role="group" class="button-group anatomy">
   <button class="button">Button</button>

@@ -74,11 +74,6 @@ Render the label text inside an element with a `.text` class.
     </label>
 
   <label class="checkbox">
-    <input   name="checkbox" type="checkbox">
-    <span class="text">Long text dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole celiac swag.</span>
-  </label>
-
-  <label class="checkbox">
     <input   name="checkbox" type="checkbox" disabled>
     <span clas="text">Disabled</span>
   </label>
@@ -88,6 +83,10 @@ Render the label text inside an element with a `.text` class.
     <span class="text">Checked and disabled</span>
   </label>
 
+  <label class="checkbox">
+    <input   name="checkbox" type="checkbox">
+    <span class="text">Long text dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole <a href="#visible-label">privacy policy ipsum</a></span>
+  </label>
 </template>
 
 <template #code>
