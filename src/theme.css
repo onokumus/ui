@@ -144,6 +144,7 @@ html {
   @media (prefers-reduced-motion: no-preference) {
     /* Ripple effect */
     --button-ripple-size: 100%;
+    --button-ripple-duration: 0.5s;
   }
 
   /* Icons */
