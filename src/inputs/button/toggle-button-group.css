@@ -8,6 +8,7 @@
   max-inline-size: var(--_max-width);
   min-width: max-content;
 
+  /* Equal width on buttons */
   &.equal {
     button {
       flex: 1;
@@ -28,54 +29,10 @@
     min-block-size: 40px;
     min-inline-size: 5ex;
     padding: 0 var(--size-4);
+    user-select: none;
 
     &:hover {
       --_bg-color: light-dark(oklch(0% 0 0 / 0.04), oklch(100% 0 0 / 0.08));
-    }
-
-    &.selected {
-      --_bg-color: color-mix(
-        in oklch,
-        var(--primary) 12%,
-        var(--surface-default)
-      );
-
-      /* Checkmark */
-      svg:first-of-type {
-        inline-size: 100%;
-        margin-block-end: -3px;
-        max-inline-size: 1em;
-      }
-    }
-
-    svg {
-      inline-size: 100%;
-      max-block-size: var(--size-5);
-      max-inline-size: var(--size-7);
-    }
-
-    /* Ripple effect */
-    background-position: center;
-
-    &:where(:not(.disabled, [disabled])) {
-      &:where(:not(:active):hover) {
-        --ripple: radial-gradient(circle, transparent 1%, var(--_bg-color) 1%)
-          center/15000%;
-
-        transition: background 0.5s;
-      }
-
-      &:where(:hover:active) {
-        background-size: var(--button-ripple-size);
-        transition: background 0s;
-      }
-    }
-
-    /* Disabled */
-    &[disabled] {
-      border-color: color-mix(in oklch, var(--border-color) 50%, transparent);
-      cursor: not-allowed;
-      color: color-mix(in oklch, var(--text-color-1) 30%, transparent);
     }
 
     & + & {
@@ -94,6 +51,53 @@
 
     &[disabled] + &:not([disabled]) {
       border-inline-start-width: 1px;
+    }
+
+    /* Ripple effect */
+    background-position: center;
+
+    &:where(:not(.disabled, [disabled])) {
+      &:where(:not(:active):hover) {
+        --ripple: radial-gradient(circle, transparent 1%, var(--_bg-color) 1%)
+          center/15000%;
+
+        transition: background var(--button-ripple-duration);
+      }
+
+      &:where(:hover:active) {
+        background-size: var(--button-ripple-size);
+        transition: background 0s;
+      }
+    }
+
+    /* Disabled */
+    &[disabled] {
+      border-color: color-mix(in oklch, var(--border-color) 50%, transparent);
+      cursor: not-allowed;
+      color: color-mix(in oklch, var(--text-color-1) 30%, transparent);
+    }
+
+    /* Icons */
+    svg {
+      flex-shrink: 0;
+      inline-size: auto;
+      max-block-size: var(--size-5);
+      max-inline-size: var(--size-7);
+    }
+
+    /* Selected */
+    &.selected {
+      --_bg-color: color-mix(
+        in oklch,
+        var(--primary) 12%,
+        var(--surface-default)
+      );
+
+      /* Checkmark */
+      svg:first-of-type {
+        margin-block-end: -3px;
+        inline-size: var(--size-3);
+      }
     }
   }
 }

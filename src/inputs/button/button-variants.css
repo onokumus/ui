@@ -70,7 +70,7 @@
         --ripple: radial-gradient(circle, transparent 1%, var(--_bg-color) 1%)
           center/15000%;
 
-        transition: background 0.5s;
+        transition: background var(--button-ripple-duration);
       }
 
       &:where(:hover:active) {
