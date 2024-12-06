@@ -6,7 +6,7 @@
   border-radius: var(--_border-radius);
   display: inline-flex;
   max-inline-size: var(--_max-width);
-  min-width: max-content;
+  min-inline-size: max-content;
 
   /* Equal width on buttons */
   &.equal {
@@ -28,6 +28,7 @@
     }
   }
 
+  /* Button */
   button {
     --_bg-color: transparent;
 

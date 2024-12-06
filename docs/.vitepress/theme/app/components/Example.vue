@@ -128,7 +128,8 @@ const showCode = ref(!props?.hideCode);
   }
 
   .column {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: var(--size-3, 1rem);
   }
 
@@ -138,7 +139,7 @@ const showCode = ref(!props?.hideCode);
 
   &.centered {
     .column {
-      justify-content: center;
+      align-items: center;
     }
   }
 

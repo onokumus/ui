@@ -30,7 +30,7 @@
 
 ### Select
 
-### [Switch](/components/inputs/switch-api.md)
+### [Switch](/components/inputs/switch)
 
 <!--@include: ./components/inputs/switch-api.md -->
 
@@ -38,7 +38,9 @@
 
 ### Text input
 
-### Toggle button group
+### [Toggle button group](/components/inputs/toggle-button-group)
+
+<!--@include: ./components/inputs/toggle-button-group-api.md -->
 
 ## Data display
 
