@@ -442,7 +442,7 @@ These are the classes and attributes a card can be styled with. As usual, feel f
 
 ## Browser compatibility
 
-<Baseline :ids="['container-style-queries', 'interpolate-size', 'details-content', 'content-visibility', 'has']" />
+<Baseline :ids="['container-style-queries', 'interpolate-size', 'details-content', 'details-name', 'content-visibility']" />
 
 ## Installation
 
