@@ -1,3 +1,16 @@
+<style scoped>
+	table {
+		cursor: default;
+	}
+	td a {
+		color: currentColor;
+		cursor: default;
+		font-weight: inherit;
+		pointer-events: none;
+		text-decoration: none;
+	}
+</style>
+
 # Component API
 
 ## Inputs
@@ -56,7 +69,9 @@
 
 <!--@include: ./components/data-display/list-api.md -->
 
-### Table
+### [Table](/components/data-display/table)
+
+<!--@include: ./components/data-display/table-api.md -->
 
 ### Tooltip
 

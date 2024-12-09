@@ -2,6 +2,8 @@
 
 /* Props */
 @import "https://unpkg.com/open-props@2.0.0-beta.5/index.css" layer(props.main);
+@import "https://unpkg.com/browse/open-props@2.0.0-beta.5/css/sizes/media.css"
+  layer(props.media);
 @import "https://unpkg.com/open-props@2.0.0-beta.5/css/font/lineheight.css"
   layer(props.lineheight);
 @import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/red.hex.css"

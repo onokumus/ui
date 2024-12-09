@@ -85,7 +85,7 @@ const showCode = ref(!props?.hideCode);
   display: grid;
   margin-inline: -1rem;
   margin-block: var(--size-3, 1rem);
-  overflow: hidden;
+  /* overflow: hidden; */
 
   &:has(.example) {
     border-width: 1px;
@@ -114,7 +114,7 @@ const showCode = ref(!props?.hideCode);
   [class^="language"] {
     margin-block: 0 !important;
 
-    @media (width <= 640px) {
+    @media (width <= 60ch) {
       margin-inline: 0 !important;
     }
   }
