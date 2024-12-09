@@ -53,6 +53,10 @@ import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
 
 <marquee width="150" direction="left">Work in progress</marquee>
 
+::: warning Not ready yet
+Waiting for `popover="hint"` to land. Following the progress in this PR: https://github.com/whatwg/html/pull/9778
+:::
+
 <Example direction="row">
 <template #example>
 
