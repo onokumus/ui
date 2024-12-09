@@ -1,6 +1,7 @@
 <script setup>
 	import Example from "../../.vitepress/theme/app/components/Example.vue"
-	</script>
+	import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
+</script>
 
 # Table
 
@@ -257,7 +258,7 @@ If you inspect the page you can see that I cheated a bit with the `inset-block-s
         <tr>
             <td>float</td>
             <td>Legacy Nightmare 👻</td>
-            <td>The Pre-Flexbox Dark Ages</td>
+            <td>The Pre-F§lexbox Dark Ages</td>
         </tr>
         <tr>
             <td>box-sizing</td>
@@ -286,6 +287,10 @@ If you inspect the page you can see that I cheated a bit with the `inset-block-s
 ## API
 
 <!--@include: ./table-api.md -->
+
+## Browser compatibility
+
+<Baseline :ids="['container-queries']" />
 
 ## Installation
 
