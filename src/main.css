@@ -58,6 +58,7 @@
 @import "./data-display/link.css" layer(components.data-display.link);
 @import "./data-display/list.css" layer(components.data-display.list);
 @import "./data-display/table.css" layer(components.data-display.table);
+@import "./data-display/tooltip.css" layer(components.data-display.tooltip);
 
 /*** Feedback */
 @import "./feedback/alert.css" layer(components.feedback.alert);
