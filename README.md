@@ -9,7 +9,7 @@ https://open-props-ui.netlify.app/
 
 ## Development
 
-This repo holds the code for the component library and the docs. The docs are used as a testbed for the component library.
+This repo holds the code for the UI library and the docs. The docs are used as a testbed for the UI library.
 
 ```
 pnpm i
