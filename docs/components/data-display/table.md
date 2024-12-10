@@ -217,8 +217,8 @@ Nothing fancy, just the standard HTML `<table>`.
 
 ## Sticky header
 
-::: info When applying sticky header
-If you inspect the page you can see that I cheated a bit with the `inset-block-start` value. That's because these docs already have sticky elements. But you get the point.
+::: info When applying sticky header...
+If you inspect the page you can see that I cheated a bit with the `inset-block-start` value. That's because these docs already have sticky elements. But you get the point - you might have to do the same.
 :::
 
 <style scoped>
