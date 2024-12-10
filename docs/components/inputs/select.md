@@ -1,89 +1,65 @@
-<style>
- @import "../../../src/inputs/input-base.css";
- @import "../../../src/inputs/input-variants.css";
- @import "../../../src/inputs/select.css";
-</style>
+<script setup>
+	import Example from "../../.vitepress/theme/app/components/Example.vue"
+	import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
+</script>
 
 # Select
 
 ## Variants
 
-<div class="example-wrapper">
-  <div class="example row">
-    <select class="select">
-        <option>Default</option>
-        <option>Option Two</option>
-        <option>Option Three</option>
-    </select>
-    <select class="select underlined">
-        <option>Underlined</option>
-        <option>Option Two</option>
-        <option>Option Three</option>
-    </select>
-    <select class="select filled">
-        <option>Filled</option>
-        <option>Option Two</option>
-        <option>Option Three</option>
-    </select>
+<Example>
+<template #example>
+<select class="select">
+  <button>
+    <selectedoption></selectedoption>
+  </button>
+  <div class="list">
+   <option>Default</option>
+    <option>Option Two</option>
+    <option>Option Three</option>
   </div>
+</select>
+</template>
+</Example>
+
+## Size
+
+## Multiple select
+
+### Checkbox
+
+### Chip
+
+### Placeholder
+
+### `[multiple]`
+
+## Grouped
+
+## Auto-width
+
+<Example>
+<template #code>
 
 ```html
-<select class="select">
-  <option>Default</option>
-  <option>Option Two</option>
-  <option>Option Three</option>
-</select>
-<select class="select underlined">
-  <option>Underlined</option>
-  <option>Option Two</option>
-  <option>Option Three</option>
-</select>
-<select class="select filled">
-  <option>Filled</option>
-  <option>Option Two</option>
-  <option>Option Three</option>
+<select class="select auto-width">
+  <!--  -->
 </select>
 ```
 
-</div>
+</template>
+</Example>
 
-## Sizes
+## Anatomy
 
-<div class="example-wrapper">
-  <div class="example row">
-    <select class="select small">
-        <option>Small</option>
-        <option>Option Two</option>
-        <option>Option Three</option>
-    </select>
-    <select class="select">
-        <option>Medium</option>
-        <option>Option Two</option>
-        <option>Option Three</option>
-    </select>
-    <select class="select large">
-        <option>Large</option>
-        <option>Option Two</option>
-        <option>Option Three</option>
-    </select>
-  </div>
+## Accessibility
 
-```html
-<select class="select small">
-  <option>Small</option>
-  <option>Option Two</option>
-  <option>Option Three</option>
-</select>
-<select class="select">
-  <option>Medium</option>
-  <option>Option Two</option>
-  <option>Option Three</option>
-</select>
-<select class="select large">
-  <option>Large</option>
-  <option>Option Two</option>
-  <option>Option Three</option>
-</select>
-```
+::: warning Experimental status
+This way of writing Selects are currently quite experimental. Accessible solutions are on the way, but not solved yet.
+:::
 
-</div>
+## API
+
+## Browser compatibility
+
+## Installation

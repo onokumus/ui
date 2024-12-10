@@ -1,20 +1,66 @@
-:where(select) {
-  /* appearance: none;
-	background-image: var(--icon-arrow-down);
-	background-position: calc(100% - 1ch) center;
-	background-size: 3ex; */
-  /* padding-block: 0.75ch;
-  padding-inline: 1.75ch 3ch;
-  line-height: 1.5; */
+:where(.select) {
+  background-color: transparent;
+  border-radius: var(--input-border-radius);
+  border: var(--input-border-width) solid var(--input-border-color);
+  font-family: var(--font-sans);
+  min-inline-size: 0;
+  transition: all 0.15s var(--ease-2);
+
+  &.auto-width {
+    field-sizing: content;
+  }
+
+  button {
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Default arrow */
+  &:after {
+    display: none;
+  }
+
+  button {
+    /* Arrow */
+    &:after {
+      block-size: 0;
+      border-block-start: 5px solid;
+      border-inline: 5px solid transparent;
+      content: "";
+      display: inline-block;
+      inline-size: 0;
+      margin-inline-start: var(--size-2);
+      translate: 0 -50%;
+    }
+  }
+
+  /* Select popover */
+  &::picker(select) {
+    border: 0;
+    box-shadow: var(--shadow-2);
+    padding: 0;
+  }
+
+  /* Option */
+  option {
+    /* Checkmark */
+    &:before {
+      display: none;
+      pointer-events: none;
+    }
+
+    &:checked {
+    }
+
+    &:focus-visible {
+      outline-offset: -1px;
+    }
+  }
 
   & :where(optgroup, option) {
-    background: var(--surface-default);
   }
 
-  &:where(:focus-visible) {
-    outline-offset: 0;
-    outline-width: 1px;
-  }
   &:where(:hover, :focus) {
     /* add button hover */
     /* background-color: var(--surface-default);

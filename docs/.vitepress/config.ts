@@ -126,7 +126,7 @@ export default defineConfig({
                 { text: "Select", link: "/components/inputs/select" },
                 { text: "Switch", link: "/components/inputs/switch" },
                 { text: "Textarea", link: "/components/inputs/textarea" },
-                { text: "Text input", link: "/components/inputs/index" },
+                { text: "Text field", link: "/components/inputs/text-field" },
                 {
                   text: "Toggle button group",
                   link: "/components/inputs/toggle-button-group",

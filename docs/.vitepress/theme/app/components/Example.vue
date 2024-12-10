@@ -1,22 +1,22 @@
 <script setup lang="ts">
-import { ref, useId } from "vue";
+import { ref, useId } from "vue"
 
 const props = withDefaults(
   defineProps<{
-    centered?: boolean;
-    direction?: "row" | "column";
-    exampleClass?: string;
-    hideCode?: boolean;
-    richText?: "rich-text" | "not-rich-text";
-    wrapperClass?: string;
+    centered?: boolean
+    direction?: "row" | "column"
+    exampleClass?: string
+    hideCode?: boolean
+    richText?: "rich-text" | "not-rich-text"
+    wrapperClass?: string
   }>(),
   {
     hideCode: undefined,
   },
-);
+)
 
-const codeViewerId = useId();
-const showCode = ref(!props?.hideCode);
+const codeViewerId = useId()
+const showCode = ref(!props?.hideCode)
 </script>
 
 <template>
@@ -38,7 +38,7 @@ const showCode = ref(!props?.hideCode);
 
     <button
       :aria-controls="codeViewerId"
-      v-if="$slots.code"
+      v-if="$slots.code && $slots.example"
       @click="showCode = !showCode"
       class="chip small"
     >

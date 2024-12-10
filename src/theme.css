@@ -136,7 +136,9 @@ html {
   --border-width: 1px;
 
   /* Input */
+  --input-border-color: var(--border-color);
   --input-border-radius: var(--size-1);
+  --input-border-width: 1px;
 
   /* Buttons */
   --button-border-radius: 100vmax;

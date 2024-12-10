@@ -419,6 +419,52 @@ Found in `div.end`.
 
   <div class="end">30kB</div>
 </li>
+
+```
+
+</template>
+</Example>
+
+#### Keyboard command
+
+<Example>
+
+<template #example>
+
+<ul class="list">
+  <li>
+    <div class="text">
+      <p>Save All</p>
+    </div>
+
+  <div class="end">
+    <kbd>CTRL+ALT+DEL</kbd>
+  </div>
+  </li>
+  <li>
+  <div class="text">
+    <p>Save</p>
+  </div>
+
+  <div class="end">
+    <kbd>CTRL+S</kbd>
+  </div>
+</li>
+</ul>
+</template>
+
+<template #code>
+
+```html{7}
+<li>
+  <div class="text">
+    <p>Save all</p>
+  </div>
+
+  <div class="end">
+    <kbd>CTRL+ALT+DEL</kbd>
+  </div>
+</li>
 ```
 
 </template>

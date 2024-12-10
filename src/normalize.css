@@ -115,6 +115,11 @@
   }
 }
 
+select,
+::picker(select) {
+  appearance: base-select;
+}
+
 :where(
   a[href],
   area,

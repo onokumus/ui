@@ -45,6 +45,7 @@
 @import "./inputs/autocomplete.css" layer(components.inputs.autocomplete);
 @import "./inputs/checkbox-radio.css" layer(components.inputs.checkbox-radio);
 @import "./inputs/color.css" layer(components.inputs.color);
+@import "./inputs/select.css" layer(components.inputs.select);
 @import "./inputs/switch.css" layer(components.inputs.switch);
 @import "./inputs/textarea.css" layer(components.inputs.textarea);
 

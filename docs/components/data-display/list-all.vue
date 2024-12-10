@@ -1,10 +1,10 @@
 <script setup>
-import { useId } from "vue";
+import { useId } from "vue"
 
-const idCheckbox = useId();
-const idRadio1 = useId();
-const idRadio2 = useId();
-const idSwitch = useId();
+const idCheckbox = useId()
+const idRadio1 = useId()
+const idRadio2 = useId()
+const idSwitch = useId()
 </script>
 
 <template>
@@ -29,6 +29,15 @@ const idSwitch = useId();
       <p>Trailing supporting text</p>
     </div>
     <div class="end">100+</div>
+  </li>
+
+  <li>
+    <div class="text">
+      <p>Trailing keyboard command</p>
+    </div>
+    <div class="end">
+      <kbd>CTRL+Shift+X</kbd>
+    </div>
   </li>
 
   <li class="border-top">

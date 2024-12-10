@@ -18,14 +18,13 @@
   padding: var(--size-2);
 
   /* Variants */
-  &.underlined {
-    border: 0;
-    border-block-end: 2px solid var(--border-color);
-  }
-
   &.filled {
-    background-color: var(--border-color);
+    background-color: var(--gray-1);
     border-color: transparent;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-block-end: 2px solid var(--border-color);
+    padding-block-end: calc(var(--size-2) - 1px);
   }
 
   /* Sizes */
