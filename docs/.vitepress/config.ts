@@ -4,7 +4,7 @@ import { defineConfig } from "vitepress";
 export default defineConfig({
   title: "Open Props UI",
   description:
-    "CSS framework leveraging the most modern features. Components you can copy and paste into your project.",
+    "CSS UI library leveraging the most modern features. Components you can copy and paste into your project.",
   markdown: {
     theme: "dark-plus",
   },
@@ -18,7 +18,7 @@ export default defineConfig({
       "meta",
       {
         property: "og:title",
-        content: "Open Props UI | A modern CSS framework",
+        content: "Open Props UI | A modern CSS UI library",
       },
     ],
     ["meta", { property: "og:site_name", content: "Open Props UI" }],

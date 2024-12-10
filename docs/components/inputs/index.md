@@ -1,7 +1,7 @@
-<style scoped>
-  @import "../../../src/inputs/input-base.css";
-  @import "../../../src/inputs/input-variants.css";
-</style>
+<script setup>
+	import Example from "../../.vitepress/theme/app/components/Example.vue"
+	import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
+	</script>
 
 # Input
 
