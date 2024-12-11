@@ -110,6 +110,10 @@
     padding: var(--size-2) var(--size-3);
     position: relative;
 
+    &:before {
+      display: none; /* removing checkmark from option */
+    }
+
     * {
       font-size: inherit;
     }

@@ -36,6 +36,28 @@
 
 ## Grouped
 
+<Example>
+<template #example>
+<select class="select">
+  <button>
+    <selectedoption></selectedoption>
+  </button>
+  <div class="list">
+   <option>Default</option>
+   <option>Option Three</option>
+   <optgroup label="First group">
+    <option>Option Two</option>
+    <option>Option Three</option>
+   </optgroup>
+   <optgroup label="Second group">
+    <option>Option Four</option>
+    <option>Option Five</option>
+   </optgroup>
+  </div>
+</select>
+</template>
+</Example>
+
 ## Auto-width
 
 <Example>
