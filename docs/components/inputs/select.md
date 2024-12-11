@@ -5,16 +5,29 @@
 
 # Select
 
+Leverages the [List component](/components/data-display/list) to provide markup for the Select popover.
+
 ## Variants
 
-<Example>
+<Example direction="row">
 <template #example>
 <select class="select">
   <button>
     <selectedoption></selectedoption>
   </button>
   <div class="list">
-   <option>Default</option>
+   <option>Outlined (default)</option>
+    <option>Option Two</option>
+    <option>Option Three</option>
+  </div>
+</select>
+
+<select class="select filled">
+  <button>
+    <selectedoption></selectedoption>
+  </button>
+  <div class="list">
+   <option>Filled</option>
     <option>Option Two</option>
     <option>Option Three</option>
   </div>
@@ -24,48 +37,81 @@
 
 ## Size
 
-## Multiple select
-
-### Checkbox
-
-### Chip
-
-### Placeholder
-
-### `[multiple]`
-
-## Grouped
-
-<Example>
+<Example direction="row">
 <template #example>
+<select class="select small">
+  <button>
+    <selectedoption></selectedoption>
+  </button>
+  <div class="list">
+   <option>Small</option>
+    <option>Option Two</option>
+    <option>Option Three</option>
+  </div>
+</select>
+
 <select class="select">
   <button>
     <selectedoption></selectedoption>
   </button>
   <div class="list">
    <option>Default</option>
-   <option>Option Three</option>
-   <optgroup label="First group">
     <option>Option Two</option>
     <option>Option Three</option>
+  </div>
+</select>
+</template>
+<template #code>
+
+```html{1}
+<select class="small">
+  <!--  -->
+</select>
+```
+
+</template>
+</Example>
+
+## Grouped
+
+<Example direction="row">
+<template #example>
+<select class="select">
+  <button>
+    <selectedoption></selectedoption>
+  </button>
+  <div class="list">
+  <option>Select car</option>
+   <optgroup label="Swedish cars">
+    <option>Volvo</option>
+    <option>SAAB</option>
    </optgroup>
-   <optgroup label="Second group">
-    <option>Option Four</option>
-    <option>Option Five</option>
+   <optgroup label="French cars">
+    <option>Renault</option>
+    <option>Citroën</option>
    </optgroup>
   </div>
 </select>
 </template>
-</Example>
 
-## Auto-width
-
-<Example>
 <template #code>
 
-```html
-<select class="select auto-width">
-  <!--  -->
+```html{7,10,11,14}
+<select class="select">
+  <button>
+  <selectedoption></selectedoption>
+  </button>
+  <div class="list">
+    <option>Select car</option>
+    <optgroup label="Swedish cars">
+      <option>Volvo</option>
+      <option>SAAB</option>
+    </optgroup>
+    <optgroup label="French cars">
+      <option>Renault</option>
+      <option>Citroën</option>
+    </optgroup>
+  </div>
 </select>
 ```
 

@@ -3,36 +3,15 @@
   border-radius: var(--input-border-radius);
   border: var(--input-border-width) solid var(--input-border-color);
   font-family: var(--font-sans);
+  font-size: var(--font-size-md, 1rem);
+  line-height: var(--font-lineheight-3);
   min-inline-size: 0;
+  padding: 0;
   transition: all 0.15s var(--ease-2);
-
-  &.auto-width {
-    field-sizing: content;
-  }
-
-  button {
-    background-color: transparent;
-    margin: 0;
-    padding: 0;
-  }
 
   /* Default arrow */
   &:after {
     display: none;
-  }
-
-  button {
-    /* Arrow */
-    &:after {
-      block-size: 0;
-      border-block-start: 5px solid;
-      border-inline: 5px solid transparent;
-      content: "";
-      display: inline-block;
-      inline-size: 0;
-      margin-inline-start: var(--size-2);
-      translate: 0 -50%;
-    }
   }
 
   /* Select popover */
@@ -40,6 +19,36 @@
     border: 0;
     box-shadow: var(--shadow-2);
     padding: 0;
+  }
+
+  button {
+    background-color: transparent;
+    display: flex;
+    inline-size: 100%;
+    margin: 0;
+    padding: var(--size-2) var(--size-8) var(--size-2) var(--size-3);
+    position: relative;
+
+    /* Arrow */
+    &:after {
+      block-size: 0;
+      border-block-start: 5px solid;
+      border-inline: 5px solid transparent;
+      content: "";
+      display: inline-block;
+      flex-shrink: 0;
+      inline-size: 0;
+      position: absolute;
+      translate: 0 -50%;
+      inset-block-start: 50%;
+      inset-inline-end: var(--size-3);
+    }
+
+    selectedoption {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
   }
 
   .list {
@@ -55,18 +64,21 @@
           color-mix(in oklch, var(--text-color-1) 75%, black)
         );
         content: attr(label);
+        cursor: default;
         display: block;
         font-size: var(--font-size-xs);
         font-weight: 500;
         inset-block-start: 0;
         inset-inline: 0;
+        overflow: hidden;
         padding-block: var(--size-1);
-        padding-inline: var(--size-3);
-        cursor: default;
+        padding-inline: var(--size-2);
         position: absolute;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
 
-      &:not(:nth-child(1)) {
+      &:not(:first-child) {
         margin-block-start: var(--size-2);
       }
 
@@ -76,6 +88,12 @@
 
       option:last-of-type {
         margin-block-end: var(--size-2);
+      }
+
+      &:last-child {
+        option:last-of-type {
+          margin-block-end: 0;
+        }
       }
     }
 
@@ -88,6 +106,18 @@
 
       &:focus-visible {
         outline-offset: -1px;
+      }
+    }
+  }
+
+  /* Size */
+  &.small {
+    button {
+      padding-block: var(--size-1);
+      padding-inline: var(--size-2) var(--size-7);
+
+      &:after {
+        inset-inline-end: var(--size-2);
       }
     }
   }

@@ -28,7 +28,7 @@
 @import "./theme.css" layer(theme);
 
 /* Components */
-/*** Base components (mo dependencies)  */
+/*** Base components (no dependencies)  */
 @import "./data-display/avatar.css" layer(components.base);
 @import "./data-display/badge.css" layer(components.base);
 @import "./data-display/chip.css" layer(components.base);
