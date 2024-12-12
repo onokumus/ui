@@ -60,8 +60,7 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 <Example row>
 <template #example>
 
-<div class="field">
-<select disabled>
+<select class="field" disabled>
   <button>
     <selectedoption></selectedoption>
   </button>
@@ -71,10 +70,8 @@ Leverages the [List component](/components/data-display/list) to provide markup 
     <option>Option Three</option>
   </div>
 </select>
-</div>
 
-<div class="field filled">
-<select disabled>
+<select class="field" disabled>
   <button>
     <selectedoption></selectedoption>
   </button>
@@ -84,7 +81,6 @@ Leverages the [List component](/components/data-display/list) to provide markup 
     <option>Option Three</option>
   </div>
 </select>
-</div>
 </template>
 <template #code>
 
