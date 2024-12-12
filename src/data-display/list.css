@@ -101,7 +101,7 @@ Lists meant to be used stand-alone or as part of Select elements
   }
 
   /* List item */
-  :where(li, option) {
+  :where(li, option, [role="group"] > label) {
     align-items: center;
     background: var(--_bg-color) var(--ripple, none);
     display: flex;

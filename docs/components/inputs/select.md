@@ -39,7 +39,7 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 </template>
 <template #code>
 
-```html
+```html{1,14}
 <div class="field">
   <select>
     <button>
@@ -159,14 +159,16 @@ Leverages the [List component](/components/data-display/list) to provide markup 
   </button>
   <div class="list">
   <option>Select car</option>
-   <optgroup label="Swedish cars">
+   <div role="group">
+   <label>Swedish cars</label>
     <option>Volvo</option>
     <option>SAAB</option>
-   </optgroup>
-   <optgroup label="French cars">
+   </div>
+   <div role="group">
+   <label>French cars</label>
     <option>Renault</option>
     <option>Citroën</option>
-   </optgroup>
+   </div>
   </div>
 </select>
 </div>
@@ -174,7 +176,7 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 
 <template #code>
 
-```html{7,10,11,14}
+```html{8,9,12-14,17}
 <div class="field">
   <select>
     <button>
@@ -182,14 +184,16 @@ Leverages the [List component](/components/data-display/list) to provide markup 
     </button>
     <div class="list">
       <option>Select car</option>
-      <optgroup label="Swedish cars">
+      <div role="group">
+        <label class="text">Swedish cars</label>
         <option>Volvo</option>
         <option>SAAB</option>
-      </optgroup>
-      <optgroup label="French cars">
+      </div>
+      <div role="group">
+        <label class="text">French cars</label>
         <option>Renault</option>
         <option>Citroën</option>
-      </optgroup>
+      </div>
     </div>
   </select>
 </div>
