@@ -7,7 +7,10 @@ excerpt: Don't overthink it
 status: public
 ---
 
-# Random thoughts on time management
+<hgroup>
+	<p>2024-12-12</p>
+	<h1> Random thoughts on time management</h1>
+</hgroup>
 
 ## When you're stuck
 
