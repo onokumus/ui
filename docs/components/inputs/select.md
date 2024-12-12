@@ -21,7 +21,6 @@ Leverages the [List component](/components/data-display/list) to provide markup 
     <option>Option Three</option>
   </div>
 </select>
-
 <select class="select filled">
   <button>
     <selectedoption></selectedoption>
@@ -32,6 +31,7 @@ Leverages the [List component](/components/data-display/list) to provide markup 
     <option>Option Three</option>
   </div>
 </select>
+
 </template>
 <template #code>
 
@@ -48,6 +48,44 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 </select>
 
 <select class="select filled">
+  <!--  -->
+</select>
+```
+
+</template>
+</Example>
+
+## Disabled
+
+<Example direction="row">
+<template #example>
+
+<select class="select" disabled>
+  <button>
+    <selectedoption></selectedoption>
+  </button>
+  <div class="list">
+   <option>Outlined (disabled)</option>
+    <option>Option Two</option>
+    <option>Option Three</option>
+  </div>
+</select>
+
+<select class="select filled" disabled>
+  <button>
+    <selectedoption></selectedoption>
+  </button>
+  <div class="list">
+   <option>Filled (disabled)</option>
+    <option>Option Two</option>
+    <option>Option Three</option>
+  </div>
+</select>
+</template>
+<template #code>
+
+```html{1}
+<select class="select" disabled>
   <!--  -->
 </select>
 ```
