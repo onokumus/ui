@@ -9,10 +9,31 @@
   }
 
   /* Select popover */
-  &::picker(select.field) {
+  &::picker(select) {
     border: 0;
     box-shadow: var(--shadow-2);
     padding: 0;
+    transition:
+      opacity 0.5s var(--ease-3),
+      scale 0.2s var(--ease-3);
+  }
+
+  /* Pre-animation styles */
+  &:not(:open)::picker(select) {
+    opacity: 0;
+    scale: 0.5;
+  }
+
+  /* Animation end styles */
+  &:open::picker(select) {
+    opacity: 1;
+    scale: 1;
+
+    /* Animation start styles */
+    @starting-style {
+      opacity: 0;
+      scale: 0.5;
+    }
   }
 
   button {
