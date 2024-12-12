@@ -1,14 +1,7 @@
-:where(.select) {
-  background-color: transparent;
-  border-radius: var(--input-border-radius);
-  border: var(--input-border-width) solid var(--input-border-color);
-  font-family: var(--font-sans);
-  font-size: var(--font-size-md, 1rem);
-  line-height: var(--font-lineheight-3);
-  min-inline-size: 0;
+:where(select.field) {
+  line-height: var(--font-lineheight-2);
   padding: 0;
   position: relative;
-  transition: all 0.15s var(--ease-2);
 
   /* Default arrow */
   &:after {
@@ -16,7 +9,7 @@
   }
 
   /* Select popover */
-  &::picker(select) {
+  &::picker(select.field) {
     border: 0;
     box-shadow: var(--shadow-2);
     padding: 0;
@@ -39,10 +32,10 @@
       display: inline-block;
       flex-shrink: 0;
       inline-size: 0;
-      position: absolute;
-      translate: 0 -50%;
       inset-block-start: 50%;
       inset-inline-end: var(--size-3);
+      position: absolute;
+      translate: 0 -50%;
     }
 
     selectedoption {
@@ -119,39 +112,6 @@
 
       &:after {
         inset-inline-end: var(--size-2);
-      }
-    }
-  }
-
-  /* Variants */
-  &.filled {
-    background-color: var(--surface-tonal);
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border-block-end-color: var(--text-color-1);
-    border-block-start-width: 0;
-    border-inline-end-width: 0;
-    border-inline-start-width: 0;
-
-    &:before {
-      background-color: var(--text-color-1);
-      block-size: var(--input-border-width);
-      content: "";
-      inline-size: 100%;
-      inset: auto 0 calc(0px - var(--input-border-width)) 0;
-      position: absolute;
-      transition: inset 0.2s var(--ease-3);
-    }
-
-    &:where(:not([disabled])) {
-      &:hover {
-        background-color: light-dark(
-          color-mix(in oklch, var(--surface-tonal) 93%, black),
-          color-mix(in oklch, var(--surface-tonal) 93%, white)
-        );
-        &:before {
-          inset-block-end: 0;
-        }
       }
     }
   }

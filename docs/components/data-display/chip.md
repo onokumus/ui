@@ -20,7 +20,7 @@
 
 The Chip has two variants: tonal (default) and outlined.
 
-<Example direction="row">
+<Example row>
 <template #example>
 <div class="chip tonal">
 <span class="text">Tonal</span>
@@ -48,7 +48,7 @@ The Chip has two variants: tonal (default) and outlined.
 The icon can be placed before or after the text. <br>
 Make sure the text is wrapped in a `.text` wrapper.
 
-<Example direction="row">
+<Example row>
 <template #example>
 <div class="chip">
   <svg
@@ -101,7 +101,7 @@ Make sure the text is wrapped in a `.text` wrapper.
 
 ## Button
 
-<Example direction="column">
+<Example column>
 <template #example>
 <div class="row">
 <button class="chip">
@@ -144,7 +144,7 @@ Make sure the text is wrapped in a `.text` wrapper.
 
 ## Link
 
-<Example direction="row">
+<Example row>
 <template #example>
 <a href="#" class="chip">
 <span class="text">Tonal link</span>
@@ -175,7 +175,7 @@ Make sure the text is wrapped in a `.text` wrapper.
 
 ## Disabled
 
-<Example direction="row">
+<Example row>
 <template #example>
 <div class="chip disabled">  <span class="text">Disabled class</span>
 </div>
@@ -215,7 +215,7 @@ Make sure the text is wrapped in a `.text` wrapper.
 <!--
 ## Colors
 
-<Example direction="column">
+<Example column>
 <template #example>
 <div class="row">
 <button class="chip tonal primary"><span class="text">Primary</span></button>
@@ -262,7 +262,7 @@ Make sure the text is wrapped in a `.text` wrapper.
 
 ## Sizes
 
-<Example direction="row">
+<Example row>
 <template #example>
 <div class="chip tonal small">
 <span class="text">Small</span>
@@ -307,7 +307,7 @@ Make sure the text is wrapped in a `.text` wrapper.
 2. Text
 3. Icon (optional): `<svg>` element
 
-<Example direction="row">
+<Example row>
 <template #example>
 <div class="chip tonal anatomy">
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M29.907 5.14a1.25 1.25 0 0 1-.047 1.767l-19 18a1.25 1.25 0 0 1-1.775-.055l-6.75-7.25a1.25 1.25 0 0 1 1.83-1.704l5.89 6.327L28.14 5.093a1.25 1.25 0 0 1 1.767.047"/></svg>

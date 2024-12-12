@@ -43,7 +43,7 @@ Leverages the HTML `details` and `summary` elements. Uses the native HTML arrow,
 
 ## Basics
 
-<Example direction="column">
+<Example column>
 <template #example>
  <details class="card">
 	<summary id="summary-id" aria-controls="content-id">
@@ -82,7 +82,7 @@ Leverages the HTML `details` and `summary` elements. Uses the native HTML arrow,
 
 ## Variants
 
-<Example direction="column">
+<Example column>
 	<template #example>
 	<details class="card">
 	<summary id="summary1" aria-controls="content1">
@@ -159,7 +159,7 @@ Leverages the HTML `details` and `summary` elements. Uses the native HTML arrow,
 - Apply the `.card` class to a parent element.
 - You are still able to set [variant](#variants) styles, but instead of doing it on the individual elements - apply the variant class on the `.card` element instead.
 
-<Example direction="column">
+<Example column>
 	<template #example>
 	<div class="card outlined">
  <details>
@@ -214,7 +214,7 @@ Leverages the HTML `details` and `summary` elements. Uses the native HTML arrow,
 
 To have the newly opened accordion close the prior, apply a shared `[name]` attribute to all `<details>` elements.
 
-<Example direction="column">
+<Example column>
 	<template #example>
 	<div class="card outlined">
 	<div class="content">
@@ -313,7 +313,7 @@ To have the newly opened accordion close the prior, apply a shared `[name]` attr
 
 If the native `details` arrow doesn't suit your needs you can easily modify the `accordion.css` file to add your own preferred icon.
 
-<Example direction="column">
+<Example column>
 <template #example>
 <details class="outlined custom-arrow">
 	<summary id="summary1" aria-controls="content1">
@@ -399,7 +399,7 @@ The [WAI-ARIA guidelines](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/) f
 3. `& > .content` (optional): a wrapper for the accordion content
 4. `& > .actions` (optional): a wrapper that groups a set of buttons
 
-<Example direction="column">
+<Example column>
 <template #example>
  <details open class="anatomy">
 	<summary id="anatomy-summary-1" aria-controls="anatomy-content-1">

@@ -25,7 +25,7 @@ If your buttons depend on state (controlled) - use [Toggle button group](/compon
 
 ## Variants
 
-<Example direction="column" centered>
+<Example column centered>
 <template #example>
 
 <div role="group" class="button-group">
@@ -75,7 +75,7 @@ If your buttons depend on state (controlled) - use [Toggle button group](/compon
 
 ## With icons
 
-<Example direction="column" centered>
+<Example column centered>
 <template #example>
 
 <div role="group" class="button-group">
@@ -130,7 +130,7 @@ If your buttons depend on state (controlled) - use [Toggle button group](/compon
 
 ## Size
 
-<Example direction="column" centered>
+<Example column centered>
 <template #example>
 
 <div role="group" class="button-group">
@@ -185,7 +185,7 @@ Create an [issue or a PR](https://github.com/felix-bohlin/ui) and let me know!
 
 ## Disabled
 
-<Example direction="column" centered exampleClass="gap-l">
+<Example column centered exampleClass="gap-l">
 <template #example>
 
 <div role="group" class="button-group">
@@ -226,7 +226,7 @@ Create an [issue or a PR](https://github.com/felix-bohlin/ui) and let me know!
 
 </style>
 
-<Example direction="row">
+<Example row>
 <template #example>
 <div role="group" class="button-group anatomy">
   <button class="button">Button</button>

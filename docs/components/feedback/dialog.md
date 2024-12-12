@@ -34,7 +34,7 @@ The term "modal" and "dialog" are often used interchangeably, but there's an imp
 In order to toggle a `<dialog>` you will need to use Javascript.
 :::
 
-<Example direction="row">
+<Example row>
 <template #example>
 <button @click="openModal" class="button">Open dialog</button>
 
@@ -76,17 +76,17 @@ In order to toggle a `<dialog>` you will need to use Javascript.
 ```
 
 ```js [dialog.js]
-const dialog = document.querySelector("dialog");
-const showButton = document.getElementById("open-dialog-button");
-const closeButton = document.querySelector("dialog button");
+const dialog = document.querySelector("dialog")
+const showButton = document.getElementById("open-dialog-button")
+const closeButton = document.querySelector("dialog button")
 
 showButton.addEventListener("click", () => {
-  dialog.showModal();
-});
+  dialog.showModal()
+})
 
 closeButton.addEventListener("click", () => {
-  dialog.close();
-});
+  dialog.close()
+})
 ```
 
 :::

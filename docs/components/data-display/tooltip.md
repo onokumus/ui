@@ -57,7 +57,7 @@ import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
 Waiting for `popover="hint"` to land. Following the progress in this PR: https://github.com/whatwg/html/pull/9778
 :::
 
-<Example direction="row">
+<Example row>
 <template #example>
 
 <div class="tooltip-grid">

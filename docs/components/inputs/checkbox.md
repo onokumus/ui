@@ -5,7 +5,7 @@ import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
 
 # Checkbox
 
-<Example direction="row">
+<Example row>
 <template #example>
   <label class="checkbox">
    <input name="checkbox" type="checkbox" checked="checked">
@@ -66,7 +66,7 @@ import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
 
 Render the label text inside an element with a `.text` class.
 
-<Example direction="column" centered>
+<Example column centered>
 <template #example>
     <label class="checkbox">
       <input   name="checkbox" type="checkbox" checked="checked">
@@ -104,7 +104,7 @@ Render the label text inside an element with a `.text` class.
 
 ### Label position
 
-<Example direction="row" exampleClass="gap-l">
+<Example row exampleClass="gap-l">
 <template #example>
   <label class="checkbox">
     <input   name="checkbox" type="checkbox">
@@ -133,7 +133,7 @@ Render the label text inside an element with a `.text` class.
 
 ## Size
 
-<Example direction="column" exampleClass="gap-l" centered>
+<Example column exampleClass="gap-l" centered>
 <template #example>
    <div class="row">
    <label class="checkbox small">

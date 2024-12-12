@@ -214,7 +214,7 @@ That's because when open, popover elements aren't influenced by a parents' `posi
 
 :::
 
-<Example direction="row">
+<Example row>
 <template #example>
 
 <div class="position-parent">

@@ -24,7 +24,7 @@ Add it to an element with `aria-busy="true"`. Spinnners are always indeterminate
 
 The spinner's size is set to `1em`, which means it will adjust to its current font size.
 
-<Example direction="column">
+<Example column>
 <template #example>
 <h2 aria-busy="true">h2</h2>
 <h4 aria-busy="true">h4</h4>
@@ -49,7 +49,7 @@ The spinner's size is set to `1em`, which means it will adjust to its current fo
 
 Simply add `aria-busy="true"` to a `<button>`.
 
-<Example direction="column">
+<Example column>
 <template #example>
 <div class="row">
 	<button aria-busy="true" class="button">Text</button>

@@ -51,7 +51,7 @@ If you just need to group a bunch of "dumb" (uncontrolled) buttons - use [Button
 If your buttons depend on state (controlled) - use Toggle button group.
 :::
 
-<Example direction="column" centered exampleClass="gap-l">
+<Example column centered exampleClass="gap-l">
 <template #example>
 
 <div role="group" class="toggle-button-group">
@@ -117,7 +117,7 @@ Try playing with this example. Notice how the `.selected` icon replaces the pre-
 
 Only show two things at once: icon + text or icon + icon.
 
-<Example direction="column" centered>
+<Example column centered>
 <template #example>
 
 <div role="group" class="toggle-button-group">
@@ -158,7 +158,7 @@ Icons can be used in place of labels, but they must clearly communicate their me
 
 :::
 
-<Example direction="column" centered>
+<Example column centered>
 <template #example>
 
 <div role="group" class="toggle-button-group">
@@ -200,7 +200,7 @@ Avoid mixing icon-only buttons with text buttons. Choose one type and use that t
 
 ## Dynamic width
 
-<Example direction="column" centered>
+<Example column centered>
 <template #example>
 
 <div role="group" class="toggle-button-group dynamic">
@@ -227,7 +227,7 @@ Avoid mixing icon-only buttons with text buttons. Choose one type and use that t
 
 Choose between three sizes: default, `.small` and `.x-small`.
 
-<Example direction="column" centered exampleClass="gap-l">
+<Example column centered exampleClass="gap-l">
 <template #example>
 <div role="group" class="toggle-button-group">
   <button class="selected">
@@ -316,7 +316,7 @@ Create an [issue or a PR](https://github.com/felix-bohlin/ui) and let me know!
 2. Buttons: 2-5 `<button>` elements
 3. Button content: `.selected` checkmark, text label or icon
 
-<Example direction="column" exampleClass="gap-l" centered>
+<Example column exampleClass="gap-l" centered>
 <template #example>
 <div role="group" class="toggle-button-group anatomy">
   <button class="selected">

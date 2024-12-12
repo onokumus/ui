@@ -1,7 +1,4 @@
-:where(textarea, .textarea) {
-  font-size: var(--font-size-md, 1rem);
-  line-height: var(--font-lineheight-3);
+:where(.textarea) {
   min-block-size: 5rem;
-  padding: var(--size-2);
   resize: vertical;
 }

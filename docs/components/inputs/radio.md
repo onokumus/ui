@@ -7,7 +7,7 @@ import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
 
 ## Basic radio buttons
 
-<Example direction="row">
+<Example row>
 <template #example>
 
 <label class="radio">
@@ -68,7 +68,7 @@ import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
 
 Render the label text inside an element with a `.text` class.
 
-<Example direction="row">
+<Example row>
 <template #example>
 <label class="radio">
   <input id="radio-label-1" name="labels-enabled" type="radio" checked />
@@ -105,7 +105,7 @@ Render the label text inside an element with a `.text` class.
 
 ### Label position
 
-<Example direction="row" exampleClass="gap-l">
+<Example row exampleClass="gap-l">
 <template #example>
   <label class="radio">
     <input name="radio-label-position" type="radio">
@@ -134,7 +134,7 @@ Render the label text inside an element with a `.text` class.
 
 ## Size
 
-<Example direction="column" centered>
+<Example column centered>
 <template #example>
 <label class="radio small">
   <input id="radio-small-1" name="size-enabled" type="radio" checked />

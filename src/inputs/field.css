@@ -1,0 +1,69 @@
+/* Common styling for text inputs and selects */
+:where(.field) {
+  display: inline-flex;
+  position: relative;
+
+  :where(& > input, & > textarea, &:where(select)) {
+    background-color: transparent;
+    border-radius: var(--input-border-radius);
+    border: var(--input-border-width) solid var(--input-border-color);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-md);
+    line-height: var(--font-lineheight-1);
+    min-inline-size: 0;
+    padding: var(--size-2);
+    transition: all 0.15s var(--ease-2);
+  }
+
+  :where(& > input) {
+    field-sizing: content;
+  }
+
+  /* Variants */
+  &.filled {
+    :where(& > input, & > textarea, &:where(select)) {
+      background-color: var(--surface-tonal);
+      border-block-end-color: var(--text-color-1);
+      border-block-start-color: transparent;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-inline-end-width: 0;
+      border-inline-start-width: 0;
+    }
+
+    /* Bottom line */
+    &:before {
+      background-color: var(--text-color-1);
+      block-size: var(--input-border-width);
+      content: "";
+      inline-size: 100%;
+      inset: auto 0 0 0;
+      position: absolute;
+      transition: inset 0.2s var(--ease-3);
+    }
+
+    &:where(select):before {
+      inset: auto 0 calc(0px - var(--input-border-width)) 0;
+    }
+
+    /* Hover */
+    &:where(:not([disabled])) {
+      &:hover {
+        :where(& > input, & > textarea, &:where(select)) {
+          background-color: light-dark(
+            color-mix(in oklch, var(--surface-tonal) 93%, black),
+            color-mix(in oklch, var(--surface-tonal) 93%, white)
+          );
+        }
+      }
+
+      &:has(> input, > textarea):hover:before {
+        inset-block-end: var(--input-border-width);
+      }
+
+      &:where(select):hover:before {
+        inset-block-end: 0;
+      }
+    }
+  }
+}

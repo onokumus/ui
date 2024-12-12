@@ -1,18 +1,41 @@
+<script setup>
+	import Example from "../../.vitepress/theme/app/components/Example.vue"
+	import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
+</script>
+
 # Textarea
 
 ## Variants
 
-<div class="example-wrapper">
-  <div class="example row">
-  <textarea class="textarea" placeholder="Default"></textarea>
-   <textarea class="textarea underlined" placeholder="Underlined"></textarea>
-    <textarea class="textarea filled" placeholder="Filled"></textarea>
+<Example row>
+<template #example>
+<div class="field">
+    <textarea  placeholder="Default"></textarea>
   </div>
 
+  <div class="field filled">
+    <textarea placeholder="Filled"></textarea>
+  </div>
+</template>
+<template #code>
+
 ```html
-<textarea class="textarea" placeholder="Default"></textarea>
-<textarea class="textarea underlined" placeholder="Underlined"></textarea>
-<textarea class="textarea filled" placeholder="Filled"></textarea>
+<div class="field">
+  <textarea placeholder="Default"></textarea>
+</div>
+
+<div class="field filled">
+  <textarea placeholder="Filled"></textarea>
+</div>
 ```
 
-</div>
+</template>
+</Example>
+
+## Anatomy
+
+## API
+
+## Browser compatibility
+
+## Installation

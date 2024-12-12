@@ -4,10 +4,11 @@ import { ref, useId } from "vue"
 const props = withDefaults(
   defineProps<{
     centered?: boolean
-    direction?: "row" | "column"
+    column?: boolean
     exampleClass?: string
     hideCode?: boolean
     richText?: "rich-text" | "not-rich-text"
+    row?: boolean
     wrapperClass?: string
   }>(),
   {
@@ -31,7 +32,7 @@ const showCode = ref(!props?.hideCode)
     <div
       v-if="$slots.example"
       class="example"
-      :class="[direction, exampleClass]"
+      :class="[column && 'column', row && 'row', exampleClass]"
     >
       <slot name="example" />
     </div>

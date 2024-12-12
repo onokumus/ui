@@ -9,9 +9,9 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 
 ## Variants
 
-<Example direction="row">
+<Example row>
 <template #example>
-<select class="select">
+<select class="field">
   <button>
     <selectedoption></selectedoption>
   </button>
@@ -21,7 +21,7 @@ Leverages the [List component](/components/data-display/list) to provide markup 
     <option>Option Three</option>
   </div>
 </select>
-<select class="select filled">
+<select class="field filled">
   <button>
     <selectedoption></selectedoption>
   </button>
@@ -36,7 +36,7 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 <template #code>
 
 ```html
-<select class="select">
+<select class="field">
   <button>
     <selectedoption></selectedoption>
   </button>
@@ -47,7 +47,7 @@ Leverages the [List component](/components/data-display/list) to provide markup 
   </div>
 </select>
 
-<select class="select filled">
+<select class="field filled">
   <!--  -->
 </select>
 ```
@@ -57,10 +57,11 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 
 ## Disabled
 
-<Example direction="row">
+<Example row>
 <template #example>
 
-<select class="select" disabled>
+<div class="field">
+<select disabled>
   <button>
     <selectedoption></selectedoption>
   </button>
@@ -70,8 +71,10 @@ Leverages the [List component](/components/data-display/list) to provide markup 
     <option>Option Three</option>
   </div>
 </select>
+</div>
 
-<select class="select filled" disabled>
+<div class="field filled">
+<select disabled>
   <button>
     <selectedoption></selectedoption>
   </button>
@@ -81,11 +84,12 @@ Leverages the [List component](/components/data-display/list) to provide markup 
     <option>Option Three</option>
   </div>
 </select>
+</div>
 </template>
 <template #code>
 
 ```html{1}
-<select class="select" disabled>
+<select class="field" disabled>
   <!--  -->
 </select>
 ```
@@ -95,9 +99,9 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 
 ## Sizes
 
-<Example direction="row">
+<Example row>
 <template #example>
-<select class="select small">
+<select class="field small">
   <button>
     <selectedoption></selectedoption>
   </button>
@@ -108,7 +112,7 @@ Leverages the [List component](/components/data-display/list) to provide markup 
   </div>
 </select>
 
-<select class="select">
+<select class="field">
   <button>
     <selectedoption></selectedoption>
   </button>
@@ -122,7 +126,7 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 <template #code>
 
 ```html{1}
-<select class="small">
+<select class="field small">
   <!--  -->
 </select>
 ```
@@ -132,9 +136,9 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 
 ## Grouped
 
-<Example direction="row">
+<Example row>
 <template #example>
-<select class="select">
+<select class="field">
   <button>
     <selectedoption></selectedoption>
   </button>
@@ -155,7 +159,7 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 <template #code>
 
 ```html{7,10,11,14}
-<select class="select">
+<select class="field">
   <button>
     <selectedoption></selectedoption>
   </button>
@@ -180,9 +184,9 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 
 Since the Select popover uses the [List component](/components/data-display/list) we can simply apply its `.dense` modifier class.
 
-<Example direction="row">
+<Example row>
 <template #example>
-<select class="select">
+<select class="field">
   <button>
     <selectedoption></selectedoption>
   </button>
@@ -196,7 +200,7 @@ Since the Select popover uses the [List component](/components/data-display/list
 <template #code>
 
 ```html{1}
-<select class="select">
+<select class="field">
   <button>
     <selectedoption></selectedoption>
   </button>
@@ -241,10 +245,10 @@ Since the Select popover uses the [List component](/components/data-display/list
 6. List option/s: `<option>`
 7. List option group/s (optional): `<optgroup>`
 
-<Example direction="column">
+<Example column>
 <template #example>
 <div class="anatomy" style="margin: 0 auto;">
-<select class="select">
+<select class="field">
   <button class="anatomy">
     <selectedoption></selectedoption>
   </button>

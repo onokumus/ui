@@ -18,7 +18,7 @@ All switches should have labels. Notice the use of `aria-label` on the `label` e
 - [Visible labels](#visible-labels)
 - [Accessibility](#accessibility)
 
-<Example direction="row">
+<Example row>
 <template #example>
 <label role="switch" for="switch-checked" class="switch" aria-label="Label">
   <input id="switch-checked" type="checkbox" checked />
@@ -68,7 +68,7 @@ All switches should have labels. Notice the use of `aria-label` on the `label` e
 
 Add an element with the `.text` class. Also, don't miss the info on label [accessibility](#accessibility).
 
-<Example direction="column">
+<Example column>
 <template #example>
 <label role="switch" for="switch-visible-label" class="switch">
 	<input id="switch-visible-label" type="checkbox"/>
@@ -101,7 +101,7 @@ Add an element with the `.text` class. Also, don't miss the info on label [acces
 
 ### Label position
 
-<Example direction="row" exampleClass="gap-l">
+<Example row exampleClass="gap-l">
 <template #example>
 <label role="switch" for="switch-label-default" class="switch">
 	<input id="switch-label-default" type="checkbox"/>
@@ -131,7 +131,7 @@ Add an element with the `.text` class. Also, don't miss the info on label [acces
 
 Add the `.small` class on the parent for a smaller Switch variant.
 
-<Example direction="row">
+<Example row>
 <template #example>
 <label role="switch" for="switch-small" class="switch small">
 	<input id="switch-small" type="checkbox"/>
@@ -201,7 +201,7 @@ To have an accessible label you can choose between three approaches.
 2. Switch: `& input type="checkbox"`
 3. Label (optional): & `.text`
 
-<Example direction="row">
+<Example row>
 <template #example>
 <label role="switch" for="switch-anatomy" class="switch anatomy" aria-label="Label">
   <input id="switch-anatomy" type="checkbox" />
