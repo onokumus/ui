@@ -41,7 +41,9 @@
 
 ### Search
 
-### Select
+### [Select](/components/inputs/select)
+
+<!--@include: ./components/inputs/select-api.md -->
 
 ### [Switch](/components/inputs/switch)
 
