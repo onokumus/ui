@@ -11,7 +11,8 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 
 <Example row>
 <template #example>
-<select class="field">
+<div class="field">
+<select>
   <button>
     <selectedoption></selectedoption>
   </button>
@@ -21,6 +22,9 @@ Leverages the [List component](/components/data-display/list) to provide markup 
     <option>Option Three</option>
   </div>
 </select>
+</div>
+
+<div class="field">
 <select class="field filled">
   <button>
     <selectedoption></selectedoption>
@@ -31,25 +35,29 @@ Leverages the [List component](/components/data-display/list) to provide markup 
     <option>Option Three</option>
   </div>
 </select>
-
+</div>
 </template>
 <template #code>
 
 ```html
-<select class="field">
-  <button>
-    <selectedoption></selectedoption>
-  </button>
-  <div class="list">
-    <option>Outlined (default)</option>
-    <option>Option Two</option>
-    <option>Option Three</option>
-  </div>
-</select>
+<div class="field">
+  <select>
+    <button>
+      <selectedoption></selectedoption>
+    </button>
+    <div class="list">
+      <option>Outlined (default)</option>
+      <option>Option Two</option>
+      <option>Option Three</option>
+    </div>
+  </select>
+</div>
 
-<select class="field filled">
-  <!--  -->
-</select>
+<div class="field filled">
+  <select>
+    <!--  -->
+  </select>
+</div>
 ```
 
 </template>
@@ -60,7 +68,8 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 <Example row>
 <template #example>
 
-<select class="field" disabled>
+<div class="field">
+<select disabled>
   <button>
     <selectedoption></selectedoption>
   </button>
@@ -70,8 +79,9 @@ Leverages the [List component](/components/data-display/list) to provide markup 
     <option>Option Three</option>
   </div>
 </select>
-
-<select class="field" disabled>
+</div>
+<div class="field">
+<select disabled>
   <button>
     <selectedoption></selectedoption>
   </button>
@@ -81,13 +91,16 @@ Leverages the [List component](/components/data-display/list) to provide markup 
     <option>Option Three</option>
   </div>
 </select>
+</div>
 </template>
 <template #code>
 
 ```html{1}
-<select class="field" disabled>
-  <!--  -->
-</select>
+<div class="field">
+  <select disabled>
+    <!--  -->
+  </select>
+</div>
 ```
 
 </template>
@@ -97,7 +110,8 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 
 <Example row>
 <template #example>
-<select class="field small">
+<div class="field small">
+<select>
   <button>
     <selectedoption></selectedoption>
   </button>
@@ -107,8 +121,9 @@ Leverages the [List component](/components/data-display/list) to provide markup 
     <option>Option Three</option>
   </div>
 </select>
-
-<select class="field">
+</div>
+<div class="field">
+<select>
   <button>
     <selectedoption></selectedoption>
   </button>
@@ -118,13 +133,16 @@ Leverages the [List component](/components/data-display/list) to provide markup 
     <option>Option Three</option>
   </div>
 </select>
+</div>
 </template>
 <template #code>
 
 ```html{1}
-<select class="field small">
-  <!--  -->
-</select>
+<div class="field small">
+  <select>
+    <!--  -->
+  </select>
+</div>
 ```
 
 </template>
@@ -134,7 +152,8 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 
 <Example row>
 <template #example>
-<select class="field">
+<div class="field">
+<select>
   <button>
     <selectedoption></selectedoption>
   </button>
@@ -150,27 +169,30 @@ Leverages the [List component](/components/data-display/list) to provide markup 
    </optgroup>
   </div>
 </select>
+</div>
 </template>
 
 <template #code>
 
 ```html{7,10,11,14}
-<select class="field">
-  <button>
-    <selectedoption></selectedoption>
-  </button>
-  <div class="list">
-    <option>Select car</option>
-    <optgroup label="Swedish cars">
-      <option>Volvo</option>
-      <option>SAAB</option>
-    </optgroup>
-    <optgroup label="French cars">
-      <option>Renault</option>
-      <option>Citroën</option>
-    </optgroup>
-  </div>
-</select>
+<div class="field">
+  <select>
+    <button>
+      <selectedoption></selectedoption>
+    </button>
+    <div class="list">
+      <option>Select car</option>
+      <optgroup label="Swedish cars">
+        <option>Volvo</option>
+        <option>SAAB</option>
+      </optgroup>
+      <optgroup label="French cars">
+        <option>Renault</option>
+        <option>Citroën</option>
+      </optgroup>
+    </div>
+  </select>
+</div>
 ```
 
 </template>
@@ -182,7 +204,8 @@ Since the Select popover uses the [List component](/components/data-display/list
 
 <Example row>
 <template #example>
-<select class="field">
+<div class="field">
+<select>
   <button>
     <selectedoption></selectedoption>
   </button>
@@ -192,20 +215,23 @@ Since the Select popover uses the [List component](/components/data-display/list
     <option>Dense Three</option>
   </div>
 </select>
+</div>
 </template>
 <template #code>
 
-```html{1}
-<select class="field">
-  <button>
-    <selectedoption></selectedoption>
-  </button>
-  <div class="list dense">
-    <option>Dense</option>
-    <option>Dense Two</option>
-    <option>Dense Three</option>
-  </div>
-</select>
+```html{6}
+<div class="field">
+  <select>
+    <button>
+      <selectedoption></selectedoption>
+    </button>
+    <div class="list dense">
+      <option>Dense</option>
+      <option>Dense Two</option>
+      <option>Dense Three</option>
+    </div>
+  </select>
+</div>
 ```
 
 </template>
@@ -244,7 +270,8 @@ Since the Select popover uses the [List component](/components/data-display/list
 <Example column>
 <template #example>
 <div class="anatomy" style="margin: 0 auto;">
-<select class="field">
+<div class="field">
+<select>
   <button class="anatomy">
     <selectedoption></selectedoption>
   </button>
@@ -252,6 +279,7 @@ Since the Select popover uses the [List component](/components/data-display/list
    <option>Option One</option>
   </div>
 </select>
+</div>
 <div class="list">
    <option checked>Option One</option>
     <option>Option Two</option>
@@ -284,6 +312,7 @@ This way of writing Selects are currently quite experimental. Accessible solutio
 ## Installation
 
 ::: code-group
+<<< @/../src/inputs/field.css [field.css]
 <<< @/../src/inputs/select.css [select.css]
 <<< @/../src/data-display/list.css [list.css]
 :::

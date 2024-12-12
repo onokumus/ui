@@ -1,9 +1,9 @@
-/* Common styling for text inputs and selects */
+/* Common styling for text inputs, textareas and selects */
 :where(.field) {
   display: inline-flex;
   position: relative;
 
-  :where(& > input, & > textarea, &:where(select)) {
+  :where(& > input, & > textarea, & > select) {
     background-color: transparent;
     border-radius: var(--input-border-radius);
     border: var(--input-border-width) solid var(--input-border-color);
@@ -15,13 +15,13 @@
     transition: all 0.15s var(--ease-2);
   }
 
-  :where(& > input) {
+  :where(& > input, & > textarea) {
     field-sizing: content;
   }
 
   /* Variants */
   &.filled {
-    :where(& > input, & > textarea, &:where(select)) {
+    :where(& > input, & > textarea, & > select) {
       background-color: var(--surface-tonal);
       border-block-end-color: var(--text-color-1);
       border-block-start-color: transparent;
@@ -42,14 +42,14 @@
       transition: inset 0.2s var(--ease-3);
     }
 
-    &:where(select):before {
+    & > select:before {
       inset: auto 0 calc(0px - var(--input-border-width)) 0;
     }
 
     /* Hover */
     &:where(:not([disabled])) {
       &:hover {
-        :where(& > input, & > textarea, &:where(select)) {
+        :where(& > input, & > textarea, & > select) {
           background-color: light-dark(
             color-mix(in oklch, var(--surface-tonal) 93%, black),
             color-mix(in oklch, var(--surface-tonal) 93%, white)
@@ -61,7 +61,7 @@
         inset-block-end: var(--input-border-width);
       }
 
-      &:where(select):hover:before {
+      & > select:hover:before {
         inset-block-end: 0;
       }
     }
