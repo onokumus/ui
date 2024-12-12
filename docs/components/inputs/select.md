@@ -191,6 +191,8 @@ Since the Select popover uses the [List component](/components/data-display/list
   }
 </style>
 
+## Multiple
+
 ## Anatomy
 
 1. Select container: `<select>`
