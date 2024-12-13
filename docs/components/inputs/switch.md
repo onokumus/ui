@@ -187,6 +187,12 @@ To have an accessible label you can choose between three approaches.
 <style scoped>
   .anatomy {
     outline-offset: 8px;
+    outline: var(--_anatomy-border-gray);
+
+    * {
+      outline: var(--_anatomy-border-red);
+    }
+
     input {
       border-radius: 100vmax;
       outline-offset: 2px;
