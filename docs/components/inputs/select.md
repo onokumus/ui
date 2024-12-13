@@ -24,8 +24,8 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 </select>
 </div>
 
-<div class="field">
-<select class="field filled">
+<div class="field filled">
+<select>
   <button>
     <selectedoption></selectedoption>
   </button>
@@ -80,7 +80,7 @@ Leverages the [List component](/components/data-display/list) to provide markup 
   </div>
 </select>
 </div>
-<div class="field">
+<div class="field filled">
 <select disabled>
   <button>
     <selectedoption></selectedoption>
@@ -258,8 +258,6 @@ Since the Select popover uses the [List component](/components/data-display/list
     }
   }
 </style>
-
-## Multiple
 
 ## Anatomy
 
