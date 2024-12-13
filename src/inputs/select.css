@@ -8,6 +8,14 @@
     display: none;
   }
 
+  &:open {
+    button {
+      &:after {
+        rotate: 180deg;
+      }
+    }
+  }
+
   /* Select popover */
   &::picker(select) {
     border: 0;
