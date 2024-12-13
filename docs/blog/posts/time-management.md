@@ -26,4 +26,4 @@ On the topic of not knowing what to work on - yeah, think on it and walk through
 
 ## Be pragmatic
 
-Some things doesn't need changing this exact moment. Don't change just because. Your time is valuable. As I said - be ready to change but be smart about it. Time spent now should save you time later.
+Some things don't need changing this exact moment. Don't change just because. Your time is valuable. As I said - be ready to change but be smart about it. Time spent now should save you time later.
