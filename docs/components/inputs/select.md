@@ -150,6 +150,8 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 
 ## Grouped
 
+Wrap your options in an element with `role="group"`. The `<label>` inside will be used as a group heading.
+
 <Example row>
 <template #example>
 <div class="field">

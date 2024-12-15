@@ -1,5 +1,4 @@
 :where(.field > select) {
-  line-height: var(--font-lineheight-2);
   padding: 0;
   position: relative;
 
