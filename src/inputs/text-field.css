@@ -1,13 +1,14 @@
 :where(
   .field:has(
       > :where(
-          input[type="text"],
-          input[type="password"],
-          input[type="url"],
           input[type="email"],
-          input[type="tel"],
+          input[type="number"],
+          input[type="password"],
           input[type="search"],
-          input[type="number"]
+          input[type="tel"],
+          input[type="text"],
+          input[type="url"],
+
         )
     )
 ) {
