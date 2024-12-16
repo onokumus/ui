@@ -19,25 +19,17 @@
 
 <!--@include: ./components/inputs/button-api.md -->
 
-### Checkbox
+### [Checkbox](/components/inputs/checkbox)
 
 <!--@include: ./components/inputs/checkbox-radio-api.md -->
-
-### Color
-
-### Date
-
-### File
 
 ### [Icon Button](/components/inputs/icon-button)
 
 <!--@include: ./components/inputs/icon-button-api.md -->
 
-### Radio
+### [Radio](/components/inputs/radio)
 
-### Range
-
-### Search
+<!--@include: ./components/inputs/checkbox-radio-api.md -->
 
 ### [Select](/components/inputs/select)
 
@@ -47,7 +39,9 @@
 
 <!--@include: ./components/inputs/switch-api.md -->
 
-### Textarea
+### [Textarea](/components/inputs/textarea)
+
+<!--@include: ./components/inputs/textarea-api.md -->
 
 ### [Text field](/components/inputs/text-field)
 

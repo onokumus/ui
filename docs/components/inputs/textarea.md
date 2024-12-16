@@ -53,10 +53,17 @@ When enabled the Textarea changes size depending on its content.
 </template>
 </Example>
 
-## Anatomy
-
 ## API
+
+<!--@include: ./textarea-api.md -->
 
 ## Browser compatibility
 
+<Baseline :ids="['field-sizing','datalist','light-dark', 'color-mix']" />
+
 ## Installation
+
+::: code-group
+<<< @/../src/inputs/field.css [field.css]
+<<< @/../src/inputs/textarea.css [textarea.css]
+:::

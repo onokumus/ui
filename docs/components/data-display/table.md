@@ -258,7 +258,7 @@ If you inspect the page you can see that I cheated a bit with the `inset-block-s
         <tr>
             <td>float</td>
             <td>Legacy Nightmare 👻</td>
-            <td>The Pre-F§lexbox Dark Ages</td>
+            <td>The Pre-Flexbox Dark Ages</td>
         </tr>
         <tr>
             <td>box-sizing</td>
@@ -268,7 +268,7 @@ If you inspect the page you can see that I cheated a bit with the `inset-block-s
     </tbody>
     <tfoot>
         <tr>
-            <td colspan="3">* Yes I had AI generate the table contents</td>
+            <td colspan="3">Yes I had AI generate the cringy table contents. I chuckled a little though.</td>
         </tr>
     </tfoot>
 </table>
@@ -276,7 +276,7 @@ If you inspect the page you can see that I cheated a bit with the `inset-block-s
 <template #code>
 
 ```html
-<table class="dense">
+<table class="sticky-header">
   <!--  -->
 </table>
 ```
