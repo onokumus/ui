@@ -1,22 +1,22 @@
 @layer props, normalize, utils, theme, components.base, components.has-deps;
 
 /* Props */
-@import "https://unpkg.com/open-props@2.0.0-beta.5/index.css" layer(props.main);
+@import "https://unpkg.com/open-props@2.0.0-beta.5/index.css" layer(props);
 @import "https://unpkg.com/browse/open-props@2.0.0-beta.5/css/sizes/media.css"
-  layer(props.media);
+  layer(props);
 @import "https://unpkg.com/open-props@2.0.0-beta.5/css/font/lineheight.css"
-  layer(props.lineheight);
+  layer(props);
 @import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/red.hex.css"
-  layer(props.colors.red);
+  layer(props);
 @import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/green.hex.css"
-  layer(props.colors.green);
+  layer(props);
 @import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/blue.hex.css"
-  layer(props.colors.blue);
+  layer(props);
 @import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/orange.hex.css"
-  layer(props.colors.orange);
+  layer(props);
 @import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/hues.oklch.css"
-  layer(props.colors.hues);
-@import "../node_modules/open-props/gray-oklch.min.css" layer(props.colors.gray);
+  layer(props);
+@import "../node_modules/open-props/gray-oklch.min.css" layer(props);
 
 /* Normalize */
 @import "./normalize.css" layer(normalize);
