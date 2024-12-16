@@ -21,10 +21,7 @@
   -webkit-text-size-adjust: none; /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
 
   accent-color: var(--primary);
-  background-color: var(
-    --surface-default,
-    light-dark(oklch(99% 0.01 255 / 1), oklch(25% 0.01 255 / 1))
-  );
+  background-color: var(--surface-default);
   block-size: 100%;
   caret-color: var(--primary);
   color: var(--text-color-2);
