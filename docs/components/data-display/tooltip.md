@@ -49,9 +49,7 @@ import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
 	}
 </style>
 
-# Tooltip
-
-<marquee width="150" direction="left">Work in progress</marquee>
+<h1><span class="badge orange" aria-label="Work in progress">Tooltip</span></h1>
 
 ::: warning Not ready yet
 Waiting for `popover="hint"` to land. Following the progress in this PR: https://github.com/whatwg/html/pull/9778

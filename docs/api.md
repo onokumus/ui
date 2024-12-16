@@ -69,7 +69,7 @@
 
 <!--@include: ./components/data-display/table-api.md -->
 
-### Tooltip
+<h3><span class="badge orange" aria-label="WIP"><a href="/components/data-display/tooltip">Tooltip</a></span></h3>
 
 ### Typography
 
@@ -85,7 +85,7 @@ A `<dialog>` element on its own doesn't do much. It's recommended to use it in c
 
 See [Card API](#card)
 
-### Progress
+### [Progress](/components/feedback/progress)
 
 ### [Snackbar](/components/feedback/snackbar)
 

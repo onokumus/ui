@@ -2,7 +2,7 @@
   --_bg-color: var(--primary);
   --_border-color: var(--primary);
   --_color: var(--gray-0);
-  --_inset: -8px -8px auto auto;
+  --_inset: auto auto calc(100% - 16px) calc(100% - 16px);
   --_translate: 0;
 
   display: inline-flex;
@@ -30,16 +30,16 @@
 
   /* Alignment */
   &.start-start {
-    --_inset: -8px auto auto -8px;
+    --_inset: auto calc(100% - 16px) calc(100% - 16px) auto;
   }
   &.start-end {
-    --_inset: -8px -8px auto auto;
+    --_inset: auto auto calc(100% - 16px) calc(100% - 16px);
   }
   &.end-start {
-    --_inset: auto auto -8px -8px;
+    --_inset: calc(100% - 16px) calc(100% - 16px) auto auto;
   }
   &.end-end {
-    --_inset: auto -8px -8px auto;
+    --_inset: calc(100% - 16px) auto auto calc(100% - 16px);
   }
 
   /* Dot */
