@@ -160,45 +160,6 @@ The British Government has a [great article](https://technology.blog.gov.uk/2020
 </template>
 </Example>
 
-## States
-
-<Example row>
-<template #example>
-<fieldset>
-<legend>Disabled</legend>
-<div class="field">
-	<input type="text" placeholder="Disabled" disabled/>
-</div>
-<div class="field filled">
-	<input type="text" placeholder="Disabled" disabled/>
-</div>
-</fieldset>
-
-<fieldset>
-<legend>Read-only</legend>
-<div class="field">
-	<input type="text" placeholder="Read-only" value="Read-only" readonly/>
-</div>
-<div class="field filled">
-	<input type="text" placeholder="Read-only" value="Read-only" readonly/>
-</div>
-</fieldset>
-</template>
-<template #code>
-
-```html{2,6}
-<div class="field">
-  <input type="text" disabled>
-</div>
-
-<div class="field">
-  <input type="text" readonly>
-</div>
-```
-
-</template>
-</Example>
-
 ## Auto-fit
 
 When enabled the Field changes size depending on its content.

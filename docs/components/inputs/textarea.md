@@ -53,29 +53,6 @@ When enabled the Textarea changes size depending on its content.
 </template>
 </Example>
 
-## Disabled
-
-<Example row>
-<template #example>
-<div class="field">
-    <textarea  placeholder="Default" disabled></textarea>
-  </div>
-
-  <div class="field filled">
-    <textarea placeholder="Filled" disabled></textarea>
-  </div>
-</template>
-<template #code>
-
-```html
-<div class="field">
-  <textarea placeholder="Disabled" disabled></textarea>
-</div>
-```
-
-</template>
-</Example>
-
 ## Anatomy
 
 ## API

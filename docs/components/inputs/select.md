@@ -63,49 +63,6 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 </template>
 </Example>
 
-## Disabled
-
-<Example row>
-<template #example>
-
-<div class="field">
-<select disabled>
-  <button>
-    <selectedoption></selectedoption>
-  </button>
-  <div class="list">
-   <option>Outlined (disabled)</option>
-    <option>Option Two</option>
-    <option>Option Three</option>
-  </div>
-</select>
-</div>
-<div class="field filled">
-<select disabled>
-  <button>
-    <selectedoption></selectedoption>
-  </button>
-  <div class="list">
-   <option>Filled (disabled)</option>
-    <option>Option Two</option>
-    <option>Option Three</option>
-  </div>
-</select>
-</div>
-</template>
-<template #code>
-
-```html{1}
-<div class="field">
-  <select disabled>
-    <!--  -->
-  </select>
-</div>
-```
-
-</template>
-</Example>
-
 ## Sizes
 
 <Example row>

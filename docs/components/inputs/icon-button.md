@@ -67,28 +67,6 @@ Make the button smaller with the `.small` modifier.
 </template>
 </Example>
 
-## Disabled
-
-Add disabled styling with the `disabled` attribute or the `.disabled` class.
-
-<Example row>
-<template #example>
-		<button class="icon-button" aria-label="Button label" disabled >
-			<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M21.65 3.434a4.889 4.889 0 1 1 6.915 6.914l-.902.901l-6.914-6.914zM19.335 5.75L4.357 20.73a3.7 3.7 0 0 0-1.002 1.84l-1.333 6.22a1 1 0 0 0 1.188 1.188l6.22-1.333a3.7 3.7 0 0 0 1.84-1.002l14.98-14.98z"/></svg>
-		</button>
-</template>
-
-<template #code>
-
-```html
-<button class="icon-button" aria-label="Button label" disabled>
-  <svg></svg>
-</button>
-```
-
-</template>
-</Example>
-
 ## Anatomy
 
 1. Container: `<button class="icon-button">`
