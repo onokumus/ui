@@ -176,6 +176,44 @@ When enabled the Field changes size depending on its content.
 </template>
 </Example>
 
+## Autosuggest
+
+Leverages the `<input>` + `<datalist>` element combo.
+
+- `<input list="DATALISTID">`
+- `<datalist id="DATALISTID">`
+
+::: tip
+Think of `<datalist>` as a list of _suggested_ values. `<select>` only allows you to choose between its provided values, and `<input>` lets you write anything you want. `<datalist>` is a hybrid between the two.
+:::
+
+<Example>
+<template #example>
+<div class="field">
+<input type="text" list="artists" />
+<datalist id="artists">
+  <option>Ray Manzarek</option>
+  <option>Jonny Greenwood</option>
+  <option>Marika Hackman</option>
+</datalist>
+</div>
+
+</template>
+
+<template #code>
+
+```html
+<div class="field">
+  <input type="text" list="datalist-id" />
+  <datalist id="datalist-id">
+    <option><!----></option>
+  </datalist>
+</div>
+```
+
+</template>
+</Example>
+
 ## Accessibility
 
 - [Don't use `<input type="number">`](#numeric-vs-input-type-number) unless your user research tells you to.

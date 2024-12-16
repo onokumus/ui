@@ -1,4 +1,4 @@
-import { defineConfig } from "vitepress";
+import { defineConfig } from "vitepress"
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -106,10 +106,6 @@ export default defineConfig({
               text: "Inputs",
               collapsed: false,
               items: [
-                {
-                  text: "Autocomplete",
-                  link: "/components/inputs/autocomplete",
-                },
                 { text: "Button", link: "/components/inputs/button" },
                 {
                   text: "Button group",
@@ -182,4 +178,4 @@ export default defineConfig({
       { icon: "github", link: "https://github.com/felix-bohlin/ui" },
     ],
   },
-});
+})

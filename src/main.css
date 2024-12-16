@@ -50,7 +50,6 @@
 
 /*** Has dependencies */
 @import "./inputs/button/button-group.css" layer(components.has-deps);
-@import "./inputs/autocomplete.css" layer(components.has-deps);
 @import "./inputs/checkbox-radio.css" layer(components.has-deps);
 @import "./inputs/color.css" layer(components.has-deps);
 @import "./inputs/select.css" layer(components.has-deps);

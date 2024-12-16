@@ -15,8 +15,6 @@
 
 ## Inputs
 
-### Autocomplete
-
 ### [Button](/components/inputs/button)
 
 <!--@include: ./components/inputs/button-api.md -->
