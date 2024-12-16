@@ -1,4 +1,4 @@
-:where(h1, h2, h3, h4, h5, h6) {
+:where(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) {
   color: var(--text-color-1);
   font-weight: 700;
   text-wrap: pretty;
@@ -39,7 +39,7 @@
 }
 
 /* Overline */
-:where(.overline, hgroup > p:first-of-type:first-child) {
+:where(.overline, hgroup > :where(p, .p):first-of-type:first-child) {
   color: light-dark(
     color-mix(in oklch, var(--text-color-2) 75%, white),
     color-mix(in oklch, var(--text-color-2) 75%, black)
@@ -109,16 +109,16 @@ code {
 }
 
 :where(hgroup) {
-  & > p {
+  & > :where(p, .p) {
     margin: 0;
   }
 
-  & > :where(h1, h2, h3, h4, h5, h6) {
+  & > :where(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) {
     margin-block-end: 0.4em;
   }
 
   /* The second p element */
-  & > p:last-of-type:last-child:not(:first-child) {
+  & > :where(p, .p):last-of-type:last-child:not(:first-child) {
     font-size: var(--font-size-lg);
     line-height: 1.6;
     opacity: 0.75;
