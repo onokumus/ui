@@ -24,7 +24,7 @@ When you visibly want to hide an element but make it accessible for screen reade
     --isRTL: 1;
   }
 
-  &:where(:not(.disabled, [disabled])) {
+  &:where(:not([disabled])) {
     &:hover:before {
       --thumb-scale: 1;
     }

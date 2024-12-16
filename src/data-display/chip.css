@@ -71,7 +71,7 @@
     }
   } */
 
-  &:where(button, a):where(:not(.disabled, [disabled])) {
+  &:where(button, a):where(:not([disabled])) {
     &:where(:not(:active)):hover {
       --_bg-color: light-dark(
         color-mix(in oklch, var(--surface-tonal) 98%, black),
@@ -106,7 +106,7 @@
   /* Ripple effect */
   background-position: center;
 
-  &:where(:not(.disabled, [disabled])) {
+  &:where(:not([disabled])) {
     &:where(:not(:active):hover) {
       --ripple: radial-gradient(circle, transparent 1%, var(--_bg-color) 1%)
         center/15000%;
@@ -121,7 +121,7 @@
   }
 
   /* Disabled */
-  &:where(.disabled, [disabled]) {
+  &:where([disabled]) {
     opacity: 0.64;
     --_text-color: color-mix(
       in oklch,

@@ -95,7 +95,7 @@
 
     button {
       /* Inverse hover and active backgrounds */
-      &:where(:not(.disabled, [disabled])) {
+      &:where(:not([disabled])) {
         &:where(:not(:active):hover) {
           --_bg-color: light-dark(
             color-mix(in oklch, white 40%, black),

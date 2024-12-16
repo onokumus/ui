@@ -24,7 +24,7 @@
 
   user-select: none;
 
-  &:where(.disabled, [disabled]) {
+  &:where([disabled]) {
     cursor: not-allowed;
     opacity: 0.64;
   }

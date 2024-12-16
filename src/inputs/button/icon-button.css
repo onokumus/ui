@@ -12,7 +12,7 @@
   padding: 0;
   transform-style: preserve-3d;
 
-  &:where(.disabled, [disabled]) {
+  &:where([disabled]) {
     color: light-dark(rgb(0, 0, 0/0.3), rgb(255, 255, 255/0.26));
     cursor: not-allowed;
     opacity: 0.64;

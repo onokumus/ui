@@ -320,7 +320,7 @@ Either disable it by setting the ripple size to 0 in your theme config:
   /* Ripple effect */
   background-position: center; // [!code --]
 
-  &:where(:not(.disabled, [disabled])) {
+  &:where(:not([disabled])) {
     &:where(:not(:active):hover) {
       --ripple: radial-gradient(circle, transparent 1%, var(--_bg-color) 1%) center/15000%; // [!code --]
 

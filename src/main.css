@@ -1,4 +1,4 @@
-@layer props, normalize, utils, theme, components.typography, components.base, components.has-deps;
+@layer props, normalize, utils, theme, components.base, components.has-deps;
 
 /* Props */
 @import "https://unpkg.com/open-props@2.0.0-beta.5/index.css" layer(props.main);
@@ -43,20 +43,21 @@
 @import "./inputs/button/button-base.css" layer(components.base);
 @import "./inputs/button/button-variants.css" layer(components.base);
 @import "./inputs/button/icon-button.css" layer(components.base);
-@import "./inputs/field.css" layer(components.base);
 @import "./inputs/button/toggle-button-group.css" layer(components.base);
+@import "./inputs/field.css" layer(components.base);
 @import "./inputs/switch.css" layer(components.base);
 @import "./surfaces/card.css" layer(components.base);
 
 /*** Has dependencies */
+@import "./data-display/rich-text.css" layer(components.has-deps);
+@import "./feedback/alert.css" layer(components.has-deps);
+@import "./feedback/dialog.css" layer(components.has-deps);
+@import "./feedback/snackbar.css" layer(components.has-deps);
 @import "./inputs/button/button-group.css" layer(components.has-deps);
 @import "./inputs/checkbox-radio.css" layer(components.has-deps);
 @import "./inputs/color.css" layer(components.has-deps);
 @import "./inputs/file.css" layer(components.has-deps);
 @import "./inputs/select.css" layer(components.has-deps);
-@import "./inputs/textarea.css" layer(components.has-deps);
 @import "./inputs/text-field.css" layer(components.has-deps);
+@import "./inputs/textarea.css" layer(components.has-deps);
 @import "./surfaces/accordion.css" layer(components.has-deps);
-@import "./feedback/alert.css" layer(components.has-deps);
-@import "./feedback/dialog.css" layer(components.has-deps);
-@import "./feedback/snackbar.css" layer(components.has-deps);
