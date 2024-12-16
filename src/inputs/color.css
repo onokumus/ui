@@ -1,23 +1,31 @@
-:where(input[type="color"]) {
-  appearance: none;
-  background: none;
-  border-color: var(--border-color);
-  border-radius: var(--border-radius, 0.25rem);
-  border-style: solid;
-  border-width: var(--size-1);
-  cursor: pointer;
-  overflow: hidden;
-  transition: outline 0.15s var(--ease-2);
+:where(.field:has(input[type="color"])) {
+  input {
+    block-size: 2.375rem;
+    padding: var(--size-2);
 
-  &::-webkit-color-swatch {
-    border: none;
+    &::-webkit-color-swatch-wrapper {
+      padding: 0;
+    }
+
+    &::-webkit-color-swatch {
+      border: 0;
+      border-radius: 0;
+    }
+
+    &::-moz-color-swatch,
+    &::-moz-focus-inner {
+      border: 0;
+    }
+
+    &::-moz-focus-inner {
+      padding: 0;
+    }
   }
 
-  &::-webkit-color-swatch-wrapper {
-    padding: 0;
-  }
-
-  &:where(:hover, :focus-within) {
-    outline: min(calc(var(--border-width) * 2), 3px) solid var(--border-color);
+  /* Sizes */
+  &.small {
+    input {
+      block-size: 1.875rem;
+    }
   }
 }
