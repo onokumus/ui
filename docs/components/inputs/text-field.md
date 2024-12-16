@@ -180,14 +180,23 @@ When enabled the Field changes size depending on its content.
 
 <!--@include: ./autosuggest-template.md -->
 
-<Example>
+<Example row>
 <template #example>
 <div class="field">
-<input type="text" list="artists" />
-<datalist id="artists">
-  <option>Ray Manzarek</option>
-  <option>Jonny Greenwood</option>
-  <option>Marika Hackman</option>
+<input type="text" list="users" placeholder="Users" />
+<datalist id="users">
+  <option value="Ray Manzarek"></option>
+  <option value="Jonny Greenwood"></option>
+  <option value="Marika Hackman"></option>
+</datalist>
+</div>
+
+<div class="field">
+<input type="email" list="users-email" placeholder="Emails" />
+<datalist id="users-email">
+  <option value="ray.manzarek@the.doors"></option>
+  <option value="jonny.greenwood@radio.head"></option>
+  <option value="marika@hack.man"></option>
 </datalist>
 </div>
 
@@ -199,7 +208,7 @@ When enabled the Field changes size depending on its content.
 <div class="field">
   <input type="text" list="datalist-id" />
   <datalist id="datalist-id">
-    <option><!----></option>
+    <option value="option value"></option>
   </datalist>
 </div>
 ```
@@ -217,7 +226,7 @@ When enabled the Field changes size depending on its content.
 
 ## Browser compatibility
 
-<Baseline :ids="['field-sizing','light-dark', 'color-mix']" />
+<Baseline :ids="['field-sizing','datalist','light-dark', 'color-mix']" />
 
 ## Installation
 
