@@ -262,7 +262,7 @@ module.exports = {
   },
   variants: {},
   plugins: [],
-};
+}
 ```
 
 Hopefully that looks good enough to you.
@@ -382,4 +382,5 @@ Includes both basic styles for typographic elements as well as the `.rich-text` 
 
 ::: code-group
 <<< @/../src/data-display/typography.css [typography.css]
+<<< @/../src/data-display/rich-text.css [rich-text.css]
 :::
