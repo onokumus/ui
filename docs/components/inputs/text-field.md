@@ -32,54 +32,55 @@
 </template>
 </Example>
 
-## Sizes
+## Native types
+
+Change the `input`'s `type` attribute.
 
 <Example row>
 <template #example>
-<div class="field small">
-	<input type="text" placeholder="Small"/>
-</div>
-
-<div class="field">
-	<input type="text" placeholder="Default"/>
-</div>
-</template>
-<template #code>
-
-```html
-<div class="field small">
-  <input type="text" placeholder="Small" />
-</div>
-
-<div class="field">
-  <input type="text" placeholder="Default" />
-</div>
-```
-
-</template>
-</Example>
-
-## Native types
-
-<Example column>
-<template #example>
+<div class="column">
 	<div class="field">
-		<input type="text" placeholder="Text">
+		<input type="color" placeholder="Color">
+</div>
+<div class="field">
+		<input type="email" placeholder="name@email.com">
+</div>
+<div class="field">
+		<input type="file" placeholder="File">
 </div>
 	<div class="field">
 		<input type="password" placeholder="Password">
 </div>
 	<div class="field">
-		<input type="url" placeholder="https://yoursite.com">
+		<input type="search" placeholder="Search">
 </div>
-	<div class="field">
-		<input type="email" placeholder="name@email.com">
-</div>
-	<div class="field">
+		<div class="field">
 		<input type="tel" placeholder="(666) 666-1337">
 </div>
+<div class="field">
+		<input type="text" placeholder="Text">
+</div>
 	<div class="field">
-		<input type="search" placeholder="Search">
+		<input type="url" placeholder="https://yoursite.com">
+</div>
+</div>
+
+<div class="column">
+<div class="field">
+<input type="date" placeholder="Date">
+</div>
+	<div class="field">
+		<input type="datetime-local" placeholder="Datetime local">
+</div>
+<div class="field">
+		<input type="month" placeholder="Month">
+</div>
+<div class="field">
+		<input type="time" placeholder="Time">
+</div>
+<div class="field">
+		<input type="week" placeholder="Week">
+</div>
 </div>
 </template>
 <template #code>
@@ -133,22 +134,105 @@ The British Government has a [great article](https://technology.blog.gov.uk/2020
 </template>
 </Example>
 
-## Disabled
+## Sizes
 
 <Example row>
 <template #example>
+<div class="column">
+	<div class="field small">
+		<input type="text" placeholder="Text">
+</div>
+	<div class="field small">
+		<input type="password" placeholder="Password">
+</div>
+	<div class="field small">
+		<input type="url" placeholder="https://yoursite.com">
+</div>
+	<div class="field small">
+		<input type="email" placeholder="name@email.com">
+</div>
+	<div class="field small">
+		<input type="tel" placeholder="(666) 666-1337">
+</div>
+	<div class="field small">
+		<input type="search" placeholder="Search">
+</div>
+	<div class="field small">
+		<input type="color" placeholder="Color">
+</div>
+</div>
+<div class="column">
+	<div class="field">
+		<input type="text" placeholder="Text">
+</div>
+	<div class="field">
+		<input type="password" placeholder="Password">
+</div>
+	<div class="field">
+		<input type="url" placeholder="https://yoursite.com">
+</div>
+	<div class="field">
+		<input type="email" placeholder="name@email.com">
+</div>
+	<div class="field">
+		<input type="tel" placeholder="(666) 666-1337">
+</div>
+	<div class="field">
+		<input type="search" placeholder="Search">
+</div>
+	<div class="field">
+		<input type="color" placeholder="Color">
+</div>
+</div>
+</template>
+<template #code>
+
+```html{1,5}
+<div class="field small">
+  <!--  -->
+</div>
+
+<div class="field">
+  <!--  -->
+</div>
+```
+
+</template>
+</Example>
+
+## States
+
+<Example row>
+<template #example>
+<fieldset>
+<legend>Disabled</legend>
 <div class="field">
 	<input type="text" placeholder="Disabled" disabled/>
 </div>
 <div class="field filled">
 	<input type="text" placeholder="Disabled" disabled/>
 </div>
+</fieldset>
+
+<fieldset>
+<legend>Read-only</legend>
+<div class="field">
+	<input type="text" placeholder="Read-only" value="Read-only" readonly/>
+</div>
+<div class="field filled">
+	<input type="text" placeholder="Read-only" value="Read-only" readonly/>
+</div>
+</fieldset>
 </template>
 <template #code>
 
-```html{2}
+```html{2,6}
 <div class="field">
   <input type="text" disabled>
+</div>
+
+<div class="field">
+  <input type="text" readonly>
 </div>
 ```
 

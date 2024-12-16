@@ -65,17 +65,6 @@ const showCode = ref(!props?.hideCode)
 </template>
 
 <style>
-.chip {
-  border-radius: var(--surface-border-radius);
-  justify-self: end;
-  margin: 0 -1px -1px 0;
-  opacity: 0.64;
-
-  .rotated {
-    rotate: 180deg;
-  }
-}
-
 .example-wrapper {
   border-color: var(--border-color);
   border-radius: var(--surface-border-radius, 0.25rem);
@@ -99,6 +88,21 @@ const showCode = ref(!props?.hideCode)
   .example {
     margin-block: var(--size-3, 1rem);
     padding-block: 0;
+
+    .field:not(.auto-fit) {
+      width: 25ch;
+    }
+
+    & + .chip {
+      border-radius: var(--surface-border-radius);
+      justify-self: end;
+      margin: 0 -1px -1px 0;
+      opacity: 0.64;
+
+      .rotated {
+        rotate: 180deg;
+      }
+    }
   }
 
   .vp-code-group .tabs {
