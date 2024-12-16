@@ -52,6 +52,7 @@
 @import "./inputs/button/button-group.css" layer(components.has-deps);
 @import "./inputs/checkbox-radio.css" layer(components.has-deps);
 @import "./inputs/color.css" layer(components.has-deps);
+@import "./inputs/file.css" layer(components.has-deps);
 @import "./inputs/select.css" layer(components.has-deps);
 @import "./inputs/textarea.css" layer(components.has-deps);
 @import "./inputs/text-field.css" layer(components.has-deps);

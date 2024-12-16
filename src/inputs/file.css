@@ -1,0 +1,45 @@
+:where(.field:has(input[type="file"])) {
+  input {
+    align-self: flex-start;
+    block-size: 2.375rem;
+    box-shadow: none;
+    color: var(--text-color-1);
+    cursor: initial;
+    max-inline-size: 100%;
+    padding: 0;
+
+    &::-webkit-file-upload-button,
+    &::file-selector-button {
+      background-color: light-dark(var(--gray-1), var(--gray-12));
+      block-size: 100%;
+      border: 0;
+      border-inline-end: var(--input-border-width) solid
+        var(--input-border-color);
+      cursor: pointer;
+      margin-inline-end: 2ex;
+    }
+  }
+
+  /* Variant */
+  &.filled {
+    input {
+      &::-webkit-file-upload-button,
+      &::file-selector-button {
+        background-color: var(--surface-default);
+        block-size: calc(100% - var(--size-2));
+        border-radius: var(--input-border-radius);
+        cursor: pointer;
+        margin-inline-end: 2ex;
+        margin-block-start: var(--size-1);
+        margin-inline-start: var(--size-1);
+      }
+    }
+  }
+
+  /* Sizes */
+  &.small {
+    input {
+      block-size: 1.875rem;
+    }
+  }
+}

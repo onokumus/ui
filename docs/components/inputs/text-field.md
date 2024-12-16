@@ -138,51 +138,11 @@ The British Government has a [great article](https://technology.blog.gov.uk/2020
 
 <Example row>
 <template #example>
-<div class="column">
 	<div class="field small">
-		<input type="text" placeholder="Text">
+		<input type="text" placeholder="Small">
 </div>
-	<div class="field small">
-		<input type="password" placeholder="Password">
-</div>
-	<div class="field small">
-		<input type="url" placeholder="https://yoursite.com">
-</div>
-	<div class="field small">
-		<input type="email" placeholder="name@email.com">
-</div>
-	<div class="field small">
-		<input type="tel" placeholder="(666) 666-1337">
-</div>
-	<div class="field small">
-		<input type="search" placeholder="Search">
-</div>
-	<div class="field small">
-		<input type="color" placeholder="Color">
-</div>
-</div>
-<div class="column">
-	<div class="field">
-		<input type="text" placeholder="Text">
-</div>
-	<div class="field">
-		<input type="password" placeholder="Password">
-</div>
-	<div class="field">
-		<input type="url" placeholder="https://yoursite.com">
-</div>
-	<div class="field">
-		<input type="email" placeholder="name@email.com">
-</div>
-	<div class="field">
-		<input type="tel" placeholder="(666) 666-1337">
-</div>
-	<div class="field">
-		<input type="search" placeholder="Search">
-</div>
-	<div class="field">
-		<input type="color" placeholder="Color">
-</div>
+<div class="field">
+		<input type="text" placeholder="Default">
 </div>
 </template>
 <template #code>
@@ -317,4 +277,6 @@ When enabled the Field changes size depending on its content.
 ::: code-group
 <<< @/../src/inputs/field.css [field.css]
 <<< @/../src/inputs/text-field.css [text-field.css]
+<<< @/../src/inputs/color.css [color.css]
+<<< @/../src/inputs/file.css [file.css]
 :::
