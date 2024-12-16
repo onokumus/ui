@@ -1,0 +1,21 @@
+:where(
+  .field:has(
+      > :where(
+          input[type="text"],
+          input[type="password"],
+          input[type="url"],
+          input[type="email"],
+          input[type="tel"],
+          input[type="search"],
+          input[type="number"]
+        )
+    )
+) {
+  /* Sizes */
+  &.small {
+    input {
+      padding-block: var(--size-1);
+      padding-inline: var(--size-2) var(--size-7);
+    }
+  }
+}

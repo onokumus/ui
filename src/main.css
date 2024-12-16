@@ -55,6 +55,7 @@
 @import "./inputs/color.css" layer(components.has-deps);
 @import "./inputs/select.css" layer(components.has-deps);
 @import "./inputs/textarea.css" layer(components.has-deps);
+@import "./inputs/text-field.css" layer(components.has-deps);
 @import "./surfaces/accordion.css" layer(components.has-deps);
 @import "./feedback/alert.css" layer(components.has-deps);
 @import "./feedback/dialog.css" layer(components.has-deps);

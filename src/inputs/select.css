@@ -110,7 +110,7 @@
   }
 }
 
-:where(.field:has(> select)) {
+:where(:has(> select)) {
   /* Size */
   &.small {
     button {
