@@ -5,6 +5,8 @@
 
 # Text field
 
+## Variants
+
 <Example row>
 <template #example>
 <div class="field">
@@ -24,6 +26,33 @@
 
 <div class="field filled">
   <input type="text" placeholder="Filled" />
+</div>
+```
+
+</template>
+</Example>
+
+## Sizes
+
+<Example row>
+<template #example>
+<div class="field small">
+	<input type="text" placeholder="Small"/>
+</div>
+
+<div class="field">
+	<input type="text" placeholder="Default"/>
+</div>
+</template>
+<template #code>
+
+```html
+<div class="field small">
+  <input type="text" placeholder="Small" />
+</div>
+
+<div class="field">
+  <input type="text" placeholder="Default" />
 </div>
 ```
 
@@ -153,6 +182,8 @@ When enabled the Field changes size depending on its content.
 
 ## API
 
+<!--@include: ./text-field-api.md -->
+
 ## Browser compatibility
 
 <Baseline :ids="['field-sizing','light-dark', 'color-mix']" />
@@ -161,4 +192,5 @@ When enabled the Field changes size depending on its content.
 
 ::: code-group
 <<< @/../src/inputs/field.css [field.css]
+<<< @/../src/inputs/text-field.css [text-field.css]
 :::

@@ -1,6 +1,6 @@
 | Type                  | Modifiers                                                                                   | Default        | Description                                       |
 | --------------------- | ------------------------------------------------------------------------------------------- | -------------- | ------------------------------------------------- |
-| [Absolute](#absolute) | `&.absolute`, `&.visible`                                                                   | -              | Optional classes needed for absolute positioning. |
+| [Absolute](#absolute) | `.absolute`, `.visible`                                                                     | -              | Optional classes needed for absolute positioning. |
 | [Actions](#anatomy)   | `& > .actions > <action button>` / `<icon button>`                                          | -              | Optional action.                                  |
 | Container             | `.snackbar`                                                                                 | -              | Container element.                                |
 | [Children](#anatomy)  | `& > .content`, `& > .actions`                                                              | -              | Optional child content.                           |

@@ -51,7 +51,9 @@
 
 ### Textarea
 
-### Text input
+### [Text field](/components/inputs/text-field)
+
+<!--@include: ./components/inputs/text-field-api.md -->
 
 ### [Toggle button group](/components/inputs/toggle-button-group)
 
