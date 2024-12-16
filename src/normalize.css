@@ -218,10 +218,7 @@ select,
 }
 
 :where(:not(pre) > code) {
-  background: var(
-    --surface-filled,
-    light-dark(oklch(95% 0.01 255 / 1), oklch(18% 0.01 255 / 1))
-  );
+  background: var(--surface-filled);
   border-radius: var(--border-radius, var(--radius-2));
   padding: var(--size-1) var(--size-2);
   writing-mode: lr;
