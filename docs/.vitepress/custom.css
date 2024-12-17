@@ -6,6 +6,27 @@ html.dark {
 
 html {
   scroll-timeline: --page-scroll block;
+
+  &:has(.VPHome) {
+    &:before {
+      background-image: radial-gradient(
+        var(--text-color-2) 1.4500000000000002px,
+        transparent 1.4500000000000002px
+      );
+      background-size: 20px 20px;
+      content: "";
+      inset: 0;
+      opacity: 0.2;
+      pointer-events: none;
+      position: fixed;
+    }
+  }
+
+  &.dark {
+    &:before {
+      opacity: 0.075;
+    }
+  }
 }
 
 @keyframes grow-progress {
@@ -16,6 +37,7 @@ html {
     transform: scaleX(1);
   }
 }
+
 /*
 TODO: Make sure it doesn't show if there's nothing to scroll
 #progress {

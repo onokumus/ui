@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import VPHomeHero from "./VPHomeHero.vue";
-import VPHomeFeatures from "./VPHomeFeatures.vue";
-import VPHomeContent from "./VPHomeContent.vue";
-import { useData } from "../composables/data";
+import VPHomeHero from "./VPHomeHero.vue"
+import VPHomeFeatures from "./VPHomeFeatures.vue"
+import VPHomeContent from "./VPHomeContent.vue"
+import { useData } from "../composables/data"
 
-const { frontmatter } = useData();
+const { frontmatter } = useData()
 </script>
 
 <template>

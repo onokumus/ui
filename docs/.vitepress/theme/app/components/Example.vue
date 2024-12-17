@@ -65,6 +65,14 @@ const showCode = ref(!props?.hideCode)
 </template>
 
 <style>
+.dark {
+  .example-wrapper {
+    &:before {
+      opacity: 0.075;
+    }
+  }
+}
+
 .example-wrapper {
   border-color: var(--border-color);
   border-radius: var(--surface-border-radius, 0.25rem);
@@ -75,7 +83,20 @@ const showCode = ref(!props?.hideCode)
   display: grid;
   margin-inline: -1rem;
   margin-block: var(--size-3, 1rem);
-  /* overflow: hidden; */
+  position: relative;
+
+  &:before {
+    background-image: radial-gradient(
+      var(--text-color-2) 1.4500000000000002px,
+      transparent 1.4500000000000002px
+    );
+    background-size: 20px 20px;
+    content: "";
+    inset: 0;
+    opacity: 0.2;
+    pointer-events: none;
+    position: absolute;
+  }
 
   &:has(.example) {
     border-width: 1px;
