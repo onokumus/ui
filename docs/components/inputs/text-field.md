@@ -32,6 +32,45 @@
 </template>
 </Example>
 
+## Label & caption
+
+<Example row>
+<template #example>
+<label class="field small">
+	<span class="label">Label</span>
+	<input type="text" placeholder="Placeholder"/>
+	<span class="caption">Label</span>
+</label>
+
+<label class="field">
+	<span class="label">Label</span>
+	<input type="text" placeholder="Outlined"/>
+	<span class="caption">Label</span>
+</label>
+
+<label class="field filled">
+	<span class="label">Label</span>
+	<input type="text" placeholder="Filled"/>
+	<span class="caption">Label</span>
+</label>
+</template>
+<template #code>
+
+```html
+<div class="field">
+  <input type="text" placeholder="Outlined" />
+</div>
+
+<div class="field filled">
+  <input type="text" placeholder="Filled" />
+</div>
+```
+
+</template>
+</Example>
+
+## Prefix & suffix
+
 ## Native types
 
 Change the `input`'s `type` attribute.

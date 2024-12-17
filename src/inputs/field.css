@@ -3,7 +3,7 @@
 - Form related styles such as: labels, validation text, error handling
 */
 :where(.field) {
-  display: inline-flex;
+  display: inline-grid;
   position: relative;
 
   :where(& > input, & > textarea, & > select) {
@@ -12,6 +12,8 @@
     border: var(--input-border-width) solid var(--input-border-color);
     font-family: var(--font-sans);
     font-size: var(--font-size-1);
+    grid-column: 1/-1;
+    grid-row: 1;
     line-height: var(--font-lineheight-1);
     min-inline-size: 0;
     padding: var(--size-2);
@@ -19,6 +21,52 @@
       background-color 0.15s var(--ease-2),
       border-color 0.15s var(--ease-2);
     width: 100%;
+  }
+
+  /* Remove outline */
+  &:has(.label) {
+    *:focus-visible {
+      outline: 0;
+    }
+  }
+
+  /* Label */
+  :where(.label) {
+    align-self: center;
+    background-color: var(--surface-default);
+    border-radius: var(--radius-1);
+    display: inline-flex;
+    font-size: var(--font-size-md);
+    grid-column: 1/-1;
+    grid-row: 1;
+    inline-size: calc(100% - (var(--input-border-width) * 2));
+    margin-inline-start: var(--input-border-width);
+    padding-inline: var(--size-2);
+    transition:
+      background-color 0.15s var(--ease-2),
+      font-size 0.2s var(--ease-2),
+      inline-size 0.05s var(--ease-2),
+      margin 0.2s var(--ease-2),
+      padding-inline 0.2s var(--ease-2);
+    z-index: 1;
+  }
+
+  &:focus-within {
+    .label {
+      font-size: 0.75rem;
+      inline-size: max-content;
+      line-height: 1;
+      margin-block-start: -2.5rem;
+      margin-inline-start: var(--size-1);
+    }
+  }
+
+  /* Caption */
+  :where(.caption) {
+    font-size: var(--font-size-xs);
+    grid-row: 3;
+    line-height: 1.5;
+    margin-block-start: 0.125rem;
   }
 
   /* Auto-fit */
@@ -35,10 +83,7 @@
       background-color: var(--surface-tonal);
       border-block-end-color: var(--text-color-1);
       border-block-start-color: transparent;
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 0;
-      border-inline-end-width: 0;
-      border-inline-start-width: 0;
+      border-radius: 0;
     }
 
     /* Bottom line */
@@ -57,10 +102,22 @@
       inset: auto 0 calc(0px - var(--input-border-width)) 0;
     }
 
+    /* Label */
+    :where(.label) {
+      background-color: var(--surface-tonal);
+    }
+
     &:where(:not(:has([disabled]))) {
       /* Hover */
       &:hover {
         :where(& > input, & > textarea, & > select) {
+          background-color: light-dark(
+            color-mix(in oklch, var(--surface-tonal) 93%, black),
+            color-mix(in oklch, var(--surface-tonal) 93%, white)
+          );
+        }
+
+        .label {
           background-color: light-dark(
             color-mix(in oklch, var(--surface-tonal) 93%, black),
             color-mix(in oklch, var(--surface-tonal) 93%, white)
@@ -99,6 +156,17 @@
 
       * {
         pointer-events: none;
+      }
+    }
+  }
+
+  /* Sizes */
+  &.small {
+    &:focus-within {
+      .label {
+        margin-block-start: -1.9rem;
+        margin-inline-start: var(--size-1);
+        padding-inline: var(--size-1);
       }
     }
   }
