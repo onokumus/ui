@@ -1,26 +1,26 @@
 <script setup lang="ts">
-import { type Ref, inject } from "vue";
-import type { DefaultTheme } from "vitepress/theme";
-import VPButton from "./VPButton.vue";
-import VPImage from "./VPImage.vue";
+import { type Ref, inject } from "vue"
+import type { DefaultTheme } from "vitepress/theme"
+import VPButton from "./VPButton.vue"
+import VPImage from "./VPImage.vue"
 
 export interface HeroAction {
-  theme?: "brand" | "alt";
-  text: string;
-  link: string;
-  target?: string;
-  rel?: string;
+  theme?: "brand" | "alt"
+  text: string
+  link: string
+  target?: string
+  rel?: string
 }
 
 defineProps<{
-  name?: string;
-  text?: string;
-  tagline?: string;
-  image?: DefaultTheme.ThemeableImage;
-  actions?: HeroAction[];
-}>();
+  name?: string
+  text?: string
+  tagline?: string
+  image?: DefaultTheme.ThemeableImage
+  actions?: HeroAction[]
+}>()
 
-const heroImageSlotExists = inject("hero-image-slot-exists") as Ref<boolean>;
+const heroImageSlotExists = inject("hero-image-slot-exists") as Ref<boolean>
 </script>
 
 <template>
@@ -47,7 +47,7 @@ const heroImageSlotExists = inject("hero-image-slot-exists") as Ref<boolean>;
             <a
               :href="action.link"
               :class="[action.theme]"
-              class="button large"
+              class="button"
               :rel="action.rel"
               :target="action.target"
             >
