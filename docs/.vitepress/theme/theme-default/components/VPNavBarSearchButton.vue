@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import type { ButtonTranslations } from "../../../../types/local-search";
-import { createSearchTranslate } from "../support/translation";
+import type { ButtonTranslations } from "../../../../types/local-search"
+import { createSearchTranslate } from "../support/translation"
 
 // Button-Translations
 const defaultTranslations: { button: ButtonTranslations } = {
@@ -8,9 +8,9 @@ const defaultTranslations: { button: ButtonTranslations } = {
     buttonText: "Search",
     buttonAriaLabel: "Search",
   },
-};
+}
 
-const translate = createSearchTranslate(defaultTranslations);
+const translate = createSearchTranslate(defaultTranslations)
 </script>
 
 <template>
@@ -134,7 +134,7 @@ const translate = createSearchTranslate(defaultTranslations);
 .DocSearch-Button .DocSearch-Button-Placeholder {
   display: none;
   margin-block-start: 2px;
-  padding: 0 16px 0 0;
+  padding-inline: 0 16px;
   font-size: 13px;
   font-weight: 500;
   color: var(--text-color-2-78);

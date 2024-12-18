@@ -37,7 +37,7 @@ const target = computed(() =>
       :rel="rel"
       :target="target"
     >
-      <span class="badge orange" aria-label="WIP">
+      <span class="badge start-end orange" aria-label="WIP">
         <slot name="nav-bar-title-before" />
         <VPImage v-if="theme.logo" class="logo" :image="theme.logo" />
         <template v-if="theme.siteTitle"
@@ -66,10 +66,6 @@ const target = computed(() =>
   text-decoration: inherit;
 }
 
-.badge {
-  --_inset: auto auto calc(100% - 8px) calc(100% - 8px);
-}
-
 @media (min-width: 960px) {
   .title {
     flex-shrink: 0;
@@ -78,6 +74,10 @@ const target = computed(() =>
   .VPNavBarTitle.has-sidebar .title {
     border-bottom-color: var(--vp-c-divider);
   }
+}
+
+.badge {
+  --_inset-offset: 10px;
 }
 
 :deep(.logo) {

@@ -52,17 +52,15 @@
       background-color: transparent;
     }
   }
-}
 
-[dir="rtl"] {
-  :where(progress):indeterminate {
-    animation-direction: reverse;
-  }
-}
+  [dir="rtl"] {
+    :where(progress):indeterminate {
+      animation-direction: reverse;
 
-[dir="rtl"] {
-  :where(progress):indeterminate::after {
-    animation-direction: reverse;
+      &:after {
+        animation-direction: reverse;
+      }
+    }
   }
 }
 

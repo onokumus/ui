@@ -2,7 +2,9 @@
   --_bg-color: var(--primary);
   --_border-color: var(--primary);
   --_color: var(--gray-0);
-  --_inset: auto auto calc(100% - 16px) calc(100% - 16px);
+  --_inset-offset: 16px;
+  --_inset: auto auto calc(100% - var(--_inset-offset))
+    calc(100% - var(--_inset-offset));
   --_translate: 0;
 
   display: inline-flex;
@@ -30,16 +32,20 @@
 
   /* Alignment */
   &.start-start {
-    --_inset: auto calc(100% - 16px) calc(100% - 16px) auto;
+    --_inset: auto calc(100% - var(--_inset-offset))
+      calc(100% - var(--_inset-offset)) auto;
   }
   &.start-end {
-    --_inset: auto auto calc(100% - 16px) calc(100% - 16px);
+    --_inset: auto auto calc(100% - var(--_inset-offset))
+      calc(100% - var(--_inset-offset));
   }
   &.end-start {
-    --_inset: calc(100% - 16px) calc(100% - 16px) auto auto;
+    --_inset: calc(100% - var(--_inset-offset))
+      calc(100% - var(--_inset-offset)) auto auto;
   }
   &.end-end {
-    --_inset: calc(100% - 16px) auto auto calc(100% - 16px);
+    --_inset: calc(100% - var(--_inset-offset)) auto auto
+      calc(100% - var(--_inset-offset));
   }
 
   /* Dot */
@@ -69,5 +75,25 @@
   &.orange {
     --_bg-color: var(--color-8);
     --_border-color: var(--color-8);
+  }
+}
+
+[dir="rtl"] {
+  :where(.badge) {
+    --_inset: auto calc(100% - 16px) calc(100% - 16px) auto;
+
+    /* Alignment */
+    &.start-start {
+      --_inset: auto auto calc(100% - 16px) calc(100% - 16px);
+    }
+    &.start-end {
+      --_inset: auto calc(100% - 16px) calc(100% - 16px) auto;
+    }
+    &.end-start {
+      --_inset: calc(100% - 16px) auto auto calc(100% - 16px);
+    }
+    &.end-end {
+      --_inset: calc(100% - 16px) calc(100% - 16px) auto auto;
+    }
   }
 }
