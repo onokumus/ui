@@ -18,15 +18,25 @@
     min-inline-size: 0;
     padding: var(--size-2);
     transition:
-      background-color 0.15s var(--ease-2),
-      border-color 0.15s var(--ease-2);
+      background-color 0.2s var(--ease-3),
+      border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     width: 100%;
   }
 
   /* Remove outline */
-  &:has(.label) {
-    *:focus-visible {
-      outline: 0;
+  *:focus-visible {
+    outline: 0;
+  }
+
+  /* Element states */
+  &:not(.filled):hover {
+    :where(& > input, & > textarea, & > select) {
+      border-color: var(--text-color-1);
+    }
+  }
+  &:not(.filled):focus-within {
+    :where(& > input, & > textarea, & > select) {
+      border-color: var(--primary);
     }
   }
 
@@ -43,11 +53,11 @@
     margin-inline-start: var(--input-border-width);
     padding-inline: var(--size-2);
     transition:
-      background-color 0.15s var(--ease-2),
-      font-size 0.2s var(--ease-2),
-      inline-size 0.05s var(--ease-2),
-      margin 0.2s var(--ease-2),
-      padding-inline 0.2s var(--ease-2);
+      background-color 0.15s var(--ease-3),
+      font-size 0.2s var(--ease-3),
+      inline-size 0.05s var(--ease-3),
+      margin 0.2s var(--ease-3),
+      padding-inline 0.2s var(--ease-3);
     z-index: 1;
   }
 
@@ -83,23 +93,24 @@
       background-color: var(--surface-tonal);
       border-block-end-color: var(--text-color-1);
       border-block-start-color: transparent;
+      border-inline-color: transparent;
       border-radius: 0;
     }
 
     /* Bottom line */
     &:before {
       background-color: var(--text-color-1);
-      block-size: var(--input-border-width);
+      block-size: calc(var(--input-border-width) + 1px);
       content: "";
       inline-size: 100%;
-      inset: auto 0 0 0;
-      position: absolute;
-      transition: inset 0.2s var(--ease-3);
+      margin-block-end: calc(-1px - var(--input-border-width));
+      transform: scaleX(0);
+      transition:
+        background-color 0s var(--ease-3),
+        transform 0.3s var(--ease-3),
+        translate 0.2s var(--ease-3);
+      translate: 0 calc(-1px - var(--input-border-width));
       z-index: 1;
-    }
-
-    & > select:before {
-      inset: auto 0 calc(0px - var(--input-border-width)) 0;
     }
 
     /* Label */
@@ -124,9 +135,22 @@
           );
         }
       }
+    }
 
-      &:has(> input, > textarea, > select):hover:before {
-        inset-block-end: var(--input-border-width);
+    /* Element states */
+    &:hover {
+      &:before {
+        transform: scaleX(1);
+      }
+    }
+    &:focus-within {
+      :where(& > input, & > textarea, & > select) {
+        border-block-end-color: var(--primary);
+      }
+
+      &:before {
+        background-color: var(--primary);
+        transform: scaleX(1) translateX(0px);
       }
     }
   }
