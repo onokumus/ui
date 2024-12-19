@@ -29,7 +29,7 @@ Lists meant to be used stand-alone or as part of Select elements
         content: "";
         display: block;
         inline-size: 100%;
-        inset: calc(0rem - var(--size-2)) 0 auto 0;
+        inset: calc(-1 * var(--size-2)) 0 auto 0;
         position: absolute;
         visibility: visible; /* override select > option:before style */
       }
@@ -46,7 +46,7 @@ Lists meant to be used stand-alone or as part of Select elements
       &.border-top {
         margin-block-start: var(--size-2);
         &:before {
-          inset: calc(0rem - var(--size-1)) 0 auto 0;
+          inset: calc(-1 * var(--size-1)) 0 auto 0;
         }
       }
 
@@ -225,7 +225,7 @@ Lists meant to be used stand-alone or as part of Select elements
         border-block-start: 1px solid var(--border-color);
         content: "";
         inline-size: 100%;
-        inset: calc(0rem - var(--size-2)) 0 auto 0;
+        inset: calc(-1 * var(--size-2)) 0 auto 0;
         position: absolute;
       }
     }
