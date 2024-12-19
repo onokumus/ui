@@ -32,26 +32,26 @@
 </template>
 </Example>
 
-## Label & caption
+## Label & supporting text
 
 <Example row>
 <template #example>
 <label class="field small">
 	<span class="label">Label</span>
 	<input type="text" placeholder="Placeholder"/>
-	<span class="caption">Label</span>
+	<span class="supporting-text">Supporting text</span>
 </label>
 
 <label class="field">
 	<span class="label">Label</span>
 	<input type="text" placeholder="Outlined"/>
-	<span class="caption">Label</span>
+	<span class="supporting-text">Supporting text</span>
 </label>
 
 <label class="field filled">
 	<span class="label">Label</span>
 	<input type="text" placeholder="Filled"/>
-	<span class="caption">Label</span>
+	<span class="supporting-text">Supporting text</span>
 </label>
 </template>
 <template #code>

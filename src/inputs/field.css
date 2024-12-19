@@ -1,6 +1,6 @@
 /*
 - Common styling for input, textarea and select
-- Form related styles such as: label, caption, error handling
+- Form related styles such as: label, supporting text, error handling
 */
 :where(.field) {
   display: inline-grid;
@@ -18,10 +18,14 @@
     line-height: var(--font-lineheight-1);
     min-inline-size: 0;
     padding: var(--size-2);
-    transition:
-      background-color 0.2s var(--ease-3),
-      border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     width: 100%;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition:
+        background-color 0.2s var(--ease-3),
+        border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        padding-block 0.2s var(--ease-3);
+    }
   }
 
   /* Outlined-specific  */
@@ -58,13 +62,16 @@
     margin-inline-start: var(--input-border-width);
     padding-inline: var(--size-2);
     pointer-events: none;
-    transition:
-      background-color 0.15s var(--ease-3),
-      font-size 0.2s var(--ease-3),
-      inline-size 0.05s var(--ease-3),
-      margin 0.2s var(--ease-3),
-      padding-inline 0.2s var(--ease-3);
     z-index: 1;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition:
+        background-color 0.15s var(--ease-3),
+        font-size 0.2s var(--ease-3),
+        inline-size 0.05s var(--ease-3),
+        margin 0.2s var(--ease-3),
+        padding-inline 0.2s var(--ease-3);
+    }
   }
 
   /* Move label out of the way on focus or if there's content inside the Field */
@@ -80,12 +87,13 @@
     }
   }
 
-  /* Caption */
-  :where(.caption) {
+  /* Supporting text */
+  :where(.supporting-text) {
     font-size: var(--font-size-xs);
     grid-row: 3;
     line-height: 1.5;
-    margin-block-start: 0.125rem;
+    margin-inline-start: var(--input-border-width);
+    padding-inline: var(--size-2);
   }
 
   /* Auto-fit */
@@ -119,12 +127,15 @@
       inline-size: 100%;
       margin-block-end: calc(-1 * var(--input-border-width));
       transform: scaleX(0);
-      transition:
-        background-color 0s var(--ease-3),
-        transform 0.3s var(--ease-3),
-        translate 0.2s var(--ease-3);
       translate: 0 calc(-1 * var(--input-border-width));
       z-index: 1;
+
+      @media (prefers-reduced-motion: no-preference) {
+        transition:
+          background-color 0s var(--ease-3),
+          transform 0.3s var(--ease-3),
+          translate 0.2s var(--ease-3);
+      }
     }
 
     /* Label */
@@ -148,6 +159,20 @@
             color-mix(in oklch, var(--surface-tonal) 93%, white)
           );
         }
+      }
+    }
+
+    /* Move label out of the way on focus or if there's content inside the Field */
+    &:focus-within,
+    &:has(:where(input, textarea):not(:placeholder-shown)),
+    &:has(option[value=""]:not(:checked)) {
+      :where(input, textarea) {
+        padding-block: 0.9375rem 0.0625rem;
+      }
+
+      .label {
+        margin-block-start: calc(-1 * var(--size-5));
+        margin-inline-start: 0;
       }
     }
 
