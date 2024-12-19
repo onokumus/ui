@@ -96,6 +96,7 @@ const showCode = ref(!props?.hideCode)
     opacity: 0.2;
     pointer-events: none;
     position: absolute;
+    z-index: -1;
   }
 
   &:has(.example) {
