@@ -1,5 +1,4 @@
 :where(.field > select) {
-  padding: 0;
   position: relative;
 
   /* Default arrow */
@@ -42,7 +41,6 @@
     display: flex;
     inline-size: 100%;
     margin: 0;
-    padding: var(--size-2) var(--size-8) var(--size-2) var(--size-3);
     position: relative;
 
     /* Arrow */

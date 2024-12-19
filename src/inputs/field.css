@@ -3,6 +3,8 @@
 - Form related styles such as: label, supporting text, error handling
 */
 :where(.field) {
+  --_input-padding-block: 0.75rem;
+
   display: inline-grid;
   position: relative;
 
@@ -17,7 +19,7 @@
     grid-row: 1;
     line-height: var(--font-lineheight-1);
     min-inline-size: 0;
-    padding: var(--size-2);
+    padding: var(--_input-padding-block) var(--size-2);
     width: 100%;
 
     @media (prefers-reduced-motion: no-preference) {
@@ -28,14 +30,18 @@
     }
   }
 
-  /* Outlined-specific  */
-  &:not(.filled) {
-    :where(& > input, & > textarea, & > select):focus-visible {
-      outline-color: var(--primary);
-      outline-offset: 0;
-      outline-width: 2px;
-    }
+  :where(& > select) {
+    padding: 0;
 
+    button {
+      padding: var(--_input-padding-block) var(--size-8)
+        var(--_input-padding-block) var(--size-2);
+    }
+    transition: inherit;
+  }
+
+  /* Variant: Outlined  */
+  &:not(.filled) {
     /* Element states */
     &:hover {
       &:where(> input, > textarea, > select) {
@@ -46,6 +52,8 @@
   &:not(.filled):focus-within {
     :where(& > input, & > textarea, & > select) {
       border-color: var(--primary);
+      outline-offset: 0;
+      outline: 2px solid var(--primary);
     }
   }
 
@@ -104,7 +112,7 @@
     }
   }
 
-  /* Filled */
+  /* Variant: Filled */
   &.filled {
     /* Remove outline */
     *:focus-visible {
@@ -163,16 +171,24 @@
     }
 
     /* Move label out of the way on focus or if there's content inside the Field */
-    &:focus-within,
-    &:has(:where(input, textarea):not(:placeholder-shown)),
-    &:has(option[value=""]:not(:checked)) {
-      :where(input, textarea) {
-        padding-block: 0.9375rem 0.0625rem;
-      }
+    &:has(.label) {
+      &:focus-within,
+      &:has(:where(input, textarea):not(:placeholder-shown)),
+      &:has(option[value=""]:not(:checked)) {
+        :where(input, textarea) {
+          padding-block: calc(var(--_input-padding-block) * 1.8)
+            calc(var(--_input-padding-block) * 0.2);
+        }
 
-      .label {
-        margin-block-start: calc(-1 * var(--size-5));
-        margin-inline-start: 0;
+        :where(select > button) {
+          padding-block: calc(var(--_input-padding-block) * 1.8)
+            calc(var(--_input-padding-block) * 0.2);
+        }
+
+        .label {
+          margin-block-start: calc(-1 * var(--size-5));
+          margin-inline-start: 0;
+        }
       }
     }
 
