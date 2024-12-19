@@ -245,6 +245,7 @@
   &.small {
     --_field-padding-block: var(--size-2);
 
+    /* Label transitions */
     &:focus-within,
     &:has(:where(input, textarea):not(:placeholder-shown)),
     &:has(option[value=""]:not(:checked)) {
