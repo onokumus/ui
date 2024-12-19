@@ -63,7 +63,7 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 </template>
 </Example>
 
-## Label & caption
+## Label & supporting text
 
 <Example row>
 <template #example>

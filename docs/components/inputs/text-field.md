@@ -48,6 +48,12 @@
 	<span class="supporting-text">Supporting text</span>
 </label>
 
+<label class="field filled small">
+	<span class="label">Label</span>
+	<input type="text" placeholder="Filled"/>
+	<span class="supporting-text">Supporting text</span>
+</label>
+
 <label class="field filled">
 	<span class="label">Label</span>
 	<input type="text" placeholder="Filled"/>
