@@ -31,13 +31,15 @@
   }
 
   /* Select-only */
-  :where(& > select) {
-    padding: 0;
-    transition: inherit;
+  &:has(> select) {
+    select {
+      padding: 0;
+      transition: inherit;
 
-    button {
-      padding: var(--_field-padding-block) var(--size-8)
-        var(--_field-padding-block) var(--_field-padding-inline);
+      button {
+        padding: var(--_field-padding-block) var(--size-8)
+          var(--_field-padding-block) var(--_field-padding-inline);
+      }
     }
 
     /* Label */
