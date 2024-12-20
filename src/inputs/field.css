@@ -4,6 +4,7 @@
 */
 :where(.field) {
   --_accent-color: var(--primary);
+  --_bg-color: var(--surface-default);
   --_border-color: var(--input-border-color);
   --_field-padding-block: 0.75rem;
   --_field-padding-inline: var(--size-2);
@@ -18,7 +19,7 @@
   & > input,
   & > textarea,
   & > select {
-    background-color: var(--surface-default);
+    background-color: var(--_bg-color);
     border-radius: var(--input-border-radius);
     border: var(--input-border-width) solid var(--_border-color);
     color: var(--text-color-1);
@@ -80,7 +81,7 @@
   /* Label */
   .label {
     align-self: center;
-    background-color: var(--surface-default);
+    background-color: var(--_bg-color);
     color: var(--_label-color);
     border-radius: var(--radius-1);
     display: inline-flex;
@@ -145,7 +146,7 @@
 
   /* Variant: Filled */
   &.filled {
-    /* Remove outline */
+    --_bg-color: var(--surface-tonal);
     *:focus-visible {
       outline: 0;
     }
@@ -154,7 +155,6 @@
     & > input,
     & > textarea,
     & > select {
-      background-color: var(--surface-tonal);
       border-block-end-color: var(--_filled-border-color);
       border-block-start-color: transparent;
       border-inline-color: transparent;
@@ -181,21 +181,16 @@
 
     /* Label */
     .label {
-      background-color: var(--surface-tonal);
+      background-color: var(--_bg-color);
     }
 
     &:not(:has([disabled])) {
       /* Hover */
       &:hover {
-        & > input,
-        & > textarea,
-        & > select,
-        .label {
-          background-color: light-dark(
-            color-mix(in oklch, var(--surface-tonal) 93%, black),
-            color-mix(in oklch, var(--surface-tonal) 93%, white)
-          );
-        }
+        --_bg-color: light-dark(
+          color-mix(in oklch, var(--surface-tonal) 93%, black),
+          color-mix(in oklch, var(--surface-tonal) 93%, white)
+        );
       }
     }
 

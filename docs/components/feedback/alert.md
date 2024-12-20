@@ -20,7 +20,7 @@ Alerts call out for user attention. Alerts should be part of the flow and used *
 You might want to check out:
 
 - [Dialog](/components/feedback/dialog): takes over completely
-- [Snackbar](/components/feedback/snackbar): bluermative but non-interruptive
+- [Snackbar](/components/feedback/snackbar): informative but non-interruptive
   :::
 
 ## Variants
@@ -194,18 +194,18 @@ Omitting an icon is possible. However, it helps having one if you need to convey
 
 ```css [theme.css]
 /* ... */
-.red {
+.bad {
   --palette-hue: var(--oklch-red, 25);
   --palette-chroma: 1;
   --palette-hue-rotate-by: 1;
 }
-.blue {
+.info {
   --palette-hue: var(--oklch-indigo, 310);
   --palette-chroma: 1;
   --palette-hue-rotate-by: 1;
 }
-.orange {
-  --palette-hue: var(--oklch-orange, 75);
+.warning {
+  --palette-hue: var(--oklch-warning, 75);
   --palette-chroma: 1;
   --palette-hue-rotate-by: 1;
 }

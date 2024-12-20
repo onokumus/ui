@@ -69,10 +69,10 @@
   }
 
   /* Colors */
-  &.red,
-  &.blue,
-  &.green,
-  &.orange {
+  &.bad,
+  &.good,
+  &.info,
+  &.warning {
     --_bg-color: var(--color-8);
     --_border-color: var(--color-8);
   }

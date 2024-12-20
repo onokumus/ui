@@ -69,7 +69,7 @@
 
 <!--@include: ./components/data-display/table-api.md -->
 
-<h3><span class="badge orange" aria-label="WIP"><a href="/components/data-display/tooltip">Tooltip</a></span></h3>
+<h3><span class="badge warning" aria-label="⚠️🚧"><a href="/components/data-display/tooltip">Tooltip</a></span></h3>
 
 ### Typography
 
