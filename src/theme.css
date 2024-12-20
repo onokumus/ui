@@ -16,7 +16,7 @@ html {
   --palette-hue-rotate-by: 1;
 }
 .blue,
-.info {
+.ok {
   --palette-hue: var(--oklch-blue, 310);
   --palette-chroma: 1;
   --palette-hue-rotate-by: 1;

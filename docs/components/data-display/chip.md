@@ -182,7 +182,7 @@ Make sure the text is wrapped in a `.text` wrapper.
 <div class="row">
 <button class="chip tonal primary"><span class="text">Primary</span></button>
 <button class="chip tonal good"><span class="text">good</span></button>
-<button class="chip tonal info"><span class="text">info</span></button>
+<button class="chip tonal ok"><span class="text">ok</span></button>
 <button class="chip tonal warning"><span class="text">Warning</span></button>
 <button class="chip tonal bad"><span class="text">red</span></button>
 </div>
@@ -190,7 +190,7 @@ Make sure the text is wrapped in a `.text` wrapper.
 <div class="row">
 <button class="chip outlined primary"><span class="text">Primary</span></button>
 <button class="chip outlined good"><span class="text">good</span></button>
-<button class="chip outlined info"><span class="text">info</span></button>
+<button class="chip outlined ok"><span class="text">ok</span></button>
 <button class="chip outlined warning"><span class="text">Warning</span></button>
 <button class="chip outlined bad"><span class="text">red</span></button>
 </div>
@@ -204,7 +204,7 @@ Make sure the text is wrapped in a `.text` wrapper.
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M29.907 5.14a1.25 1.25 0 0 1-.047 1.767l-19 18a1.25 1.25 0 0 1-1.775-.055l-6.75-7.25a1.25 1.25 0 0 1 1.83-1.704l5.89 6.327L28.14 5.093a1.25 1.25 0 0 1 1.767.047"/></svg>
 <span class="text">With icon</span>
 </button>
-<button class="chip outlined info">
+<button class="chip outlined ok">
 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M29.907 5.14a1.25 1.25 0 0 1-.047 1.767l-19 18a1.25 1.25 0 0 1-1.775-.055l-6.75-7.25a1.25 1.25 0 0 1 1.83-1.704l5.89 6.327L28.14 5.093a1.25 1.25 0 0 1 1.767.047"/></svg>
 <span class="text">With icon</span>
 </button>

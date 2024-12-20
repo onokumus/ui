@@ -35,7 +35,7 @@
 
   /* Colors */
   &.bad,
-  &.info,
+  &.ok,
   &.warning {
     --_bg-color: light-dark(var(--color-2), var(--color-3));
     --_border-color: var(--color-9);

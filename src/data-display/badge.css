@@ -71,7 +71,7 @@
   /* Colors */
   &.bad,
   &.good,
-  &.info,
+  &.ok,
   &.warning {
     --_bg-color: var(--color-8);
     --_border-color: var(--color-8);
