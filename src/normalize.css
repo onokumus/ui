@@ -104,7 +104,6 @@
 
 ::placeholder {
   color: var(--text-color-2);
-  opacity: 0.7;
 }
 
 ::-moz-placeholder {

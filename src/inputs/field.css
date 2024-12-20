@@ -111,8 +111,10 @@
   &:has(:where(input, textarea):not(:placeholder-shown)),
   &:has(option[value=""]:not(:checked)) {
     .label {
+      color: var(--_accent-color);
       font-size: 0.75rem;
       inline-size: max-content;
+      letter-spacing: 0.15px;
       line-height: 1;
       margin-block-start: calc(-1 * var(--size-8));
       margin-inline-start: calc(var(--_field-padding-inline) / 2);
