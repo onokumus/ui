@@ -53,9 +53,17 @@
 
 ## Data display
 
+### [Accordion](/components/data-display/accordion)
+
+<!--@include: ./components/data-display/accordion-api.md -->
+
 ### [Badge](/components/data-display/badge)
 
 <!--@include: ./components/data-display/badge-api.md -->
+
+### [Card](/components/data-display/card)
+
+<!--@include: ./components/data-display/card-api.md -->
 
 ### [Chip](/components/data-display/chip)
 
@@ -81,7 +89,7 @@
 
 ### [Dialog](/components/feedback/dialog)
 
-A `<dialog>` element on its own doesn't do much. It's recommended to use it in combination with the [card](/components/surfaces/card) component.
+A `<dialog>` element on its own doesn't do much. It's recommended to use it in combination with the [card](/components/data-display/card) component.
 
 See [Card API](#card)
 
@@ -92,13 +100,3 @@ See [Card API](#card)
 <!--@include: ./components/feedback/snackbar-api.md -->
 
 ### Spinner
-
-## Surfaces
-
-### [Accordion](/components/surfaces/accordion)
-
-<!--@include: ./components/surfaces/accordion-api.md -->
-
-### [Card](/components/surfaces/card)
-
-<!--@include: ./components/surfaces/card-api.md -->

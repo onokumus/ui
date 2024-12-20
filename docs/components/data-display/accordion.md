@@ -447,10 +447,10 @@ These are the classes and attributes a card can be styled with. As usual, feel f
 ## Installation
 
 ::: info
-Accordion has [card](/components/surfaces/card) as a dependency.
+Accordion has [card](/components/data-display/card) as a dependency.
 :::
 
 ::: code-group
-<<< @/../src/surfaces/accordion.css [accordion.css]
-<<< @/../src/surfaces/card.css [card.css]
+<<< @/../src/data-display/accordion.css [accordion.css]
+<<< @/../src/data-display/card.css [card.css]
 :::

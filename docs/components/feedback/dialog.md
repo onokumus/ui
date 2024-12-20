@@ -162,7 +162,7 @@ Source: [w3.org](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/
 
 ## API
 
-A `<dialog>` element on its own doesn't do much. It's recommended to use it in combination with the [card](/components/surfaces/card) component.
+A `<dialog>` element on its own doesn't do much. It's recommended to use it in combination with the [card](/components/data-display/card) component.
 
 ## Browser compatibility
 
@@ -172,5 +172,5 @@ A `<dialog>` element on its own doesn't do much. It's recommended to use it in c
 
 ::: code-group
 <<< @/../src/feedback/dialog.css [dialog.css]
-<<< @/../src/surfaces/card.css [card.css]
+<<< @/../src/data-display/card.css [card.css]
 :::

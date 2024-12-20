@@ -46,7 +46,7 @@
 @import "./inputs/button/toggle-button-group.css" layer(components.base);
 @import "./inputs/field.css" layer(components.base);
 @import "./inputs/switch.css" layer(components.base);
-@import "./surfaces/card.css" layer(components.base);
+@import "./data-display/card.css" layer(components.base);
 
 /*** Has dependencies */
 @import "./data-display/rich-text.css" layer(components.has-deps);
@@ -60,4 +60,4 @@
 @import "./inputs/select.css" layer(components.has-deps);
 @import "./inputs/text-field.css" layer(components.has-deps);
 @import "./inputs/textarea.css" layer(components.has-deps);
-@import "./surfaces/accordion.css" layer(components.has-deps);
+@import "./data-display/accordion.css" layer(components.has-deps);

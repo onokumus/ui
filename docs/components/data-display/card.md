@@ -16,7 +16,7 @@
 
 # Card
 
-The card is extremely versetile and can be used on its own, or as a building block for [accordions](/components/surfaces/accordion), [dialogs](/components/feedback/dialog) and more.
+The card is extremely versetile and can be used on its own, or as a building block for [accordions](/components/data-display/accordion), [dialogs](/components/feedback/dialog) and more.
 
 ## Variants
 
@@ -59,7 +59,7 @@ The card is extremely versetile and can be used on its own, or as a building blo
 ::: info Why does a text variant exist?
 It really doesn't make sense to use the text variant unless you really need to.
 
-The [accordion group](/components/surfaces/accordion#accordion-group) is a great example where Open Props UI leverages the text variant of the `.card` component.
+The [accordion group](/components/data-display/accordion#accordion-group) is a great example where Open Props UI leverages the text variant of the `.card` component.
 :::
 
 ## Anatomy
@@ -129,9 +129,9 @@ These are the classes and attributes a card can be styled with. As usual, feel f
 ::: warning
 Other components might depend on the card component. Be mindful when making changes.
 
-[Accordion](/components/surfaces/accordion), [Dialog](/components/feedback/dialog)
+[Accordion](/components/data-display/accordion), [Dialog](/components/feedback/dialog)
 :::
 
 ::: code-group
-<<< @/../src/surfaces/card.css [card.css]
+<<< @/../src/data-display/card.css [card.css]
 :::

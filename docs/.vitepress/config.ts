@@ -128,8 +128,13 @@ export default defineConfig({
               text: "Data display",
               collapsed: false,
               items: [
+                {
+                  text: "Accordion",
+                  link: "/components/data-display/accordion",
+                },
                 { text: "Avatar", link: "/components/data-display/avatar" },
                 { text: "Badge", link: "/components/data-display/badge" },
+                { text: "Card", link: "/components/data-display/card" },
                 { text: "Chip", link: "/components/data-display/chip" },
                 { text: "Divider", link: "/components/data-display/divider" },
                 { text: "List", link: "/components/data-display/list" },
@@ -150,14 +155,6 @@ export default defineConfig({
                 { text: "Progress", link: "/components/feedback/progress" },
                 { text: "Snackbar", link: "/components/feedback/snackbar" },
                 { text: "Spinner", link: "/components/feedback/spinner" },
-              ],
-            },
-            {
-              text: "Surfaces",
-              collapsed: false,
-              items: [
-                { text: "Accordion", link: "/components/surfaces/accordion" },
-                { text: "Card", link: "/components/surfaces/card" },
               ],
             },
             {
