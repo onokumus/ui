@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  text: "Components you can copy and paste into your project."
-  tagline: "Made with Open Props."
+  text: "The component library of the future."
+  tagline: "So modern it (currently) needs feature flags enabled."
   actions:
     - theme: filled
       text: Quickstart
