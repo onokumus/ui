@@ -10,7 +10,9 @@
   position: relative;
 
   /* Input/Select base */
-  :where(& > input, & > textarea, & > select) {
+  & > input,
+  & > textarea,
+  & > select {
     background-color: var(--surface-default);
     border-radius: var(--input-border-radius);
     border: var(--input-border-width) solid var(--input-border-color);
@@ -34,7 +36,6 @@
   &:has(> select) {
     select {
       padding: 0;
-      transition: inherit;
 
       button {
         padding: var(--_field-padding-block) var(--size-8)
@@ -61,7 +62,9 @@
 
   /* Focus */
   &:not(.filled):focus-within {
-    :where(& > input, & > textarea, & > select) {
+    & > input,
+    & > textarea,
+    & > select {
       border-color: var(--primary);
       outline-offset: 0;
       outline: 2px solid var(--primary);
@@ -69,7 +72,7 @@
   }
 
   /* Label */
-  :where(.label) {
+  .label {
     align-self: center;
     background-color: var(--surface-default);
     border-radius: var(--radius-1);
@@ -107,7 +110,7 @@
   }
 
   /* Supporting text */
-  :where(.supporting-text) {
+  .supporting-text {
     font-size: var(--font-size-xs);
     grid-row: 3;
     line-height: 1.5;
@@ -131,7 +134,9 @@
     }
 
     /* Base style */
-    :where(& > input, & > textarea, & > select) {
+    & > input,
+    & > textarea,
+    & > select {
       background-color: var(--surface-tonal);
       border-block-end-color: var(--text-color-1);
       border-block-start-color: transparent;
@@ -158,14 +163,16 @@
     }
 
     /* Label */
-    :where(.label) {
+    .label {
       background-color: var(--surface-tonal);
     }
 
-    &:where(:not(:has([disabled]))) {
+    &:not(:has([disabled])) {
       /* Hover */
       &:hover {
-        :where(& > input, & > textarea, & > select),
+        & > input,
+        & > textarea,
+        & > select,
         .label {
           background-color: light-dark(
             color-mix(in oklch, var(--surface-tonal) 93%, black),
@@ -185,7 +192,7 @@
             calc(var(--_field-padding-block) * 0.2);
         }
 
-        :where(select > button) {
+        select > button {
           padding-block: calc(var(--_field-padding-block) * 1.8)
             calc(var(--_field-padding-block) * 0.2);
         }
@@ -203,7 +210,9 @@
       }
     }
     &:focus-within {
-      :where(& > input, & > textarea, & > select) {
+      & > input,
+      & > textarea,
+      & > select {
         border-block-end-color: var(--primary);
       }
 
