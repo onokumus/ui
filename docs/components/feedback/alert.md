@@ -94,7 +94,7 @@ Icon must be placed before the content.
 
 ## Severities
 
-There are four different severities - neutral (default), blue, orange, red.
+There are four different severities - neutral (default), info, warning, bad.
 
 ::: tip Icons and accessibility
 Omitting an icon is possible. However, it helps having one if you need to convey a specific kind of severity in your Alert message. For instance, colorblind users might be left confused if there's not enough visual guidance.
