@@ -68,7 +68,7 @@ const showCode = ref(!props?.hideCode)
 .dark {
   .example-wrapper {
     &:before {
-      opacity: 0.075;
+      opacity: 0.1;
     }
   }
 }
@@ -87,7 +87,7 @@ const showCode = ref(!props?.hideCode)
 
   &:before {
     background-image: radial-gradient(
-      var(--text-color-2) 1.4500000000000002px,
+      var(--text-color-1) 1.4500000000000002px,
       transparent 1.4500000000000002px
     );
     background-size: 20px 20px;
