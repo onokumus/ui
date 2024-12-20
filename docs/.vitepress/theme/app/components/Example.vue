@@ -147,7 +147,7 @@ const showCode = ref(!props?.hideCode)
   }
 
   .row {
-    align-items: center;
+    align-items: start;
     display: flex;
     flex-wrap: wrap;
     gap: var(--size-3, 1rem);
