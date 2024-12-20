@@ -79,18 +79,20 @@
 
 ## Validation
 
+The `.bad` class toggles the error styles. Make use of the supporting text to give extra feedback on the error.
+
 <Example row>
 <template #example>
 <label class="field bad">
 	<span class="label">Label</span>
 	<input type="text" placeholder="Placeholder" value="This isn't right"/>
-	<span class="supporting-text">Supporting text</span>
+	<span class="supporting-text">Only double-negatives are allowed.</span>
 </label>
 
 <label class="field bad filled">
 	<span class="label">Label</span>
 	<input type="text" placeholder="Placeholder" value="Uh-oh"/>
-	<span class="supporting-text">Supporting text</span>
+	<span class="supporting-text">Only letters from the first half of the alphabet are allowed.</span>
 </label>
 </template>
 <template #code>

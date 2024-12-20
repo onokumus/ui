@@ -9,6 +9,7 @@
   --_field-padding-block: 0.75rem;
   --_field-padding-inline: var(--size-2);
   --_filled-border-color: var(--text-color-1);
+  --_height: 2.875em;
   --_label-color: var(--text-color-2);
   --_supporting-text-color: var(--text-color-2);
 
@@ -20,6 +21,7 @@
   & > textarea,
   & > select {
     background-color: var(--_bg-color);
+    block-size: var(--_height);
     border-radius: var(--input-border-radius);
     border: var(--input-border-width) solid var(--_border-color);
     color: var(--text-color-1);
@@ -45,6 +47,7 @@
       padding: 0;
 
       button {
+        outline: 0;
         padding: var(--_field-padding-block) var(--size-8)
           var(--_field-padding-block) var(--_field-padding-inline);
       }
@@ -267,6 +270,7 @@
   /* Sizes */
   &.small {
     --_field-padding-block: var(--size-2);
+    --_height: 2.375em;
 
     /* Label transitions */
     &:focus-within,
