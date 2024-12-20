@@ -34,21 +34,21 @@
   }
 
   /* Colors */
-  &.red,
-  &.blue,
-  &.orange {
-    --_bg-color: var(--color-3);
-    --_border-color: var(--color-7);
-    --_color: var(--gray-14);
+  &.bad,
+  &.info,
+  &.warning {
+    --_bg-color: light-dark(var(--color-2), var(--color-3));
+    --_border-color: var(--color-9);
+    --_color: var(--color-15);
 
     svg {
-      stroke: var(--color-7);
+      stroke: var(--color-9);
     }
 
     &.outlined {
       --_bg-color: var(--surface-default);
       --_border-color: var(--color-9);
-      --_color: var(--text-color-1);
+      --_color: light-dark(var(--color-15), var(--color-1));
     }
   }
 

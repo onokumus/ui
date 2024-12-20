@@ -70,7 +70,7 @@ const showAbsoluteSnackbar = ref(false)
   }
 </style>
 
-# Snackbar
+<h1><span class="badge" aria-label="WIP">Snackbar</span></h1>
 
 Snackbars inform users of a process that has or will be preformed. They shouldn't interrupt the user and you should be able to keep browsing without having to interact with it.
 

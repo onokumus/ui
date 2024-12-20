@@ -9,22 +9,26 @@ html {
   --color-scheme: dark;
 }
 
-.red {
+.red,
+.bad {
   --palette-hue: var(--oklch-red, 25);
   --palette-chroma: 1;
   --palette-hue-rotate-by: 1;
 }
-.blue {
+.blue,
+.info {
   --palette-hue: var(--oklch-blue, 310);
   --palette-chroma: 1;
   --palette-hue-rotate-by: 1;
 }
-.green {
+.green,
+.good {
   --palette-hue: var(--oklch-green, 145);
   --palette-chroma: 1;
   --palette-hue-rotate-by: 1;
 }
-.orange {
+.orange,
+.warning {
   --palette-hue: var(--oklch-orange, 75);
   --palette-chroma: 1;
   --palette-hue-rotate-by: 1;
@@ -75,9 +79,9 @@ html {
   --text-color-2-78: color-mix(in oklch, var(--text-color-2) 78%, transparent);
   --text-color-2-56: color-mix(in oklch, var(--text-color-2) 56%, transparent);
 
-  --red: var(--red-7);
-  --red-light: var(--red-5);
-  --red-dark: var(--red-9);
+  --red: var(--red-9);
+  --red-light: var(--red-7);
+  --red-dark: var(--red-12);
   --red-text: light-dark(var(--color-1), var(--color-11));
 
   --orange: var(--orange-7);

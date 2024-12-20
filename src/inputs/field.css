@@ -3,8 +3,13 @@
 - Form related styles such as: label, supporting text, error handling
 */
 :where(.field) {
+  --_accent-color: var(--primary);
+  --_border-color: var(--input-border-color);
   --_field-padding-block: 0.75rem;
   --_field-padding-inline: var(--size-2);
+  --_filled-border-color: var(--text-color-1);
+  --_label-color: var(--text-color-2);
+  --_supporting-text-color: var(--text-color-2);
 
   display: inline-grid;
   position: relative;
@@ -15,7 +20,8 @@
   & > select {
     background-color: var(--surface-default);
     border-radius: var(--input-border-radius);
-    border: var(--input-border-width) solid var(--input-border-color);
+    border: var(--input-border-width) solid var(--_border-color);
+    color: var(--text-color-1);
     font-family: var(--font-sans);
     font-size: var(--font-size-1);
     grid-column: 1/-1;
@@ -65,9 +71,9 @@
     & > input,
     & > textarea,
     & > select {
-      border-color: var(--primary);
+      border-color: var(--_accent-color);
       outline-offset: 0;
-      outline: 2px solid var(--primary);
+      outline: 2px solid var(--_accent-color);
     }
   }
 
@@ -75,6 +81,7 @@
   .label {
     align-self: center;
     background-color: var(--surface-default);
+    color: var(--_label-color);
     border-radius: var(--radius-1);
     display: inline-flex;
     font-size: var(--font-size-md);
@@ -111,6 +118,7 @@
 
   /* Supporting text */
   .supporting-text {
+    color: var(--_supporting-text-color);
     font-size: var(--font-size-xs);
     grid-row: 3;
     line-height: 1.5;
@@ -126,6 +134,15 @@
     }
   }
 
+  /* Validation */
+  &.bad {
+    --_accent-color: var(--color-9);
+    --_border-color: var(--color-9);
+    --_filled-border-color: var(--color-9);
+    --_label-color: var(--color-9);
+    --_supporting-text-color: var(--color-9);
+  }
+
   /* Variant: Filled */
   &.filled {
     /* Remove outline */
@@ -138,7 +155,7 @@
     & > textarea,
     & > select {
       background-color: var(--surface-tonal);
-      border-block-end-color: var(--text-color-1);
+      border-block-end-color: var(--_filled-border-color);
       border-block-start-color: transparent;
       border-inline-color: transparent;
       border-radius: 0;
@@ -146,7 +163,7 @@
 
     /* Bottom line */
     &:before {
-      background-color: var(--text-color-1);
+      background-color: var(--_filled-border-color);
       block-size: calc(var(--input-border-width) + 1px);
       content: "";
       inline-size: 100%;
@@ -213,11 +230,11 @@
       & > input,
       & > textarea,
       & > select {
-        border-block-end-color: var(--primary);
+        border-block-end-color: var(--_accent-color);
       }
 
       &:before {
-        background-color: var(--primary);
+        background-color: var(--_accent-color);
         transform: scaleX(1) translateX(0px);
       }
     }
