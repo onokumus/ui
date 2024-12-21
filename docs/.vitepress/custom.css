@@ -21,12 +21,6 @@ html {
       position: fixed;
     }
   }
-
-  &.dark {
-    &:before {
-      opacity: 0.1;
-    }
-  }
 }
 
 @keyframes grow-progress {

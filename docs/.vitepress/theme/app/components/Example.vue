@@ -68,7 +68,7 @@ const showCode = ref(!props?.hideCode)
 .dark {
   .example-wrapper {
     &:before {
-      opacity: 0.1;
+      opacity: 0.075;
     }
   }
 }
