@@ -40,10 +40,10 @@
 @import "./data-display/typography.css" layer(components.base);
 @import "./feedback/progress.css" layer(components.base);
 @import "./feedback/spinner.css" layer(components.base);
-@import "./inputs/button/button-base.css" layer(components.base);
-@import "./inputs/button/button-variants.css" layer(components.base);
-@import "./inputs/button/icon-button.css" layer(components.base);
-@import "./inputs/button/toggle-button-group.css" layer(components.base);
+@import "./actions/button-base.css" layer(components.base);
+@import "./actions/button-variants.css" layer(components.base);
+@import "./actions/icon-button.css" layer(components.base);
+@import "./actions/toggle-button-group.css" layer(components.base);
 @import "./inputs/field.css" layer(components.base);
 @import "./inputs/switch.css" layer(components.base);
 @import "./data-display/card.css" layer(components.base);
@@ -53,7 +53,7 @@
 @import "./feedback/alert.css" layer(components.has-deps);
 @import "./feedback/dialog.css" layer(components.has-deps);
 @import "./feedback/snackbar.css" layer(components.has-deps);
-@import "./inputs/button/button-group.css" layer(components.has-deps);
+@import "./actions/button-group.css" layer(components.has-deps);
 @import "./inputs/checkbox-radio.css" layer(components.has-deps);
 @import "./inputs/color.css" layer(components.has-deps);
 @import "./inputs/file.css" layer(components.has-deps);

@@ -111,5 +111,5 @@ To have an accessible label you can choose between three approaches.
 ## Installation
 
 ::: code-group
-<<< @/../src/inputs/button/icon-button.css [icon-button.css]
+<<< @/../src/actions/icon-button.css [icon-button.css]
 :::

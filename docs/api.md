@@ -15,17 +15,17 @@
 
 ## Inputs
 
-### [Button](/components/inputs/button)
+### [Button](/components/actions/button)
 
-<!--@include: ./components/inputs/button-api.md -->
+<!--@include: ./components/actions/button-api.md -->
 
 ### [Checkbox](/components/inputs/checkbox)
 
 <!--@include: ./components/inputs/checkbox-radio-api.md -->
 
-### [Icon Button](/components/inputs/icon-button)
+### [Icon Button](/components/actions/icon-button)
 
-<!--@include: ./components/inputs/icon-button-api.md -->
+<!--@include: ./components/actions/icon-button-api.md -->
 
 ### [Radio](/components/inputs/radio)
 
@@ -47,9 +47,9 @@
 
 <!--@include: ./components/inputs/text-field-api.md -->
 
-### [Toggle button group](/components/inputs/toggle-button-group)
+### [Toggle button group](/components/actions/toggle-button-group)
 
-<!--@include: ./components/inputs/toggle-button-group-api.md -->
+<!--@include: ./components/actions/toggle-button-group-api.md -->
 
 ## Data display
 

@@ -103,25 +103,34 @@ export default defineConfig({
           text: "Components",
           items: [
             {
+              text: "Actions",
+              collapsed: false,
+              items: [
+                { text: "Button", link: "/components/actions/button" },
+                {
+                  text: "Button group",
+                  link: "/components/actions/button-group",
+                },
+                {
+                  text: "Icon Button",
+                  link: "/components/actions/icon-button",
+                },
+                { text: "Text field", link: "/components/actions/text-field" },
+                {
+                  text: "Toggle button group",
+                  link: "/components/actions/toggle-button-group",
+                },
+              ],
+            },
+            {
               text: "Inputs",
               collapsed: false,
               items: [
-                { text: "Button", link: "/components/inputs/button" },
-                {
-                  text: "Button group",
-                  link: "/components/inputs/button-group",
-                },
                 { text: "Checkbox", link: "/components/inputs/checkbox" },
-                { text: "Icon Button", link: "/components/inputs/icon-button" },
                 { text: "Radio", link: "/components/inputs/radio" },
                 { text: "Select", link: "/components/inputs/select" },
                 { text: "Switch", link: "/components/inputs/switch" },
                 { text: "Textarea", link: "/components/inputs/textarea" },
-                { text: "Text field", link: "/components/inputs/text-field" },
-                {
-                  text: "Toggle button group",
-                  link: "/components/inputs/toggle-button-group",
-                },
               ],
             },
             {

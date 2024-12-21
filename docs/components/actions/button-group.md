@@ -20,7 +20,7 @@ Groups related buttons by wrapping them with `<yourElement class="button-group" 
 ::: details Button group or Toggle button group?
 If you just need to group a bunch of "dumb" (uncontrolled) buttons - use Button group.
 
-If your buttons depend on state (controlled) - use [Toggle button group](/components/inputs/toggle-button-group).
+If your buttons depend on state (controlled) - use [Toggle button group](/components/actions/toggle-button-group).
 :::
 
 ## Variants
@@ -211,7 +211,7 @@ Create an [issue or a PR](https://github.com/felix-bohlin/ui) and let me know!
 ## Anatomy
 
 1. Container: `<element role="group" class="button-group">`
-2. Buttons: [Button](/components/inputs/button)
+2. Buttons: [Button](/components/actions/button)
 
 <style>
 	.anatomy {
@@ -238,12 +238,12 @@ Create an [issue or a PR](https://github.com/felix-bohlin/ui) and let me know!
 
 ### Button API
 
-[Button docs](/components/inputs/button).
+[Button docs](/components/actions/button).
 
 <!--@include: ./button-api.md -->
 
 ## Installation
 
 ::: code-group
-<<< @/../src/inputs/button/button-group.css [button-group.css]
+<<< @/../src/actions/button-group.css [button-group.css]
 :::

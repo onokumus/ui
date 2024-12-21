@@ -46,7 +46,7 @@ Groups related buttons by wrapping them with `<yourElement class="toggle-button-
 The whole idea of Toggle button group is that it relies on state change. Therefore Javascript is needed for it to work as intended.
 :::
 ::: details Button group or Toggle button group?
-If you just need to group a bunch of "dumb" (uncontrolled) buttons - use [Button group](/components/inputs/button-group).
+If you just need to group a bunch of "dumb" (uncontrolled) buttons - use [Button group](/components/actions/button-group).
 
 If your buttons depend on state (controlled) - use Toggle button group.
 :::
@@ -350,5 +350,5 @@ Create an [issue or a PR](https://github.com/felix-bohlin/ui) and let me know!
 ## Installation
 
 ::: code-group
-<<< @/../src/inputs/button/toggle-button-group.css [toggle-button-group.css]
+<<< @/../src/actions/toggle-button-group.css [toggle-button-group.css]
 :::

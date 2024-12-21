@@ -211,7 +211,7 @@ import Example from "../../.vitepress/theme/app/components/Example.vue"
 
 ## Icon-only
 
-See [Icon button](/components/inputs/icon-button) documentation.
+See [Icon button](/components/actions/icon-button) documentation.
 
 ## Sizes
 
@@ -370,6 +370,6 @@ These are the classes and attributes a button can be styled with. As usual, feel
 ## Installation
 
 ::: code-group
-<<< @/../src/inputs/button/button-base.css [button-base.css]
-<<< @/../src/inputs/button/button-variants.css [button-variants.css]
+<<< @/../src/actions/button-base.css [button-base.css]
+<<< @/../src/actions/button-variants.css [button-variants.css]
 :::

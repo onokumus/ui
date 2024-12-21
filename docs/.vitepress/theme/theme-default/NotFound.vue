@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { withBase } from "vitepress";
-import { useData } from "./composables/data";
-import { useLangs } from "./composables/langs";
+import { withBase } from "vitepress"
+import { useData } from "./composables/data"
+import { useLangs } from "./composables/langs"
 
-const { theme } = useData();
-const { currentLang } = useLangs();
+const { theme } = useData()
+const { currentLang } = useLangs()
 </script>
 
 <template>
@@ -32,9 +32,6 @@ const { currentLang } = useLangs();
 </template>
 
 <style scoped>
-@import "../../../../src/inputs/button/button-base.css";
-@import "../../../../src/inputs/button/button-variants.css";
-
 .NotFound {
   padding: 64px 24px 96px;
   text-align: center;
