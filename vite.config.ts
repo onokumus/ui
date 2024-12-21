@@ -1,5 +1,5 @@
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
+import { defineConfig } from "vite"
+import vue from "@vitejs/plugin-vue"
 
 export default defineConfig({
   ssr: {
@@ -24,9 +24,13 @@ export default defineConfig({
       drafts: {
         customMedia: true,
       },
+      targets: {
+        chrome: 131,
+      },
     },
   },
   build: {
     cssMinify: "lightningcss",
+    target: "esnext",
   },
-});
+})
