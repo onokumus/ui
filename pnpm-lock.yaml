@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@docsearch/css':
-        specifier: ^3.8.0
-        version: 3.8.0
+        specifier: ^3.8.2
+        version: 3.8.2
       '@docsearch/js':
         specifier: ^3.8.0
         version: 3.8.0(@algolia/client-search@5.17.0)(search-insights@2.17.3)
@@ -211,6 +211,9 @@ packages:
 
   '@docsearch/css@3.8.0':
     resolution: {integrity: sha512-pieeipSOW4sQ0+bE5UFC51AOZp9NGxg89wAlZ1BAQFaiRAGK1IKUaPQ0UGZeNctJXyqZ1UvBtOQh2HH+U5GtmA==}
+
+  '@docsearch/css@3.8.2':
+    resolution: {integrity: sha512-y05ayQFyUmCXze79+56v/4HpycYF3uFqB78pLPrSV5ZKAlDuIAAJNhaRi8tTdRNXh05yxX/TyNnzD6LwSM89vQ==}
 
   '@docsearch/js@3.8.0':
     resolution: {integrity: sha512-PVuV629f5UcYRtBWqK7ID6vNL5647+2ADJypwTjfeBIrJfwPuHtzLy39hMGMfFK+0xgRyhTR0FZ83EkdEraBlg==}
@@ -1500,6 +1503,8 @@ snapshots:
 
   '@docsearch/css@3.8.0': {}
 
+  '@docsearch/css@3.8.2': {}
+
   '@docsearch/js@3.8.0(@algolia/client-search@5.17.0)(search-insights@2.17.3)':
     dependencies:
       '@docsearch/react': 3.8.0(@algolia/client-search@5.17.0)(search-insights@2.17.3)
@@ -2489,7 +2494,7 @@ snapshots:
 
   vitepress@1.5.0(@algolia/client-search@5.17.0)(@types/node@22.10.2)(lightningcss@1.28.2)(postcss@8.4.49)(search-insights@2.17.3)(typescript@5.7.2):
     dependencies:
-      '@docsearch/css': 3.8.0
+      '@docsearch/css': 3.8.2
       '@docsearch/js': 3.8.0(@algolia/client-search@5.17.0)(search-insights@2.17.3)
       '@iconify-json/simple-icons': 1.2.15
       '@shikijs/core': 1.24.4
