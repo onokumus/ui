@@ -54,8 +54,8 @@ importers:
         specifier: ^1.7.8
         version: 1.7.8
       shiki:
-        specifier: ^1.24.2
-        version: 1.24.2
+        specifier: ^1.24.4
+        version: 1.24.4
       vue:
         specifier: ^3.5.13
         version: 3.5.13(typescript@5.7.2)
@@ -2516,7 +2516,7 @@ snapshots:
       focus-trap: 7.6.2
       mark.js: 8.11.1
       minisearch: 7.1.1
-      shiki: 1.24.2
+      shiki: 1.24.4
       vite: 5.4.11(@types/node@22.10.2)(lightningcss@1.28.2)
       vue: 3.5.13(typescript@5.7.2)
     optionalDependencies:
