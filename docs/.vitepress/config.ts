@@ -115,7 +115,6 @@ export default defineConfig({
                   text: "Icon Button",
                   link: "/components/actions/icon-button",
                 },
-                { text: "Text field", link: "/components/actions/text-field" },
                 {
                   text: "Toggle button group",
                   link: "/components/actions/toggle-button-group",
@@ -131,6 +130,7 @@ export default defineConfig({
                 { text: "Select", link: "/components/inputs/select" },
                 { text: "Switch", link: "/components/inputs/switch" },
                 { text: "Textarea", link: "/components/inputs/textarea" },
+                { text: "Text field", link: "/components/inputs/text-field" },
               ],
             },
             {
