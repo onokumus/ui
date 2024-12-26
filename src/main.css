@@ -3,20 +3,20 @@
 /* Props */
 @import "https://unpkg.com/open-props@2.0.0-beta.5/index.css" layer(props);
 @import "https://unpkg.com/browse/open-props@2.0.0-beta.5/css/sizes/media.css"
-  layer(props);
+layer(props);
 @import "https://unpkg.com/open-props@2.0.0-beta.5/css/font/lineheight.css"
-  layer(props);
+layer(props);
 @import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/red.hex.css"
-  layer(props);
+layer(props);
 @import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/green.hex.css"
-  layer(props);
+layer(props);
 @import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/blue.hex.css"
-  layer(props);
+layer(props);
 @import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/orange.hex.css"
-  layer(props);
+layer(props);
 @import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/hues.oklch.css"
-  layer(props);
-@import "../node_modules/open-props/gray-oklch.min.css" layer(props);
+layer(props);
+@import "open-props/gray-oklch.min.css" layer(props);
 
 /* Normalize */
 @import "./normalize.css" layer(normalize);

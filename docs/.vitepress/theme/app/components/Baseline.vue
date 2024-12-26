@@ -1,21 +1,18 @@
 <script setup lang="ts">
-import { onMounted } from "vue"
-
+import { defineClientComponent } from 'vitepress'
 const props = defineProps<{
   ids: string[]
 }>()
 
-onMounted(async () => {
-  await import("baseline-status/baseline-status")
+const BaselineStatus = defineClientComponent(() => {
+  return import('baseline-status/baseline-status')
 })
 </script>
 
 <template v-if="ids.length">
-  <ClientOnly>
-    <article class="card outlined not-rich-text">
-      <baseline-status v-for="id in ids" :featureId="id"></baseline-status>
-    </article>
-  </ClientOnly>
+  <article class="card outlined not-rich-text">
+    <baseline-status v-for="id in ids" :featureId="id"></baseline-status>
+  </article>
 </template>
 
 <style scoped>

@@ -2,7 +2,7 @@
  * Using both role and .switch maintains compatibility
  * for edge cases where role="switch" may be explicitly needed
  */
-:where([role="switch"].switch) {
+:where(.switch) {
   --_accent-color: var(--primary);
   --_accent-contrast: var(--primary-contrast);
 
@@ -76,14 +76,13 @@
         --_dot-bg-color: var(--_accent-contrast);
         --_dot-outline-size: calc(var(--size-1) - 1px);
 
-        inset-inline-start: calc(
-          var(--_track-width) - var(--_dot-size) - var(--size-1)
-        );
+        inset-inline-start: calc(var(--_track-width) - var(--_dot-size) - var(--size-1));
       }
     }
 
     /* Animation */
     @media (prefers-reduced-motion: no-preference) {
+
       /* Track */
       &:before {
         transition:
@@ -99,6 +98,7 @@
       &:active:after {
         --_dot-outline-size: calc(var(--size-1) + 1px);
       }
+
       &:checked {
         &:active:after {
           --_dot-outline-size: calc(var(--size-1) + 1px);
