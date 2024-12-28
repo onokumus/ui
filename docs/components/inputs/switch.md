@@ -130,19 +130,19 @@ Add an element with the `.text` class. Also, don't miss the info on label [acces
 </template>
 </Example>
 
-## Size
+## Sizes
 
 Add the `.small` class on the parent for a smaller Switch variant.
 
 <Example row>
 <template #example>
 <label class="switch small">
-	<input type="checkbox" />
+	<input type="checkbox" role="switch" />
 	<span class="text">Small</span>
 </label>
 
 <label class="switch">
-	<input type="checkbox" />
+	<input type="checkbox" role="switch" />
 	<span class="text">Default</span>
 </label>
 </template>
@@ -166,9 +166,9 @@ Add the `.small` class on the parent for a smaller Switch variant.
 
 ### Role & attributes
 
-| Role/attribute  | Usage                                                                                       |
-| --------------- | ------------------------------------------------------------------------------------------- |
-| `role="switch"` | Identifies the element that serves as a switch. Optional but recommended for accessibility. |
+| Role/attribute  | Usage                                                                            |
+| --------------- | -------------------------------------------------------------------------------- |
+| `role="switch"` | Required on the `input` element. Identifies the element that serves as a switch. |
 
 ### Labels
 
