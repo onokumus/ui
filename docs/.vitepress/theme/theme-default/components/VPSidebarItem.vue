@@ -1,13 +1,13 @@
 <script setup lang="ts">
-import type { DefaultTheme } from "vitepress/theme";
-import { computed } from "vue";
-import { useSidebarControl } from "../composables/sidebar";
-import VPLink from "./VPLink.vue";
+import type { DefaultTheme } from "vitepress/theme"
+import { computed } from "vue"
+import { useSidebarControl } from "../composables/sidebar"
+import VPLink from "./VPLink.vue"
 
 const props = defineProps<{
-  item: DefaultTheme.SidebarItem;
-  depth: number;
-}>();
+  item: DefaultTheme.SidebarItem
+  depth: number
+}>()
 
 const {
   collapsed,
@@ -17,21 +17,21 @@ const {
   hasActiveLink,
   hasChildren,
   toggle,
-} = useSidebarControl(computed(() => props.item));
+} = useSidebarControl(computed(() => props.item))
 
-const sectionTag = computed(() => (hasChildren.value ? "section" : `div`));
+const sectionTag = computed(() => (hasChildren.value ? "section" : `div`))
 
-const linkTag = computed(() => (isLink.value ? "a" : "div"));
+const linkTag = computed(() => (isLink.value ? "a" : "div"))
 
 const textTag = computed(() => {
   return !hasChildren.value
     ? "p"
     : props.depth + 2 === 7
       ? "p"
-      : `h${props.depth + 2}`;
-});
+      : `h${props.depth + 2}`
+})
 
-const itemRole = computed(() => (isLink.value ? undefined : "button"));
+const itemRole = computed(() => (isLink.value ? undefined : "button"))
 
 const classes = computed(() => [
   [`level-${props.depth}`],
@@ -40,17 +40,17 @@ const classes = computed(() => [
   { "is-link": isLink.value },
   { "is-active": isActiveLink.value },
   { "has-active": hasActiveLink.value },
-]);
+])
 
 function onItemInteraction(e: MouseEvent | Event) {
   if ("key" in e && e.key !== "Enter") {
-    return;
+    return
   }
-  !props.item.link && toggle();
+  !props.item.link && toggle()
 }
 
 function onCaretClick() {
-  props.item.link && toggle();
+  props.item.link && toggle()
 }
 </script>
 
@@ -117,6 +117,9 @@ function onCaretClick() {
 }
 
 .item {
+  --text-color-2-78: oklch(from var(--text-color-2) l c h / 78%);
+  --text-color-2-56: oklch(from var(--text-color-2) l c h / 56%);
+
   position: relative;
   display: flex;
   width: 100%;
