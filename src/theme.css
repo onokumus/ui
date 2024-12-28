@@ -55,6 +55,8 @@ html {
     --palette-hue: var(--oklch-red);
   } */
 
+  /* TODO: invent custom gray palette (since OP 2.0 isn't providing any) or use relative colors */
+
   --primary: var(--color-8);
   --primary-dark: oklch(from var(--primary) calc(l * 0.75) c h);
   --primary-light: oklch(from var(--primary) calc(l * 1.25) c h);
