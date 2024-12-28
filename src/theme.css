@@ -56,8 +56,8 @@ html {
   }
 
   --primary: var(--color-8);
-  --primary-dark: color-mix(in oklch, var(--primary) 80%, black);
-  --primary-light: color-mix(in oklch, var(--primary) 80%, white);
+  --primary-dark: oklch(from var(--primary) calc(l * 0.75) c h);
+  --primary-light: oklch(from var(--primary) calc(l * 1.25) c h);
   --primary-contrast: var(--gray-0);
 
   --text-color-1: light-dark(
@@ -76,8 +76,6 @@ html {
     var(--gray-3, oklch(80% 0.01 255 / 1)),
     var(--gray-12, oklch(31% 0.01 255 / 1))
   );
-  --text-color-2-78: color-mix(in oklch, var(--text-color-2) 78%, transparent);
-  --text-color-2-56: color-mix(in oklch, var(--text-color-2) 56%, transparent);
 
   --red: var(--red-9);
   --red-light: var(--red-7);

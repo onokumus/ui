@@ -193,8 +193,8 @@
       /* Hover */
       &:hover {
         --_bg-color: light-dark(
-          color-mix(in oklch, var(--surface-tonal) 93%, black),
-          color-mix(in oklch, var(--surface-tonal) 93%, white)
+          oklch(from var(--surface-tonal) calc(l * 0.93) c h),
+          oklch(from var(--surface-tonal) calc(l * 1.1) c h)
         );
       }
     }

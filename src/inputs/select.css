@@ -74,8 +74,8 @@
       label {
         background-color: light-dark(var(--gray-2), var(--gray-12));
         color: light-dark(
-          color-mix(in oklch, var(--text-color-1) 75%, white),
-          color-mix(in oklch, var(--text-color-1) 75%, black)
+          oklch(from var(--text-color-1) calc(l * 0.75) c h),
+          oklch(from var(--text-color-1) calc(l * 1.25) c h)
         );
         font-weight: 500;
         overflow: hidden;
