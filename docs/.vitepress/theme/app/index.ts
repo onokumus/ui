@@ -8,7 +8,6 @@ import {
   watchEffect,
   type App
 } from 'vue'
-import { ClientOnly } from './components/ClientOnly'
 import { Content } from './components/Content'
 import { useCodeGroups } from './composables/codeGroups'
 import { useCopyCode } from './composables/copyCode'
@@ -77,8 +76,7 @@ export async function createApp() {
 
   // install global components
   app.component('Content', Content)
-  app.component('ClientOnly', ClientOnly)
-
+  
   // expose $frontmatter & $params
   Object.defineProperties(app.config.globalProperties, {
     $frontmatter: {

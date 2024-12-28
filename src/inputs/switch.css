@@ -1,8 +1,4 @@
-/**
- * Using both role and .switch maintains compatibility
- * for edge cases where role="switch" may be explicitly needed
- */
-:where([role="switch"].switch) {
+:where(.switch) {
   --_accent-color: var(--primary);
   --_accent-contrast: var(--primary-contrast);
 
@@ -21,7 +17,7 @@
   display: flex;
   gap: var(--size-2);
 
-  input[type="checkbox"] {
+  input[type="checkbox"][role="switch"] {
     appearance: none;
     block-size: var(--_track-height);
     cursor: pointer;
@@ -54,7 +50,6 @@
       border: 1px solid var(--_dot-border-color);
       content: "";
       inline-size: var(--_dot-size);
-      /* Fixed inset-block-start value in order to accommodate stacked layout */
       inset: var(--_dot-inset);
       outline-offset: -1px;
       outline: var(--_dot-outline-size) solid var(--_dot-bg-color);
@@ -99,6 +94,7 @@
       &:active:after {
         --_dot-outline-size: calc(var(--size-1) + 1px);
       }
+
       &:checked {
         &:active:after {
           --_dot-outline-size: calc(var(--size-1) + 1px);
