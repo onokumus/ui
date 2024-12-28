@@ -50,32 +50,20 @@ html {
   --palette-hue-rotate-by: 5;
   --palette-chroma: 0.89;
 
-  /* TODO: why isn't this working? */
-  @container style(--color-scheme: dark) {
+  /* TODO: Do something like this? */
+  /* @container style(--color-scheme: dark) {
     --palette-hue: var(--oklch-red);
-  }
+  } */
 
   --primary: var(--color-8);
   --primary-dark: oklch(from var(--primary) calc(l * 0.75) c h);
   --primary-light: oklch(from var(--primary) calc(l * 1.25) c h);
   --primary-contrast: var(--gray-0);
 
-  --text-color-1: light-dark(
-    var(--gray-14, oklch(18% 0.01 255 / 1)),
-    var(--gray-1, oklch(95% 0.01 255 / 1))
-  );
-  --text-color-1-contrast: light-dark(
-    var(--gray-1, oklch(95% 0.01 255 / 1)),
-    var(--gray-14, oklch(18% 0.01 255 / 1))
-  );
-  --text-color-2: light-dark(
-    var(--gray-12, oklch(31% 0.01 255 / 1)),
-    var(--gray-3, oklch(80% 0.01 255 / 1))
-  );
-  --text-color-2-contrast: light-dark(
-    var(--gray-3, oklch(80% 0.01 255 / 1)),
-    var(--gray-12, oklch(31% 0.01 255 / 1))
-  );
+  --text-color-1: light-dark(var(--gray-14), var(--gray-1));
+  --text-color-1-contrast: light-dark(var(--gray-1), var(--gray-14));
+  --text-color-2: light-dark(var(--gray-12), var(--gray-3));
+  --text-color-2-contrast: light-dark(var(--gray-3), var(--gray-12));
 
   --red: var(--red-9);
   --red-light: var(--red-7);
@@ -98,22 +86,10 @@ html {
   --green-text: light-dark(var(--color-1), var(--color-11));
 
   /* Surface */
-  --surface-default: light-dark(
-    var(--gray-0, oklch(99% 0.01 255 / 1)),
-    var(--gray-13, oklch(25% 0.01 255 / 1))
-  );
-  --surface-filled: light-dark(
-    var(--gray-1, oklch(95% 0.01 255 / 1)),
-    var(--gray-14, oklch(18% 0.01 255 / 1))
-  );
-  --surface-tonal: light-dark(
-    var(--gray-1, oklch(95% 0.01 255 / 1)),
-    var(--gray-12, oklch(31% 0.01 255 / 1))
-  );
-  --surface-elevated: light-dark(
-    var(--gray-0, oklch(99% 0.01 255 / 1)),
-    var(--gray-12, oklch(31% 0.01 255 / 1))
-  );
+  --surface-default: light-dark(var(--gray-0), var(--gray-13));
+  --surface-filled: light-dark(var(--gray-1), var(--gray-14));
+  --surface-tonal: light-dark(var(--gray-1), var(--gray-12));
+  --surface-elevated: light-dark(var(--gray-0), var(--gray-12));
   --surface-border-radius: var(--size-1);
 
   /* Typography */
@@ -130,10 +106,7 @@ html {
   --font-size-xs: var(--font-size-0, 0.75rem);
 
   /* Borders */
-  --border-color: light-dark(
-    var(--gray-2, oklch(88% 0.01 255 / 1)),
-    var(--gray-11, oklch(37% 0.01 255 / 1))
-  );
+  --border-color: light-dark(var(--gray-2), var(--gray-11));
   --border-radius: var(--size-1);
   --border-width: 1px;
 

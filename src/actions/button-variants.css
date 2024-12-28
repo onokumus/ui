@@ -105,7 +105,7 @@
     }
   }
   &.tonal {
-    --_bg-color: var(--color-5);
+    --_bg-color: var(--color-6);
     --_text-color: var(--color-16);
 
     &:where(:not([disabled])) {
