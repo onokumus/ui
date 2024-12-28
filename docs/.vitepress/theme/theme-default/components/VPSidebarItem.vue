@@ -117,9 +117,6 @@ function onCaretClick() {
 }
 
 .item {
-  --text-color-2-78: oklch(from var(--text-color-2) l c h / 78%);
-  --text-color-2-56: oklch(from var(--text-color-2) l c h / 56%);
-
   position: relative;
   display: flex;
   width: 100%;
