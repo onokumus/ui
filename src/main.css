@@ -1,21 +1,16 @@
 @layer props, normalize, utils, theme, components.base, components.has-deps;
 
+@import "opbeta/css/media-queries.css";
+
 /* Props */
-@import "https://unpkg.com/open-props@2.0.0-beta.5/index.css" layer(props);
-@import "https://unpkg.com/browse/open-props@2.0.0-beta.5/css/sizes/media.css"
-layer(props);
-@import "https://unpkg.com/open-props@2.0.0-beta.5/css/font/lineheight.css"
-layer(props);
-@import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/red.hex.css"
-layer(props);
-@import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/green.hex.css"
-layer(props);
-@import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/blue.hex.css"
-layer(props);
-@import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/orange.hex.css"
-layer(props);
-@import "https://unpkg.com/open-props@2.0.0-beta.5/css/color/hues.oklch.css"
-layer(props);
+@import "opbeta/index.css" layer(props);
+@import "opbeta/css/sizes/media.css" layer(props);
+@import "opbeta/css/font/lineheight.css" layer(props);
+@import "opbeta/css/color/red.hex.css" layer(props);
+@import "opbeta/css/color/green.hex.css" layer(props);
+@import "opbeta/css/color/blue.hex.css" layer(props);
+@import "opbeta/css/color/orange.hex.css" layer(props);
+@import "opbeta/css/color/hues.oklch.css" layer(props);
 @import "open-props/gray-oklch.min.css" layer(props);
 
 /* Normalize */
