@@ -25,7 +25,7 @@ export default defineConfig({
         customMedia: true,
       },
       targets: {
-        chrome: 131,
+        chrome: 131 << 16,
       },
     },
   },
