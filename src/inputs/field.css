@@ -60,6 +60,14 @@
     }
   }
 
+  /* Textarea-only */
+  &:has(> textarea) {
+    .label {
+      align-self: start;
+      margin-block-start: var(--_field-padding-block);
+    }
+  }
+
   /* Variant: Outlined  */
   &:not(.filled) {
     /* Element states */
@@ -119,6 +127,12 @@
       margin-block-start: calc(-1 * var(--size-8));
       margin-inline-start: calc(var(--_field-padding-inline) / 2);
       padding-inline: calc(var(--_field-padding-inline) / 2);
+    }
+
+    &:has(> textarea) {
+      .label {
+        margin-block-start: calc(-1 * var(--size-2));
+      }
     }
   }
 
@@ -216,6 +230,12 @@
 
         .label {
           margin-block-start: calc(-1 * var(--size-5));
+        }
+
+        &:has(> textarea) {
+          .label {
+            margin-block-start: var(--size-1);
+          }
         }
       }
     }

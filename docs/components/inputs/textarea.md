@@ -32,6 +32,37 @@
 </template>
 </Example>
 
+## Label & supporting text
+
+<Example row>
+<template #example>
+<label class="field">
+  <span class="label">Label</span>
+    <textarea  placeholder="Default"></textarea>
+    <span class="supporting-text">Supporting text</span>
+  </label>
+
+  <label class="field filled">
+    <span class="label">Label</span>
+    <textarea placeholder="Filled"></textarea>
+    <span class="supporting-text">Supporting text</span>
+  </label>
+</template>
+<template #code>
+
+```html
+<div class="field">
+  <textarea placeholder="Default"></textarea>
+</div>
+
+<div class="field filled">
+  <textarea placeholder="Filled"></textarea>
+</div>
+```
+
+</template>
+</Example>
+
 ## Auto-fit
 
 When enabled the Textarea changes size depending on its content.
