@@ -23,6 +23,18 @@
       }
     }
 
+    /* Blockquote */
+    blockquote {
+      :first-child {
+        margin-block-start: 0;
+      }
+
+      :last-child {
+        margin-block-end: 0;
+      }
+    }
+
+    /* Text */
     p {
       margin-block: 1.25em;
     }
@@ -103,13 +115,15 @@
     }
 
     /* Lists */
-    ul {
+    ul:not([class]) {
       list-style-type: disc;
     }
-    ol {
+
+    ol:not([class]) {
       list-style-type: decimal;
     }
-    :where(ul, ol) {
+
+    :where(ul, ol):not([class]) {
       margin-block-start: 1.25em;
       margin-block-end: 1.25em;
       padding-inline-start: 1.625em;
@@ -131,18 +145,18 @@
     }
 
     /* Description lists */
-    dl {
+    :where(dl) {
       margin-block-start: 1.25em;
       margin-block-end: 1.25em;
-    }
 
-    dt {
-      margin-block-start: 1.25em;
-    }
+      dt {
+        margin-block-start: 1.25em;
+      }
 
-    dd {
-      margin-block-start: 0.5em;
-      padding-inline-start: 1.625em;
+      dd {
+        margin-block-start: 0.5em;
+        padding-inline-start: 1.625em;
+      }
     }
 
     /* Figures */

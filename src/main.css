@@ -28,11 +28,12 @@
 @import "./data-display/badge.css" layer(components.base);
 @import "./data-display/chip.css" layer(components.base);
 @import "./data-display/divider.css" layer(components.base);
+@import "./data-display/dotted-list.css" layer(components.base);
 @import "./data-display/link.css" layer(components.base);
 @import "./data-display/list.css" layer(components.base);
 @import "./data-display/table.css" layer(components.base);
 @import "./data-display/tooltip.css" layer(components.base);
-@import "./data-display/typography.css" layer(components.base);
+@import "./text/typography.css" layer(components.base);
 @import "./feedback/progress.css" layer(components.base);
 @import "./feedback/spinner.css" layer(components.base);
 @import "./actions/button-base.css" layer(components.base);
@@ -44,7 +45,7 @@
 @import "./data-display/card.css" layer(components.base);
 
 /*** Has dependencies */
-@import "./data-display/rich-text.css" layer(components.has-deps);
+@import "./text/rich-text.css" layer(components.has-deps);
 @import "./feedback/alert.css" layer(components.has-deps);
 @import "./feedback/dialog.css" layer(components.has-deps);
 @import "./feedback/snackbar.css" layer(components.has-deps);

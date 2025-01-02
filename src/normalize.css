@@ -24,7 +24,7 @@
   background-color: var(--surface-default);
   block-size: 100%;
   caret-color: var(--primary);
-  color: var(--text-color-2);
+  color: var(--text-color-1);
   font-family: var(--font-sans);
 
   line-height: var(--font-lineheight-3);

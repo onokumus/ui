@@ -44,31 +44,6 @@ export default defineConfig({
     nav: [
       { text: "Guide", link: "/guide/what-is-open-props-ui" },
       { text: "Components", link: "/components" },
-      // {
-      //   text: "Version",
-      //   items: [
-      //     {
-      //       text: "HTML",
-      //       link: "#",
-      //     },
-      //     {
-      //       text: "React",
-      //       link: "#",
-      //     },
-      //     {
-      //       text: "Solid",
-      //       link: "#",
-      //     },
-      //     {
-      //       text: "Svelte",
-      //       link: "#",
-      //     },
-      //     {
-      //       text: "Vue",
-      //       link: "#",
-      //     },
-      //   ],
-      // },
       { text: "API", link: "/api" },
       { text: "Blog", link: "/blog" },
       { text: "Open Props", link: "https://open-props.style/" },
@@ -146,13 +121,13 @@ export default defineConfig({
                 { text: "Card", link: "/components/data-display/card" },
                 { text: "Chip", link: "/components/data-display/chip" },
                 { text: "Divider", link: "/components/data-display/divider" },
+                {
+                  text: "Dotted list",
+                  link: "/components/data-display/dotted-list",
+                },
                 { text: "List", link: "/components/data-display/list" },
                 { text: "Table", link: "/components/data-display/table" },
                 { text: "Tooltip", link: "/components/data-display/tooltip" },
-                {
-                  text: "Typography",
-                  link: "/components/data-display/typography",
-                },
               ],
             },
             {
@@ -164,6 +139,20 @@ export default defineConfig({
                 { text: "Progress", link: "/components/feedback/progress" },
                 { text: "Snackbar", link: "/components/feedback/snackbar" },
                 { text: "Spinner", link: "/components/feedback/spinner" },
+              ],
+            },
+            {
+              text: "Typography",
+              collapsed: false,
+              items: [
+                {
+                  text: "Rich text",
+                  link: "/components/text/rich-text",
+                },
+                {
+                  text: "Typography",
+                  link: "/components/text/typography",
+                },
               ],
             },
             {
