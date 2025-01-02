@@ -171,8 +171,7 @@ select,
     ),
   label[for],
   select,
-  summary,
-  [tabindex]:not([tabindex*="-"])
+  summary
 ) {
   cursor: pointer;
 }
