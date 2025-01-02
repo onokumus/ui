@@ -50,14 +50,12 @@
 </template>
 <template #code>
 
-```html
-<div class="field">
-  <textarea placeholder="Default"></textarea>
-</div>
-
-<div class="field filled">
-  <textarea placeholder="Filled"></textarea>
-</div>
+```html{1,2,4,5}
+<label class="field">
+  <span class="label">Label</span>
+  <textarea placeholder="Placeholder text"></textarea>
+  <span class="supporting-text">Supporting text</span>
+</label>
 ```
 
 </template>
