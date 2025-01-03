@@ -1,11 +1,11 @@
 # Open-Props UI
 
-A modern CSS UI library to suit professional teams as well as tinkering hobbyists. Copy and paste the components into your projects in order to have complete ownership of your code.
+A CSS UI library exploring how next-gen HTML & CSS features can change the way we create components. Designed to be used by professional teams as well as tinkering hobbyists. Everything is made with **ease-of-use** and **scalability** in mind. Last but not least - you **copy and paste** the components into your repo. It's the best way to have a complete **understanding** and **ownership** over your stuff.
 
 https://open-props-ui.netlify.app/
 
 > [!NOTE]
-> This is work in progress. Contributions are welcome!
+> This is work in progress. Breaking changes are expected. Contributions are welcome!
 
 ## Development
 
@@ -22,22 +22,12 @@ Practically all established UI libraries need to take older browser versions int
 
 ## The goal of the component library
 
+> "If you only use the latest features, that means this is can never enter production"
+
+Yes and no. Right now that's true for most components. The point is to let the spec and the components mature alongside each other and in time the library will be ready for production.
+
 - Have sensible defaults without sacrificing flexibility and control
 - Use modern HTML & CSS features
 - Follow accessibility guidelines
+- Serve as an inspiration
 - Be scalable
-
-## The goal of the docs
-
-- To encourage the use of and inform about accessibility
-- Be a resource to discover new and cool tricks
-- To be easy to use and understand
-
-## Developer blog
-
-The developer blog mostly consist of learnings made from the work on Open Props UI. Oftentimes we only get to see the finished product, but the journey there can be full of interesting stuff!
-
-```
-pnpm i
-pnpm docs:dev
-```
