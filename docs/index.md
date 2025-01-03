@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  text: "The component library of the future."
-  tagline: "So modern it (currently) needs feature flags enabled."
+  text: "The UI library of the future (or now, with feature flags)."
+  tagline: "Components you can copy and paste to your project."
   actions:
     - theme: filled
       text: Quickstart
