@@ -57,6 +57,7 @@
       inline-size: 0;
       inset-block-start: 50%;
       inset-inline-end: var(--size-3);
+      pointer-events: none;
       position: absolute;
       translate: 0 -50%;
     }
@@ -111,7 +112,7 @@
   }
 }
 
-:where(:has(> select)) {
+:where(.field:has(> select)) {
   /* Size */
   &.small {
     button {
@@ -123,4 +124,38 @@
       }
     }
   }
+
+  /*
+  * Non-experimental Select
+  *
+  * Hack to get the arrow working. Pseudo elements aren't allowed on the `<select>` element, so need to add it on the `.field` class instead. Noting this down if an `:after` element would be needed on a `.field`.
+  */
+  &:not(:has(button)) {
+    select {
+      appearance: none;
+    }
+
+    /* Arrow */
+    &:after {
+      align-self: center;
+      block-size: 0;
+      border-block-start: 5px solid;
+      border-inline: 5px solid transparent;
+      content: "";
+      display: inline-block;
+      flex-shrink: 0;
+      grid-column: 1/-1;
+      grid-row: 1;
+      inline-size: 0;
+      inset-inline-end: var(--size-3);
+      justify-self: end;
+      pointer-events: none;
+      position: relative;
+    }
+  }
+}
+
+select:has(button),
+::picker(select) {
+  appearance: base-select;
 }

@@ -56,6 +56,14 @@
 
   /* Select */
   &:has(> select) {
+    &:not(:has(button)) {
+      /* Non-experimental Select */
+      select {
+        padding: var(--_field-padding-block) var(--size-8)
+          var(--_field-padding-block) var(--_field-padding-inline);
+      }
+    }
+
     /* Label */
     .label {
       /* Make sure arrow is visible */
