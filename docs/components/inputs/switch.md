@@ -47,7 +47,7 @@ All switches should have labels. Notice the use of `aria-label` on the `label` e
   <input type="checkbox" role="switch" />
 </label>
 
-<!-- Unchecked. Demos another common pattern that input is outside label -->
+<!-- Unchecked. Demos another common pattern where input is outside label -->
 <div class="switch">
   <label for="switch-unchecked" aria-label="Label"></label>
   <input id="switch-unchecked" type="checkbox" role="switch" />
