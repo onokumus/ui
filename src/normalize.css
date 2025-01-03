@@ -151,7 +151,7 @@
   }
 }
 
-select,
+select:has(button),
 ::picker(select) {
   appearance: base-select;
 }

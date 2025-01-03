@@ -278,6 +278,73 @@ Since the Select popover uses the [List component](/components/data-display/list
   }
 </style>
 
+## Native option list
+
+If you want to use the native option list only, just use the Select as you normally would.
+
+<Example row>
+<template #example>
+<div class="field">
+  <select>
+    <option>Outlined (default)</option>
+    <option>Option Two</option>
+    <option>Option Three</option>
+  </select>
+</div>
+
+<div class="field filled">
+  <select>
+    <option>Filled</option>
+    <option>Option Two</option>
+    <option>Option Three</option>
+  </select>
+</div>
+
+<label class="field">
+  <span class="label">Label</span>
+  <select>
+    <option value="">-</option>
+    <option>Option</option>
+    <option>Option</option>
+  </select>
+    <span class="supporting-text">Supporting text</span>
+</label>
+
+<label class="field filled">
+  <span class="label">Label</span>
+  <select>
+    <option value="">-</option>
+    <option>Option</option>
+    <option>Option</option>
+  </select>
+    <span class="supporting-text">Supporting text</span>
+</label>
+</template>
+<template #code>
+
+```html
+<div class="field">
+  <select>
+    <option>Outlined (default)</option>
+    <option>Option Two</option>
+    <option>Option Three</option>
+  </select>
+</div>
+
+<label class="field">
+  <span class="label">Label</span>
+  <select>
+    <option value="">-</option>
+    <option>Option</option>
+    <option>Option</option>
+  </select>
+  <span class="supporting-text">Supporting text</span>
+</label>
+```
+
+</template>
+</Example>
+
 ## Anatomy
 
 1. Select container: `<select>`

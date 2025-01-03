@@ -41,8 +41,8 @@
     }
   }
 
-  /* Select-only */
-  &:has(> select) {
+  /* Experimental Select */
+  &:has(> select button) {
     select {
       padding: 0;
 
@@ -52,7 +52,10 @@
           var(--_field-padding-block) var(--_field-padding-inline);
       }
     }
+  }
 
+  /* Select */
+  &:has(> select) {
     /* Label */
     .label {
       /* Make sure arrow is visible */
@@ -60,7 +63,7 @@
     }
   }
 
-  /* Textarea-only */
+  /* Textarea */
   &:has(> textarea) {
     .label {
       align-self: start;
@@ -223,7 +226,8 @@
             calc(var(--_field-padding-block) * 0.2);
         }
 
-        select > button {
+        select > button,
+        select:not(:has(> button)) {
           padding-block: calc(var(--_field-padding-block) * 1.8)
             calc(var(--_field-padding-block) * 0.2);
         }
