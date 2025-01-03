@@ -1,17 +1,27 @@
 <script setup lang="ts">
-import { defineClientComponent } from 'vitepress'
+import { defineClientComponent } from "vitepress"
 const props = defineProps<{
   ids: string[]
 }>()
 
 const BaselineStatus = defineClientComponent(() => {
-  return import('baseline-status/baseline-status')
+  return import("baseline-status/baseline-status").then((module) => {
+    if (!customElements.get("baseline-status")) {
+      customElements.define("baseline-status", module.BaselineStatus)
+    }
+    return "baseline-status"
+  })
 })
 </script>
 
 <template v-if="ids.length">
   <article class="card outlined not-rich-text">
-    <baseline-status v-for="id in ids" :featureId="id"></baseline-status>
+    <component
+      v-for="id in ids"
+      :key="id"
+      :is="BaselineStatus"
+      :featureId="id"
+    />
   </article>
 </template>
 
