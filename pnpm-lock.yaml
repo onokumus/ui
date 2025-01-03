@@ -53,9 +53,6 @@ importers:
       opbeta:
         specifier: npm:open-props@2.0.0-beta.5
         version: open-props@2.0.0-beta.5
-      open-props:
-        specifier: ^1.7.10
-        version: 1.7.10
       shiki:
         specifier: ^1.24.4
         version: 1.24.4
@@ -1101,9 +1098,6 @@ packages:
 
   oniguruma-to-es@0.8.1:
     resolution: {integrity: sha512-dekySTEvCxCj0IgKcA2uUCO/e4ArsqpucDPcX26w9ajx+DvMWLc5eZeJaRQkd7oC/+rwif5gnT900tA34uN9Zw==}
-
-  open-props@1.7.10:
-    resolution: {integrity: sha512-zZPJlr39YbHPou7mQ9GUKz1jiYjWzyZf/0pkPZq4MrtwgZ6FSCnf7hLkvFRGq+RZZ327vGSW3HPc7QMH4FUAZg==}
 
   open-props@2.0.0-beta.5:
     resolution: {integrity: sha512-Ahq2/q6T+0kzI9Lwt3f8CX6l0IQxqKYkeMi4u09gdFkFmxB1gYuSwqg2xd5nVN1zEYtUN93V0DbQRoDsP3OSmw==}
@@ -2238,8 +2232,6 @@ snapshots:
       emoji-regex-xs: 1.0.0
       regex: 5.1.1
       regex-recursion: 5.1.1
-
-  open-props@1.7.10: {}
 
   open-props@2.0.0-beta.5: {}
 
