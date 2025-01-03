@@ -28,7 +28,7 @@
 @import "./data-display/badge.css" layer(components.base);
 @import "./data-display/chip.css" layer(components.base);
 @import "./data-display/divider.css" layer(components.base);
-@import "./data-display/dotted-list.css" layer(components.base);
+@import "./data-display/definition-list.css" layer(components.base);
 @import "./data-display/link.css" layer(components.base);
 @import "./data-display/list.css" layer(components.base);
 @import "./data-display/table.css" layer(components.base);

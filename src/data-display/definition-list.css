@@ -1,8 +1,15 @@
-/* Dotted list */
-:where(.dotted-list) {
+:where(.definition-list) {
+  --_border-style: solid;
+  --_border-width: 1px;
+
   display: grid;
   gap: var(--size-3);
   padding: 0;
+
+  &.dotted {
+    --_border-style: dotted;
+    --_border-width: 2px;
+  }
 
   li {
     display: grid;
@@ -29,11 +36,16 @@
       align-items: baseline;
       display: grid;
       gap: var(--size-1);
-      grid-template-columns: auto 1fr auto;
+      grid-template-columns: 1fr auto;
+
+      &:has(hr) {
+        grid-template-columns: auto 1fr auto;
+      }
 
       hr {
         background-color: transparent;
-        border-block-end: 2px dotted var(--border-color);
+        border-block-end: var(--_border-width) var(--_border-style)
+          var(--border-color);
         block-size: 2px;
         display: block;
       }
