@@ -99,9 +99,40 @@ import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
 </template>
 </Example>
 
+<style scoped>
+  	.anatomy {
+    outline: var(--_anatomy-border-gray);
+    outline-offset: 6px;
+		li * {
+			outline: var(--_anatomy-border-red);
+			outline-offset: -2px;
+		}
+	}
+</style>
+
 ## Anatomy
 
+1. List
+2. List item
+3. Term
+4. Horizontal rule (optional)
+5. Description
+
+<Example>
+<template #example>
+<ul class="definition-list dotted anatomy">
+  <li>
+    <span class="term">Price</span>
+    <hr>
+    <span class="description">6 950 000</span>
+  </li>
+</ul>
+</template>
+</Example>
+
 ## API
+
+<!--@include: ./definition-list-api.md -->
 
 ## Browser compatibility
 

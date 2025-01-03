@@ -69,6 +69,10 @@
 
 <!--@include: ./components/data-display/chip-api.md -->
 
+### [Definition list](/components/data-display/definition-list)
+
+<!--@include: ./components/data-display/definition-list-api.md -->
+
 ### [List](/components/data-display/list)
 
 <!--@include: ./components/data-display/list-api.md -->
