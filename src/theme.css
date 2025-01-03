@@ -100,7 +100,7 @@ html {
   --green-text: light-dark(var(--color-1), var(--color-11));
 
   /* Surface */
-  --surface-default: light-dark(var(--gray-1), var(--gray-13));
+  --surface-default: light-dark(var(--gray-1), var(--gray-14));
   --surface-filled: light-dark(var(--gray-2), var(--gray-15));
   --surface-tonal: light-dark(var(--gray-2), var(--gray-13));
   --surface-elevated: light-dark(var(--gray-1), var(--gray-13));
