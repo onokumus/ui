@@ -155,7 +155,7 @@
 .vp-doc div[class*="language-"],
 .vp-block {
   position: relative;
-  margin: 16px -24px;
+  margin: 16px 0;
   background-color: var(--vp-code-block-bg);
   overflow-x: auto;
   transition: background-color 0.5s;
@@ -169,7 +169,6 @@
   .vp-doc div[class*="language-"],
   .vp-block {
     border-radius: var(--surface-border-radius, 0.25rem);
-    margin: 16px 0;
   }
 }
 
