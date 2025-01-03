@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import type { DefaultTheme } from "vitepress/theme";
-import VPImage from "./VPImage.vue";
-import VPLink from "./VPLink.vue";
+import type { DefaultTheme } from "vitepress/theme"
+import VPImage from "./VPImage.vue"
+import VPLink from "./VPLink.vue"
 
 defineProps<{
-  icon?: DefaultTheme.FeatureIcon;
-  title: string;
-  details?: string;
-  link?: string;
-  linkText?: string;
-  rel?: string;
-  target?: string;
-}>();
+  icon?: DefaultTheme.FeatureIcon
+  title: string
+  details?: string
+  link?: string
+  linkText?: string
+  rel?: string
+  target?: string
+}>()
 </script>
 
 <template>
@@ -23,7 +23,7 @@ defineProps<{
     :no-icon="true"
     :tag="link ? 'a' : 'div'"
   >
-    <article class="card tonal">
+    <article class="card outlined">
       <div class="content">
         <div v-if="typeof icon === 'object' && icon.wrap" class="icon">
           <VPImage
