@@ -249,12 +249,12 @@ const idSwitch = useId()
   </li>
 
   <li class="border-top">
-    <label :for="idSwitch" role="switch" for="switch-checked" class="switch">
+    <label :for="idSwitch" for="switch-checked" class="switch">
       <div class="text">
         <p>Switch 1</p>
       </div>
       <div class="end">
-        <input :id="idSwitch" type="checkbox" />
+        <input :id="idSwitch" role="switch" type="checkbox" />
       </div>
     </label>
   </li>

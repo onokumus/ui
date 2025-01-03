@@ -588,23 +588,23 @@ Read more: [Switch](/components/inputs/switch)
 <template #example>
 <ul class="list">
 <li>
-  <label role="switch" class="switch" for="switch-example-1">
+  <label class="switch" for="switch-example-1">
     <div class="text">
       <p>Switch 1</p>
     </div>
     <div class="end">
-      <input id="switch-example-1" type="checkbox"  />
+      <input id="switch-example-1" role="switch" type="checkbox"  />
     </div>
   </label>
 </li>
 
 <li>
-  <label role="switch" class="switch" for="switch-example-2">
+  <label class="switch" for="switch-example-2">
     <div class="text">
       <p>Switch 2</p>
     </div>
     <div class="end">
-      <input id="switch-example-2" type="checkbox" />
+      <input id="switch-example-2" role="switch" type="checkbox" />
     </div>
     </label>
 </li>
