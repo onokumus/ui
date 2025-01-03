@@ -65,6 +65,10 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 
 ## Label & supporting text
 
+- Use the `<label>` element with the `.field` class.
+- `.label`: label text element
+- `.supporting-text`: supporting text element
+
 <Example row>
 <template #example>
 <label class="field">
@@ -80,6 +84,7 @@ Leverages the [List component](/components/data-display/list) to provide markup 
     <option>Option Three</option>
   </div>
 </select>
+<span class="supporting-text">Supporting text</span>
 </label>
 
 <label class="field filled">
@@ -95,28 +100,18 @@ Leverages the [List component](/components/data-display/list) to provide markup 
     <option>Option Three</option>
   </div>
 </select>
+<span class="supporting-text">Supporting text</span>
 </label>
 </template>
 <template #code>
 
-```html{1,14}
+```html{2,6}
 <div class="field">
+  <span class="label">Label</span>
   <select>
-    <button>
-      <selectedoption></selectedoption>
-    </button>
-    <div class="list">
-      <option>Outlined (default)</option>
-      <option>Option Two</option>
-      <option>Option Three</option>
-    </div>
+   <!--  -->
   </select>
-</div>
-
-<div class="field filled">
-  <select>
-    <!--  -->
-  </select>
+  <span class="supporting-text">Supporting text</span>
 </div>
 ```
 

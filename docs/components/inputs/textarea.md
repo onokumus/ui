@@ -34,6 +34,10 @@
 
 ## Label & supporting text
 
+- Use the `<label>` element with the `.field` class.
+- `.label`: label text element
+- `.supporting-text`: supporting text element
+
 <Example row>
 <template #example>
 <label class="field">
@@ -50,7 +54,7 @@
 </template>
 <template #code>
 
-```html{1,2,4,5}
+```html{2,4}
 <label class="field">
   <span class="label">Label</span>
   <textarea placeholder="Placeholder text"></textarea>

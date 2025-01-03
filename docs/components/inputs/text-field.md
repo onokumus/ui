@@ -66,7 +66,7 @@
 </template>
 <template #code>
 
-```html
+```html{2,4}
 <label class="field">
   <span class="label">Label</span>
   <input type="text" placeholder="Placeholder" />
