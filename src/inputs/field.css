@@ -29,10 +29,10 @@
     font-size: var(--font-size-1);
     grid-column: 1/-1;
     grid-row: 1;
+    inline-size: 100%;
     line-height: var(--font-lineheight-1);
     min-inline-size: 0;
     padding: var(--_field-padding-block) var(--_field-padding-inline);
-    width: 100%;
 
     @media (prefers-reduced-motion: no-preference) {
       transition:
@@ -128,7 +128,8 @@
   /* Label transitions */
   &:focus-within,
   &:has(:where(input, textarea):not(:placeholder-shown)),
-  &:has(option[value=""]:not(:checked)) {
+  &:has(option[value=""]:not(:checked)),
+  &:has(option:checked:not([value=""])) {
     .label {
       color: var(--_accent-color);
       font-size: 0.75rem;
@@ -159,7 +160,7 @@
 
   /* Auto-fit */
   &.auto-fit {
-    width: auto;
+    inline-size: auto;
     :where(& > input, & > textarea) {
       field-sizing: content;
     }
@@ -228,7 +229,8 @@
     &:has(.label) {
       &:focus-within,
       &:has(:where(input, textarea):not(:placeholder-shown)),
-      &:has(option[value=""]:not(:checked)) {
+      &:has(option[value=""]:not(:checked)),
+      &:has(option:checked:not([value=""])) {
         :where(input, textarea) {
           padding-block: calc(var(--_field-padding-block) * 1.8)
             calc(var(--_field-padding-block) * 0.2);
