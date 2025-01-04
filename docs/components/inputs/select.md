@@ -273,6 +273,53 @@ Since the Select popover uses the [List component](/components/data-display/list
   }
 </style>
 
+## Validation
+
+The `.bad` class toggles the error styles. Make use of the supporting text to give extra feedback on the error.
+
+<Example row>
+<template #example>
+<label class="field bad">
+	<span class="label">Label</span>
+<select>
+  <button>
+    <selectedoption></selectedoption>
+  </button>
+  <div class="list">
+   <option>Outlined (default)</option>
+    <option>Option Two</option>
+    <option>Option Three</option>
+  </div>
+</select>	<span class="supporting-text">Only double-negatives are allowed.</span>
+</label>
+
+<label class="field bad filled">
+	<span class="label">Label</span>
+<select>
+  <button>
+    <selectedoption></selectedoption>
+  </button>
+  <div class="list">
+   <option>Filled</option>
+    <option>Option Two</option>
+    <option>Option Three</option>
+  </div>
+</select>	<span class="supporting-text">Only letters from the first half of the alphabet are allowed.</span>
+</label>
+</template>
+<template #code>
+
+```html{1}
+<label class="field bad">
+  <span class="label">Label</span>
+  <select> <!-- --> </select>
+  <span class="supporting-text">Supporting text</span>
+</label>
+```
+
+</template>
+</Example>
+
 ## Non-experimental Select
 
 Just implement the Select as you normally would.
