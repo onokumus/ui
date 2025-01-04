@@ -273,9 +273,9 @@ Since the Select popover uses the [List component](/components/data-display/list
   }
 </style>
 
-## Native option list
+## Non-experimental Select
 
-If you want to use the native option list only, just use the Select as you normally would.
+Just implement the Select as you normally would.
 
 <Example row>
 <template #example>
