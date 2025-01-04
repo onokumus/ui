@@ -15,7 +15,7 @@
   /* Sizes */
   &.small {
     input {
-      padding-inline: var(--size-2) var(--size-7);
+      padding-inline: var(--size-2);
     }
   }
 }
