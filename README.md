@@ -1,4 +1,4 @@
-# Open-Props UI
+# Open Props UI
 
 A CSS UI library exploring how next-gen HTML & CSS features can change the way we create components. Designed to be used by professional teams as well as tinkering hobbyists. Everything is made with **ease-of-use** and **scalability** in mind. Last but not least - you **copy and paste** the components into your repo. It's the best way to have a complete **understanding** and **ownership** over your stuff.
 
