@@ -98,10 +98,8 @@ html {
 
   /* TODO: Do something like this? */
   /* @container style(--color-scheme: dark) {
-    --palette-hue: var(--oklch-red);
-  } */
-
-  /* TODO: invent custom gray palette (since OP 2.0 isn't providing any) or use relative colors */
+                                    --palette-hue: var(--oklch-red);
+                                    } */
 
   --primary: var(--color-8);
   --primary-dark: oklch(from var(--primary) calc(l * 0.75) c h);
@@ -134,7 +132,7 @@ html {
   --green-text: light-dark(var(--color-1), var(--color-11));
 
   /* Surface */
-  --surface-default: light-dark(var(--gray-1), var(--gray-13));
+  --surface-default: light-dark(var(--gray-1), var(--gray-14));
   --surface-filled: light-dark(var(--gray-3), var(--gray-15));
   --surface-tonal: light-dark(var(--gray-3), var(--gray-13));
   --surface-elevated: light-dark(var(--gray-1), var(--gray-13));
