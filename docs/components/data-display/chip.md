@@ -259,10 +259,6 @@ Make sure the text is wrapped in a `.text` wrapper.
 </template>
 </Example>
 
-::: info
-`.multiline` simply sets `block-size: auto` on the Chip.
-:::
-
 ## Anatomy
 
 1. Container: `div`, `a` or `button`

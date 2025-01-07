@@ -127,7 +127,7 @@ pre {
 }
 
 code {
-  background-color: var(--surface-tonal);
+  background-color: oklch(100 0 0 /15%);
   border-radius: var(--border-size-3);
   color: var(--primary);
   font-size: 90%;

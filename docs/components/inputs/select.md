@@ -1,6 +1,7 @@
 <script setup>
 	import Example from "../../.vitepress/theme/app/components/Example.vue"
 	import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
+  import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 </script>
 
 # Select
@@ -474,9 +475,13 @@ Just implement the Select as you normally would.
 
 ## Accessibility
 
-::: warning Experimental status
+<div class="not-rich-text">
+<Alert title="Experimental status" seveity="warning">
+
 This way of writing Selects are currently quite experimental. Accessible solutions are on the way, but not solved yet.
-:::
+</Alert>
+
+</div>
 
 ## API
 

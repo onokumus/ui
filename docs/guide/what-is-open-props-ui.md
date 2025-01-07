@@ -1,3 +1,7 @@
+<script setup>
+	import Alert from "../.vitepress/theme/app/components/Alert.vue";
+</script>
+
 <hgroup>
 <p>Guide</p>
 <h1>What is Open Props UI?</h1>
@@ -11,9 +15,13 @@ Practically all established UI libraries need to take older browser versions int
 
 ## The goal of the component library
 
-::: info "If you only use the latest features, that means this is can never enter production"
+<div class="not-rich-text">
+<Alert title='"If you only use the latest features, that means this is can never enter production"'>
+
 Yes and no. Right now that's true for most components. The point is to let the spec and the components mature alongside each other and in time the library will be ready for production.
-:::
+</Alert>
+
+</div>
 
 - Have sensible defaults without sacrificing flexibility and control
 - Use modern HTML & CSS features

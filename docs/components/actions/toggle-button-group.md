@@ -1,5 +1,6 @@
 <script setup>
 import Example from "../../.vitepress/theme/app/components/Example.vue";
+import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
 import WalkingIcon from "../../.vitepress/theme/app/components/WalkingIcon.vue";
 import CyclingIcon from "../../.vitepress/theme/app/components/CyclingIcon.vue";
@@ -42,9 +43,14 @@ Groups related buttons by wrapping them with `<yourElement class="toggle-button-
 
 [More helpful guidelines](https://m3.material.io/components/segmented-buttons/guidelines).
 
-::: tip Javascript is required
+<div class="not-rich-text">
+<Alert title="Javascript is required" severity="ok">
+
 The whole idea of Toggle button group is that it relies on state change. Therefore Javascript is needed for it to work as intended.
-:::
+
+</Alert>
+</div>
+
 ::: details Button group or Toggle button group?
 If you just need to group a bunch of "dumb" (uncontrolled) buttons - use [Button group](/components/actions/button-group).
 
@@ -153,10 +159,11 @@ Only show two things at once: icon + text or icon + icon.
 
 Don't forget to use `aria-label` on the `<button>` element whenever you don't have another way to label your button.
 
-::: warning
-Icons can be used in place of labels, but they must clearly communicate their meaning.
-
-:::
+<div class="not-rich-text">
+<Alert title="Warning" severity="warning">
+<p>Icons can be used in place of labels, but they must clearly communicate their meaning.</p>
+</Alert>
+</div>
 
 <Example column centered>
 <template #example>
@@ -194,9 +201,11 @@ Icons can be used in place of labels, but they must clearly communicate their me
 </template>
 </Example>
 
-::: danger Keep it simple
-Avoid mixing icon-only buttons with text buttons. Choose one type and use that type for all segments.
-:::
+<div class="not-rich-text">
+<Alert title="Keep it simple" variant="error">
+<p>Avoid mixing icon-only buttons with text buttons. Choose one type and use that type for all segments.</p>
+</Alert>
+</div>
 
 ## Dynamic width
 
@@ -290,9 +299,13 @@ Vertical button groups are largely a legacy design pattern that can be better ha
 
 Horizontal groups or alternative patterns altogether usually provide better UX.
 
-::: info Am I wrong?
+<div class="not-rich-text">
+<Alert title="Am I wrong?">
+
 Create an [issue or a PR](https://github.com/felix-bohlin/ui) and let me know!
-:::
+</Alert>
+
+</div>
 
 <style scoped>
 	.anatomy {

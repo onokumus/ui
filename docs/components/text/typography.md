@@ -1,7 +1,7 @@
 <script setup>
 import Example from "../../.vitepress/theme/app/components/Example.vue"
 import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
-
+import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 </script>
 
 # Typography
@@ -67,14 +67,23 @@ import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
 </template>
 </Example>
 
-::: info `<hgroup>` spec
+<div class="not-rich-text">
+<Alert>
+<template #title>
+<code>&lt;hgroup&gt;</code> spec
+</template>
+
+<div class="rich-text">
 
 - Zero or more p elements...
 - ... followed by one h1, h2, h3, h4, h5, or h6 element...
 - ...followed by zero or more p elements.
 
 [Source](https://html.spec.whatwg.org/multipage/sections.html#the-hgroup-element)
-:::
+
+</div>
+</Alert>
+</div>
 
 ## Inline text elements
 

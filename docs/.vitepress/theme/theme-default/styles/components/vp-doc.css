@@ -145,12 +145,12 @@
   color: var(--vp-code-link-hover-color);
 }
 
-.vp-doc h1 > code,
+/* .vp-doc h1 > code,
 .vp-doc h2 > code,
 .vp-doc h3 > code,
 .vp-doc h4 > code {
   font-size: 0.9em;
-}
+} */
 
 .vp-doc div[class*="language-"],
 .vp-block {

@@ -1,6 +1,7 @@
 <script setup>
 	import Example from "../../.vitepress/theme/app/components/Example.vue"
 	import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
+  import Alert from "../../.vitepress/theme/app/components/Alert.vue"
 	</script>
 
 <style>
@@ -9,19 +10,26 @@
 			outline-width: 0;
 		}
 	}
-
 </style>
 
-# Alert
+<hgroup>
+  <h1>Alert</h1>
+  <p>Alerts call out for user attention. Alerts should be part of the flow and used <strong>without</strong> interrupting the user's task.</p>
+</hgroup>
 
-Alerts call out for user attention. Alerts should be part of the flow and used **without** interrupting the user's task.
+<div class="not-rich-text" style="margin-block: 1rem;">
+<Alert title="Alternatives">
 
-::: info Alternatives
+<div class="rich-text">
+
 You might want to check out:
 
 - [Dialog](/components/feedback/dialog): takes over completely
 - [Snackbar](/components/feedback/snackbar): informative but non-interruptive
-  :::
+
+</div>
+</Alert>
+</div>
 
 ## Variants
 
@@ -96,9 +104,14 @@ Icon must be placed before the content.
 
 There are four different severities - neutral (default), ok, warning, error.
 
-::: tip Icons and accessibility
-Omitting an icon is possible. However, it helps having one if you need to convey a specific kind of severity in your Alert message. For instance, colorblind users might be left confused if there's not enough visual guidance.
-:::
+<div class="not-rich-text">
+<Alert title="Icons and accessibility" severity="ok">
+<template #icon>
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M16 13a1 1 0 0 1 1 1v9a1 1 0 1 1-2 0v-9a1 1 0 0 1 1-1m0-2a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3M2 16C2 8.268 8.268 2 16 2s14 6.268 14 14s-6.268 14-14 14S2 23.732 2 16M16 4C9.373 4 4 9.373 4 16s5.373 12 12 12s12-5.373 12-12S22.627 4 16 4"/></svg>
+</template>
+<p>Omitting an icon is possible. However, it helps having one if you need to convey a specific kind of severity in your Alert message. For instance, colorblind users might be left confused if there's not enough visual guidance.</p>
+</Alert>
+</div>
 
 <Example column>
 <template #example>
@@ -144,7 +157,7 @@ Omitting an icon is possible. However, it helps having one if you need to convey
 ## Anatomy
 
 1. Container: must have `role="alert"`
-2. Content: text, or wrapper with `.container` class.
+2. Content: text, or wrapper with `.content` class.
 3. Icon (optional): `<svg>` element
 
 <Example column>

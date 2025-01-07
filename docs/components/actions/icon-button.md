@@ -1,6 +1,7 @@
 <script setup>
 import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
 import Example from "../../.vitepress/theme/app/components/Example.vue"
+import Alert from "../../.vitepress/theme/app/components/Alert.vue"
 </script>
 
 <style>
@@ -36,11 +37,22 @@ import Example from "../../.vitepress/theme/app/components/Example.vue"
 </template>
 </Example>
 
-::: tip `aria-label`?
+<div class="not-rich-text">
+<Alert>
+<template #title>
+	<code>aria-label</code>?
+</template>
+
+<div class="rich-text">
+
 Yes! In order for screen readers to understand what the button is for we can add `aria-label` to the `<button>` element.
 
 Read more: [Icon Button accessibility](#accessibility).
-:::
+
+</div>
+</Alert>
+
+</div>
 
 ## Sizes
 

@@ -1,6 +1,7 @@
 <script setup>
 	import Example from "../../.vitepress/theme/app/components/Example.vue"
 	import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
+	import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 	</script>
 
 <style>
@@ -56,11 +57,17 @@ The card is extremely versetile and can be used on its own, or as a building blo
 </template>
 </Example>
 
-::: info Why does a text variant exist?
+<div class="not-rich-text">
+<Alert title="Why does a text variant exist?">
+<div class="rich-text">
+
 It really doesn't make sense to use the text variant unless you really need to.
 
 The [accordion group](/components/data-display/accordion#accordion-group) is a great example where Open Props UI leverages the text variant of the `.card` component.
-:::
+
+</div>
+</Alert>
+</div>
 
 ## Anatomy
 
@@ -126,11 +133,17 @@ These are the classes and attributes a card can be styled with. As usual, feel f
 
 ## Installation
 
-::: warning
-Other components might depend on the card component. Be mindful when making changes.
+<div class="not-rich-text" style="margin-block-end: var(--size-3)">
+<Alert severity="warning">
+<div class="rich-text">
 
+Other components might depend on the card component. Be mindful when making changes.
 [Accordion](/components/data-display/accordion), [Dialog](/components/feedback/dialog)
-:::
+
+</div>
+</Alert>
+
+</div>
 
 ::: code-group
 <<< @/../src/data-display/card.css [card.css]

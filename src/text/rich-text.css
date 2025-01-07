@@ -1,6 +1,6 @@
 @scope (.rich-text) to (.not-rich-text) {
   :where(:scope) {
-    font-size: 1rem;
+    font-size: inherit;
     line-height: 1.75;
 
     /* link.css */
@@ -124,13 +124,13 @@
     }
 
     :where(ul, ol):not([class]) {
+      display: grid;
+      gap: 0.5em;
       margin-block-start: 1.25em;
       margin-block-end: 1.25em;
       padding-inline-start: 1.625em;
 
       li {
-        margin-block-start: 0.5em;
-        margin-block-end: 0.5em;
         padding-inline-start: 0.375em;
       }
     }

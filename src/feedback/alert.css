@@ -16,28 +16,36 @@
   line-height: 1.43;
   padding: var(--size-3);
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-size: var(--font-size-md);
-    font-weight: 600;
-    color: inherit;
+  &:not(.outlined) {
+    background-color: oklch(from var(--_bg-color) l c h);
   }
 
-  &:has(h1, h2, h3, h4, h5, h6) p {
-    color: inherit;
+  .content {
+    display: grid;
+    gap: var(--size-2);
     font-size: var(--font-size-sm);
-    margin-block-start: var(--size-2);
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: inherit;
+      font-size: var(--font-size-md);
+      font-weight: 600;
+
+      * {
+        font-size: inherit;
+      }
+    }
   }
 
   /* Colors */
   &.error,
   &.ok,
   &.warning {
-    --_bg-color: light-dark(var(--color-2), var(--color-3));
+    --_bg-color: var(--color-4);
     --_border-color: var(--color-9);
     --_color: var(--color-15);
 

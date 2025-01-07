@@ -1,6 +1,7 @@
 <script setup>
 	import Example from "../../.vitepress/theme/app/components/Example.vue"
 	import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
+	import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 </script>
 
 # Text field
@@ -221,10 +222,16 @@ Change the `input`'s `type` attribute.
 
 ### Numeric vs `<input type="number">`
 
-::: danger You most likely don't need `<input type="number">`
-**You will have a bad time.**
+<div class="not-rich-text">
+<Alert severity="error">
+<template #title>
+You most likely don't need <code>&lt;input type="number"&gt;</code>
+</template>
+<div class="rich-text">
 
 While `<input type="number">` may seem logical for numeric data it should only be used when mathematical operations are needed on the input (which is... never). Data like credit card numbers, IDs or social security numbers - are actually text that happen to be numeric rather than mathematical values. Therefore, consider using `<input type="text" inputmode="numeric" pattern="[0-9]*">` instead.
+
+**You will have a bad time.**
 
 This triggers the numeric keyboard on mobile devices while avoiding the jank of number inputs, such as:
 
@@ -237,8 +244,11 @@ This triggers the numeric keyboard on mobile devices while avoiding the jank of 
 It should probably be called `<input type="math">` instead.
 
 The British Government has a [great article](https://technology.blog.gov.uk/2020/02/24/why-the-gov-uk-design-system-team-changed-the-input-type-for-numbers/) about how .error input number is and goes in-depth. It's a very interesting read.
-:::
 
+</div>
+</Alert>
+
+</div>
 <Example column>
 <template #example>
 

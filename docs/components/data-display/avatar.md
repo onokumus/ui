@@ -2,6 +2,7 @@
 import {ref} from "vue"
 import Example from "../../.vitepress/theme/app/components/Example.vue";
 import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
+import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 </script>
 
 # Avatar
@@ -99,9 +100,11 @@ import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
 
 ## Grouped
 
-::: warning Reverse the order
+<div class="not-rich-text">
+<Alert title="Reverse the order" severity="warning">
 To get the Avatars to stack like they do below (previous item on top of the next) you'll need to place/loop them out in reverse order.
-:::
+</Alert>
+</div>
 
 <Example row>
 <template #example>

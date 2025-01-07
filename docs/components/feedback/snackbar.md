@@ -1,7 +1,7 @@
 <script setup>
 	import { watch, ref } from "vue"
 		import { useTimeoutFn } from '@vueuse/core'
-
+import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 	import Example from "../../.vitepress/theme/app/components/Example.vue"
 	import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
 
@@ -207,12 +207,17 @@ In some edge-cases where the Snackbar might block or overlap other UI elements s
 - Uses `.absolute` class for absolute positioning.
 - Needs Javascript to work.
 
-::: tip Javascript is required
+<div class="not-rich-text">
+<Alert title="Javascript is required" severity="ok">
+<div class="rich-text">
+
 This solution **does not** leverage popover, so the Snackbar must be triggered with Javascript.
 
 That's because when open, popover elements aren't influenced by a parents' `position` styling - popovers exist in the [top layer](https://developer.mozilla.org/en-US/docs/Glossary/Top_layer).
 
-:::
+</div>
+</Alert>
+</div>
 
 <Example row>
 <template #example>

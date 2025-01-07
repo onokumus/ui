@@ -45,7 +45,7 @@ import Example from "../../.vitepress/theme/app/components/Example.vue"
 <template #example>
     <button class="button">Text</button>
     <button class="button" disabled>Disabled</button>
-    <a href="#" class="button">Link</a>
+    <a href="#text" class="button">Link</a>
 </template>
 
 <template #code>
@@ -65,7 +65,7 @@ import Example from "../../.vitepress/theme/app/components/Example.vue"
 <template #example>
     <button class="button outlined">Outlined</button>
     <button class="button outlined" disabled>Disabled</button>
-    <a href="#" class="button outlined">Link</a>
+    <a href="#outlined" class="button outlined">Link</a>
 </template>
 
 <template #code>
@@ -85,7 +85,7 @@ import Example from "../../.vitepress/theme/app/components/Example.vue"
 <template #example>
      <button class="button tonal">Tonal</button>
     <button class="button tonal" disabled>Disabled</button>
-    <a href="#" class="button tonal">Link</a>
+    <a href="#tonal" class="button tonal">Link</a>
 </template>
 
 <template #code>
@@ -105,7 +105,7 @@ import Example from "../../.vitepress/theme/app/components/Example.vue"
 <template #example>
    <button class="button filled">Filled</button>
     <button class="button filled" disabled>Disabled</button>
-    <a href="#" class="button filled">Link</a>
+    <a href="#filled" class="button filled">Link</a>
 </template>
 
 <template #code>
@@ -125,7 +125,7 @@ import Example from "../../.vitepress/theme/app/components/Example.vue"
 <template #example>
     <button class="button elevated">Elevated</button>
     <button class="button elevated" disabled>Disabled</button>
-    <a href="#" class="button elevated">Link</a>
+    <a href="#elevated" class="button elevated">Link</a>
 </template>
 
 <template #code>

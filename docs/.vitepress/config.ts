@@ -127,7 +127,7 @@ export default defineConfig({
                 { text: "Divider", link: "/components/data-display/divider" },
                 { text: "List", link: "/components/data-display/list" },
                 { text: "Table", link: "/components/data-display/table" },
-                { text: "Tooltip", link: "/components/data-display/tooltip" },
+                // { text: "Tooltip", link: "/components/data-display/tooltip" },
               ],
             },
             {

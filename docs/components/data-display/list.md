@@ -3,6 +3,7 @@ import {ref} from "vue"
 import Example from "../../.vitepress/theme/app/components/Example.vue";
 import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
 import ListAll from "./list-all.vue"
+import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 
 const denseClass = ref(true)
 </script>
@@ -48,9 +49,13 @@ A List item is split up in three parts:
 - [`.start`](#start-items) (optional): items before the main content
 - [`.end`](#end-items) (optional): items after the main content
 
-::: tip With great power...
+<div class="not-rich-text">
+<Alert title="With great power...">
+
 The List component is _extremely_ flexible and versatile. Be careful if you start creating new configurations on your own. Maybe an existing one can solve your problem, but in another way?
-:::
+</Alert>
+
+</div>
 
 ### Clickable List item
 

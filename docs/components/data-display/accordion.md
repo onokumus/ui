@@ -1,6 +1,8 @@
 <script setup>
 	import Example from "../../.vitepress/theme/app/components/Example.vue"
 	import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
+  import Alert from "../../.vitepress/theme/app/components/Alert.vue";
+
 
 	</script>
 
@@ -446,9 +448,16 @@ These are the classes and attributes a card can be styled with. As usual, feel f
 
 ## Installation
 
-::: info
+<div class="not-rich-text" style="margin-block-end: var(--size-3);">
+<Alert>
+<div class="rich-text">
+
 Accordion has [card](/components/data-display/card) as a dependency.
-:::
+
+</div>
+</Alert>
+
+</div>
 
 ::: code-group
 <<< @/../src/data-display/accordion.css [accordion.css]

@@ -10,15 +10,15 @@
   &:where(:not([disabled])) {
     &:where(:not(:active):hover) {
       --_bg-color: light-dark(
-        color-mix(in oklch, white 90%, black),
-        color-mix(in oklch, white 40%, black)
+        oklch(from var(--primary) l 0.01 h / 20%),
+        oklch(from var(--primary) l 0.01 h / 40%)
       );
     }
 
     &:where(:hover:active) {
       --_bg-color: light-dark(
-        color-mix(in oklch, white 95%, black),
-        color-mix(in oklch, white 45%, black)
+        oklch(from var(--primary) l 0.06 h / 30%),
+        oklch(from var(--primary) l 0.06 h / 40%)
       );
     }
   }
@@ -163,14 +163,20 @@
     }
   }
   &.elevated {
-    --_bg-color: light-dark(var(--gray-2), var(--gray-13));
+    --_bg-color: light-dark(
+      color-mix(in oklch, var(--gray-2) 97%, var(--color-16)),
+      color-mix(in oklch, var(--gray-13) 97%, var(--color-1))
+    );
     --_ripple-color: light-dark(
       color-mix(in oklch, var(--gray-2) 80%, var(--color-8)),
       color-mix(in oklch, var(--gray-13) 80%, var(--color-8))
     );
     --_text-color: var(--color-8);
 
-    box-shadow: var(--shadow-1);
+    box-shadow:
+      0px 3px 1px -2px oklch(0 0 0 / 20%),
+      0px 2px 2px 0px oklch(0 0 0 / 14%),
+      0px 1px 5px 0px oklch(0 0 0 / 12%);
 
     &:where(:not([disabled])) {
       &:where(:not(:active):hover) {
@@ -180,11 +186,18 @@
             var(--_ripple-color) 1%
           )
           center/15000%;
-        box-shadow: var(--shadow-2);
+
+        --_bg-color: light-dark(
+          color-mix(in oklch, var(--gray-2) 93%, var(--color-8)),
+          color-mix(in oklch, var(--gray-13) 93%, var(--color-8))
+        );
       }
 
       &:where(:hover:active) {
-        box-shadow: var(--shadow-3);
+        --_bg-color: light-dark(
+          color-mix(in oklch, var(--gray-2) 91%, var(--color-8)),
+          color-mix(in oklch, var(--gray-13) 91%, var(--color-8))
+        );
       }
     }
 

@@ -1,7 +1,7 @@
 <script setup>
 import Example from "../../.vitepress/theme/app/components/Example.vue"
 import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
-
+import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 </script>
 
 # Rich text
@@ -20,11 +20,18 @@ Use the `.rich-text`to add typographic styles to an element. Is extra handy when
 </template>
 </Example>
 
-::: info
+<div class="not-rich-text">
+<Alert>
+
+<div class="rich-text">
+
 This is very similar to the `.prose` class in [TailwindCSS](https://tailwindcss.com/docs/plugins#typography) and _heavily inspired_:tm: by their work on that. Nice job!
 
 The test code below is taken right from their [markdown sample](https://github.com/tailwindlabs/tailwindcss-typography/blob/main/demo/components/MarkdownSample.mdx?plain=1).
-:::
+
+</div>
+</Alert>
+</div>
 
 <Example richText="rich-text">
 <template #example>

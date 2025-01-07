@@ -1,6 +1,7 @@
 <script setup>
 	import Example from "../../.vitepress/theme/app/components/Example.vue"
 	import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
+    import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 </script>
 
 # Table
@@ -217,9 +218,15 @@ Nothing fancy, just the standard HTML `<table>`.
 
 ## Sticky header
 
-::: info When applying sticky header...
+<div class="not-rich-text">
+<Alert title="When applying sticky header...">
+<div class="rich-text">
+
 If you inspect the page you can see that I cheated a bit with the `inset-block-start` value. That's because these docs already have sticky elements. But you get the point - you might have to do the same.
-:::
+
+</div>
+</Alert>
+</div>
 
 <style scoped>
 	.sticky-header thead {

@@ -1,6 +1,7 @@
 <script setup>
 import Example from "../../.vitepress/theme/app/components/Example.vue";
 import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
+import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 </script>
 
 <style>
@@ -179,9 +180,13 @@ Vertical button groups are largely a legacy design pattern that can be better ha
 
 Horizontal groups or alternative patterns altogether usually provide better UX.
 
-::: info Am I wrong?
+<div class="not-rich-text">
+<Alert title="Am I wrong?">
+
 Create an [issue or a PR](https://github.com/felix-bohlin/ui) and let me know!
-:::
+</Alert>
+
+</div>
 
 ## Disabled
 

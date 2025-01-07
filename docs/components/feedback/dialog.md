@@ -1,7 +1,7 @@
 <script setup>
   import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
   import Example from "../../.vitepress/theme/app/components/Example.vue"
-
+import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 	import {ref} from "vue"
 	const dialog = ref()
 
@@ -18,9 +18,15 @@
 
 A minimally styled window overlaid on the main content. By design the Dialog is minimal with zero content to allow for both modal and non-modal use.
 
-::: info Modal vs Dialog
+<div class="not-rich-text">
+<Alert title="Modal vs Dialog">
+<div class="rich-text">
+
 The term "modal" and "dialog" are often used interchangeably, but there's an important difference. A modal window describes parts of a UI that [blocks user interaction](#modal). A dialog [doesn't have to be blocking](#non-modal).
-:::
+
+</div>
+</Alert>
+</div>
 
 ## Usage
 
@@ -30,9 +36,13 @@ The term "modal" and "dialog" are often used interchangeably, but there's an imp
 
 ### Modal
 
-::: tip Javascript is required
+<div class="not-rich-text">
+<Alert title="Javascript is required">
+
 In order to toggle a `<dialog>` you will need to use Javascript.
-:::
+</Alert>
+
+</div>
 
 <Example row>
 <template #example>
