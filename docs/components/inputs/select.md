@@ -118,6 +118,59 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 </template>
 </Example>
 
+## Validation
+
+The `.error` class toggles the error styles. Make use of the supporting text to give extra feedback on the error.
+
+<Example row>
+<template #example>
+<label class="field error">
+<span class="label">Label</span>
+<select>
+  <button>
+    <selectedoption></selectedoption>
+  </button>
+  <div class="list">
+  <option value="">-</option>
+   <option selected>Wrong option</option>
+    <option>Also wrong!</option>
+    <option>Nothing's right!</option>
+  </div>
+</select>
+<span class="supporting-text">Supporting text</span>
+</label>
+
+<label class="field error filled">
+<span class="label">Label</span>
+<select>
+  <button>
+    <selectedoption></selectedoption>
+  </button>
+  <div class="list">
+  <option value="">-</option>
+   <option selected>Wrong option</option>
+    <option>Also wrong!</option>
+    <option>Nothing's right!</option>
+  </div>
+</select>
+<span class="supporting-text">Supporting text</span>
+</label>
+</template>
+<template #code>
+
+```html{1}
+<label class="field error">
+  <span class="label">Label</span>
+  <select> <!----> </select>
+  <span class="supporting-text">Supporting text</span>
+</label>
+```
+
+</template>
+</Example>
+
+## Prefix & suffix
+
 ## Sizes
 
 <Example row>
@@ -275,11 +328,11 @@ Since the Select popover uses the [List component](/components/data-display/list
 
 ## Validation
 
-The `.bad` class toggles the error styles. Make use of the supporting text to give extra feedback on the error.
+The `.error` class toggles the error styles. Make use of the supporting text to give extra feedback on the error.
 
 <Example row>
 <template #example>
-<label class="field bad">
+<label class="field error">
 	<span class="label">Label</span>
 <select>
   <button>
@@ -293,7 +346,7 @@ The `.bad` class toggles the error styles. Make use of the supporting text to gi
 </select>	<span class="supporting-text">Only double-negatives are allowed.</span>
 </label>
 
-<label class="field bad filled">
+<label class="field error filled">
 	<span class="label">Label</span>
 <select>
   <button>
@@ -310,7 +363,7 @@ The `.bad` class toggles the error styles. Make use of the supporting text to gi
 <template #code>
 
 ```html{1}
-<label class="field bad">
+<label class="field error">
   <span class="label">Label</span>
   <select> <!-- --> </select>
   <span class="supporting-text">Supporting text</span>

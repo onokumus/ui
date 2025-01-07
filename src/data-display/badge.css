@@ -69,7 +69,7 @@
   }
 
   /* Colors */
-  &.bad,
+  &.error,
   &.good,
   &.ok,
   &.warning {

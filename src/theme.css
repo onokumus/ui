@@ -10,7 +10,7 @@ html {
 }
 
 .red,
-.bad {
+.error {
   --palette-hue: var(--oklch-red, 25);
   --palette-chroma: 1;
   --palette-hue-rotate-by: 1;

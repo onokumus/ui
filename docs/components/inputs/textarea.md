@@ -88,17 +88,17 @@ When enabled the Textarea changes size depending on its content.
 
 ## Validation
 
-The `.bad` class toggles the error styles. Make use of the supporting text to give extra feedback on the error.
+The `.error` class toggles the error styles. Make use of the supporting text to give extra feedback on the error.
 
 <Example row>
 <template #example>
-<label class="field bad">
+<label class="field error">
 	<span class="label">Label</span>
   <textarea  placeholder="Default"></textarea>
 	<span class="supporting-text">Only double-negatives are allowed.</span>
 </label>
 
-<label class="field bad filled">
+<label class="field error filled">
 	<span class="label">Label</span>
   <textarea  placeholder="Filled"></textarea>
 	<span class="supporting-text">Only letters from the first half of the alphabet are allowed.</span>
@@ -107,7 +107,7 @@ The `.bad` class toggles the error styles. Make use of the supporting text to gi
 <template #code>
 
 ```html{1}
-<label class="field bad">
+<label class="field error">
   <span class="label">Label</span>
   <textarea  placeholder="Placeholder"></textarea>
   <span class="supporting-text">Supporting text</span>

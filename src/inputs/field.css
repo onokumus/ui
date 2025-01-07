@@ -167,7 +167,7 @@
   }
 
   /* Validation */
-  &.bad {
+  &.error {
     --_accent-color: var(--color-9);
     --_border-color: var(--color-9);
     --_filled-border-color: var(--color-9);

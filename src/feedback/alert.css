@@ -34,7 +34,7 @@
   }
 
   /* Colors */
-  &.bad,
+  &.error,
   &.ok,
   &.warning {
     --_bg-color: light-dark(var(--color-2), var(--color-3));

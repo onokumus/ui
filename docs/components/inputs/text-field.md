@@ -79,17 +79,17 @@
 
 ## Validation
 
-The `.bad` class toggles the error styles. Make use of the supporting text to give extra feedback on the error.
+The `.error` class toggles the error styles. Make use of the supporting text to give extra feedback on the error.
 
 <Example row>
 <template #example>
-<label class="field bad">
+<label class="field error">
 	<span class="label">Label</span>
 	<input type="text" placeholder="Placeholder" value="This isn't right"/>
 	<span class="supporting-text">Only double-negatives are allowed.</span>
 </label>
 
-<label class="field bad filled">
+<label class="field error filled">
 	<span class="label">Label</span>
 	<input type="text" placeholder="Placeholder" value="Uh-oh"/>
 	<span class="supporting-text">Only letters from the first half of the alphabet are allowed.</span>
@@ -98,7 +98,7 @@ The `.bad` class toggles the error styles. Make use of the supporting text to gi
 <template #code>
 
 ```html{1}
-<label class="field bad">
+<label class="field error">
   <span class="label">Label</span>
   <input type="text" placeholder="Placeholder" />
   <span class="supporting-text">Supporting text</span>
@@ -236,7 +236,7 @@ This triggers the numeric keyboard on mobile devices while avoiding the jank of 
 
 It should probably be called `<input type="math">` instead.
 
-The British Government has a [great article](https://technology.blog.gov.uk/2020/02/24/why-the-gov-uk-design-system-team-changed-the-input-type-for-numbers/) about how bad input number is and goes in-depth. It's a very interesting read.
+The British Government has a [great article](https://technology.blog.gov.uk/2020/02/24/why-the-gov-uk-design-system-team-changed-the-input-type-for-numbers/) about how .error input number is and goes in-depth. It's a very interesting read.
 :::
 
 <Example column>
