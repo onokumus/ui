@@ -104,6 +104,7 @@
   .label {
     align-self: center;
     background-color: var(--_bg-color);
+    border-radius: var(--input-border-radius);
     color: var(--_label-color);
     border-radius: var(--radius-1);
     display: inline-flex;
@@ -125,9 +126,16 @@
     }
   }
 
+  &:has(input[type="color"]) {
+    .label {
+      inline-size: fit-content;
+      margin-inline-start: var(--size-2);
+    }
+  }
+
   /* Label transitions */
   &:focus-within,
-  &:has(:where(input, textarea):not(:placeholder-shown)),
+  &:has(:where(input:not(type="color"), textarea):not(:placeholder-shown)),
   &:has(option[value=""]:not(:checked)),
   &:has(option:checked:not([value=""])) {
     .label {
@@ -135,7 +143,7 @@
       font-size: 0.75rem;
       inline-size: max-content;
       letter-spacing: 0.15px;
-      line-height: 1;
+      line-height: 1.15;
       margin-block-start: calc(-1 * var(--size-8));
       margin-inline-start: calc(var(--_field-padding-inline) / 2);
       padding-inline: calc(var(--_field-padding-inline) / 2);

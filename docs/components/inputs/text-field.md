@@ -165,9 +165,10 @@ Change the `input`'s `type` attribute.
 <Example row>
 <template #example>
 <div class="column">
-	<div class="field">
+	<label class="field">
+	<span class="label">Color</span>
 		<input type="color" placeholder="Color">
-</div>
+</label>
 <div class="field">
 		<input type="email" placeholder="name@email.com">
 </div>
