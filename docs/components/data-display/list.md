@@ -4,6 +4,7 @@ import Example from "../../.vitepress/theme/app/components/Example.vue";
 import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
 import ListAll from "./list-all.vue"
 import Alert from "../../.vitepress/theme/app/components/Alert.vue";
+import Accordion from "../../.vitepress/theme/app/components/Accordion.vue";
 
 const denseClass = ref(true)
 </script>
@@ -17,7 +18,11 @@ const denseClass = ref(true)
 
 # List
 
-::: details About
+<div class="not-rich-text">
+<Accordion variant="tonal" style="margin-block-start: var(--size-3)">
+<template #summary>About</template>
+<div class="rich-text">
+
 Lists are continuous, vertical indexes of text and images and video
 
 - Use lists to help users find a specific item and act on it
@@ -25,8 +30,9 @@ Lists are continuous, vertical indexes of text and images and video
 - Three sizes: one-line, two-line, and three-line
 - Keep items short and easy to scan
 - Show icons, text, and actions in a consistent format
-
-  :::
+</div>
+</Accordion>
+</div>
 
 <Example>
 

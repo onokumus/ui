@@ -1,6 +1,7 @@
 <script setup>
 import Example from "../../.vitepress/theme/app/components/Example.vue";
 import Alert from "../../.vitepress/theme/app/components/Alert.vue";
+import Accordion from "../../.vitepress/theme/app/components/Accordion.vue";
 import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
 import WalkingIcon from "../../.vitepress/theme/app/components/WalkingIcon.vue";
 import CyclingIcon from "../../.vitepress/theme/app/components/CyclingIcon.vue";
@@ -49,13 +50,14 @@ Groups related buttons by wrapping them with `<yourElement class="toggle-button-
 The whole idea of Toggle button group is that it relies on state change. Therefore Javascript is needed for it to work as intended.
 
 </Alert>
+
+<Accordion variant="tonal" style="margin-block-start: var(--size-3)">
+<template #summary>Button group or Toggle button group?</template>
+<p>If you just need to group a bunch of "dumb" (uncontrolled) buttons - use <a href="/components/actions/button-group" class="link">Button group</a>.</p>
+<p>If your buttons depend on state (controlled) - use Toggle button group.</p>
+</Accordion>
+
 </div>
-
-::: details Button group or Toggle button group?
-If you just need to group a bunch of "dumb" (uncontrolled) buttons - use [Button group](/components/actions/button-group).
-
-If your buttons depend on state (controlled) - use Toggle button group.
-:::
 
 <Example column centered exampleClass="gap-l">
 <template #example>

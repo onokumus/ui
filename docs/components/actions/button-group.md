@@ -2,6 +2,7 @@
 import Example from "../../.vitepress/theme/app/components/Example.vue";
 import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
 import Alert from "../../.vitepress/theme/app/components/Alert.vue";
+import Accordion from "../../.vitepress/theme/app/components/Accordion.vue";
 </script>
 
 <style>
@@ -18,11 +19,13 @@ Groups related buttons by wrapping them with `<yourElement class="button-group" 
 - Don't allow them to wrap onto a new line.
 - If an icon is used without label text make sure the button communicates clearly what it does.
 
-::: details Button group or Toggle button group?
-If you just need to group a bunch of "dumb" (uncontrolled) buttons - use Button group.
-
-If your buttons depend on state (controlled) - use [Toggle button group](/components/actions/toggle-button-group).
-:::
+<div class="not-rich-text">
+<Accordion variant="tonal" style="margin-block-start: var(--size-3)">
+<template #summary>Button group or Toggle button group?</template>
+<p>If your buttons depend on state (controlled) - use <a href="/components/actions/toggle-button-group" class="link">Toggle button group</a>.</p>
+<p>If you just need to group a bunch of "dumb" (uncontrolled) buttons - use Button group.</p>
+</Accordion>
+</div>
 
 ## Variants
 
