@@ -13,19 +13,25 @@
 
 # Component API
 
-## Inputs
+## Actions
 
 ### [Button](/components/actions/button)
 
 <!--@include: ./components/actions/button-api.md -->
 
-### [Checkbox](/components/inputs/checkbox)
-
-<!--@include: ./components/inputs/checkbox-radio-api.md -->
-
 ### [Icon Button](/components/actions/icon-button)
 
 <!--@include: ./components/actions/icon-button-api.md -->
+
+### [Toggle button group](/components/actions/toggle-button-group)
+
+<!--@include: ./components/actions/toggle-button-group-api.md -->
+
+## Inputs
+
+### [Checkbox](/components/inputs/checkbox)
+
+<!--@include: ./components/inputs/checkbox-radio-api.md -->
 
 ### [Radio](/components/inputs/radio)
 
@@ -33,7 +39,9 @@
 
 ### [Select](/components/inputs/select)
 
-<!--@include: ./components/inputs/select-api.md -->
+#### Field API
+
+<!--@include: ./components/inputs/field-api.md -->
 
 ### [Switch](/components/inputs/switch)
 
@@ -41,15 +49,15 @@
 
 ### [Textarea](/components/inputs/textarea)
 
-<!--@include: ./components/inputs/textarea-api.md -->
+#### Field API
+
+<!--@include: ./components/inputs/field-api.md -->
 
 ### [Text field](/components/inputs/text-field)
 
-<!--@include: ./components/inputs/text-field-api.md -->
+#### Field API
 
-### [Toggle button group](/components/actions/toggle-button-group)
-
-<!--@include: ./components/actions/toggle-button-group-api.md -->
+<!--@include: ./components/inputs/field-api.md -->
 
 ## Data display
 
@@ -82,8 +90,6 @@
 <!--@include: ./components/data-display/table-api.md -->
 
 <h3><span class="badge warning" aria-label="⚠️🚧"><a href="/components/data-display/tooltip">Tooltip</a></span></h3>
-
-### Typography
 
 ## Feedback
 

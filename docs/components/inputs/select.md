@@ -12,36 +12,40 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 
 <Example row>
 <template #example>
-<div class="field">
+<label class="field">
+<span class="label">Label</span>
 <select>
   <button>
     <selectedoption></selectedoption>
   </button>
   <div class="list">
+  <option value="">-</option>
    <option>Outlined (default)</option>
     <option>Option Two</option>
     <option>Option Three</option>
   </div>
 </select>
-</div>
+</label>
 
-<div class="field filled">
+<label class="field filled">
+<span class="label">Label</span>
 <select>
   <button>
     <selectedoption></selectedoption>
   </button>
   <div class="list">
+  <option value="">-</option>
    <option>Filled</option>
     <option>Option Two</option>
     <option>Option Three</option>
   </div>
 </select>
-</div>
+</label>
 </template>
 <template #code>
 
 ```html{1,14}
-<div class="field">
+<label class="field">
   <select>
     <button>
       <selectedoption></selectedoption>
@@ -52,22 +56,20 @@ Leverages the [List component](/components/data-display/list) to provide markup 
       <option>Option Three</option>
     </div>
   </select>
-</div>
+</label>
 
-<div class="field filled">
+<label class="field filled">
   <select>
     <!--  -->
   </select>
-</div>
+</label>
 ```
 
 </template>
 </Example>
 
-## Label & supporting text
+## Supporting text
 
-- Use the `<label>` element with the `.field` class.
-- `.label`: label text element
 - `.supporting-text`: supporting text element
 
 <Example row>
@@ -106,14 +108,14 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 </template>
 <template #code>
 
-```html{2,6}
-<div class="field">
+```html{6}
+<label class="field">
   <span class="label">Label</span>
   <select>
    <!--  -->
   </select>
   <span class="supporting-text">Supporting text</span>
-</div>
+</label>
 ```
 
 </template>
@@ -174,39 +176,39 @@ The `.error` class toggles the error styles. Make use of the supporting text to 
 
 <Example row>
 <template #example>
-<div class="field small">
+<label class="field small">
+<span class="label">Small</span>
 <select>
   <button>
     <selectedoption></selectedoption>
   </button>
   <div class="list">
-   <option>Small</option>
+   <option value="">Small</option>
     <option>Option Two</option>
     <option>Option Three</option>
   </div>
 </select>
-</div>
-<div class="field">
+</label>
+<label class="field">
+<span class="label">Default</span>
 <select>
   <button>
     <selectedoption></selectedoption>
   </button>
   <div class="list">
-   <option>Default</option>
+   <option value="">Default</option>
     <option>Option Two</option>
     <option>Option Three</option>
   </div>
 </select>
-</div>
+</label>
 </template>
 <template #code>
 
 ```html{1}
-<div class="field small">
-  <select>
-    <!--  -->
-  </select>
-</div>
+<label class="field small">
+  <!--  -->
+</label>
 ```
 
 </template>
@@ -218,13 +220,14 @@ Wrap your options in an element with `role="group"`. The `<label>` inside will b
 
 <Example row>
 <template #example>
-<div class="field">
+<label class="field">
+<span class="label">Grouped</span>
 <select>
   <button>
     <selectedoption></selectedoption>
   </button>
   <div class="list">
-  <option>Select car</option>
+  <option value="">Select car</option>
    <div role="group">
    <label>Swedish cars</label>
     <option>Volvo</option>
@@ -237,13 +240,14 @@ Wrap your options in an element with `role="group"`. The `<label>` inside will b
    </div>
   </div>
 </select>
-</div>
+</label>
 </template>
 
 <template #code>
 
-```html{8,9,12-14,17}
-<div class="field">
+```html{9,10,13-15,18}
+<label class="field">
+  <span class="label">Small</span>
   <select>
     <button>
       <selectedoption></selectedoption>
@@ -262,7 +266,7 @@ Wrap your options in an element with `role="group"`. The `<label>` inside will b
       </div>
     </div>
   </select>
-</div>
+</label>
 ```
 
 </template>
@@ -274,18 +278,19 @@ Since the Select popover uses the [List component](/components/data-display/list
 
 <Example row>
 <template #example>
-<div class="field">
+<label class="field">
+<span class="label">Dense</span>
 <select>
   <button>
     <selectedoption></selectedoption>
   </button>
   <div class="list dense">
-    <option>Dense</option>
+    <option value="">Dense</option>
     <option>Dense Two</option>
     <option>Dense Three</option>
   </div>
 </select>
-</div>
+</label>
 </template>
 <template #code>
 
@@ -378,22 +383,6 @@ Just implement the Select as you normally would.
 
 <Example row>
 <template #example>
-<div class="field">
-  <select>
-    <option>Outlined (default)</option>
-    <option>Option Two</option>
-    <option>Option Three</option>
-  </select>
-</div>
-
-<div class="field filled">
-  <select>
-    <option>Filled</option>
-    <option>Option Two</option>
-    <option>Option Three</option>
-  </select>
-</div>
-
 <label class="field">
   <span class="label">Label</span>
   <select>
@@ -401,38 +390,27 @@ Just implement the Select as you normally would.
     <option>Option</option>
     <option>Option</option>
   </select>
-    <span class="supporting-text">Supporting text</span>
 </label>
 
 <label class="field filled">
   <span class="label">Label</span>
   <select>
     <option value="">-</option>
-    <option>Option</option>
-    <option>Option</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
   </select>
-    <span class="supporting-text">Supporting text</span>
 </label>
 </template>
 <template #code>
 
 ```html
-<div class="field">
-  <select>
-    <option>Outlined (default)</option>
-    <option>Option Two</option>
-    <option>Option Three</option>
-  </select>
-</div>
-
 <label class="field">
   <span class="label">Label</span>
   <select>
     <option value="">-</option>
-    <option>Option</option>
-    <option>Option</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
   </select>
-  <span class="supporting-text">Supporting text</span>
 </label>
 ```
 
@@ -483,9 +461,9 @@ This way of writing Selects are currently quite experimental. Accessible solutio
 
 ## API
 
-### Select API
+### Field API
 
-<!--@include: ./select-api.md -->
+<!--@include: ./field-api.md -->
 
 ### List API
 

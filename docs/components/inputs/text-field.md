@@ -11,9 +11,6 @@ const isSmall = ref(false)
 
 # Text field
 
-- Use the `<label>` element with the `.field` class.
-- `.label`: label text element
-
 ## Variants
 
 <Example row>
@@ -412,9 +409,38 @@ No. But you get some accessibility wins for free with `<label>`. It's recommende
 
 - [Don't use `<input type="number">`](#numeric-vs-input-type-number) unless your user research tells you to.
 
+<style scoped>
+	 .anatomy {
+    outline: var(--_anatomy-border-gray);
+    outline-offset: 6px;
+    & > * {
+      outline: var(--_anatomy-border-red);
+    }
+  }
+</style>
+
+## Anatomy
+
+1. `label.field`: Container element
+2. `.label`: Field label element
+3. `<input>`: Input element
+4. `.supporting-text`: Supporting text element
+
+<Example row>
+<template #example>
+<label class="field anatomy">
+	<span class="label">Label</span>
+	<input type="text" value="Value" placeholder="Placeholder"/>
+	<span class="supporting-text">Supporting text</span>
+</label>
+</template>
+</Example>
+
 ## API
 
-<!--@include: ./text-field-api.md -->
+### Field API
+
+<!--@include: ./field-api.md -->
 
 ## Browser compatibility
 
