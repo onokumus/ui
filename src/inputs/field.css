@@ -156,6 +156,13 @@
       padding-inline: 0.125rem;
     }
 
+    /* Neutral label color reset */
+    &:not(:focus-within):not(.error) {
+      .label {
+        color: var(--text-color-2);
+      }
+    }
+
     &:has(textarea) {
       .label {
         margin-block-start: calc(-1 * var(--size-2));
