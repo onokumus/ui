@@ -160,6 +160,13 @@
       .label {
         margin-block-start: calc(-1 * var(--size-2));
       }
+
+      &.small {
+        .label {
+          align-self: start;
+          margin-block-start: var(--_field-padding-block);
+        }
+      }
     }
   }
 
@@ -344,6 +351,13 @@
       }
     }
 
+    &:has(textarea) {
+      .label {
+        align-self: center;
+        margin-block-start: unset;
+      }
+    }
+
     /*
     * Label transitions
     * Triggered by:
@@ -359,6 +373,12 @@
         margin-block-start: -2.5rem;
         margin-inline-start: var(--size-1);
         padding-inline: var(--size-1);
+      }
+
+      &:not(.filled):has(textarea) {
+        .label {
+          margin-block-start: calc(-1 * var(--size-2));
+        }
       }
     }
   }

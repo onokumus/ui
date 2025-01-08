@@ -32,10 +32,35 @@
 </template>
 </Example>
 
-## Label & supporting text
+## Sizes
 
-- Use the `<label>` element with the `.field` class.
-- `.label`: label text element
+<Example row>
+<template #example>
+<label class="field small">
+  <span class="label">Small outlined</span>
+  <textarea placeholder="Placeholder"></textarea>
+</label>
+
+<label class="field small filled">
+  <span class="label">Small filled</span>
+  <textarea placeholder="Placeholder"></textarea>
+</label>
+</template>
+<template #code>
+
+```html{1}
+<label class="field small">
+  <!--  -->
+</label>
+```
+
+</template>
+</Example>
+
+<!-- TODO -->
+
+## Supporting text
+
 - `.supporting-text`: supporting text element
 
 <Example row>
@@ -60,27 +85,6 @@
   <textarea placeholder="Placeholder text"></textarea>
   <span class="supporting-text">Supporting text</span>
 </label>
-```
-
-</template>
-</Example>
-
-## Auto-fit
-
-When enabled the Textarea changes size depending on its content.
-
-<Example row>
-<template #example>
-<div class="field auto-fit">
-	<textarea placeholder="Auto-fit"></textarea>
-</div>
-</template>
-<template #code>
-
-```html{1}
-<div class="field auto-fit">
-  <!--  -->
-</div>
 ```
 
 </template>
@@ -117,9 +121,32 @@ The `.error` class toggles the error styles. Make use of the supporting text to 
 </template>
 </Example>
 
+## Auto-fit
+
+When enabled the Textarea changes size depending on its content.
+
+<Example row>
+<template #example>
+<div class="field auto-fit">
+	<textarea placeholder="Auto-fit"></textarea>
+</div>
+</template>
+<template #code>
+
+```html{1}
+<div class="field auto-fit">
+  <!--  -->
+</div>
+```
+
+</template>
+</Example>
+
 ## API
 
-<!--@include: ./textarea-api.md -->
+### Field API
+
+<!--@include: ./field-api.md -->
 
 ## Browser compatibility
 

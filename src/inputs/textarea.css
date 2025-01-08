@@ -1,9 +1,18 @@
-:where(.field textarea) {
-  min-block-size: 5rem;
-  resize: vertical;
-}
-
 :where(.field:has(textarea)) {
+  textarea {
+    min-block-size: 5rem;
+    resize: vertical;
+  }
+
+  /* Size */
+  &.small {
+    textarea {
+      block-size: auto;
+      field-sizing: content;
+      min-block-size: var(--_height);
+    }
+  }
+
   /* Auto-fit */
   &.auto-fit {
     textarea {
