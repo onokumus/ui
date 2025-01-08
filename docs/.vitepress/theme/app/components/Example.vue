@@ -13,6 +13,7 @@ const props = withDefaults(
   }>(),
   {
     hideCode: undefined,
+    richText: "not-rich-text",
   },
 )
 
@@ -29,6 +30,10 @@ const showCode = ref(!props?.hideCode)
       richText ?? 'not-rich-text',
     ]"
   >
+    <div v-if="$slots.controls" class="controls">
+      <slot name="controls" />
+    </div>
+
     <div
       v-if="$slots.example"
       class="example"
@@ -105,6 +110,15 @@ const showCode = ref(!props?.hideCode)
 
   @media (width > 640px) {
     margin-inline: 0;
+  }
+
+  .controls {
+    background-color: var(--surface-default);
+    border-block-end: var(--border-width) solid var(--border-color);
+    display: flex;
+    justify-content: end;
+    gap: var(--size-3);
+    padding: var(--size-3);
   }
 
   .example {

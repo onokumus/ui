@@ -2,157 +2,44 @@
 	import Example from "../../.vitepress/theme/app/components/Example.vue"
 	import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
 	import Alert from "../../.vitepress/theme/app/components/Alert.vue";
+
+	import { ref } from "vue"
+
+const isFilled = ref(false)
+const isSmall = ref(false)
 </script>
 
 # Text field
+
+- Use the `<label>` element with the `.field` class.
+- `.label`: label text element
 
 ## Variants
 
 <Example row>
 <template #example>
-<div class="field">
-	<input type="text" placeholder="Outlined"/>
-</div>
+<label class="field">
+	<span class="label">Outlined</span>
+	<input type="text" placeholder="Placeholder"/>
+</label>
 
-<div class="field filled">
-	<input type="text" placeholder="Filled"/>
-</div>
+<label class="field filled">
+	<span class="label">Filled</span>
+	<input type="text" placeholder="Placeholder"/>
+</label>
 </template>
 <template #code>
 
 ```html
-<div class="field">
-  <input type="text" placeholder="Outlined" />
-</div>
-
-<div class="field filled">
-  <input type="text" placeholder="Filled" />
-</div>
-```
-
-</template>
-</Example>
-
-## Label & supporting text
-
-- Use the `<label>` element with the `.field` class.
-- `.label`: label text element
-- `.supporting-text`: supporting text element
-
-<Example row>
-<template #example>
-<label class="field small">
-	<span class="label">Label</span>
-	<input type="text" placeholder="Placeholder"/>
-	<span class="supporting-text">Supporting text</span>
-</label>
-
 <label class="field">
-	<span class="label">Label</span>
-	<input type="text" placeholder="Outlined"/>
-	<span class="supporting-text">Supporting text</span>
-</label>
-
-<label class="field filled small">
-	<span class="label">Label</span>
-	<input type="text" placeholder="Filled"/>
-	<span class="supporting-text">Supporting text</span>
+  <span class="label">Label</span>
+  <input type="text" placeholder="Placeholder" />
 </label>
 
 <label class="field filled">
-	<span class="label">Label</span>
-	<input type="text" placeholder="Filled"/>
-	<span class="supporting-text">Supporting text</span>
-</label>
-</template>
-<template #code>
-
-```html{2,4}
-<label class="field">
   <span class="label">Label</span>
   <input type="text" placeholder="Placeholder" />
-  <span class="supporting-text">Supporting text</span>
 </label>
-```
-
-</template>
-</Example>
-
-## Validation
-
-The `.error` class toggles the error styles. Make use of the supporting text to give extra feedback on the error.
-
-<Example row>
-<template #example>
-<label class="field error">
-	<span class="label">Label</span>
-	<input type="text" placeholder="Placeholder" value="This isn't right"/>
-	<span class="supporting-text">Only double-negatives are allowed.</span>
-</label>
-
-<label class="field error filled">
-	<span class="label">Label</span>
-	<input type="text" placeholder="Placeholder" value="Uh-oh"/>
-	<span class="supporting-text">Only letters from the first half of the alphabet are allowed.</span>
-</label>
-</template>
-<template #code>
-
-```html{1}
-<label class="field error">
-  <span class="label">Label</span>
-  <input type="text" placeholder="Placeholder" />
-  <span class="supporting-text">Supporting text</span>
-</label>
-```
-
-</template>
-</Example>
-
-## Prefix & suffix
-
-## Sizes
-
-<Example row>
-<template #example>
-	<div class="field small">
-		<input type="text" placeholder="Small">
-</div>
-<div class="field">
-		<input type="text" placeholder="Default">
-</div>
-</template>
-<template #code>
-
-```html{1,5}
-<div class="field small">
-  <!--  -->
-</div>
-
-<div class="field">
-  <!--  -->
-</div>
-```
-
-</template>
-</Example>
-
-## Auto-fit
-
-When enabled the Field changes size depending on its content.
-
-<Example row>
-<template #example>
-<div class="field auto-fit">
-	<input type="text" placeholder="Auto-fit"/>
-</div>
-</template>
-<template #code>
-
-```html{1}
-<div class="field auto-fit">
-  <!--  -->
-</div>
 ```
 
 </template>
@@ -160,62 +47,142 @@ When enabled the Field changes size depending on its content.
 
 ## Native types
 
-Change the `input`'s `type` attribute.
-
-<Example row>
-<template #example>
-<div class="column">
-	<label class="field">
-	<span class="label">Color</span>
-		<input type="color" placeholder="Color">
+<Example row hideCode>
+<template #controls>
+<label class="checkbox">
+	<input v-model="isFilled" name="checkbox" type="checkbox" />
+	<span class="text">Filled</span>
 </label>
-<div class="field">
-		<input type="email" placeholder="name@email.com">
-</div>
-<div class="field">
-		<input type="file" placeholder="File">
-</div>
-	<div class="field">
-		<input type="password" placeholder="Password">
-</div>
-	<div class="field">
-		<input type="search" placeholder="Search">
-</div>
-		<div class="field">
-		<input type="tel" placeholder="(666) 666-1337">
-</div>
-<div class="field">
-		<input type="text" placeholder="Text">
-</div>
-	<div class="field">
-		<input type="url" placeholder="https://yoursite.com">
-</div>
-</div>
+<label class="checkbox">
+	<input v-model="isSmall" name="checkbox" type="checkbox" />
+	<span class="text">Small</span>
+</label>
+</template>
+<template #example>
 
-<div class="column">
-<div class="field">
-<input type="date" placeholder="Date">
-</div>
-	<div class="field">
-		<input type="datetime-local" placeholder="Datetime local">
-</div>
-<div class="field">
-		<input type="month" placeholder="Month">
-</div>
-<div class="field">
-		<input type="time" placeholder="Time">
-</div>
-<div class="field">
-		<input type="week" placeholder="Week">
-</div>
-</div>
+  <div class="column">
+    <label class="field" :class="{ filled: isFilled, small: isSmall }">
+      <span class="label">Color</span>
+      <input type="color" placeholder="Color" />
+    </label>
+    <label class="field" :class="{ filled: isFilled, small: isSmall }">
+			<span class="label">Email</span>
+	    <input type="email" placeholder="name@email.com" />
+    </label>
+    <div class="field" :class="{ filled: isFilled, small: isSmall }">
+	    <input type="file" placeholder="File" />
+    </div>
+    <label class="field" :class="{ filled: isFilled, small: isSmall }">
+			<span class="label">Password</span>
+	    <input type="password" placeholder="Password" />
+    </label>
+    <label class="field" :class="{ filled: isFilled, small: isSmall }">
+			<span class="label">Search</span>
+	    <input type="search" placeholder="Search" />
+    </label>
+    <label class="field" :class="{ filled: isFilled, small: isSmall }">
+			<span class="label">Phone</span>
+	    <input type="tel" placeholder="(666) 666-1337" />
+    </label>
+    <label class="field" :class="{ filled: isFilled, small: isSmall }">
+			<span class="label">Text</span>
+	    <input type="text" placeholder="Text" />
+    </label>
+    <label class="field" :class="{ filled: isFilled, small: isSmall }">
+			<span class="label">URL</span>
+	    <input type="url" placeholder="https://yoursite.com" />
+    </label>
+  </div>
+
+  <div class="column">
+    <label class="field" :class="{ filled: isFilled, small: isSmall }">
+      <span class="label">Date</span>
+			<input type="date" placeholder="Date" />
+    </label>
+    <label class="field" :class="{ filled: isFilled, small: isSmall }">
+      <span class="label">Datetime local</span>
+			<input type="datetime-local" placeholder="Datetime local" />
+    </label>
+    <label class="field" :class="{ filled: isFilled, small: isSmall }">
+      <span class="label">Month</span>
+			<input type="month" placeholder="Month" />
+    </label>
+    <label class="field" :class="{ filled: isFilled, small: isSmall }">
+      <span class="label">Time</span>
+			<input type="time" placeholder="Time" />
+    </label>
+    <label class="field" :class="{ filled: isFilled, small: isSmall }">
+      <span class="label">Week</span>
+			<input type="week" placeholder="Week" />
+    </label>
+  </div>
 </template>
 <template #code>
 
-```html{2}
+```html
+<label class="field">
+  <span class="label">Color</span>
+  <input type="color" placeholder="Color" />
+</label>
+
+<label class="field">
+  <span class="label">Email</span>
+  <input type="email" placeholder="name@email.com" />
+</label>
+
 <div class="field">
-  <input type="text" />
+  <input type="file" placeholder="File" />
 </div>
+
+<label class="field">
+  <span class="label">Password</span>
+  <input type="password" placeholder="Password" />
+</label>
+
+<label class="field">
+  <span class="label">Search</span>
+  <input type="search" placeholder="Search" />
+</label>
+
+<label class="field">
+  <span class="label">Phone</span>
+  <input type="tel" placeholder="(666) 666-1337" />
+</label>
+
+<label class="field">
+  <span class="label">Text</span>
+  <input type="text" placeholder="Text" />
+</label>
+
+<label class="field">
+  <span class="label">URL</span>
+  <input type="url" placeholder="https://yoursite.com" />
+</label>
+
+<label class="field">
+  <span class="label">Date</span>
+  <input type="date" placeholder="Date" />
+</label>
+
+<label class="field">
+  <span class="label">Datetime local</span>
+  <input type="datetime-local" placeholder="Datetime local" />
+</label>
+
+<label class="field">
+  <span class="label">Month</span>
+  <input type="month" placeholder="Month" />
+</label>
+
+<label class="field">
+  <span class="label">Time</span>
+  <input type="time" placeholder="Time" />
+</label>
+
+<label class="field">
+  <span class="label">Week</span>
+  <input type="week" placeholder="Week" />
+</label>
 ```
 
 </template>
@@ -265,6 +232,109 @@ The British Government has a [great article](https://technology.blog.gov.uk/2020
   <input type="number" placeholder="Number"> // [!code --]
 </div>
 
+```
+
+</template>
+</Example>
+
+## Sizes
+
+<Example row>
+<template #example>
+	<div class="field small">
+		<input type="text" placeholder="Small">
+</div>
+<div class="field">
+		<input type="text" placeholder="Default">
+</div>
+</template>
+<template #code>
+
+```html{1,5}
+<div class="field small">
+  <!--  -->
+</div>
+
+<div class="field">
+  <!--  -->
+</div>
+```
+
+</template>
+</Example>
+
+## Supporting text
+
+<Example row>
+<template #example>
+<label class="field">
+	<span class="label">Label</span>
+	<input type="text" placeholder="Outlined"/>
+	<span class="supporting-text">Supporting text</span>
+</label>
+</template>
+<template #code>
+
+```html{4}
+<label class="field">
+  <span class="label">Label</span>
+  <input type="text" placeholder="Placeholder" />
+  <span class="supporting-text">Supporting text</span>
+</label>
+```
+
+</template>
+</Example>
+
+## Validation
+
+The `.error` class toggles the error styles. Make use of the supporting text to give extra feedback on the error.
+
+<Example row>
+<template #example>
+<label class="field error">
+	<span class="label">Label</span>
+	<input type="text" placeholder="Placeholder" value="This isn't right"/>
+	<span class="supporting-text">Only double-negatives are allowed.</span>
+</label>
+
+<label class="field error filled">
+	<span class="label">Label</span>
+	<input type="text" placeholder="Placeholder" value="Uh-oh"/>
+	<span class="supporting-text">Only letters from the first half of the alphabet are allowed.</span>
+</label>
+</template>
+<template #code>
+
+```html{1}
+<label class="field error">
+  <span class="label">Label</span>
+  <input type="text" placeholder="Placeholder" />
+  <span class="supporting-text">Supporting text</span>
+</label>
+```
+
+</template>
+</Example>
+
+## Prefix & suffix
+
+## Auto-fit
+
+When enabled the Field changes size depending on its content.
+
+<Example row>
+<template #example>
+<div class="field auto-fit">
+	<input type="text" placeholder="Auto-fit"/>
+</div>
+</template>
+<template #code>
+
+```html{1}
+<div class="field auto-fit">
+  <!--  -->
+</div>
 ```
 
 </template>

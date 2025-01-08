@@ -79,7 +79,9 @@
     }
   }
 
-  /* Variant: Outlined  */
+  /*
+  * Variant: Outlined
+  */
   &:not(.filled) {
     /* Element states */
     &:hover {
@@ -97,6 +99,14 @@
       border-color: var(--_accent-color);
       outline-offset: 0;
       outline: 2px solid var(--_accent-color);
+    }
+  }
+
+  &:has(input[type="color"]) {
+    .label {
+      border: 1px solid var(--input-border-color);
+      inline-size: fit-content;
+      margin-inline-start: var(--size-2);
     }
   }
 
@@ -119,6 +129,7 @@
 
     @media (prefers-reduced-motion: no-preference) {
       transition:
+        border-color 0.2s var(--ease-3),
         font-size 0.2s var(--ease-3),
         inline-size 0.05s var(--ease-3),
         margin 0.2s var(--ease-3),
@@ -126,19 +137,13 @@
     }
   }
 
-  &:has(input[type="color"]) {
-    .label {
-      inline-size: fit-content;
-      margin-inline-start: var(--size-2);
-    }
-  }
-
   /* Label transitions */
   &:focus-within,
-  &:has(:where(input:not(type="color"), textarea):not(:placeholder-shown)),
+  &:has(:where(input:not([type="color"]), textarea):not(:placeholder-shown)),
   &:has(option[value=""]:not(:checked)),
   &:has(option:checked:not([value=""])) {
     .label {
+      border-color: transparent;
       color: var(--_accent-color);
       font-size: 0.75rem;
       inline-size: max-content;
@@ -146,7 +151,7 @@
       line-height: 1.15;
       margin-block-start: calc(-1 * var(--size-8));
       margin-inline-start: calc(var(--_field-padding-inline) / 2);
-      padding-inline: calc(var(--_field-padding-inline) / 2);
+      padding-inline: 0.125rem;
     }
 
     &:has(> textarea) {
@@ -183,7 +188,9 @@
     --_supporting-text-color: var(--color-9);
   }
 
-  /* Variant: Filled */
+  /*
+  * Variant: Filled
+  */
   &.filled {
     --_bg-color: var(--surface-tonal);
     *:focus-visible {
@@ -198,6 +205,10 @@
       border-block-start-color: transparent;
       border-inline-color: transparent;
       border-radius: 0;
+    }
+
+    & > input[type="color"] {
+      border-inline: none;
     }
 
     /* Bottom line */
@@ -223,7 +234,7 @@
       background-color: var(--_bg-color);
     }
 
-    &:not(:has([disabled])) {
+    &:not(:has([disabled], :has(input[type="color"]))) {
       /* Hover */
       &:hover {
         --_bg-color: light-dark(
@@ -236,7 +247,9 @@
     /* Label transitions */
     &:has(.label) {
       &:focus-within,
-      &:has(:where(input, textarea):not(:placeholder-shown)),
+      &:has(
+          :where(input:not([type="color"]), textarea):not(:placeholder-shown)
+        ),
       &:has(option[value=""]:not(:checked)),
       &:has(option:checked:not([value=""])) {
         :where(input, textarea) {
@@ -252,6 +265,7 @@
 
         .label {
           margin-block-start: calc(-1 * var(--size-5));
+          padding-inline: calc(var(--_field-padding-inline) / 2);
         }
 
         &:has(> textarea) {
@@ -316,9 +330,15 @@
     --_field-padding-block: var(--size-2);
     --_height: 2.375em;
 
+    &:has(input[type="color"]) {
+      .label {
+        line-height: 1.5;
+      }
+    }
+
     /* Label transitions */
     &:focus-within,
-    &:has(:where(input, textarea):not(:placeholder-shown)),
+    &:has(:where(input:not([type="color"]), textarea):not(:placeholder-shown)),
     &:has(option[value=""]:not(:checked)) {
       .label {
         margin-block-start: -2.5rem;

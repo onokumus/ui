@@ -3,8 +3,6 @@
     appearance: none;
     background: none;
     block-size: 2.875em;
-    border-radius: var(--input-border-radius);
-    border: var(--input-border-width) solid var(--input-border-color);
     overflow: hidden;
     padding: 0;
 
@@ -21,7 +19,6 @@
   &.small {
     input {
       block-size: 2.375em;
-      inline-size: 2.375em;
     }
   }
 }
