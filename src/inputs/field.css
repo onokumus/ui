@@ -261,14 +261,14 @@
       &:has(option[value=""]:not(:checked)),
       &:has(option:checked:not([value=""])) {
         :where(input, textarea) {
-          padding-block: calc(var(--_field-padding-block) * 1.8)
-            calc(var(--_field-padding-block) * 0.2);
+          padding-block: calc(var(--_field-padding-block) * 1.7)
+            calc(var(--_field-padding-block) * 0.3);
         }
 
         select > button,
         select:not(:has(button)) {
-          padding-block: calc(var(--_field-padding-block) * 1.8)
-            calc(var(--_field-padding-block) * 0.2);
+          padding-block: calc(var(--_field-padding-block) * 1.7)
+            calc(var(--_field-padding-block) * 0.3);
         }
 
         .label {

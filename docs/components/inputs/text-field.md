@@ -389,7 +389,7 @@ The British Government has a [great article](https://technology.blog.gov.uk/2020
 
 ## Do I have to use `<label>`?
 
-No. But with `<label>` you get some accessibility wins for free. It's recommended to label your inputs somehow.
+No. But you get some accessibility wins for free with `<label>`. It's recommended to label your inputs somehow.
 
 <Example row>
 <template #example>
