@@ -128,18 +128,25 @@ The `.error` class toggles the error styles. Make use of the supporting text to 
 
 When enabled the Field changes size depending on its content.
 
+<div class="not-rich-text">
+<Alert title="Auto-fit + labels" severity="warning">
+	Be aware that if your label is long you might experience some animation jank when focusing on the input as a natural result of the input changing size.
+</Alert>
+</div>
+
 <Example row>
 <template #example>
-<div class="field auto-fit">
+<label class="field auto-fit">
+	<span class="label">Label</span>
 	<input type="text" placeholder="Auto-fit"/>
-</div>
+</label>
 </template>
 <template #code>
 
 ```html{1}
-<div class="field auto-fit">
+<label class="field auto-fit">
   <!--  -->
-</div>
+</label>
 ```
 
 </template>
@@ -374,6 +381,27 @@ The British Government has a [great article](https://technology.blog.gov.uk/2020
   <datalist id="datalist-id">
     <option value="option value"></option>
   </datalist>
+</div>
+```
+
+</template>
+</Example>
+
+## Do I have to use `<label>`?
+
+No. But with `<label>` you get some accessibility wins for free. It's recommended to label your inputs somehow.
+
+<Example row>
+<template #example>
+<div class="field">
+	<input type="text" placeholder="Placeholder"/>
+</div>
+</template>
+<template #code>
+
+```html
+<div class="field auto-fit">
+  <input type="text" placeholder="Placeholder" />
 </div>
 ```
 
