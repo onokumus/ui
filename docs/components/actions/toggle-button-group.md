@@ -11,10 +11,6 @@ import CommutingIcon from "../../.vitepress/theme/app/components/CommutingIcon.v
 import {defineModel} from "vue"
 	const activeToggle = defineModel({default: "walking"})
 
-	function updateActiveToggle(id) {
-		activeToggle.value = id
-	}
-
 	const buttons = [
 		{
 			id: 'walking',
@@ -209,44 +205,19 @@ Don't forget to use `aria-label` on the `<button>` element whenever you don't ha
 </Alert>
 </div>
 
-## Dynamic width
-
-<Example column centered>
-<template #example>
-
-<div role="group" class="toggle-button-group dynamic">
-  <button class="selected"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M29.907 5.14a1.25 1.25 0 0 1-.047 1.767l-19 18a1.25 1.25 0 0 1-1.775-.055l-6.75-7.25a1.25 1.25 0 0 1 1.83-1.704l5.89 6.327L28.14 5.093a1.25 1.25 0 0 1 1.767.047"/></svg>Label</button>
-  <button>Longer label</button>
-  <button>This</button>
-	<button>That</button>
-</div>
-
-</template>
-
-<template #code>
-
-```html{1}
-<div role="group" class="toggle-button-group dynamic">
-  <!--  -->
-</div>
-```
-
-</template>
-</Example>
-
-## Size
+## Sizes
 
 Choose between three sizes: default, `.small` and `.x-small`.
 
 <Example column centered exampleClass="gap-l">
 <template #example>
 <div role="group" class="toggle-button-group">
+  <button disabled>Disabled</button>
+  <button>Enabled</button>
   <button class="selected">
 		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M29.907 5.14a1.25 1.25 0 0 1-.047 1.767l-19 18a1.25 1.25 0 0 1-1.775-.055l-6.75-7.25a1.25 1.25 0 0 1 1.83-1.704l5.89 6.327L28.14 5.093a1.25 1.25 0 0 1 1.767.047"/></svg>
 		Selected
 	</button>
-  <button>Enabled</button>
-  <button disabled>Disabled</button>
 </div>
 
 <div role="group" class="toggle-button-group small">
@@ -254,16 +225,16 @@ Choose between three sizes: default, `.small` and `.x-small`.
 		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M29.907 5.14a1.25 1.25 0 0 1-.047 1.767l-19 18a1.25 1.25 0 0 1-1.775-.055l-6.75-7.25a1.25 1.25 0 0 1 1.83-1.704l5.89 6.327L28.14 5.093a1.25 1.25 0 0 1 1.767.047"/></svg>
 		Selected
 	</button>
-  <button>Enabled</button>
   <button disabled>Disabled</button>
+  <button>Enabled</button>
 </div>
 
 <div role="group" class="toggle-button-group x-small">
+  <button>Enabled</button>
   <button class="selected">
 		<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M29.907 5.14a1.25 1.25 0 0 1-.047 1.767l-19 18a1.25 1.25 0 0 1-1.775-.055l-6.75-7.25a1.25 1.25 0 0 1 1.83-1.704l5.89 6.327L28.14 5.093a1.25 1.25 0 0 1 1.767.047"/></svg>
 		Selected
 	</button>
-  <button>Enabled</button>
   <button disabled>Disabled</button>
 </div>
 
@@ -281,6 +252,31 @@ Choose between three sizes: default, `.small` and `.x-small`.
 </div>
 
 <div role="group" class="toggle-button-group x-small">
+  <!--  -->
+</div>
+```
+
+</template>
+</Example>
+
+### Full width
+
+<Example column centered>
+<template #example>
+
+<div role="group" class="toggle-button-group fullwidth">
+  <button class="selected"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path fill="currentColor" d="M29.907 5.14a1.25 1.25 0 0 1-.047 1.767l-19 18a1.25 1.25 0 0 1-1.775-.055l-6.75-7.25a1.25 1.25 0 0 1 1.83-1.704l5.89 6.327L28.14 5.093a1.25 1.25 0 0 1 1.767.047"/></svg>Label</button>
+  <button>Longer label</button>
+  <button>This</button>
+	<button>That</button>
+</div>
+
+</template>
+
+<template #code>
+
+```html{1}
+<div role="group" class="toggle-button-group fullwidth">
   <!--  -->
 </div>
 ```

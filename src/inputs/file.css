@@ -1,7 +1,7 @@
 :where(.field:has(input[type="file"])) {
   input {
     align-self: flex-start;
-    block-size: 2.375rem;
+    block-size: 2.875em;
     box-shadow: none;
     color: var(--text-color-1);
     cursor: initial;
@@ -20,7 +20,7 @@
     }
   }
 
-  /* Variant */
+  /* Variants */
   &.filled {
     input {
       &::-webkit-file-upload-button,
@@ -39,7 +39,7 @@
   /* Sizes */
   &.small {
     input {
-      block-size: 1.875rem;
+      block-size: 2.375rem;
     }
   }
 }

@@ -17,9 +17,9 @@
   position: relative;
 
   /* Input/Select base */
-  & > input,
-  & > textarea,
-  & > select {
+  & input,
+  & textarea,
+  & select {
     background-color: var(--_bg-color);
     block-size: var(--_height);
     border-radius: var(--input-border-radius);
@@ -42,7 +42,7 @@
   }
 
   /* Experimental Select */
-  &:has(> select button) {
+  &:has(select button) {
     select {
       padding: 0;
 
@@ -54,25 +54,30 @@
     }
   }
 
-  /* Select */
-  &:has(> select) {
-    &:not(:has(button)) {
-      /* Non-experimental Select */
-      select {
-        padding: var(--_field-padding-block) var(--size-8)
-          var(--_field-padding-block) var(--_field-padding-inline);
-      }
+  /* Non-experimental Select */
+  &:has(select):not(:has(button)) {
+    select {
+      padding: var(--_field-padding-block) var(--size-8)
+        var(--_field-padding-block) var(--_field-padding-inline);
     }
 
-    /* Label */
     .label {
-      /* Make sure arrow is visible */
+      /* Make sure chevron is visible */
       inline-size: calc(100% - var(--size-6));
     }
   }
 
+  /* Input - color */
+  &:has(input[type="color"]) {
+    .label {
+      border: 1px solid var(--input-border-color);
+      inline-size: fit-content;
+      margin-inline-start: var(--size-2);
+    }
+  }
+
   /* Textarea */
-  &:has(> textarea) {
+  &:has(textarea) {
     .label {
       align-self: start;
       margin-block-start: var(--_field-padding-block);
@@ -91,22 +96,13 @@
     }
   }
 
-  /* Focus */
   &:not(.filled):focus-within {
-    & > input,
-    & > textarea,
-    & > select {
+    & input,
+    & textarea,
+    & select {
       border-color: var(--_accent-color);
       outline-offset: 0;
       outline: 2px solid var(--_accent-color);
-    }
-  }
-
-  &:has(input[type="color"]) {
-    .label {
-      border: 1px solid var(--input-border-color);
-      inline-size: fit-content;
-      margin-inline-start: var(--size-2);
     }
   }
 
@@ -137,7 +133,13 @@
     }
   }
 
-  /* Label transitions */
+  /*
+  * Label transitions
+  * Triggered by:
+  * - focus
+  * - filled form fields (except color inputs)
+  * - non-empty select options
+  */
   &:focus-within,
   &:has(:where(input:not([type="color"]), textarea):not(:placeholder-shown)),
   &:has(option[value=""]:not(:checked)),
@@ -154,7 +156,7 @@
       padding-inline: 0.125rem;
     }
 
-    &:has(> textarea) {
+    &:has(textarea) {
       .label {
         margin-block-start: calc(-1 * var(--size-2));
       }
@@ -174,7 +176,7 @@
   /* Auto-fit */
   &.auto-fit {
     inline-size: auto;
-    :where(& > input, & > textarea) {
+    :where(& input, & textarea) {
       field-sizing: content;
     }
   }
@@ -198,16 +200,16 @@
     }
 
     /* Base style */
-    & > input,
-    & > textarea,
-    & > select {
+    & input,
+    & textarea,
+    & select {
       border-block-end-color: var(--_filled-border-color);
       border-block-start-color: transparent;
       border-inline-color: transparent;
       border-radius: 0;
     }
 
-    & > input[type="color"] {
+    & input[type="color"] {
       border-inline: none;
     }
 
@@ -244,7 +246,13 @@
       }
     }
 
-    /* Label transitions */
+    /*
+    * Label transitions
+    * Triggered by:
+    * - focus
+    * - filled form fields (except color inputs)
+    * - non-empty select options
+    */
     &:has(.label) {
       &:focus-within,
       &:has(
@@ -258,7 +266,7 @@
         }
 
         select > button,
-        select:not(:has(> button)) {
+        select:not(:has(button)) {
           padding-block: calc(var(--_field-padding-block) * 1.8)
             calc(var(--_field-padding-block) * 0.2);
         }
@@ -268,7 +276,7 @@
           padding-inline: calc(var(--_field-padding-inline) / 2);
         }
 
-        &:has(> textarea) {
+        &:has(textarea) {
           .label {
             margin-block-start: var(--size-1);
           }
@@ -283,9 +291,9 @@
       }
     }
     &:focus-within {
-      & > input,
-      & > textarea,
-      & > select {
+      & input,
+      & textarea,
+      & select {
         border-block-end-color: var(--_accent-color);
       }
 
@@ -336,10 +344,17 @@
       }
     }
 
-    /* Label transitions */
+    /*
+    * Label transitions
+    * Triggered by:
+    * - focus
+    * - filled form fields (except color inputs)
+    * - non-empty select options
+    */
     &:focus-within,
     &:has(:where(input:not([type="color"]), textarea):not(:placeholder-shown)),
-    &:has(option[value=""]:not(:checked)) {
+    &:has(option[value=""]:not(:checked)),
+    &:has(option:checked:not([value=""])) {
       .label {
         margin-block-start: -2.5rem;
         margin-inline-start: var(--size-1);

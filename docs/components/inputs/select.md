@@ -170,8 +170,6 @@ The `.error` class toggles the error styles. Make use of the supporting text to 
 </template>
 </Example>
 
-## Prefix & suffix
-
 ## Sizes
 
 <Example row>

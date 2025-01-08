@@ -15,6 +15,11 @@ Practically all established UI libraries need to take older browser versions int
 
 ## The goal of the component library
 
+- Have pragmatic defaults without sacrificing flexibility and control
+- Leverage the native platform as much as possible
+- Follow accessibility guidelines
+- Serve as an inspiration
+- Be scalable
 <div class="not-rich-text">
 <Alert title='"If you only use the latest features, that means this is can never enter production"'>
 
@@ -22,12 +27,6 @@ Yes and no. Right now that's true for most components. The point is to let the s
 </Alert>
 
 </div>
-
-- Have sensible defaults without sacrificing flexibility and control
-- Use modern HTML & CSS features
-- Follow accessibility guidelines
-- Serve as an inspiration
-- Be scalable
 
 ## Developer blog
 

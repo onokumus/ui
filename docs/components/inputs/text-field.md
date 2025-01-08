@@ -45,7 +45,107 @@ const isSmall = ref(false)
 </template>
 </Example>
 
-## Native types
+## Sizes
+
+<Example row>
+<template #example>
+	<label class="field small">
+  <span class="label">Small outlined</span>
+  <input type="text" placeholder="Placeholder" />
+</label>
+
+<label class="field small filled">
+  <span class="label">Small filled</span>
+  <input type="text" placeholder="Placeholder" />
+</label>
+</template>
+<template #code>
+
+```html{1}
+<label class="field small">
+  <!--  -->
+</label>
+```
+
+</template>
+</Example>
+
+## Supporting text
+
+<Example row>
+<template #example>
+<label class="field">
+	<span class="label">Label</span>
+	<input type="text" placeholder="Outlined"/>
+	<span class="supporting-text">Supporting text</span>
+</label>
+</template>
+<template #code>
+
+```html{4}
+<label class="field">
+  <span class="label">Label</span>
+  <input type="text" placeholder="Placeholder" />
+  <span class="supporting-text">Supporting text</span>
+</label>
+```
+
+</template>
+</Example>
+
+## Validation
+
+The `.error` class toggles the error styles. Make use of the supporting text to give extra feedback on the error.
+
+<Example row>
+<template #example>
+<label class="field error">
+	<span class="label">Label</span>
+	<input type="text" placeholder="Placeholder" value="This isn't right"/>
+	<span class="supporting-text">Only double-negatives are allowed.</span>
+</label>
+
+<label class="field error filled">
+	<span class="label">Label</span>
+	<input type="text" placeholder="Placeholder" value="Uh-oh"/>
+	<span class="supporting-text">Only letters from the first half of the alphabet are allowed.</span>
+</label>
+</template>
+<template #code>
+
+```html{1}
+<label class="field error">
+  <span class="label">Label</span>
+  <input type="text" placeholder="Placeholder" />
+  <span class="supporting-text">Supporting text</span>
+</label>
+```
+
+</template>
+</Example>
+
+## Auto-fit
+
+When enabled the Field changes size depending on its content.
+
+<Example row>
+<template #example>
+<div class="field auto-fit">
+	<input type="text" placeholder="Auto-fit"/>
+</div>
+</template>
+<template #code>
+
+```html{1}
+<div class="field auto-fit">
+  <!--  -->
+</div>
+```
+
+</template>
+</Example>
+
+## Input types
 
 <Example row hideCode>
 <template #controls>
@@ -220,121 +320,21 @@ The British Government has a [great article](https://technology.blog.gov.uk/2020
 <Example column>
 <template #example>
 
-<div class="field">
+<label class="field">
+	<span class="label">Numeric</span>
 	<input type="text" inputmode="numeric" pattern="[0-9]*" placeholder="Numeric">
-</div>
+</label>
 </template>
 <template #code>
 
-```html{2}
-<div class="field">
+<!-- prettier-ignore -->
+```html
+<label class="field">
+  <span class="label">Numeric</span>
   <input type="text" inputmode="numeric" pattern="[0-9]*" placeholder="Numeric"> // [!code ++]
   <input type="number" placeholder="Number"> // [!code --]
-</div>
-
-```
-
-</template>
-</Example>
-
-## Sizes
-
-<Example row>
-<template #example>
-	<div class="field small">
-		<input type="text" placeholder="Small">
-</div>
-<div class="field">
-		<input type="text" placeholder="Default">
-</div>
-</template>
-<template #code>
-
-```html{1,5}
-<div class="field small">
-  <!--  -->
-</div>
-
-<div class="field">
-  <!--  -->
-</div>
-```
-
-</template>
-</Example>
-
-## Supporting text
-
-<Example row>
-<template #example>
-<label class="field">
-	<span class="label">Label</span>
-	<input type="text" placeholder="Outlined"/>
-	<span class="supporting-text">Supporting text</span>
-</label>
-</template>
-<template #code>
-
-```html{4}
-<label class="field">
-  <span class="label">Label</span>
-  <input type="text" placeholder="Placeholder" />
-  <span class="supporting-text">Supporting text</span>
-</label>
-```
-
-</template>
-</Example>
-
-## Validation
-
-The `.error` class toggles the error styles. Make use of the supporting text to give extra feedback on the error.
-
-<Example row>
-<template #example>
-<label class="field error">
-	<span class="label">Label</span>
-	<input type="text" placeholder="Placeholder" value="This isn't right"/>
-	<span class="supporting-text">Only double-negatives are allowed.</span>
 </label>
 
-<label class="field error filled">
-	<span class="label">Label</span>
-	<input type="text" placeholder="Placeholder" value="Uh-oh"/>
-	<span class="supporting-text">Only letters from the first half of the alphabet are allowed.</span>
-</label>
-</template>
-<template #code>
-
-```html{1}
-<label class="field error">
-  <span class="label">Label</span>
-  <input type="text" placeholder="Placeholder" />
-  <span class="supporting-text">Supporting text</span>
-</label>
-```
-
-</template>
-</Example>
-
-## Prefix & suffix
-
-## Auto-fit
-
-When enabled the Field changes size depending on its content.
-
-<Example row>
-<template #example>
-<div class="field auto-fit">
-	<input type="text" placeholder="Auto-fit"/>
-</div>
-</template>
-<template #code>
-
-```html{1}
-<div class="field auto-fit">
-  <!--  -->
-</div>
 ```
 
 </template>

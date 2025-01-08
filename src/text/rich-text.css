@@ -5,7 +5,7 @@
     cursor: pointer;
     font-size: inherit;
     font-weight: 700;
-    line-height: 1.75;
+    line-height: var(--font-lineheight-4);
     text-decoration: underline;
     text-decoration-color: var(--primary);
     text-underline-offset: 1px;
@@ -24,7 +24,7 @@
   /* Blockquote */
   blockquote {
     font-size: inherit;
-    line-height: 1.75;
+    line-height: var(--font-lineheight-4);
     :first-child {
       margin-block-start: 0;
     }
@@ -37,7 +37,7 @@
   /* Text */
   p {
     font-size: inherit;
-    line-height: 1.75;
+    line-height: var(--font-lineheight-4);
     margin-block: 1.25em;
   }
 
@@ -129,7 +129,7 @@
     display: grid;
     font-size: inherit;
     gap: 0.5em;
-    line-height: 1.75;
+    line-height: var(--font-lineheight-4);
     margin-block-start: 1.25em;
     margin-block-end: 1.25em;
     padding-inline-start: 1.625em;
@@ -151,7 +151,7 @@
   /* Description lists */
   :where(dl) {
     font-size: inherit;
-    line-height: 1.75;
+    line-height: var(--font-lineheight-4);
     margin-block-start: 1.25em;
     margin-block-end: 1.25em;
 

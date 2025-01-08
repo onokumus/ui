@@ -4,31 +4,22 @@
   box-sizing: border-box;
 }
 
-:root {
-  interpolate-size: allow-keywords;
-}
-
 :where(html) {
-  --shadow-color: light-dark(220 3% 15%, 220 40% 2%);
-  --shadow-strength: light-dark(1%, 10%);
-  --inner-shadow-highlight: light-dark(
-    inset 0 -0.5px 0 0 #fff,
-    inset 0 0.5px 0 0 #0001,
-    inset 0 -0.5px 0 0 #fff1,
-    inset 0 0.5px 0 0 #0007
-  );
-
-  -webkit-text-size-adjust: none; /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
-
   accent-color: var(--primary);
   background-color: var(--surface-default);
   block-size: 100%;
   caret-color: var(--primary);
   color: var(--text-color-1);
   font-family: var(--font-sans);
-
-  line-height: var(--font-lineheight-3);
+  interpolate-size: allow-keywords;
+  line-height: var(--font-lineheight-4);
   scrollbar-color: var(--scrollthumb-color) transparent;
+  scrollbar-width: thin;
+
+  /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 
   @media (--motionOK) {
     scroll-behavior: smooth;
@@ -43,7 +34,6 @@
   font-synthesis: style;
   font-weight: 400;
   inline-size: 100%;
-  line-height: var(--font-lineheight-3);
   margin: 0;
   min-block-size: 100%;
   min-inline-size: 320px;
