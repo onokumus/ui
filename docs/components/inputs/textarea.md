@@ -11,24 +11,28 @@
 
 <Example row>
 <template #example>
-<div class="field">
-    <textarea  placeholder="Default"></textarea>
-  </div>
+<label class="field">
+  <span class="label">Default</span>
+    <textarea  placeholder="Placeholder"></textarea>
+  </label>
 
-  <div class="field filled">
-    <textarea placeholder="Filled"></textarea>
-  </div>
+  <label class="field filled">
+    <span class="label">Filled</span>
+    <textarea placeholder="Placeholder"></textarea>
+  </label>
 </template>
 <template #code>
 
 ```html
-<div class="field">
+<label class="field">
+  <span class="label">Label</span>
   <textarea placeholder="Default"></textarea>
-</div>
+</label>
 
-<div class="field filled">
+<label class="field filled">
+  <span class="label">Label</span>
   <textarea placeholder="Filled"></textarea>
-</div>
+</label>
 ```
 
 </template>
@@ -62,8 +66,6 @@
 <!-- TODO -->
 
 ## Supporting text
-
-- `.supporting-text`: supporting text element
 
 <Example row>
 <template #example>
