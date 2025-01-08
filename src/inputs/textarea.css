@@ -17,7 +17,9 @@
   &.auto-fit {
     textarea {
       block-size: auto;
+      field-sizing: content;
       min-block-size: var(--_height);
+      resize: both;
     }
   }
 }

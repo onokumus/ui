@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+* {
+  scrollbar-width: thin;
+}
+
 :where(html) {
   accent-color: var(--primary);
   background-color: var(--surface-default);
@@ -13,8 +17,6 @@
   font-family: var(--font-sans);
   interpolate-size: allow-keywords;
   line-height: var(--font-lineheight-4);
-  scrollbar-color: var(--scrollthumb-color) transparent;
-  scrollbar-width: thin;
 
   /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
   -moz-text-size-adjust: none;

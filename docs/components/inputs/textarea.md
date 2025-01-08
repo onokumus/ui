@@ -1,6 +1,8 @@
 <script setup>
 	import Example from "../../.vitepress/theme/app/components/Example.vue"
 	import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
+  import Alert from "../../.vitepress/theme/app/components/Alert.vue";
+
 </script>
 
 # Textarea
@@ -123,20 +125,27 @@ The `.error` class toggles the error styles. Make use of the supporting text to 
 
 ## Auto-fit
 
-When enabled the Textarea changes size depending on its content.
+When enabled the Field changes size depending on its content.
+
+<div class="not-rich-text">
+<Alert title="Auto-fit + labels" severity="warning">
+	Be aware that if your label is long you might experience some animation jank when focusing on the input as a natural result of the input changing size.
+</Alert>
+</div>
 
 <Example row>
 <template #example>
-<div class="field auto-fit">
+<label class="field auto-fit">
+<span class="label">Auto-fit</span>
 	<textarea placeholder="Auto-fit"></textarea>
-</div>
+</label>
 </template>
 <template #code>
 
 ```html{1}
-<div class="field auto-fit">
+<label class="field auto-fit">
   <!--  -->
-</div>
+</label>
 ```
 
 </template>
