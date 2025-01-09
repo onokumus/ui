@@ -178,7 +178,7 @@
 
     &:has(textarea) {
       .label {
-        margin-block-start: calc(-1 * var(--size-2));
+        margin-block-start: -0.35rem;
       }
 
       &.small {
@@ -398,7 +398,7 @@
 
       &:not(.filled):has(textarea) {
         .label {
-          margin-block-start: calc(-1 * var(--size-2));
+          margin-block-start: -0.35rem;
         }
       }
     }
