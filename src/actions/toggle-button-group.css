@@ -47,6 +47,7 @@
     justify-content: center;
     min-block-size: 2.5rem; /* 40px */
     min-inline-size: 5ex;
+    outline-offset: calc(-1 * var(--size-2));
     padding: 0 var(--_button-padding-inline);
     position: relative;
     user-select: none;
