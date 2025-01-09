@@ -13,7 +13,7 @@
   background-color: var(--surface-default);
   block-size: 100%;
   caret-color: var(--primary);
-  color: var(--text-color-1);
+  color: var(--text-color-2);
   font-family: var(--font-sans);
   interpolate-size: allow-keywords;
   line-height: var(--font-lineheight-4);

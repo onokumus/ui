@@ -1,11 +1,15 @@
 @scope (.rich-text) to (.not-rich-text) {
+  * {
+    color: var(--text-color-2);
+  }
+
   /* link.css */
   a {
     color: var(--primary);
     cursor: pointer;
     font-size: inherit;
     font-weight: 700;
-    line-height: var(--font-lineheight-4);
+    line-height: inherit;
     text-decoration: underline;
     text-decoration-color: var(--primary);
     text-underline-offset: 1px;
@@ -24,7 +28,7 @@
   /* Blockquote */
   blockquote {
     font-size: inherit;
-    line-height: var(--font-lineheight-4);
+    line-height: inherit;
     :first-child {
       margin-block-start: 0;
     }
@@ -37,8 +41,12 @@
   /* Text */
   p {
     font-size: inherit;
-    line-height: var(--font-lineheight-4);
+    line-height: inherit;
     margin-block: 1.25em;
+  }
+
+  :where(h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6) {
+    color: var(--text-color-1);
   }
 
   h1,
@@ -129,7 +137,7 @@
     display: grid;
     font-size: inherit;
     gap: 0.5em;
-    line-height: var(--font-lineheight-4);
+    line-height: inherit;
     margin-block-start: 1.25em;
     margin-block-end: 1.25em;
     padding-inline-start: 1.625em;
@@ -151,7 +159,7 @@
   /* Description lists */
   :where(dl) {
     font-size: inherit;
-    line-height: var(--font-lineheight-4);
+    line-height: inherit;
     margin-block-start: 1.25em;
     margin-block-end: 1.25em;
 

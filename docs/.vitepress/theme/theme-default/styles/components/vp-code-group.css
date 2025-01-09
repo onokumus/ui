@@ -1,9 +1,7 @@
-@layer vitepress.components.codegroup {
-  .vp-code-group {
-    margin-block-start: 16px;
-  }
+.vp-code-group {
+  margin-block-start: 16px;
 
-  .vp-code-group .tabs {
+  .tabs {
     position: relative;
     display: flex;
     margin-inline-end: -24px;
@@ -16,20 +14,20 @@
   }
 
   @media (min-width: 640px) {
-    .vp-code-group .tabs {
+    .tabs {
       margin-inline-end: 0;
       margin-inline-start: 0;
       border-radius: 8px 8px 0 0;
     }
   }
 
-  .vp-code-group .tabs input {
+  .tabs input {
     position: fixed;
     opacity: 0;
     pointer-events: none;
   }
 
-  .vp-code-group .tabs label {
+  .tabs label {
     position: relative;
     display: inline-block;
     border-bottom: 1px solid transparent;
@@ -43,7 +41,7 @@
     transition: color 0.25s;
   }
 
-  .vp-code-group .tabs label::after {
+  .tabs label::after {
     position: absolute;
     right: 8px;
     bottom: -1px;
@@ -56,19 +54,19 @@
     transition: background-color 0.25s;
   }
 
-  .vp-code-group label:hover {
+  label:hover {
     color: var(--vp-code-tab-hover-text-color);
   }
 
-  .vp-code-group input:checked + label {
+  input:checked + label {
     color: var(--vp-code-tab-active-text-color);
   }
 
-  .vp-code-group input:checked + label::after {
+  input:checked + label::after {
     background-color: var(--vp-code-tab-active-bar-color);
   }
 
-  .vp-code-group div[class*="language-"],
+  div[class*="language-"],
   .vp-block {
     display: none;
     margin-block-start: 0 !important;
@@ -76,12 +74,12 @@
     border-top-right-radius: 0 !important;
   }
 
-  .vp-code-group div[class*="language-"].active,
+  div[class*="language-"].active,
   .vp-block.active {
     display: block;
   }
+}
 
-  .vp-block {
-    padding: 20px 24px;
-  }
+.vp-block {
+  padding: 20px 24px;
 }

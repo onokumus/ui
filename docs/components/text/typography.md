@@ -87,6 +87,8 @@ import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 
 ## Inline text elements
 
+<div class="not-rich-text">
+
 | Result                                  | Code                    |
 | --------------------------------------- | ----------------------- |
 | <abbr title="Abbreviation">Abbr.</abbr> | `<abbr>`                |
@@ -102,6 +104,8 @@ import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 | Text <sub>Sub</sub>                     | `<sub>`                 |
 | Text <sup>Sup</sup>                     | `<sup>`                 |
 | <u>Underline</u>                        | `<u>`                   |
+
+</div>
 
 ## Blockquote
 
