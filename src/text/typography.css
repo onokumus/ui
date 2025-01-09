@@ -75,7 +75,7 @@
 
 :where(abbr, dfn) {
   font-style: normal;
-  text-decoration: var(--blue) underline dotted;
+  text-decoration: var(--color-9) underline dotted;
 
   &[title] {
     cursor: help;
@@ -91,12 +91,8 @@
   font-size: 0.5em;
 }
 
-:where(del) {
-  color: var(--red, var(--red-9));
-}
-
-:where(ins) {
-  color: var(--green, var(--green-9));
+:where(del, ins) {
+  color: var(--color-9);
 }
 
 :where(small) {

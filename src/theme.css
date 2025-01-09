@@ -5,26 +5,22 @@
   --color-scheme: dark;
 }
 
-.red,
-.error {
+:where(.red, .error, del) {
   --palette-hue: var(--oklch-red, 25);
   --palette-chroma: 1;
   --palette-hue-rotate-by: 1;
 }
-.blue,
-.ok {
+:where(.blue, .ok, abbr, dfn) {
   --palette-hue: var(--oklch-blue, 310);
   --palette-chroma: 1;
   --palette-hue-rotate-by: 1;
 }
-.green,
-.good {
+:where(.green, .good, ins) {
   --palette-hue: var(--oklch-green, 145);
   --palette-chroma: 1;
   --palette-hue-rotate-by: 1;
 }
-.orange,
-.warning {
+:where(.orange, .warning) {
   --palette-hue: var(--oklch-orange, 75);
   --palette-chroma: 1;
   --palette-hue-rotate-by: 1;
@@ -100,34 +96,14 @@
   } */
 
   --primary: var(--color-8);
-  --primary-dark: oklch(from var(--primary) calc(l * 0.75) c h);
   --primary-light: oklch(from var(--primary) calc(l * 1.25) c h);
+  --primary-dark: oklch(from var(--primary) calc(l * 0.75) c h);
   --primary-contrast: var(--gray-1);
 
   --text-color-1: light-dark(var(--gray-15), var(--gray-1));
   --text-color-1-contrast: light-dark(var(--gray-2), var(--gray-15));
   --text-color-2: light-dark(var(--gray-13), var(--gray-4));
   --text-color-2-contrast: light-dark(var(--gray-4), var(--gray-13));
-
-  --red: var(--red-9);
-  --red-light: var(--red-7);
-  --red-dark: var(--red-12);
-  --red-text: light-dark(var(--color-1), var(--color-11));
-
-  --orange: var(--orange-7);
-  --orange-light: var(--orange-5);
-  --orange-dark: var(--orange-9);
-  --orange-text: light-dark(var(--color-1), var(--color-11));
-
-  --blue: var(--blue-7);
-  --blue-light: var(--blue-5);
-  --blue-dark: var(--blue-9);
-  --blue-text: light-dark(var(--color-1), var(--color-11));
-
-  --green: var(--green-7);
-  --green-light: var(--green-5);
-  --green-dark: var(--green-9);
-  --green-text: light-dark(var(--color-1), var(--color-11));
 
   /* Surface */
   --surface-default: light-dark(var(--gray-1), var(--gray-13));

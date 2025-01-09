@@ -15,10 +15,6 @@
   color: var(--_color);
   padding: var(--size-3);
 
-  &:not(.outlined) {
-    background-color: oklch(from var(--_bg-color) l c h);
-  }
-
   .content {
     display: grid;
     gap: var(--size-2);
