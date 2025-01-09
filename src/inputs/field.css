@@ -91,8 +91,10 @@
   &:not(.filled) {
     /* Element states */
     &:hover {
-      &:where(> input, > textarea, > select) {
-        border-color: var(--text-color-1);
+      &:not(.error) {
+        :where(input, textarea, select) {
+          --_border-color: var(--text-color-1);
+        }
       }
     }
   }
@@ -198,6 +200,7 @@
     line-height: 1.5;
     margin-inline-start: var(--field-border-width);
     padding-inline: var(--_field-padding-inline);
+    z-index: 1;
   }
 
   /* Auto-fit */
