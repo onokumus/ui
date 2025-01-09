@@ -35,7 +35,6 @@ html {
   --surface-filled: light-dark(var(--gray-3), var(--gray-15));
   --surface-tonal: light-dark(var(--gray-3), var(--gray-12));
   --surface-elevated: light-dark(var(--gray-1), var(--gray-12));
-  --surface-border-radius: var(--size-1);
 
   /* Shadows */
   --shadow-color: light-dark(220 3% 15%, 220 40% 2%);

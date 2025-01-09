@@ -6,7 +6,7 @@
 
   background-color: var(--_bg-color);
   border-color: var(--_border-color);
-  border-radius: var(--surface-border-radius, 0.25rem);
+  border-radius: var(--border-radius, 0.25rem);
   border-style: solid;
   border-width: var(--_border-width);
   box-shadow: var(--_shadow);
