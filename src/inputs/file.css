@@ -1,7 +1,7 @@
 :where(.field:has(input[type="file"])) {
   input {
     align-self: flex-start;
-    block-size: 2.875em;
+    block-size: var(--field-size);
     box-shadow: none;
     color: var(--text-color-1);
     cursor: initial;
@@ -13,8 +13,8 @@
       background-color: light-dark(var(--gray-2), var(--gray-13));
       block-size: 100%;
       border: 0;
-      border-inline-end: var(--input-border-width) solid
-        var(--input-border-color);
+      border-inline-end: var(--field-border-width) solid
+        var(--field-border-color);
       cursor: pointer;
       margin-inline-end: 2ex;
     }
@@ -27,7 +27,7 @@
       &::file-selector-button {
         background-color: var(--surface-default);
         block-size: calc(100% - var(--size-2));
-        border-radius: var(--input-border-radius);
+        border-radius: var(--field-border-radius);
         cursor: pointer;
         margin-inline-end: 2ex;
         margin-block-start: var(--size-1);

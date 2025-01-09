@@ -5,11 +5,11 @@
 :where(.field) {
   --_accent-color: var(--primary);
   --_bg-color: var(--surface-default);
-  --_border-color: var(--input-border-color);
+  --_border-color: var(--field-border-color);
   --_field-padding-block: 0.75rem;
   --_field-padding-inline: var(--size-2);
   --_filled-border-color: var(--text-color-1);
-  --_height: 2.875em;
+  --_height: var(--field-size);
   --_label-color: var(--text-color-2);
   --_supporting-text-color: var(--text-color-2);
 
@@ -22,8 +22,8 @@
   & select {
     background-color: var(--_bg-color);
     block-size: var(--_height);
-    border-radius: var(--input-border-radius);
-    border: var(--input-border-width) solid var(--_border-color);
+    border-radius: var(--field-border-radius);
+    border: var(--field-border-width) solid var(--_border-color);
     color: var(--text-color-1);
     font-family: var(--font-sans);
     font-size: var(--font-size-1);
@@ -37,6 +37,7 @@
     @media (prefers-reduced-motion: no-preference) {
       transition:
         border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+        block-size 0.2s var(--ease-3),
         padding-block 0.2s var(--ease-3);
     }
   }
@@ -70,7 +71,7 @@
   /* Input - color */
   &:has(input[type="color"]) {
     .label {
-      border: 1px solid var(--input-border-color);
+      border: 1px solid var(--field-border-color);
       inline-size: fit-content;
       margin-inline-start: var(--size-2);
     }
@@ -110,15 +111,15 @@
   .label {
     align-self: center;
     background-color: var(--_bg-color);
-    border-radius: var(--input-border-radius);
+    border-radius: var(--field-border-radius);
     color: var(--_label-color);
     border-radius: var(--radius-1);
     display: inline-flex;
     font-size: var(--font-size-md);
     grid-column: 1/-1;
     grid-row: 1;
-    inline-size: calc(100% - (var(--input-border-width) * 2));
-    margin-inline-start: var(--input-border-width);
+    inline-size: calc(100% - (var(--field-border-width) * 2));
+    margin-inline-start: var(--field-border-width);
     padding-inline: var(--_field-padding-inline);
     pointer-events: none;
     z-index: 1;
@@ -195,7 +196,7 @@
     font-size: var(--font-size-xs);
     grid-row: 3;
     line-height: 1.5;
-    margin-inline-start: var(--input-border-width);
+    margin-inline-start: var(--field-border-width);
     padding-inline: var(--_field-padding-inline);
   }
 
@@ -242,12 +243,12 @@
     /* Bottom line */
     &:before {
       background-color: var(--_filled-border-color);
-      block-size: calc(var(--input-border-width) + 1px);
+      block-size: calc(var(--field-border-width) + 1px);
       content: "";
       inline-size: 100%;
-      margin-block-end: calc(-1 * (var(--input-border-width) * 2));
+      margin-block-end: calc(-1 * (var(--field-border-width) * 2));
       transform: scaleX(0);
-      translate: 0 calc(-1 * (var(--input-border-width) * 2));
+      translate: 0 calc(-1 * (var(--field-border-width) * 2));
       z-index: 1;
 
       @media (prefers-reduced-motion: no-preference) {
@@ -363,7 +364,7 @@
   /* Sizes */
   &.small {
     --_field-padding-block: var(--size-2);
-    --_height: 2.375em;
+    --_height: var(--field-size-small);
 
     &:has(input[type="color"]) {
       .label {

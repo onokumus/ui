@@ -2,7 +2,7 @@
   input {
     appearance: none;
     background: none;
-    block-size: 2.875em;
+    block-size: var(--field-size);
     overflow: hidden;
     padding: 0;
 
@@ -18,7 +18,7 @@
   /* Sizes */
   &.small {
     input {
-      block-size: 2.375em;
+      block-size: var(--field-size-small);
     }
   }
 }
