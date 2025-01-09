@@ -396,14 +396,6 @@ The British Government has a [great article](https://technology.blog.gov.uk/2020
   <option value="marika@hack.man"></option>
 </datalist>
 </label>
-
-<input type="email" list="users-email" placeholder="Placeholder" />
-<datalist id="users-email">
-  <option value="ray.manzarek@the.doors"></option>
-  <option value="jonny.greenwood@radio.head"></option>
-  <option value="marika@hack.man"></option>
-</datalist>
-
 </template>
 
 <template #code>
