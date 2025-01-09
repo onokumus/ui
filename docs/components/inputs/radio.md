@@ -72,22 +72,22 @@ Render the label text inside an element with a `.text` class.
 <template #example>
 <label class="radio">
   <input id="radio-label-1" name="labels-enabled" type="radio" checked />
-  <span class="text">Radio 1</span>
+  <span class="label">Radio 1</span>
 </label>
 
 <label class="radio">
   <input id="radio-label-2" name="labels-enabled" type="radio" />
-  <span class="text">Radio 2</span>
+  <span class="label">Radio 2</span>
 </label>
 
 <label class="radio">
   <input id="radio-label-3" name="labels-disabled" type="radio" disabled />
-  <span class="text">Disabled</span>
+  <span class="label">Disabled</span>
 </label>
 
 <label class="radio">
   <input id="radio-label-4" name="labels-disabled" type="radio" checked disabled />
-  <span class="text">Checked and disabled</span>
+  <span class="label">Checked and disabled</span>
 </label>
 </template>
 
@@ -96,7 +96,7 @@ Render the label text inside an element with a `.text` class.
 ```html{3}
 <label class="radio">
   <input id="radio-example-id" name="labels" type="radio" />
-  <span class="text">Label</span>
+  <span class="label">Label</span>
 </label>
 ```
 
@@ -109,12 +109,12 @@ Render the label text inside an element with a `.text` class.
 <template #example>
   <label class="radio">
     <input name="radio-label-position" type="radio">
-    <span class="text">Default</span>
+    <span class="label">Default</span>
   </label>
 
   <label class="radio stack">
     <input name="radio-label-position" type="radio">
-    <span class="text">Stack</span>
+    <span class="label">Stack</span>
   </label>
 
 </template>
@@ -124,7 +124,71 @@ Render the label text inside an element with a `.text` class.
 ```html{1}
 <label class="radio stack">
   <input name="radio-label-position" type="radio">
-  <span class="text">Stack</span>
+  <span class="label">Stack</span>
+</label>
+
+```
+
+</template>
+</Example>
+
+### Supporting text
+
+<Example row exampleClass="gap-l">
+<template #example>
+  <label class="radio">
+    <input name="supporting-text" type="radio">
+    <span class="label">Default</span>
+    <span class="supporting-text">Supporting text</span>
+  </label>
+
+  <label class="radio stack">
+    <input name="supporting-text" type="radio">
+    <span class="label">Stack</span>
+    <span class="supporting-text">Supporting text</span>
+  </label>
+
+</template>
+
+<template #code>
+
+```html{4}
+<label class="radio">
+  <input name="checkbox" type="radio">
+  <span class="label">Stack</span>
+  <span class="supporting-text">Supporting text</span>
+</label>
+
+```
+
+</template>
+</Example>
+
+### Validation
+
+<Example row exampleClass="gap-l">
+<template #example>
+  <label class="radio error">
+    <input name="validation" checked type="radio">
+    <span class="label">Default</span>
+    <span class="supporting-text">Check yourself</span>
+  </label>
+
+  <label class="radio stack error">
+    <input name="validation" type="radio">
+    <span class="label">Stack</span>
+    <span class="supporting-text">Before you wreck yourself</span>
+  </label>
+
+</template>
+
+<template #code>
+
+```html{1}
+<label class="radio error">
+  <input name="checkbox" type="radio">
+  <span class="label">Label</span>
+  <span class="supporting-text">Supporting text</span>
 </label>
 
 ```
@@ -138,17 +202,17 @@ Render the label text inside an element with a `.text` class.
 <template #example>
 <label class="radio small">
   <input id="radio-small-1" name="size-enabled" type="radio" checked />
-  <span class="text">Small</span>
+  <span class="label">Small</span>
 </label>
 
 <label class="radio">
   <input id="radio-small-2" name="size-enabled" type="radio"  />
-  <span class="text">Default</span>
+  <span class="label">Default</span>
 </label>
 
 <label class="radio large">
   <input id="radio-small-3" name="size-enabled" type="radio"  />
-  <span class="text">Large</span>
+  <span class="label">Large</span>
 </label>
 </template>
 
@@ -157,7 +221,7 @@ Render the label text inside an element with a `.text` class.
 ```html{1}
 <label class="radio small">
   <input id="radio-small-1" name="size-enabled" type="radio" />
-  <span class="text">Small</span>
+  <span class="label">Small</span>
 </label>
 ```
 

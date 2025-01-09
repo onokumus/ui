@@ -143,19 +143,7 @@
   * - non-empty select options
   */
   &:focus-within,
-  &:has(
-      :where(
-          input:not([type="color"]),
-          /* input:where(
-              [type="date"],
-              [type="datetime-local"],
-              [type="month"],
-              [type="time"],
-              [type="week"]
-            ), */
-          textarea
-        ):not(:placeholder-shown)
-    ),
+  &:has(:where(input:not([type="color"]), textarea):not(:placeholder-shown)),
   &:has(option[value=""]:not(:checked)),
   &:has(option:checked:not([value=""])) {
     .label {

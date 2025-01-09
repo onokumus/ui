@@ -103,3 +103,9 @@ TODO: Make sure it doesn't show if there's nothing to scroll
 
   pointer-events: none;
 }
+
+.example {
+  .field:not(.auto-fit) {
+    inline-size: 25ch;
+  }
+}

@@ -33,25 +33,25 @@ import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
 <!-- prettier-ignore -->
 ```html
 <label class="checkbox">
-  <input   name="checkbox" type="checkbox" checked="checked" />
+  <input name="checkbox" type="checkbox" checked="checked" />
   <span class="sr-only">Label</span>
 </label>
 
 <!-- Checked -->
 <label class="checkbox">
-  <input   name="checkbox" type="checkbox" />
+  <input name="checkbox" type="checkbox" />
   <span class="sr-only">Label</span>
 </label>
 
 <!-- Unchecked & disabled -->
 <label class="checkbox">
-  <input   name="checkbox" type="checkbox" disabled />
+  <input name="checkbox" type="checkbox" disabled />
   <span class="sr-only">Label</span>
 </label>
 
 <!-- Checked & disabled -->
 <label class="checkbox">
-  <input   name="checkbox" type="checkbox" checked="checked" disabled />
+  <input name="checkbox" type="checkbox" checked="checked" disabled />
   <span class="sr-only">Label</span>
 </label>
 ```
@@ -69,23 +69,23 @@ Render the label text inside an element with a `.text` class.
 <Example column centered>
 <template #example>
     <label class="checkbox">
-      <input   name="checkbox" type="checkbox" checked="checked">
-      <span class="text">Choice A</span>
+      <input name="checkbox" type="checkbox" checked="checked">
+      <span class="label">Choice A</span>
     </label>
 
   <label class="checkbox">
-    <input   name="checkbox" type="checkbox" disabled>
-    <span clas="text">Disabled</span>
+    <input name="checkbox" type="checkbox" disabled>
+    <span class="label">Disabled</span>
   </label>
 
   <label class="checkbox">
     <input  name="checkbox" type="checkbox" checked="checked" disabled>
-    <span class="text">Checked and disabled</span>
+    <span class="label">Checked and disabled</span>
   </label>
 
   <label class="checkbox">
-    <input   name="checkbox" type="checkbox">
-    <span class="text">Long text dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole <a href="#visible-label">privacy policy ipsum</a></span>
+    <input name="checkbox" type="checkbox">
+    <span class="label">Long text dolor amet mustache knausgaard +1, blue bottle waistcoat tbh semiotics artisan synth stumptown gastropub cornhole <a class="link" href="#visible-label">privacy policy ipsum</a></span>
   </label>
 </template>
 
@@ -93,8 +93,8 @@ Render the label text inside an element with a `.text` class.
 
 ```html{3}
 <label class="checkbox">
-  <input   name="checkbox" type="checkbox" checked="checked" />
-  <span class="text">Label</span>
+  <input name="checkbox" type="checkbox" checked="checked" />
+  <span class="label">Label</span>
 </label>
 
 ```
@@ -107,13 +107,13 @@ Render the label text inside an element with a `.text` class.
 <Example row exampleClass="gap-l">
 <template #example>
   <label class="checkbox">
-    <input   name="checkbox" type="checkbox">
-    <span class="text">Default</span>
+    <input name="checkbox" type="checkbox">
+    <span class="label">Default</span>
   </label>
 
   <label class="checkbox stack">
-    <input   name="checkbox" type="checkbox">
-    <span class="text">Stack</span>
+    <input name="checkbox" type="checkbox">
+    <span class="label">Stack</span>
   </label>
 
 </template>
@@ -122,8 +122,72 @@ Render the label text inside an element with a `.text` class.
 
 ```html{1}
 <label class="checkbox stack">
-  <input   name="checkbox" type="checkbox">
-  <span class="text">Stack</span>
+  <input name="checkbox" type="checkbox">
+  <span class="label">Stack</span>
+</label>
+
+```
+
+</template>
+</Example>
+
+### Supporting text
+
+<Example row exampleClass="gap-l">
+<template #example>
+  <label class="checkbox">
+    <input name="checkbox" type="checkbox">
+    <span class="label">Default</span>
+    <span class="supporting-text">Supporting text</span>
+  </label>
+
+  <label class="checkbox stack">
+    <input name="checkbox" type="checkbox">
+    <span class="label">Stack</span>
+    <span class="supporting-text">Supporting text</span>
+  </label>
+
+</template>
+
+<template #code>
+
+```html{4}
+<label class="checkbox">
+  <input name="checkbox" type="checkbox">
+  <span class="label">Stack</span>
+  <span class="supporting-text">Supporting text</span>
+</label>
+
+```
+
+</template>
+</Example>
+
+### Validation
+
+<Example row exampleClass="gap-l">
+<template #example>
+  <label class="checkbox error">
+    <input name="checkbox" checked type="checkbox">
+    <span class="label">Default</span>
+    <span class="supporting-text">Check yourself</span>
+  </label>
+
+  <label class="checkbox stack error">
+    <input name="checkbox" type="checkbox">
+    <span class="label">Stack</span>
+    <span class="supporting-text">Before you wreck yourself</span>
+  </label>
+
+</template>
+
+<template #code>
+
+```html{1}
+<label class="checkbox error">
+  <input name="checkbox" type="checkbox">
+  <span class="label">Label</span>
+  <span class="supporting-text">Supporting text</span>
 </label>
 
 ```
@@ -141,7 +205,7 @@ Render the label text inside an element with a `.text` class.
       <span class="sr-only">Label</span>
   </label>
   <label class="checkbox">
-     <input   name="checkbox" type="checkbox" checked="checked">
+     <input name="checkbox" type="checkbox" checked="checked">
      <span class="sr-only">Label</span>
   </label>
   <label class="checkbox large">
@@ -153,15 +217,15 @@ Render the label text inside an element with a `.text` class.
    <div class="row">
     <label class="checkbox small">
       <input name="checkbox" type="checkbox" checked="checked">
-      <span class="text">Small</span>
+      <span class="label">Small</span>
     </label>
     <label class="checkbox">
-      <input   name="checkbox" type="checkbox" checked="checked">
-      <span class="text">Default</span>
+      <input name="checkbox" type="checkbox" checked="checked">
+      <span class="label">Default</span>
     </label>
     <label class="checkbox large">
       <input name="checkbox" type="checkbox" checked="checked">
-      <span class="text">Large</span>
+      <span class="label">Large</span>
     </label>
    </div>
 </template>
@@ -182,12 +246,12 @@ Render the label text inside an element with a `.text` class.
 <!-- With label -->
 <label class="checkbox small">
   <input checked="checked" name="checkbox" type="checkbox" />
-  <span class="text">Small</span>
+  <span class="label">Small</span>
 </label>
 
 <label class="checkbox large">
   <input checked="checked" name="checkbox" type="checkbox" />
-  <span class="text">Large</span>
+  <span class="label">Large</span>
 </label>
 ```
 

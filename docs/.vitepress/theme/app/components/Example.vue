@@ -125,10 +125,6 @@ const showCode = ref(!props?.hideCode)
     margin-block: var(--size-3, 1rem);
     padding-block: 0;
 
-    .field:not(.auto-fit) {
-      width: 25ch;
-    }
-
     & + .chip {
       border-radius: var(--surface-border-radius);
       justify-self: end;

@@ -1,9 +1,13 @@
 label:where(.checkbox, .radio) {
   align-items: center;
+  color: var(--text-color-1);
   cursor: pointer;
-  display: inline-flex;
-  gap: var(--size-2);
+  display: inline-grid;
+  gap: 0 var(--size-2);
+  grid-auto-columns: auto;
+  grid-auto-flow: column;
   line-height: 1.5;
+  transform: translateZ(0);
   user-select: none;
 
   &:has([disabled]) {
@@ -16,15 +20,40 @@ label:where(.checkbox, .radio) {
     }
   }
 
+  .label {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .supporting-text {
+    color: var(--text-color-2);
+    font-size: var(--font-size-xs);
+    grid-column: 2;
+    grid-row: 2;
+    line-height: 1.5;
+    z-index: 1;
+  }
+
   &.stack {
-    flex-direction: column;
+    justify-items: center;
+    grid-auto-columns: unset;
+
+    .label {
+      grid-column: 1/-1;
+      grid-row: 2;
+      margin-block-start: var(--size-1);
+    }
+
+    .supporting-text {
+      grid-column: 1/-1;
+      grid-row: 3;
+    }
   }
 
   input {
     aspect-ratio: 1;
-    cursor: pointer;
-
     block-size: 1.125rem;
+    cursor: pointer;
     inline-size: 1.125rem;
 
     &:before {
@@ -32,7 +61,7 @@ label:where(.checkbox, .radio) {
     }
   }
 
-  /* Size */
+  /* Sizes */
   &.small {
     input {
       block-size: var(--size-3);
@@ -44,6 +73,18 @@ label:where(.checkbox, .radio) {
     input {
       block-size: var(--size-4);
       inline-size: var(--size-4);
+    }
+  }
+
+  /* Validation */
+  &.error {
+    input {
+      accent-color: var(--color-9);
+    }
+
+    .label,
+    .supporting-text {
+      color: var(--color-9);
     }
   }
 

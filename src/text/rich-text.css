@@ -1,8 +1,4 @@
 @scope (.rich-text) to (.not-rich-text) {
-  * {
-    color: var(--text-color-2);
-  }
-
   /* link.css */
   a {
     color: var(--primary);
