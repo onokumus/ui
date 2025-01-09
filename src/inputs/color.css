@@ -2,7 +2,7 @@
   input {
     appearance: none;
     background: none;
-    block-size: var(--field-size);
+    block-size: var(--_height);
     overflow: hidden;
     padding: 0;
 
@@ -12,13 +12,6 @@
 
     &::-webkit-color-swatch-wrapper {
       padding: 0;
-    }
-  }
-
-  /* Sizes */
-  &.small {
-    input {
-      block-size: var(--field-size-small);
     }
   }
 }

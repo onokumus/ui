@@ -1,22 +1,24 @@
 :where(.field:has(input[type="file"])) {
   input {
     align-self: flex-start;
-    block-size: var(--field-size);
+    block-size: var(--_height);
     box-shadow: none;
     color: var(--text-color-1);
     cursor: initial;
     max-inline-size: 100%;
     padding: 0;
+    transition: font-size 0.2s var(--ease-3);
 
     &::-webkit-file-upload-button,
     &::file-selector-button {
-      background-color: light-dark(var(--gray-2), var(--gray-13));
-      block-size: 100%;
-      border: 0;
-      border-inline-end: var(--field-border-width) solid
-        var(--field-border-color);
+      background-color: var(--surface-tonal);
+      border: none;
+      block-size: calc(100% - var(--size-2) * 2);
+      border-radius: var(--field-border-radius);
       cursor: pointer;
-      margin-inline-end: 2ex;
+      margin-inline-end: 1ex;
+      margin-block-start: var(--size-2);
+      margin-inline-start: var(--size-2);
     }
   }
 
@@ -26,12 +28,10 @@
       &::-webkit-file-upload-button,
       &::file-selector-button {
         background-color: var(--surface-default);
-        block-size: calc(100% - var(--size-2));
+        block-size: calc(100% - var(--size-2) * 2);
         border-radius: var(--field-border-radius);
         cursor: pointer;
-        margin-inline-end: 2ex;
-        margin-block-start: var(--size-1);
-        margin-inline-start: var(--size-1);
+        margin-block-start: var(--size-2);
       }
     }
   }
@@ -39,7 +39,12 @@
   /* Sizes */
   &.small {
     input {
-      block-size: 2.375rem;
+      font-size: var(--font-size-sm);
+      &::-webkit-file-upload-button,
+      &::file-selector-button {
+        block-size: calc(100% - var(--size-2));
+        margin-block-start: var(--size-1);
+      }
     }
   }
 }

@@ -173,13 +173,13 @@ When enabled the Field changes size depending on its content.
 			<span class="label">Email</span>
 	    <input type="email" placeholder="name@email.com" />
     </label>
-    <div class="field" :class="{ filled: isFilled, small: isSmall }">
-	    <input type="file" placeholder="File" />
-    </div>
     <label class="field" :class="{ filled: isFilled, small: isSmall }">
 			<span class="label">Password</span>
 	    <input type="password" placeholder="Password" />
     </label>
+    <div class="field" :class="{ filled: isFilled, small: isSmall }">
+  <input type="file" placeholder="File" />
+</div>
     <label class="field" :class="{ filled: isFilled, small: isSmall }">
 			<span class="label">Search</span>
 	    <input type="search" placeholder="Search" />
@@ -234,10 +234,6 @@ When enabled the Field changes size depending on its content.
   <input type="email" placeholder="name@email.com" />
 </label>
 
-<div class="field">
-  <input type="file" placeholder="File" />
-</div>
-
 <label class="field">
   <span class="label">Password</span>
   <input type="password" placeholder="Password" />
@@ -287,6 +283,36 @@ When enabled the Field changes size depending on its content.
   <span class="label">Week</span>
   <input type="week" placeholder="Week" />
 </label>
+```
+
+</template>
+</Example>
+
+### File
+
+<Example>
+<template #controls>
+<label class="checkbox">
+	<input v-model="isFilled" name="checkbox" type="checkbox" />
+	<span class="text">Filled</span>
+</label>
+<label class="checkbox">
+	<input v-model="isSmall" name="checkbox" type="checkbox" />
+	<span class="text">Small</span>
+</label>
+</template>
+<template #example>
+<div class="field" :class="{ filled: isFilled, small: isSmall }">
+  <input type="file" placeholder="File" />
+</div>
+</template>
+
+<template #code>
+
+```html
+<div class="field">
+  <input type="file" placeholder="File" />
+</div>
 ```
 
 </template>
@@ -350,23 +376,26 @@ The British Government has a [great article](https://technology.blog.gov.uk/2020
 
 <Example row>
 <template #example>
-<div class="field">
-<input type="text" list="users" placeholder="Users" />
+<label class="field">
+<span class="label">Users</span>
+
+<input type="text" list="users" placeholder="Placeholder" />
 <datalist id="users">
   <option value="Ray Manzarek"></option>
   <option value="Jonny Greenwood"></option>
   <option value="Marika Hackman"></option>
 </datalist>
-</div>
+</label>
 
-<div class="field">
-<input type="email" list="users-email" placeholder="Emails" />
+<label class="field">
+<span class="label">Emails</span>
+<input type="email" list="users-email" placeholder="Placeholder" />
 <datalist id="users-email">
   <option value="ray.manzarek@the.doors"></option>
   <option value="jonny.greenwood@radio.head"></option>
   <option value="marika@hack.man"></option>
 </datalist>
-</div>
+</label>
 
 </template>
 
