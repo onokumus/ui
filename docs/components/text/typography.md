@@ -90,6 +90,7 @@ import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 | Result                                  | Code                    |
 | --------------------------------------- | ----------------------- |
 | <abbr title="Abbreviation">Abbr.</abbr> | `<abbr>`                |
+| <dfn title="Title">Definition</dfn>     | `<dfn>`                 |
 | <strong>Bold</strong>                   | `<strong>`, `<b>`       |
 | <i>Italic</i>                           | `<i>`, `<em>`, `<cite>` |
 | <del>Deleted</del>                      | `<del>`                 |

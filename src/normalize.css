@@ -121,28 +121,6 @@
   outline-offset: var(--outline-offset, 0px);
 }
 
-:where(ins, u, abbr, dfn) {
-  text-decoration: underline;
-  text-underline-offset: 1px;
-
-  @supports (-moz-appearance: none) {
-    text-underline-offset: 2px;
-  }
-}
-
-:where(abbr, dfn) {
-  text-decoration: underline dotted;
-
-  &[title] {
-    cursor: help;
-    text-underline-offset: 1px;
-  }
-
-  @supports (-moz-appearance: none) {
-    text-underline-offset: 2px;
-  }
-}
-
 :where(
   a[href],
   area,
@@ -192,10 +170,6 @@
   inline-size: var(--size-7);
 }
 
-:where(dt) {
-  font-weight: 700;
-}
-
 :where(dt:not(:first-of-type)) {
   margin-block-start: var(--size-5);
 }
@@ -204,11 +178,6 @@
   display: grid;
   gap: var(--size-2);
   place-items: center;
-
-  & > :where(figcaption) {
-    font-size: var(--font-size-1, 1rem);
-    text-wrap: balance;
-  }
 }
 
 :target {
