@@ -178,10 +178,14 @@ Accessible radio buttons must have a label. You can choose between three approac
 
 ### Keyboard support
 
+<div class="not-rich-text">
+
 | Key              | Function                                               |
 | ---------------- | ------------------------------------------------------ |
 | <kbd>Space</kbd> | When Radio is focused it changes its state.            |
 | <kbd>Enter</kbd> | (Optional) When Radio is focused it changes its state. |
+
+</div>
 
 ## API
 

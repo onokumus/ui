@@ -208,10 +208,14 @@ Accessible checkboxes must have a label. You can choose between three approaches
 
 ### Keyboard support
 
+<div class="not-rich-text">
+
 | Key              | Function                                                  |
 | ---------------- | --------------------------------------------------------- |
 | <kbd>Space</kbd> | When Checkbox is focused it changes its state.            |
 | <kbd>Enter</kbd> | (Optional) When Checkbox is focused it changes its state. |
+
+</div>
 
 ## API
 

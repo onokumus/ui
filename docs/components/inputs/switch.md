@@ -182,10 +182,14 @@ To have an accessible label you can choose between three approaches.
 
 ### Keyboard support
 
+<div class="not-rich-text">
+
 | Key              | Function                                                       |
 | ---------------- | -------------------------------------------------------------- |
 | <kbd>Space</kbd> | When switch is focused, changes the switch's state.            |
 | <kbd>Enter</kbd> | (Optional) When switch is focused, changes the switch's state. |
+
+</div>
 
 <style scoped>
   .anatomy {

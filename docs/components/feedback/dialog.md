@@ -120,11 +120,15 @@ closeButton.addEventListener("click", () => {
 
 ### Keyboard support
 
+<div class="not-rich-text">
+
 | Key                    | Function                                                                                                                                                                                                    |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | <kbd>Tab</kbd>         | <ul><li>Moves focus to next focusable element inside the dialog.</li><li>When focus is on the last focusable element in the dialog, moves focus to the first focusable element in the dialog.</li></ul>     |
 | <kbd>Shift + Tab</kbd> | <ul><li>Moves focus to previous focusable element inside the dialog.</li><li>When focus is on the first focusable element in the dialog, moves focus to the last focusable element in the dialog.</li></ul> |
 | <kbd>Esc</kbd>         | Closes the dialog.                                                                                                                                                                                          |
+
+</div>
 
 Source: [w3.org](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/examples/dialog/#rps_label), [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dialog#accessibility)
 
