@@ -196,7 +196,7 @@
   font-family: var(--font-mono);
 }
 :where(:not(pre) > code, kbd) {
-  white-space: nowrap;
+  word-break: break-word;
 }
 
 :where(pre) {

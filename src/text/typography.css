@@ -131,7 +131,6 @@ code {
   border-radius: var(--border-size-3);
   color: var(--primary);
   font-size: 90%;
-  min-inline-size: fit-content;
   padding: 0.2ex 0.5ex;
 }
 
