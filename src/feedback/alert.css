@@ -48,10 +48,6 @@
     --_border-color: var(--color-9);
     --_color: var(--color-15);
 
-    svg {
-      stroke: var(--color-9);
-    }
-
     &.outlined {
       --_bg-color: var(--surface-default);
       --_border-color: var(--color-9);
@@ -61,9 +57,13 @@
 
   /* Icon */
   &:has(svg) {
-    align-items: center;
     display: grid;
     gap: var(--size-3);
     grid-template-columns: var(--size-4) 1fr;
+
+    svg {
+      margin-block-start: 0.15rem;
+      stroke: var(--color-9);
+    }
   }
 }
