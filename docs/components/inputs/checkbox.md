@@ -7,60 +7,50 @@ import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
 
 <Example row>
 <template #example>
-  <label class="checkbox">
+  <div class="checkbox" aria-label="Label">
    <input name="checkbox" type="checkbox" checked="checked">
-    <span class="sr-only">Label</span>
-  </label>
+  </div>
 
-  <label class="checkbox">
+  <div class="checkbox" aria-label="Label">
    <input name="checkbox" type="checkbox">
-    <span class="sr-only">Label</span>
-   </label>
+   </div>
 
-  <label class="checkbox">
+  <div class="checkbox" aria-label="Label">
    <input name="checkbox" type="checkbox" disabled>
-    <span class="sr-only">Label</span>
-   </label>
+   </div>
 
-  <label class="checkbox">
+  <div class="checkbox" aria-label="Label">
    <input name="checkbox" type="checkbox" checked="checked" disabled>
-  <span class="sr-only">Label</span>
-</label>
+</div>
 </template>
 
 <template #code>
 
 <!-- prettier-ignore -->
 ```html
-<label class="checkbox">
+<div class="checkbox" aria-label="Label">
   <input name="checkbox" type="checkbox" checked="checked" />
-  <span class="sr-only">Label</span>
-</label>
+</div>
 
 <!-- Checked -->
-<label class="checkbox">
+<div class="checkbox" aria-label="Label">
   <input name="checkbox" type="checkbox" />
-  <span class="sr-only">Label</span>
-</label>
+</div>
 
 <!-- Unchecked & disabled -->
-<label class="checkbox">
+<div class="checkbox" aria-label="Label">
   <input name="checkbox" type="checkbox" disabled />
-  <span class="sr-only">Label</span>
-</label>
+</div>
 
 <!-- Checked & disabled -->
-<label class="checkbox">
+<div class="checkbox" aria-label="Label">
   <input name="checkbox" type="checkbox" checked="checked" disabled />
-  <span class="sr-only">Label</span>
-</label>
+</div>
 ```
 
 </template>
 
 </Example>
-
-<!--@include: ../../sr-only.md -->
 
 ## Visible label
 
