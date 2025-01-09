@@ -55,8 +55,7 @@
       display: inline-block;
       flex-shrink: 0;
       inline-size: 0;
-      inset-block-start: 50%;
-      inset-inline-end: var(--size-3);
+      inset: 50% var(--size-3) auto auto;
       pointer-events: none;
       position: absolute;
       translate: 0 -50%;

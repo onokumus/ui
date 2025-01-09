@@ -41,6 +41,14 @@
     }
   }
 
+  /* Autosuggest */
+  &:has(input[list]) {
+    .label {
+      /* Make sure chevron is visible */
+      inline-size: calc(100% - var(--size-6));
+    }
+  }
+
   /* Experimental Select */
   &:has(select button) {
     select {

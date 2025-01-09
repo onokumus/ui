@@ -387,7 +387,7 @@ The British Government has a [great article](https://technology.blog.gov.uk/2020
 </datalist>
 </label>
 
-<label class="field">
+<label class="field filled">
 <span class="label">Emails</span>
 <input type="email" list="users-email" placeholder="Placeholder" />
 <datalist id="users-email">
@@ -396,6 +396,13 @@ The British Government has a [great article](https://technology.blog.gov.uk/2020
   <option value="marika@hack.man"></option>
 </datalist>
 </label>
+
+<input type="email" list="users-email" placeholder="Placeholder" />
+<datalist id="users-email">
+  <option value="ray.manzarek@the.doors"></option>
+  <option value="jonny.greenwood@radio.head"></option>
+  <option value="marika@hack.man"></option>
+</datalist>
 
 </template>
 
