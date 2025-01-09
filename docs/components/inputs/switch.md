@@ -71,21 +71,21 @@ All switches should have labels. Notice the use of `aria-label` on the `label` e
 
 Add an element with the `.text` class. Also, don't miss the info on label [accessibility](#accessibility).
 
-<Example column>
+<Example centered column>
 <template #example>
 <label class="switch">
 	<input type="checkbox" role="switch" />
-	<span class="text">Label</span>
+	<span class="label">Label</span>
 </label>
 
 <label class="switch">
 	<input type="checkbox" role="switch" disabled/>
-	<span class="text">Disabled</span>
+	<span class="label">Disabled</span>
 </label>
 
 <label class="switch">
 	<input type="checkbox" role="switch"/>
-	<span class="text">Long text bacon ipsum dolor amet prosciutto tenderloin biltong leberkas ribeye short ribs shankle tri-tip doner buffalo chislic meatloaf meatball.</span>
+	<span class="label">Long text bacon ipsum dolor amet prosciutto tenderloin biltong leberkas ribeye short ribs shankle tri-tip doner buffalo chislic meatloaf meatball.</span>
 </label>
 
 </template>
@@ -95,7 +95,7 @@ Add an element with the `.text` class. Also, don't miss the info on label [acces
 ```html{3}
 <label class="switch">
   <input type="checkbox" role="switch" />
-  <span class="text">Label</span>
+  <span class="label">Label</span>
 </label>
 ```
 
@@ -108,12 +108,12 @@ Add an element with the `.text` class. Also, don't miss the info on label [acces
 <template #example>
 <label class="switch">
 	<input type="checkbox" role="switch" />
-	<span class="text">Default</span>
+	<span class="label">Default</span>
 </label>
 
 <label class="switch stack">
 	<input type="checkbox" role="switch" />
-	<span class="text">Stack</span>
+	<span class="label">Stack</span>
 </label>
 
 </template>
@@ -123,8 +123,72 @@ Add an element with the `.text` class. Also, don't miss the info on label [acces
 ```html{3}
 <label class="switch">
   <input type="checkbox" role="switch" />
-  <span class="text">Label</span>
+  <span class="label">Label</span>
 </label>
+```
+
+</template>
+</Example>
+
+### Supporting text
+
+<Example row exampleClass="gap-l">
+<template #example>
+<label class="switch">
+	<input type="checkbox" role="switch" />
+	<span class="label">Default</span>
+    <span class="supporting-text">Supporting text</span>
+</label>
+
+<label class="switch stack">
+	<input type="checkbox" role="switch" />
+	<span class="label">Stack</span>
+  <span class="supporting-text">Supporting text</span>
+</label>
+
+</template>
+
+<template #code>
+
+```html{4}
+<label class="switch">
+  <input type="checkbox" role="switch" />
+  <span class="label">Default</span>
+  <span class="supporting-text">Supporting text</span>
+</label>
+
+```
+
+</template>
+</Example>
+
+### Validation
+
+<Example row exampleClass="gap-l">
+<template #example>
+<label class="switch error">
+	<input type="checkbox" role="switch" />
+	<span class="label">Default</span>
+    <span class="supporting-text">Supporting text</span>
+</label>
+
+<label class="switch stack error">
+	<input type="checkbox" role="switch" />
+	<span class="label">Stack</span>
+  <span class="supporting-text">Supporting text</span>
+</label>
+
+</template>
+
+<template #code>
+
+```html{1}
+<label class="switch error">
+  <input type="checkbox" role="switch" />
+  <span class="label">Default</span>
+  <span class="supporting-text">Supporting text</span>
+</label>
+
 ```
 
 </template>
@@ -138,12 +202,12 @@ Add the `.small` class on the parent for a smaller Switch variant.
 <template #example>
 <label class="switch small">
 	<input type="checkbox" role="switch" />
-	<span class="text">Small</span>
+	<span class="label">Small</span>
 </label>
 
 <label class="switch">
 	<input type="checkbox" role="switch" />
-	<span class="text">Default</span>
+	<span class="label">Default</span>
 </label>
 </template>
 
@@ -218,7 +282,7 @@ To have an accessible label you can choose between three approaches.
 <template #example>
 <label class="switch anatomy" aria-label="Label">
   <input type="checkbox" role="switch" />
-  <span class="text">Label</span>
+  <span class="label">Label</span>
 </label>
 </template>
 </Example>

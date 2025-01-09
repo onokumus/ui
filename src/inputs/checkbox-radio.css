@@ -6,10 +6,12 @@ label:where(.checkbox, .radio) {
   gap: 0 var(--size-2);
   grid-auto-columns: auto;
   grid-auto-flow: column;
+  inline-size: fit-content;
   line-height: 1.5;
   transform: translateZ(0);
   user-select: none;
 
+  /* Disabled */
   &:has([disabled]) {
     cursor: not-allowed;
     opacity: 0.64;
@@ -20,11 +22,13 @@ label:where(.checkbox, .radio) {
     }
   }
 
+  /* Label */
   .label {
     grid-column: 2;
     grid-row: 1;
   }
 
+  /* Supporting text */
   .supporting-text {
     color: var(--text-color-2);
     font-size: var(--font-size-xs);
@@ -34,6 +38,7 @@ label:where(.checkbox, .radio) {
     z-index: 1;
   }
 
+  /* Stacked layout */
   &.stack {
     justify-items: center;
     grid-auto-columns: unset;
