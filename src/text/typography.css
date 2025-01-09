@@ -117,21 +117,54 @@
 }
 
 /* Code blocks */
-pre {
+:where(pre) {
   border-radius: 0.375rem;
+  direction: ltr;
   font-size: 0.875rem;
   line-height: 1.7142857;
   margin-block: 1.7142857em;
+  max-inline-size: max-content;
+  min-inline-size: 0;
   padding-block: 0.8571429em;
   padding-inline: 1.1428571em;
+  white-space: pre;
+  writing-mode: lr;
 }
 
-code {
-  background-color: oklch(100 0 0 /15%);
+:where(code, kbd, samp, pre) {
+  font-family: var(--font-mono);
+}
+
+:where(code) {
+  background-color: oklch(00 0 0 /18%);
   border-radius: var(--border-size-3);
-  color: var(--primary);
-  font-size: 90%;
+  font-size: 0.9em;
   padding: 0.2ex 0.5ex;
+}
+
+:where(kbd, var) {
+  background-color: var(--text-color-2);
+  border-color: var(--text-color-2);
+  border-radius: var(--border-radius, var(--radius-2));
+  border-width: var(--border-size-1);
+  color: var(--text-color-2-contrast);
+  padding: calc(var(--size-1) / 2) var(--size-1);
+}
+
+:where(:not(pre) code, kbd) {
+  word-break: break-word;
+}
+
+:where(:not(pre) code) {
+  border-radius: var(--border-radius, var(--radius-2));
+  padding: var(--size-1) var(--size-2);
+  writing-mode: lr;
+}
+
+:where(mark) {
+  border-radius: var(--border-radius, 0);
+  padding: calc(var(--size-1) / 2) var(--size-1);
+  vertical-align: baseline;
 }
 
 :where(hgroup) {

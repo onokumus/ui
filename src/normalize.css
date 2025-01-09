@@ -189,44 +189,7 @@
 }
 
 :where(svg:not([width])) {
-  inline-size: var(--size-10);
-}
-
-:where(code, kbd, samp, pre) {
-  font-family: var(--font-mono);
-}
-:where(:not(pre) > code, kbd) {
-  word-break: break-word;
-}
-
-:where(pre) {
-  direction: ltr;
-  max-inline-size: max-content;
-  min-inline-size: 0;
-  white-space: pre;
-  writing-mode: lr;
-}
-
-:where(:not(pre) > code) {
-  background: var(--surface-filled);
-  border-radius: var(--border-radius, var(--radius-2));
-  padding: var(--size-1) var(--size-2);
-  writing-mode: lr;
-}
-
-:where(kbd, var) {
-  background-color: var(--text-color-2);
-  border-color: var(--text-color-2);
-  border-radius: var(--border-radius, var(--radius-2));
-  border-width: var(--border-size-1);
-  color: var(--text-color-2-contrast);
-  padding: calc(var(--size-1) / 2) var(--size-1);
-}
-
-:where(mark) {
-  border-radius: var(--border-radius, 0);
-  padding: calc(var(--size-1) / 2) var(--size-1);
-  vertical-align: baseline;
+  inline-size: var(--size-7);
 }
 
 :where(dt) {
