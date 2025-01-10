@@ -1,10 +1,12 @@
 :where(.field:has(input[type="file"])) {
+  cursor: pointer;
+
   input {
     align-self: flex-start;
     block-size: var(--_height);
     box-shadow: none;
     color: var(--text-color-1);
-    cursor: initial;
+    cursor: inherit;
     max-inline-size: 100%;
     padding: 0;
     transition: font-size 0.2s var(--ease-3);

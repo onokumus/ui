@@ -281,7 +281,9 @@
     &:has(.label) {
       &:focus-within,
       &:has(
-          :where(input:not([type="color"]), textarea):not(:placeholder-shown)
+          :where(input:not(:where([type="color"])), textarea):not(
+              :placeholder-shown
+            )
         ),
       &:has(option[value=""]:not(:checked)),
       &:has(option:checked:not([value=""])) {

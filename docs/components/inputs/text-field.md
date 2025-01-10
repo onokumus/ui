@@ -1,9 +1,9 @@
 <script setup>
-	import Example from "../../.vitepress/theme/app/components/Example.vue"
-	import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
-	import Alert from "../../.vitepress/theme/app/components/Alert.vue";
+import Example from "../../.vitepress/theme/app/components/Example.vue"
+import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
+import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 
-	import { ref } from "vue"
+import { ref } from "vue"
 
 const isFilled = ref(false)
 const isSmall = ref(false)
@@ -125,12 +125,6 @@ The `.error` class toggles the error styles. Make use of the supporting text to 
 
 When enabled the Field changes size depending on its content.
 
-<div class="not-rich-text">
-<Alert title="Auto-fit + labels" severity="warning">
-	Be aware that if your label is long you might experience some animation jank when focusing on the input as a natural result of the input changing size.
-</Alert>
-</div>
-
 <Example row>
 <template #example>
 <label class="field auto-fit">
@@ -148,6 +142,12 @@ When enabled the Field changes size depending on its content.
 
 </template>
 </Example>
+
+<div class="not-rich-text">
+<Alert title="Auto-fit + labels" severity="warning">
+	Be aware that if your label is long you might experience some animation jank when focusing on the input as a natural result of the input changing size.
+</Alert>
+</div>
 
 ## Input types
 
@@ -177,9 +177,6 @@ When enabled the Field changes size depending on its content.
 			<span class="label">Password</span>
 	    <input type="password" placeholder="Password" />
     </label>
-    <div class="field" :class="{ filled: isFilled, small: isSmall }">
-  <input type="file" placeholder="File" />
-</div>
     <label class="field" :class="{ filled: isFilled, small: isSmall }">
 			<span class="label">Search</span>
 	    <input type="search" placeholder="Search" />
@@ -288,37 +285,36 @@ When enabled the Field changes size depending on its content.
 </template>
 </Example>
 
-### File
-
-<Example>
-<template #controls>
-<label class="checkbox">
-	<input v-model="isFilled" name="checkbox" type="checkbox" />
-	<span class="text">Filled</span>
-</label>
-<label class="checkbox">
-	<input v-model="isSmall" name="checkbox" type="checkbox" />
-	<span class="text">Small</span>
-</label>
-</template>
-<template #example>
-<div class="field" :class="{ filled: isFilled, small: isSmall }">
-  <input type="file" placeholder="File" />
+<div class="not-rich-text">
+<Alert title="Date inputs">
+Date-related inputs never show as empty, so the label is always visible. There are only hacks with compromises and no neat ways of dealing with that issue. You're free to implement a solution of your own here that works with your project.
+</Alert>
 </div>
-</template>
 
+### Numeric vs `<input type="number">`
+
+<Example column>
+<template #example>
+
+<label class="field">
+	<span class="label">Numeric</span>
+	<input type="text" inputmode="numeric" pattern="[0-9]*" placeholder="Numeric">
+</label>
+</template>
 <template #code>
 
+<!-- prettier-ignore -->
 ```html
-<div class="field">
-  <input type="file" placeholder="File" />
-</div>
+<label class="field">
+  <span class="label">Numeric</span>
+  <input type="text" inputmode="numeric" pattern="[0-9]*" placeholder="Numeric"> // [!code ++]
+  <input type="number" placeholder="Number"> // [!code --]
+</label>
+
 ```
 
 </template>
 </Example>
-
-### Numeric vs `<input type="number">`
 
 <div class="not-rich-text">
 <Alert severity="error">
@@ -347,24 +343,30 @@ The British Government has a [great article](https://technology.blog.gov.uk/2020
 </Alert>
 
 </div>
-<Example column>
-<template #example>
 
-<label class="field">
-	<span class="label">Numeric</span>
-	<input type="text" inputmode="numeric" pattern="[0-9]*" placeholder="Numeric">
-</label>
+### File
+
+- Use `aria-label` instead of the `<label>` element.
+
+File is a weird one. Should it really be an `<input>` element? Well, it's what we've got :sweat_smile:
+
+<Example row>
+<template #example>
+ <div class="field" aria-label="Label">
+    <input type="file" placeholder="File" />
+  </div>
+
+<div class="field filled" aria-label="Label">
+  <input type="file" placeholder="File" />
+</div>
 </template>
+
 <template #code>
 
-<!-- prettier-ignore -->
 ```html
-<label class="field">
-  <span class="label">Numeric</span>
-  <input type="text" inputmode="numeric" pattern="[0-9]*" placeholder="Numeric"> // [!code ++]
-  <input type="number" placeholder="Number"> // [!code --]
-</label>
-
+<div class="field" aria-label="Label">
+  <input type="file" placeholder="File" />
+</div>
 ```
 
 </template>
@@ -372,7 +374,10 @@ The British Government has a [great article](https://technology.blog.gov.uk/2020
 
 ## Autosuggest
 
-<!--@include: ./autosuggest-template.md -->
+Leverages the `<input>` + `<datalist>` element combo.
+
+- `<input list="DATALISTID">`
+- `<datalist id="DATALISTID">`
 
 <Example row>
 <template #example>
@@ -411,6 +416,19 @@ The British Government has a [great article](https://technology.blog.gov.uk/2020
 
 </template>
 </Example>
+
+<div class="not-rich-text">
+<Alert>
+<div class="rich-text">
+
+Think of `<datalist>` as a list of _suggested_ values.
+
+- `<select>` only allows you to choose between its provided values.
+- `<input>` lets you input anything you want.
+- `<input>` + `<datalist>` is a hybrid between the two.
+</div>
+</Alert>
+</div>
 
 ## Do I have to use `<label>`?
 
