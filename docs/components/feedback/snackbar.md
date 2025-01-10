@@ -82,7 +82,7 @@ The most common way to use a Snackbar is to position it in relation to the brows
 
 <Example>
 <template #example>
-<div class="row">
+<div class="example-row">
 <button class="button" popovertarget="snackbar1">Show snackbar 1</button>
 <button class="button" popovertarget="snackbar2" @click="showSnackbar2 = true;">Show snackbar 2</button>
 </div>
@@ -162,12 +162,12 @@ Use the positional classes in order to place the Snackbar. Default is `.end-star
 
 <Example direction="stack">
 <template #example>
-	<div class="row">
+	<div class="example-row">
 		<button popovertarget="position-snackbar" @click="positionClick('start-start')" class="button">.start-start</button>
 		<button popovertarget="position-snackbar" @click="positionClick('start-center')" class="button">.start-center</button>
 		<button popovertarget="position-snackbar" @click="positionClick('start-end')" class="button">.start-end</button>
 	</div>
-	<div class="row">
+	<div class="example-row">
 		<button popovertarget="position-snackbar" @click="positionClick('end-start')" class="button">.end-start</button>
 		<button popovertarget="position-snackbar" @click="positionClick('end-center')" class="button">.end-center</button>
 		<button popovertarget="position-snackbar" @click="positionClick('end-end')" class="button">.end-end</button>

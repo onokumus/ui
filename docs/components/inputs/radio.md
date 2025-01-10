@@ -169,9 +169,9 @@ Render the label text inside an element with a `.text` class.
 - Add `[required]` to the `<input>` element to toggle required styles
 - The `.error` class toggles the error styles. Make use of the supporting text to give extra feedback on the error.
 
-<Example column gapL>
+<Example column centered gapL>
 <template #example>
-<div class="row gap-l">
+<div class="example-row gap-l">
   <label class="radio">
     <input name="validation" checked type="radio" required>
     <span class="label">Default</span>
@@ -182,7 +182,7 @@ Render the label text inside an element with a `.text` class.
     <span class="label">Stack</span>
   </label>
 </div>
-<div class="row gap-l">
+<div class="example-row gap-l">
   <label class="radio error">
     <input name="validation" checked type="radio">
     <span class="label">Default</span>
@@ -244,6 +244,277 @@ Render the label text inside an element with a `.text` class.
   <input id="radio-small-1" name="size-enabled" type="radio" />
   <span class="label">Small</span>
 </label>
+```
+
+</template>
+</Example>
+
+## Radio group
+
+<Example centered column>
+<template #example>
+<fieldset class="field-group">
+<legend>Legend</legend>
+<div class="fields">
+<label class="radio">
+  <input id="radio-label-1" name="field-group-1" type="radio" checked />
+  <span class="label">Radio 1</span>
+</label>
+
+<label class="radio">
+  <input id="radio-label-2" name="field-group-1" type="radio" />
+  <span class="label">Radio 2</span>
+</label>
+
+<label class="radio">
+  <input id="radio-label-3" name="field-group-1" type="radio" />
+  <span class="label">Radio 3</span>
+</label>
+</div>
+</fieldset>
+</template>
+
+<template #code>
+
+```html
+<fieldset class="field-group">
+  <legend>Legend</legend>
+  <div class="fields">
+    <!--  -->
+  </div>
+</fieldset>
+```
+
+</template>
+</Example>
+
+### Direction
+
+<Example row>
+<template #example>
+<fieldset class="field-group row">
+<legend>Legend</legend>
+<div class="fields">
+<label class="radio">
+  <input name="field-group-direction" type="radio" checked />
+  <span class="label">Radio 1</span>
+</label>
+
+<label class="radio">
+  <input name="field-group-direction" type="radio" />
+  <span class="label">Radio 2</span>
+</label>
+
+<label class="radio">
+  <input name="field-group-direction" type="radio" />
+  <span class="label">Radio 3</span>
+</label>
+</div>
+</fieldset>
+</template>
+
+<template #code>
+
+```html{1}
+<fieldset class="field-group row">
+  <!--  -->
+</fieldset>
+```
+
+</template>
+</Example>
+
+### Supporting text
+
+Can be placed above and below the fields.
+
+<Example column centered gapL>
+<template #example>
+<fieldset class="field-group row">
+<legend>Legend</legend>
+<span class="supporting-text">Supporting text above fields</span>
+<div class="fields">
+<label class="radio">
+  <input name="field-group-supp-text-1" type="radio" checked />
+  <span class="label">Radio 1</span>
+</label>
+
+<label class="radio">
+  <input name="field-group-supp-text-1" type="radio" />
+  <span class="label">Radio 2</span>
+</label>
+
+<label class="radio">
+  <input name="field-group-supp-text-1" type="radio" />
+  <span class="label">Radio 3</span>
+</label>
+</div>
+</fieldset>
+
+<fieldset class="field-group row">
+<legend>Legend</legend>
+<div class="fields">
+<label class="radio">
+  <input name="field-group-supp-text-2" type="radio" checked />
+  <span class="label">Radio 1</span>
+</label>
+
+<label class="radio">
+  <input name="field-group-supp-text-2" type="radio" />
+  <span class="label">Radio 2</span>
+</label>
+
+<label class="radio">
+  <input name="field-group-supp-text-2" type="radio" />
+  <span class="label">Radio 3</span>
+</label>
+</div>
+<span class="supporting-text">Supporting text below fields</span>
+</fieldset>
+</template>
+
+<template #code>
+
+```html{3,14}
+<fieldset class="field-group row">
+  <legend>Legend</legend>
+  <span class="supporting-text">Supporting text</span>
+  <div class="fields">
+    <!--  -->
+  </div>
+</fieldset>
+
+<fieldset class="field-group row">
+  <legend>Legend</legend>
+  <div class="fields">
+    <!--  -->
+  </div>
+  <span class="supporting-text">Supporting text</span>
+</fieldset>
+```
+
+</template>
+</Example>
+
+### Disabled
+
+Attach the `disabled` attribute to the `<fieldset>` element.
+
+<Example row>
+<template #example>
+<fieldset class="field-group row" disabled>
+<legend>Legend</legend>
+<div class="fields">
+<label class="radio">
+  <input name="field-group-disabled-1" type="radio" checked />
+  <span class="label">Radio 1</span>
+</label>
+
+<label class="radio">
+  <input name="field-group-disabled-1" type="radio" />
+  <span class="label">Radio 2</span>
+</label>
+
+<label class="radio">
+  <input name="field-group-disabled-1" type="radio" />
+  <span class="label">Radio 3</span>
+</label>
+
+</div>
+</fieldset>
+</template>
+
+<template #code>
+
+```html{1}
+<fieldset class="field-group row" disabled>
+  <!--  -->
+</fieldset>
+```
+
+</template>
+</Example>
+
+### Required
+
+Attach the `required` attribute to your `<input>` elements.
+
+<Example row>
+<template #example>
+<fieldset class="field-group row">
+<legend>These are required!</legend>
+<div class="fields">
+<label class="radio">
+  <input name="field-group-required-1" type="radio" required />
+  <span class="label">Radio 1</span>
+</label>
+
+<label class="radio">
+  <input name="field-group-required-1" type="radio" required />
+  <span class="label">Radio 2</span>
+</label>
+
+<label class="radio">
+  <input name="field-group-required-1" type="radio" required/>
+  <span class="label">Radio 3</span>
+</label>
+</div>
+</fieldset>
+</template>
+
+<template #code>
+
+```html{5}
+<fieldset class="field-group row">
+  <legend>Legend</legend>
+  <div class="fields">
+    <label class="radio">
+      <input name="field-group-required-1" type="radio" required />
+      <span class="label">Radio 1</span>
+    </label>
+    <!--  -->
+  </div>
+</fieldset>
+```
+
+</template>
+</Example>
+
+### Validation
+
+Attach the `.error` class to your `fieldset.field-group` element.
+
+<Example row>
+<template #example>
+<fieldset class="field-group row error">
+<legend>Legend</legend>
+<span class="supporting-text">Something went wrong!</span>
+<div class="fields">
+<label class="radio">
+  <input name="field-group-validation-1" type="radio" checked />
+  <span class="label">Radio 1</span>
+</label>
+
+<label class="radio">
+  <input name="field-group-validation-1" type="radio" />
+  <span class="label">Radio 2</span>
+</label>
+
+<label class="radio">
+  <input name="field-group-validation-1" type="radio" />
+  <span class="label">Radio 3</span>
+</label>
+
+</div>
+</fieldset>
+</template>
+
+<template #code>
+
+```html{1}
+<fieldset class="field-group row error">
+  <!--  -->
+</fieldset>
 ```
 
 </template>

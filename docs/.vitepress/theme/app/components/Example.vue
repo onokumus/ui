@@ -27,7 +27,7 @@ const showCode = ref(!props?.hideCode)
     class="example-wrapper"
     :class="[
       wrapperClass,
-      centered ? 'centered' : '',
+      centered ? 'example-centered' : '',
       richText ?? 'not-rich-text',
     ]"
   >
@@ -38,7 +38,12 @@ const showCode = ref(!props?.hideCode)
     <div
       v-if="$slots.example"
       class="example"
-      :class="[column && 'column', row && 'row', gapL && 'gap-l', exampleClass]"
+      :class="[
+        column && 'example-column',
+        row && 'example-row',
+        gapL && 'gap-l',
+        exampleClass,
+      ]"
     >
       <slot name="example" />
     </div>
@@ -157,7 +162,7 @@ const showCode = ref(!props?.hideCode)
     }
   }
 
-  .row {
+  .example-row {
     align-items: start;
     display: flex;
     flex-wrap: wrap;
@@ -165,7 +170,7 @@ const showCode = ref(!props?.hideCode)
     justify-content: center;
   }
 
-  .column {
+  .example-column {
     display: flex;
     flex-direction: column;
     gap: var(--size-3, 1rem);
@@ -175,8 +180,8 @@ const showCode = ref(!props?.hideCode)
     gap: var(--size-8);
   }
 
-  &.centered {
-    .column {
+  &.example-centered {
+    .example-column {
       align-items: center;
     }
   }

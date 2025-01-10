@@ -101,7 +101,7 @@
 
 <Example column gapL>
 <template #example>
-<div class="row">
+<div class="example-row">
 <label class="field">
 	<span class="label">Label</span>
   <textarea placeholder="Default" required></textarea>
@@ -113,7 +113,7 @@
 </label>
 </div>
 
-<div class="row">
+<div class="example-row">
 <label class="field error">
 	<span class="label">Label</span>
   <textarea  placeholder="Default"></textarea>

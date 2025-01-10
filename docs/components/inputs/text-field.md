@@ -97,7 +97,7 @@ const isSmall = ref(false)
 
 <Example column gapL>
 <template #example>
-<div class="row">
+<div class="example-row">
 <label class="field">
 	<span class="label">I'm required</span>
 	<input type="text" placeholder="Placeholder" required/>
@@ -109,7 +109,7 @@ const isSmall = ref(false)
 </label>
 </div>
 
-<div class="row">
+<div class="example-row">
 <label class="field error">
 	<span class="label">Label</span>
 	<input type="text" placeholder="Placeholder" value="This isn't right"/>

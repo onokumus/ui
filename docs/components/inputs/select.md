@@ -128,7 +128,7 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 
 <Example column gapL>
 <template #example>
-<div class="row">
+<div class="example-row">
 <label class="field">
 <span class="label">Label</span>
 <select required>
@@ -160,7 +160,7 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 </label>
 </div>
 
-<div class="row">
+<div class="example-row">
 <label class="field error">
 <span class="label">Label</span>
 <select>

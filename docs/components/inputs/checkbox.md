@@ -160,7 +160,7 @@ Render the label text inside an element with a `.text` class.
 
 <Example column gapL>
 <template #example>
-<div class="row gap-l">
+<div class="example-row gap-l">
   <label class="checkbox">
     <input name="checkbox" type="checkbox" required>
     <span class="label">Default</span>
@@ -171,7 +171,7 @@ Render the label text inside an element with a `.text` class.
     <span class="label">Stack</span>
   </label>
 </div>
-<div class="row gap-l">
+<div class="example-row gap-l">
   <label class="checkbox error">
     <input name="checkbox" checked type="checkbox">
     <span class="label">Default</span>
@@ -210,7 +210,7 @@ Render the label text inside an element with a `.text` class.
 
 <Example column gapL centered>
 <template #example>
-   <div class="row">
+   <div class="example-row">
    <label class="checkbox small">
       <input name="checkbox" type="checkbox" checked="checked">
       <span class="sr-only">Label</span>
@@ -225,7 +225,7 @@ Render the label text inside an element with a `.text` class.
   </label>
    </div>
 
-   <div class="row">
+   <div class="example-row">
     <label class="checkbox small">
       <input name="checkbox" type="checkbox" checked="checked">
       <span class="label">Small</span>

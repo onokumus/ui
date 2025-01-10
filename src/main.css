@@ -36,6 +36,7 @@
 @import "./actions/icon-button.css" layer(components.base);
 @import "./actions/toggle-button-group.css" layer(components.base);
 @import "./inputs/field.css" layer(components.base);
+@import "./inputs/field-group.css" layer(components.base);
 @import "./inputs/switch.css" layer(components.base);
 @import "./data-display/card.css" layer(components.base);
 

@@ -169,7 +169,7 @@ Add an element with the `.text` class. Also, don't miss the info on label [acces
 
 <Example column gapL>
 <template #example>
-<div class="row gap-l">
+<div class="example-row gap-l">
 <label class="switch">
 	<input type="checkbox" role="switch" required/>
 	<span class="label">Default</span>
@@ -180,7 +180,7 @@ Add an element with the `.text` class. Also, don't miss the info on label [acces
 </label>
 </div>
 
-<div class="row gap-l">
+<div class="example-row gap-l">
 <label class="switch error">
 	<input type="checkbox" role="switch" />
 	<span class="label">Default</span>
