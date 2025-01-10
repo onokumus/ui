@@ -51,17 +51,9 @@
         ):required
     ) {
     .label:after {
-      background-color: var(--red);
-      block-size: min(5px, 0.3em);
-      border-radius: var(--radius-round);
-      box-shadow: 0 0 var(--size-2) var(--red);
-      content: "required";
-      inline-size: min(5px, 0.3em);
-      margin: 0.5ex 0 0 0.5ex;
-      text-indent: -200vw;
-      transition:
-        block-size 0.2s var(--ease-3),
-        inline-size 0.2s var(--ease-3);
+      color: var(--red);
+      content: "*";
+      margin: -0.25em auto auto 0.25em;
     }
   }
 
@@ -188,12 +180,6 @@
       margin-block-start: -2.7rem;
       margin-inline-start: var(--_field-padding-inline);
       padding-inline: 0.125rem;
-
-      /* Required */
-      &:after {
-        block-size: min(3px, 0.25em);
-        inline-size: min(3px, 0.25em);
-      }
     }
 
     /* Neutral label color reset */
