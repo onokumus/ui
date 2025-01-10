@@ -25,7 +25,7 @@
 
   /* Ripple effect, utils > index.css */
   &:before {
-    --thumb-highlight-size: 130%;
+    --highlight-size: 130%;
   }
 
   /* Size */

@@ -164,8 +164,23 @@ Add an element with the `.text` class. Also, don't miss the info on label [acces
 
 ### Validation
 
-<Example row gapL>
+- Add `[required]` to the `<input>` element to toggle required styles
+- The `.error` class toggles the error styles. Make use of the supporting text to give extra feedback on the error.
+
+<Example column gapL>
 <template #example>
+<div class="row gap-l">
+<label class="switch">
+	<input type="checkbox" role="switch" required/>
+	<span class="label">Default</span>
+</label>
+<label class="switch stack">
+	<input type="checkbox" role="switch" required/>
+	<span class="label">Stack</span>
+</label>
+</div>
+
+<div class="row gap-l">
 <label class="switch error">
 	<input type="checkbox" role="switch" />
 	<span class="label">Default</span>
@@ -178,11 +193,17 @@ Add an element with the `.text` class. Also, don't miss the info on label [acces
   <span class="supporting-text">Supporting text</span>
 </label>
 
+</div>
 </template>
 
 <template #code>
 
-```html{1}
+```html{2,6}
+<label class="switch error">
+  <input type="checkbox" role="switch" required/>
+  <span class="label">Default</span>
+</label>
+
 <label class="switch error">
   <input type="checkbox" role="switch" />
   <span class="label">Default</span>

@@ -166,8 +166,23 @@ Render the label text inside an element with a `.text` class.
 
 ### Validation
 
-<Example row gapL>
+- Add `[required]` to the `<input>` element to toggle required styles
+- The `.error` class toggles the error styles. Make use of the supporting text to give extra feedback on the error.
+
+<Example column gapL>
 <template #example>
+<div class="row gap-l">
+  <label class="radio">
+    <input name="validation" checked type="radio" required>
+    <span class="label">Default</span>
+  </label>
+
+  <label class="radio stack">
+    <input name="validation" type="radio" required>
+    <span class="label">Stack</span>
+  </label>
+</div>
+<div class="row gap-l">
   <label class="radio error">
     <input name="validation" checked type="radio">
     <span class="label">Default</span>
@@ -179,12 +194,18 @@ Render the label text inside an element with a `.text` class.
     <span class="label">Stack</span>
     <span class="supporting-text">Before you wreck yourself</span>
   </label>
+</div>
 
 </template>
 
 <template #code>
 
-```html{1}
+```html{2,6}
+<label class="radio error">
+  <input name="checkbox" type="radio" required>
+  <span class="label">Label</span>
+</label>
+
 <label class="radio error">
   <input name="checkbox" type="radio">
   <span class="label">Label</span>

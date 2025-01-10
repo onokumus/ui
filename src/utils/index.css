@@ -35,13 +35,13 @@ When you visibly want to hide an element but make it accessible for screen reade
 
     &:before {
       --thumb-scale: 0.01;
-      --thumb-highlight-size: 150%;
+      --highlight-size: 150%;
 
       background-color: oklch(0.6 0 0 / 0.2);
-      block-size: var(--thumb-highlight-size);
+      block-size: var(--highlight-size);
       clip-path: circle(50%);
       content: "";
-      inline-size: var(--thumb-highlight-size);
+      inline-size: var(--highlight-size);
       inset-block-start: 50%;
       inset-inline-start: 50%;
       position: absolute;

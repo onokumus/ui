@@ -155,8 +155,23 @@ Render the label text inside an element with a `.text` class.
 
 ### Validation
 
-<Example row gapL>
+- Add `[required]` to the `<input>` element to toggle required styles
+- The `.error` class toggles the error styles. Make use of the supporting text to give extra feedback on the error.
+
+<Example column gapL>
 <template #example>
+<div class="row gap-l">
+  <label class="checkbox">
+    <input name="checkbox" type="checkbox" required>
+    <span class="label">Default</span>
+  </label>
+
+  <label class="checkbox stack">
+    <input name="checkbox" type="checkbox" required>
+    <span class="label">Stack</span>
+  </label>
+</div>
+<div class="row gap-l">
   <label class="checkbox error">
     <input name="checkbox" checked type="checkbox">
     <span class="label">Default</span>
@@ -168,12 +183,18 @@ Render the label text inside an element with a `.text` class.
     <span class="label">Stack</span>
     <span class="supporting-text">Before you wreck yourself</span>
   </label>
+</div>
 
 </template>
 
 <template #code>
 
-```html{1}
+```html{2,6}
+<label class="checkbox">
+  <input name="checkbox" type="checkbox" required>
+  <span class="label">Label</span>
+</label>
+
 <label class="checkbox error">
   <input name="checkbox" type="checkbox">
   <span class="label">Label</span>
@@ -185,7 +206,7 @@ Render the label text inside an element with a `.text` class.
 </template>
 </Example>
 
-## Size
+## Sizes
 
 <Example column gapL centered>
 <template #example>
@@ -222,26 +243,13 @@ Render the label text inside an element with a `.text` class.
 
 <template #code>
 
-```html{1,6,12,17}
+```html{1,5}
 <label class="checkbox small">
-  <input checked="checked" name="checkbox" type="checkbox" />
-  <span class="sr-only">Label</span>
+  <!--  -->
 </label>
 
 <label class="checkbox large">
-  <input checked="checked" name="checkbox" type="checkbox" />
-  <span class="sr-only">Label</span>
-</label>
-
-<!-- With label -->
-<label class="checkbox small">
-  <input checked="checked" name="checkbox" type="checkbox" />
-  <span class="label">Small</span>
-</label>
-
-<label class="checkbox large">
-  <input checked="checked" name="checkbox" type="checkbox" />
-  <span class="label">Large</span>
+  <!--  -->
 </label>
 ```
 
