@@ -57,7 +57,6 @@ defineProps<{
 <style scoped>
 .VPFeature {
   display: block;
-
   height: 100%;
 }
 
@@ -100,6 +99,7 @@ defineProps<{
   font-size: 14px;
   font-weight: 500;
   color: var(--text-color-2-78);
+  text-wrap: balance;
 }
 
 .link-text {
