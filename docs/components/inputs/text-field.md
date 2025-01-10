@@ -92,10 +92,24 @@ const isSmall = ref(false)
 
 ## Validation
 
-The `.error` class toggles the error styles. Make use of the supporting text to give extra feedback on the error.
+- Add `[required]` to the `<input>` element to toggle required styles
+- The `.error` class toggles the error styles. Make use of the supporting text to give extra feedback on the error.
 
-<Example row>
+<Example column exampleClass="gap-l">
 <template #example>
+<div class="row">
+<label class="field">
+	<span class="label">I'm required</span>
+	<input type="text" placeholder="Placeholder" required/>
+</label>
+
+<label class="field filled">
+	<span class="label">So am I!</span>
+	<input type="text" placeholder="Placeholder" required/>
+</label>
+</div>
+
+<div class="row">
 <label class="field error">
 	<span class="label">Label</span>
 	<input type="text" placeholder="Placeholder" value="This isn't right"/>
@@ -107,6 +121,7 @@ The `.error` class toggles the error styles. Make use of the supporting text to 
 	<input type="text" placeholder="Placeholder" value="Uh-oh"/>
 	<span class="supporting-text">Only letters from the first half of the alphabet are allowed.</span>
 </label>
+</div>
 </template>
 <template #code>
 

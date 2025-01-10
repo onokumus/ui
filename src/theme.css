@@ -88,7 +88,7 @@ html {
   --palette-hue-rotate-by: 1;
 }
 :where(.blue, .ok, abbr, dfn) {
-  --palette-hue: var(--oklch-blue, 310);
+  --palette-hue: var(--oklch-blue, 210);
   --palette-chroma: 1;
   --palette-hue-rotate-by: 1;
 }
@@ -101,6 +101,13 @@ html {
   --palette-hue: var(--oklch-orange, 75);
   --palette-chroma: 1;
   --palette-hue-rotate-by: 1;
+}
+
+:where(html) {
+  --red: oklch(from var(--color-9) l 0.2 25);
+  --blue: oklch(from var(--color-9) l 0.2 210);
+  --green: oklch(from var(--color-9) l 0.2 145);
+  --orange: oklch(from var(--color-7) l 0.2 75);
 }
 
 /* Gray palette */
