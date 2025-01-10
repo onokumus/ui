@@ -38,7 +38,7 @@ import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
 
 ## Bordered
 
-<Example column exampleClass="gap-l">
+<Example column gapL>
 <template #example>
 <ul class="definition-list">
   <li>

@@ -6,6 +6,7 @@ const props = withDefaults(
     centered?: boolean
     column?: boolean
     exampleClass?: string
+    gapL?: boolean
     hideCode?: boolean
     richText?: "rich-text" | "not-rich-text"
     row?: boolean
@@ -37,7 +38,7 @@ const showCode = ref(!props?.hideCode)
     <div
       v-if="$slots.example"
       class="example"
-      :class="[column && 'column', row && 'row', exampleClass]"
+      :class="[column && 'column', row && 'row', gapL && 'gap-l', exampleClass]"
     >
       <slot name="example" />
     </div>

@@ -41,11 +41,14 @@
     }
   }
 
-  /* Required */
+  /* Required/Invalid */
   &:has(
-      :placeholder-shown:required,
       :not(:placeholder-shown):invalid,
-      :not([placeholder]):required
+      :where(
+          :placeholder-shown,
+          option[value=""]:not(:checked),
+          option:checked:not([value=""])
+        ):required
     ) {
     .label:after {
       background-color: var(--red);

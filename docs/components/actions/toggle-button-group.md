@@ -55,7 +55,7 @@ The whole idea of Toggle button group is that it relies on state change. Therefo
 
 </div>
 
-<Example column centered exampleClass="gap-l">
+<Example column centered gapL>
 <template #example>
 
 <div role="group" class="toggle-button-group">
@@ -209,7 +209,7 @@ Don't forget to use `aria-label` on the `<button>` element whenever you don't ha
 
 Choose between three sizes: default, `.small` and `.x-small`.
 
-<Example column centered exampleClass="gap-l">
+<Example column centered gapL>
 <template #example>
 <div role="group" class="toggle-button-group">
   <button disabled>Disabled</button>
@@ -327,7 +327,7 @@ Create an [issue or a PR](https://github.com/felix-bohlin/ui) and let me know!
 2. Buttons: 2-5 `<button>` elements
 3. Button content: `.selected` checkmark, text label or icon
 
-<Example column exampleClass="gap-l" centered>
+<Example column gapL centered>
 <template #example>
 <div role="group" class="toggle-button-group anatomy">
   <button class="selected">

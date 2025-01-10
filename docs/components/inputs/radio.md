@@ -105,7 +105,7 @@ Render the label text inside an element with a `.text` class.
 
 ### Label position
 
-<Example row exampleClass="gap-l">
+<Example row gapL>
 <template #example>
   <label class="radio">
     <input name="radio-label-position" type="radio">
@@ -134,7 +134,7 @@ Render the label text inside an element with a `.text` class.
 
 ### Supporting text
 
-<Example row exampleClass="gap-l">
+<Example row gapL>
 <template #example>
   <label class="radio">
     <input name="supporting-text" type="radio">
@@ -166,7 +166,7 @@ Render the label text inside an element with a `.text` class.
 
 ### Validation
 
-<Example row exampleClass="gap-l">
+<Example row gapL>
 <template #example>
   <label class="radio error">
     <input name="validation" checked type="radio">

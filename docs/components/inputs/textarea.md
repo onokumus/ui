@@ -96,10 +96,24 @@
 
 ## Validation
 
-The `.error` class toggles the error styles. Make use of the supporting text to give extra feedback on the error.
+- Add `[required]` to the `<textarea>` element to toggle required styles
+- The `.error` class toggles the error styles. Make use of the supporting text to give extra feedback on the error.
 
-<Example row>
+<Example column gapL>
 <template #example>
+<div class="row">
+<label class="field">
+	<span class="label">Label</span>
+  <textarea placeholder="Default" required></textarea>
+</label>
+
+<label class="field filled">
+	<span class="label">Label</span>
+  <textarea placeholder="Filled" required></textarea>
+</label>
+</div>
+
+<div class="row">
 <label class="field error">
 	<span class="label">Label</span>
   <textarea  placeholder="Default"></textarea>
@@ -111,10 +125,16 @@ The `.error` class toggles the error styles. Make use of the supporting text to 
   <textarea  placeholder="Filled"></textarea>
 	<span class="supporting-text">Only letters from the first half of the alphabet are allowed.</span>
 </label>
+</div>
 </template>
 <template #code>
 
-```html{1}
+```html{3,6}
+<label class="field">
+  <span class="label">Label</span>
+  <textarea  placeholder="Placeholder" required></textarea>
+</label>
+
 <label class="field error">
   <span class="label">Label</span>
   <textarea  placeholder="Placeholder"></textarea>

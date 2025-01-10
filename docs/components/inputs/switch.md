@@ -104,7 +104,7 @@ Add an element with the `.text` class. Also, don't miss the info on label [acces
 
 ### Label position
 
-<Example row exampleClass="gap-l">
+<Example row gapL>
 <template #example>
 <label class="switch">
 	<input type="checkbox" role="switch" />
@@ -132,7 +132,7 @@ Add an element with the `.text` class. Also, don't miss the info on label [acces
 
 ### Supporting text
 
-<Example row exampleClass="gap-l">
+<Example row gapL>
 <template #example>
 <label class="switch">
 	<input type="checkbox" role="switch" />
@@ -164,7 +164,7 @@ Add an element with the `.text` class. Also, don't miss the info on label [acces
 
 ### Validation
 
-<Example row exampleClass="gap-l">
+<Example row gapL>
 <template #example>
 <label class="switch error">
 	<input type="checkbox" role="switch" />

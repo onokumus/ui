@@ -123,10 +123,44 @@ Leverages the [List component](/components/data-display/list) to provide markup 
 
 ## Validation
 
-The `.error` class toggles the error styles. Make use of the supporting text to give extra feedback on the error.
+- Add `[required]` to the `<select>` element to toggle required styles
+- The `.error` class toggles the error styles. Make use of the supporting text to give extra feedback on the error.
 
-<Example row>
+<Example column gapL>
 <template #example>
+<div class="row">
+<label class="field">
+<span class="label">Label</span>
+<select required>
+  <button>
+    <selectedoption></selectedoption>
+  </button>
+  <div class="list">
+  <option value="">-</option>
+   <option>Pick me!</option>
+    <option>No me!!</option>
+    <option>Come on!</option>
+  </div>
+</select>
+</label>
+
+<label class="field filled">
+<span class="label">Label</span>
+<select required>
+  <button>
+    <selectedoption></selectedoption>
+  </button>
+  <div class="list">
+    <option value="">-</option>
+    <option>Pick me!</option>
+    <option>No me!!</option>
+    <option>Come on!</option>
+  </div>
+</select>
+</label>
+</div>
+
+<div class="row">
 <label class="field error">
 <span class="label">Label</span>
 <select>
@@ -158,10 +192,16 @@ The `.error` class toggles the error styles. Make use of the supporting text to 
 </select>
 <span class="supporting-text">Supporting text</span>
 </label>
+</div>
 </template>
 <template #code>
 
-```html{1}
+```html{3,6}
+<label class="field">
+  <span class="label">Label</span>
+  <select required> <!----> </select>
+</label>
+
 <label class="field error">
   <span class="label">Label</span>
   <select> <!----> </select>

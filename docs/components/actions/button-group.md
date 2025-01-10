@@ -193,7 +193,7 @@ Create an [issue or a PR](https://github.com/felix-bohlin/ui) and let me know!
 
 ## Disabled
 
-<Example column centered exampleClass="gap-l">
+<Example column centered gapL>
 <template #example>
 
 <div role="group" class="button-group">

@@ -94,7 +94,7 @@ Render the label text inside an element with a `.text` class.
 
 ### Label position
 
-<Example row exampleClass="gap-l">
+<Example row gapL>
 <template #example>
   <label class="checkbox">
     <input name="checkbox" type="checkbox">
@@ -123,7 +123,7 @@ Render the label text inside an element with a `.text` class.
 
 ### Supporting text
 
-<Example row exampleClass="gap-l">
+<Example row gapL>
 <template #example>
   <label class="checkbox">
     <input name="checkbox" type="checkbox">
@@ -155,7 +155,7 @@ Render the label text inside an element with a `.text` class.
 
 ### Validation
 
-<Example row exampleClass="gap-l">
+<Example row gapL>
 <template #example>
   <label class="checkbox error">
     <input name="checkbox" checked type="checkbox">
@@ -187,7 +187,7 @@ Render the label text inside an element with a `.text` class.
 
 ## Size
 
-<Example column exampleClass="gap-l" centered>
+<Example column gapL centered>
 <template #example>
    <div class="row">
    <label class="checkbox small">
