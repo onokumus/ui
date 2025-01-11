@@ -256,6 +256,277 @@ Render the label text inside an element with a `.text` class.
 </template>
 </Example>
 
+## Checkbox group
+
+<Example centered column>
+<template #example>
+<fieldset class="field-group">
+<legend>Legend</legend>
+<div class="fields">
+<label class="checkbox">
+  <input type="checkbox" checked />
+  <span class="label">Checkbox 1</span>
+</label>
+
+<label class="checkbox">
+  <input type="checkbox" />
+  <span class="label">Checkbox 2</span>
+</label>
+
+<label class="checkbox">
+  <input type="checkbox" />
+  <span class="label">Checkbox 3</span>
+</label>
+</div>
+</fieldset>
+</template>
+
+<template #code>
+
+```html
+<fieldset class="field-group">
+  <legend>Legend</legend>
+  <div class="fields">
+    <!--  -->
+  </div>
+</fieldset>
+```
+
+</template>
+</Example>
+
+### Direction
+
+<Example row>
+<template #example>
+<fieldset class="field-group row">
+<legend>Legend</legend>
+<div class="fields">
+<label class="checkbox">
+  <input type="checkbox" checked />
+  <span class="label">Checkbox 1</span>
+</label>
+
+<label class="checkbox">
+  <input type="checkbox" />
+  <span class="label">Checkbox 2</span>
+</label>
+
+<label class="checkbox">
+  <input type="checkbox" />
+  <span class="label">Checkbox 3</span>
+</label>
+</div>
+</fieldset>
+</template>
+
+<template #code>
+
+```html{1}
+<fieldset class="field-group row">
+  <!--  -->
+</fieldset>
+```
+
+</template>
+</Example>
+
+### Supporting text
+
+Can be placed above and below the fields.
+
+<Example column centered gapL>
+<template #example>
+<fieldset class="field-group row">
+<legend>Legend</legend>
+<span class="supporting-text">Supporting text above fields</span>
+<div class="fields">
+<label class="checkbox">
+  <input type="checkbox" checked />
+  <span class="label">Checkbox 1</span>
+</label>
+
+<label class="checkbox">
+  <input type="checkbox" />
+  <span class="label">Checkbox 2</span>
+</label>
+
+<label class="checkbox">
+  <input type="checkbox" />
+  <span class="label">Checkbox 3</span>
+</label>
+</div>
+</fieldset>
+
+<fieldset class="field-group row">
+<legend>Legend</legend>
+<div class="fields">
+<label class="checkbox">
+  <input type="checkbox" checked />
+  <span class="label">Checkbox 1</span>
+</label>
+
+<label class="checkbox">
+  <input type="checkbox" />
+  <span class="label">Checkbox 2</span>
+</label>
+
+<label class="checkbox">
+  <input type="checkbox" />
+  <span class="label">Checkbox 3</span>
+</label>
+</div>
+<span class="supporting-text">Supporting text below fields</span>
+</fieldset>
+</template>
+
+<template #code>
+
+```html{3,14}
+<fieldset class="field-group row">
+  <legend>Legend</legend>
+  <span class="supporting-text">Supporting text</span>
+  <div class="fields">
+    <!--  -->
+  </div>
+</fieldset>
+
+<fieldset class="field-group row">
+  <legend>Legend</legend>
+  <div class="fields">
+    <!--  -->
+  </div>
+  <span class="supporting-text">Supporting text</span>
+</fieldset>
+```
+
+</template>
+</Example>
+
+### Disabled
+
+Attach the `disabled` attribute to the `<fieldset>` element.
+
+<Example row>
+<template #example>
+<fieldset class="field-group row" disabled>
+<legend>Legend</legend>
+<div class="fields">
+<label class="checkbox">
+  <input type="checkbox" checked />
+  <span class="label">Checkbox 1</span>
+</label>
+
+<label class="checkbox">
+  <input type="checkbox" />
+  <span class="label">Checkbox 2</span>
+</label>
+
+<label class="checkbox">
+  <input type="checkbox" />
+  <span class="label">Checkbox 3</span>
+</label>
+
+</div>
+</fieldset>
+</template>
+
+<template #code>
+
+```html{1}
+<fieldset class="field-group row" disabled>
+  <!--  -->
+</fieldset>
+```
+
+</template>
+</Example>
+
+### Required
+
+Attach the `required` attribute to at least one of your `<input>` elements.
+
+<Example row>
+<template #example>
+<fieldset class="field-group row">
+<legend>These are required!</legend>
+<div class="fields">
+<label class="checkbox">
+  <input type="checkbox" required />
+  <span class="label">Checkbox 1</span>
+</label>
+
+<label class="checkbox">
+  <input type="checkbox" required />
+  <span class="label">Checkbox 2</span>
+</label>
+
+<label class="checkbox">
+  <input type="checkbox" required />
+  <span class="label">Checkbox 3</span>
+</label>
+</div>
+</fieldset>
+</template>
+
+<template #code>
+
+```html{5}
+<fieldset class="field-group row">
+  <legend>Legend</legend>
+  <div class="fields">
+    <label class="checkbox">
+      <input type="checkbox" required />
+      <span class="label">Checkbox 1</span>
+    </label>
+    <!--  -->
+  </div>
+</fieldset>
+```
+
+</template>
+</Example>
+
+### Validation
+
+Attach the `.error` class to your `fieldset.field-group` element
+
+<Example row>
+<template #example>
+<fieldset class="field-group row error">
+<legend>Legend</legend>
+<span class="supporting-text">Something went wrong!</span>
+<div class="fields">
+<label class="checkbox">
+  <input type="checkbox" checked />
+  <span class="label">Checkbox 1</span>
+</label>
+
+<label class="checkbox">
+  <input type="checkbox" />
+  <span class="label">Checkbox 2</span>
+</label>
+
+<label class="checkbox">
+  <input type="checkbox" />
+  <span class="label">Checkbox 3</span>
+</label>
+
+</div>
+</fieldset>
+</template>
+
+<template #code>
+
+```html{1}
+<fieldset class="field-group row error">
+  <!--  -->
+</fieldset>
+```
+
+</template>
+</Example>
+
 ## Accessibility
 
 ### Labels

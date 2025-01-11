@@ -164,60 +164,7 @@ Render the label text inside an element with a `.text` class.
 </template>
 </Example>
 
-### Validation
-
-- Add `[required]` to the `<input>` element to toggle required styles
-- The `.error` class toggles the error styles. Make use of the supporting text to give extra feedback on the error.
-
-<Example column centered gapL>
-<template #example>
-<div class="example-row gap-l">
-  <label class="radio">
-    <input name="validation" checked type="radio" required>
-    <span class="label">Default</span>
-  </label>
-
-  <label class="radio stack">
-    <input name="validation" type="radio" required>
-    <span class="label">Stack</span>
-  </label>
-</div>
-<div class="example-row gap-l">
-  <label class="radio error">
-    <input name="validation" checked type="radio">
-    <span class="label">Default</span>
-    <span class="supporting-text">Check yourself</span>
-  </label>
-
-  <label class="radio stack error">
-    <input name="validation" type="radio">
-    <span class="label">Stack</span>
-    <span class="supporting-text">Before you wreck yourself</span>
-  </label>
-</div>
-
-</template>
-
-<template #code>
-
-```html{2,6}
-<label class="radio error">
-  <input name="checkbox" type="radio" required>
-  <span class="label">Label</span>
-</label>
-
-<label class="radio error">
-  <input name="checkbox" type="radio">
-  <span class="label">Label</span>
-  <span class="supporting-text">Supporting text</span>
-</label>
-
-```
-
-</template>
-</Example>
-
-## Size
+## Sizes
 
 <Example column centered>
 <template #example>
@@ -437,7 +384,7 @@ Attach the `disabled` attribute to the `<fieldset>` element.
 
 ### Required
 
-Attach the `required` attribute to your `<input>` elements.
+Attach the `required` attribute to at least one of your `<input>` elements.
 
 <Example row>
 <template #example>
@@ -455,7 +402,7 @@ Attach the `required` attribute to your `<input>` elements.
 </label>
 
 <label class="radio">
-  <input name="field-group-required-1" type="radio" required/>
+  <input name="field-group-required-1" type="radio" required />
   <span class="label">Radio 3</span>
 </label>
 </div>
@@ -482,7 +429,7 @@ Attach the `required` attribute to your `<input>` elements.
 
 ### Validation
 
-Attach the `.error` class to your `fieldset.field-group` element.
+Attach the `.error` class to your `fieldset.field-group` element
 
 <Example row>
 <template #example>

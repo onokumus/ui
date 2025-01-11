@@ -31,7 +31,7 @@
 
   /* Required */
   &:has([required]) {
-    &:not(:has(input[type="radio"]:checked)) {
+    &:not(:has(input:where([type="radio"], [type="checkbox"]):checked)) {
       legend {
         position: relative;
 
