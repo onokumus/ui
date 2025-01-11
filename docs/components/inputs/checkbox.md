@@ -554,8 +554,13 @@ Accessible checkboxes must have a label. You can choose between three approaches
 
 <!--@include: ./checkbox-radio-api.md -->
 
+### Field group API
+
+<!--@include: ./field-group-api.md -->
+
 ## Installation
 
 ::: code-group
 <<< @/../src/inputs/checkbox-radio.css [checkbox-radio.css]
+<<< @/../src/inputs/field-group.css [field-group.css]
 :::

@@ -33,9 +33,17 @@
 
 <!--@include: ./components/inputs/checkbox-radio-api.md -->
 
+#### Field group API
+
+<!--@include: ./components/inputs/field-group-api.md -->
+
 ### [Radio](/components/inputs/radio)
 
 <!--@include: ./components/inputs/checkbox-radio-api.md -->
+
+#### Field group API
+
+<!--@include: ./components/inputs/field-group-api.md -->
 
 ### [Select](/components/inputs/select)
 
