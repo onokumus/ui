@@ -184,7 +184,7 @@ When enabled the Field changes size depending on its content.
 </template>
 <template #example>
 
-  <div class="column">
+  <div class="example-column">
     <label class="field" :class="{ filled: isFilled, small: isSmall }">
       <span class="label">Color</span>
       <input type="color" placeholder="Color" />
@@ -215,7 +215,7 @@ When enabled the Field changes size depending on its content.
     </label>
   </div>
 
-  <div class="column">
+  <div class="example-column">
     <label class="field" :class="{ filled: isFilled, small: isSmall }">
       <span class="label">Date</span>
 			<input type="date" placeholder="Date" />
