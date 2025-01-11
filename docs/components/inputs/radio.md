@@ -196,7 +196,7 @@ Render the label text inside an element with a `.text` class.
 </template>
 </Example>
 
-## Radio group
+## Field group
 
 <Example centered column>
 <template #example>
