@@ -53,9 +53,22 @@ const pageName = computed(() =>
         <div class="content">
           <div class="content-container">
             <slot name="doc-before" />
-            <main class="main">
+            <main class="main rich-text">
+              <hgroup
+                v-if="
+                  $frontmatter.overline ||
+                  $frontmatter.title ||
+                  $frontmatter.description
+                "
+              >
+                <p v-if="$frontmatter.overline">{{ $frontmatter.overline }}</p>
+                <h1 v-if="$frontmatter.title">{{ $frontmatter.title }}</h1>
+                <p v-if="$frontmatter.description">
+                  {{ $frontmatter.description }}
+                </p>
+              </hgroup>
               <Content
-                class="rich-text vp-doc"
+                class="vp-doc"
                 :class="[
                   pageName,
                   theme.externalLinkIcon && 'external-link-icon-enabled',

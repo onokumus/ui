@@ -4,9 +4,13 @@
   import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 </script>
 
-# Select
+<hgroup>
+<p>Components</p>
+<h1>Select</h1>
+<p>Leverages the <a href="/components/data-display/list" class="link">List component</a> to provide markup for the Select popover.</p>
+</hgroup>
 
-Leverages the [List component](/components/data-display/list) to provide markup for the Select popover.
+[Non-experimental Select](#non-experimental-select): Uses less modern features and the native option list.
 
 ## Variants
 

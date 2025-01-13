@@ -61,6 +61,20 @@ export default defineConfig({
             {
               text: "Getting started",
               link: "/guide/getting-started",
+              items: [
+                {
+                  text: "Normalize",
+                  link: "/guide/getting-started/normalize",
+                },
+                {
+                  text: "Utils",
+                  link: "/guide/getting-started/utils",
+                },
+                {
+                  text: "Theme",
+                  link: "/guide/getting-started/theme",
+                },
+              ],
             },
             {
               text: "Browser compatibility",

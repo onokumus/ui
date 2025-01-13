@@ -309,11 +309,11 @@ Either disable it by setting the ripple size to 0 in your theme config:
 
 :::
 
-... or to your `button-variants.css` file and remove all the ripple related styles:
+... or to your `button.css` file and remove all the ripple related styles:
 
 ::: code-group
 
-```css [button-variants.css]
+```css [button.css]
 :where(button, .button) {
   /* ... */
 
@@ -328,7 +328,7 @@ Either disable it by setting the ripple size to 0 in your theme config:
     }
 
     &:where(:hover:active) {
-      background-size: 100%; // [!code --]
+      background-size: var(--button-ripple-size); // [!code --]
       transition: background 0s; // [!code --]
     }
   }
@@ -374,6 +374,5 @@ These are the classes and attributes a button can be styled with. As usual, feel
 ## Installation
 
 ::: code-group
-<<< @/../src/actions/button-base.css [button-base.css]
-<<< @/../src/actions/button-variants.css [button-variants.css]
+<<< @/../src/actions/button.css [button.css]
 :::
