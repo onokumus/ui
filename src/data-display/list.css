@@ -1,4 +1,4 @@
-@layer components.base {
+@layer components.has-deps {
   /*
 Lists meant to be used stand-alone or as part of Select elements
 
@@ -200,6 +200,10 @@ Lists meant to be used stand-alone or as part of Select elements
       & > label {
         .end {
           padding-inline-end: var(--size-1);
+        }
+
+        &:where(.checkbox, .radio) {
+          inline-size: 100%;
         }
 
         &.switch {

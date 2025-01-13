@@ -1,4 +1,4 @@
-@layer components.has-deps {
+@layer components.base {
   label:where(.checkbox, .radio) {
     align-items: center;
     color: var(--text-color-1);
