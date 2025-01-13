@@ -13,7 +13,6 @@ import CyclingIcon from "../../.vitepress/theme/app/components/CyclingIcon.vue";
 import CommutingIcon from "../../.vitepress/theme/app/components/CommutingIcon.vue";
 
 
-import {defineModel} from "vue"
 	const activeToggle = defineModel({default: "walking"})
 
 	const buttons = [
