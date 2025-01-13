@@ -8,4 +8,4 @@
 | Type                 | Modifiers                                 | Default | Description      |
 | -------------------- | ----------------------------------------- | ------- | ---------------- |
 | [Children](#grouped) | [Avatar](/components/data-display/avatar) | Avatar  | Children         |
-| [Spacing](#spacing)  | default, `.small`, `.x-small`             | default | The size to use. |
+| [Spacing](#spacing)  | default, `.gap-small`, `.gap-x-small`     | default | The size to use. |

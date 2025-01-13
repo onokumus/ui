@@ -52,11 +52,11 @@
     display: flex;
     flex-direction: row-reverse;
 
-    &.small {
+    &.gap-small {
       --_margin: var(--size-2);
     }
 
-    &.x-small {
+    &.gap-x-small {
       --_margin: var(--size-3);
     }
 

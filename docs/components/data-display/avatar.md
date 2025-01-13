@@ -145,7 +145,7 @@ To get the Avatars to stack like they do below (previous item on top of the next
 	<div class="avatar">CD</div>
 	<div class="avatar">AB</div>
 </div>
-<div class="avatar-group small">
+<div class="avatar-group gap-small">
 	<a href="#" class="avatar">KL</a>
 	<a href="#" class="avatar">IJ</a>
 	<button class="avatar">GH</button>
@@ -153,7 +153,7 @@ To get the Avatars to stack like they do below (previous item on top of the next
 	<div class="avatar">CD</div>
 	<div class="avatar">AB</div>
 </div>
-<div class="avatar-group x-small">
+<div class="avatar-group gap-x-small">
 	<a href="#" class="avatar">NO</a>
 	<a href="#" class="avatar">IJ</a>
 	<button class="avatar">GH</button>
@@ -170,11 +170,11 @@ To get the Avatars to stack like they do below (previous item on top of the next
   <!--  -->
 </div>
 
-<div class="avatar-group small">
+<div class="avatar-group gap-small">
   <!--  -->
 </div>
 
-<div class="avatar-group x-small">
+<div class="avatar-group gap-x-small">
   <!--  -->
 </div>
 ```
