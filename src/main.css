@@ -15,7 +15,7 @@
 @import "./normalize.css" layer(normalize);
 
 /* Utils */
-@import "./utils/index.css" layer(utils);
+@import "./utils.css" layer(utils);
 
 /* Theme */
 @import "./theme.css" layer(theme);
@@ -25,26 +25,25 @@
 * Components are divided into two categories - if they are stand-alone (base) or if they have dependencies (has-deps).
 */
 /*** Base components (no dependencies)  */
+@import "./actions/button.css" layer(components.base);
+@import "./actions/icon-button.css" layer(components.base);
+@import "./actions/toggle-button-group.css" layer(components.base);
 @import "./data-display/avatar.css" layer(components.base);
 @import "./data-display/badge.css" layer(components.base);
+@import "./data-display/card.css" layer(components.base);
 @import "./data-display/chip.css" layer(components.base);
-@import "./data-display/divider.css" layer(components.base);
 @import "./data-display/definition-list.css" layer(components.base);
+@import "./data-display/divider.css" layer(components.base);
 @import "./data-display/link.css" layer(components.base);
 @import "./data-display/list.css" layer(components.base);
 @import "./data-display/table.css" layer(components.base);
 @import "./data-display/tooltip.css" layer(components.base);
-@import "./text/typography.css" layer(components.base);
 @import "./feedback/progress.css" layer(components.base);
 @import "./feedback/spinner.css" layer(components.base);
-@import "./actions/button-base.css" layer(components.base);
-@import "./actions/button-variants.css" layer(components.base);
-@import "./actions/icon-button.css" layer(components.base);
-@import "./actions/toggle-button-group.css" layer(components.base);
-@import "./inputs/switch.css" layer(components.base);
-@import "./inputs/field.css" layer(components.base);
 @import "./inputs/field-group.css" layer(components.base);
-@import "./data-display/card.css" layer(components.base);
+@import "./inputs/field.css" layer(components.base);
+@import "./inputs/switch.css" layer(components.base);
+@import "./text/typography.css" layer(components.base);
 
 /*** Has dependencies */
 @import "./actions/button-group.css" layer(components.has-deps);

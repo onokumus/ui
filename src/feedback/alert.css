@@ -62,4 +62,13 @@
       stroke: var(--color-9);
     }
   }
+
+  /* Links */
+  a[href] {
+    color: inherit;
+
+    &:hover {
+      color: var(--primary);
+    }
+  }
 }
