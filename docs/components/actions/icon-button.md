@@ -109,11 +109,11 @@ Make the button smaller with the `.small` modifier.
 
 To have an accessible label you can choose between three approaches.
 
-| Variant                                                        | Usage in Icon Button component                                         |
-| -------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| Add a `aria-label` on the `button` element                     | Default behavior.                                                      |
-| Provide a label inside the `button` element                    | Not used (but possible with the `.sr-only` [util](/components/utils)). |
-| Have a visible label that you reference with `aria-labelledby` | Not used.                                                              |
+| Variant                                                        | Usage in Icon Button component                                                    |
+| -------------------------------------------------------------- | --------------------------------------------------------------------------------- |
+| Add a `aria-label` on the `button` element                     | Default behavior.                                                                 |
+| Provide a label inside the `button` element                    | Not used (but possible with the `.sr-only` [util](/guide/getting-started/utils)). |
+| Have a visible label that you reference with `aria-labelledby` | Not used.                                                                         |
 
 ## API
 
