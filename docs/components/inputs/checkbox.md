@@ -6,6 +6,8 @@ import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 
 # Checkbox
 
+See also: [Checkbox group](#field-group)?
+
 <Example row>
 <template #example>
   <label class="checkbox">
@@ -33,16 +35,18 @@ import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 
 <!-- prettier-ignore -->
 ```html
-<label class="checkbox">
-  <input name="checkbox" type="checkbox" checked="checked" />
-  <span class="sr-only">Label</span>
-</label>
-
 <!-- Checked -->
 <label class="checkbox">
   <input name="checkbox" type="checkbox" />
   <span class="sr-only">Label</span>
 </label>
+
+<!-- Unchecked -->
+<label class="checkbox">
+  <input name="checkbox" type="checkbox" checked="checked" />
+  <span class="sr-only">Label</span>
+</label>
+
 
 <!-- Unchecked & disabled -->
 <label class="checkbox">

@@ -1,6 +1,7 @@
 <script setup>
 import Example from "../../.vitepress/theme/app/components/Example.vue";
 import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
+import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 
 </script>
 
@@ -13,10 +14,9 @@ https://webkit.org/blog/15054/an-html-switch-control/
 
 # Switch
 
-All switches should have labels. Notice the use of `aria-label` on the `label` element. Also check out:
+See also: [Switch group](#field-group)
 
-- [Visible labels](#visible-labels)
-- [Accessibility](#accessibility)
+All switches should have labels. Notice the use of `aria-label` on the `label` element.
 
 <Example row>
 <template #example>
@@ -25,7 +25,7 @@ All switches should have labels. Notice the use of `aria-label` on the `label` e
 </label>
 
 <div class="switch">
-  <label for="switch-unchecked" aria-label="Label"></label>
+  <label for="switch-unchecked" class="sr-only">Label</label>
   <input id="switch-unchecked" type="checkbox" role="switch" />
 </div>
 
@@ -47,9 +47,9 @@ All switches should have labels. Notice the use of `aria-label` on the `label` e
   <input type="checkbox" role="switch" />
 </label>
 
-<!-- Unchecked. Demos another common pattern where input is outside label -->
+<!-- Unchecked. Demos another common pattern where the input is next to the label with the use of the .sr-only class -->
 <div class="switch">
-  <label for="switch-unchecked" aria-label="Label"></label>
+  <label for="switch-unchecked" class="sr-only">Label</label>
   <input id="switch-unchecked" type="checkbox" role="switch" />
 </div>
 
@@ -66,6 +66,8 @@ All switches should have labels. Notice the use of `aria-label` on the `label` e
 
 </template>
 </Example>
+
+<!--@include: ../../sr-only.md -->
 
 ## Visible labels
 

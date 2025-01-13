@@ -4,10 +4,10 @@
 <h3>What's <code>.sr-only</code>?</h3>
 </template>
 
-The `.sr-only` (screen reader only) class removes the visible text but still allows screen readers to
-access it.
+<p>The `.sr-only` (screen reader only) class removes the visible text but still allows screen readers to
+access it.</p>
 
-Check out more [utils](/components/utils).
+<p>Check out more <a class="link" href="/components/utils">utils</a>.</p>
 </Alert>
 
 </div>

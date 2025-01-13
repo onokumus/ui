@@ -6,7 +6,7 @@ import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 
 # Radio
 
-## Basic radio buttons
+See also: [Radio group](#field-group)?
 
 <Example row>
 <template #example>
@@ -35,16 +35,16 @@ import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 <template #code>
 
 ```html
-<!-- Unchecked -->
-<label class="radio">
-  <input id="radioa1" name="basic-enabled" type="radio" />
-  <span class="sr-only">Unchecked</span>
-</label>
-
 <!-- Checked -->
 <label class="radio">
   <input id="radioa2" name="basic-enabled" type="radio" checked />
   <span class="sr-only">Checked</span>
+</label>
+
+<!-- Unchecked -->
+<label class="radio">
+  <input id="radioa1" name="basic-enabled" type="radio" />
+  <span class="sr-only">Unchecked</span>
 </label>
 
 <!-- Unchecked & disabled -->
