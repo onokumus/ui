@@ -10,8 +10,10 @@
   }
 
   :where(html) {
+    --_page-bg-color: var(--surface-default);
+
     accent-color: var(--primary);
-    background-color: var(--surface-default);
+    background-color: var(--_page-bg-color);
     block-size: 100%;
     caret-color: var(--primary);
     color: var(--text-color-2);
@@ -104,8 +106,13 @@
   }
 
   :focus-visible {
+    /* Inverts the --_page-bg-color */
+    --_focus-visible-color: rgb(
+      from var(--_page-bg-color) calc(255 - r) calc(255 - g) calc(255 - b)
+    );
+
     border-radius: var(--border-radius, 0px);
-    outline: 2px solid currentColor;
+    outline: 2px solid var(--_focus-visible-color);
     outline-offset: 2px;
   }
 
