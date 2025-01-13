@@ -1,4 +1,4 @@
-@layer components.base {
+@layer components.has-deps {
   /*
 - Common styling for input, textarea and select
 - Form related styles such as: label, supporting text, error handling
@@ -55,6 +55,25 @@
         color: var(--red);
         content: "*";
         margin: -0.25em auto auto 0.25em;
+      }
+    }
+
+    /* Color */
+    &:has(input[type="color"]) {
+      input {
+        appearance: none;
+        background: none;
+        block-size: var(--_height);
+        overflow: hidden;
+        padding: 0;
+
+        &::-webkit-color-swatch {
+          border: none;
+        }
+
+        &::-webkit-color-swatch-wrapper {
+          padding: 0;
+        }
       }
     }
 

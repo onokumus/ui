@@ -1,4 +1,4 @@
-@layer components.base {
+@layer components.has-deps {
   /* Common styling for checkbox, radio and switch groups */
   :where(fieldset.field-group) {
     border: 0;
