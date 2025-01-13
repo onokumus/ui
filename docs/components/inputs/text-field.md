@@ -520,5 +520,4 @@ No. But you get some accessibility wins for free with `<label>`. It's recommende
 ::: code-group
 <<< @/../src/inputs/field.css [field.css]
 <<< @/../src/inputs/text-field.css [text-field.css]
-<<< @/../src/inputs/file.css [file.css]
 :::
