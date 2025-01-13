@@ -49,6 +49,17 @@
       --_border-color: var(--color-9);
       --_color: light-dark(var(--color-15), var(--color-1));
     }
+
+    /* Links
+    * Can't make sure contrast will be acceptable (yet) so we use the current text color instead.
+    */
+    a[href] {
+      color: inherit;
+
+      &:hover {
+        color: var(--primary);
+      }
+    }
   }
 
   /* Icon */
@@ -60,15 +71,6 @@
     svg {
       margin-block-start: 0.15rem;
       stroke: var(--color-9);
-    }
-  }
-
-  /* Links */
-  a[href] {
-    color: inherit;
-
-    &:hover {
-      color: var(--primary);
     }
   }
 }

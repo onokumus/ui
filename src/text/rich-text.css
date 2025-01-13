@@ -1,5 +1,4 @@
 @scope (.rich-text) to (.not-rich-text) {
-  /* link.css */
   a {
     color: var(--primary);
     cursor: pointer;
@@ -8,7 +7,7 @@
     line-height: inherit;
     text-decoration: underline;
     text-decoration-color: var(--primary);
-    text-underline-offset: 1px;
+    text-underline-offset: 2px;
 
     &[href] {
       &:hover {

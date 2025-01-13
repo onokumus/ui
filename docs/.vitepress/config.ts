@@ -42,7 +42,7 @@ export default defineConfig({
       },
     },
     nav: [
-      { text: "Guide", link: "/guide/what-is-open-props-ui" },
+      { text: "Guide", link: "/guide/getting-started" },
       { text: "Components", link: "/components/actions/button" },
       { text: "API", link: "/api" },
       { text: "Blog", link: "/blog" },
@@ -168,10 +168,6 @@ export default defineConfig({
                   link: "/components/text/typography",
                 },
               ],
-            },
-            {
-              text: "Utils",
-              link: "/components/utils",
             },
           ],
         },

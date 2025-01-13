@@ -4,8 +4,16 @@ title: Getting started
 ---
 
 <script setup>
+import Accordion from "../.vitepress/theme/app/components/Accordion.vue";
 import Alert from "../.vitepress/theme/app/components/Alert.vue";
 </script>
+
+<style scoped>
+   .overflow .blocks {
+      overflow-y: auto;
+      max-block-size: 15lh;
+   }
+</style>
 
 This guide will set you up with:
 
@@ -14,10 +22,12 @@ This guide will set you up with:
 - some util classes
 - base theme setup
 
-::: info
+<div class="not-rich-text">
 
-Open Props UI is just CSS. Therefore you're able to go and **copy and paste** any [component](/components/actions/button) right now without any installs. You don't even need Open Props! It won't necessarily look and feel as intended, but if that suits your project then skip this page.
-:::
+<Alert>
+<p>Open Props UI is <strong>just CSS</strong>. Therefore you're able to go and <strong>copy and paste</strong> any <a class="link" href="/components/actions/button">component</a> right now without any installs. You don't even need Open Props! It won't necessarily look and feel as intended, but if that suits your project then skip this page.</p>
+</Alert>
+</div>
 
 ## 1. Install Open Props
 
@@ -35,6 +45,23 @@ yarn add open-props@2.0.0-beta.5 --alias opbeta
 ```
 
 ## 2. Base setup
+
+If you're using some kind of app framework, this setup process will be similar but different. You should have no problems getting it to work though :+1: Otherwise, [let me know](https://github.com/felix-bohlin/ui).
+
+<div class="not-rich-text">
+
+<Accordion variant="tonal" style="margin-block-start: var(--size-3)">
+<template #summary>Setup files</template>
+
+::: code-group
+<<< @/../src/main.css [main.css]
+<<< @/../src/normalize.css [normalize.css]
+<<< @/../src/utils.css [utils.css]
+<<< @/../src/theme.css [theme.css]
+:::
+
+</Accordion>
+</div>
 
 ### Folder structure
 
@@ -57,8 +84,6 @@ This is folder structure that comes out of the box. Feel free to change it to yo
    └─ ...
 ```
 
-### Copy & paste
-
 <div class="not-rich-text">
 <Alert severity="warning">
 <p>While many components will work as intended in modern browsers - some are using features that haven't landed outside Chromium with <strong>experimental feature flags</strong> enabled.</p>
@@ -68,9 +93,8 @@ This is folder structure that comes out of the box. Feel free to change it to yo
 
 </div>
 
-::: code-group
-<<< @/../src/main.css [main.css]
-<<< @/../src/normalize.css [normalize.css]
-<<< @/../src/utils.css [utils.css]
-<<< @/../src/theme.css [theme.css]
-:::
+## 3. Copy & paste
+
+Browse [all the components](/components/actions/button).
+
+**Copy and paste** the HTML and CSS (see the "Installation" section on each component page) and you're good to go!
