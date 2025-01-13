@@ -46,7 +46,7 @@
       --_border-width: 1px;
     }
 
-    :where(& > hgroup, & > .content) {
+    & > :where(hgroup, .content) {
       padding-inline: var(--size-3);
     }
 
