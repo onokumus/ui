@@ -66,12 +66,11 @@
     --field-border-color: var(--border-color);
     --field-border-radius: var(--size-1);
     --field-border-width: 1px;
-    --field-size: 2.875em;
-    --field-size-small: 2.375em;
+    --field-size: 2.3lh;
+    --field-size-small: 1.9lh;
 
-    /* Buttons */
-    --button-border-radius: 100vmax;
-
+    /* Button */
+    --button-border-radius: var(--radius-round);
     /* Ripple effect */
     @media (prefers-reduced-motion: no-preference) {
       --button-ripple-size: 100%;

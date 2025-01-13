@@ -2,8 +2,9 @@
   :where(.button) {
     --_bg-color: transparent;
     --_border-color: transparent;
-    --_border-radius: var(--button-border-radius, initial);
+    --_border-radius: var(--button-border-radius);
     --_font-size: initial;
+    --_min-height: 2.375rem;
     --_text-color: var(--primary);
 
     -webkit-tap-highlight-color: transparent;
@@ -18,7 +19,7 @@
     font-weight: 700;
     gap: var(--size-2);
     justify-content: center;
-    min-block-size: 2.375rem;
+    min-block-size: var(--_min-height);
     padding-block: 0.5ex;
     padding-inline: 1.5ex;
     text-align: center;
@@ -94,12 +95,13 @@
 
     /* Sizes */
     &.small {
-      min-block-size: 1.875rem;
+      --_min-height: 1.875rem;
+      padding-block: 0;
       padding-inline: 1ex;
     }
 
     &.large {
-      min-block-size: 2.875rem;
+      --_min-height: 2.875rem;
       padding-inline: 4ex;
     }
 

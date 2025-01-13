@@ -6,7 +6,7 @@
     aspect-ratio: 1;
     background-color: transparent;
     border: 0;
-    border-radius: var(--button-border-radius);
+    border-radius: var(--radius-round);
     display: inline-flex;
     inline-size: var(--size-6);
     justify-content: center;
