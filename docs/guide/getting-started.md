@@ -15,6 +15,8 @@ import Alert from "../.vitepress/theme/app/components/Alert.vue";
    }
 </style>
 
+<span></span>
+
 This guide will set you up with:
 
 - Open Props
