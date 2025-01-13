@@ -306,7 +306,7 @@ Either disable it by setting the ripple size to 0 in your theme config:
 ::: code-group
 
 ```css [theme.css]
-// [!code --:2]
+// [!code ++:2]
 --button-ripple-size: 0;
 ```
 
