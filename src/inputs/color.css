@@ -1,17 +1,19 @@
-:where(.field:has(input[type="color"])) {
-  input {
-    appearance: none;
-    background: none;
-    block-size: var(--_height);
-    overflow: hidden;
-    padding: 0;
-
-    &::-webkit-color-swatch {
-      border: none;
-    }
-
-    &::-webkit-color-swatch-wrapper {
+@layer components.has-deps {
+  :where(.field:has(input[type="color"])) {
+    input {
+      appearance: none;
+      background: none;
+      block-size: var(--_height);
+      overflow: hidden;
       padding: 0;
+
+      &::-webkit-color-swatch {
+        border: none;
+      }
+
+      &::-webkit-color-swatch-wrapper {
+        padding: 0;
+      }
     }
   }
 }

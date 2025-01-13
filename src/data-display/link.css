@@ -1,18 +1,20 @@
-:where(.link) {
-  color: var(--primary);
-  cursor: pointer;
-  font-weight: 700;
-  text-decoration: underline;
-  text-decoration-color: var(--primary);
-  text-underline-offset: 2px;
-
-  &[href] {
-    &::hover {
-      color: var(--primary-light);
-    }
-  }
-
-  @supports (-moz-appearance: none) {
+@layer components.base {
+  :where(.link) {
+    color: var(--primary);
+    cursor: pointer;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-color: var(--primary);
     text-underline-offset: 2px;
+
+    &[href] {
+      &::hover {
+        color: var(--primary-light);
+      }
+    }
+
+    @supports (-moz-appearance: none) {
+      text-underline-offset: 2px;
+    }
   }
 }

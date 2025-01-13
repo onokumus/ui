@@ -12,49 +12,48 @@
 @import "opbeta/css/color/hues.oklch.css" layer(openprops);
 
 /* Normalize */
-@import "./normalize.css" layer(normalize);
+@import "./normalize.css";
 
 /* Utils */
-@import "./utils.css" layer(utils);
+@import "./utils.css";
 
 /* Theme */
-@import "./theme.css" layer(theme);
+@import "./theme.css";
 
 /*
 * Components
 * Components are divided into two categories - if they are stand-alone (base) or if they have dependencies (has-deps).
 */
 /*** Base components (no dependencies)  */
-@import "./actions/button.css" layer(components.base);
-@import "./actions/icon-button.css" layer(components.base);
-@import "./actions/toggle-button-group.css" layer(components.base);
-@import "./data-display/avatar.css" layer(components.base);
-@import "./data-display/badge.css" layer(components.base);
-@import "./data-display/card.css" layer(components.base);
-@import "./data-display/chip.css" layer(components.base);
-@import "./data-display/definition-list.css" layer(components.base);
-@import "./data-display/divider.css" layer(components.base);
-@import "./data-display/link.css" layer(components.base);
-@import "./data-display/list.css" layer(components.base);
-@import "./data-display/table.css" layer(components.base);
-@import "./data-display/tooltip.css" layer(components.base);
-@import "./feedback/progress.css" layer(components.base);
-@import "./feedback/spinner.css" layer(components.base);
-@import "./inputs/field-group.css" layer(components.base);
-@import "./inputs/field.css" layer(components.base);
-@import "./inputs/switch.css" layer(components.base);
-@import "./text/typography.css" layer(components.base);
+@import "./actions/button.css";
+@import "./actions/icon-button.css";
+@import "./actions/toggle-button-group.css";
+@import "./data-display/avatar.css";
+@import "./data-display/badge.css";
+@import "./data-display/card.css";
+@import "./data-display/chip.css";
+@import "./data-display/definition-list.css";
+@import "./data-display/divider.css";
+@import "./data-display/link.css";
+@import "./data-display/list.css";
+@import "./data-display/table.css";
+@import "./feedback/progress.css";
+@import "./feedback/spinner.css";
+@import "./inputs/field-group.css";
+@import "./inputs/field.css";
+@import "./inputs/switch.css";
+@import "./text/typography.css";
 
 /*** Has dependencies */
-@import "./actions/button-group.css" layer(components.has-deps);
-@import "./data-display/accordion.css" layer(components.has-deps);
-@import "./feedback/alert.css" layer(components.has-deps);
-@import "./feedback/dialog.css" layer(components.has-deps);
-@import "./feedback/snackbar.css" layer(components.has-deps);
-@import "./inputs/checkbox-radio.css" layer(components.has-deps);
-@import "./inputs/color.css" layer(components.has-deps);
-@import "./inputs/file.css" layer(components.has-deps);
-@import "./inputs/select.css" layer(components.has-deps);
-@import "./inputs/text-field.css" layer(components.has-deps);
-@import "./inputs/textarea.css" layer(components.has-deps);
-@import "./text/rich-text.css" layer(components.has-deps);
+@import "./actions/button-group.css";
+@import "./data-display/accordion.css";
+@import "./feedback/alert.css";
+@import "./feedback/dialog.css";
+@import "./feedback/snackbar.css";
+@import "./inputs/checkbox-radio.css";
+@import "./inputs/color.css";
+@import "./inputs/file.css";
+@import "./inputs/select.css";
+@import "./inputs/text-field.css";
+@import "./inputs/textarea.css";
+@import "./text/rich-text.css";

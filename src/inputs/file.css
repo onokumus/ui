@@ -1,51 +1,53 @@
-:where(.field:has(input[type="file"])) {
-  cursor: pointer;
+@layer components.has-deps {
+  :where(.field:has(input[type="file"])) {
+    cursor: pointer;
 
-  input {
-    align-self: flex-start;
-    block-size: var(--_height);
-    box-shadow: none;
-    color: var(--text-color-1);
-    cursor: inherit;
-    max-inline-size: 100%;
-    padding: 0;
-    transition: font-size 0.2s var(--ease-3);
-
-    &::-webkit-file-upload-button,
-    &::file-selector-button {
-      background-color: var(--surface-tonal);
-      border: none;
-      block-size: calc(100% - var(--size-2) * 2);
-      border-radius: var(--field-border-radius);
-      cursor: pointer;
-      margin-inline-end: 1ex;
-      margin-block-start: var(--size-2);
-      margin-inline-start: var(--size-2);
-    }
-  }
-
-  /* Variants */
-  &.filled {
     input {
+      align-self: flex-start;
+      block-size: var(--_height);
+      box-shadow: none;
+      color: var(--text-color-1);
+      cursor: inherit;
+      max-inline-size: 100%;
+      padding: 0;
+      transition: font-size 0.2s var(--ease-3);
+
       &::-webkit-file-upload-button,
       &::file-selector-button {
-        background-color: var(--surface-default);
+        background-color: var(--surface-tonal);
+        border: none;
         block-size: calc(100% - var(--size-2) * 2);
         border-radius: var(--field-border-radius);
         cursor: pointer;
+        margin-inline-end: 1ex;
         margin-block-start: var(--size-2);
+        margin-inline-start: var(--size-2);
       }
     }
-  }
 
-  /* Sizes */
-  &.small {
-    input {
-      font-size: var(--font-size-sm);
-      &::-webkit-file-upload-button,
-      &::file-selector-button {
-        block-size: calc(100% - var(--size-2));
-        margin-block-start: var(--size-1);
+    /* Variants */
+    &.filled {
+      input {
+        &::-webkit-file-upload-button,
+        &::file-selector-button {
+          background-color: var(--surface-default);
+          block-size: calc(100% - var(--size-2) * 2);
+          border-radius: var(--field-border-radius);
+          cursor: pointer;
+          margin-block-start: var(--size-2);
+        }
+      }
+    }
+
+    /* Sizes */
+    &.small {
+      input {
+        font-size: var(--font-size-sm);
+        &::-webkit-file-upload-button,
+        &::file-selector-button {
+          block-size: calc(100% - var(--size-2));
+          margin-block-start: var(--size-1);
+        }
       }
     }
   }

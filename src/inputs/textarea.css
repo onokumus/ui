@@ -1,23 +1,25 @@
-:where(.field:has(textarea)) {
-  textarea {
-    block-size: auto;
-    field-sizing: content;
-    min-block-size: 5rem;
-    resize: vertical;
-  }
-
-  /* Size */
-  &.small {
+@layer components.has-deps {
+  :where(.field:has(textarea)) {
     textarea {
-      min-block-size: var(--_height);
+      block-size: auto;
+      field-sizing: content;
+      min-block-size: 5rem;
+      resize: vertical;
     }
-  }
 
-  /* Auto-fit */
-  &.auto-fit {
-    textarea {
-      min-block-size: var(--_height);
-      resize: both;
+    /* Size */
+    &.small {
+      textarea {
+        min-block-size: var(--_height);
+      }
+    }
+
+    /* Auto-fit */
+    &.auto-fit {
+      textarea {
+        min-block-size: var(--_height);
+        resize: both;
+      }
     }
   }
 }
