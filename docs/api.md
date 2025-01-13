@@ -73,6 +73,10 @@
 
 <!--@include: ./components/data-display/accordion-api.md -->
 
+### [Avatar](/components/data-display/avatar)
+
+<!--@include: ./components/data-display/avatar-api.md -->
+
 ### [Badge](/components/data-display/badge)
 
 <!--@include: ./components/data-display/badge-api.md -->

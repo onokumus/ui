@@ -182,8 +182,12 @@ To get the Avatars to stack like they do below (previous item on top of the next
 </template>
 </Example>
 
-## Anatomy
-
 ## API
 
+<!--@include: ./avatar-api.md -->
+
 ## Installation
+
+::: code-group
+<<< @/../src/data-display/avatar.css [avatar.css]
+:::
