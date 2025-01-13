@@ -48,7 +48,7 @@ yarn add open-props@2.0.0-beta.5 --alias opbeta
 
 ## 2. Base setup
 
-If you're using some kind of app framework, this setup process will be similar but different. You should have no problems getting it to work though :+1: Otherwise, [let me know](https://github.com/felix-bohlin/ui).
+The setup process will differ a bit if you use a framework, but the core principles still apply. You should have no problems getting it to work though :+1: Otherwise, [let me know](https://github.com/felix-bohlin/ui).
 
 <div class="not-rich-text">
 
