@@ -29,7 +29,7 @@
   position: absolute;
   top: 1px;
   /*rtl:ignore*/
-  left: 1px;
+  inset-inline-start: 1px;
   width: 18px;
   height: 18px;
   border-radius: 50%;
@@ -50,7 +50,7 @@
 .icon :deep([class^="vpi-"]) {
   position: absolute;
   top: 3px;
-  left: 3px;
+  inset-inline-start: 3px;
   width: 12px;
   height: 12px;
   color: var(--text-color-2-78);

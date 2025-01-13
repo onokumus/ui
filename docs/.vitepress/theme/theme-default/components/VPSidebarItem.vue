@@ -285,7 +285,7 @@ function onCaretClick() {
 .VPSidebarItem.level-3 .items,
 .VPSidebarItem.level-4 .items,
 .VPSidebarItem.level-5 .items {
-  border-left: 1px solid var(--vp-c-divider);
+  border-inset-inline-start: 1px solid var(--vp-c-divider);
 }
 
 .VPSidebarItem.collapsed .items {

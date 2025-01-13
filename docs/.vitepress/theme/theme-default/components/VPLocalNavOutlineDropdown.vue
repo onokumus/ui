@@ -1,64 +1,64 @@
 <script setup lang="ts">
-import { onKeyStroke } from "@vueuse/core";
-import { onContentUpdated } from "vitepress";
-import { nextTick, ref, watch } from "vue";
-import { useData } from "../composables/data";
-import { resolveTitle, type MenuItem } from "../composables/outline";
-import VPDocOutlineItem from "./VPDocOutlineItem.vue";
+import { onKeyStroke } from "@vueuse/core"
+import { onContentUpdated } from "vitepress"
+import { nextTick, ref, watch } from "vue"
+import { useData } from "../composables/data"
+import { resolveTitle, type MenuItem } from "../composables/outline"
+import VPDocOutlineItem from "./VPDocOutlineItem.vue"
 
 const props = defineProps<{
-  headers: MenuItem[];
-  navHeight: number;
-}>();
+  headers: MenuItem[]
+  navHeight: number
+}>()
 
-const { theme } = useData();
-const open = ref(false);
-const vh = ref(0);
-const main = ref<HTMLDivElement>();
-const items = ref<HTMLDivElement>();
+const { theme } = useData()
+const open = ref(false)
+const vh = ref(0)
+const main = ref<HTMLDivElement>()
+const items = ref<HTMLDivElement>()
 
 function closeOnClickOutside(e: Event) {
   if (!main.value?.contains(e.target as Node)) {
-    open.value = false;
+    open.value = false
   }
 }
 
 watch(open, (value) => {
   if (value) {
-    document.addEventListener("click", closeOnClickOutside);
-    return;
+    document.addEventListener("click", closeOnClickOutside)
+    return
   }
-  document.removeEventListener("click", closeOnClickOutside);
-});
+  document.removeEventListener("click", closeOnClickOutside)
+})
 
 onKeyStroke("Escape", () => {
-  open.value = false;
-});
+  open.value = false
+})
 
 onContentUpdated(() => {
-  open.value = false;
-});
+  open.value = false
+})
 
 function toggle() {
-  open.value = !open.value;
-  vh.value = window.innerHeight + Math.min(window.scrollY - props.navHeight, 0);
+  open.value = !open.value
+  vh.value = window.innerHeight + Math.min(window.scrollY - props.navHeight, 0)
 }
 
 function onItemClick(e: Event) {
   if ((e.target as HTMLElement).classList.contains("outline-link")) {
     // disable animation on hash navigation when page jumps
     if (items.value) {
-      items.value.style.transition = "none";
+      items.value.style.transition = "none"
     }
     nextTick(() => {
-      open.value = false;
-    });
+      open.value = false
+    })
   }
 }
 
 function scrollToTop() {
-  open.value = false;
-  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  open.value = false
+  window.scrollTo({ blockStart: 0, inlineStart: 0, behavior: "smooth" })
 }
 </script>
 
@@ -155,16 +155,16 @@ function scrollToTop() {
   );
   display: grid;
   gap: 1px;
-  left: 16px;
+  inset-inline-start: 16px;
   max-height: calc(var(--vp-vh, 100vh) - 86px);
   overflow: hidden auto;
   position: absolute;
-  right: 16px;
+  inset-inline-end: 16px;
   top: 50px;
 
   @media (min-width: 960px) {
-    left: calc(var(--vp-sidebar-width) + 32px);
-    right: auto;
+    inset-inline-start: calc(var(--vp-sidebar-width) + 32px);
+    inset-inline-end: auto;
     width: 320px;
   }
 }

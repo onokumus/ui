@@ -1,27 +1,27 @@
 <script setup lang="ts">
-import { computed } from "vue";
-import { useData } from "../composables/data";
-import { useEditLink } from "../composables/edit-link";
-import { usePrevNext } from "../composables/prev-next";
-import VPLink from "./VPLink.vue";
-import VPDocFooterLastUpdated from "./VPDocFooterLastUpdated.vue";
+import { computed } from "vue"
+import { useData } from "../composables/data"
+import { useEditLink } from "../composables/edit-link"
+import { usePrevNext } from "../composables/prev-next"
+import VPLink from "./VPLink.vue"
+import VPDocFooterLastUpdated from "./VPDocFooterLastUpdated.vue"
 
-const { theme, page, site, frontmatter } = useData();
+const { theme, page, site, frontmatter } = useData()
 
-const editLink = useEditLink();
-const control = usePrevNext();
+const editLink = useEditLink()
+const control = usePrevNext()
 
 const hasEditLink = computed(
-  () => theme.value.editLink && frontmatter.value.editLink !== false
-);
-const hasLastUpdated = computed(() => page.value.lastUpdated);
+  () => theme.value.editLink && frontmatter.value.editLink !== false,
+)
+const hasLastUpdated = computed(() => page.value.lastUpdated)
 const showFooter = computed(
   () =>
     hasEditLink.value ||
     hasLastUpdated.value ||
     control.value.prev ||
-    control.value.next
-);
+    control.value.next,
+)
 </script>
 
 <template>
@@ -161,7 +161,7 @@ const showFooter = computed(
 
 .pager-link.next {
   margin-inline-start: auto;
-  text-align: right;
+  text-align: end;
 }
 
 .desc {

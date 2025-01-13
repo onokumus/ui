@@ -15,10 +15,10 @@ defineProps<{
   position: fixed;
   top: 0;
   /*rtl:ignore*/
-  right: 0;
+  inset-inline-end: 0;
   bottom: 0;
   /*rtl:ignore*/
-  left: 0;
+  inset-inline-start: 0;
   z-index: var(--vp-z-index-backdrop);
   background: var(--vp-backdrop-bg-color);
   transition: opacity 0.5s;
@@ -30,7 +30,7 @@ defineProps<{
 }
 
 .VPBackdrop.fade-leave-active {
-  transition-duration: .25s;
+  transition-duration: 0.25s;
 }
 
 @media (min-width: 1280px) {

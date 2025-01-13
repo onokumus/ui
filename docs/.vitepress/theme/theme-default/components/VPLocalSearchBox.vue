@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import localSearchIndex from "@localSearchIndex";
+import localSearchIndex from "@localSearchIndex"
 import {
   computedAsync,
   debouncedWatch,
@@ -8,11 +8,11 @@ import {
   useLocalStorage,
   useScrollLock,
   useSessionStorage,
-} from "@vueuse/core";
-import { useFocusTrap } from "@vueuse/integrations/useFocusTrap";
-import Mark from "mark.js/src/vanilla.js";
-import MiniSearch, { type SearchResult } from "minisearch";
-import { dataSymbol, inBrowser, useRouter } from "vitepress";
+} from "@vueuse/core"
+import { useFocusTrap } from "@vueuse/integrations/useFocusTrap"
+import Mark from "mark.js/src/vanilla.js"
+import MiniSearch, { type SearchResult } from "minisearch"
+import { dataSymbol, inBrowser, useRouter } from "vitepress"
 import {
   computed,
   createApp,
@@ -25,48 +25,48 @@ import {
   watch,
   watchEffect,
   type Ref,
-} from "vue";
-import type { ModalTranslations } from "../../../../types/local-search";
-import { pathToFile } from "../../app/utils";
-import { escapeRegExp } from "../../shared/shared";
-import { useData } from "../composables/data";
-import { LRUCache } from "../support/lru";
-import { createSearchTranslate } from "../support/translation";
+} from "vue"
+import type { ModalTranslations } from "../../../../types/local-search"
+import { pathToFile } from "../../app/utils"
+import { escapeRegExp } from "../../shared/shared"
+import { useData } from "../composables/data"
+import { LRUCache } from "../support/lru"
+import { createSearchTranslate } from "../support/translation"
 
 const emit = defineEmits<{
-  (e: "close"): void;
-}>();
+  (e: "close"): void
+}>()
 
-const el = shallowRef<HTMLElement>();
-const resultsEl = shallowRef<HTMLElement>();
+const el = shallowRef<HTMLElement>()
+const resultsEl = shallowRef<HTMLElement>()
 
 /* Search */
 
-const searchIndexData = shallowRef(localSearchIndex);
+const searchIndexData = shallowRef(localSearchIndex)
 
 // hmr
 if (import.meta.hot) {
   import.meta.hot.accept("/@localSearchIndex", (m) => {
     if (m) {
-      searchIndexData.value = m.default;
+      searchIndexData.value = m.default
     }
-  });
+  })
 }
 
 interface Result {
-  title: string;
-  titles: string[];
-  text?: string;
+  title: string
+  titles: string[]
+  text?: string
 }
 
-const vitePressData = useData();
+const vitePressData = useData()
 const { activate } = useFocusTrap(el, {
   immediate: true,
   allowOutsideClick: true,
   clickOutsideDeactivates: true,
   escapeDeactivates: true,
-});
-const { localeIndex, theme } = vitePressData;
+})
+const { localeIndex, theme } = vitePressData
 const searchIndex = computedAsync(async () =>
   markRaw(
     MiniSearch.loadJSON<Result>(
@@ -86,258 +86,258 @@ const searchIndex = computedAsync(async () =>
       },
     ),
   ),
-);
+)
 
 const disableQueryPersistence = computed(() => {
   return (
     theme.value.search?.provider === "local" &&
     theme.value.search.options?.disableQueryPersistence === true
-  );
-});
+  )
+})
 
 const filterText = disableQueryPersistence.value
   ? ref("")
-  : useSessionStorage("vitepress:local-search-filter", "");
+  : useSessionStorage("vitepress:local-search-filter", "")
 
 const showDetailedList = useLocalStorage(
   "vitepress:local-search-detailed-list",
   theme.value.search?.provider === "local" &&
     theme.value.search.options?.detailedView === true,
-);
+)
 
 const disableDetailedView = computed(() => {
   return (
     theme.value.search?.provider === "local" &&
     (theme.value.search.options?.disableDetailedView === true ||
       theme.value.search.options?.detailedView === false)
-  );
-});
+  )
+})
 
 const buttonText = computed(() => {
-  const options = theme.value.search?.options ?? theme.value.algolia;
+  const options = theme.value.search?.options ?? theme.value.algolia
 
   return (
     options?.locales?.[localeIndex.value]?.translations?.button?.buttonText ||
     options?.translations?.button?.buttonText ||
     "Search"
-  );
-});
+  )
+})
 
 watchEffect(() => {
   if (disableDetailedView.value) {
-    showDetailedList.value = false;
+    showDetailedList.value = false
   }
-});
+})
 
-const results: Ref<(SearchResult & Result)[]> = shallowRef([]);
+const results: Ref<(SearchResult & Result)[]> = shallowRef([])
 
-const enableNoResults = ref(false);
+const enableNoResults = ref(false)
 
 watch(filterText, () => {
-  enableNoResults.value = false;
-});
+  enableNoResults.value = false
+})
 
 const mark = computedAsync(async () => {
-  if (!resultsEl.value) return;
-  return markRaw(new Mark(resultsEl.value));
-}, null);
+  if (!resultsEl.value) return
+  return markRaw(new Mark(resultsEl.value))
+}, null)
 
-const cache = new LRUCache<string, Map<string, string>>(16); // 16 files
+const cache = new LRUCache<string, Map<string, string>>(16) // 16 files
 
 debouncedWatch(
   () => [searchIndex.value, filterText.value, showDetailedList.value] as const,
   async ([index, filterTextValue, showDetailedListValue], old, onCleanup) => {
     if (old?.[0] !== index) {
       // in case of hmr
-      cache.clear();
+      cache.clear()
     }
 
-    let canceled = false;
+    let canceled = false
     onCleanup(() => {
-      canceled = true;
-    });
+      canceled = true
+    })
 
-    if (!index) return;
+    if (!index) return
 
     // Search
     results.value = index
       .search(filterTextValue)
-      .slice(0, 16) as (SearchResult & Result)[];
-    enableNoResults.value = true;
+      .slice(0, 16) as (SearchResult & Result)[]
+    enableNoResults.value = true
 
     // Highlighting
     const mods = showDetailedListValue
       ? await Promise.all(results.value.map((r) => fetchExcerpt(r.id)))
-      : [];
-    if (canceled) return;
+      : []
+    if (canceled) return
     for (const { id, mod } of mods) {
-      const mapId = id.slice(0, id.indexOf("#"));
-      let map = cache.get(mapId);
-      if (map) continue;
-      map = new Map();
-      cache.set(mapId, map);
-      const comp = mod.default ?? mod;
+      const mapId = id.slice(0, id.indexOf("#"))
+      let map = cache.get(mapId)
+      if (map) continue
+      map = new Map()
+      cache.set(mapId, map)
+      const comp = mod.default ?? mod
       if (comp?.render || comp?.setup) {
-        const app = createApp(comp);
+        const app = createApp(comp)
         // Silence warnings about missing components
-        app.config.warnHandler = () => {};
-        app.provide(dataSymbol, vitePressData);
+        app.config.warnHandler = () => {}
+        app.provide(dataSymbol, vitePressData)
         Object.defineProperties(app.config.globalProperties, {
           $frontmatter: {
             get() {
-              return vitePressData.frontmatter.value;
+              return vitePressData.frontmatter.value
             },
           },
           $params: {
             get() {
-              return vitePressData.page.value.params;
+              return vitePressData.page.value.params
             },
           },
-        });
-        const div = document.createElement("div");
-        app.mount(div);
-        const headings = div.querySelectorAll("h1, h2, h3, h4, h5, h6");
+        })
+        const div = document.createElement("div")
+        app.mount(div)
+        const headings = div.querySelectorAll("h1, h2, h3, h4, h5, h6")
         headings.forEach((el) => {
-          const href = el.querySelector("a")?.getAttribute("href");
-          const anchor = href?.startsWith("#") && href.slice(1);
-          if (!anchor) return;
-          let html = "";
+          const href = el.querySelector("a")?.getAttribute("href")
+          const anchor = href?.startsWith("#") && href.slice(1)
+          if (!anchor) return
+          let html = ""
           while ((el = el.nextElementSibling!) && !/^h[1-6]$/i.test(el.tagName))
-            html += el.outerHTML;
-          map!.set(anchor, html);
-        });
-        app.unmount();
+            html += el.outerHTML
+          map!.set(anchor, html)
+        })
+        app.unmount()
       }
-      if (canceled) return;
+      if (canceled) return
     }
 
-    const terms = new Set<string>();
+    const terms = new Set<string>()
 
     results.value = results.value.map((r) => {
-      const [id, anchor] = r.id.split("#");
-      const map = cache.get(id);
-      const text = map?.get(anchor) ?? "";
+      const [id, anchor] = r.id.split("#")
+      const map = cache.get(id)
+      const text = map?.get(anchor) ?? ""
       for (const term in r.match) {
-        terms.add(term);
+        terms.add(term)
       }
-      return { ...r, text };
-    });
+      return { ...r, text }
+    })
 
-    await nextTick();
-    if (canceled) return;
+    await nextTick()
+    if (canceled) return
 
     await new Promise((r) => {
       mark.value?.unmark({
         done: () => {
-          mark.value?.markRegExp(formMarkRegex(terms), { done: r });
+          mark.value?.markRegExp(formMarkRegex(terms), { done: r })
         },
-      });
-    });
+      })
+    })
 
-    const excerpts = el.value?.querySelectorAll(".result .excerpt") ?? [];
+    const excerpts = el.value?.querySelectorAll(".result .excerpt") ?? []
     for (const excerpt of excerpts) {
       excerpt
         .querySelector('mark[data-markjs="true"]')
-        ?.scrollIntoView({ block: "center" });
+        ?.scrollIntoView({ block: "center" })
     }
     // FIXME: without this whole page scrolls to the bottom
-    resultsEl.value?.firstElementChild?.scrollIntoView({ block: "start" });
+    resultsEl.value?.firstElementChild?.scrollIntoView({ block: "start" })
   },
   { debounce: 200, immediate: true },
-);
+)
 
 async function fetchExcerpt(id: string) {
-  const file = pathToFile(id.slice(0, id.indexOf("#")));
+  const file = pathToFile(id.slice(0, id.indexOf("#")))
   try {
-    if (!file) throw new Error(`Cannot find file for id: ${id}`);
-    return { id, mod: await import(/*@vite-ignore*/ file) };
+    if (!file) throw new Error(`Cannot find file for id: ${id}`)
+    return { id, mod: await import(/*@vite-ignore*/ file) }
   } catch (e) {
-    console.error(e);
-    return { id, mod: {} };
+    console.error(e)
+    return { id, mod: {} }
   }
 }
 
 /* Search input focus */
 
-const searchInput = ref<HTMLInputElement>();
+const searchInput = ref<HTMLInputElement>()
 const disableReset = computed(() => {
-  return filterText.value?.length <= 0;
-});
+  return filterText.value?.length <= 0
+})
 function focusSearchInput(select = true) {
-  searchInput.value?.focus();
-  select && searchInput.value?.select();
+  searchInput.value?.focus()
+  select && searchInput.value?.select()
 }
 
 onMounted(() => {
-  focusSearchInput();
-});
+  focusSearchInput()
+})
 
 function onSearchBarClick(event: PointerEvent) {
   if (event.pointerType === "mouse") {
-    focusSearchInput();
+    focusSearchInput()
   }
 }
 
 /* Search keyboard selection */
 
-const selectedIndex = ref(-1);
-const disableMouseOver = ref(false);
+const selectedIndex = ref(-1)
+const disableMouseOver = ref(false)
 
 watch(results, (r) => {
-  selectedIndex.value = r.length ? 0 : -1;
-  scrollToSelectedResult();
-});
+  selectedIndex.value = r.length ? 0 : -1
+  scrollToSelectedResult()
+})
 
 function scrollToSelectedResult() {
   nextTick(() => {
-    const selectedEl = document.querySelector(".result.selected");
-    selectedEl?.scrollIntoView({ block: "nearest" });
-  });
+    const selectedEl = document.querySelector(".result.selected")
+    selectedEl?.scrollIntoView({ block: "nearest" })
+  })
 }
 
 onKeyStroke("ArrowUp", (event) => {
-  event.preventDefault();
-  selectedIndex.value--;
+  event.preventDefault()
+  selectedIndex.value--
   if (selectedIndex.value < 0) {
-    selectedIndex.value = results.value.length - 1;
+    selectedIndex.value = results.value.length - 1
   }
-  disableMouseOver.value = true;
-  scrollToSelectedResult();
-});
+  disableMouseOver.value = true
+  scrollToSelectedResult()
+})
 
 onKeyStroke("ArrowDown", (event) => {
-  event.preventDefault();
-  selectedIndex.value++;
+  event.preventDefault()
+  selectedIndex.value++
   if (selectedIndex.value >= results.value.length) {
-    selectedIndex.value = 0;
+    selectedIndex.value = 0
   }
-  disableMouseOver.value = true;
-  scrollToSelectedResult();
-});
+  disableMouseOver.value = true
+  scrollToSelectedResult()
+})
 
-const router = useRouter();
+const router = useRouter()
 
 onKeyStroke("Enter", (e) => {
-  if (e.isComposing) return;
+  if (e.isComposing) return
 
   if (e.target instanceof HTMLButtonElement && e.target.type !== "submit")
-    return;
+    return
 
-  const selectedPackage = results.value[selectedIndex.value];
+  const selectedPackage = results.value[selectedIndex.value]
   if (e.target instanceof HTMLInputElement && !selectedPackage) {
-    e.preventDefault();
-    return;
+    e.preventDefault()
+    return
   }
 
   if (selectedPackage) {
-    router.go(selectedPackage.id);
-    emit("close");
+    router.go(selectedPackage.id)
+    emit("close")
   }
-});
+})
 
 onKeyStroke("Escape", () => {
-  emit("close");
-});
+  emit("close")
+})
 
 // Translations
 const defaultTranslations: { modal: ModalTranslations } = {
@@ -356,39 +356,39 @@ const defaultTranslations: { modal: ModalTranslations } = {
       closeKeyAriaLabel: "escape",
     },
   },
-};
+}
 
-const translate = createSearchTranslate(defaultTranslations);
+const translate = createSearchTranslate(defaultTranslations)
 
 // Back
 
 onMounted(() => {
   // Prevents going to previous site
-  window.history.pushState(null, "", null);
-});
+  window.history.pushState(null, "", null)
+})
 
 useEventListener("popstate", (event) => {
-  event.preventDefault();
-  emit("close");
-});
+  event.preventDefault()
+  emit("close")
+})
 
 /** Lock body */
-const isLocked = useScrollLock(inBrowser ? document.body : null);
+const isLocked = useScrollLock(inBrowser ? document.body : null)
 
 onMounted(() => {
   nextTick(() => {
-    isLocked.value = true;
-    nextTick().then(() => activate());
-  });
-});
+    isLocked.value = true
+    nextTick().then(() => activate())
+  })
+})
 
 onBeforeUnmount(() => {
-  isLocked.value = false;
-});
+  isLocked.value = false
+})
 
 function resetSearch() {
-  filterText.value = "";
-  nextTick().then(() => focusSearchInput(false));
+  filterText.value = ""
+  nextTick().then(() => focusSearchInput(false))
 }
 
 function formMarkRegex(terms: Set<string>) {
@@ -398,7 +398,7 @@ function formMarkRegex(terms: Set<string>) {
       .map((term) => `(${escapeRegExp(term)})`)
       .join("|"),
     "gi",
-  );
+  )
 }
 </script>
 
@@ -818,7 +818,7 @@ function formMarkRegex(terms: Set<string>) {
 .excerpt-gradient-bottom {
   position: absolute;
   bottom: -1px;
-  left: 0;
+  inset-inline-start: 0;
   width: 100%;
   height: 8px;
   background: linear-gradient(transparent, var(--vp-local-search-result-bg));
@@ -828,7 +828,7 @@ function formMarkRegex(terms: Set<string>) {
 .excerpt-gradient-top {
   position: absolute;
   top: -1px;
-  left: 0;
+  inset-inline-start: 0;
   width: 100%;
   height: 8px;
   background: linear-gradient(var(--vp-local-search-result-bg), transparent);

@@ -1,47 +1,47 @@
 <script lang="ts" setup>
-import { useWindowScroll } from "@vueuse/core";
-import { onContentUpdated } from "vitepress";
-import { computed, onMounted, ref } from "vue";
-import { useData } from "../composables/data";
-import { useLocalNav } from "../composables/local-nav";
-import { getHeaders } from "../composables/outline";
-import { useSidebar } from "../composables/sidebar";
-import VPLocalNavOutlineDropdown from "./VPLocalNavOutlineDropdown.vue";
+import { useWindowScroll } from "@vueuse/core"
+import { onContentUpdated } from "vitepress"
+import { computed, onMounted, ref } from "vue"
+import { useData } from "../composables/data"
+import { useLocalNav } from "../composables/local-nav"
+import { getHeaders } from "../composables/outline"
+import { useSidebar } from "../composables/sidebar"
+import VPLocalNavOutlineDropdown from "./VPLocalNavOutlineDropdown.vue"
 
 defineProps<{
-  open: boolean;
-}>();
+  open: boolean
+}>()
 
 defineEmits<{
-  (e: "open-menu"): void;
-}>();
+  (e: "open-menu"): void
+}>()
 
-const { theme, frontmatter } = useData();
-const { hasSidebar } = useSidebar();
-const { headers } = useLocalNav();
-const { y } = useWindowScroll();
+const { theme, frontmatter } = useData()
+const { hasSidebar } = useSidebar()
+const { headers } = useLocalNav()
+const { y } = useWindowScroll()
 
-const navHeight = ref(0);
+const navHeight = ref(0)
 
 onMounted(() => {
   navHeight.value = parseInt(
     getComputedStyle(document.documentElement).getPropertyValue(
-      "--vp-nav-height"
-    )
-  );
-});
+      "--vp-nav-height",
+    ),
+  )
+})
 
 onContentUpdated(() => {
-  headers.value = getHeaders(frontmatter.value.outline ?? theme.value.outline);
-});
+  headers.value = getHeaders(frontmatter.value.outline ?? theme.value.outline)
+})
 
 const empty = computed(() => {
-  return headers.value.length === 0;
-});
+  return headers.value.length === 0
+})
 
 const emptyAndNoSidebar = computed(() => {
-  return empty.value && !hasSidebar.value;
-});
+  return empty.value && !hasSidebar.value
+})
 
 const classes = computed(() => {
   return {
@@ -49,8 +49,8 @@ const classes = computed(() => {
     "has-sidebar": hasSidebar.value,
     empty: empty.value,
     fixed: emptyAndNoSidebar.value,
-  };
-});
+  }
+})
 </script>
 
 <template>
@@ -84,7 +84,7 @@ const classes = computed(() => {
   position: sticky;
   top: 0;
   /*rtl:ignore*/
-  left: 0;
+  inset-inline-start: 0;
   z-index: var(--vp-z-index-local-nav);
   border-bottom: 1px solid var(--vp-c-gutter);
   padding-block-start: var(--vp-layout-top-height, 0px);

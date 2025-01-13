@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { useScrollLock } from "@vueuse/core";
-import { inBrowser } from "vitepress";
-import { ref } from "vue";
-import VPNavScreenAppearance from "./VPNavScreenAppearance.vue";
-import VPNavScreenMenu from "./VPNavScreenMenu.vue";
-import VPNavScreenSocialLinks from "./VPNavScreenSocialLinks.vue";
-import VPNavScreenTranslations from "./VPNavScreenTranslations.vue";
+import { useScrollLock } from "@vueuse/core"
+import { inBrowser } from "vitepress"
+import { ref } from "vue"
+import VPNavScreenAppearance from "./VPNavScreenAppearance.vue"
+import VPNavScreenMenu from "./VPNavScreenMenu.vue"
+import VPNavScreenSocialLinks from "./VPNavScreenSocialLinks.vue"
+import VPNavScreenTranslations from "./VPNavScreenTranslations.vue"
 
 defineProps<{
-  open: boolean;
-}>();
+  open: boolean
+}>()
 
-const screen = ref<HTMLElement | null>(null);
-const isLocked = useScrollLock(inBrowser ? document.body : null);
+const screen = ref<HTMLElement | null>(null)
+const isLocked = useScrollLock(inBrowser ? document.body : null)
 </script>
 
 <template>
@@ -39,10 +39,10 @@ const isLocked = useScrollLock(inBrowser ? document.body : null);
   position: fixed;
   top: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px));
   /*rtl:ignore*/
-  right: 0;
+  inset-inline-end: 0;
   bottom: 0;
   /*rtl:ignore*/
-  left: 0;
+  inset-inline-start: 0;
   padding: 0 32px;
   width: 100%;
   background-color: var(--vp-nav-screen-bg-color);

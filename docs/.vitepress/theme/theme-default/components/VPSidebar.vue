@@ -1,40 +1,40 @@
 <script lang="ts" setup>
-import { useScrollLock } from "@vueuse/core";
-import { inBrowser } from "vitepress";
-import { ref, watch } from "vue";
-import { useSidebar } from "../composables/sidebar";
-import VPSidebarGroup from "./VPSidebarGroup.vue";
+import { useScrollLock } from "@vueuse/core"
+import { inBrowser } from "vitepress"
+import { ref, watch } from "vue"
+import { useSidebar } from "../composables/sidebar"
+import VPSidebarGroup from "./VPSidebarGroup.vue"
 
-const { sidebarGroups, hasSidebar } = useSidebar();
+const { sidebarGroups, hasSidebar } = useSidebar()
 
 const props = defineProps<{
-  open: boolean;
-}>();
+  open: boolean
+}>()
 
 // a11y: focus Nav element when menu has opened
-const navEl = ref<HTMLElement | null>(null);
-const isLocked = useScrollLock(inBrowser ? document.body : null);
+const navEl = ref<HTMLElement | null>(null)
+const isLocked = useScrollLock(inBrowser ? document.body : null)
 
 watch(
   [props, navEl],
   () => {
     if (props.open) {
-      isLocked.value = true;
-      navEl.value?.focus();
-    } else isLocked.value = false;
+      isLocked.value = true
+      navEl.value?.focus()
+    } else isLocked.value = false
   },
-  { immediate: true, flush: "post" }
-);
+  { immediate: true, flush: "post" },
+)
 
-const key = ref(0);
+const key = ref(0)
 
 watch(
   sidebarGroups,
   () => {
-    key.value += 1;
+    key.value += 1
   },
-  { deep: true }
-);
+  { deep: true },
+)
 </script>
 
 <template>
@@ -69,7 +69,7 @@ watch(
   position: fixed;
   top: var(--vp-layout-top-height, 0px);
   bottom: 0;
-  left: 0;
+  inset-inline-start: 0;
   z-index: var(--vp-z-index-sidebar);
   padding: 32px 32px 96px;
   width: calc(100vw - 64px);
@@ -119,8 +119,8 @@ watch(
       calc((100% - (var(--vp-layout-max-width) - 64px)) / 2)
     );
     width: calc(
-      (100% - (var(--vp-layout-max-width) - 64px)) / 2 + var(--vp-sidebar-width) -
-        32px
+      (100% - (var(--vp-layout-max-width) - 64px)) / 2 +
+        var(--vp-sidebar-width) - 32px
     );
   }
 }
@@ -129,7 +129,7 @@ watch(
   .curtain {
     position: sticky;
     top: -64px;
-    left: 0;
+    inset-inline-start: 0;
     z-index: 1;
     margin-block-start: calc(var(--vp-nav-height) * -1);
     margin-inline-end: -32px;

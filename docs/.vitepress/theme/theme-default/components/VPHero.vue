@@ -124,7 +124,7 @@ const heroImageSlotExists = inject("hero-image-slot-exists") as Ref<boolean>
 
 @media (min-width: 960px) {
   .VPHero.has-image .container {
-    text-align: left;
+    text-align: start;
   }
 }
 
@@ -304,7 +304,7 @@ const heroImageSlotExists = inject("hero-image-slot-exists") as Ref<boolean>
   position: absolute;
   top: 50%;
   /*rtl:ignore*/
-  left: 50%;
+  inset-inline-start: 50%;
   border-radius: 50%;
   width: 192px;
   height: 192px;
@@ -332,7 +332,7 @@ const heroImageSlotExists = inject("hero-image-slot-exists") as Ref<boolean>
   position: absolute;
   top: 50%;
   /*rtl:ignore*/
-  left: 50%;
+  inset-inline-start: 50%;
   max-width: 192px;
   max-height: 192px;
   /*rtl:ignore*/

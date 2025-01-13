@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import type { DefaultTheme } from "vitepress/theme";
-import VPLink from "./VPLink.vue";
-import VPSocialLinks from "./VPSocialLinks.vue";
+import type { DefaultTheme } from "vitepress/theme"
+import VPLink from "./VPLink.vue"
+import VPSocialLinks from "./VPSocialLinks.vue"
 
 interface Props {
-  size?: "small" | "medium";
-  member: DefaultTheme.TeamMember;
+  size?: "small" | "medium"
+  member: DefaultTheme.TeamMember
 }
 
 withDefaults(defineProps<Props>(), {
   size: "medium",
-});
+})
 </script>
 
 <template>
@@ -158,9 +158,9 @@ withDefaults(defineProps<Props>(), {
 .avatar-img {
   position: absolute;
   top: 0;
-  right: 0;
+  inset-inline-end: 0;
   bottom: 0;
-  left: 0;
+  inset-inline-start: 0;
   border-radius: 50%;
   object-fit: cover;
 }

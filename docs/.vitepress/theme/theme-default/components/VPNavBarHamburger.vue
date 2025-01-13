@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 defineProps<{
-  active: boolean;
-}>();
+  active: boolean
+}>()
 
 defineEmits<{
-  (e: "click"): void;
-}>();
+  (e: "click"): void
+}>()
 </script>
 
 <template>
@@ -51,17 +51,17 @@ defineEmits<{
 
 .VPNavBarHamburger:hover .top {
   top: 0;
-  left: 0;
+  inset-inline-start: 0;
   transform: translateX(4px);
 }
 .VPNavBarHamburger:hover .middle {
   top: 6px;
-  left: 0;
+  inset-inline-start: 0;
   transform: translateX(0);
 }
 .VPNavBarHamburger:hover .bottom {
   top: 12px;
-  left: 0;
+  inset-inline-start: 0;
   transform: translateX(8px);
 }
 
@@ -103,17 +103,17 @@ defineEmits<{
 
 .top {
   top: 0;
-  left: 0;
+  inset-inline-start: 0;
   transform: translateX(0);
 }
 .middle {
   top: 6px;
-  left: 0;
+  inset-inline-start: 0;
   transform: translateX(8px);
 }
 .bottom {
   top: 12px;
-  left: 0;
+  inset-inline-start: 0;
   transform: translateX(4px);
 }
 </style>

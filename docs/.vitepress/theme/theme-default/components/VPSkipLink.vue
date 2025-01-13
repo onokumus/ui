@@ -1,30 +1,30 @@
 <script lang="ts" setup>
-import { ref, watch } from "vue";
-import { useRoute } from "vitepress";
+import { ref, watch } from "vue"
+import { useRoute } from "vitepress"
 
-const route = useRoute();
-const backToTop = ref();
+const route = useRoute()
+const backToTop = ref()
 
 watch(
   () => route.path,
-  () => backToTop.value.focus()
-);
+  () => backToTop.value.focus(),
+)
 
 function focusOnTargetAnchor({ target }: Event) {
   const el = document.getElementById(
-    decodeURIComponent((target as HTMLAnchorElement).hash).slice(1)
-  );
+    decodeURIComponent((target as HTMLAnchorElement).hash).slice(1),
+  )
 
   if (el) {
     const removeTabIndex = () => {
-      el.removeAttribute("tabindex");
-      el.removeEventListener("blur", removeTabIndex);
-    };
+      el.removeAttribute("tabindex")
+      el.removeEventListener("blur", removeTabIndex)
+    }
 
-    el.setAttribute("tabindex", "-1");
-    el.addEventListener("blur", removeTabIndex);
-    el.focus();
-    window.scrollTo(0, 0);
+    el.setAttribute("tabindex", "-1")
+    el.addEventListener("blur", removeTabIndex)
+    el.focus()
+    window.scrollTo(0, 0)
   }
 }
 </script>
@@ -43,7 +43,7 @@ function focusOnTargetAnchor({ target }: Event) {
 <style scoped>
 .VPSkipLink {
   top: 8px;
-  left: 8px;
+  inset-inline-start: 8px;
   padding: 8px 16px;
   z-index: 999;
   border-radius: 8px;
@@ -69,7 +69,7 @@ function focusOnTargetAnchor({ target }: Event) {
 @media (min-width: 1280px) {
   .VPSkipLink {
     top: 14px;
-    left: 16px;
+    inset-inline-start: 16px;
   }
 }
 </style>

@@ -170,7 +170,7 @@ const translate = createSearchTranslate(defaultTranslations)
   margin: 2px 0 0 0;
   border: 1px solid var(--vp-c-divider);
   /*rtl:begin:ignore*/
-  border-right: none;
+  border-inline-end: none;
   border-radius: var(--surface-border-radius, 0.25rem);
   border-radius: 0;
   padding-inline-start: 6px;
@@ -189,8 +189,8 @@ const translate = createSearchTranslate(defaultTranslations)
 
 .DocSearch-Button .DocSearch-Button-Key + .DocSearch-Button-Key {
   /*rtl:begin:ignore*/
-  border-right: 1px solid var(--vp-c-divider);
-  border-left: none;
+  border-inline-end: 1px solid var(--vp-c-divider);
+  border-inset-inline-start: none;
   border-radius: var(--surface-border-radius, 0.25rem);
   border-radius: 0;
   padding-inline-start: 2px;

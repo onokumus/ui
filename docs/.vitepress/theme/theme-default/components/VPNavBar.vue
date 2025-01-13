@@ -1,30 +1,30 @@
 <script lang="ts" setup>
-import { useWindowScroll } from "@vueuse/core";
-import { ref, watchPostEffect } from "vue";
-import { useData } from "../composables/data";
-import { useSidebar } from "../composables/sidebar";
-import VPNavBarAppearance from "./VPNavBarAppearance.vue";
-import VPNavBarExtra from "./VPNavBarExtra.vue";
-import VPNavBarHamburger from "./VPNavBarHamburger.vue";
-import VPNavBarMenu from "./VPNavBarMenu.vue";
-import VPNavBarSearch from "./VPNavBarSearch.vue";
-import VPNavBarSocialLinks from "./VPNavBarSocialLinks.vue";
-import VPNavBarTitle from "./VPNavBarTitle.vue";
-import VPNavBarTranslations from "./VPNavBarTranslations.vue";
+import { useWindowScroll } from "@vueuse/core"
+import { ref, watchPostEffect } from "vue"
+import { useData } from "../composables/data"
+import { useSidebar } from "../composables/sidebar"
+import VPNavBarAppearance from "./VPNavBarAppearance.vue"
+import VPNavBarExtra from "./VPNavBarExtra.vue"
+import VPNavBarHamburger from "./VPNavBarHamburger.vue"
+import VPNavBarMenu from "./VPNavBarMenu.vue"
+import VPNavBarSearch from "./VPNavBarSearch.vue"
+import VPNavBarSocialLinks from "./VPNavBarSocialLinks.vue"
+import VPNavBarTitle from "./VPNavBarTitle.vue"
+import VPNavBarTranslations from "./VPNavBarTranslations.vue"
 
 const props = defineProps<{
-  isScreenOpen: boolean;
-}>();
+  isScreenOpen: boolean
+}>()
 
 defineEmits<{
-  (e: "toggle-screen"): void;
-}>();
+  (e: "toggle-screen"): void
+}>()
 
-const { y } = useWindowScroll();
-const { hasSidebar } = useSidebar();
-const { frontmatter } = useData();
+const { y } = useWindowScroll()
+const { hasSidebar } = useSidebar()
+const { frontmatter } = useData()
 
-const classes = ref<Record<string, boolean>>({});
+const classes = ref<Record<string, boolean>>({})
 
 watchPostEffect(() => {
   classes.value = {
@@ -32,8 +32,8 @@ watchPostEffect(() => {
     home: frontmatter.value.layout === "home",
     top: y.value === 0,
     "screen-open": props.isScreenOpen,
-  };
-});
+  }
+})
 </script>
 
 <template>
@@ -155,8 +155,8 @@ watchPostEffect(() => {
 @media (min-width: 960px) {
   .VPNavBar.has-sidebar .title {
     position: absolute;
-    top: 0;
-    left: 0;
+    inset-block-start: 0;
+    inset-inline-start: 0;
     z-index: 2;
     padding: 0 32px;
     width: var(--vp-sidebar-width);
@@ -172,8 +172,8 @@ watchPostEffect(() => {
       calc((100% - (var(--vp-layout-max-width) - 64px)) / 2)
     );
     width: calc(
-      (100% - (var(--vp-layout-max-width) - 64px)) / 2 + var(--vp-sidebar-width) -
-        32px
+      (100% - (var(--vp-layout-max-width) - 64px)) / 2 +
+        var(--vp-sidebar-width) - 32px
     );
   }
 }
