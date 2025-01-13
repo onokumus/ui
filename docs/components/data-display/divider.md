@@ -1,8 +1,11 @@
+---
+overline: Components
+title: Divider
+---
+
 <script setup>
 import Example from "../../.vitepress/theme/app/components/Example.vue"
 </script>
-
-# Divider
 
 It's just an `<hr>`.
 

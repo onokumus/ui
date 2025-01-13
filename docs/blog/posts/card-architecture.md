@@ -1,5 +1,6 @@
 ---
-date: 2024-11-13
+date: 2024-11-14
+hideHeadings: true
 title: Card component architecture design decisions
 category: blog
 tags: card, architecture decisions

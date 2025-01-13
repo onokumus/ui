@@ -1,6 +1,7 @@
 ---
 date: 2024-11-12
 title: The ridiculously confusing task of styling a decent-looking progress bar
+hideHeadings: true
 category: blog
 tags: progress bar
 excerpt: How hard can it be?

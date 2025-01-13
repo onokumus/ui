@@ -408,3 +408,15 @@
     color 0.4s,
     opacity 0.4s;
 }
+
+.main:has(.vp-doc > div > p:first-child) {
+  .vp-doc {
+    margin-block-start: 0;
+  }
+  .vp-doc > div > p:first-child {
+    color: oklch(from currentColor l c h / 75%);
+    font-size: var(--font-size-lg);
+    line-height: 1.6;
+    margin-block: 0 3rem;
+  }
+}

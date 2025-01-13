@@ -13,11 +13,12 @@
 </style>
 
 <hgroup>
+  <p>Components</p>
   <h1>Alert</h1>
   <p>Alerts call out for user attention. Alerts should be part of the flow and used <strong>without</strong> interrupting the user's task.</p>
 </hgroup>
 
-<div class="not-rich-text" style="margin-block: 1rem;">
+<div class="not-rich-text" style="margin-block: 3rem 1rem;">
 <Alert title="Alternatives">
 
 <div class="rich-text">

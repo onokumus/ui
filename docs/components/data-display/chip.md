@@ -1,3 +1,8 @@
+---
+overline: Components
+title: Chip
+---
+
 <script setup>
 	import Example from "../../.vitepress/theme/app/components/Example.vue"
 	import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
@@ -13,8 +18,6 @@
 		}
 	}
 </style>
-
-# Chip
 
 ## Variants
 

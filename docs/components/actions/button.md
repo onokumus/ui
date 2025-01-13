@@ -1,3 +1,8 @@
+---
+overline: Components
+title: Button
+---
+
 <script setup>
 import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
 import Example from "../../.vitepress/theme/app/components/Example.vue"
@@ -12,8 +17,6 @@ import Example from "../../.vitepress/theme/app/components/Example.vue"
     }
   }
 </style>
-
-# Button
 
 ## Variants
 

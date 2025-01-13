@@ -1,10 +1,13 @@
+---
+overline: Components
+title: Radio
+---
+
 <script setup>
 import Example from "../../.vitepress/theme/app/components/Example.vue";
 import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
 import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 </script>
-
-# Radio
 
 See also: [Radio group](#field-group)?
 

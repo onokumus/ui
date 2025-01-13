@@ -105,6 +105,19 @@
     }
   }
 
+  /** Overline */
+  :where(.overline, hgroup > :where(p, .p):first-of-type:first-child) {
+    color: light-dark(
+      oklch(from var(--text-color-2) calc(l * 1.25) c h),
+      oklch(from var(--text-color-2) calc(l * 0.75) c h)
+    );
+    font-size: var(--font-size-xs);
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    line-height: 2.5;
+    text-transform: uppercase;
+  }
+
   hgroup {
     & > p {
       margin: 0;
@@ -116,6 +129,13 @@
 
     & + * {
       margin-block-start: 3em;
+    }
+
+    /* The second p element */
+    & > :where(p, .p):last-of-type:last-child:not(:first-child) {
+      color: oklch(from currentColor l c h / 75%);
+      font-size: var(--font-size-lg);
+      line-height: 1.6;
     }
   }
 

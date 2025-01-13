@@ -1,3 +1,8 @@
+---
+overline: Components
+title: Icon Button
+---
+
 <script setup>
 import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
 import Example from "../../.vitepress/theme/app/components/Example.vue"
@@ -13,8 +18,6 @@ import Alert from "../../.vitepress/theme/app/components/Alert.vue"
 		}
 	}
 </style>
-
-# Icon Button
 
 <Example row>
 <template #example>

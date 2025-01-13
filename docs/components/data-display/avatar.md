@@ -1,11 +1,14 @@
+---
+overline: Components
+title: Avatar
+---
+
 <script setup>
 import {ref} from "vue"
 import Example from "../../.vitepress/theme/app/components/Example.vue";
 import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
 import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 </script>
-
-# Avatar
 
 ## Image
 

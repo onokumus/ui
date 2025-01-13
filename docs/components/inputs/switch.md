@@ -1,3 +1,8 @@
+---
+overline: Components
+title: Switch
+---
+
 <script setup>
 import Example from "../../.vitepress/theme/app/components/Example.vue";
 import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
@@ -11,8 +16,6 @@ It's not mature yet to even try to implement here,
 but will be in time.
 https://webkit.org/blog/15054/an-html-switch-control/
  -->
-
-# Switch
 
 See also: [Switch group](#field-group)
 

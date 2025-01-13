@@ -56,9 +56,10 @@ const pageName = computed(() =>
             <main class="main rich-text">
               <hgroup
                 v-if="
-                  $frontmatter.overline ||
-                  $frontmatter.title ||
-                  $frontmatter.description
+                  !$frontmatter.hideHeadings &&
+                  ($frontmatter.overline ||
+                    $frontmatter.title ||
+                    $frontmatter.description)
                 "
               >
                 <p v-if="$frontmatter.overline">{{ $frontmatter.overline }}</p>

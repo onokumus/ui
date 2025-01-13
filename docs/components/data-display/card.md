@@ -1,3 +1,8 @@
+---
+overline: Components
+title: Card
+---
+
 <script setup>
 	import Example from "../../.vitepress/theme/app/components/Example.vue"
 	import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
@@ -14,8 +19,6 @@
 		}
 	}
 </style>
-
-# Card
 
 The card is extremely versetile and can be used on its own, or as a building block for [accordions](/components/data-display/accordion), [dialogs](/components/feedback/dialog) and more.
 

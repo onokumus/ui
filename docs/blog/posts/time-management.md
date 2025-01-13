@@ -1,16 +1,12 @@
 ---
 date: 2024-12-12
+overline: "2024-12-12"
 title: Random thoughts on time management
 category: blog
 tags: "time management"
 excerpt: Don't overthink it
 status: public
 ---
-
-<hgroup>
-	<p>2024-12-12</p>
-	<h1> Random thoughts on time management</h1>
-</hgroup>
 
 ## When you're stuck
 

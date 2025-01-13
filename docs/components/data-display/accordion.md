@@ -1,10 +1,13 @@
+---
+overline: Components
+title: Accordion
+---
+
 <script setup>
 	import Example from "../../.vitepress/theme/app/components/Example.vue"
 	import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
   import Alert from "../../.vitepress/theme/app/components/Alert.vue";
-
-
-	</script>
+</script>
 
 <style>
 .anatomy {
@@ -38,8 +41,6 @@
   }
 }
 </style>
-
-# Accordion
 
 Leverages the HTML `details` and `summary` elements. Uses the native HTML arrow, check out how to add your own [custom arrow](#custom-arrow).
 

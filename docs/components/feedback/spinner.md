@@ -1,8 +1,11 @@
+---
+overline: Components
+title: Spinner
+---
+
 <script setup>
 import Example from "../../.vitepress/theme/app/components/Example.vue"
 </script>
-
-# Spinner
 
 Add it to an element with `aria-busy="true"`. Spinnners are always indeterminate.
 

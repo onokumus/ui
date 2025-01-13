@@ -1,3 +1,8 @@
+---
+overline: Components
+title: Text field
+---
+
 <script setup>
 import Example from "../../.vitepress/theme/app/components/Example.vue"
 import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
@@ -8,8 +13,6 @@ import { ref } from "vue"
 const isFilled = ref(false)
 const isSmall = ref(false)
 </script>
-
-# Text field
 
 ## Variants
 

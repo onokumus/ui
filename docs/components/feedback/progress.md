@@ -1,3 +1,8 @@
+---
+overline: Components
+title: Progress
+---
+
 <script setup>
 	import { ref } from "vue"
 	import { useIntervalFn } from '@vueuse/core'
@@ -13,8 +18,6 @@
 		}
 	}, 3000)
 </script>
-
-# Progress
 
 ## Indeterminate
 

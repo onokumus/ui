@@ -1,10 +1,13 @@
+---
+overline: Components
+title: Rich text
+---
+
 <script setup>
 import Example from "../../.vitepress/theme/app/components/Example.vue"
 import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
 import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 </script>
-
-# Rich text
 
 Use the `.rich-text`to add typographic styles to an element. Is extra handy when you can't control the contents yourself, like printing text from a CMS.
 

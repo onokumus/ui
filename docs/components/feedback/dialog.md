@@ -1,3 +1,9 @@
+---
+overline: Components
+title: Dialog
+description: A minimally styled window overlaid on the main content. By design the Dialog is minimal with zero content to allow for both modal and non-modal use.
+---
+
 <script setup>
   import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
   import Example from "../../.vitepress/theme/app/components/Example.vue"
@@ -13,10 +19,6 @@ import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 		dialog.value?.close()
 	}
 </script>
-
-# Dialog
-
-A minimally styled window overlaid on the main content. By design the Dialog is minimal with zero content to allow for both modal and non-modal use.
 
 <div class="not-rich-text">
 <Alert title="Modal vs Dialog">

@@ -70,10 +70,13 @@ const showAbsoluteSnackbar = ref(false)
   }
 </style>
 
+<hgroup>
+<p>Components</p>
 <h1><span class="badge" aria-label="⚠️🚧">Snackbar</span></h1>
+<p>Snackbars inform users of a process that has or will be preformed.</p>
+</hgroup>
 
-Snackbars inform users of a process that has or will be preformed. They shouldn't interrupt the user and you should be able to keep browsing without having to interact with it.
-
+They shouldn't interrupt the user and you should be able to keep browsing without having to interact with it.
 These [Snackbar guidelines](https://m3.material.io/components/snackbar/guidelines) are a great way to get your head around the dos and don'ts.
 
 ## Basics

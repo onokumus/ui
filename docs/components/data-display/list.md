@@ -1,3 +1,8 @@
+---
+overline: Components
+title: List
+---
+
 <script setup>
 import {ref} from "vue"
 import Example from "../../.vitepress/theme/app/components/Example.vue";
@@ -16,23 +21,13 @@ const denseClass = ref(true)
 }
 </style>
 
-# List
-
-<div class="not-rich-text">
-<Accordion variant="tonal" style="margin-block-start: var(--size-3)">
-<template #summary>About</template>
-<div class="rich-text">
-
-Lists are continuous, vertical indexes of text and images and video
+Lists are continuous, vertical indexes of text and images and video.
 
 - Use lists to help users find a specific item and act on it
 - Order list items in logical ways (like alphabetical or numerical)
 - Three sizes: one-line, two-line, and three-line
 - Keep items short and easy to scan
 - Show icons, text, and actions in a consistent format
-</div>
-</Accordion>
-</div>
 
 <Example>
 

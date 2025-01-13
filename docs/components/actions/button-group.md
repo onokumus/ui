@@ -1,3 +1,8 @@
+---
+overline: Components
+title: Button group
+---
+
 <script setup>
 import Example from "../../.vitepress/theme/app/components/Example.vue";
 import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
@@ -10,8 +15,6 @@ import Accordion from "../../.vitepress/theme/app/components/Accordion.vue";
 	justify-items: center;
 }
 </style>
-
-# Button group
 
 Groups related buttons by wrapping them with `<yourElement class="button-group" role="group">`.
 

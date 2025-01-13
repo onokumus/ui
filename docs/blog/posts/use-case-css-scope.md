@@ -1,6 +1,8 @@
 ---
 date: 2024-11-14
+overline: "2024-11-14"
 title: A perfect use case for @scope
+description: So many ugly hacks... gone!
 category: blog
 tags: "@scope, typography"
 excerpt: What a life-saver!
@@ -11,12 +13,6 @@ status: public
 import Example from "../../.vitepress/theme/app/components/Example.vue"
 import Baseline from "../../.vitepress/theme/app/components/Baseline.vue"
 </script>
-
-<hgroup>
-  <p>2024-11-14</p>
-  <h1>A perfect use case for <code>@scope</code></h1>
-  <p>So many ugly hacks... gone!</p>
-</hgroup>
 
 <Baseline :ids="['scope']" />
 

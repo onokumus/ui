@@ -1,3 +1,8 @@
+---
+overline: Components
+title: Badge
+---
+
 <script setup>
 	import {ref} from "vue"
 
@@ -6,8 +11,6 @@
 
 	const visibility = ref(true)
 </script>
-
-# Badge
 
 Use the `aria-label` tag to add content inside the Badge.
 

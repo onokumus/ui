@@ -1,3 +1,8 @@
+---
+overline: Components
+title: Toggle button group
+---
+
 <script setup>
 import Example from "../../.vitepress/theme/app/components/Example.vue";
 import Alert from "../../.vitepress/theme/app/components/Alert.vue";
@@ -29,8 +34,6 @@ import {defineModel} from "vue"
 		}
 	]
 </script>
-
-# Toggle button group
 
 Groups related buttons by wrapping them with `<yourElement class="toggle-button-group" role="group">`.
 
