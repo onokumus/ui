@@ -9,7 +9,7 @@ import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
 import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 </script>
 
-See also: [Checkbox group](#field-group)?
+See also: [Checkbox group](#field-group)
 
 <Example row>
 <template #example>
