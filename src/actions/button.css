@@ -88,7 +88,11 @@
     &:where(:has(svg), &.icon-only) {
       gap: 1ex;
 
-      & svg {
+      & svg:not([fill="none"]) {
+        fill: currentColor;
+      }
+
+      & svg[stroke] {
         fill: currentColor;
       }
     }
