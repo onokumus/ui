@@ -11,8 +11,8 @@
       background-color: var(--surface-default);
       border-top: 1px solid var(--border-color);
 
-      &:nth-child(2n) {
-        background-color: var(--surface-filled);
+      &:hover {
+        background-color: oklch(from var(--surface-filled) l c h / 75%);
       }
     }
 
@@ -75,10 +75,6 @@
       td {
         padding: var(--size-1) 0.875rem;
       }
-    }
-
-    tbody tr:hover {
-      background-color: var(--surface-tonal);
     }
 
     /* Sticky header */
