@@ -93,7 +93,7 @@
       }
 
       & svg[stroke] {
-        fill: currentColor;
+        stroke: currentColor;
       }
     }
 
