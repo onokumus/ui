@@ -4,8 +4,9 @@ A CSS UI library exploring how next-gen HTML & CSS features can change the way w
 
 https://open-props-ui.netlify.app/
 
-> [!NOTE]
-> This is work in progress. Breaking changes are expected. Contributions are welcome!
+## Installation
+
+Check out the [getting started guide](https://open-props-ui.netlify.app/guide/getting-started.html).
 
 ## Development
 
