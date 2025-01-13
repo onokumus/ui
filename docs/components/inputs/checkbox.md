@@ -1,56 +1,67 @@
 <script setup>
 import Example from "../../.vitepress/theme/app/components/Example.vue";
 import Baseline from "../../.vitepress/theme/app/components/Baseline.vue";
+import Alert from "../../.vitepress/theme/app/components/Alert.vue";
 </script>
 
 # Checkbox
 
 <Example row>
 <template #example>
-  <div class="checkbox" aria-label="Label">
+  <label class="checkbox">
    <input name="checkbox" type="checkbox" checked="checked">
-  </div>
+   <span class="sr-only">Label</span>
+  </label>
 
-  <div class="checkbox" aria-label="Label">
+  <label class="checkbox">
    <input name="checkbox" type="checkbox">
-   </div>
+   <span class="sr-only">Label</span>
+   </label>
 
-  <div class="checkbox" aria-label="Label">
+  <label class="checkbox">
    <input name="checkbox" type="checkbox" disabled>
-   </div>
+   <span class="sr-only">Label</span>
+   </label>
 
-  <div class="checkbox" aria-label="Label">
+  <label class="checkbox">
    <input name="checkbox" type="checkbox" checked="checked" disabled>
-</div>
+   <span class="sr-only">Label</span>
+</label>
 </template>
 
 <template #code>
 
 <!-- prettier-ignore -->
 ```html
-<div class="checkbox" aria-label="Label">
+<label class="checkbox">
   <input name="checkbox" type="checkbox" checked="checked" />
-</div>
+  <span class="sr-only">Label</span>
+</label>
 
 <!-- Checked -->
-<div class="checkbox" aria-label="Label">
+<label class="checkbox">
   <input name="checkbox" type="checkbox" />
-</div>
+  <span class="sr-only">Label</span>
+</label>
 
 <!-- Unchecked & disabled -->
-<div class="checkbox" aria-label="Label">
+<label class="checkbox">
   <input name="checkbox" type="checkbox" disabled />
-</div>
+  <span class="sr-only">Label</span>
+</label>
 
 <!-- Checked & disabled -->
-<div class="checkbox" aria-label="Label">
+<label class="checkbox">
   <input name="checkbox" type="checkbox" checked="checked" disabled />
-</div>
+  <span class="sr-only">Label</span>
+</label>
 ```
 
 </template>
 
 </Example>
+
+<!--@include: ../../sr-only.md -->
 
 ## Visible label
 

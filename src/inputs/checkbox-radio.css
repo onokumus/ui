@@ -1,4 +1,4 @@
-:where(.checkbox, .radio) {
+label:where(.checkbox, .radio) {
   align-items: center;
   color: var(--text-color-1);
   cursor: pointer;
