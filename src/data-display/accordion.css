@@ -8,6 +8,7 @@
     background-color: var(--_bg-color);
     box-shadow: var(--_shadow);
     border-radius: var(--border-radius, 4px);
+    display: block;
     margin-inline: var(--_margin-inline);
     transition: all var(--_accordion-transition-time) ease-out;
 
@@ -113,9 +114,11 @@
   :where(.card:has(details)) {
     --_gutter-color: var(--border-color);
 
+    display: block;
+
     & > .content {
       margin-block: 0;
-      padding-inline: 0;
+      padding: 0;
     }
 
     &.card,
@@ -129,6 +132,7 @@
 
     details {
       --_margin-inline: 0;
+
       border: 0;
       box-shadow: none;
 

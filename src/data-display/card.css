@@ -11,6 +11,9 @@
     border-style: solid;
     border-width: var(--_border-width);
     box-shadow: var(--_shadow);
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-3);
     overflow: hidden;
     padding-inline: 0;
 
@@ -51,10 +54,7 @@
     }
 
     & > hgroup {
-      margin-block: var(--size-3);
-      & > * {
-        margin: 0;
-      }
+      padding-block: var(--size-3) 0;
 
       /* Top paragraph */
       & > p:first-of-type:first-child {
@@ -67,14 +67,14 @@
       }
     }
 
-    & > .content {
-      margin-block: var(--size-3) var(--size-4);
+    & > .content:where(:only-child, :first-child) {
+      padding-block: var(--size-3) var(--size-4);
     }
 
     & > .actions {
       display: flex;
       gap: var(--size-1);
-      margin-block: var(--size-4) 0;
+      margin-block: var(--size-2) 0;
       padding-block-end: var(--size-1);
       padding-inline: var(--size-1) var(--size-3);
     }
