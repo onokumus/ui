@@ -88,6 +88,10 @@
     &:where(:has(svg), &.icon-only) {
       gap: 1ex;
 
+      svg {
+        max-block-size: 0.7lh;
+      }
+
       & svg:not([fill="none"]) {
         fill: currentColor;
       }
