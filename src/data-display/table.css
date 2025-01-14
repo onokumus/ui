@@ -20,7 +20,7 @@
     th,
     td {
       border: 1px solid var(--border-color);
-      padding: var(--size-2) var(--size-3);
+      padding: var(--size-1) var(--size-2);
     }
 
     th {
