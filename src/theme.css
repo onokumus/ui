@@ -59,7 +59,7 @@
 
     /* Borders */
     --border-color: light-dark(var(--gray-4), var(--gray-12));
-    --border-radius: var(--size-1);
+    --surface-border-radius: var(--size-1);
     --border-width: 1px;
 
     /* Input Field */

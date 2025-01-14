@@ -4,7 +4,7 @@
 
   appearance: none;
   background-color: var(--_bg-color);
-  border-radius: var(--border-radius, 0.25rem);
+  border-radius: var(--surface-border-radius, 0.25rem);
   border: 0;
   display: inline-block;
   block-size: var(--size-1);
@@ -14,7 +14,7 @@
   inline-size: 100%;
 
   &::-webkit-progress-bar {
-    border-radius: var(--border-radius, 0.25rem);
+    border-radius: var(--surface-border-radius, 0.25rem);
     background: none;
   }
 

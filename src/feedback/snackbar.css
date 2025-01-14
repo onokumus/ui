@@ -3,7 +3,7 @@
     align-items: center;
     /* Inverse surface-filled */
     background-color: light-dark(var(--gray-15), var(--gray-2));
-    border-radius: var(--border-radius);
+    border-radius: var(--surface-border-radius);
     box-shadow: var(--shadow-2);
     color: var(--text-color-1-contrast);
     display: flex;
@@ -114,7 +114,7 @@
       }
 
       button:not(:has(svg)) {
-        border-radius: var(--border-radius);
+        border-radius: var(--surface-border-radius);
         font-size: inherit;
         max-block-size: var(--size-6, 1.5rem);
         padding: 1ex;
