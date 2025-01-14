@@ -17,8 +17,7 @@
     .tabs {
       margin-inline-end: 0;
       margin-inline-start: 0;
-      border-radius: var(--surface-border-radius) var(--surface-border-radius) 0
-        0;
+      border-radius: var(--border-radius) var(--border-radius) 0 0;
     }
   }
 

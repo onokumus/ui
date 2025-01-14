@@ -1,6 +1,6 @@
 .custom-block {
   border: 1px solid transparent;
-  border-radius: var(--surface-border-radius);
+  border-radius: var(--border-radius);
   padding: 16px 16px 8px;
   line-height: var(--font-lineheight-3);
   font-size: var(--vp-custom-block-font-size);

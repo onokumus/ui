@@ -12,7 +12,7 @@
 
     background-color: var(--_bg-color);
     border: 1px solid var(--_border-color);
-    border-radius: var(--surface-border-radius);
+    border-radius: var(--border-radius);
     color: var(--_color);
     padding: var(--size-3);
 

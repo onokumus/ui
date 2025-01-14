@@ -48,9 +48,8 @@
 </template>
 <template #code>
 
-```html{1,15}
+```html{1,14}
 <label class="field">
-  <span class="label">Label</span>
   <select>
     <button>
       <selectedoption></selectedoption>
@@ -64,7 +63,9 @@
 </label>
 
 <label class="field filled">
-  <!--  -->
+  <select>
+    <!--  -->
+  </select>
 </label>
 ```
 
