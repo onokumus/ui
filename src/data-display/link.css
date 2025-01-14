@@ -8,7 +8,7 @@
     text-underline-offset: 2px;
 
     &[href] {
-      &::hover {
+      &:hover {
         color: var(--primary-light);
       }
     }
