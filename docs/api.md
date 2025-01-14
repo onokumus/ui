@@ -1,3 +1,8 @@
+---
+overline: API
+title: Component API
+---
+
 <style scoped>
 	table {
 		cursor: default;
@@ -10,8 +15,6 @@
 		text-decoration: none;
 	}
 </style>
-
-# Component API
 
 ## Actions
 
@@ -102,6 +105,8 @@
 <!--@include: ./components/data-display/table-api.md -->
 
 <h3><span class="badge warning" aria-label="⚠️🚧"><a href="/components/data-display/tooltip">Tooltip</a></span></h3>
+
+<p>hej</p>
 
 ## Feedback
 
