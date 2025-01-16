@@ -120,6 +120,7 @@
       }
     }
 
+    /* Select */
     &:has(select) {
       .label {
         /* Make sure chevron is visible */
