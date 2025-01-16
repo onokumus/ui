@@ -62,7 +62,7 @@
         translate: 0 -50%;
       }
 
-      selectedoption {
+      selectedcontent {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;

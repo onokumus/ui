@@ -20,7 +20,7 @@
 <span class="label">Label</span>
 <select>
   <button>
-    <selectedoption></selectedoption>
+    <selectedcontent></selectedcontent>
   </button>
   <div class="list">
   <option value="">-</option>
@@ -35,7 +35,7 @@
 <span class="label">Label</span>
 <select>
   <button>
-    <selectedoption></selectedoption>
+    <selectedcontent></selectedcontent>
   </button>
   <div class="list">
   <option value="">-</option>
@@ -52,7 +52,7 @@
 <label class="field">
   <select>
     <button>
-      <selectedoption></selectedoption>
+      <selectedcontent></selectedcontent>
     </button>
     <div class="list">
       <option>Outlined (default)</option>
@@ -82,7 +82,7 @@
 <span class="label">Label</span>
 <select>
   <button>
-    <selectedoption></selectedoption>
+    <selectedcontent></selectedcontent>
   </button>
   <div class="list">
   <option value="">-</option>
@@ -98,7 +98,7 @@
 <span class="label">Label</span>
 <select>
   <button>
-    <selectedoption></selectedoption>
+    <selectedcontent></selectedcontent>
   </button>
   <div class="list">
   <option value="">-</option>
@@ -137,7 +137,7 @@
 <span class="label">Label</span>
 <select required>
   <button>
-    <selectedoption></selectedoption>
+    <selectedcontent></selectedcontent>
   </button>
   <div class="list">
   <option value="">-</option>
@@ -152,7 +152,7 @@
 <span class="label">Label</span>
 <select required>
   <button>
-    <selectedoption></selectedoption>
+    <selectedcontent></selectedcontent>
   </button>
   <div class="list">
     <option value="">-</option>
@@ -169,7 +169,7 @@
 <span class="label">Label</span>
 <select>
   <button>
-    <selectedoption></selectedoption>
+    <selectedcontent></selectedcontent>
   </button>
   <div class="list">
   <option value="">-</option>
@@ -185,7 +185,7 @@
 <span class="label">Label</span>
 <select>
   <button>
-    <selectedoption></selectedoption>
+    <selectedcontent></selectedcontent>
   </button>
   <div class="list">
   <option value="">-</option>
@@ -224,7 +224,7 @@
 <span class="label">Small</span>
 <select>
   <button>
-    <selectedoption></selectedoption>
+    <selectedcontent></selectedcontent>
   </button>
   <div class="list">
    <option value="">Small</option>
@@ -237,7 +237,7 @@
 <span class="label">Default</span>
 <select>
   <button>
-    <selectedoption></selectedoption>
+    <selectedcontent></selectedcontent>
   </button>
   <div class="list">
    <option value="">Default</option>
@@ -268,7 +268,7 @@ Wrap your options in an element with `role="group"`. The `<label>` inside will b
 <span class="label">Grouped</span>
 <select>
   <button>
-    <selectedoption></selectedoption>
+    <selectedcontent></selectedcontent>
   </button>
   <div class="list">
   <option value="">Select car</option>
@@ -294,7 +294,7 @@ Wrap your options in an element with `role="group"`. The `<label>` inside will b
   <span class="label">Small</span>
   <select>
     <button>
-      <selectedoption></selectedoption>
+      <selectedcontent></selectedcontent>
     </button>
     <div class="list">
       <option>Select car</option>
@@ -326,7 +326,7 @@ Since the Select popover uses the [List component](/components/data-display/list
 <span class="label">Dense</span>
 <select>
   <button>
-    <selectedoption></selectedoption>
+    <selectedcontent></selectedcontent>
   </button>
   <div class="list dense">
     <option value="">Dense</option>
@@ -342,7 +342,7 @@ Since the Select popover uses the [List component](/components/data-display/list
 <div class="field">
   <select>
     <button>
-      <selectedoption></selectedoption>
+      <selectedcontent></selectedcontent>
     </button>
     <div class="list dense">
       <option>Dense</option>
@@ -384,7 +384,7 @@ The `.error` class toggles the error styles. Make use of the supporting text to 
 	<span class="label">Label</span>
 <select>
   <button>
-    <selectedoption></selectedoption>
+    <selectedcontent></selectedcontent>
   </button>
   <div class="list">
    <option>Outlined (default)</option>
@@ -398,7 +398,7 @@ The `.error` class toggles the error styles. Make use of the supporting text to 
 	<span class="label">Label</span>
 <select>
   <button>
-    <selectedoption></selectedoption>
+    <selectedcontent></selectedcontent>
   </button>
   <div class="list">
    <option>Filled</option>
@@ -465,7 +465,7 @@ Just implement the Select as you normally would.
 
 1. Select container: `<select>`
 2. Select button: `<button>`
-3. Select button selected option: `<selectedoption>`
+3. Select button selected option: `<selectedcontent>`
 4. Select button arrow
 5. Popover list: `.list`
 6. List option/s: `<option>`
@@ -477,7 +477,7 @@ Just implement the Select as you normally would.
 <div class="field">
 <select>
   <button class="anatomy">
-    <selectedoption></selectedoption>
+    <selectedcontent></selectedcontent>
   </button>
   <div class="list">
    <option>Option One</option>
