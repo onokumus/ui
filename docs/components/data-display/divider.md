@@ -25,3 +25,7 @@ It's just an `<hr>`.
 
   </template>
 </Example>
+
+## Installation
+
+<<< @/../src/data-display/divider.css
