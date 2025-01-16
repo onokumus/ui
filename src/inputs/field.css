@@ -120,6 +120,13 @@
       }
     }
 
+    &:has(select) {
+      .label {
+        /* Make sure chevron is visible */
+        inline-size: calc(100% - var(--size-6));
+      }
+    }
+
     /* Experimental Select */
     &:has(select button) {
       select {
@@ -138,11 +145,6 @@
       select {
         padding: var(--_field-padding-block) var(--size-8)
           var(--_field-padding-block) var(--_field-padding-inline);
-      }
-
-      .label {
-        /* Make sure chevron is visible */
-        inline-size: calc(100% - var(--size-6));
       }
     }
 
