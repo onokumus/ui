@@ -515,6 +515,13 @@ This way of writing Selects are currently quite experimental. Accessible solutio
 
 ## Browser compatibility
 
+<div class="not-rich-text">
+<Alert variant="outlined" severity="warning" title="Experimental Web Platform features feature flag required">
+<p>The Select makes use of the latest <a href="https://una.im/select-updates/" class="link">customizable select API</a> which limits it to Chromium version 133<.</p>
+<p>The <a class="link" href="#non-experimental-select">non-experimental</a> Select is usable today though and might work as a fallback while we wait for the browsers to catch up!</p>
+</Alert>
+</div>
+
 <Baseline :ids="['light-dark', 'color-mix']" />
 
 ## Installation

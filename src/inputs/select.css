@@ -101,7 +101,14 @@
       /* Option */
       option {
         /* Checkmark */
+        /* TODO - checkmark should be the final version of the checkmark API. Follow the development of this and remove redundant psuedo stuff. */
         &::check {
+          display: none;
+        }
+        &::checkmark {
+          display: none;
+        }
+        &::before {
           display: none;
         }
 
