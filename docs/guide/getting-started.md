@@ -37,13 +37,10 @@ Open Props v2 hasn't dropped yet, which is why this project relies on the OPv2 b
 
 ```sh
 # pnpm
-pnpm i open-props@2.0.0-beta.5 --save-alias opbeta
+pnpm i opbeta@npm:open-props@2.0.0-beta.5 -S
 
 # npm
-npm i open-props@2.0.0-beta.5 --save-alias opbeta
-
-# yarn
-yarn add open-props@2.0.0-beta.5 --alias opbeta
+npm i opbeta@npm:open-props@2.0.0-beta.5 -S
 ```
 
 ## 2. Base setup
