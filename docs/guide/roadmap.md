@@ -14,6 +14,8 @@ title: Roadmap
 
 <hr>
 
+## 1.0{.sr-only}
+
 <h2><span class="badge" aria-label="Latest">1.0</span></h2>
 
 ### Components
