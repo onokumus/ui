@@ -3,7 +3,8 @@
     position: relative;
 
     /* Default arrow */
-    &:after {
+    &::after,
+    &::picker-icon {
       display: none;
     }
 
