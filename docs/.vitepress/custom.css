@@ -1,3 +1,9 @@
+@import url(https://fonts.bunny.net/css?family=bricolage-grotesque:400,500,600,700,800);
+
+:is(h1, h2, h3, h4, h5, h6) {
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
 html.dark {
   .example-wrapper {
     box-shadow: var(--shadow-2);
@@ -58,6 +64,7 @@ TODO: Make sure it doesn't show if there's nothing to scroll
 
 .opui-logo {
   display: inline-grid;
+  font-family: var(--font-system-ui);
   font-size: var(--font-size-fluid-3);
   margin-block-end: var(--size-3);
   text-transform: uppercase;
