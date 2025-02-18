@@ -109,6 +109,10 @@ export default defineConfig({
                   link: "/components/actions/icon-button",
                 },
                 {
+                  text: "Tab buttons",
+                  link: "/components/actions/tab-buttons",
+                },
+                {
                   text: "Toggle button group",
                   link: "/components/actions/toggle-button-group",
                 },
