@@ -45,6 +45,8 @@ title: Tab buttons
 </nav>
 </template>
 <template #code>
+	
+```html
 <nav class="tabs underlined">
   <div role="tablist" aria-label="Underlined tabs">
     <button id="underlined-tab-1" role="tab" aria-controls="tabpanel-1" aria-selected="true" tabindex="0">
@@ -58,6 +60,7 @@ title: Tab buttons
     </button>
   </div>
 </nav>
+```
 </template>
 </Example>
 
@@ -98,6 +101,8 @@ title: Tab buttons
 </nav>
 </template>
 <template #code>
+
+```html
 <nav class="tabs filled">
   <div role="tablist" aria-label="Filled tabs">
     <button
@@ -129,6 +134,7 @@ title: Tab buttons
     </button>
   </div>
 </nav>
+```
 </template>
 </Example>
 
