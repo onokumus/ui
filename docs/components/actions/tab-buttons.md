@@ -45,7 +45,22 @@ title: Tab buttons
 </nav>
 </template>
 <template #code>
-
+	
+```html
+<nav class="tabs underlined">
+  <div role="tablist" aria-label="Underlined tabs">
+    <button id="underlined-tab-1" role="tab" aria-controls="tabpanel-1" aria-selected="true" tabindex="0">
+      Profile
+    </button>
+    <button id="underlined-tab-2" role="tab" aria-controls="tabpanel-2" aria-selected="false" tabindex="-1">
+      Settings
+    </button>
+    <button id="underlined-tab-3" role="tab" aria-controls="tabpanel-3" aria-selected="false" tabindex="-1">
+      Notifications
+    </button>
+  </div>
+</nav>
+```
 </template>
 </Example>
 
@@ -87,6 +102,39 @@ title: Tab buttons
 </template>
 <template #code>
 
+```html
+<nav class="tabs filled">
+  <div role="tablist" aria-label="Filled tabs">
+    <button
+      id="filled-tab-1"
+      role="tab"
+      aria-controls="tabpanel-1"
+      aria-selected="true"
+      tabindex="0"
+    >
+      Korg
+    </button>
+    <button
+      id="filled-tab-2"
+      role="tab"
+      aria-controls="tabpanel-2"
+      aria-selected="false"
+      tabindex="-1"
+    >
+      Yamaha
+    </button>
+    <button
+      id="filled-tab-3"
+      role="tab"
+      aria-controls="tabpanel-3"
+      aria-selected="false"
+      tabindex="-1"
+    >
+      Roland
+    </button>
+  </div>
+</nav>
+```
 </template>
 </Example>
 
